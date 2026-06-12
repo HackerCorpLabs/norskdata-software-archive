@@ -1,0 +1,42 @@
+# Product categories for the Norsk Data Software Archive
+# Products reference these by ID in their categories field
+
+- id: os
+  name: Operating Systems
+  description: SINTRAN III variants and related OS packages
+- id: languages
+  name: Languages & Compilers
+  description: Programming languages, compilers, and runtime systems
+- id: devtools
+  name: Developer Tools
+  description: Debuggers, linkers, assemblers, editors, build tools
+- id: office
+  name: Office & Text Processing
+  description: NOTIS suite, word processing, mail, spooling
+- id: database
+  name: Database & Data Management
+  description: SIBAS, UNIQUE, ISAM, data dictionaries, sort/merge
+- id: networking
+  name: Communications & Networking
+  description: COSMOS, X.25, TCP/IP, SNA, file transfer protocols
+- id: utilities
+  name: System Utilities
+  description: Subsystem packages, configuration, user environment, monitoring
+- id: testing
+  name: Test & Diagnostics
+  description: Hardware test programs, diagnostic tools
+- id: backup
+  name: Backup & Storage
+  description: Backup systems, disk mirroring, mass storage utilities
+- id: graphics
+  name: Graphics & Plotting
+  description: Plotters, screen handling, terminal tables, data entry
+- id: emulators
+  name: Emulators & Gateways
+  description: Terminal emulators, protocol gateways, PC connectivity
+- id: scientific
+  name: Scientific & Mathematical
+  description: Subroutine libraries, scientific computing, plotting packages
+- id: other
+  name: Other / Miscellaneous
+  description: Products not fitting other categories

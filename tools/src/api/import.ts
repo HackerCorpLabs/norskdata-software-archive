@@ -1,0 +1,538 @@
+/**
+ * Single image importer for the Norsk Data Software Archive.
+ * Supports gzip-compressed in-repo storage with MD5-based flat folders.
+ *
+ * Storage layout: images/{md5}/
+ *   image.img.gz  - compressed floppy image
+ *   image.yaml    - metadata (source of truth)
+ *   image.JPG     - per-disk label photo
+ *   labels.txt    - label transcription
+ */
+
+import { readFile, writeFile, mkdir, copyFile, stat, readdir } from 'fs/promises';
+import { createHash } from 'crypto';
+import { basename, dirname, join, extname } from 'path';
+import { gzipSync } from 'zlib';
+import type { Catalog, CatalogEntry, StorageClass } from '../types.js';
+import { generateId, saveFloppyYaml } from './catalog.js';
+import { checkDuplicate } from './dedup.js';
+import { matchProduct } from './product-matcher.js';
+
+/** Maximum raw image size for in-git storage (roughly 700 NDFS pages) */
+const FLOPPY_SIZE_LIMIT = 1_400_000;
+
+/**
+ * Reduce a source path to "<parent folder>/<filename>" for provenance.
+ * Separator-agnostic so it works whether the importer runs on Linux
+ * (/mnt/d/ND/foo/bar.img) or Windows (Z:\ND\foo\bar.img); the result always
+ * uses forward slashes so the stored value is identical on every platform.
+ */
+function relativeSourcePath(filePath: string): string {
+  const parts = filePath.split(/[\\/]+/).filter(Boolean);
+  return parts.length <= 1 ? parts.join('/') : parts.slice(-2).join('/');
+}
+
+/** Get file modification time as ISO date string (YYYY-MM-DD) */
+async function getFileModTime(filePath: string): Promise<string | null> {
+  try {
+    const s = await stat(filePath);
+    return s.mtime.toISOString().substring(0, 10);
+  } catch {
+    return null;
+  }
+}
+
+// ── NDFS parsing ──────────────────────────────────────────────
+
+interface NdfsParseResult {
+  volumeName: string | null;
+  totalPages: number;
+  bootFormat: string | null;
+  users: { name: string; pagesUsed: number }[];
+  files: { name: string; type: string; pages: number; bytes: number; userName: string; dateCreated: number | null; lastDateRead: number | null; lastDateWritten: number | null; dateCreatedStr: string | null; lastDateReadStr: string | null; lastDateWrittenStr: string | null; bpunValid: boolean | null }[];
+}
+
+function formatNdDate(value: number | null | undefined): string | null {
+  if (!value) return null;
+  const year   = ((value >>> 26) & 0x3f) + 1950;
+  const month  = (value >>> 22) & 0x0f;
+  const day    = (value >>> 17) & 0x1f;
+  const hour   = (value >>> 12) & 0x1f;
+  const minute = (value >>> 6) & 0x3f;
+  const second = value & 0x3f;
+  if (month === 0 || day === 0) return null;
+  return `${year}-${String(month).padStart(2, '0')}-${String(day).padStart(2, '0')} ${String(hour).padStart(2, '0')}:${String(minute).padStart(2, '0')}:${String(second).padStart(2, '0')}`;
+}
+
+async function tryParseNdfs(buffer: Buffer): Promise<NdfsParseResult | null> {
+  try {
+    const ndfsModule = await import('norskdata-ndfs');
+    const NdfsFileSystem = ndfsModule.NdfsFileSystem;
+    if (!NdfsFileSystem) return null;
+
+    const fs = new NdfsFileSystem(new Uint8Array(buffer), true);
+    const volumeName = fs.getDirectoryName?.() ?? null;
+    const masterBlock = fs.getMasterBlock?.();
+    const totalPages = masterBlock?.imageSize ?? (buffer.length / 2048);
+
+    let bootFormat: string | null = null;
+    try {
+      const bf = fs.detectBootFormat?.();
+      if (bf !== undefined && bf !== null) {
+        bootFormat = String(bf).toLowerCase();
+        if (bootFormat === '0' || bootFormat === 'none') bootFormat = 'none';
+      }
+    } catch { /* ignore */ }
+
+    const users: { name: string; pagesUsed: number }[] = [];
+    try {
+      const userList = fs.getUsers?.() ?? [];
+      for (const u of userList) {
+        if (u && u.userName) {
+          users.push({ name: u.userName, pagesUsed: u.pagesUsed ?? 0 });
+        }
+      }
+    } catch { /* ignore */ }
+
+    const files: NdfsParseResult['files'] = [];
+    try {
+      const objectEntries = fs.getObjectEntries?.() ?? [];
+      for (const oe of objectEntries) {
+        if (oe && oe.objectName) {
+          // BPUN checksum validation
+          let bpunValid: boolean | null = null;
+          if (oe.type === 'BPUN') {
+            try {
+              const fileData = fs.readFile(`${oe.userName}/${oe.objectName}:${oe.type}`);
+              if (fileData && fileData.length >= 10) {
+                let bangOff = -1;
+                for (let i = 0; i < fileData.length; i++) {
+                  if (fileData[i] === 0x21 || (fileData[i] & 0x7F) === 0x21) { bangOff = i; break; }
+                }
+                const dataOff = bangOff >= 0 ? bangOff + 1 : 0;
+                if (dataOff + 4 <= fileData.length) {
+                  const count = (fileData[dataOff + 2] << 8) | fileData[dataOff + 3];
+                  if (count > 0) {
+                    const wordsStart = dataOff + 4;
+                    const wordsEnd = wordsStart + count * 2;
+                    if (wordsEnd + 2 <= fileData.length) {
+                      let calcSum = 0;
+                      for (let i = wordsStart; i < wordsEnd; i += 2) {
+                        calcSum = (calcSum + ((fileData[i] << 8) | fileData[i + 1])) & 0xFFFF;
+                      }
+                      const stored = (fileData[wordsEnd] << 8) | fileData[wordsEnd + 1];
+                      bpunValid = (calcSum === stored);
+                    }
+                  }
+                }
+              }
+            } catch { /* ignore */ }
+          }
+
+          files.push({
+            name: oe.fullName ?? `${oe.objectName}:${oe.type ?? ''}`,
+            type: oe.type ?? '',
+            pages: oe.pagesInFile ?? 0,
+            bytes: oe.bytesInFile ?? 0,
+            userName: oe.userName ?? '',
+            dateCreated: oe.dateCreated || null,
+            lastDateRead: oe.lastDateRead || null,
+            lastDateWritten: oe.lastDateWritten || null,
+            dateCreatedStr: formatNdDate(oe.dateCreated),
+            lastDateReadStr: formatNdDate(oe.lastDateRead),
+            lastDateWrittenStr: formatNdDate(oe.lastDateWritten),
+            bpunValid,
+          });
+        }
+      }
+    } catch { /* ignore */ }
+
+    return { volumeName, totalPages, bootFormat, users, files };
+  } catch {
+    return null;
+  }
+}
+
+// ── Path classification ───────────────────────────────────────
+
+/**
+ * Determine the target directory for an image.
+ * Uses flat MD5-based folders: images/{md5}/
+ */
+export function classifyTargetPath(md5: string): string {
+  return `images/${md5}`;
+}
+
+/**
+ * Resolve filename collisions in target directory.
+ * - Same name + same MD5 -> return null (skip, duplicate)
+ * - Same name + different MD5 -> append _{md5[:6]} to basename
+ * - No collision -> use original
+ */
+async function resolveFilename(
+  rootDir: string,
+  targetDir: string,
+  baseName: string,
+  md5: string
+): Promise<string | null> {
+  const gzName = baseName.replace(/\.img$/i, '') + '.img.gz';
+  const targetPath = join(rootDir, targetDir, gzName);
+
+  try {
+    await stat(targetPath);
+    // File exists - check if it's the same content
+    const yamlName = baseName.replace(/\.img$/i, '') + '.yaml';
+    const yamlPath = join(rootDir, targetDir, yamlName);
+    try {
+      const raw = await readFile(yamlPath, 'utf-8');
+      const { parse } = await import('yaml');
+      const doc = parse(raw);
+      if (doc && doc.md5 === md5) {
+        return null; // Same content, skip
+      }
+    } catch {
+      // No YAML or can't read, treat as collision
+    }
+    // Different content - append md5 prefix
+    const stem = baseName.replace(/\.img$/i, '');
+    return `${stem}_${md5.slice(0, 6)}.img.gz`;
+  } catch {
+    // File doesn't exist, use original name
+    return gzName;
+  }
+}
+
+// ── Artifact scanning ─────────────────────────────────────────
+
+export interface ScannedArtifacts {
+  diskPhotos: Map<string, string[]>;  // imgFilename -> [photo filenames]
+  setPhotos: string[];
+  transcription: string | null;
+  imagingLogs: string[];
+  unmapped: string[];                 // files not matching any configured extension
+}
+
+/** Configurable extension lists for scanning */
+export interface ScanExtensions {
+  image: string[];    // e.g. ['.img', '.image', '.scp', '.hfe']
+  photo: string[];    // e.g. ['.jpg', '.jpeg', '.png', '.tiff']
+  document: string[]; // e.g. ['.txt', '.log', '.pdf']
+}
+
+export const DEFAULT_SCAN_EXTENSIONS: ScanExtensions = {
+  image: ['.img', '.image'],
+  photo: ['.jpg', '.jpeg', '.png', '.tiff', '.tif', '.bmp'],
+  document: ['.txt', '.log', '.pdf'],
+};
+
+/**
+ * Scan a source folder for all files, classify them by extension config.
+ * Returns classified artifacts + unmapped files.
+ */
+export async function scanFolderArtifacts(
+  sourceDir: string,
+  imgFilenames: string[],
+  volumeNames: (string | null)[],
+  extensions?: ScanExtensions
+): Promise<ScannedArtifacts> {
+  const ext_cfg = extensions ?? DEFAULT_SCAN_EXTENSIONS;
+  const diskPhotos = new Map<string, string[]>();
+  const setPhotos: string[] = [];
+  let transcription: string | null = null;
+  const imagingLogs: string[] = [];
+  const unmapped: string[] = [];
+
+  const imgBases = imgFilenames.map(f => f.replace(/\.[^.]+$/i, '').toLowerCase());
+  const volBases = volumeNames.filter(Boolean).map(v => v!.toLowerCase());
+
+  const photoExts = new Set(ext_cfg.photo.map(e => e.toLowerCase()));
+  const docExts = new Set(ext_cfg.document.map(e => e.toLowerCase()));
+  const imageExts = new Set(ext_cfg.image.map(e => e.toLowerCase()));
+
+  try {
+    const files = await readdir(sourceDir);
+    for (const f of files) {
+      const ext = extname(f).toLowerCase();
+
+      // Skip image files (they're handled by the import pipeline, not artifacts)
+      if (imageExts.has(ext)) continue;
+
+      // Skip directories
+      try {
+        const s = await stat(join(sourceDir, f));
+        if (s.isDirectory()) continue;
+      } catch { continue; }
+
+      if (photoExts.has(ext)) {
+        // Photo: check if it matches a specific disk
+        const photoBase = f.replace(/\.[^.]+$/i, '').toLowerCase();
+        let matched = false;
+        for (let i = 0; i < imgBases.length; i++) {
+          if (photoBase === imgBases[i] || (volBases[i] && photoBase === volBases[i])) {
+            const key = imgFilenames[i];
+            if (!diskPhotos.has(key)) diskPhotos.set(key, []);
+            diskPhotos.get(key)!.push(f);
+            matched = true;
+            break;
+          }
+        }
+        if (!matched) {
+          setPhotos.push(f);
+        }
+      } else if (f.toLowerCase() === 'labels.txt') {
+        transcription = f;
+      } else if (docExts.has(ext)) {
+        imagingLogs.push(f);
+      } else {
+        // Not matched by any configured extension
+        unmapped.push(f);
+      }
+    }
+  } catch { /* ignore */ }
+
+  return { diskPhotos, setPhotos, transcription, imagingLogs, unmapped };
+}
+
+/**
+ * Copy set-level artifacts flat into {targetDir}/. Deduplicates (skips if exists).
+ */
+export async function copySetArtifacts(
+  rootDir: string,
+  sourceDir: string,
+  targetDir: string,
+  artifacts: { setPhotos: string[]; transcription: string | null; imagingLogs: string[] }
+): Promise<{ setPhotos: string[]; labelTranscription: string | null; imagingLogs: string[] }> {
+  const absTargetDir = join(rootDir, targetDir);
+  await mkdir(absTargetDir, { recursive: true });
+
+  const setPhotos: string[] = [];
+  for (const photo of artifacts.setPhotos) {
+    const dst = join(absTargetDir, photo);
+    try { await stat(dst); } catch { await copyFile(join(sourceDir, photo), dst); }
+    setPhotos.push(join(targetDir, photo));
+  }
+
+  let labelTranscription: string | null = null;
+  if (artifacts.transcription) {
+    const fname = basename(artifacts.transcription);
+    const dst = join(absTargetDir, fname);
+    try { await stat(dst); } catch { await copyFile(join(sourceDir, artifacts.transcription), dst); }
+    labelTranscription = join(targetDir, fname);
+  }
+
+  const imagingLogs: string[] = [];
+  for (const logFile of artifacts.imagingLogs) {
+    const dst = join(absTargetDir, logFile);
+    try { await stat(dst); } catch { await copyFile(join(sourceDir, logFile), dst); }
+    imagingLogs.push(join(targetDir, logFile));
+  }
+
+  return { setPhotos, labelTranscription, imagingLogs };
+}
+
+/**
+ * Copy disk-specific photos next to the .img.gz in the target dir.
+ */
+export async function copyDiskPhotos(
+  rootDir: string,
+  sourceDir: string,
+  targetDir: string,
+  photoFilenames: string[]
+): Promise<string[]> {
+  const absTarget = join(rootDir, targetDir);
+  await mkdir(absTarget, { recursive: true });
+  const paths: string[] = [];
+  for (const photo of photoFilenames) {
+    const dst = join(absTarget, photo);
+    try { await stat(dst); } catch { await copyFile(join(sourceDir, photo), dst); }
+    paths.push(join(targetDir, photo));
+  }
+  return paths;
+}
+
+// ── Single image import ───────────────────────────────────────
+
+export interface ImportOptions {
+  contributor?: string;
+  source?: string;
+  sourceDir?: string;
+  /** Pre-determined target directory (set by importFolder for batch imports) */
+  targetDir?: string;
+  /** Pre-copied set artifacts (shared across all images in a folder import) */
+  setArtifacts?: { setPhotos: string[]; labelTranscription: string | null; imagingLogs: string[] };
+  /** Pre-scanned disk photos for this specific image */
+  diskPhotoFiles?: string[];
+}
+
+/**
+ * Import a single image file into the catalog.
+ */
+export async function importImage(
+  catalog: Catalog,
+  filePath: string,
+  rootDir?: string,
+  options?: ImportOptions
+): Promise<{ entry: CatalogEntry; isDuplicate: boolean; isVariant: boolean }> {
+  const buffer = await readFile(filePath);
+
+  const md5 = createHash('md5').update(buffer).digest('hex');
+
+  const dupCheck = checkDuplicate(catalog, md5);
+  if (dupCheck.isDuplicate && dupCheck.existingEntry) {
+    return { entry: dupCheck.existingEntry, isDuplicate: true, isVariant: false };
+  }
+
+  const ndfsResult = await tryParseNdfs(buffer);
+  const volumeName = ndfsResult?.volumeName ?? null;
+  const productMatch = matchProduct(volumeName);
+  const id = generateId(md5, volumeName);
+
+  const isFloppy = buffer.length <= FLOPPY_SIZE_LIMIT;
+  const storageClass: StorageClass = isFloppy ? 'floppy-in-git' : 'ia-only';
+
+  let gitImagePath: string | null = null;
+  let gitYamlPath: string | null = null;
+  let gitDiskPhotos: string[] = [];
+  let gitSetPhotos: string[] = [];
+  let gitLabelTranscription: string | null = null;
+  let gitImagingLogs: string[] = [];
+
+  if (isFloppy && rootDir) {
+    const targetDir = options?.targetDir ?? classifyTargetPath(md5);
+
+    await mkdir(join(rootDir, targetDir), { recursive: true });
+
+    const filename = basename(filePath);
+    const resolvedName = await resolveFilename(rootDir, targetDir, filename, md5);
+
+    if (resolvedName === null) {
+      // Exact duplicate file already on disk
+      return { entry: { ...buildEntry(), id }, isDuplicate: true, isVariant: false };
+    }
+
+    const gzPath = join(rootDir, targetDir, resolvedName);
+    await writeFile(gzPath, gzipSync(buffer, { level: 9 }));
+    gitImagePath = join(targetDir, resolvedName);
+
+    // YAML path matches the .img.gz name
+    const yamlName = resolvedName.replace(/\.img\.gz$/, '.yaml');
+    gitYamlPath = join(targetDir, yamlName);
+
+    // Handle artifacts
+    if (options?.setArtifacts) {
+      // Artifacts already copied by importFolder
+      gitSetPhotos = options.setArtifacts.setPhotos;
+      gitLabelTranscription = options.setArtifacts.labelTranscription;
+      gitImagingLogs = options.setArtifacts.imagingLogs;
+    } else {
+      // Standalone import - scan and copy artifacts
+      const sourceDir = options?.sourceDir ?? dirname(filePath);
+      const artifacts = await scanFolderArtifacts(sourceDir, [filename], [volumeName]);
+      const setResult = await copySetArtifacts(rootDir, sourceDir, targetDir, artifacts);
+      gitSetPhotos = setResult.setPhotos;
+      gitLabelTranscription = setResult.labelTranscription;
+      gitImagingLogs = setResult.imagingLogs;
+      const myDiskPhotos = artifacts.diskPhotos.get(filename) ?? [];
+      if (myDiskPhotos.length > 0) {
+        gitDiskPhotos = await copyDiskPhotos(rootDir, sourceDir, targetDir, myDiskPhotos);
+      }
+    }
+
+    // Disk photos for this specific image (from folder import)
+    if (options?.diskPhotoFiles && options.diskPhotoFiles.length > 0 && !gitDiskPhotos.length) {
+      const sourceDir = options?.sourceDir ?? dirname(filePath);
+      gitDiskPhotos = await copyDiskPhotos(rootDir, sourceDir, targetDir, options.diskPhotoFiles);
+    }
+  }
+
+  function buildEntry(): CatalogEntry {
+    return {
+      schemaVersion: '1.0',
+      id: '',
+      type: 'floppy',
+      md5: '',
+      volumeName: null,
+      productId: null,
+      version: null,
+      diskNumber: null,
+      diskTotal: null,
+      mediaRole: null,
+      storageClass: null,
+      imageSizeBytes: null,
+      imageFormat: 'raw',
+      controller: null,
+      totalPages: null,
+      pageSize: null,
+      bootFormat: null,
+      cpuTarget: null,
+      osRequirement: null,
+      ndfs: null,
+      docs: null,
+      provenance: null,
+      storage: null,
+      variants: null,
+      fluxPreservation: null,
+      legacyId: null,
+      importedAt: null,
+      tags: null,
+    };
+  }
+
+  const entry: CatalogEntry = {
+    schemaVersion: '1.0',
+    id,
+    type: 'floppy',
+    md5,
+    volumeName,
+    productId: productMatch?.productId ?? null,
+    version: productMatch?.version ?? null,
+    diskNumber: productMatch?.diskNumber ?? null,
+    diskTotal: null,
+    mediaRole: null,
+    storageClass,
+    imageSizeBytes: buffer.length,
+    imageFormat: 'raw',
+    controller: 'floppy',
+    totalPages: ndfsResult?.totalPages ?? null,
+    pageSize: ndfsResult ? 2048 : null,
+    bootFormat: ndfsResult?.bootFormat ?? null,
+    cpuTarget: null,
+    osRequirement: null,
+    ndfs: ndfsResult ? { users: ndfsResult.users, files: ndfsResult.files } : null,
+    docs: null,
+    provenance: {
+      contributor: options?.contributor ?? 'unknown',
+      // Store only "<parent folder>/<filename>" -- the absolute prefix is
+      // machine-specific noise (a contributor's local mount) and useless later.
+      // The parent folder is kept because the Matcher groups unmatched floppies
+      // by it. Dedup is MD5-based, so the path plays no role on re-import.
+      // Separator-agnostic + always forward-slash so Windows and Linux match.
+      originalPath: relativeSourcePath(filePath),
+      dateImaged: await getFileModTime(filePath),
+    },
+    storage: {
+      git: gitImagePath ? {
+        imagePath: gitImagePath,
+        yamlPath: gitYamlPath!,
+        diskPhotos: gitDiskPhotos,
+        setPhotos: gitSetPhotos,
+        labelTranscription: gitLabelTranscription,
+        imagingLogs: gitImagingLogs,
+      } : null,
+      internetArchive: { itemId: `norskdata-floppy-${id}`, syncStatus: 'pending' },
+      legacyAzure: null,
+    },
+    variants: null,
+    fluxPreservation: null,
+    legacyId: null,
+    importedAt: new Date().toISOString(),
+    tags: null,
+  };
+
+  // Write YAML file next to the image
+  if (gitYamlPath && rootDir) {
+    await saveFloppyYaml(rootDir, entry);
+  }
+
+  return { entry, isDuplicate: false, isVariant: dupCheck.isVariant ?? false };
+}

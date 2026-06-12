@@ -1,0 +1,84 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/HackerCorpLabs/norskdata-software-archive/catalog/schema/release.schema.json",
+  "title": "Norsk Data Release Catalog",
+  "description": "Schema for catalog/releases.json -- cross-repo release links for ND Software Library 4-part packages",
+  "type": "object",
+  "required": ["schemaVersion", "releases"],
+  "properties": {
+    "schemaVersion": {
+      "type": "string",
+      "const": "1.0"
+    },
+    "releases": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["productId", "version", "package"],
+        "properties": {
+          "productId": {
+            "type": "string",
+            "description": "Product article number (e.g., ND-10022)"
+          },
+          "version": {
+            "type": "string",
+            "description": "Product version (e.g., U)"
+          },
+          "package": {
+            "type": "object",
+            "description": "The 4-part Software Library release package",
+            "properties": {
+              "programDescription": {
+                "$ref": "#/$defs/packagePart"
+              },
+              "installation": {
+                "$ref": "#/$defs/packagePart"
+              },
+              "disketteManifest": {
+                "type": "object",
+                "properties": {
+                  "floppyIds": {
+                    "type": "array",
+                    "items": { "type": "string" }
+                  },
+                  "repo": { "type": "string" },
+                  "status": {
+                    "type": "string",
+                    "enum": ["found", "missing", "partial"]
+                  }
+                }
+              },
+              "revisionLog": {
+                "$ref": "#/$defs/packagePart"
+              }
+            }
+          },
+          "installation": {
+            "type": ["object", "null"],
+            "description": "Installation procedure metadata",
+            "properties": {
+              "osRequirement": { "type": ["string", "null"] },
+              "method": { "type": ["string", "null"] },
+              "sourceTag": { "type": ["string", "null"] },
+              "notes": { "type": ["string", "null"] },
+              "ndinsightRef": { "type": ["string", "null"] }
+            }
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "packagePart": {
+      "type": "object",
+      "properties": {
+        "docId": { "type": ["string", "null"] },
+        "repo": { "type": "string" },
+        "status": {
+          "type": "string",
+          "enum": ["found", "missing", "partial"]
+        }
+      }
+    }
+  }
+}

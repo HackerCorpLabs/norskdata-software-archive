@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="base-url" content="..">
+<title>Unmatched Images - Norsk Data Software Archive</title>
+<style>
+:root {
+  --bg: #ffffff;
+  --bg-alt: #f8f9fa;
+  --fg: #1a1a2e;
+  --fg-muted: #555;
+  --border: #dee2e6;
+  --blue-fill: #E3F2FD;
+  --blue-stroke: #0D47A1;
+  --teal-fill: #E0F7FA;
+  --teal-stroke: #00838F;
+  --green-fill: #E8F5E9;
+  --green-stroke: #2E7D32;
+  --purple-fill: #F3E5F5;
+  --purple-stroke: #7B1FA2;
+  --orange-fill: #FFF3E0;
+  --orange-stroke: #E65100;
+  --link: #0D47A1;
+  --link-hover: #1565C0;
+  --card-shadow: 0 1px 3px rgba(0,0,0,0.12);
+}
+
+[data-theme="dark"] {
+  --bg: #1a1a2e;
+  --bg-alt: #16213e;
+  --fg: #e0e0e0;
+  --fg-muted: #aaa;
+  --border: #333;
+  --blue-fill: #0D47A1;
+  --blue-stroke: #90CAF9;
+  --teal-fill: #004D40;
+  --teal-stroke: #80CBC4;
+  --green-fill: #1B5E20;
+  --green-stroke: #A5D6A7;
+  --purple-fill: #4A148C;
+  --purple-stroke: #CE93D8;
+  --orange-fill: #BF360C;
+  --orange-stroke: #FFCC80;
+  --link: #90CAF9;
+  --link-hover: #BBDEFB;
+  --card-shadow: 0 1px 3px rgba(0,0,0,0.4);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+  line-height: 1.6;
+}
+
+.container { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
+
+header {
+  background: var(--blue-fill);
+  border-bottom: 3px solid var(--blue-stroke);
+  padding: 1rem 0;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: var(--blue-stroke);
+}
+
+header nav { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
+header nav a { color: var(--link); text-decoration: none; font-weight: 500; }
+header nav a:hover { text-decoration: underline; color: var(--link-hover); }
+
+.theme-toggle {
+  background: none;
+  border: 1px solid var(--border);
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  cursor: pointer;
+  color: var(--fg);
+  font-size: 0.85rem;
+  margin-left: auto;
+}
+
+main { padding: 2rem 0; }
+
+h2 { color: var(--teal-stroke); border-bottom: 2px solid var(--teal-fill); padding-bottom: 0.3rem; }
+h3 { color: var(--purple-stroke); }
+
+a { color: var(--link); }
+a:hover { color: var(--link-hover); }
+
+/* Stats grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+.stat-card {
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: var(--card-shadow);
+}
+.stat-card .stat-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--green-stroke);
+}
+.stat-card .stat-label {
+  font-size: 0.85rem;
+  color: var(--fg-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Search */
+.search-box {
+  margin: 1.5rem 0;
+  position: relative;
+}
+.search-box input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 2px solid var(--blue-stroke);
+  border-radius: 8px;
+  background: var(--bg);
+  color: var(--fg);
+  outline: none;
+}
+.search-box input:focus {
+  border-color: var(--teal-stroke);
+  box-shadow: 0 0 0 3px var(--teal-fill);
+}
+#search-results {
+  margin-top: 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  max-height: 400px;
+  overflow-y: auto;
+  display: none;
+  background: var(--bg);
+}
+#search-results.active { display: block; }
+.search-result-item {
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid var(--border);
+  cursor: pointer;
+}
+.search-result-item:hover { background: var(--blue-fill); }
+.search-result-item:last-child { border-bottom: none; }
+.sr-id { font-weight: 600; color: var(--blue-stroke); }
+.sr-product { color: var(--fg-muted); font-size: 0.85rem; }
+
+/* Product list */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 0.75rem;
+  margin: 1rem 0;
+}
+.product-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0.75rem;
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+.product-item a { text-decoration: none; font-weight: 500; }
+.product-count {
+  background: var(--green-fill);
+  color: var(--green-stroke);
+  padding: 0.15rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  border: 1px solid var(--green-stroke);
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-size: 0.9rem;
+}
+th {
+  background: var(--teal-fill);
+  color: var(--teal-stroke);
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+  border-bottom: 2px solid var(--teal-stroke);
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+}
+th:hover { background: var(--blue-fill); }
+th .sort-arrow { font-size: 0.7rem; margin-left: 0.3rem; }
+td {
+  padding: 0.4rem 0.75rem;
+  border-bottom: 1px solid var(--border);
+  word-break: break-word;
+}
+tr:hover { background: var(--bg-alt); }
+
+/* Badge */
+.badge {
+  display: inline-block;
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+.badge-blue { background: var(--blue-fill); color: var(--blue-stroke); border: 1px solid var(--blue-stroke); }
+.badge-teal { background: var(--teal-fill); color: var(--teal-stroke); border: 1px solid var(--teal-stroke); }
+.badge-green { background: var(--green-fill); color: var(--green-stroke); border: 1px solid var(--green-stroke); }
+.badge-purple { background: var(--purple-fill); color: var(--purple-stroke); border: 1px solid var(--purple-stroke); }
+.badge-orange { background: var(--orange-fill); color: var(--orange-stroke); border: 1px solid var(--orange-stroke); }
+
+/* NDFS file list */
+.ndfs-files {
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  font-family: 'Consolas', 'Courier New', monospace;
+  font-size: 0.8rem;
+  max-height: 300px;
+  overflow-y: auto;
+}
+.ndfs-files table { margin: 0; font-size: 0.8rem; }
+.ndfs-files th { background: var(--purple-fill); color: var(--purple-stroke); border-bottom: 1px solid var(--purple-stroke); padding: 0.25rem 0.5rem; cursor: default; }
+.ndfs-files td { padding: 0.2rem 0.5rem; }
+
+/* Version group */
+.version-group {
+  margin: 1rem 0;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.version-header {
+  background: var(--teal-fill);
+  color: var(--teal-stroke);
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  border-bottom: 1px solid var(--teal-stroke);
+}
+.version-body { padding: 0.75rem 1rem; }
+
+.image-card {
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.75rem;
+  margin: 0.5rem 0;
+}
+.image-card h4 { margin: 0 0 0.5rem 0; color: var(--blue-stroke); }
+
+.meta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 0.25rem 1rem;
+  font-size: 0.85rem;
+}
+.meta-grid dt { color: var(--fg-muted); font-weight: 600; }
+.meta-grid dd { margin: 0 0 0.25rem 0; }
+
+/* Provenance */
+.provenance {
+  background: var(--orange-fill);
+  border: 1px solid var(--orange-stroke);
+  border-radius: 6px;
+  padding: 0.5rem 0.75rem;
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--orange-stroke);
+}
+
+/* Letter heading */
+.letter-heading {
+  color: var(--purple-stroke);
+  border-bottom: 2px solid var(--purple-fill);
+  margin-top: 2rem;
+  padding-bottom: 0.25rem;
+}
+
+footer {
+  border-top: 2px solid var(--border);
+  padding: 1rem 0;
+  margin-top: 3rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--fg-muted);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .product-grid { grid-template-columns: 1fr; }
+  table { font-size: 0.8rem; }
+  th, td { padding: 0.3rem 0.4rem; }
+}
+
+/* Skip link for accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--blue-stroke);
+  color: #fff;
+  padding: 8px;
+  z-index: 100;
+  transition: top 0.2s;
+}
+.skip-link:focus { top: 0; }
+</style>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<header>
+<div class="container">
+<nav>
+<h1><a href="../index.html" style="color:inherit;text-decoration:none">Norsk Data Software Archive</a></h1>
+<a href="../index.html">Home</a>
+<a href="../all.html">Full Catalog</a>
+<button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">Dark / Light</button>
+</nav>
+</div>
+</header>
+<main id="main-content">
+<div class="container">
+
+<h2>(unmatched) - Unmatched Images</h2>
+<p><span class="badge badge-blue">55 images</span>
+<span class="badge badge-teal">1 version</span></p>
+<div class="version-group">
+<div class="version-header">Version (unknown) (55 images)</div>
+<div class="version-body"><div class="image-card" id="img-fd990abb1746">
+<h4>GRAFS-5</h4>
+<dl class="meta-grid">
+<dt>ID</dt><dd>img-fd990abb1746</dd>
+<dt>MD5</dt><dd><code>fd990abb174697dd6845b15e9a8a6a3d</code></dd><dt>Boot Format</dt><dd><span class="badge badge-teal">none</span></dd><dt>Total Pages</dt><dd>154</dd><dt>Size</dt><dd>308.0 KB</dd><dt>Storage</dt><dd><span class="badge badge-green">floppy-in-git</span></dd><dt>Controller</dt><dd>floppy</dd></dl><p style="font-size:0.85rem"><strong>Git:</strong> <code>images/fd990abb174697dd6845b15e9a8a6a3d/GRAFS-5, Norsk versjon, 5-5-81.img.gz</code></p><p style="font-size:0.85rem"><strong>Internet Archive:</strong>
+<a href="https://archive.org/details/norskdata-floppy-img-fd990abb1746" target="_blank" rel="noopener">norskdata-floppy-img-fd990abb1746</a></p><details>
+<summary style="cursor:pointer;font-weight:600;color:var(--purple-stroke)">NDFS Files (2)</summary>
+<div class="ndfs-files">
+<table>
+<thead><tr><th>Name</th><th>Type</th><th>Pages</th><th>Size</th></tr></thead>
+<tbody><tr><td>MTXT:PROG</td><td>PROG</td><td>59</td><td>117.0 KB</td></tr><tr><td>INDX:PROG</td><td>PROG</td><td>58</td><td>115.0 KB</td></tr></tbody></table></div></details><p style="font-size:0.85rem"><strong>Users:</strong> GRAFS-USER (120 pages)</p><div class="provenance"><strong>Contributor:</strong> Frode | <strong>Original:</strong> <code>/mnt/d/ND/Frode/GRAFS Norsk versjon/GRAFS-5, Norsk versjon, 5-5-81.img</code></div></div><div class="image-card" id="img-f8fc222e250d">
+<h4>ND-10142B-PART3</h4>
+<dl class="meta-grid">
+<dt>ID</dt><dd>img-f8fc222e250d</dd>
+<dt>MD5</dt><dd><code>f8fc222e250d0ef7f0685d30fabe83cd</code></dd><dt>Boot Format</dt><dd><span class="badge badge-teal">flomon</span></dd><dt>Total Pages</dt><dd>154</dd><dt>Size</dt><dd>308.0 KB</dd><dt>Storage</dt><dd><span class="badge badge-green">floppy-in-git</span></dd><dt>Controller</dt><dd>floppy</dd></dl><p style="font-size:0.85rem"><strong>Git:</strong> <code>images/f8fc222e250d0ef7f0685d30fabe83cd/ND-10142B-PART3_f8fc22.img.gz</code></p><p style="font-size:0.85rem"><strong>Internet Archive:</strong>
+<a href="https://archive.org/details/norskdata-floppy-img-f8fc222e250d" target="_blank" rel="noopener">norskdata-floppy-img-f8fc222e250d</a></p><details>
+<summary style="cursor:pointer;font-weight:600;color:var(--purple-stroke)">NDFS Files (12)</summary>
+<div class="ndfs-files">
+<table>
+<thead><tr><th>Name</th><th>Type</th><th>Pages</th><th>Size</th></tr></thead>
+<tbody><tr><td>BOOK-B:BRF</td><td>BRF</td><td>16</td><td>31.0 KB</td></tr><tr><td>LOAD-B:BRF</td><td>BRF</td><td>16</td><td>31.8 KB</td></tr><tr><td>EDIT-B:BRF</td><td>BRF</td><td>18</td><td>34.1 KB</td></tr><tr><td>SORT-B:BRF</td><td>BRF</td><td>10</td><td>18.6 KB</td></tr><tr><td>FREQPV-B:BRF</td><td>BRF</td><td>10</td><td>19.9 KB</td></tr><tr><td>FREQX1-B:BRF</td><td>BRF</td><td>1</td><td>1.2 KB</td></tr><tr><td>FREQX2-B:BRF</td><td>BRF</td><td>1</td><td>1.8 KB</td></tr><tr><td>FREQX3-B:BRF</td><td>BRF</td><td>4</td><td>6.8 KB</td></tr><tr><td>FREQX6-B:BRF</td><td>BRF</td><td>7</td><td>13.2 KB</td></tr><tr><td>FREQP1-B:BRF</td><td>BRF</td><td>8</td><td>15.2 KB</td></tr><tr><td>FREQP2-B:BRF</td><td>BRF</td><td>3</td><td>5.4 KB</td></tr><tr><td>FREQP6-B:BRF</td><td>BRF</td><td>8</td><td>16.0 KB</td></tr></tbody></table></div></details><p style="font-size:0.85rem"><strong>Users:</strong> FLOPPY-USER (115 pages)</p><div class="provenance"><strong>Contributor:</strong> Frode | <strong>Original:</strong> <code>/mnt/d/ND/Frode/ND-10142B (5.25 inch)/ND-10142B-PART3.img</code></div></div><div class="image-card" id="img-f36c4e59b776">
+<h4>GRAFS-4</h4>
+<dl class="meta-grid">
+<dt>ID</dt><dd>img-f36c4e59b776</dd>
+<dt>MD5</dt><dd><code>f36c4e59b776f04b725dc1e85ca73ec5</code></dd><dt>Boot Format</dt><dd><span class="badge badge-teal">none</span></dd><dt>Total Pages</dt><dd>154</dd><dt>Size</dt><dd>308.0 KB</dd><dt>Storage</dt><dd><span class="badge badge-green">floppy-in-git</span></dd><dt>Controller</dt><dd>floppy</dd></dl><p style="font-size:0.85rem"><strong>Git:</strong> <code>images/f36c4e59b776f04b725dc1e85ca73ec5/GRAFS-4, Norsk versjon, 5-5-81.img.gz</code></p><p style="font-size:0.85rem"><strong>Internet Archive:</strong>
+<a href="https://archive.org/details/norskdata-floppy-img-f36c4e59b776" target="_blank" rel="noopener">norskdata-floppy-img-f36c4e59b776</a></p><details>
+<summary style="cursor:pointer;font-weight:600;color:var(--purple-stroke)">NDFS Files (2)</summary>
+<div class="ndfs-files">
+<table>
+<thead><tr><th>Name</th><th>Type</th><th>Pages</th><th>Size</th></tr></thead>
+<tbody><tr><td>MERO:PROG</td><td>PROG</td><td>59</td><td>117.0 KB</td></tr><tr><td>CONO:PROG</td><td>PROG</td><td>59</td><td>117.0 KB</td></tr></tbody></table></div></details><p style="font-size:0.85rem"><strong>Users:</strong> GRAFS-USER (121 pages)</p><div class="provenance"><strong>Contributor:</strong> Frode | <strong>Original:</strong> <code>/mnt/d/ND/Frode/GRAFS Norsk versjon/GRAFS-4, Norsk versjon, 5-5-81.img</code></div></div><div class="image-card" id="os-n-900-000-i-ee0ac9c7">
+<h4>N-900-000-I</h4>
+<dl class="meta-grid">
+<dt>ID</dt><dd>os-n-900-000-i-ee0ac9c7</dd>
+<dt>MD5</dt><dd><code>ee0ac9c73064d9a10f1966fd8f7a62f4</code></dd><dt>Boot Format</dt><dd><span class="badge badge-teal">flomon</span></dd><dt>Total Pages</dt><dd>154</dd><dt>Size</dt><dd>308.0 KB</dd><dt>Storage</dt><dd><span class="badge badge-green">floppy-in-git</span></dd><dt>Controller</dt><dd>floppy</dd></dl><p style="font-size:0.85rem"><strong>Git:</strong> <code>images/ee0ac9c73064d9a10f1966fd8f7a62f4/COSMOS Version Diskette 1.img.gz</code></p><p style="font-size:0.85rem"><strong>Internet Archive:</strong>
+<a href="https://archive.org/details/norskdata-floppy-os-n-900-000-i-ee0ac9c7" target="_blank" rel="noopener">norskdata-floppy-os-n-900-000-i-ee0ac9c7</a></p><details>
+<summary style="cursor:pointer;font-weight:600;color:var(--purple-stroke)">NDFS Files (2)</summary>
+<div class="ndfs-files">
+<table>
+<thead><tr><th>Name</th><th>Type</th><th>Pages</th><th>Size</th></tr></thead>
+<tbody><tr><td>MACM-1718K:BPUN</td><td>BPUN</td><td>20</td><td>31.2 KB</td></tr><tr><td>SINTRAN-I:DATA</td><td>DATA</td><td>127</td><td>186.6 KB</td></tr></tbody></table></div></details><p style="font-size:0.85rem"><strong>Users:</strong> SYSTEM (148 pages)</p><div class="provenance"><strong>Contributor:</strong> Frode | <strong>Original:</strong> <code>/mnt/d/ND/Frode/Standard Satellite-9 83.01.06 ver H/COSMOS Version Diskette 1.img</code></div></div><div class="image-card" id="img-e9c997280a5f">
+<h4>ND-10315D-PART3</h4>
+<dl class="meta-grid">
+<dt>ID</dt><dd>img-e9c997280a5f</dd>
+<dt>MD5</dt><dd><code>e9c997280a5f7b8a323e9d2973cc1a2f</code></dd><dt>Boot Format</dt><dd><span class="badge badge-teal">none</span></dd><dt>Total Pages</dt><dd>154</dd><dt>Size</dt><dd>308.0 KB</dd><dt>Storage</dt><dd><span class="badge badge-green">floppy-in-git</span></dd><dt>Controller</dt><dd>floppy</dd></dl><p style="font-size:0.85rem"><strong>Git:</strong> <code>images/e9c997280a5f7b8a323e9d2973cc1a2f/ND-10315D-PART3.img.gz</code></p><p style="font-size:0.85rem"><strong>Internet Archive:</strong>
+<a href="https://archive.org/details/norskdata-floppy-img-e9c997280a5f" target="_blank" rel="noopener">norskdata-floppy-img-e9c997280a5f</a></p><details>
+<summary style="cursor:pointer;font-weight:600;color:var(--purple-stroke)">NDFS Files (1)</summary>
+<div class="ndfs-files">
+<table>
+<thead><tr><th>Name</th><th>Type</th><th>Pages</th><th>Size</th></tr></thead>
+<tbody><tr><td>ACC-CONV-203904A:PROG</td><td>PROG</td><td>36</td><td>70.5 KB</td></tr></tbody></table></div></details><p style="font-size:0.85rem"><strong>Users:</strong> FLOPPY-USER (38 pages)</p><div class="provenance"><strong>Contributor:</strong> Frode | <strong>Original:</strong> <code>/mnt/d/ND/Frode/ND-10315D/ND-10315D-PART3.img</code></div></div><div class="image-card" id="img-e8584b9d2332">
+<h4>ND-10315D-PART2</h4>
+<dl class="meta-grid">
+<dt>ID</dt><dd>img-e8584b9d2332</dd>
+<dt>MD5</dt><dd><code>e8584b9d2332c657be0e6a5458e5674f</code></dd><dt>Boot Format</dt><dd><span class="badge badge-teal">none</span></dd><dt>Total Pages</dt><dd>154</dd><dt>Size</dt><dd>308.0 KB</dd><dt>Storage</dt><dd><span class="badge badge-green">floppy-in-git</span></dd><dt>Controller</dt><dd>floppy</dd></dl><p style="font-size:0.85rem"><strong>Git:</strong> <code>images/e8584b9d2332c657be0e6a5458e5674f/ND-10315D-PART2.img.gz</code></p><p style="font-size:0.85rem"><strong>Internet Archive:</strong>
+<a href="https://archive.org/details/norskdata-floppy-img-e8584b9d2332" target="_blank" rel="noopener">norskdata-floppy-img-e8584b9d2332</a></p><details>
+<summary style="cursor:pointer;font-weight:600;color:var(--purple-stroke)">NDFS Files (1)</summary>
+<div class="ndfs-files">
+<table>
+<thead><tr><th>Name</th><th>Type</th><th>Pages</th><th>Size</th></tr></thead>
+<tbody><tr><td>ACC-S-32-203900A:PROG</td><td>PROG</td><td>116</td><td>468.0 KB</td></tr></tbody></table></div></details><p style="font-size:0.85rem"><strong>Users:</strong> FLOPPY-USER (118 pages)</p><div class="provenance"><strong>Contributor:</strong> Frode | <strong>Original:</strong> <code>/mnt/d/ND/Frode/ND-10315D/ND-10315D-PART2.img</code></div></div><div class="image-card" id="patch-nd-patch-sin-j-de682823">
+<h4>ND-PATCH-SIN-J</h4>
+<dl class="meta-grid">
+<dt>ID</dt><dd>patch-nd-patch-sin-j-de682823</dd>
+<dt>MD5</dt><dd><code>de68282393b986355310594b42401df6</code></dd><dt>Boot Format</dt><dd><span class="badge badge-teal">none</span></dd><dt>Total Pages</dt><dd>154</dd><dt>Size</dt><dd>308.0 KB</dd><dt>Storage</dt><dd><span class="badge badge-green">floppy-in-git</span></dd><dt>Controller</dt><dd>floppy</dd></dl><p style="font-size:0.85rem"><strong>Git:</strong> <code>images/de68282393b986355310594b42401df6/PATCH-SIN-J-11100, 86.10.23.HKE (2).img.gz</code></p><p style="font-size:0.85rem"><strong>Internet Archive:</strong>
+<a href="https://archive.org/details/norskdata-floppy-patch-nd-patch-sin-j-de682823" target="_blank" rel="noopener">norskdata-floppy-patch-nd-patch-sin-j-de682823</a></p><details>
+<summary style="cursor:pointer;font-weight:600;color:var(--purple-stroke)">NDFS Files (6)</summary>
+<div class="ndfs-files">
+<table>
+<thead><tr><th>Name</th><th>Type</th><th>Pages</th><th>Size</th></tr></thead>
+<tbody><tr><td>MULTI-FUNCTION:PROG</td><td>PROG</td><td>18</td><td>36.0 KB</td></tr><tr><td>START-PATCH-FILE:MODE</td><td>MODE</td><td>3</td><td>4.1 KB</td></tr><tr><td>PATCH-FILE:MODE</td><td>MODE</td><td>2</td><td>3.6 KB</td></tr><tr><td>PATCHES:PATC</td><td>PATC</td><td>115</td><td>226.7 KB</td></tr><tr><td>REFERENCE:FADM</td><td>FADM</td><td>3</td><td>5.2 KB</td></tr><tr><td>SYMBOLS:FADM</td><td>FADM</td><td>1</td><td>23 B</td></tr></tbody></table></div></details><p style="font-size:0.85rem"><strong>Users:</strong> SYSTEM (148 pages)</p><div class="provenance"><strong>Contributor:</strong> Frode | <strong>Original:</strong> <code>/mnt/d/ND/Frode/Sintran III J Patch 11100/PATCH-SIN-J-11100, 86.10.23.HKE (2).img</code></div></div><div class="image-card" id="img-d2fbf7e839b5">
+<h4>ND-10142B-PART4</h4>
+<dl class="meta-grid">
+<dt>ID</dt><dd>img-d2fbf7e839b5</dd>
+<dt>MD5</dt><dd><code>d2fbf7e839b56c4e7fb5b735da686996</code></dd><dt>Boot Format</dt><dd><span class="badge badge-teal">binary</span></dd><dt>Total Pages</dt><dd>154</dd><dt>Size</dt><dd>308.0 KB</dd><dt>Storage</dt><dd><span class="badge badge-green">floppy-in-git</span></dd><dt>Controller</dt><dd>floppy</dd></dl><p style="font-size:0.85rem"><strong>Git:</strong> <code>images/d2fbf7e839b56c4e7fb5b735da686996/ND-10142B-PART4.img.gz</code></p><p style="font-size:0.85rem"><strong>Internet Archive:</strong>
+<a href="https://archive.org/details/norskdata-floppy-img-d2fbf7e839b5" target="_blank" rel="noopener">norskdata-floppy-img-d2fbf7e839b5</a></p><details>
+<summary style="cursor:pointer;font-weight:600;color:var(--purple-stroke)">NDFS Files (8)</summary>
+<div class="ndfs-files">
+<table>
+<thead><tr><th>Name</th><th>Type</th><th>Pages</th><th>Size</th></tr></thead>
+<tbody><tr><td>FREQX4-B:BRF</td><td>BRF</td><td>19</td><td>36.4 KB</td></tr><tr><td>MEAN-B:BRF</td><td>BRF</td><td>29</td><td>56.6 KB</td></tr><tr><td>XFER-B:BRF</td><td>BRF</td><td>9</td><td>16.7 KB</td></tr><tr><td>MIX-B:BRF</td><td>BRF</td><td>12</td><td>23.6 KB</td></tr><tr><td>STAT-B:BRF</td><td>BRF</td><td>12</td><td>22.2 KB</td></tr><tr><td>MACREL-B:BRF</td><td>BRF</td><td>3</td><td>5.2 KB</td></tr><tr><td>INSTALL-B:DP1</td><td>DP1</td><td>11</td><td>22.0 KB</td></tr><tr><td>INSTALL-B:DP2</td><td>DP2</td><td>39</td><td>78.0 KB</td></tr></tbody></table></div></details><p style="font-size:0.85rem"><strong>Users:</strong> FLOPPY-USER (143 pages)</p><div class="provenance"><strong>Contributor:</strong> Frode | <strong>Original:</strong> <code>/mnt/d/ND/Frode/ND-10142B/ND-10142B-PART4.img</code></div></div><div class="image-card" id="img-cc455546e6b3">
+<h4>ND-10142B-PATCH1</h4>
+<dl class="meta-grid">
+<dt>ID</dt><dd>img-cc455546e6b3</dd>
+<dt>MD5</dt><dd><code>cc455546e6b398e454879abf674823c4</code></dd><dt>Boot Format</dt><dd><span class="badge badge-teal">none</span></dd><dt>Total Pages</dt><dd>154</dd><dt>Size</dt><dd>308.0 KB</dd><dt>Storage</dt><dd><span class="badge badge-green">floppy-in-git</span></dd><dt>Controller</dt><dd>floppy</dd></dl><p style="font-size:0.85rem"><strong>Git:</strong> <code>images/cc455546e6b398e454879abf674823c4/ND-10142B-PATCH.img.gz</code></p><p style="font-size:0.85rem"><strong>Internet Archive:</strong>
+<a href="https://archive.org/details/norskdata-floppy-img-cc455546e6b3" target="_blank" rel="noopener">norskdata-floppy-img-cc455546e6b3</a></p><details>
+<summary style="cursor:pointer;font-weight:600;color:var(--purple-stroke)">NDFS Files (2)</summary>
+<div class="ndfs-files">
+<table>
+<thead><tr><th>Name</th><th>Type</th><th>Pages</th><th>Size</th></tr></thead>
+<tbody><tr><td>FTNLIBR-2091F:BRF</td><td>BRF</td><td>18</td><td>34.3 KB</td></tr><tr><td>INSTALL-B:MODE</td><td>MODE</td><td>1</td><td>1.8 KB</td></tr></tbody></table></div></details><p style="font-size:0.85rem"><strong>Users:</strong> FLOPPY-USER (22 pages)</p><div class="provenance"><strong>Contributor:</strong> Frode | <strong>Original:</strong> <code>/mnt/d/ND/Frode/ND-10142B (5.25 inch)/ND-10142B-PATCH.img</code></div></div><div class="image-card" id="os-n-900-000-i-b8451475">
+<h4>N-900-000-II</h4>
+<dl class="meta-grid">
+<dt>ID</dt><dd>os-n-900-000-i-b8451475</dd>
+<dt>MD5</dt><dd><code>b8451475736030d62432fbcdc50965c8</code></dd><dt>Boot Format</dt><dd><span class="badge badge-teal">flomon</span></dd><dt>Total Pages</dt><dd>154</dd><dt>Size</dt><dd>308.0 KB</dd><dt>Storage</dt><dd><span class="badge badge-green">floppy-in-git</span></dd><dt>Controller</dt><dd>floppy</dd></dl><p style="font-size:0.85rem"><strong>Git:</strong> <code>images/b8451475736030d62432fbcdc50965c8/COSMOS Version Diskette 2.img.gz</code></p><p style="font-size:0.85rem"><strong>Internet Archive:</strong>
+<a href="https://archive.org/details/norskdata-floppy-os-n-900-000-i-b8451475" target="_blank" rel="noopener">norskdata-floppy-os-n-900-000-i-b8451475</a></p><details>
+<summary style="cursor:pointer;font-weight:600;color:var(--purple-stroke)">NDFS Files (1)</summary>
+<div class="ndfs-files">
+<table>
+<thead><tr><th>Name</th><th>Type</th><th>Pages</th><th>Size</th></tr></thead>
+<tbody><tr><td>SINTRAN-II:DATA</td><td>DATA</td><td>147</td><td>170.2 KB</td></tr></tbody></table></div></details><p style="font-size:0.85rem"><strong>Users:</strong> SYSTEM (148 pages)</p><div class="provenance"><strong>Contributor:</strong> Frode | <strong>Original:</strong> <code>/mnt/d/ND/Frode/Standard Satellite-9 83.01.06 ver H/COSMOS Version Diskette 2.img</code></div></div><div class="image-card" id="patch-patch-sintran-b4c16a60">
+<h4>PATCH-SINTRAN</h4>
+<dl class="meta-grid">
+<dt>ID</dt><dd>patch-patch-sintran-b4c16a60</dd>
+<dt>MD5</dt><dd><code>b4c16a6064c87766a0ac5bb4de4becd1</code></dd><dt>Boot Format</dt><dd><span class="badge badge-teal">flomon</span></dd><dt>Total Pages</dt><dd>154</dd><dt>Size</dt><dd>308.0 KB</dd><dt>Storage</dt><dd><span class="badge badge-green">floppy-in-git</span></dd><dt>Controller</dt><dd>floppy</dd></dl><p style="font-size:0.85rem"><strong>Git:</strong> <code>images/b4c16a6064c87766a0ac5bb4de4becd1/SINTRAN III H Patchfile 223 (backup).img.gz</code></p><p style="font-size:0.85rem"><strong>Internet Archive:</strong>
+<a href="https://archive.org/details/norskdata-floppy-patch-patch-sintran-b4c16a60" target="_blank" rel="noopener">norskdata-floppy-patch-patch-sintran-b4c16a60</a></p><details>
+<summary style="cursor:pointer;font-weight:600;color:var(--purple-stroke)">NDFS Files (7)</summary>
+<div class="ndfs-files">
+<table>
+<thead><tr><th>Name</th><th>Type</th><th>Pages</th><th>Size</th></tr></thead>
+<tbody><tr><td>FILE-TEST-H:PROG</td><td>PROG</td><td>9</td><td>18.0 KB</td></tr><tr><td>CPU-TYPE:PROG</td><td>PROG</td><td>2</td><td>130.0 KB</td></tr><tr><td>PATCH-FILE-G:MODE</td><td>MODE</td><td>3</td><td>5.0 KB</td></tr><tr><td>PATCH-FILE:PATC</td><td>PATC</td><td>72</td><td>141.2 KB</td></tr><tr><td>REFERENCE:FADM</td><td>FADM</td><td>2</td><td>2.8 KB</td></tr><tr><td>SYMBOLS:FADM</td><td>FADM</td><td>1</td><td>17 B</td></tr><tr><td>PATCH-FILE:OUT</td><td>OUT</td><td>5</td><td>9.5 KB</td></tr></tbody></table></div></details><p style="font-size:0.85rem"><strong>Users:</strong> SYSTEM (102 pages)</p><div class="provenance"><strong>Contributor:</strong> Frode | <strong>Original:</strong> <code>/mnt/d/ND/Frode/Sintran III H Patch 223/SINTRAN III H Patchfile 223 (backup).img</code></div></div><div class="image-card" id="os-n-900-188-i-b36c84c8">
+<h4>N-900-188-II</h4>
+<dl class="meta-grid">
+<dt>ID</dt><dd>os-n-900-188-i-b36c84c8</dd>
+<dt>MD5</dt><dd><code>b36c84c8e1d5eec1d4b37464510ad806</code></dd><dt>Boot Format</dt><dd><span class="badge badge-teal">flomon</span></dd><dt>Total Pages</dt><dd>154</dd><dt>Size</dt><dd>308.0 KB</dd><dt>Storage</dt><dd><span class="badge badge-green">floppy-in-git</span></dd><dt>Controller</dt><dd>floppy</dd></dl><p style="font-size:0.85rem"><strong>Git:</strong> <code>images/b36c84c8e1d5eec1d4b37464510ad806/N-900-188-II_b36c84.img.gz</code></p><p style="font-size:0.85rem"><strong>Internet Archive:</strong>
+<a href="https://archive.org/details/norskdata-floppy-os-n-900-188-i-b36c84c8" target="_blank" rel="noopener">norskdata-floppy-os-n-900-188-i-b36c84c8</a></p><details>
+<summary style="cursor:pointer;font-weight:600;color:var(--purple-stroke)">NDFS Files (1)</summary>
+<div class="ndfs-files">
+<table>
+<thead><tr><th>Name</th><th>Type</th><th>Pages</th><th>Size</th></tr></thead>
+<tbody><tr><td>SINTRAN-II:DATA</td><td>DATA</td><td>147</td><td>215.1 KB</td></tr></tbody></table></div></details><p style="font-size:0.85rem"><strong>Users:</strong> SYSTEM (148 pages)</p><div class="provenance"><strong>Contributor:</strong> Frode | <strong>Original:</strong> <code>/mnt/d/ND/Frode/Sintran III Version J 86-11-26/N-900-188-II.img</code></div></div><div class="image-card" id="patch-nd-patch-sin-j-b1d5cb5c">
+<h4>ND-PATCH-SIN-J</h4>
+<dl class="meta-grid">
+<dt>ID</dt><dd>patch-nd-patch-sin-j-b1d5cb5c</dd>
+<dt>MD5</dt><dd><code>b1d5cb5c21cfad4f1ea319b2664cf2e2</code></dd><dt>Boot Format</dt><dd><span class="badge badge-teal">none</span></dd><dt>Total Pages</dt><dd>154</dd><dt>Size</dt><dd>308.0 KB</dd><dt>Storage</dt><dd><span class="badge badge-green">floppy-in-git</span></dd><dt>Controller</dt><dd>floppy</dd></dl><p style="font-size:0.85rem"><strong>Git:</strong> <code>images/b1d5cb5c21cfad4f1ea319b2664cf2e2/PATCH-SIN-J-11100, 86.10.23.HKE.img.gz</code></p><p style="font-size:0.85rem"><strong>Internet Archive:</strong>
+<a href="https://archive.org/details/norskdata-floppy-patch-nd-patch-sin-j-b1d5cb5c" target="_blank" rel="noopener">norskdata-floppy-patch-nd-patch-sin-j-b1d5cb5c</a></p><details>
+<summary style="cursor:pointer;font-weight:600;color:var(--purple-stroke)">NDFS Files (6)</summary>
+<div class="ndfs-files">
+<table>
+<thead><tr><th>Name</th><th>Type</th><th>Pages</th><th>Size</th></tr></thead>
+<tbody><tr><td>MULTI-FUNCTION:PROG</td><td>PROG</td><td>18</td><td>36.0 KB</td></tr><tr><td>START-PATCH-FILE:MODE</td><td>MODE</td><td>3</td><td>4.1 KB</td></tr><tr><td>PATCH-FILE:MODE</td><td>MODE</td><td>2</td><td>3.6 KB</td></tr><tr><td>PATCHES:PATC</td><td>PATC</td><td>115</td><td>226.7 KB</td></tr><tr><td>REFERENCE:FADM</td><td>FADM</td><td>3</td><td>5.2 KB</td></tr><tr><td>SYMBOLS:FADM</td><td>FADM</td><td>1</td><td>23 B</td></tr></tbody></table></div></details><p style="font-size:0.85rem"><strong>Users:</strong> SYSTEM (148 pages)</p><div class="provenance"><strong>Contributor:</strong> Frode | <strong>Original:</strong> <code>/mnt/d/ND/Frode/Sintran III J Patch 11100/PATCH-SIN-J-11100, 86.10.23.HKE.img</code></div></div><div class="image-card" id="img-b1cf6b1be691">
+<h4>FLOPPY</h4>
+<dl class="meta-grid">
+<dt>ID</dt><dd>img-b1cf6b1be691</dd>
+<dt>MD5</dt><dd><code>b1cf6b1be691da9c1f41ff1746e6cbbe</code></dd><dt>Boot Format</dt><dd><span class="badge badge-teal">none</span></dd><dt>Total Pages</dt><dd>616</dd><dt>Size</dt><dd>1.2 MB</dd><dt>Storage</dt><dd><span class="badge badge-green">floppy-in-git</span></dd><dt>Controller</dt><dd>floppy</dd></dl><p style="font-size:0.85rem"><strong>Git:</strong> <code>images/b1cf6b1be691da9c1f41ff1746e6cbbe/Fortran.img.gz</code></p><p style="font-size:0.85rem"><strong>Internet Archive:</strong>
+<a href="https://archive.org/details/norskdata-floppy-img-b1cf6b1be691" target="_blank" rel="noopener">norskdata-floppy-img-b1cf6b1be691</a></p><details>
+<summary style="cursor:pointer;font-weight:600;color:var(--purple-stroke)">NDFS Files (5)</summary>
+<div class="ndfs-files">
+<table>
+<thead><tr><th>Name</th><th>Type</th><th>Pages</th><th>Size</th></tr></thead>
+<tbody><tr><td>FORTRAN-100-E00:PROG</td><td>PROG</td><td>118</td><td>594.0 KB</td></tr><tr><td>FORT48-1BANK-E0:BRF</td><td>BRF</td><td>54</td><td>107.8 KB</td></tr><tr><td>FORT48-2BANK-E0:BRF</td><td>BRF</td><td>56</td><td>111.8 KB</td></tr><tr><td>FORT32-1BANK-E0:BRF</td><td>BRF</td><td>54</td><td>107.4 KB</td></tr><tr><td>FORT32-2BANK-E0:BRF</td><td>BRF</td><td>56</td><td>111.4 KB</td></tr></tbody></table></div></details><p style="font-size:0.85rem"><strong>Users:</strong> FLOPPY-USER (344 pages)</p><div class="provenance"><strong>Contributor:</strong> Frode | <strong>Original:</strong> <code>/mnt/d/ND/Frode/Fortran (5.25 inch)/Fortran.img</code></div></div><div class="image-card" id="img-b154be0f7b24">
+<h4>GRAFS-1</h4>
+<dl class="meta-grid">
+<dt>ID</dt><dd>img-b154be0f7b24</dd>
+<dt>MD5</dt><dd><code>b154be0f7b241782de5f618230e85269</code></dd><dt>Boot Format</dt><dd><span class="badge badge-teal">none</span></dd><dt>Total Pages</dt><dd>154</dd><dt>Size</dt><dd>308.0 KB</dd><dt>Storage</dt><dd><span class="badge badge-green">floppy-in-git</span></dd><dt>Controller</dt><dd>floppy</dd></dl><p style="font-size:0.85rem"><strong>Git:</strong> <code>images/b154be0f7b241782de5f618230e85269/GRAFS-1, Norsk versjon, 5-5-81.img.gz</code></p><p style="font-size:0.85rem"><strong>Internet Archive:</strong>
+<a href="https://archive.org/details/norskdata-floppy-img-b154be0f7b24" target="_blank" rel="noopener">norskdata-floppy-img-b154be0f7b24</a></p><details>
+<summary style="cursor:pointer;font-weight:600;color:var(--purple-stroke)">NDFS Files (9)</summary>
+<div class="ndfs-files">
+<table>
+<thead><tr><th>Name</th><th>Type</th><th>Pages</th><th>Size</th></tr></thead>
+<tbody><tr><td>GRAFS:BPUN</td><td>BPUN</td><td>65</td><td>128.4 KB</td></tr><tr><td>MAIN-GRAFS:BPUN</td><td>BPUN</td><td>29</td><td>56.4 KB</td></tr><tr><td>DB-GRAFS:BPUN</td><td>BPUN</td><td>29</td><td>56.4 KB</td></tr><tr><td>DUMP-GRAFS:MODE</td><td>MODE</td><td>1</td><td>443 B</td></tr><tr><td>PATCH-SEGMENT:MODE</td><td>MODE</td><td>1</td><td>251 B</td></tr><tr><td>CREATE-SCHEMA-DB:MODE</td><td>MODE</td><td>1</td><td>383 B</td></tr><tr><td>CREATE-DATABASE:MODE</td><td>MODE</td><td>1</td><td>720 B</td></tr><tr><td>INIT-DATABASE:MODE</td><td>MODE</td><td>1</td><td>150 B</td></tr><tr><td>UPDATE-DATABASE:MODE</td><td>MODE</td><td>1</td><td>217 B</td></tr></tbody></table></div></details><p style="font-size:0.85rem"><strong>Users:</strong> LASSE (139 pages)</p><div class="provenance"><strong>Contributor:</strong> Frode | <strong>Original:</strong> <code>/mnt/d/ND/Frode/GRAFS Norsk versjon/GRAFS-1, Norsk versjon, 5-5-81.img</code></div></div><div class="image-card" id="img-af1c6cb25946">
+<h4>UNIQUE</h4>
+<dl class="meta-grid">
+<dt>ID</dt><dd>img-af1c6cb25946</dd>
+<dt>MD5</dt><dd><code>af1c6cb259465ea03f33d68f7eb32da4</code></dd><dt>Boot Format</dt><dd><span class="badge badge-teal">none</span></dd><dt>Total Pages</dt><dd>640</dd><dt>Size</dt><dd>1.3 MB</dd><dt>Storage</dt><dd><span class="badge badge-green">floppy-in-git</span></dd><dt>Controller</dt><dd>floppy</dd></dl><p style="font-size:0.85rem"><strong>Git:</strong> <code>images/af1c6cb259465ea03f33d68f7eb32da4/Unique START part 2.img.gz</code></p><p style="font-size:0.85rem"><strong>Internet Archive:</strong>
+<a href="https://archive.org/details/norskdata-floppy-img-af1c6cb25946" target="_blank" rel="noopener">norskdata-floppy-img-af1c6cb25946</a></p><details>
+<summary style="cursor:pointer;font-weight:600;color:var(--purple-stroke)">NDFS Files (7)</summary>
+<div class="ndfs-files">
+<table>
+<thead><tr><th>Name</th><th>Type</th><th>Pages</th><th>Size</th></tr></thead>
+<tbody><tr><td>USLIB3:NRF</td><td>NRF</td><td>256</td><td>510.2 KB</td></tr><tr><td>USNOTISN:NRF</td><td>NRF</td><td>1</td><td>323 B</td></tr><tr><td>USNOTISO:NRF</td><td>NRF</td><td>1</td><td>333 B</td></tr><tr><td>USDUMS2:NRF</td><td>NRF</td><td>1</td><td>1.4 KB</td></tr><tr><td>USSPRINT:NRF</td><td>NRF</td><td>2</td><td>2.7 KB</td></tr><tr><td>CAT-LIB-B06:NRF</td><td>NRF</td><td>108</td><td>215.7 KB</td></tr><tr><td>NC-LIB-A06:NRF</td><td>NRF</td><td>50</td><td>99.1 KB</td></tr></tbody></table></div></details><p style="font-size:0.85rem"><strong>Users:</strong> FLOPPY-USER (427 pages)</p><div class="provenance"><strong>Contributor:</strong> Frode | <strong>Original:</strong> <code>/mnt/d/ND/Frode/Unique Start (5.25 inch)/Unique START part 2.img</code></div></div><div class="image-card" id="os-n-900-188-i-aef8d67e">
+<h4>N-900-188-I</h4>
+<dl class="meta-grid">
+<dt>ID</dt><dd>os-n-900-188-i-aef8d67e</dd>
+<dt>MD5</dt><dd><code>aef8d67eb0d4b7cc92b90046c3cd4142</code></dd><dt>Boot Format</dt><dd><span class="badge badge-teal">flomon</span></dd><dt>Total Pages</dt><dd>154</dd><dt>Size</dt><dd>308.0 KB</dd><dt>Storage</dt><dd><span class="badge badge-green">floppy-in-git</span></dd><dt>Controller</dt><dd>floppy</dd></dl><p style="font-size:0.85rem"><strong>Git:</strong> <code>images/aef8d67eb0d4b7cc92b90046c3cd4142/N-900-188-I_aef8d6.img.gz</code></p><p style="font-size:0.85rem"><strong>Internet Archive:</strong>
+<a href="https://archive.org/details/norskdata-floppy-os-n-900-188-i-aef8d67e" target="_blank" rel="noopener">norskdata-floppy-os-n-900-188-i-aef8d67e</a></p><details>
+<summary style="cursor:pointer;font-weight:600;color:var(--purple-stroke)">NDFS Files (2)</summary>
+<div class="ndfs-files">
+<table>
+<thead><tr><th>Name</th><th>Type</th><th>Pages</th><th>Size</th></tr></thead>
+<tbody><tr><td>MACM-1718L:BPUN</td><td>BPUN</td><td>20</td><td>34.5 KB</td></tr><tr><td>SINTRAN-I:DATA</td><td>DATA</td><td>127</td><td>194.7 KB</td></tr></tbody></table></div></details><p style="font-size:0.85rem"><strong>Users:</strong> SYSTEM (148 pages)</p><div class="provenance"><strong>Contributor:</strong> Frode | <strong>Original:</strong> <code>/mnt/d/ND/Frode/Sintran III Version J 86-12-09/N-900-188-I.img</code></div></div><div class="image-card" id="os-n-900-188-i-ac337cef">
+<h4>N-900-188-I</h4>
+<dl class="meta-grid">
+<dt>ID</dt><dd>os-n-900-188-i-ac337cef</dd>
+<dt>MD5</dt><dd><code>ac337cefca36c929f1365688075fda8d</code></dd><dt>Boot Format</dt><dd><span class="badge badge-teal">flomon</span></dd><dt>Total Pages</dt><dd>154</dd><dt>Size</dt><dd>308.0 KB</dd><dt>Storage</dt><dd><span class="badge badge-green">floppy-in-git</span></dd><dt>Controller</dt><dd>floppy</dd></dl><p style="font-size:0.85rem"><strong>Git:</strong> <code>images/ac337cefca36c929f1365688075fda8d/N-900-188-I_ac337c.img.gz</code></p><p style="font-size:0.85rem"><strong>Internet Archive:</strong>
+<a href="https://archive.org/details/norskdata-floppy-os-n-900-188-i-ac337cef" target="_blank" rel="noopener">norskdata-floppy-os-n-900-188-i-ac337cef</a></p><details>
+<summary style="cursor:pointer;font-weight:600;color:var(--purple-stroke)">NDFS Files (2)</summary>
+<div class="ndfs-files">
+<table>
+<thead><tr><th>Name</th><th>Type</th><th>Pages</th><th>Size</th></tr></thead>
+<tbody><tr><td>MACM-1718L:BPUN</td><td>BPUN</td><td>20</td><td>34.5 KB</td></tr><tr><td>SINTRAN-I:DATA</td><td>DATA</td><td>127</td><td>194.8 KB</td></tr></tbody></table></div></details><p style="font-size:0.85rem"><strong>Users:</strong> SYSTEM (148 pages)</p><div class="provenance"><strong>Contributor:</strong> Frode | <strong>Original:</strong> <code>/mnt/d/ND/Frode/Sintran III Version J 86-11-26/N-900-188-I.img</code></div></div><div class="image-card" id="img-aa3e2e05cbf9">
+<h4>RDIR</h4>
+<dl class="meta-grid">
+<dt>ID</dt><dd>img-aa3e2e05cbf9</dd>
+<dt>MD5</dt><dd><code>aa3e2e05cbf917e2dc3bf89390492d04</code></dd><dt>Boot Format</dt><dd><span class="badge badge-teal">none</span></dd><dt>Total Pages</dt><dd>154</dd><dt>Size</dt><dd>308.0 KB</dd><dt>Storage</dt><dd><span class="badge badge-green">floppy-in-git</span></dd><dt>Controller</dt><dd>floppy</dd></dl><p style="font-size:0.85rem"><strong>Git:</strong> <code>images/aa3e2e05cbf917e2dc3bf89390492d04/RDIR Nr3.img.gz</code></p><p style="font-size:0.85rem"><strong>Internet Archive:</strong>
+<a href="https://archive.org/details/norskdata-floppy-img-aa3e2e05cbf9" target="_blank" rel="noopener">norskdata-floppy-img-aa3e2e05cbf9</a></p><details>
+<summary style="cursor:pointer;font-weight:600;color:var(--purple-stroke)">NDFS Files (3)</summary>
+<div class="ndfs-files">
+<table>
+<thead><tr><th>Name</th><th>Type</th><th>Pages</th><th>Size</th></tr></thead>
+<tbody><tr><td>IR-SERVICE-B:PROG</td><td>PROG</td><td>116</td><td>231.0 KB</td></tr><tr><td>IR-SORTSEQ:DATA</td><td>DATA</td><td>1</td><td>141 B</td></tr><tr><td>DDBTABLES-C-B:VTM</td><td>VTM</td><td>4</td><td>7.7 KB</td></tr></tbody></table></div></details><p style="font-size:0.85rem"><strong>Users:</strong> FLOPPY-USER (125 pages)</p><div class="provenance"><strong>Contributor:</strong> Frode | <strong>Original:</strong> <code>/mnt/d/ND/Frode/RDIR/RDIR Nr3.img</code></div></div><div class="image-card" id="os-n-900-188-i-a3bc360b">
+<h4>N-900-188-III</h4>
+<dl class="meta-grid">
+<dt>ID</dt><dd>os-n-900-188-i-a3bc360b</dd>
+<dt>MD5</dt><dd><code>a3bc360bf3abad434c6880ef736478bf</code></dd><dt>Boot Format</dt><dd><span class="badge badge-teal">none</span></dd><dt>Total Pages</dt><dd>154</dd><dt>Size</dt><dd>308.0 KB</dd><dt>Storage</dt><dd><span class="badge badge-green">floppy-in-git</span></dd><dt>Controller</dt><dd>floppy</dd></dl><p style="font-size:0.85rem"><strong>Git:</strong> <code>images/a3bc360bf3abad434c6880ef736478bf/N-900-188-III_a3bc36.img.gz</code></p><p style="font-size:0.85rem"><strong>Internet Archive:</strong>
+<a href="https://archive.org/details/norskdata-floppy-os-n-900-188-i-a3bc360b" target="_blank" rel="noopener">norskdata-floppy-os-n-900-188-i-a3bc360b</a></p><details>
+<summary style="cursor:pointer;font-weight:600;color:var(--purple-stroke)">NDFS Files (7)</summary>
+<div class="ndfs-files">
+<table>
+<thead><tr><th>Name</th><th>Type</th><th>Pages</th><th>Size</th></tr></thead>
+<tbody><tr><td>NEW-SYSTEM:PROG</td><td>PROG</td><td>22</td><td>36.0 KB</td></tr><tr><td>F32-FMAC-1920C:PROG</td><td>PROG</td><td>15</td><td>28.1 KB</td></tr><tr><td>F48-FMAC-1408D:PROG</td><td>PROG</td><td>15</td><td>28.1 KB</td></tr><tr><td>DMAC-1915F:BPUN</td><td>BPUN</td><td>20</td><td>36.1 KB</td></tr><tr><td>FILSYS-SYMBOLS:SYMB</td><td>SYMB</td><td>25</td><td>38.3 KB</td></tr><tr><td>RTLO-SYMBOLS:SYMB</td><td>SYMB</td><td>9</td><td>16.0 KB</td></tr><tr><td>COS-TADADM:BPUN</td><td>BPUN</td><td>6</td><td>7.0 KB</td></tr></tbody></table></div></details><p style="font-size:0.85rem"><strong>Users:</strong> SYSTEM (114 pages)</p><div class="provenance"><strong>Contributor:</strong> Frode | <strong>Original:</strong> <code>/mnt/d/ND/Frode/Sintran III Version J 86-11-26/N-900-188-III.img</code></div></div><div class="image-card" id="img-a2c9f0faa70a">
+<h4>GRAFS-3</h4>
+<dl class="meta-grid">
+<dt>ID</dt><dd>img-a2c9f0faa70a</dd>
+<dt>MD5</dt><dd><code>a2c9f0faa70ac50bf91c8f8bf9eb25ed</code></dd><dt>Boot Format</dt><dd><span class="badge badge-teal">none</span></dd><dt>Total Pages</dt><dd>154</dd><dt>Size</dt><dd>308.0 KB</dd><dt>Storage</dt><dd><span class="badge badge-green">floppy-in-git</span></dd><dt>Controller</dt><dd>floppy</dd></dl><p style="font-size:0.85rem"><strong>Git:</strong> <code>images/a2c9f0faa70ac50bf91c8f8bf9eb25ed/GRAFS-3, Norsk versjon, 5-5-81.img.gz</code></p><p style="font-size:0.85rem"><strong>Internet Archive:</strong>
+<a href="https://archive.org/details/norskdata-floppy-img-a2c9f0faa70a" target="_blank" rel="noopener">norskdata-floppy-img-a2c9f0faa70a</a></p><details>
+<summary style="cursor:pointer;font-weight:600;color:var(--purple-stroke)">NDFS Files (3)</summary>
+<div class="ndfs-files">
+<table>
+<thead><tr><th>Name</th><th>Type</th><th>Pages</th><th>Size</th></tr></thead>
+<tbody><tr><td>INIT-DATA:PROG</td><td>PROG</td><td>8</td><td>15.0 KB</td></tr><tr><td>CLEAR-DEVICE:PROG</td><td>PROG</td><td>6</td><td>12.0 KB</td></tr><tr><td>DCON:PROG</td><td>PROG</td><td>59</td><td>117.0 KB</td></tr></tbody></table></div></details><p style="font-size:0.85rem"><strong>Users:</strong> GRAFS-USER (77 pages)</p><div class="provenance"><strong>Contributor:</strong> Frode | <strong>Original:</strong> <code>/mnt/d/ND/Frode/GRAFS Norsk versjon/GRAFS-3, Norsk versjon, 5-5-81.img</code></div></div><div class="image-card" id="img-995b94075d70">
+<h4>ND-10142B-PART6</h4>
+<dl class="meta-grid">
+<dt>ID</dt><dd>img-995b94075d70</dd>
+<dt>MD5</dt><dd><code>995b94075d70814a2ec0effe7b770089</code></dd><dt>Boot Format</dt><dd><span class="badge badge-teal">binary</span></dd><dt>Total Pages</dt><dd>154</dd><dt>Size</dt><dd>308.0 KB</dd><dt>Storage</dt><dd><span class="badge badge-green">floppy-in-git</span></dd><dt>Controller</dt><dd>floppy</dd></dl><p style="font-size:0.85rem"><strong>Git:</strong> <code>images/995b94075d70814a2ec0effe7b770089/ND-10142B-PART6_995b94.img.gz</code></p><p style="font-size:0.85rem"><strong>Internet Archive:</strong>
+<a href="https://archive.org/details/norskdata-floppy-img-995b94075d70" target="_blank" rel="noopener">norskdata-floppy-img-995b94075d70</a></p><details>
+<summary style="cursor:pointer;font-weight:600;color:var(--purple-stroke)">NDFS Files (7)</summary>
+<div class="ndfs-files">
+<table>
+<thead><tr><th>Name</th><th>Type</th><th>Pages</th><th>Size</th></tr></thead>
+<tbody><tr><td>MAIN-B:BRF</td><td>BRF</td><td>61</td><td>121.8 KB</td></tr><tr><td>FILE-B:BRF</td><td>BRF</td><td>42</td><td>83.7 KB</td></tr><tr><td>KENDL1-B:BRF</td><td>BRF</td><td>4</td><td>6.7 KB</td></tr><tr><td>SPEAR1-B:BRF</td><td>BRF</td><td>4</td><td>6.5 KB</td></tr><tr><td>HELPX-B:BRF</td><td>BRF</td><td>17</td><td>32.6 KB</td></tr><tr><td>INSTALL-B:DATA</td><td>DATA</td><td>2</td><td>2.0 KB</td></tr><tr><td>INSTALL-B:MODE</td><td>MODE</td><td>1</td><td>1.8 KB</td></tr></tbody></table></div></details><p style="font-size:0.85rem"><strong>Users:</strong> FLOPPY-USER (139 pages)</p><div class="provenance"><strong>Contributor:</strong> Frode | <strong>Original:</strong> <code>/mnt/d/ND/Frode/ND-10142B (5.25 inch)/ND-10142B-PART6.img</code></div></div><div class="image-card" id="img-91de1e9bacb1">
+<h4>ND-10142B-PART5</h4>
+<dl class="meta-grid">
+<dt>ID</dt><dd>img-91de1e9bacb1</dd>
+<dt>MD5</dt><dd><code>91de1e9bacb18905738257c8d57a2525</code></dd><dt>Boot Format</dt><dd><span class="badge badge-teal">binary</span></dd><dt>Total Pages</dt><dd>154</dd><dt>Size</dt><dd>308.0 KB</dd><dt>Storage</dt><dd><span class="badge badge-green">floppy-in-git</span></dd><dt>Controller</dt><dd>floppy</dd></dl><p style="font-size:0.85rem"><strong>Git:</strong> <code>images/91de1e9bacb18905738257c8d57a2525/ND-10142B-PART5.img.gz</code></p><p style="font-size:0.85rem"><strong>Internet Archive:</strong>
+<a href="https://archive.org/details/norskdata-floppy-img-91de1e9bacb1" target="_blank" rel="noopener">norskdata-floppy-img-91de1e9bacb1</a></p><details>
+<summary style="cursor:pointer;font-weight:600;color:var(--purple-stroke)">NDFS Files (19)</summary>
+<div class="ndfs-files">
+<table>
+<thead><tr><th>Name</th><th>Type</th><th>Pages</th><th>Size</th></tr></thead>
+<tbody><tr><td>JOIN-B:BRF</td><td>BRF</td><td>2</td><td>4.0 KB</td></tr><tr><td>NONCAN-B:BRF</td><td>BRF</td><td>13</td><td>24.3 KB</td></tr><tr><td>FACT-B:BRF</td><td>BRF</td><td>8</td><td>14.9 KB</td></tr><tr><td>DISCRIM-B:BRF</td><td>BRF</td><td>9</td><td>16.6 KB</td></tr><tr><td>INSTALL-B:TEST</td><td>TEST</td><td>2</td><td>2.0 KB</td></tr><tr><td>REPL-B:BRF</td><td>BRF</td><td>5</td><td>8.6 KB</td></tr><tr><td>SREG-B:BRF</td><td>BRF</td><td>3</td><td>5.4 KB</td></tr><tr><td>SREGP-B:BRF</td><td>BRF</td><td>4</td><td>6.0 KB</td></tr><tr><td>SREGV-B:BRF</td><td>BRF</td><td>3</td><td>5.5 KB</td></tr><tr><td>SREGX-B:BRF</td><td>BRF</td><td>3</td><td>5.2 KB</td></tr><tr><td>SREG4-B:BRF</td><td>BRF</td><td>4</td><td>7.3 KB</td></tr><tr><td>SREG5-B:BRF</td><td>BRF</td><td>9</td><td>17.7 KB</td></tr><tr><td>SREG6-B:BRF</td><td>BRF</td><td>2</td><td>3.8 KB</td></tr><tr><td>SREG78-B:BRF</td><td>BRF</td><td>5</td><td>8.5 KB</td></tr><tr><td>IMPORT-B:BRF</td><td>BRF</td><td>11</td><td>20.6 KB</td></tr><tr><td>CHOICE-B:BRF</td><td>BRF</td><td>8</td><td>15.8 KB</td></tr><tr><td>SING-B:BRF</td><td>BRF</td><td>4</td><td>6.5 KB</td></tr><tr><td>LOADDDPP-B:SYMB</td><td>SYMB</td><td>1</td><td>50 B</td></tr><tr><td>EXPORT-B:BRF</td><td>BRF</td><td>12</td><td>22.3 KB</td></tr></tbody></table></div></details><p style="font-size:0.85rem"><strong>Users:</strong> FLOPPY-USER (128 pages)</p><div class="provenance"><strong>Contributor:</strong> Frode | <strong>Original:</strong> <code>/mnt/d/ND/Frode/ND-10142B/ND-10142B-PART5.img</code></div></div><div class="image-card" id="img-911be91372bb">
+<h4>ND-10142B-PART2</h4>
+<dl class="meta-grid">
+<dt>ID</dt><dd>img-911be91372bb</dd>
+<dt>MD5</dt><dd><code>911be91372bbf61f6bf1248a5552c32e</code></dd><dt>Boot Format</dt><dd><span class="badge badge-teal">binary</span></dd><dt>Total Pages</dt><dd>154</dd><dt>Size</dt><dd>308.0 KB</dd><dt>Storage</dt><dd><span class="badge badge-green">floppy-in-git</span></dd><dt>Controller</dt><dd>floppy</dd></dl><p style="font-size:0.85rem"><strong>Git:</strong> <code>images/911be91372bbf61f6bf1248a5552c32e/ND-10142B-PART2_911be9.img.gz</code></p><p style="font-size:0.85rem"><strong>Internet Archive:</strong>
+<a href="https://archive.org/details/norskdata-floppy-img-911be91372bb" target="_blank" rel="noopener">norskdata-floppy-img-911be91372bb</a></p><details>
+<summary style="cursor:pointer;font-weight:600;color:var(--purple-stroke)">NDFS Files (7)</summary>
+<div class="ndfs-files">
+<table>
+<thead><tr><th>Name</th><th>Type</th><th>Pages</th><th>Size</th></tr></thead>
+<tbody><tr><td>DDPPMES-B:DATA</td><td>DATA</td><td>68</td><td>135.3 KB</td></tr><tr><td>DDPP-B:MODE</td><td>MODE</td><td>1</td><td>1.7 KB</td></tr><tr><td>AID-B:BRF</td><td>BRF</td><td>17</td><td>33.7 KB</td></tr><tr><td>DSTART-B:BRF</td><td>BRF</td><td>2</td><td>4.0 KB</td></tr><tr><td>TTY-B:BRF</td><td>BRF</td><td>1</td><td>1.4 KB</td></tr><tr><td>FREQ-B:BRF</td><td>BRF</td><td>7</td><td>12.8 KB</td></tr><tr><td>FREQ11-B:BRF</td><td>BRF</td><td>12</td><td>23.7 KB</td></tr></tbody></table></div></details><p style="font-size:0.85rem"><strong>Users:</strong> FLOPPY-USER (116 pages)</p><div class="provenance"><strong>Contributor:</strong> Frode | <strong>Original:</strong> <code>/mnt/d/ND/Frode/ND-10142B (5.25 inch)/ND-10142B-PART2.img</code></div></div><div class="image-card" id="img-9111dff9d1c9">
+<h4>ND-10315D-PART1</h4>
+<dl class="meta-grid">
+<dt>ID</dt><dd>img-9111dff9d1c9</dd>
+<dt>MD5</dt><dd><code>9111dff9d1c958ab0e2c622f3fffe633</code></dd><dt>Boot Format</dt><dd><span class="badge badge-teal">bpun</span></dd><dt>Total Pages</dt><dd>154</dd><dt>Size</dt><dd>308.0 KB</dd><dt>Storage</dt><dd><span class="badge badge-green">floppy-in-git</span></dd><dt>Controller</dt><dd>floppy</dd></dl><p style="font-size:0.85rem"><strong>Git:</strong> <code>images/9111dff9d1c958ab0e2c622f3fffe633/ND-10315D-PART1.img.gz</code></p><p style="font-size:0.85rem"><strong>Internet Archive:</strong>
+<a href="https://archive.org/details/norskdata-floppy-img-9111dff9d1c9" target="_blank" rel="noopener">norskdata-floppy-img-9111dff9d1c9</a></p><details>
+<summary style="cursor:pointer;font-weight:600;color:var(--purple-stroke)">NDFS Files (2)</summary>
+<div class="ndfs-files">
+<table>
+<thead><tr><th>Name</th><th>Type</th><th>Pages</th><th>Size</th></tr></thead>
+<tbody><tr><td>ACC-S-48-203899B:PROG</td><td>PROG</td><td>116</td><td>468.0 KB</td></tr><tr><td>ACCRT-203074C:BPUN</td><td>BPUN</td><td>5</td><td>8.6 KB</td></tr></tbody></table></div></details><p style="font-size:0.85rem"><strong>Users:</strong> FLOPPY-USER (124 pages)</p><div class="provenance"><strong>Contributor:</strong> Frode | <strong>Original:</strong> <code>/mnt/d/ND/Frode/ND-10315D/ND-10315D-PART1.img</code></div></div><div class="image-card" id="img-8d3eabae040b">
+<h4>ND-10142B-PART3</h4>
+<dl class="meta-grid">
+<dt>ID</dt><dd>img-8d3eabae040b</dd>
+<dt>MD5</dt><dd><code>8d3eabae040bb3564fa0f865adadc97b</code></dd><dt>Boot Format</dt><dd><span class="badge badge-teal">flomon</span></dd><dt>Total Pages</dt><dd>154</dd><dt>Size</dt><dd>308.0 KB</dd><dt>Storage</dt><dd><span class="badge badge-green">floppy-in-git</span></dd><dt>Controller</dt><dd>floppy</dd></dl><p style="font-size:0.85rem"><strong>Git:</strong> <code>images/8d3eabae040bb3564fa0f865adadc97b/ND-10142B-PART3.img.gz</code></p><p style="font-size:0.85rem"><strong>Internet Archive:</strong>
+<a href="https://archive.org/details/norskdata-floppy-img-8d3eabae040b" target="_blank" rel="noopener">norskdata-floppy-img-8d3eabae040b</a></p><details>
+<summary style="cursor:pointer;font-weight:600;color:var(--purple-stroke)">NDFS Files (12)</summary>
+<div class="ndfs-files">
+<table>
+<thead><tr><th>Name</th><th>Type</th><th>Pages</th><th>Size</th></tr></thead>
+<tbody><tr><td>BOOK-B:BRF</td><td>BRF</td><td>16</td><td>31.0 KB</td></tr><tr><td>LOAD-B:BRF</td><td>BRF</td><td>16</td><td>31.8 KB</td></tr><tr><td>EDIT-B:BRF</td><td>BRF</td><td>18</td><td>34.1 KB</td></tr><tr><td>SORT-B:BRF</td><td>BRF</td><td>10</td><td>18.6 KB</td></tr><tr><td>FREQPV-B:BRF</td><td>BRF</td><td>10</td><td>19.9 KB</td></tr><tr><td>FREQX1-B:BRF</td><td>BRF</td><td>1</td><td>1.2 KB</td></tr><tr><td>FREQX2-B:BRF</td><td>BRF</td><td>1</td><td>1.8 KB</td></tr><tr><td>FREQX3-B:BRF</td><td>BRF</td><td>4</td><td>6.8 KB</td></tr><tr><td>FREQX6-B:BRF</td><td>BRF</td><td>7</td><td>13.2 KB</td></tr><tr><td>FREQP1-B:BRF</td><td>BRF</td><td>8</td><td>15.2 KB</td></tr><tr><td>FREQP2-B:BRF</td><td>BRF</td><td>3</td><td>5.4 KB</td></tr><tr><td>FREQP6-B:BRF</td><td>BRF</td><td>8</td><td>16.0 KB</td></tr></tbody></table></div></details><p style="font-size:0.85rem"><strong>Users:</strong> FLOPPY-USER (115 pages)</p><div class="provenance"><strong>Contributor:</strong> Frode | <strong>Original:</strong> <code>/mnt/d/ND/Frode/ND-10142B/ND-10142B-PART3.img</code></div></div><div class="image-card" id="img-86791f282d6b">
+<h4>NORA-UIO</h4>
+<dl class="meta-grid">
+<dt>ID</dt><dd>img-86791f282d6b</dd>
+<dt>MD5</dt><dd><code>86791f282d6b8920f541cd0b9a4c762e</code></dd><dt>Boot Format</dt><dd><span class="badge badge-teal">none</span></dd><dt>Total Pages</dt><dd>616</dd><dt>Size</dt><dd>1.2 MB</dd><dt>Storage</dt><dd><span class="badge badge-green">floppy-in-git</span></dd><dt>Controller</dt><dd>floppy</dd></dl><p style="font-size:0.85rem"><strong>Git:</strong> <code>images/86791f282d6b8920f541cd0b9a4c762e/NORA-UIO F-U, Kermit.img.gz</code></p><p style="font-size:0.85rem"><strong>Internet Archive:</strong>
+<a href="https://archive.org/details/norskdata-floppy-img-86791f282d6b" target="_blank" rel="noopener">norskdata-floppy-img-86791f282d6b</a></p><details>
+<summary style="cursor:pointer;font-weight:600;color:var(--purple-stroke)">NDFS Files (4)</summary>
+<div class="ndfs-files">
+<table>
+<thead><tr><th>Name</th><th>Type</th><th>Pages</th><th>Size</th></tr></thead>
+<tbody><tr><td>KERMIT:DOC</td><td>DOC</td><td>1</td><td>1.9 KB</td></tr><tr><td>KERMIT:PROG</td><td>PROG</td><td>23</td><td>44.5 KB</td></tr><tr><td>KERMIT:HELP</td><td>HELP</td><td>4</td><td>6.8 KB</td></tr><tr><td>KERMIT:HLIB</td><td>HLIB</td><td>1</td><td>420 B</td></tr></tbody></table></div></details><p style="font-size:0.85rem"><strong>Users:</strong> FLOPPY-USER (34 pages)</p><div class="provenance"><strong>Contributor:</strong> Frode | <strong>Original:</strong> <code>/mnt/d/ND/Frode/NTH-Ketmit (5.25 inch)/NORA-UIO F-U, Kermit.img</code></div></div><div class="image-card" id="os-n-10-203-i-85270dce">
+<h4>N-10-203-III</h4>
+<dl class="meta-grid">
+<dt>ID</dt><dd>os-n-10-203-i-85270dce</dd>
+<dt>MD5</dt><dd><code>85270dce1dbd7537ade8dc727fccb330</code></dd><dt>Boot Format</dt><dd><span class="badge badge-teal">flomon</span></dd><dt>Total Pages</dt><dd>154</dd><dt>Size</dt><dd>308.0 KB</dd><dt>Storage</dt><dd><span class="badge badge-green">floppy-in-git</span></dd><dt>Controller</dt><dd>floppy</dd></dl><p style="font-size:0.85rem"><strong>Git:</strong> <code>images/85270dce1dbd7537ade8dc727fccb330/SINTRAN III H, N-10-203-III, 85.04.17 (backup).img.gz</code></p><p style="font-size:0.85rem"><strong>Internet Archive:</strong>
+<a href="https://archive.org/details/norskdata-floppy-os-n-10-203-i-85270dce" target="_blank" rel="noopener">norskdata-floppy-os-n-10-203-i-85270dce</a></p><details>
+<summary style="cursor:pointer;font-weight:600;color:var(--purple-stroke)">NDFS Files (9)</summary>
+<div class="ndfs-files">
+<table>
+<thead><tr><th>Name</th><th>Type</th><th>Pages</th><th>Size</th></tr></thead>
+<tbody><tr><td>SYMBOL-2-LIST:SYMB</td><td>SYMB</td><td>20</td><td>19.0 KB</td></tr><tr><td>SYMBOL-1-LIST:SYMB</td><td>SYMB</td><td>20</td><td>33.7 KB</td></tr><tr><td>FILSYS-SYMBOLS:SYMB</td><td>SYMB</td><td>15</td><td>26.8 KB</td></tr><tr><td>RTLO-SYMBOLS:SYMB</td><td>SYMB</td><td>9</td><td>13.0 KB</td></tr><tr><td>LIBRARY-MARKS:SYMB</td><td>SYMB</td><td>3</td><td>1.3 KB</td></tr><tr><td>NEW-SYSTEM:PROG</td><td>PROG</td><td>30</td><td>22.5 KB</td></tr><tr><td>F32-FMAC-1920C:PROG</td><td>PROG</td><td>15</td><td>28.1 KB</td></tr><tr><td>F48-FMAC-1408D:PROG</td><td>PROG</td><td>15</td><td>28.1 KB</td></tr><tr><td>DMAC-1915E:BPUN</td><td>BPUN</td><td>20</td><td>35.9 KB</td></tr></tbody></table></div></details><p style="font-size:0.85rem"><strong>Users:</strong> SYSTEM (148 pages)</p><div class="provenance"><strong>Contributor:</strong> Frode | <strong>Original:</strong> <code>/mnt/d/ND/Frode/Sintran III Version H 85-04-17/SINTRAN III H, N-10-203-III, 85.04.17 (backup).img</code></div></div><div class="image-card" id="os-n-900-188-i-7c3244d8">
+<h4>N-900-188-III</h4>
+<dl class="meta-grid">
+<dt>ID</dt><dd>os-n-900-188-i-7c3244d8</dd>
+<dt>MD5</dt><dd><code>7c3244d83f6bb919cfa96a61d5281581</code></dd><dt>Boot Format</dt><dd><span class="badge badge-teal">none</span></dd><dt>Total Pages</dt><dd>154</dd><dt>Size</dt><dd>308.0 KB</dd><dt>Storage</dt><dd><span class="badge badge-green">floppy-in-git</span></dd><dt>Controller</dt><dd>floppy</dd></dl><p style="font-size:0.85rem"><strong>Git:</strong> <code>images/7c3244d83f6bb919cfa96a61d5281581/N-900-188-III_7c3244.img.gz</code></p><p style="font-size:0.85rem"><strong>Internet Archive:</strong>
+<a href="https://archive.org/details/norskdata-floppy-os-n-900-188-i-7c3244d8" target="_blank" rel="noopener">norskdata-floppy-os-n-900-188-i-7c3244d8</a></p><details>
+<summary style="cursor:pointer;font-weight:600;color:var(--purple-stroke)">NDFS Files (7)</summary>
+<div class="ndfs-files">
+<table>
+<thead><tr><th>Name</th><th>Type</th><th>Pages</th><th>Size</th></tr></thead>
+<tbody><tr><td>NEW-SYSTEM:PROG</td><td>PROG</td><td>22</td><td>36.0 KB</td></tr><tr><td>F32-FMAC-1920C:PROG</td><td>PROG</td><td>15</td><td>28.1 KB</td></tr><tr><td>F48-FMAC-1408D:PROG</td><td>PROG</td><td>15</td><td>28.1 KB</td></tr><tr><td>DMAC-1915F:BPUN</td><td>BPUN</td><td>20</td><td>36.1 KB</td></tr><tr><td>FILSYS-SYMBOLS:SYMB</td><td>SYMB</td><td>25</td><td>38.3 KB</td></tr><tr><td>RTLO-SYMBOLS:SYMB</td><td>SYMB</td><td>9</td><td>16.0 KB</td></tr><tr><td>COS-TADADM:BPUN</td><td>BPUN</td><td>6</td><td>7.0 KB</td></tr></tbody></table></div></details><p style="font-size:0.85rem"><strong>Users:</strong> SYSTEM (114 pages)</p><div class="provenance"><strong>Contributor:</strong> Frode | <strong>Original:</strong> <code>/mnt/d/ND/Frode/Sintran III Version J 86-12-09/N-900-188-III.img</code></div></div><div class="image-card" id="os-n-10-203-i-79833261">
+<h4>N-10-203-I</h4>
+<dl class="meta-grid">
+<dt>ID</dt><dd>os-n-10-203-i-79833261</dd>
+<dt>MD5</dt><dd><code>7983326120224feda6f3410ab5ae60a8</code></dd><dt>Boot Format</dt><dd><span class="badge badge-teal">flomon</span></dd><dt>Total Pages</dt><dd>154</dd><dt>Size</dt><dd>308.0 KB</dd><dt>Storage</dt><dd><span class="badge badge-green">floppy-in-git</span></dd><dt>Controller</dt><dd>floppy</dd></dl><p style="font-size:0.85rem"><strong>Git:</strong> <code>images/7983326120224feda6f3410ab5ae60a8/SINTRAN III H, N-10-203-I, 85.04.17 (backup).img.gz</code></p><p style="font-size:0.85rem"><strong>Internet Archive:</strong>
+<a href="https://archive.org/details/norskdata-floppy-os-n-10-203-i-79833261" target="_blank" rel="noopener">norskdata-floppy-os-n-10-203-i-79833261</a></p><details>
+<summary style="cursor:pointer;font-weight:600;color:var(--purple-stroke)">NDFS Files (2)</summary>
+<div class="ndfs-files">
+<table>
+<thead><tr><th>Name</th><th>Type</th><th>Pages</th><th>Size</th></tr></thead>
+<tbody><tr><td>MACM-1718K:BPUN</td><td>BPUN</td><td>20</td><td>31.2 KB</td></tr><tr><td>SINTRAN-I:DATA</td><td>DATA</td><td>127</td><td>184.5 KB</td></tr></tbody></table></div></details><p style="font-size:0.85rem"><strong>Users:</strong> SYSTEM (148 pages)</p><div class="provenance"><strong>Contributor:</strong> Frode | <strong>Original:</strong> <code>/mnt/d/ND/Frode/Sintran III Version H 85-04-17/SINTRAN III H, N-10-203-I, 85.04.17 (backup).img</code></div></div><div class="image-card" id="img-6d8d16eac40d">
+<h4>UNIQUE</h4>
+<dl class="meta-grid">
+<dt>ID</dt><dd>img-6d8d16eac40d</dd>
+<dt>MD5</dt><dd><code>6d8d16eac40ddb36a3210f9707bc0f4c</code></dd><dt>Boot Format</dt><dd><span class="badge badge-teal">none</span></dd><dt>Total Pages</dt><dd>616</dd><dt>Size</dt><dd>1.2 MB</dd><dt>Storage</dt><dd><span class="badge badge-green">floppy-in-git</span></dd><dt>Controller</dt><dd>floppy</dd></dl><p style="font-size:0.85rem"><strong>Git:</strong> <code>images/6d8d16eac40ddb36a3210f9707bc0f4c/Unique On Line II.img.gz</code></p><p style="font-size:0.85rem"><strong>Internet Archive:</strong>
+<a href="https://archive.org/details/norskdata-floppy-img-6d8d16eac40d" target="_blank" rel="noopener">norskdata-floppy-img-6d8d16eac40d</a></p><details>
+<summary style="cursor:pointer;font-weight:600;color:var(--purple-stroke)">NDFS Files (14)</summary>
+<div class="ndfs-files">
+<table>
+<thead><tr><th>Name</th><th>Type</th><th>Pages</th><th>Size</th></tr></thead>
+<tbody><tr><td>UNIQ-I-100-B05:MCRO</td><td>MCRO</td><td>3</td><td>4.1 KB</td></tr><tr><td>UNIQ-I-1-B05:BRF</td><td>BRF</td><td>56</td><td>112.0 KB</td></tr><tr><td>UNIQ-I-2-B05:BRF</td><td>BRF</td><td>65</td><td>128.4 KB</td></tr><tr><td>UNIQ-I-3-B05:BRF</td><td>BRF</td><td>52</td><td>103.0 KB</td></tr><tr><td>UNIQ-I-LIB-B05:BRF</td><td>BRF</td><td>62</td><td>123.2 KB</td></tr><tr><td>UNIQ-I-DUMMY-B05:BRF</td><td>BRF</td><td>9</td><td>16.3 KB</td></tr><tr><td>18KB-ISAM-BUFFER:BRF</td><td>BRF</td><td>1</td><td>57 B</td></tr><tr><td>22KB-ISAM-BUFFER:BRF</td><td>BRF</td><td>1</td><td>57 B</td></tr><tr><td>12KB-ISAM-BUFFER:BRF</td><td>BRF</td><td>1</td><td>57 B</td></tr><tr><td>14KB-ISAM-BUFFER:BRF</td><td>BRF</td><td>1</td><td>57 B</td></tr><tr><td>8KB-ISAM-BUFFER:BRF</td><td>BRF</td><td>1</td><td>57 B</td></tr><tr><td>10KB-ISAM-BUFFER:BRF</td><td>BRF</td><td>1</td><td>57 B</td></tr><tr><td>20KB-ISAM-BUFFER:BRF</td><td>BRF</td><td>1</td><td>57 B</td></tr><tr><td>16KB-ISAM-BUFFER:BRF</td><td>BRF</td><td>1</td><td>57 B</td></tr></tbody></table></div></details><p style="font-size:0.85rem"><strong>Users:</strong> FLOPPY-USER (270 pages)</p><div class="provenance"><strong>Contributor:</strong> Frode | <strong>Original:</strong> <code>/mnt/d/ND/Frode/Unique On Line II (5.25 inch)/Unique On Line II.img</code></div></div><div class="image-card" id="img-6d200001bc4c">
+<h4>RDIR</h4>
+<dl class="meta-grid">
+<dt>ID</dt><dd>img-6d200001bc4c</dd>
+<dt>MD5</dt><dd><code>6d200001bc4cf136d4a491120475bb2f</code></dd><dt>Boot Format</dt><dd><span class="badge badge-teal">none</span></dd><dt>Total Pages</dt><dd>154</dd><dt>Size</dt><dd>308.0 KB</dd><dt>Storage</dt><dd><span class="badge badge-green">floppy-in-git</span></dd><dt>Controller</dt><dd>floppy</dd></dl><p style="font-size:0.85rem"><strong>Git:</strong> <code>images/6d200001bc4cf136d4a491120475bb2f/RDIR Nr4.img.gz</code></p><p style="font-size:0.85rem"><strong>Internet Archive:</strong>
+<a href="https://archive.org/details/norskdata-floppy-img-6d200001bc4c" target="_blank" rel="noopener">norskdata-floppy-img-6d200001bc4c</a></p><details>
+<summary style="cursor:pointer;font-weight:600;color:var(--purple-stroke)">NDFS Files (1)</summary>
+<div class="ndfs-files">
+<table>
+<thead><tr><th>Name</th><th>Type</th><th>Pages</th><th>Size</th></tr></thead>
+<tbody><tr><td>IR-UPDATE-B:PROG</td><td>PROG</td><td>121</td><td>306.0 KB</td></tr></tbody></table></div></details><p style="font-size:0.85rem"><strong>Users:</strong> FLOPPY-USER (123 pages)</p><div class="provenance"><strong>Contributor:</strong> Frode | <strong>Original:</strong> <code>/mnt/d/ND/Frode/RDIR/RDIR Nr4.img</code></div></div><div class="image-card" id="img-697dc8bb5611">
+<h4>ND-10142B-PART1</h4>
+<dl class="meta-grid">
+<dt>ID</dt><dd>img-697dc8bb5611</dd>
+<dt>MD5</dt><dd><code>697dc8bb5611313bcdbb6c431c5f44eb</code></dd><dt>Boot Format</dt><dd><span class="badge badge-teal">flomon</span></dd><dt>Total Pages</dt><dd>154</dd><dt>Size</dt><dd>308.0 KB</dd><dt>Storage</dt><dd><span class="badge badge-green">floppy-in-git</span></dd><dt>Controller</dt><dd>floppy</dd></dl><p style="font-size:0.85rem"><strong>Git:</strong> <code>images/697dc8bb5611313bcdbb6c431c5f44eb/ND-10142B-PART1_697dc8.img.gz</code></p><p style="font-size:0.85rem"><strong>Internet Archive:</strong>
+<a href="https://archive.org/details/norskdata-floppy-img-697dc8bb5611" target="_blank" rel="noopener">norskdata-floppy-img-697dc8bb5611</a></p><details>
+<summary style="cursor:pointer;font-weight:600;color:var(--purple-stroke)">NDFS Files (12)</summary>
+<div class="ndfs-files">
+<table>
+<thead><tr><th>Name</th><th>Type</th><th>Pages</th><th>Size</th></tr></thead>
+<tbody><tr><td>CALC-B:BRF</td><td>BRF</td><td>30</td><td>59.4 KB</td></tr><tr><td>CORR-B:BRF</td><td>BRF</td><td>3</td><td>4.7 KB</td></tr><tr><td>CORRVP-B:BRF</td><td>BRF</td><td>8</td><td>15.2 KB</td></tr><tr><td>CORRX1-B:BRF</td><td>BRF</td><td>5</td><td>8.2 KB</td></tr><tr><td>CORRX2-B:BRF</td><td>BRF</td><td>5</td><td>8.4 KB</td></tr><tr><td>CORRX4-B:BRF</td><td>BRF</td><td>6</td><td>10.5 KB</td></tr><tr><td>CORRD-B:BRF</td><td>BRF</td><td>5</td><td>8.6 KB</td></tr><tr><td>GROUP-B:BRF</td><td>BRF</td><td>25</td><td>48.7 KB</td></tr><tr><td>SEQU-B:BRF</td><td>BRF</td><td>6</td><td>10.2 KB</td></tr><tr><td>MANN-B:BRF</td><td>BRF</td><td>7</td><td>13.0 KB</td></tr><tr><td>MCA-B:BRF</td><td>BRF</td><td>14</td><td>27.1 KB</td></tr><tr><td>FRONTO-B:BRF</td><td>BRF</td><td>17</td><td>33.6 KB</td></tr></tbody></table></div></details><p style="font-size:0.85rem"><strong>Users:</strong> FLOPPY-USER (144 pages)</p><div class="provenance"><strong>Contributor:</strong> Frode | <strong>Original:</strong> <code>/mnt/d/ND/Frode/ND-10142B (5.25 inch)/ND-10142B-PART1.img</code></div></div><div class="image-card" id="img-68b2aaa1b836">
+<h4>ND-10142B-PART4</h4>
+<dl class="meta-grid">
+<dt>ID</dt><dd>img-68b2aaa1b836</dd>
+<dt>MD5</dt><dd><code>68b2aaa1b8364625036752b8f4454f74</code></dd><dt>Boot Format</dt><dd><span class="badge badge-teal">binary</span></dd><dt>Total Pages</dt><dd>154</dd><dt>Size</dt><dd>308.0 KB</dd><dt>Storage</dt><dd><span class="badge badge-green">floppy-in-git</span></dd><dt>Controller</dt><dd>floppy</dd></dl><p style="font-size:0.85rem"><strong>Git:</strong> <code>images/68b2aaa1b8364625036752b8f4454f74/ND-10142B-PART4_68b2aa.img.gz</code></p><p style="font-size:0.85rem"><strong>Internet Archive:</strong>
+<a href="https://archive.org/details/norskdata-floppy-img-68b2aaa1b836" target="_blank" rel="noopener">norskdata-floppy-img-68b2aaa1b836</a></p><details>
+<summary style="cursor:pointer;font-weight:600;color:var(--purple-stroke)">NDFS Files (8)</summary>
+<div class="ndfs-files">
+<table>
+<thead><tr><th>Name</th><th>Type</th><th>Pages</th><th>Size</th></tr></thead>
+<tbody><tr><td>FREQX4-B:BRF</td><td>BRF</td><td>19</td><td>36.4 KB</td></tr><tr><td>MEAN-B:BRF</td><td>BRF</td><td>29</td><td>56.6 KB</td></tr><tr><td>XFER-B:BRF</td><td>BRF</td><td>9</td><td>16.7 KB</td></tr><tr><td>MIX-B:BRF</td><td>BRF</td><td>12</td><td>23.6 KB</td></tr><tr><td>STAT-B:BRF</td><td>BRF</td><td>12</td><td>22.2 KB</td></tr><tr><td>MACREL-B:BRF</td><td>BRF</td><td>3</td><td>5.2 KB</td></tr><tr><td>INSTALL-B:DP1</td><td>DP1</td><td>11</td><td>22.0 KB</td></tr><tr><td>INSTALL-B:DP2</td><td>DP2</td><td>39</td><td>78.0 KB</td></tr></tbody></table></div></details><p style="font-size:0.85rem"><strong>Users:</strong> FLOPPY-USER (143 pages)</p><div class="provenance"><strong>Contributor:</strong> Frode | <strong>Original:</strong> <code>/mnt/d/ND/Frode/ND-10142B (5.25 inch)/ND-10142B-PART4.img</code></div></div><div class="image-card" id="os-n-900-188-i-658d00ba">
+<h4>N-900-188-II</h4>
+<dl class="meta-grid">
+<dt>ID</dt><dd>os-n-900-188-i-658d00ba</dd>
+<dt>MD5</dt><dd><code>658d00ba45528071e9f4269369ea0dd1</code></dd><dt>Boot Format</dt><dd><span class="badge badge-teal">flomon</span></dd><dt>Total Pages</dt><dd>154</dd><dt>Size</dt><dd>308.0 KB</dd><dt>Storage</dt><dd><span class="badge badge-green">floppy-in-git</span></dd><dt>Controller</dt><dd>floppy</dd></dl><p style="font-size:0.85rem"><strong>Git:</strong> <code>images/658d00ba45528071e9f4269369ea0dd1/N-900-188-II.img.gz</code></p><p style="font-size:0.85rem"><strong>Internet Archive:</strong>
+<a href="https://archive.org/details/norskdata-floppy-os-n-900-188-i-658d00ba" target="_blank" rel="noopener">norskdata-floppy-os-n-900-188-i-658d00ba</a></p><details>
+<summary style="cursor:pointer;font-weight:600;color:var(--purple-stroke)">NDFS Files (1)</summary>
+<div class="ndfs-files">
+<table>
+<thead><tr><th>Name</th><th>Type</th><th>Pages</th><th>Size</th></tr></thead>
+<tbody><tr><td>SINTRAN-II:DATA</td><td>DATA</td><td>147</td><td>224.6 KB</td></tr></tbody></table></div></details><p style="font-size:0.85rem"><strong>Users:</strong> SYSTEM (148 pages)</p><div class="provenance"><strong>Contributor:</strong> Frode | <strong>Original:</strong> <code>/mnt/d/ND/Frode/Sintran III Version J 86-08-04/N-900-188-II.img</code></div></div><div class="image-card" id="img-64358e7bd16c">
+<h4>ND-10142B-PART1</h4>
+<dl class="meta-grid">
+<dt>ID</dt><dd>img-64358e7bd16c</dd>
+<dt>MD5</dt><dd><code>64358e7bd16cdff5c241b847341abaf1</code></dd><dt>Boot Format</dt><dd><span class="badge badge-teal">flomon</span></dd><dt>Total Pages</dt><dd>154</dd><dt>Size</dt><dd>308.0 KB</dd><dt>Storage</dt><dd><span class="badge badge-green">floppy-in-git</span></dd><dt>Controller</dt><dd>floppy</dd></dl><p style="font-size:0.85rem"><strong>Git:</strong> <code>images/64358e7bd16cdff5c241b847341abaf1/ND-10142B-PART1.img.gz</code></p><p style="font-size:0.85rem"><strong>Internet Archive:</strong>
+<a href="https://archive.org/details/norskdata-floppy-img-64358e7bd16c" target="_blank" rel="noopener">norskdata-floppy-img-64358e7bd16c</a></p><details>
+<summary style="cursor:pointer;font-weight:600;color:var(--purple-stroke)">NDFS Files (12)</summary>
+<div class="ndfs-files">
+<table>
+<thead><tr><th>Name</th><th>Type</th><th>Pages</th><th>Size</th></tr></thead>
+<tbody><tr><td>CALC-B:BRF</td><td>BRF</td><td>30</td><td>59.4 KB</td></tr><tr><td>CORR-B:BRF</td><td>BRF</td><td>3</td><td>4.7 KB</td></tr><tr><td>CORRVP-B:BRF</td><td>BRF</td><td>8</td><td>15.2 KB</td></tr><tr><td>CORRX1-B:BRF</td><td>BRF</td><td>5</td><td>8.2 KB</td></tr><tr><td>CORRX2-B:BRF</td><td>BRF</td><td>5</td><td>8.4 KB</td></tr><tr><td>CORRX4-B:BRF</td><td>BRF</td><td>6</td><td>10.5 KB</td></tr><tr><td>CORRD-B:BRF</td><td>BRF</td><td>5</td><td>8.6 KB</td></tr><tr><td>GROUP-B:BRF</td><td>BRF</td><td>25</td><td>48.7 KB</td></tr><tr><td>SEQU-B:BRF</td><td>BRF</td><td>6</td><td>10.2 KB</td></tr><tr><td>MANN-B:BRF</td><td>BRF</td><td>7</td><td>13.0 KB</td></tr><tr><td>MCA-B:BRF</td><td>BRF</td><td>14</td><td>27.1 KB</td></tr><tr><td>FRONTO-B:BRF</td><td>BRF</td><td>17</td><td>33.6 KB</td></tr></tbody></table></div></details><p style="font-size:0.85rem"><strong>Users:</strong> FLOPPY-USER (144 pages)</p><div class="provenance"><strong>Contributor:</strong> Frode | <strong>Original:</strong> <code>/mnt/d/ND/Frode/ND-10142B/ND-10142B-PART1.img</code></div></div><div class="image-card" id="img-53a4d08df9af">
+<h4>RDIR</h4>
+<dl class="meta-grid">
+<dt>ID</dt><dd>img-53a4d08df9af</dd>
+<dt>MD5</dt><dd><code>53a4d08df9afce94ced2ff79c708871d</code></dd><dt>Boot Format</dt><dd><span class="badge badge-teal">none</span></dd><dt>Total Pages</dt><dd>154</dd><dt>Size</dt><dd>308.0 KB</dd><dt>Storage</dt><dd><span class="badge badge-green">floppy-in-git</span></dd><dt>Controller</dt><dd>floppy</dd></dl><p style="font-size:0.85rem"><strong>Git:</strong> <code>images/53a4d08df9afce94ced2ff79c708871d/RDIR Nr2.img.gz</code></p><p style="font-size:0.85rem"><strong>Internet Archive:</strong>
+<a href="https://archive.org/details/norskdata-floppy-img-53a4d08df9af" target="_blank" rel="noopener">norskdata-floppy-img-53a4d08df9af</a></p><details>
+<summary style="cursor:pointer;font-weight:600;color:var(--purple-stroke)">NDFS Files (4)</summary>
+<div class="ndfs-files">
+<table>
+<thead><tr><th>Name</th><th>Type</th><th>Pages</th><th>Size</th></tr></thead>
+<tbody><tr><td>VTM-SEGMENT-N-D:BPUN</td><td>BPUN</td><td>65</td><td>128.2 KB</td></tr><tr><td>DUMP-IR-N-D:MODE</td><td>MODE</td><td>1</td><td>352 B</td></tr><tr><td>VTM-SEGMENT-E-D:BPUN</td><td>BPUN</td><td>65</td><td>128.2 KB</td></tr><tr><td>DUMP-IR-E-D:MODE</td><td>MODE</td><td>1</td><td>352 B</td></tr></tbody></table></div></details><p style="font-size:0.85rem"><strong>Users:</strong> FLOPPY-USER (137 pages)</p><div class="provenance"><strong>Contributor:</strong> Frode | <strong>Original:</strong> <code>/mnt/d/ND/Frode/RDIR/RDIR Nr2.img</code></div></div><div class="image-card" id="os-n-900-188-i-4b33e5a0">
+<h4>N-900-188-IV</h4>
+<dl class="meta-grid">
+<dt>ID</dt><dd>os-n-900-188-i-4b33e5a0</dd>
+<dt>MD5</dt><dd><code>4b33e5a0db17e61ef4ecb93208d2223e</code></dd><dt>Boot Format</dt><dd><span class="badge badge-teal">flomon</span></dd><dt>Total Pages</dt><dd>154</dd><dt>Size</dt><dd>308.0 KB</dd><dt>Storage</dt><dd><span class="badge badge-green">floppy-in-git</span></dd><dt>Controller</dt><dd>floppy</dd></dl><p style="font-size:0.85rem"><strong>Git:</strong> <code>images/4b33e5a0db17e61ef4ecb93208d2223e/N-900-188-IV.img.gz</code></p><p style="font-size:0.85rem"><strong>Internet Archive:</strong>
+<a href="https://archive.org/details/norskdata-floppy-os-n-900-188-i-4b33e5a0" target="_blank" rel="noopener">norskdata-floppy-os-n-900-188-i-4b33e5a0</a></p><details>
+<summary style="cursor:pointer;font-weight:600;color:var(--purple-stroke)">NDFS Files (3)</summary>
+<div class="ndfs-files">
+<table>
+<thead><tr><th>Name</th><th>Type</th><th>Pages</th><th>Size</th></tr></thead>
+<tbody><tr><td>SYMBOL-2-LIST:SYMB</td><td>SYMB</td><td>16</td><td>30.9 KB</td></tr><tr><td>SYMBOL-1-LIST:SYMB</td><td>SYMB</td><td>26</td><td>52.0 KB</td></tr><tr><td>LIBRARY-MARKS:SYMB</td><td>SYMB</td><td>3</td><td>4.7 KB</td></tr></tbody></table></div></details><p style="font-size:0.85rem"><strong>Users:</strong> SYSTEM (49 pages)</p><div class="provenance"><strong>Contributor:</strong> Frode | <strong>Original:</strong> <code>/mnt/d/ND/Frode/Sintran III Version J 86-08-04/N-900-188-IV.img</code></div></div><div class="image-card" id="patch-nd-patch-sin-j-43b01e04">
+<h4>ND-PATCH-SIN-J</h4>
+<dl class="meta-grid">
+<dt>ID</dt><dd>patch-nd-patch-sin-j-43b01e04</dd>
+<dt>MD5</dt><dd><code>43b01e040523eb7233a3f6d04014b5bf</code></dd><dt>Boot Format</dt><dd><span class="badge badge-teal">none</span></dd><dt>Total Pages</dt><dd>154</dd><dt>Size</dt><dd>308.0 KB</dd><dt>Storage</dt><dd><span class="badge badge-green">floppy-in-git</span></dd><dt>Controller</dt><dd>floppy</dd></dl><p style="font-size:0.85rem"><strong>Git:</strong> <code>images/43b01e040523eb7233a3f6d04014b5bf/PATCH-SIN-J-10300, 86.05.14.img.gz</code></p><p style="font-size:0.85rem"><strong>Internet Archive:</strong>
+<a href="https://archive.org/details/norskdata-floppy-patch-nd-patch-sin-j-43b01e04" target="_blank" rel="noopener">norskdata-floppy-patch-nd-patch-sin-j-43b01e04</a></p><details>
+<summary style="cursor:pointer;font-weight:600;color:var(--purple-stroke)">NDFS Files (6)</summary>
+<div class="ndfs-files">
+<table>
+<thead><tr><th>Name</th><th>Type</th><th>Pages</th><th>Size</th></tr></thead>
+<tbody><tr><td>MULTI-FUNCTION:PROG</td><td>PROG</td><td>18</td><td>36.0 KB</td></tr><tr><td>START-PATCH-FILE:MODE</td><td>MODE</td><td>3</td><td>4.1 KB</td></tr><tr><td>PATCH-FILE:MODE</td><td>MODE</td><td>2</td><td>3.6 KB</td></tr><tr><td>PATCHES:PATC</td><td>PATC</td><td>105</td><td>209.2 KB</td></tr><tr><td>REFERENCE:FADM</td><td>FADM</td><td>3</td><td>4.9 KB</td></tr><tr><td>SYMBOLS:FADM</td><td>FADM</td><td>1</td><td>33 B</td></tr></tbody></table></div></details><p style="font-size:0.85rem"><strong>Users:</strong> SYSTEM (139 pages)</p><div class="provenance"><strong>Contributor:</strong> Frode | <strong>Original:</strong> <code>/mnt/d/ND/Frode/Sintran III J Patch 10300/PATCH-SIN-J-10300, 86.05.14.img</code></div></div><div class="image-card" id="os-n-900-188-i-41603789">
+<h4>N-900-188-IV</h4>
+<dl class="meta-grid">
+<dt>ID</dt><dd>os-n-900-188-i-41603789</dd>
+<dt>MD5</dt><dd><code>41603789633b64bc5ed94bec961a900d</code></dd><dt>Boot Format</dt><dd><span class="badge badge-teal">flomon</span></dd><dt>Total Pages</dt><dd>154</dd><dt>Size</dt><dd>308.0 KB</dd><dt>Storage</dt><dd><span class="badge badge-green">floppy-in-git</span></dd><dt>Controller</dt><dd>floppy</dd></dl><p style="font-size:0.85rem"><strong>Git:</strong> <code>images/41603789633b64bc5ed94bec961a900d/N-900-188-IV_416037.img.gz</code></p><p style="font-size:0.85rem"><strong>Internet Archive:</strong>
+<a href="https://archive.org/details/norskdata-floppy-os-n-900-188-i-41603789" target="_blank" rel="noopener">norskdata-floppy-os-n-900-188-i-41603789</a></p><details>
+<summary style="cursor:pointer;font-weight:600;color:var(--purple-stroke)">NDFS Files (3)</summary>
+<div class="ndfs-files">
+<table>
+<thead><tr><th>Name</th><th>Type</th><th>Pages</th><th>Size</th></tr></thead>
+<tbody><tr><td>SYMBOL-2-LIST:SYMB</td><td>SYMB</td><td>14</td><td>26.5 KB</td></tr><tr><td>SYMBOL-1-LIST:SYMB</td><td>SYMB</td><td>26</td><td>52.0 KB</td></tr><tr><td>LIBRARY-MARKS:SYMB</td><td>SYMB</td><td>2</td><td>3.7 KB</td></tr></tbody></table></div></details><p style="font-size:0.85rem"><strong>Users:</strong> SYSTEM (46 pages)</p><div class="provenance"><strong>Contributor:</strong> Frode | <strong>Original:</strong> <code>/mnt/d/ND/Frode/Sintran III Version J 86-12-09/N-900-188-IV.img</code></div></div><div class="image-card" id="img-3c3efc1fa727">
+<h4>ND-10142B-PART5</h4>
+<dl class="meta-grid">
+<dt>ID</dt><dd>img-3c3efc1fa727</dd>
+<dt>MD5</dt><dd><code>3c3efc1fa7273c1d49c2121ce5a34364</code></dd><dt>Boot Format</dt><dd><span class="badge badge-teal">binary</span></dd><dt>Total Pages</dt><dd>154</dd><dt>Size</dt><dd>308.0 KB</dd><dt>Storage</dt><dd><span class="badge badge-green">floppy-in-git</span></dd><dt>Controller</dt><dd>floppy</dd></dl><p style="font-size:0.85rem"><strong>Git:</strong> <code>images/3c3efc1fa7273c1d49c2121ce5a34364/ND-10142B-PART5_3c3efc.img.gz</code></p><p style="font-size:0.85rem"><strong>Internet Archive:</strong>
+<a href="https://archive.org/details/norskdata-floppy-img-3c3efc1fa727" target="_blank" rel="noopener">norskdata-floppy-img-3c3efc1fa727</a></p><details>
+<summary style="cursor:pointer;font-weight:600;color:var(--purple-stroke)">NDFS Files (19)</summary>
+<div class="ndfs-files">
+<table>
+<thead><tr><th>Name</th><th>Type</th><th>Pages</th><th>Size</th></tr></thead>
+<tbody><tr><td>JOIN-B:BRF</td><td>BRF</td><td>2</td><td>4.0 KB</td></tr><tr><td>NONCAN-B:BRF</td><td>BRF</td><td>13</td><td>24.3 KB</td></tr><tr><td>FACT-B:BRF</td><td>BRF</td><td>8</td><td>14.9 KB</td></tr><tr><td>DISCRIM-B:BRF</td><td>BRF</td><td>9</td><td>16.6 KB</td></tr><tr><td>INSTALL-B:TEST</td><td>TEST</td><td>2</td><td>2.0 KB</td></tr><tr><td>REPL-B:BRF</td><td>BRF</td><td>5</td><td>8.6 KB</td></tr><tr><td>SREG-B:BRF</td><td>BRF</td><td>3</td><td>5.4 KB</td></tr><tr><td>SREGP-B:BRF</td><td>BRF</td><td>4</td><td>6.0 KB</td></tr><tr><td>SREGV-B:BRF</td><td>BRF</td><td>3</td><td>5.5 KB</td></tr><tr><td>SREGX-B:BRF</td><td>BRF</td><td>3</td><td>5.2 KB</td></tr><tr><td>SREG4-B:BRF</td><td>BRF</td><td>4</td><td>7.3 KB</td></tr><tr><td>SREG5-B:BRF</td><td>BRF</td><td>9</td><td>17.7 KB</td></tr><tr><td>SREG6-B:BRF</td><td>BRF</td><td>2</td><td>3.8 KB</td></tr><tr><td>SREG78-B:BRF</td><td>BRF</td><td>5</td><td>8.5 KB</td></tr><tr><td>IMPORT-B:BRF</td><td>BRF</td><td>11</td><td>20.6 KB</td></tr><tr><td>CHOICE-B:BRF</td><td>BRF</td><td>8</td><td>15.8 KB</td></tr><tr><td>SING-B:BRF</td><td>BRF</td><td>4</td><td>6.5 KB</td></tr><tr><td>LOADDDPP-B:SYMB</td><td>SYMB</td><td>1</td><td>50 B</td></tr><tr><td>EXPORT-B:BRF</td><td>BRF</td><td>12</td><td>22.3 KB</td></tr></tbody></table></div></details><p style="font-size:0.85rem"><strong>Users:</strong> FLOPPY-USER (128 pages)</p><div class="provenance"><strong>Contributor:</strong> Frode | <strong>Original:</strong> <code>/mnt/d/ND/Frode/ND-10142B (5.25 inch)/ND-10142B-PART5.img</code></div></div><div class="image-card" id="os-n-900-188-i-35e9b435">
+<h4>N-900-188-III</h4>
+<dl class="meta-grid">
+<dt>ID</dt><dd>os-n-900-188-i-35e9b435</dd>
+<dt>MD5</dt><dd><code>35e9b435cf36bfea13147651202ab1e0</code></dd><dt>Boot Format</dt><dd><span class="badge badge-teal">none</span></dd><dt>Total Pages</dt><dd>154</dd><dt>Size</dt><dd>308.0 KB</dd><dt>Storage</dt><dd><span class="badge badge-green">floppy-in-git</span></dd><dt>Controller</dt><dd>floppy</dd></dl><p style="font-size:0.85rem"><strong>Git:</strong> <code>images/35e9b435cf36bfea13147651202ab1e0/N-900-188-III.img.gz</code></p><p style="font-size:0.85rem"><strong>Internet Archive:</strong>
+<a href="https://archive.org/details/norskdata-floppy-os-n-900-188-i-35e9b435" target="_blank" rel="noopener">norskdata-floppy-os-n-900-188-i-35e9b435</a></p><details>
+<summary style="cursor:pointer;font-weight:600;color:var(--purple-stroke)">NDFS Files (7)</summary>
+<div class="ndfs-files">
+<table>
+<thead><tr><th>Name</th><th>Type</th><th>Pages</th><th>Size</th></tr></thead>
+<tbody><tr><td>NEW-SYSTEM:PROG</td><td>PROG</td><td>22</td><td>36.0 KB</td></tr><tr><td>F32-FMAC-1920C:PROG</td><td>PROG</td><td>15</td><td>28.1 KB</td></tr><tr><td>F48-FMAC-1408D:PROG</td><td>PROG</td><td>15</td><td>28.1 KB</td></tr><tr><td>DMAC-1915F:BPUN</td><td>BPUN</td><td>20</td><td>36.1 KB</td></tr><tr><td>FILSYS-SYMBOLS:SYMB</td><td>SYMB</td><td>25</td><td>38.3 KB</td></tr><tr><td>RTLO-SYMBOLS:SYMB</td><td>SYMB</td><td>9</td><td>16.0 KB</td></tr><tr><td>COS-TADADM:BPUN</td><td>BPUN</td><td>6</td><td>7.0 KB</td></tr></tbody></table></div></details><p style="font-size:0.85rem"><strong>Users:</strong> SYSTEM (114 pages)</p><div class="provenance"><strong>Contributor:</strong> Frode | <strong>Original:</strong> <code>/mnt/d/ND/Frode/Sintran III Version J 86-08-04/N-900-188-III.img</code></div></div><div class="image-card" id="patch-nd-patch-sin-k-33a02cb7">
+<h4>ND-PATCH-SIN-K</h4>
+<dl class="meta-grid">
+<dt>ID</dt><dd>patch-nd-patch-sin-k-33a02cb7</dd>
+<dt>MD5</dt><dd><code>33a02cb7dc37d459d238cebde260bc21</code></dd><dt>Boot Format</dt><dd><span class="badge badge-teal">flomon</span></dd><dt>Total Pages</dt><dd>640</dd><dt>Size</dt><dd>1.3 MB</dd><dt>Storage</dt><dd><span class="badge badge-green">floppy-in-git</span></dd><dt>Controller</dt><dd>floppy</dd></dl><p style="font-size:0.85rem"><strong>Git:</strong> <code>images/33a02cb7dc37d459d238cebde260bc21/211291K12-XX-01D.img.gz</code></p><p style="font-size:0.85rem"><strong>Internet Archive:</strong>
+<a href="https://archive.org/details/norskdata-floppy-patch-nd-patch-sin-k-33a02cb7" target="_blank" rel="noopener">norskdata-floppy-patch-nd-patch-sin-k-33a02cb7</a></p><details>
+<summary style="cursor:pointer;font-weight:600;color:var(--purple-stroke)">NDFS Files (6)</summary>
+<div class="ndfs-files">
+<table>
+<thead><tr><th>Name</th><th>Type</th><th>Pages</th><th>Size</th></tr></thead>
+<tbody><tr><td>NEW-SYSTEM:PROG</td><td>PROG</td><td>18</td><td>36.0 KB</td></tr><tr><td>START-PATCH-FILE:MODE</td><td>MODE</td><td>1</td><td>1.8 KB</td></tr><tr><td>PATCH-FILE:MODE</td><td>MODE</td><td>2</td><td>3.1 KB</td></tr><tr><td>SYMBOLS:FADM</td><td>FADM</td><td>1</td><td>17 B</td></tr><tr><td>PATCHES:PATC</td><td>PATC</td><td>127</td><td>252.2 KB</td></tr><tr><td>REFERENCE:FADM</td><td>FADM</td><td>5</td><td>8.8 KB</td></tr></tbody></table></div></details><p style="font-size:0.85rem"><strong>Users:</strong> SYSTEM (157 pages)</p><div class="provenance"><strong>Contributor:</strong> Frode | <strong>Original:</strong> <code>/mnt/d/ND/Frode/Sintran III K Patch 011411 (211291K12, 5.25 inch)/211291K12-XX-01D.img</code></div></div><div class="image-card" id="os-n-900-000-i-2e4e34e0">
+<h4>N-900-000-III</h4>
+<dl class="meta-grid">
+<dt>ID</dt><dd>os-n-900-000-i-2e4e34e0</dd>
+<dt>MD5</dt><dd><code>2e4e34e09016b3027c2f50e7b8840f8e</code></dd><dt>Boot Format</dt><dd><span class="badge badge-teal">flomon</span></dd><dt>Total Pages</dt><dd>154</dd><dt>Size</dt><dd>308.0 KB</dd><dt>Storage</dt><dd><span class="badge badge-green">floppy-in-git</span></dd><dt>Controller</dt><dd>floppy</dd></dl><p style="font-size:0.85rem"><strong>Git:</strong> <code>images/2e4e34e09016b3027c2f50e7b8840f8e/COSMOS Version Diskette 3.img.gz</code></p><p style="font-size:0.85rem"><strong>Internet Archive:</strong>
+<a href="https://archive.org/details/norskdata-floppy-os-n-900-000-i-2e4e34e0" target="_blank" rel="noopener">norskdata-floppy-os-n-900-000-i-2e4e34e0</a></p><details>
+<summary style="cursor:pointer;font-weight:600;color:var(--purple-stroke)">NDFS Files (9)</summary>
+<div class="ndfs-files">
+<table>
+<thead><tr><th>Name</th><th>Type</th><th>Pages</th><th>Size</th></tr></thead>
+<tbody><tr><td>SYMBOL-2-LIST:SYMB</td><td>SYMB</td><td>20</td><td>20.9 KB</td></tr><tr><td>SYMBOL-1-LIST:SYMB</td><td>SYMB</td><td>20</td><td>33.7 KB</td></tr><tr><td>FILSYS-SYMBOLS:SYMB</td><td>SYMB</td><td>15</td><td>26.8 KB</td></tr><tr><td>RTLO-SYMBOLS:SYMB</td><td>SYMB</td><td>9</td><td>13.0 KB</td></tr><tr><td>LIBRARY-MARKS:SYMB</td><td>SYMB</td><td>3</td><td>1.9 KB</td></tr><tr><td>NEW-SYSTEM:PROG</td><td>PROG</td><td>30</td><td>22.5 KB</td></tr><tr><td>F32-FMAC-1920C:PROG</td><td>PROG</td><td>15</td><td>28.1 KB</td></tr><tr><td>F48-FMAC-1408D:PROG</td><td>PROG</td><td>15</td><td>28.1 KB</td></tr><tr><td>DMAC-1915E:BPUN</td><td>BPUN</td><td>20</td><td>35.9 KB</td></tr></tbody></table></div></details><p style="font-size:0.85rem"><strong>Users:</strong> SYSTEM (148 pages)</p><div class="provenance"><strong>Contributor:</strong> Frode | <strong>Original:</strong> <code>/mnt/d/ND/Frode/Standard Satellite-9 83.01.06 ver H/COSMOS Version Diskette 3.img</code></div></div><div class="image-card" id="os-n-900-188-i-2277dda2">
+<h4>N-900-188-II</h4>
+<dl class="meta-grid">
+<dt>ID</dt><dd>os-n-900-188-i-2277dda2</dd>
+<dt>MD5</dt><dd><code>2277dda25cccc6b04c025a2290ee3610</code></dd><dt>Boot Format</dt><dd><span class="badge badge-teal">flomon</span></dd><dt>Total Pages</dt><dd>154</dd><dt>Size</dt><dd>308.0 KB</dd><dt>Storage</dt><dd><span class="badge badge-green">floppy-in-git</span></dd><dt>Controller</dt><dd>floppy</dd></dl><p style="font-size:0.85rem"><strong>Git:</strong> <code>images/2277dda25cccc6b04c025a2290ee3610/N-900-188-II_2277dd.img.gz</code></p><p style="font-size:0.85rem"><strong>Internet Archive:</strong>
+<a href="https://archive.org/details/norskdata-floppy-os-n-900-188-i-2277dda2" target="_blank" rel="noopener">norskdata-floppy-os-n-900-188-i-2277dda2</a></p><details>
+<summary style="cursor:pointer;font-weight:600;color:var(--purple-stroke)">NDFS Files (1)</summary>
+<div class="ndfs-files">
+<table>
+<thead><tr><th>Name</th><th>Type</th><th>Pages</th><th>Size</th></tr></thead>
+<tbody><tr><td>SINTRAN-II:DATA</td><td>DATA</td><td>147</td><td>215.1 KB</td></tr></tbody></table></div></details><p style="font-size:0.85rem"><strong>Users:</strong> SYSTEM (148 pages)</p><div class="provenance"><strong>Contributor:</strong> Frode | <strong>Original:</strong> <code>/mnt/d/ND/Frode/Sintran III Version J 86-12-09/N-900-188-II.img</code></div></div><div class="image-card" id="os-n-900-188-i-2269d6ac">
+<h4>N-900-188-IV</h4>
+<dl class="meta-grid">
+<dt>ID</dt><dd>os-n-900-188-i-2269d6ac</dd>
+<dt>MD5</dt><dd><code>2269d6ac60d7c37e6bb585c406c7f36c</code></dd><dt>Boot Format</dt><dd><span class="badge badge-teal">flomon</span></dd><dt>Total Pages</dt><dd>154</dd><dt>Size</dt><dd>308.0 KB</dd><dt>Storage</dt><dd><span class="badge badge-green">floppy-in-git</span></dd><dt>Controller</dt><dd>floppy</dd></dl><p style="font-size:0.85rem"><strong>Git:</strong> <code>images/2269d6ac60d7c37e6bb585c406c7f36c/N-900-188-IV_2269d6.img.gz</code></p><p style="font-size:0.85rem"><strong>Internet Archive:</strong>
+<a href="https://archive.org/details/norskdata-floppy-os-n-900-188-i-2269d6ac" target="_blank" rel="noopener">norskdata-floppy-os-n-900-188-i-2269d6ac</a></p><details>
+<summary style="cursor:pointer;font-weight:600;color:var(--purple-stroke)">NDFS Files (3)</summary>
+<div class="ndfs-files">
+<table>
+<thead><tr><th>Name</th><th>Type</th><th>Pages</th><th>Size</th></tr></thead>
+<tbody><tr><td>SYMBOL-2-LIST:SYMB</td><td>SYMB</td><td>14</td><td>26.5 KB</td></tr><tr><td>SYMBOL-1-LIST:SYMB</td><td>SYMB</td><td>26</td><td>52.0 KB</td></tr><tr><td>LIBRARY-MARKS:SYMB</td><td>SYMB</td><td>2</td><td>3.8 KB</td></tr></tbody></table></div></details><p style="font-size:0.85rem"><strong>Users:</strong> SYSTEM (46 pages)</p><div class="provenance"><strong>Contributor:</strong> Frode | <strong>Original:</strong> <code>/mnt/d/ND/Frode/Sintran III Version J 86-11-26/N-900-188-IV.img</code></div></div><div class="image-card" id="patch-patch-sintran-20de65a7">
+<h4>PATCH-SINTRAN</h4>
+<dl class="meta-grid">
+<dt>ID</dt><dd>patch-patch-sintran-20de65a7</dd>
+<dt>MD5</dt><dd><code>20de65a73ec086dc89ae384b9ac34f3e</code></dd><dt>Boot Format</dt><dd><span class="badge badge-teal">bpun</span></dd><dt>Total Pages</dt><dd>154</dd><dt>Size</dt><dd>308.0 KB</dd><dt>Storage</dt><dd><span class="badge badge-green">floppy-in-git</span></dd><dt>Controller</dt><dd>floppy</dd></dl><p style="font-size:0.85rem"><strong>Git:</strong> <code>images/20de65a73ec086dc89ae384b9ac34f3e/Patchfile-17.img.gz</code></p><p style="font-size:0.85rem"><strong>Internet Archive:</strong>
+<a href="https://archive.org/details/norskdata-floppy-patch-patch-sintran-20de65a7" target="_blank" rel="noopener">norskdata-floppy-patch-patch-sintran-20de65a7</a></p><details>
+<summary style="cursor:pointer;font-weight:600;color:var(--purple-stroke)">NDFS Files (8)</summary>
+<div class="ndfs-files">
+<table>
+<thead><tr><th>Name</th><th>Type</th><th>Pages</th><th>Size</th></tr></thead>
+<tbody><tr><td>FILE-TEST:PROG</td><td>PROG</td><td>12</td><td>2.0 KB</td></tr><tr><td>FILE-TEST-32:PROG</td><td>PROG</td><td>12</td><td>23.0 KB</td></tr><tr><td>FILE-TEST-48:PROG</td><td>PROG</td><td>12</td><td>23.0 KB</td></tr><tr><td>PATCH-FILE-F:MODE</td><td>MODE</td><td>3</td><td>4.5 KB</td></tr><tr><td>PATCH-FILE:PATC</td><td>PATC</td><td>48</td><td>94.6 KB</td></tr><tr><td>REFERENCE:FADM</td><td>FADM</td><td>1</td><td>1.9 KB</td></tr><tr><td>SYMBOLS:FADM</td><td>FADM</td><td>1</td><td>17 B</td></tr><tr><td>PATCH-FILE:OUT</td><td>OUT</td><td>19</td><td>36.0 KB</td></tr></tbody></table></div></details><p style="font-size:0.85rem"><strong>Users:</strong> SYSTEM (117 pages)</p><div class="provenance"><strong>Contributor:</strong> Frode | <strong>Original:</strong> <code>/mnt/d/ND/Frode/Sintran III H Patch 17/Patchfile-17.img</code></div></div><div class="image-card" id="img-20a30b63e1dc">
+<h4>UNIQUE</h4>
+<dl class="meta-grid">
+<dt>ID</dt><dd>img-20a30b63e1dc</dd>
+<dt>MD5</dt><dd><code>20a30b63e1dcca596808061a5235f9d8</code></dd><dt>Boot Format</dt><dd><span class="badge badge-teal">none</span></dd><dt>Total Pages</dt><dd>640</dd><dt>Size</dt><dd>1.3 MB</dd><dt>Storage</dt><dd><span class="badge badge-green">floppy-in-git</span></dd><dt>Controller</dt><dd>floppy</dd></dl><p style="font-size:0.85rem"><strong>Git:</strong> <code>images/20a30b63e1dcca596808061a5235f9d8/Unique START part 1.img.gz</code></p><p style="font-size:0.85rem"><strong>Internet Archive:</strong>
+<a href="https://archive.org/details/norskdata-floppy-img-20a30b63e1dc" target="_blank" rel="noopener">norskdata-floppy-img-20a30b63e1dc</a></p><details>
+<summary style="cursor:pointer;font-weight:600;color:var(--purple-stroke)">NDFS Files (9)</summary>
+<div class="ndfs-files">
+<table>
+<thead><tr><th>Name</th><th>Type</th><th>Pages</th><th>Size</th></tr></thead>
+<tbody><tr><td>READ-ME:SYMB</td><td>SYMB</td><td>2</td><td>2.6 KB</td></tr><tr><td>UQSTART-SIBR:LOAD</td><td>LOAD</td><td>1</td><td>1.7 KB</td></tr><tr><td>UQSTART-SIB2:LOAD</td><td>LOAD</td><td>1</td><td>1.7 KB</td></tr><tr><td>USMAIN:NRF</td><td>NRF</td><td>30</td><td>59.3 KB</td></tr><tr><td>USLIB1:NRF</td><td>NRF</td><td>159</td><td>317.3 KB</td></tr><tr><td>USLIB2:NRF</td><td>NRF</td><td>156</td><td>310.0 KB</td></tr><tr><td>USEDITOR:NRF</td><td>NRF</td><td>125</td><td>249.7 KB</td></tr><tr><td>USSIBAS:NRF</td><td>NRF</td><td>28</td><td>55.8 KB</td></tr><tr><td>USDUMMY:NRF</td><td>NRF</td><td>32</td><td>63.6 KB</td></tr></tbody></table></div></details><p style="font-size:0.85rem"><strong>Users:</strong> FLOPPY-USER (544 pages)</p><div class="provenance"><strong>Contributor:</strong> Frode | <strong>Original:</strong> <code>/mnt/d/ND/Frode/Unique Start (5.25 inch)/Unique START part 1.img</code></div></div><div class="image-card" id="img-1ff63420cb8f">
+<h4>ND-10142B-PART6</h4>
+<dl class="meta-grid">
+<dt>ID</dt><dd>img-1ff63420cb8f</dd>
+<dt>MD5</dt><dd><code>1ff63420cb8f541b7fa92aef5de33f1f</code></dd><dt>Boot Format</dt><dd><span class="badge badge-teal">binary</span></dd><dt>Total Pages</dt><dd>154</dd><dt>Size</dt><dd>308.0 KB</dd><dt>Storage</dt><dd><span class="badge badge-green">floppy-in-git</span></dd><dt>Controller</dt><dd>floppy</dd></dl><p style="font-size:0.85rem"><strong>Git:</strong> <code>images/1ff63420cb8f541b7fa92aef5de33f1f/ND-10142B-PART6.img.gz</code></p><p style="font-size:0.85rem"><strong>Internet Archive:</strong>
+<a href="https://archive.org/details/norskdata-floppy-img-1ff63420cb8f" target="_blank" rel="noopener">norskdata-floppy-img-1ff63420cb8f</a></p><details>
+<summary style="cursor:pointer;font-weight:600;color:var(--purple-stroke)">NDFS Files (7)</summary>
+<div class="ndfs-files">
+<table>
+<thead><tr><th>Name</th><th>Type</th><th>Pages</th><th>Size</th></tr></thead>
+<tbody><tr><td>MAIN-B:BRF</td><td>BRF</td><td>61</td><td>121.8 KB</td></tr><tr><td>FILE-B:BRF</td><td>BRF</td><td>42</td><td>83.7 KB</td></tr><tr><td>KENDL1-B:BRF</td><td>BRF</td><td>4</td><td>6.7 KB</td></tr><tr><td>SPEAR1-B:BRF</td><td>BRF</td><td>4</td><td>6.5 KB</td></tr><tr><td>HELPX-B:BRF</td><td>BRF</td><td>17</td><td>32.6 KB</td></tr><tr><td>INSTALL-B:DATA</td><td>DATA</td><td>2</td><td>2.0 KB</td></tr><tr><td>INSTALL-B:MODE</td><td>MODE</td><td>1</td><td>1.8 KB</td></tr></tbody></table></div></details><p style="font-size:0.85rem"><strong>Users:</strong> FLOPPY-USER (139 pages)</p><div class="provenance"><strong>Contributor:</strong> Frode | <strong>Original:</strong> <code>/mnt/d/ND/Frode/ND-10142B/ND-10142B-PART6.img</code></div></div><div class="image-card" id="img-1c81d9f06255">
+<h4>GRAFS-2</h4>
+<dl class="meta-grid">
+<dt>ID</dt><dd>img-1c81d9f06255</dd>
+<dt>MD5</dt><dd><code>1c81d9f06255d7356e3a9321c8cd5c9f</code></dd><dt>Boot Format</dt><dd><span class="badge badge-teal">none</span></dd><dt>Total Pages</dt><dd>154</dd><dt>Size</dt><dd>308.0 KB</dd><dt>Storage</dt><dd><span class="badge badge-green">floppy-in-git</span></dd><dt>Controller</dt><dd>floppy</dd></dl><p style="font-size:0.85rem"><strong>Git:</strong> <code>images/1c81d9f06255d7356e3a9321c8cd5c9f/GRAFS-2, Norsk versjon, 5-5-81.img.gz</code></p><p style="font-size:0.85rem"><strong>Internet Archive:</strong>
+<a href="https://archive.org/details/norskdata-floppy-img-1c81d9f06255" target="_blank" rel="noopener">norskdata-floppy-img-1c81d9f06255</a></p><details>
+<summary style="cursor:pointer;font-weight:600;color:var(--purple-stroke)">NDFS Files (32)</summary>
+<div class="ndfs-files">
+<table>
+<thead><tr><th>Name</th><th>Type</th><th>Pages</th><th>Size</th></tr></thead>
+<tbody><tr><td>VTM-SEGMENT:BPUN</td><td>BPUN</td><td>29</td><td>56.4 KB</td></tr><tr><td>DDB029:VTM</td><td>VTM</td><td>1</td><td>242 B</td></tr><tr><td>DDB999:VTM</td><td>VTM</td><td>1</td><td>912 B</td></tr><tr><td>DDB034:VTM</td><td>VTM</td><td>1</td><td>312 B</td></tr><tr><td>DDB000:VTM</td><td>VTM</td><td>1</td><td>196 B</td></tr><tr><td>DDB001:VTM</td><td>VTM</td><td>1</td><td>194 B</td></tr><tr><td>DDB002:VTM</td><td>VTM</td><td>1</td><td>202 B</td></tr><tr><td>DDB003:VTM</td><td>VTM</td><td>1</td><td>222 B</td></tr><tr><td>DDB004:VTM</td><td>VTM</td><td>1</td><td>196 B</td></tr><tr><td>DDB005:VTM</td><td>VTM</td><td>1</td><td>486 B</td></tr><tr><td>DDB006:VTM</td><td>VTM</td><td>1</td><td>334 B</td></tr><tr><td>DDB007:VTM</td><td>VTM</td><td>1</td><td>196 B</td></tr><tr><td>DDB008:VTM</td><td>VTM</td><td>1</td><td>258 B</td></tr><tr><td>DDB009:VTM</td><td>VTM</td><td>1</td><td>196 B</td></tr><tr><td>DDB010:VTM</td><td>VTM</td><td>1</td><td>266 B</td></tr><tr><td>DDB011:VTM</td><td>VTM</td><td>1</td><td>202 B</td></tr><tr><td>DDB012:VTM</td><td>VTM</td><td>1</td><td>196 B</td></tr><tr><td>DDB103:VTM</td><td>VTM</td><td>1</td><td>254 B</td></tr><tr><td>DDB106:VTM</td><td>VTM</td><td>1</td><td>334 B</td></tr><tr><td>DDB035:VTM</td><td>VTM</td><td>1</td><td>202 B</td></tr><tr><td>DDB037:VTM</td><td>VTM</td><td>1</td><td>196 B</td></tr><tr><td>DDB036:VTM</td><td>VTM</td><td>1</td><td>345 B</td></tr><tr><td>DDB040:VTM</td><td>VTM</td><td>1</td><td>358 B</td></tr><tr><td>DDB041:VTM</td><td>VTM</td><td>1</td><td>318 B</td></tr><tr><td>DDB043:VTM</td><td>VTM</td><td>1</td><td>298 B</td></tr><tr><td>DDB030:VTM</td><td>VTM</td><td>1</td><td>202 B</td></tr><tr><td>DDB038:VTM</td><td>VTM</td><td>1</td><td>196 B</td></tr><tr><td>DDB039:VTM</td><td>VTM</td><td>1</td><td>274 B</td></tr><tr><td>DDB143:VTM</td><td>VTM</td><td>1</td><td>298 B</td></tr><tr><td>DDB044:VTM</td><td>VTM</td><td>1</td><td>258 B</td></tr><tr><td>DDB042:VTM</td><td>VTM</td><td>1</td><td>258 B</td></tr><tr><td>DDB016:VTM</td><td>VTM</td><td>1</td><td>222 B</td></tr></tbody></table></div></details><p style="font-size:0.85rem"><strong>Users:</strong> FLOPPY-USER (93 pages)</p><div class="provenance"><strong>Contributor:</strong> Frode | <strong>Original:</strong> <code>/mnt/d/ND/Frode/GRAFS Norsk versjon/GRAFS-2, Norsk versjon, 5-5-81.img</code></div></div><div class="image-card" id="img-174048ee0af5">
+<h4>ND-10142B-PART2</h4>
+<dl class="meta-grid">
+<dt>ID</dt><dd>img-174048ee0af5</dd>
+<dt>MD5</dt><dd><code>174048ee0af5706601f0c0be6661a7ff</code></dd><dt>Boot Format</dt><dd><span class="badge badge-teal">binary</span></dd><dt>Total Pages</dt><dd>154</dd><dt>Size</dt><dd>308.0 KB</dd><dt>Storage</dt><dd><span class="badge badge-green">floppy-in-git</span></dd><dt>Controller</dt><dd>floppy</dd></dl><p style="font-size:0.85rem"><strong>Git:</strong> <code>images/174048ee0af5706601f0c0be6661a7ff/ND-10142B-PART2.img.gz</code></p><p style="font-size:0.85rem"><strong>Internet Archive:</strong>
+<a href="https://archive.org/details/norskdata-floppy-img-174048ee0af5" target="_blank" rel="noopener">norskdata-floppy-img-174048ee0af5</a></p><details>
+<summary style="cursor:pointer;font-weight:600;color:var(--purple-stroke)">NDFS Files (7)</summary>
+<div class="ndfs-files">
+<table>
+<thead><tr><th>Name</th><th>Type</th><th>Pages</th><th>Size</th></tr></thead>
+<tbody><tr><td>DDPPMES-B:DATA</td><td>DATA</td><td>68</td><td>135.3 KB</td></tr><tr><td>DDPP-B:MODE</td><td>MODE</td><td>1</td><td>1.7 KB</td></tr><tr><td>AID-B:BRF</td><td>BRF</td><td>17</td><td>33.7 KB</td></tr><tr><td>DSTART-B:BRF</td><td>BRF</td><td>2</td><td>4.0 KB</td></tr><tr><td>TTY-B:BRF</td><td>BRF</td><td>1</td><td>1.4 KB</td></tr><tr><td>FREQ-B:BRF</td><td>BRF</td><td>7</td><td>12.8 KB</td></tr><tr><td>FREQ11-B:BRF</td><td>BRF</td><td>12</td><td>23.7 KB</td></tr></tbody></table></div></details><p style="font-size:0.85rem"><strong>Users:</strong> FLOPPY-USER (116 pages)</p><div class="provenance"><strong>Contributor:</strong> Frode | <strong>Original:</strong> <code>/mnt/d/ND/Frode/ND-10142B/ND-10142B-PART2.img</code></div></div><div class="image-card" id="img-101f51540b0a">
+<h4>FLOPPY</h4>
+<dl class="meta-grid">
+<dt>ID</dt><dd>img-101f51540b0a</dd>
+<dt>MD5</dt><dd><code>101f51540b0ab5eb162bf54f28e4ebfc</code></dd><dt>Boot Format</dt><dd><span class="badge badge-teal">flomon</span></dd><dt>Total Pages</dt><dd>154</dd><dt>Size</dt><dd>308.0 KB</dd><dt>Storage</dt><dd><span class="badge badge-green">floppy-in-git</span></dd><dt>Controller</dt><dd>floppy</dd></dl><p style="font-size:0.85rem"><strong>Git:</strong> <code>images/101f51540b0ab5eb162bf54f28e4ebfc/NTH-Kermit.img.gz</code></p><p style="font-size:0.85rem"><strong>Internet Archive:</strong>
+<a href="https://archive.org/details/norskdata-floppy-img-101f51540b0a" target="_blank" rel="noopener">norskdata-floppy-img-101f51540b0a</a></p><details>
+<summary style="cursor:pointer;font-weight:600;color:var(--purple-stroke)">NDFS Files (4)</summary>
+<div class="ndfs-files">
+<table>
+<thead><tr><th>Name</th><th>Type</th><th>Pages</th><th>Size</th></tr></thead>
+<tbody><tr><td>KERMIT:HELP</td><td>HELP</td><td>4</td><td>6.8 KB</td></tr><tr><td>KERMIT:HLIB</td><td>HLIB</td><td>1</td><td>420 B</td></tr><tr><td>KERMIT:DOC</td><td>DOC</td><td>1</td><td>1.9 KB</td></tr><tr><td>KERMIT:PROG</td><td>PROG</td><td>23</td><td>44.5 KB</td></tr></tbody></table></div></details><p style="font-size:0.85rem"><strong>Users:</strong> FLOPPY-USER (34 pages)</p><div class="provenance"><strong>Contributor:</strong> Frode | <strong>Original:</strong> <code>/mnt/d/ND/Frode/NTH-Kermit/NTH-Kermit.img</code></div></div><div class="image-card" id="os-n-900-188-i-0e6ba1a2">
+<h4>N-900-188-I</h4>
+<dl class="meta-grid">
+<dt>ID</dt><dd>os-n-900-188-i-0e6ba1a2</dd>
+<dt>MD5</dt><dd><code>0e6ba1a295eb0f810bb1312f55b6edfa</code></dd><dt>Boot Format</dt><dd><span class="badge badge-teal">flomon</span></dd><dt>Total Pages</dt><dd>154</dd><dt>Size</dt><dd>308.0 KB</dd><dt>Storage</dt><dd><span class="badge badge-green">floppy-in-git</span></dd><dt>Controller</dt><dd>floppy</dd></dl><p style="font-size:0.85rem"><strong>Git:</strong> <code>images/0e6ba1a295eb0f810bb1312f55b6edfa/N-900-188-I.img.gz</code></p><p style="font-size:0.85rem"><strong>Internet Archive:</strong>
+<a href="https://archive.org/details/norskdata-floppy-os-n-900-188-i-0e6ba1a2" target="_blank" rel="noopener">norskdata-floppy-os-n-900-188-i-0e6ba1a2</a></p><details>
+<summary style="cursor:pointer;font-weight:600;color:var(--purple-stroke)">NDFS Files (2)</summary>
+<div class="ndfs-files">
+<table>
+<thead><tr><th>Name</th><th>Type</th><th>Pages</th><th>Size</th></tr></thead>
+<tbody><tr><td>MACM-1718L:BPUN</td><td>BPUN</td><td>20</td><td>34.5 KB</td></tr><tr><td>SINTRAN-I:DATA</td><td>DATA</td><td>127</td><td>199.6 KB</td></tr></tbody></table></div></details><p style="font-size:0.85rem"><strong>Users:</strong> SYSTEM (148 pages)</p><div class="provenance"><strong>Contributor:</strong> Frode | <strong>Original:</strong> <code>/mnt/d/ND/Frode/Sintran III Version J 86-08-04/N-900-188-I.img</code></div></div><div class="image-card" id="patch-nd-patch-sin-j-02c1a288">
+<h4>ND-PATCH-SIN-J</h4>
+<dl class="meta-grid">
+<dt>ID</dt><dd>patch-nd-patch-sin-j-02c1a288</dd>
+<dt>MD5</dt><dd><code>02c1a288c0223bcf5dea8614bb4246ab</code></dd><dt>Boot Format</dt><dd><span class="badge badge-teal">none</span></dd><dt>Total Pages</dt><dd>154</dd><dt>Size</dt><dd>308.0 KB</dd><dt>Storage</dt><dd><span class="badge badge-green">floppy-in-git</span></dd><dt>Controller</dt><dd>floppy</dd></dl><p style="font-size:0.85rem"><strong>Git:</strong> <code>images/02c1a288c0223bcf5dea8614bb4246ab/PATCH-SIN-J-11110, 87.08.13.img.gz</code></p><p style="font-size:0.85rem"><strong>Internet Archive:</strong>
+<a href="https://archive.org/details/norskdata-floppy-patch-nd-patch-sin-j-02c1a288" target="_blank" rel="noopener">norskdata-floppy-patch-nd-patch-sin-j-02c1a288</a></p><details>
+<summary style="cursor:pointer;font-weight:600;color:var(--purple-stroke)">NDFS Files (6)</summary>
+<div class="ndfs-files">
+<table>
+<thead><tr><th>Name</th><th>Type</th><th>Pages</th><th>Size</th></tr></thead>
+<tbody><tr><td>MULTI-FUNCTION:PROG</td><td>PROG</td><td>18</td><td>36.0 KB</td></tr><tr><td>START-PATCH-FILE:MODE</td><td>MODE</td><td>3</td><td>4.1 KB</td></tr><tr><td>PATCH-FILE:MODE</td><td>MODE</td><td>2</td><td>3.6 KB</td></tr><tr><td>PATCHES:PATC</td><td>PATC</td><td>115</td><td>226.7 KB</td></tr><tr><td>REFERENCE:FADM</td><td>FADM</td><td>3</td><td>5.2 KB</td></tr><tr><td>SYMBOLS:FADM</td><td>FADM</td><td>1</td><td>23 B</td></tr></tbody></table></div></details><p style="font-size:0.85rem"><strong>Users:</strong> SYSTEM (148 pages)</p><div class="provenance"><strong>Contributor:</strong> Frode | <strong>Original:</strong> <code>/mnt/d/ND/Frode/Sintran III J Patch 11110/PATCH-SIN-J-11110, 87.08.13.img</code></div></div><div class="image-card" id="img-00fef8df45e2">
+<h4>RDIR</h4>
+<dl class="meta-grid">
+<dt>ID</dt><dd>img-00fef8df45e2</dd>
+<dt>MD5</dt><dd><code>00fef8df45e2e5d4a2debcfe94965ee3</code></dd><dt>Boot Format</dt><dd><span class="badge badge-teal">none</span></dd><dt>Total Pages</dt><dd>154</dd><dt>Size</dt><dd>308.0 KB</dd><dt>Storage</dt><dd><span class="badge badge-green">floppy-in-git</span></dd><dt>Controller</dt><dd>floppy</dd></dl><p style="font-size:0.85rem"><strong>Git:</strong> <code>images/00fef8df45e2e5d4a2debcfe94965ee3/RDIR Nr1.img.gz</code></p><p style="font-size:0.85rem"><strong>Internet Archive:</strong>
+<a href="https://archive.org/details/norskdata-floppy-img-00fef8df45e2" target="_blank" rel="noopener">norskdata-floppy-img-00fef8df45e2</a></p><details>
+<summary style="cursor:pointer;font-weight:600;color:var(--purple-stroke)">NDFS Files (3)</summary>
+<div class="ndfs-files">
+<table>
+<thead><tr><th>Name</th><th>Type</th><th>Pages</th><th>Size</th></tr></thead>
+<tbody><tr><td>MAIN-SEGMENT-D:BPUN</td><td>BPUN</td><td>64</td><td>127.0 KB</td></tr><tr><td>DB-SEGMENT-D:BPUN</td><td>BPUN</td><td>56</td><td>109.5 KB</td></tr><tr><td>PATCH-SEGMENT-D:MODE</td><td>MODE</td><td>1</td><td>187 B</td></tr></tbody></table></div></details><p style="font-size:0.85rem"><strong>Users:</strong> FLOPPY-USER (125 pages)</p><div class="provenance"><strong>Contributor:</strong> Frode | <strong>Original:</strong> <code>/mnt/d/ND/Frode/RDIR/RDIR Nr1.img</code></div></div></div></div>
+</div>
+</main>
+<footer>
+<div class="container">
+<p>Norsk Data Software Archive &mdash;
+<a href="https://github.com/HackerCorpLabs/norskdata-software-archive">GitHub Repository</a></p>
+</div>
+</footer>
+<script>
+(function() {
+  let index = null;
+
+  // Theme
+  const themeBtn = document.getElementById('theme-toggle');
+  const saved = localStorage.getItem('nd-theme');
+  if (saved === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+
+  if (themeBtn) {
+    themeBtn.addEventListener('click', function() {
+      const current = document.documentElement.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next === 'dark' ? 'dark' : '');
+      if (next === 'light') document.documentElement.removeAttribute('data-theme');
+      localStorage.setItem('nd-theme', next);
+    });
+  }
+
+  // Search
+  const searchInput = document.getElementById('search-input');
+  const searchResults = document.getElementById('search-results');
+  if (!searchInput || !searchResults) return;
+
+  async function loadIndex() {
+    if (index) return;
+    const base = document.querySelector('meta[name="base-url"]');
+    const baseUrl = base ? base.getAttribute('content') : '.';
+    const resp = await fetch(baseUrl + '/search-index.json');
+    index = await resp.json();
+  }
+
+  function doSearch(query) {
+    if (!index || !query || query.length < 2) {
+      searchResults.classList.remove('active');
+      return;
+    }
+    const q = query.toLowerCase();
+    const results = [];
+    for (const item of index) {
+      let score = 0;
+      if (item.i && item.i.toLowerCase().includes(q)) score += 3;
+      if (item.v && item.v.toLowerCase().includes(q)) score += 3;
+      if (item.p && item.p.toLowerCase().includes(q)) score += 2;
+      if (item.n && item.n.toLowerCase().includes(q)) score += 2;
+      if (item.ver && item.ver.toLowerCase().includes(q)) score += 1;
+      if (item.bf && item.bf.toLowerCase().includes(q)) score += 1;
+      if (item.t) for (const t of item.t) { if (t.toLowerCase().includes(q)) score += 1; }
+      if (item.f) for (const f of item.f) { if (f.toLowerCase().includes(q)) score += 1; }
+      if (score > 0) results.push({ item, score });
+    }
+    results.sort((a, b) => b.score - a.score);
+    const top = results.slice(0, 30);
+
+    if (top.length === 0) {
+      searchResults.innerHTML = '<div class="search-result-item">No results found</div>';
+      searchResults.classList.add('active');
+      return;
+    }
+
+    const base = document.querySelector('meta[name="base-url"]');
+    const baseUrl = base ? base.getAttribute('content') : '.';
+
+    searchResults.innerHTML = top.map(function(r) {
+      const pid = r.item.p || 'unmatched';
+      const name = r.item.n || r.item.p || 'Unknown';
+      return '<a class="search-result-item" href="' + baseUrl + '/products/' + escHtml(pid) + '.html#' + escHtml(r.item.i) + '">' +
+        '<div class="sr-id">' + escHtml(r.item.v || r.item.i) + '</div>' +
+        '<div class="sr-product">' + escHtml(name) + (r.item.ver ? ' v' + escHtml(r.item.ver) : '') + '</div>' +
+        '</a>';
+    }).join('');
+    searchResults.classList.add('active');
+  }
+
+  function escHtml(s) {
+    if (!s) return '';
+    return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+
+  searchInput.addEventListener('focus', loadIndex);
+  let debounce;
+  searchInput.addEventListener('input', function() {
+    clearTimeout(debounce);
+    debounce = setTimeout(function() { doSearch(searchInput.value); }, 150);
+  });
+
+  document.addEventListener('click', function(e) {
+    if (!searchResults.contains(e.target) && e.target !== searchInput) {
+      searchResults.classList.remove('active');
+    }
+  });
+})();
+</script>
+<script>
+(function() {
+  document.querySelectorAll('table.sortable').forEach(function(table) {
+    const headers = table.querySelectorAll('th[data-sort]');
+    headers.forEach(function(th, colIndex) {
+      th.addEventListener('click', function() {
+        const tbody = table.querySelector('tbody');
+        if (!tbody) return;
+        const rows = Array.from(tbody.querySelectorAll('tr'));
+        const sortKey = th.getAttribute('data-sort');
+        const isNum = sortKey === 'num';
+        const currentDir = th.getAttribute('data-dir') || 'asc';
+        const newDir = currentDir === 'asc' ? 'desc' : 'asc';
+
+        // Reset all headers
+        headers.forEach(function(h) {
+          h.setAttribute('data-dir', '');
+          const arrow = h.querySelector('.sort-arrow');
+          if (arrow) arrow.textContent = '';
+        });
+        th.setAttribute('data-dir', newDir);
+        const arrow = th.querySelector('.sort-arrow');
+        if (arrow) arrow.textContent = newDir === 'asc' ? ' \u25B2' : ' \u25BC';
+
+        const idx = Array.from(th.parentElement.children).indexOf(th);
+        rows.sort(function(a, b) {
+          const aVal = a.children[idx] ? a.children[idx].textContent.trim() : '';
+          const bVal = b.children[idx] ? b.children[idx].textContent.trim() : '';
+          if (isNum) {
+            const aNum = parseInt(aVal, 10) || 0;
+            const bNum = parseInt(bVal, 10) || 0;
+            return newDir === 'asc' ? aNum - bNum : bNum - aNum;
+          }
+          return newDir === 'asc' ? aVal.localeCompare(bVal) : bVal.localeCompare(aVal);
+        });
+        rows.forEach(function(r) { tbody.appendChild(r); });
+      });
+    });
+  });
+})();
+</script>
+</body>
+</html>

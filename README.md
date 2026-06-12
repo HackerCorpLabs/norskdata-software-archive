@@ -1,0 +1,411 @@
+# Norsk Data Software Archive
+
+[![CI](https://github.com/HackerCorpLabs/norskdata-software-archive/actions/workflows/validate.yml/badge.svg)](https://github.com/HackerCorpLabs/norskdata-software-archive/actions/workflows/validate.yml)
+
+A preservation project for software from [Norsk Data](https://en.wikipedia.org/wiki/Norsk_Data), a Norwegian minicomputer manufacturer (1967--1998). This archive catalogs and preserves floppy disk images, with full NDFS filesystem metadata, from the NORD and ND series of minicomputers.
+
+**Live site**: [labs.hackercorp.no/norskdata-software-archive](http://labs.hackercorp.no/norskdata-software-archive/)
+
+## What this is
+
+- A git repository containing compressed floppy disk images (`.img.gz`) with per-image YAML metadata
+- A searchable web catalog with NDFS filesystem browsing, BPUN checksum validation, and label photo viewing
+- Import tools for adding new disk images with automatic product matching
+- An MCP server for LLM integration with the [nd100x emulator](https://github.com/HackerCorpLabs/nd100x)
+
+## Architecture
+
+```
+GitHub repo (this)              Internet Archive
+  images/{md5}/                   norskdata-software collection
+    image.img.gz                  (permanent binary storage)
+    metadata.yaml                  stable download URLs
+  catalog/floppies.json
+  tools/ (CLI + web UI + MCP)
+  site/ (GitHub Pages)
+```
+
+- **YAML per floppy is the source of truth.** Each `.img.gz` has a `.yaml` file next to it with all metadata. `catalog/floppies.json` is generated from these YAML files.
+- **Content-addressed storage.** Each image lives in `images/{md5}/` -- the folder is named by the full MD5 hash of the raw image. Folders never change, even when metadata is updated.
+- **NDFS parsing.** Every image is parsed using the [norskdata-ndfs](https://github.com/HackerCorpLabs/norskdata-ndfs) library to extract volume name, boot format, user listings, and file listings.
+- **Floppy images in git.** Images <=1.3 MB are stored compressed in the repo. Larger artifacts (HDD images, tapes) go to Internet Archive.
+
+---
+
+## Reading the catalog JSON (C, C#, TypeScript)
+
+`catalog/floppies.json` is a JSON array of floppy objects. Property names use **camelCase** (`volumeName`, `md5`, `productId`, `bootFormat`, …) -- the standard convention for JSON data interchange. Nested objects follow the same convention (`storage.git.imagePath`, `ndfs.files[].name`, `provenance.contributor`).
+
+```jsonc
+{
+  "id": "nd-10079-m08-d4-a34ba51c",
+  "volumeName": "10079M08-NO-4S",
+  "md5": "a34ba51ce14eb2e4e78b11c9fd1dc149",
+  "productId": "ND-10079",
+  "bootFormat": "none",
+  "ndfs": { "files": [ { "name": "WP-MAIN-NO:BPUN", "userName": "FLOPPY-USER", "bytes": 32790 } ] }
+}
+```
+
+### TypeScript / JavaScript -- native, no config
+
+```ts
+const floppies = JSON.parse(await fs.readFile('catalog/floppies.json', 'utf-8'));
+console.log(floppies[0].volumeName, floppies[0].md5);
+```
+
+### C# -- set the camelCase naming policy
+
+The JSON is camelCase, so map your PascalCase C# properties to it with `JsonNamingPolicy.CamelCase`. **Do not** use serializer defaults (they expect PascalCase) -- they would read every property as `null`.
+
+```csharp
+using System.Text.Json;
+
+public class Floppy {
+    public string Id { get; set; }
+    public string? VolumeName { get; set; }
+    public string Md5 { get; set; }
+    public string? ProductId { get; set; }
+    public string? BootFormat { get; set; }
+    // ... other fields
+}
+
+var options = new JsonSerializerOptions {
+    PropertyNamingPolicy = JsonNamingPolicy.CamelCase,   // VolumeName  <-  "volumeName"
+    PropertyNameCaseInsensitive = true,                  // belt-and-suspenders
+};
+var floppies = JsonSerializer.Deserialize<List<Floppy>>(
+    File.ReadAllText("catalog/floppies.json"), options);
+```
+
+Newtonsoft.Json alternative: annotate with `[JsonProperty("volumeName")]`, or set
+`ContractResolver = new CamelCasePropertyNamesContractResolver()`.
+
+### C -- access by the literal JSON key string (cJSON)
+
+Casing is just the literal key string; use the exact camelCase names.
+
+```c
+cJSON *root = cJSON_Parse(buf);
+cJSON *e    = cJSON_GetArrayItem(root, 0);
+const char *vol = cJSON_GetObjectItem(e, "volumeName")->valuestring;
+const char *md5 = cJSON_GetObjectItem(e, "md5")->valuestring;
+
+cJSON *ndfs  = cJSON_GetObjectItem(e, "ndfs");
+cJSON *files = ndfs ? cJSON_GetObjectItem(ndfs, "files") : NULL;     /* nested */
+```
+
+> The separate top-level `floppies.json` is a **legacy compatibility export** for the old ndfloppy app and uses PascalCase (`Id`, `Name`, `Md5`). New consumers should read `catalog/floppies.json` (camelCase) instead.
+
+---
+
+## Quick Start
+
+```bash
+git clone https://github.com/HackerCorpLabs/norskdata-software-archive.git
+cd norskdata-software-archive
+make setup
+make import
+```
+
+This starts the web UI at **http://localhost:3000** where you can browse the catalog, view NDFS filesystem contents, manage products, import new images, and commit changes. (`make serve` is a backward-compatible alias for `make import`.)
+
+For the read-only static site:
+
+```bash
+make static-site
+make site-serve    # serves on port 8000
+```
+
+---
+
+## Importing Floppy Images
+
+### Primary: web UI
+
+```bash
+make import
+```
+
+Start the server and go to **http://localhost:3000/#/import**, then use either:
+- **Folder scan** -- point at a folder of `.img` files, preview, then import
+- **File upload** -- drag and drop a single `.img` file
+
+This is the recommended path: it imports *and* lets you map floppies to products (Matcher) and commit changes, all in the browser.
+
+### Console wizard (CLI)
+
+```bash
+make import-cli
+```
+
+Interactive terminal prompts for path, contributor name, and source description.
+
+### Non-interactive (scripted)
+
+```bash
+make import-folder SRC=/path/to/folder CONTRIBUTOR="Name" SOURCE="description" RECURSIVE=1
+make import-file FILE=/path/to/image.img CONTRIBUTOR="Name" SOURCE="description"
+```
+
+The console paths (`import-cli`, `import-folder`, `import-file`) **only import** -- unmatched floppies still need to be assigned to products in the web UI's Matcher.
+
+### What happens during import
+
+1. Reads the `.img` file and computes MD5 checksum
+2. Parses the NDFS filesystem (volume name, boot format, users, file listings)
+3. Validates BPUN checksums where applicable
+4. Matches volume name against known ND product number patterns
+5. Checks for duplicates (same MD5 = skip)
+6. Compresses the image and stores it in `images/{md5}/`
+7. Copies label photos and transcriptions alongside the image
+8. Generates a `.yaml` metadata file as the source of truth
+
+---
+
+## Product Matching
+
+Volume names are matched against Norsk Data naming patterns:
+
+| Pattern | Example | Result |
+|---------|---------|--------|
+| `ND-{digits}{version}` | `ND-10325C` | Product: ND-10325, Version: C |
+| `{digits}{ver}-{lang}-{disk}{density}` | `210691D03-NO-01S` | Product: ND-210691, Version: D03, Disk: 1, Language: NO |
+| `N-{digits}-{digits}` | `N-900-188-I` | OS distribution |
+| Patch keywords | `ND-PATCH-SIN-J` | Patch floppy |
+
+Unmatched images go through the **Matcher** (web UI) where you can manually assign products or create new ones.
+
+---
+
+## Image Organization
+
+Each floppy image lives in its own folder named by its full MD5 hash:
+
+```
+images/
+  78a2647e91efedd6c2192e24f76497c9/
+    ND-10022T.img.gz                    Compressed floppy image
+    ND-10022T.yaml                      Metadata (source of truth)
+    DSC_0789.JPG                        Label photo
+  62caae43d67b7bfedb18bf17dc079e0d/
+    10079M07-NO-01S.img.gz
+    10079M07-NO-01S.yaml
+    DSC_0775.JPG
+    labels.txt                          Label transcription
+```
+
+The YAML file contains all classification (product, version, tags). The folder structure is purely content-addressed and never changes.
+
+---
+
+## Web UI (localhost:3000)
+
+The local web UI provides:
+
+- **Dashboard** -- overview stats, match queue status, contributors
+- **Catalog** -- searchable, sortable table of all floppy images
+- **Products** -- product list with categories, platform, and image counts
+- **Import** -- folder scan or file upload for new images
+- **Matcher** -- assign unmatched floppies to products
+- **Changes** -- review uncommitted changes, commit, and push
+- **Help** -- step-by-step workflow guide
+
+### NDFS Viewer
+
+Click any floppy image to open the NDFS filesystem viewer:
+- Browse files and users
+- View file contents in hex or text
+- Extract individual files
+- Validate BPUN checksums
+- View label photographs with zoom, rotate, and pan
+
+---
+
+## Static Site (GitHub Pages)
+
+A read-only catalog is deployed to GitHub Pages with:
+- Client-side search across volume names, products, MD5, tags, and NDFS filenames
+- Sortable catalog and products tables
+- NDFS filesystem viewer (runs entirely in the browser using a bundled NDFS parser)
+- Per-product detail pages with floppy listings
+- Dark/light theme
+- WCAG 2.1 AA compliant colors
+
+---
+
+## MCP Server
+
+The MCP server exposes this archive to LLMs (Claude Code, Claude Desktop, Cursor, etc.) via the [Model Context Protocol](https://modelcontextprotocol.io/). It lets an assistant search and read the catalog directly, instead of you copy-pasting data into a chat.
+
+### What `make mcp` does
+
+```bash
+make mcp
+```
+
+`make mcp` builds the tools (if needed) and runs `tools/dist/mcp/server.js`. The server:
+
+- Communicates over **stdio** (standard input/output) using the MCP protocol -- it is **not** an HTTP server and prints nothing useful when run by hand. It is meant to be **launched by an MCP client**, not run in a terminal you watch.
+- On startup, loads `catalog/floppies.json` and `catalog/products.json` into memory and builds a search index.
+- Reads the archive location from the `ARCHIVE_ROOT` environment variable (defaults to the repo root). The bundled `.mcp.json` sets `ARCHIVE_ROOT` to `.`.
+
+It is **read-only**: it never imports, edits, or commits anything. Use the web UI (`make import`) for write operations.
+
+### Tools the LLM can call
+
+| Tool | What it returns |
+|------|-----------------|
+| `search_floppies` | Full-text search across volume names, product IDs, NDFS file names, tags, and directory content. Args: `query`, optional `limit` (default 10). |
+| `get_floppy` | Full metadata for one image, looked up by catalog ID, MD5, SHA256, or volume name. |
+| `list_product_floppies` | All floppy images for a given `productId` (e.g. `ND-10325`). |
+| `list_products` | Every known product with its image count, sorted by count. |
+| `download_floppy` | The local `.img.gz` path and/or Internet Archive URL for an image (no actual download -- it returns where the bytes live). |
+| `list_floppy_files` | The NDFS users and files inside an image, from cached metadata -- no download or parsing needed. |
+| `get_archive_stats` | Summary stats: totals, breakdown by storage class and boot format, top products. |
+
+### What an LLM can use it for
+
+- **Discovery** -- "Find all floppies that contain a file named `SINTRAN`", "list every disk for product ND-210337", "which products have the most images?"
+- **Inspection without downloading** -- read a floppy's NDFS file listing, boot format, volume name, contributor, and BPUN validation status straight from the catalog.
+- **Locating the actual image** -- get the local path or Internet Archive URL so it (or you) can fetch the `.img.gz` for use with an emulator such as [nd100x](https://github.com/HackerCorpLabs/nd100x).
+- **Research questions over the whole archive** -- cross-reference products, versions, languages, and file contents that would be tedious to grep by hand.
+
+It is **not** for adding or modifying images -- there are no write tools. Importing and product mapping stay in the web UI.
+
+### Installing it in an MCP client
+
+The repo ships a pre-configured `.mcp.json` at its root:
+
+```json
+{
+  "mcpServers": {
+    "norskdata-software": {
+      "command": "node",
+      "args": ["tools/dist/mcp/server.js"],
+      "env": { "ARCHIVE_ROOT": "." }
+    }
+  }
+}
+```
+
+**Prerequisite (once):** build the tools so `tools/dist/mcp/server.js` exists:
+
+```bash
+make setup
+```
+
+**Claude Code** -- run inside the repo so it picks up `.mcp.json` automatically:
+
+```bash
+cd norskdata-software-archive
+claude          # Claude Code reads ./.mcp.json and offers the "norskdata-software" server
+```
+
+The `args` path is relative to the repo root, so launch Claude Code from there. To register it explicitly (or from elsewhere), use an absolute path:
+
+```bash
+claude mcp add norskdata-software \
+  --env ARCHIVE_ROOT=/abs/path/to/norskdata-software-archive \
+  -- node /abs/path/to/norskdata-software-archive/tools/dist/mcp/server.js
+```
+
+Verify with `claude mcp list`, or ask Claude something like *"Use the norskdata archive to list the products with the most floppy images."*
+
+**Claude Desktop / Cursor / other clients** -- add the same block to that client's MCP config (for Claude Desktop, `claude_desktop_config.json`), using **absolute paths** for `args` and `ARCHIVE_ROOT` since those clients don't run from the repo directory. Restart the client afterwards.
+
+> The client starts the server itself -- you do **not** need to keep `make mcp` running. `make mcp` is only for manually testing that the server boots.
+
+---
+
+## Make Targets
+
+```
+make setup          Build tools and dependencies
+make import         Start the web UI on port 3000 (primary import + product mapping)
+make serve          Alias for 'make import'
+make import-cli     Console import wizard (interactive prompts)
+
+make search Q=...   Search the catalog
+make check          Validate catalog integrity
+make check-deps     Check prerequisites (node, npm, git)
+
+make static-site    Build the GitHub Pages static site
+make site-build     Build per-product HTML pages
+make site-serve     Build and serve on port 8000
+make mcp            Start the MCP server
+
+make import-folder  Non-interactive folder import (scripted)
+make import-file    Non-interactive single file import (scripted)
+
+make ia-sync        Incremental sync to Internet Archive
+make ia-verify      Verify IA checksums
+make ia-upload      Upload a single item to IA
+```
+
+---
+
+## Repository Structure
+
+```
+catalog/                    Generated catalog data and schemas
+  floppies.json               Generated from YAML files
+  products.json               Generated product index
+  schema/                     JSON Schema definitions
+
+images/                     Compressed floppy images + metadata
+  {md5}/                      One folder per image (MD5 hash)
+    filename.img.gz             Compressed floppy image
+    filename.yaml               Metadata (source of truth)
+    *.JPG                       Label photos
+    labels.txt                  Label transcription
+
+products/                   Product YAML files (id, name, categories, platform)
+
+categories/                 Product category definitions
+  product-categories.yaml
+
+tools/                      Node.js/TypeScript tooling
+  src/
+    server.ts                 Express web UI backend
+    cli.ts                    CLI with all subcommands
+    interactive-import.ts     Interactive CLI import
+    api/
+      import.ts               Single image import pipeline
+      import-folder.ts        Batch folder import
+      product-matcher.ts      ND product number matching
+      catalog.ts              YAML/JSON catalog read/write
+      static-site-builder.ts  GitHub Pages generator (main site)
+      site-builder.ts         Per-product HTML pages
+    mcp/
+      server.ts               MCP server
+    ui/
+      index.html              Web UI (single-page app)
+
+site/                       GitHub Pages static site (generated)
+```
+
+---
+
+## Related Projects
+
+| Project | Description |
+|---------|-------------|
+| [norskdata-docs-archive](https://github.com/HackerCorpLabs/norskdata-docs-archive) | ND documentation preservation (PDFs, manuals, OCR text) |
+| [NDInsight](https://github.com/HackerCorpLabs/NDInsight) | Curated research: OS install guides, hardware analysis, numbering reference |
+| [norskdata-ndfs](https://github.com/HackerCorpLabs/norskdata-ndfs) | NDFS filesystem library (TypeScript, Python, C) |
+| [nd100x](https://github.com/HackerCorpLabs/nd100x) | ND-100 minicomputer emulator |
+| [nd-120](https://github.com/HackerCorpLabs/nd-120) | ND-120 CPU FPGA recreation |
+
+## Further Documentation
+
+- [INSTALL.md](/INSTALL.md) -- Prerequisites and setup guide
+- [CONTRIBUTING.md](/CONTRIBUTING.md) -- How to contribute floppy images
+- [BACKUP.md](/BACKUP.md) -- Backup and disaster recovery strategy
+- [images/README.md](/images/README.md) -- Image storage model
+- [docs/STORAGE-LAYOUT.md](/docs/STORAGE-LAYOUT.md) -- Detailed storage layout documentation
+
+## License
+
+This is a historical preservation project. Original software is copyright Norsk Data A/S.
+Catalog metadata and tooling are provided for research and preservation purposes.

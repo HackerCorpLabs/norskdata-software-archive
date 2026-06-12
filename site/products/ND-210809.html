@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="base-url" content="..">
+<title>ND-210809 - Norsk Data Software Archive</title>
+<style>
+:root {
+  --bg: #ffffff;
+  --bg-alt: #f8f9fa;
+  --fg: #1a1a2e;
+  --fg-muted: #555;
+  --border: #dee2e6;
+  --blue-fill: #E3F2FD;
+  --blue-stroke: #0D47A1;
+  --teal-fill: #E0F7FA;
+  --teal-stroke: #00838F;
+  --green-fill: #E8F5E9;
+  --green-stroke: #2E7D32;
+  --purple-fill: #F3E5F5;
+  --purple-stroke: #7B1FA2;
+  --orange-fill: #FFF3E0;
+  --orange-stroke: #E65100;
+  --link: #0D47A1;
+  --link-hover: #1565C0;
+  --card-shadow: 0 1px 3px rgba(0,0,0,0.12);
+}
+
+[data-theme="dark"] {
+  --bg: #1a1a2e;
+  --bg-alt: #16213e;
+  --fg: #e0e0e0;
+  --fg-muted: #aaa;
+  --border: #333;
+  --blue-fill: #0D47A1;
+  --blue-stroke: #90CAF9;
+  --teal-fill: #004D40;
+  --teal-stroke: #80CBC4;
+  --green-fill: #1B5E20;
+  --green-stroke: #A5D6A7;
+  --purple-fill: #4A148C;
+  --purple-stroke: #CE93D8;
+  --orange-fill: #BF360C;
+  --orange-stroke: #FFCC80;
+  --link: #90CAF9;
+  --link-hover: #BBDEFB;
+  --card-shadow: 0 1px 3px rgba(0,0,0,0.4);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+  line-height: 1.6;
+}
+
+.container { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
+
+header {
+  background: var(--blue-fill);
+  border-bottom: 3px solid var(--blue-stroke);
+  padding: 1rem 0;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: var(--blue-stroke);
+}
+
+header nav { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
+header nav a { color: var(--link); text-decoration: none; font-weight: 500; }
+header nav a:hover { text-decoration: underline; color: var(--link-hover); }
+
+.theme-toggle {
+  background: none;
+  border: 1px solid var(--border);
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  cursor: pointer;
+  color: var(--fg);
+  font-size: 0.85rem;
+  margin-left: auto;
+}
+
+main { padding: 2rem 0; }
+
+h2 { color: var(--teal-stroke); border-bottom: 2px solid var(--teal-fill); padding-bottom: 0.3rem; }
+h3 { color: var(--purple-stroke); }
+
+a { color: var(--link); }
+a:hover { color: var(--link-hover); }
+
+/* Stats grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+.stat-card {
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: var(--card-shadow);
+}
+.stat-card .stat-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--green-stroke);
+}
+.stat-card .stat-label {
+  font-size: 0.85rem;
+  color: var(--fg-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Search */
+.search-box {
+  margin: 1.5rem 0;
+  position: relative;
+}
+.search-box input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 2px solid var(--blue-stroke);
+  border-radius: 8px;
+  background: var(--bg);
+  color: var(--fg);
+  outline: none;
+}
+.search-box input:focus {
+  border-color: var(--teal-stroke);
+  box-shadow: 0 0 0 3px var(--teal-fill);
+}
+#search-results {
+  margin-top: 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  max-height: 400px;
+  overflow-y: auto;
+  display: none;
+  background: var(--bg);
+}
+#search-results.active { display: block; }
+.search-result-item {
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid var(--border);
+  cursor: pointer;
+}
+.search-result-item:hover { background: var(--blue-fill); }
+.search-result-item:last-child { border-bottom: none; }
+.sr-id { font-weight: 600; color: var(--blue-stroke); }
+.sr-product { color: var(--fg-muted); font-size: 0.85rem; }
+
+/* Product list */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 0.75rem;
+  margin: 1rem 0;
+}
+.product-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0.75rem;
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+.product-item a { text-decoration: none; font-weight: 500; }
+.product-count {
+  background: var(--green-fill);
+  color: var(--green-stroke);
+  padding: 0.15rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  border: 1px solid var(--green-stroke);
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-size: 0.9rem;
+}
+th {
+  background: var(--teal-fill);
+  color: var(--teal-stroke);
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+  border-bottom: 2px solid var(--teal-stroke);
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+}
+th:hover { background: var(--blue-fill); }
+th .sort-arrow { font-size: 0.7rem; margin-left: 0.3rem; }
+td {
+  padding: 0.4rem 0.75rem;
+  border-bottom: 1px solid var(--border);
+  word-break: break-word;
+}
+tr:hover { background: var(--bg-alt); }
+
+/* Badge */
+.badge {
+  display: inline-block;
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+.badge-blue { background: var(--blue-fill); color: var(--blue-stroke); border: 1px solid var(--blue-stroke); }
+.badge-teal { background: var(--teal-fill); color: var(--teal-stroke); border: 1px solid var(--teal-stroke); }
+.badge-green { background: var(--green-fill); color: var(--green-stroke); border: 1px solid var(--green-stroke); }
+.badge-purple { background: var(--purple-fill); color: var(--purple-stroke); border: 1px solid var(--purple-stroke); }
+.badge-orange { background: var(--orange-fill); color: var(--orange-stroke); border: 1px solid var(--orange-stroke); }
+
+/* NDFS file list */
+.ndfs-files {
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  font-family: 'Consolas', 'Courier New', monospace;
+  font-size: 0.8rem;
+  max-height: 300px;
+  overflow-y: auto;
+}
+.ndfs-files table { margin: 0; font-size: 0.8rem; }
+.ndfs-files th { background: var(--purple-fill); color: var(--purple-stroke); border-bottom: 1px solid var(--purple-stroke); padding: 0.25rem 0.5rem; cursor: default; }
+.ndfs-files td { padding: 0.2rem 0.5rem; }
+
+/* Version group */
+.version-group {
+  margin: 1rem 0;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.version-header {
+  background: var(--teal-fill);
+  color: var(--teal-stroke);
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  border-bottom: 1px solid var(--teal-stroke);
+}
+.version-body { padding: 0.75rem 1rem; }
+
+.image-card {
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.75rem;
+  margin: 0.5rem 0;
+}
+.image-card h4 { margin: 0 0 0.5rem 0; color: var(--blue-stroke); }
+
+.meta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 0.25rem 1rem;
+  font-size: 0.85rem;
+}
+.meta-grid dt { color: var(--fg-muted); font-weight: 600; }
+.meta-grid dd { margin: 0 0 0.25rem 0; }
+
+/* Provenance */
+.provenance {
+  background: var(--orange-fill);
+  border: 1px solid var(--orange-stroke);
+  border-radius: 6px;
+  padding: 0.5rem 0.75rem;
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--orange-stroke);
+}
+
+/* Letter heading */
+.letter-heading {
+  color: var(--purple-stroke);
+  border-bottom: 2px solid var(--purple-fill);
+  margin-top: 2rem;
+  padding-bottom: 0.25rem;
+}
+
+footer {
+  border-top: 2px solid var(--border);
+  padding: 1rem 0;
+  margin-top: 3rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--fg-muted);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .product-grid { grid-template-columns: 1fr; }
+  table { font-size: 0.8rem; }
+  th, td { padding: 0.3rem 0.4rem; }
+}
+
+/* Skip link for accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--blue-stroke);
+  color: #fff;
+  padding: 8px;
+  z-index: 100;
+  transition: top 0.2s;
+}
+.skip-link:focus { top: 0; }
+</style>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<header>
+<div class="container">
+<nav>
+<h1><a href="../index.html" style="color:inherit;text-decoration:none">Norsk Data Software Archive</a></h1>
+<a href="../index.html">Home</a>
+<a href="../all.html">Full Catalog</a>
+<button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">Dark / Light</button>
+</nav>
+</div>
+</header>
+<main id="main-content">
+<div class="container">
+
+<h2>ND-210809 - ND-210809</h2>
+<p><span class="badge badge-blue">1 image</span>
+<span class="badge badge-teal">1 version</span></p>
+<div class="version-group">
+<div class="version-header">Version L05 (1 image)</div>
+<div class="version-body"><div class="image-card" id="nd-210809-l05-d1-c63c93e5">
+<h4>210809L05-XX-01D</h4>
+<dl class="meta-grid">
+<dt>ID</dt><dd>nd-210809-l05-d1-c63c93e5</dd>
+<dt>MD5</dt><dd><code>c63c93e53d9178eac9827beeb712726e</code></dd><dt>Storage</dt><dd><span class="badge badge-green">floppy-in-git</span></dd><dt>Disk #</dt><dd>1</dd><dt>Controller</dt><dd>floppy</dd></dl><p style="font-size:0.85rem"><strong>Internet Archive:</strong>
+<a href="https://archive.org/details/norskdata-floppy-nd-210809-l05-d1-c63c93e5" target="_blank" rel="noopener">norskdata-floppy-nd-210809-l05-d1-c63c93e5</a></p><div class="provenance"><strong>Contributor:</strong> Gandalf | <strong>Original:</strong> <code>Z:\NorskData\FloppyImages\Gandalf\library.ndwiki.org\Software library\100\ND-disk-00175.img</code></div></div></div></div>
+</div>
+</main>
+<footer>
+<div class="container">
+<p>Norsk Data Software Archive &mdash;
+<a href="https://github.com/HackerCorpLabs/norskdata-software-archive">GitHub Repository</a></p>
+</div>
+</footer>
+<script>
+(function() {
+  let index = null;
+
+  // Theme
+  const themeBtn = document.getElementById('theme-toggle');
+  const saved = localStorage.getItem('nd-theme');
+  if (saved === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+
+  if (themeBtn) {
+    themeBtn.addEventListener('click', function() {
+      const current = document.documentElement.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next === 'dark' ? 'dark' : '');
+      if (next === 'light') document.documentElement.removeAttribute('data-theme');
+      localStorage.setItem('nd-theme', next);
+    });
+  }
+
+  // Search
+  const searchInput = document.getElementById('search-input');
+  const searchResults = document.getElementById('search-results');
+  if (!searchInput || !searchResults) return;
+
+  async function loadIndex() {
+    if (index) return;
+    const base = document.querySelector('meta[name="base-url"]');
+    const baseUrl = base ? base.getAttribute('content') : '.';
+    const resp = await fetch(baseUrl + '/search-index.json');
+    index = await resp.json();
+  }
+
+  function doSearch(query) {
+    if (!index || !query || query.length < 2) {
+      searchResults.classList.remove('active');
+      return;
+    }
+    const q = query.toLowerCase();
+    const results = [];
+    for (const item of index) {
+      let score = 0;
+      if (item.i && item.i.toLowerCase().includes(q)) score += 3;
+      if (item.v && item.v.toLowerCase().includes(q)) score += 3;
+      if (item.p && item.p.toLowerCase().includes(q)) score += 2;
+      if (item.n && item.n.toLowerCase().includes(q)) score += 2;
+      if (item.ver && item.ver.toLowerCase().includes(q)) score += 1;
+      if (item.bf && item.bf.toLowerCase().includes(q)) score += 1;
+      if (item.t) for (const t of item.t) { if (t.toLowerCase().includes(q)) score += 1; }
+      if (item.f) for (const f of item.f) { if (f.toLowerCase().includes(q)) score += 1; }
+      if (score > 0) results.push({ item, score });
+    }
+    results.sort((a, b) => b.score - a.score);
+    const top = results.slice(0, 30);
+
+    if (top.length === 0) {
+      searchResults.innerHTML = '<div class="search-result-item">No results found</div>';
+      searchResults.classList.add('active');
+      return;
+    }
+
+    const base = document.querySelector('meta[name="base-url"]');
+    const baseUrl = base ? base.getAttribute('content') : '.';
+
+    searchResults.innerHTML = top.map(function(r) {
+      const pid = r.item.p || 'unmatched';
+      const name = r.item.n || r.item.p || 'Unknown';
+      return '<a class="search-result-item" href="' + baseUrl + '/products/' + escHtml(pid) + '.html#' + escHtml(r.item.i) + '">' +
+        '<div class="sr-id">' + escHtml(r.item.v || r.item.i) + '</div>' +
+        '<div class="sr-product">' + escHtml(name) + (r.item.ver ? ' v' + escHtml(r.item.ver) : '') + '</div>' +
+        '</a>';
+    }).join('');
+    searchResults.classList.add('active');
+  }
+
+  function escHtml(s) {
+    if (!s) return '';
+    return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+
+  searchInput.addEventListener('focus', loadIndex);
+  let debounce;
+  searchInput.addEventListener('input', function() {
+    clearTimeout(debounce);
+    debounce = setTimeout(function() { doSearch(searchInput.value); }, 150);
+  });
+
+  document.addEventListener('click', function(e) {
+    if (!searchResults.contains(e.target) && e.target !== searchInput) {
+      searchResults.classList.remove('active');
+    }
+  });
+})();
+</script>
+<script>
+(function() {
+  document.querySelectorAll('table.sortable').forEach(function(table) {
+    const headers = table.querySelectorAll('th[data-sort]');
+    headers.forEach(function(th, colIndex) {
+      th.addEventListener('click', function() {
+        const tbody = table.querySelector('tbody');
+        if (!tbody) return;
+        const rows = Array.from(tbody.querySelectorAll('tr'));
+        const sortKey = th.getAttribute('data-sort');
+        const isNum = sortKey === 'num';
+        const currentDir = th.getAttribute('data-dir') || 'asc';
+        const newDir = currentDir === 'asc' ? 'desc' : 'asc';
+
+        // Reset all headers
+        headers.forEach(function(h) {
+          h.setAttribute('data-dir', '');
+          const arrow = h.querySelector('.sort-arrow');
+          if (arrow) arrow.textContent = '';
+        });
+        th.setAttribute('data-dir', newDir);
+        const arrow = th.querySelector('.sort-arrow');
+        if (arrow) arrow.textContent = newDir === 'asc' ? ' \u25B2' : ' \u25BC';
+
+        const idx = Array.from(th.parentElement.children).indexOf(th);
+        rows.sort(function(a, b) {
+          const aVal = a.children[idx] ? a.children[idx].textContent.trim() : '';
+          const bVal = b.children[idx] ? b.children[idx].textContent.trim() : '';
+          if (isNum) {
+            const aNum = parseInt(aVal, 10) || 0;
+            const bNum = parseInt(bVal, 10) || 0;
+            return newDir === 'asc' ? aNum - bNum : bNum - aNum;
+          }
+          return newDir === 'asc' ? aVal.localeCompare(bVal) : bVal.localeCompare(aVal);
+        });
+        rows.forEach(function(r) { tbody.appendChild(r); });
+      });
+    });
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+{
+  "name": "@hackercorplabs/norskdata-software-tools",
+  "version": "0.1.0",
+  "description": "Import, catalog, and sync tools for the Norsk Data Software Archive",
+  "type": "module",
+  "scripts": {
+    "build": "tsc && mkdir -p dist/ui && cp src/ui/index.html dist/ui/index.html",
+    "watch": "tsc --watch"
+  },
+  "bin": {
+    "ndfloppy-cli": "./dist/cli.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.1",
+    "commander": "^12.0.0",
+    "express": "^5.1.0",
+    "glob": "^11.0.0",
+    "multer": "^1.4.5-lts.1",
+    "norskdata-ndfs": "file:../externals/norskdata-ndfs/ndfs-ts",
+    "yaml": "^2.7.0",
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/multer": "^1.4.12",
+    "@types/node": "^22.0.0",
+    "puppeteer": "^25.0.4",
+    "typescript": "^5.7.0"
+  }
+}
