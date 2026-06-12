@@ -1664,6 +1664,33 @@ app.post('/api/git/commit-pr', async (req, res) => {
   }
 });
 
+// Switch back to an up-to-date default branch (after a PR merged). Requires a
+// clean working tree; deletes the branch you were on if it's been merged.
+app.post('/api/git/sync-main', async (_req, res) => {
+  try {
+    const dirty = execSync('git status --porcelain', { cwd: ROOT_DIR }).toString().trim();
+    if (dirty) { res.status(400).json({ error: 'You have uncommitted changes. Commit them (and PR) or revert first.' }); return; }
+    const from = currentBranch();
+    const log: string[] = [];
+    const run = (cmd: string) => { const out = execSync(cmd, { cwd: ROOT_DIR }).toString(); log.push(`$ ${cmd}\n${out}`.trim()); return out; };
+
+    run('git fetch origin --prune 2>&1');
+    run(`git checkout ${DEFAULT_BRANCH} 2>&1`);
+    run(`git pull --ff-only origin ${DEFAULT_BRANCH} 2>&1`);
+
+    // Delete the previous branch if it's fully merged (git branch -d is safe -
+    // it refuses if not merged, e.g. a squash-merge, which we just report).
+    let deletedBranch: string | null = null;
+    if (from && from !== DEFAULT_BRANCH && from !== 'master') {
+      try { run(`git branch -d ${from} 2>&1`); deletedBranch = from; }
+      catch { log.push(`(kept local branch "${from}" - not a fast-forward merge; delete it manually if the PR was squash/rebase merged)`); }
+    }
+    res.json({ success: true, deletedBranch, log: log.join('\n\n') });
+  } catch (err) {
+    res.status(500).json({ error: String(err) });
+  }
+});
+
 app.get('/api/git/status', async (_req, res) => {
   try {
     const statusOutput = execSync('git status --porcelain', { cwd: ROOT_DIR }).toString();

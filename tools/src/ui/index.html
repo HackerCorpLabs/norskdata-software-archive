@@ -4366,6 +4366,7 @@ code, pre { font-family: 'Consolas', 'Courier New', monospace; }
       } else {
         h += '<button class="nd-btn" id="actions-commit-btn"' + (gs.clean ? ' disabled' : '') + '>Commit</button>';
         h += '<button class="nd-btn nd-btn-primary" id="actions-commitpr-btn"' + (hasWork ? '' : ' disabled') + ' title="Commit pending changes, push this branch, and open a pull request">Commit &amp; PR</button>';
+        h += '<button class="nd-btn" id="actions-syncmain-btn"' + (gs.clean ? '' : ' disabled') + ' title="Switch to an up-to-date main (after the PR merged); deletes this branch if merged">Switch to main &amp; pull</button>';
       }
       h += '<button class="nd-btn nd-btn-danger" id="actions-revert-btn"' + (gs.clean ? ' disabled' : '') + '>Revert all</button>';
       h += '</div>';
@@ -4463,6 +4464,22 @@ code, pre { font-family: 'Consolas', 'Courier New', monospace; }
         }).catch(function(err) {
           logEl.textContent += 'Error: ' + String(err) + '\n';
         });
+      });
+
+      // Switch back to an up-to-date main after the PR merged (on a clean branch)
+      var syncMainBtn = document.getElementById('actions-syncmain-btn');
+      if (syncMainBtn) syncMainBtn.addEventListener('click', function() {
+        var logEl = document.getElementById('actions-log');
+        logEl.style.display = 'block';
+        logEl.textContent = 'Switching to main and pulling...\n';
+        fetch('/api/git/sync-main', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: '{}' })
+          .then(function(r) { return r.json(); }).then(function(data) {
+            if (data.error) { logEl.textContent += 'Error: ' + data.error + '\n'; return; }
+            logEl.textContent += (data.log || '') + '\n';
+            logEl.textContent += data.deletedBranch ? ('Deleted merged branch "' + data.deletedBranch + '".\n') : '';
+            logEl.textContent += 'Now on main.\n';
+            loadGitStatus().then(function() { renderActions(el); });
+          }).catch(function(err) { logEl.textContent += 'Error: ' + String(err) + '\n'; });
       });
 
       // Step 2: commit pending changes, push the branch, and open a PR (on a branch)
