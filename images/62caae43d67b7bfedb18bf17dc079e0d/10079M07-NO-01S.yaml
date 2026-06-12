@@ -1,0 +1,98 @@
+id: nd-10079-m07-d1-62caae43
+volumeName: 10079M07-NO-1S
+md5: 62caae43d67b7bfedb18bf17dc079e0d
+product:
+  id: ND-10079
+  version: M07
+  diskNumber: 1
+  language: NO
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 74
+  files:
+    - name: WP-MAIN-NO-M07:PROG
+      type: PROG
+      pages: 49
+      bytes: 200704
+      userName: FLOPPY-USER
+      dateCreated: 2503022727
+      lastDateRead: null
+      lastDateWritten: 2503022729
+      dateCreatedStr: 1987-04-24 17:34:07
+      lastDateReadStr: null
+      lastDateWrittenStr: 1987-04-24 17:34:09
+      bpunValid: null
+    - name: NYE-FUNK-WP-NO-M:STXT
+      type: STXT
+      pages: 5
+      bytes: 9216
+      userName: FLOPPY-USER
+      dateCreated: 2381504757
+      lastDateRead: 2501825003
+      lastDateWritten: 2385032040
+      dateCreatedStr: 1985-07-25 14:03:53
+      lastDateReadStr: 1987-04-15 13:07:43
+      lastDateWrittenStr: 1985-08-20 11:13:40
+      bpunValid: null
+    - name: NYE-FUNK-WP-NO-M:BDT
+      type: BDT
+      pages: 11
+      bytes: 22528
+      userName: FLOPPY-USER
+      dateCreated: 2381504877
+      lastDateRead: 2501825011
+      lastDateWritten: 2385032064
+      dateCreatedStr: 1985-07-25 14:05:45
+      lastDateReadStr: 1987-04-15 13:07:51
+      lastDateWrittenStr: 1985-08-20 11:14:00
+      bpunValid: null
+    - name: NYE-FUNK-WP-NO-M:TEXT
+      type: TEXT
+      pages: 2
+      bytes: 2055
+      userName: FLOPPY-USER
+      dateCreated: 2381504789
+      lastDateRead: 2501825025
+      lastDateWritten: 2385032086
+      dateCreatedStr: 1985-07-25 14:04:21
+      lastDateReadStr: 1987-04-15 13:08:01
+      lastDateWrittenStr: 1985-08-20 11:14:22
+      bpunValid: null
+    - name: LANGUAGE-DEP-NO:LDEP
+      type: LDEP
+      pages: 1
+      bytes: 346
+      userName: FLOPPY-USER
+      dateCreated: 2380350158
+      lastDateRead: 2501824983
+      lastDateWritten: 2382668462
+      dateCreatedStr: 1985-07-16 20:11:14
+      lastDateReadStr: 1987-04-15 13:07:23
+      lastDateWrittenStr: 1985-08-02 10:10:46
+      bpunValid: null
+provenance:
+  contributor: fvdm
+  originalPath: 10079M07-NO/10079M07-NO-01S.img
+  dateImaged: 2026-06-12
+  importedAt: 2026-06-12T19:42:09.790Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10079-m07-d1-62caae43
+  syncStatus: pending

@@ -1,0 +1,50 @@
+id: nd-10079-m08-d2-5afb6f9d
+volumeName: 10079M08-NO-2S
+md5: 5afb6f9d658445c3ca53a43d1aa02433
+product:
+  id: ND-10079
+  version: M08
+  diskNumber: 2
+  language: NO
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: flomon
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 101
+  files:
+    - name: NOTIS-TF-NO-M08:PROG
+      type: PROG
+      pages: 99
+      bytes: 202752
+      userName: FLOPPY-USER
+      dateCreated: 2565797605
+      lastDateRead: null
+      lastDateWritten: 2565797610
+      dateCreatedStr: 1988-03-23 15:27:37
+      lastDateReadStr: null
+      lastDateWrittenStr: 1988-03-23 15:27:42
+      bpunValid: null
+provenance:
+  contributor: fvdm
+  originalPath: 10079M08-NO/10079M08-NO-02S.img
+  dateImaged: 2026-06-12
+  importedAt: 2026-06-12T19:42:10.300Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10079-m08-d2-5afb6f9d
+  syncStatus: pending

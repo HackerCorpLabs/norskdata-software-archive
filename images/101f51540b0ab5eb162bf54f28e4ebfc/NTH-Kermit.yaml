@@ -1,0 +1,82 @@
+id: img-101f51540b0a
+volumeName: FLOPPY
+md5: 101f51540b0ab5eb162bf54f28e4ebfc
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: flomon
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 34
+  files:
+    - name: KERMIT:HELP
+      type: HELP
+      pages: 4
+      bytes: 6915
+      userName: FLOPPY-USER
+      dateCreated: 2536954276
+      lastDateRead: 2645342362
+      lastDateWritten: 2536954277
+      dateCreatedStr: 1987-12-27 13:38:36
+      lastDateReadStr: 1989-06-22 11:34:26
+      lastDateWrittenStr: 1987-12-27 13:38:37
+      bpunValid: null
+    - name: KERMIT:HLIB
+      type: HLIB
+      pages: 1
+      bytes: 420
+      userName: FLOPPY-USER
+      dateCreated: 2536954284
+      lastDateRead: 2645342292
+      lastDateWritten: 2536954286
+      dateCreatedStr: 1987-12-27 13:38:44
+      lastDateReadStr: 1989-06-22 11:33:20
+      lastDateWrittenStr: 1987-12-27 13:38:46
+      bpunValid: null
+    - name: KERMIT:DOC
+      type: DOC
+      pages: 1
+      bytes: 1964
+      userName: FLOPPY-USER
+      dateCreated: 2376163879
+      lastDateRead: 2645342130
+      lastDateWritten: 2376163880
+      dateCreatedStr: 1985-06-16 22:08:39
+      lastDateReadStr: 1989-06-22 11:30:50
+      lastDateWrittenStr: 1985-06-16 22:08:40
+      bpunValid: null
+    - name: KERMIT:PROG
+      type: PROG
+      pages: 23
+      bytes: 45568
+      userName: FLOPPY-USER
+      dateCreated: 2536954252
+      lastDateRead: 2467497120
+      lastDateWritten: 2536954254
+      dateCreatedStr: 1987-12-27 13:38:12
+      lastDateReadStr: 1986-12-09 16:18:32
+      lastDateWrittenStr: 1987-12-27 13:38:14
+      bpunValid: null
+provenance:
+  contributor: fvdm
+  originalPath: NTH-Kermit/NTH-Kermit.img
+  dateImaged: 2026-06-12
+  importedAt: 2026-06-12T19:42:14.040Z
+photos:
+  disk: []
+  set:
+    - DSC_0776.JPG
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-101f51540b0a
+  syncStatus: pending

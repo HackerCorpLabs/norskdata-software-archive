@@ -1,0 +1,74 @@
+id: nd-10079-l00-d2-bce8af07
+volumeName: 10079L00-NO-2
+md5: bce8af07920054b35b5a9bdb86b67c91
+product:
+  id: ND-10079
+  version: L00
+  diskNumber: 2
+  language: NO
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 69
+  files:
+    - name: DIRECTORY:TEST
+      type: TEST
+      pages: 0
+      bytes: 4294967296
+      userName: FLOPPY-USER
+      dateCreated: 2311911671
+      lastDateRead: 2332772521
+      lastDateWritten: null
+      dateCreatedStr: 1984-07-06 15:35:55
+      lastDateReadStr: 1984-12-05 20:34:41
+      lastDateWrittenStr: null
+      bpunValid: null
+    - name: NOTIS-TF-NO-L00:BPUN
+      type: BPUN
+      pages: 49
+      bytes: 87037
+      userName: FLOPPY-USER
+      dateCreated: 2311912678
+      lastDateRead: 2332772535
+      lastDateWritten: 2320423309
+      dateCreatedStr: 1984-07-06 15:51:38
+      lastDateReadStr: 1984-12-05 20:34:55
+      lastDateWrittenStr: 1984-09-07 13:38:13
+      bpunValid: true
+    - name: NOTIS-TF-NOR-L00:LIB
+      type: LIB
+      pages: 17
+      bytes: 34775
+      userName: FLOPPY-USER
+      dateCreated: 2311912782
+      lastDateRead: 2332772565
+      lastDateWritten: 2311912783
+      dateCreatedStr: 1984-07-06 15:53:14
+      lastDateReadStr: 1984-12-05 20:35:21
+      lastDateWrittenStr: 1984-07-06 15:53:15
+      bpunValid: null
+provenance:
+  contributor: fvdm
+  originalPath: 10079L00 (5.25 inch)/10079L00-NO-02S.img
+  dateImaged: 2026-06-12
+  importedAt: 2026-06-12T19:42:09.378Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10079-l00-d2-bce8af07
+  syncStatus: pending

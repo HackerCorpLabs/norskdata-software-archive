@@ -1,0 +1,146 @@
+id: nd-10079-m05-d1-d0ec36d0
+volumeName: 10079M05-XX-1D
+md5: d0ec36d09bbd84367c1b5e44bcfffb8a
+product:
+  id: ND-10079
+  version: M05
+  diskNumber: 1
+  language: XX
+image:
+  sizeBytes: 1261568
+  format: raw
+  controller: floppy
+  totalPages: 616
+  pageSize: 2048
+  bootFormat: none
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 368
+  files:
+    - name: WP-PRINTERS-L02:SYMB
+      type: SYMB
+      pages: 3
+      bytes: 5217
+      userName: FLOPPY-USER
+      dateCreated: 2382628917
+      lastDateRead: 2428044057
+      lastDateWritten: 2402072789
+      dateCreatedStr: 1985-08-02 00:32:53
+      lastDateReadStr: 1986-02-28 16:12:25
+      lastDateWrittenStr: 1985-12-22 11:35:21
+      bpunValid: null
+    - name: DDBTABLES-E02:VTM
+      type: VTM
+      pages: 7
+      bytes: 13628
+      userName: FLOPPY-USER
+      dateCreated: 2382628963
+      lastDateRead: 2428044072
+      lastDateWritten: 2382628964
+      dateCreatedStr: 1985-08-02 00:33:35
+      lastDateReadStr: 1986-02-28 16:12:40
+      lastDateWrittenStr: 1985-08-02 00:33:36
+      bpunValid: null
+    - name: WP-EDITOR-M05:PROG
+      type: PROG
+      pages: 66
+      bytes: 135168
+      userName: FLOPPY-USER
+      dateCreated: 2422147451
+      lastDateRead: 2428044104
+      lastDateWritten: 2425048147
+      dateCreatedStr: 1986-01-15 16:37:59
+      lastDateReadStr: 1986-02-28 16:13:08
+      lastDateWrittenStr: 1986-02-05 20:49:19
+      bpunValid: null
+    - name: WP-UTIL-M05:PROG
+      type: PROG
+      pages: 53
+      bytes: 135168
+      userName: FLOPPY-USER
+      dateCreated: 2422147573
+      lastDateRead: 2428044127
+      lastDateWritten: 2425048206
+      dateCreatedStr: 1986-01-15 16:39:53
+      lastDateReadStr: 1986-02-28 16:13:31
+      lastDateWrittenStr: 1986-02-05 20:50:14
+      bpunValid: null
+    - name: WP-CMD-M05:PROG
+      type: PROG
+      pages: 67
+      bytes: 137216
+      userName: FLOPPY-USER
+      dateCreated: 2422147539
+      lastDateRead: 2428044179
+      lastDateWritten: 2425048088
+      dateCreatedStr: 1986-01-15 16:39:19
+      lastDateReadStr: 1986-02-28 16:14:19
+      lastDateWrittenStr: 1986-02-05 20:48:24
+      bpunValid: null
+    - name: WP-PRM-M05:PROG
+      type: PROG
+      pages: 71
+      bytes: 145408
+      userName: FLOPPY-USER
+      dateCreated: 2422147491
+      lastDateRead: 2428044150
+      lastDateWritten: 2425792377
+      dateCreatedStr: 1986-01-15 16:38:35
+      lastDateReadStr: 1986-02-28 16:13:54
+      lastDateWrittenStr: 1986-02-11 10:29:57
+      bpunValid: null
+    - name: TF-LIB-COMPRESS:PROG
+      type: PROG
+      pages: 13
+      bytes: 26624
+      userName: FLOPPY-USER
+      dateCreated: 2382629230
+      lastDateRead: 2428044083
+      lastDateWritten: 2382629231
+      dateCreatedStr: 1985-08-02 00:37:46
+      lastDateReadStr: 1986-02-28 16:12:51
+      lastDateWrittenStr: 1985-08-02 00:37:47
+      bpunValid: null
+    - name: INST-WP-100-M02:PROG
+      type: PROG
+      pages: 65
+      bytes: 195078
+      userName: FLOPPY-USER
+      dateCreated: 2384918109
+      lastDateRead: 2428043809
+      lastDateWritten: 2428043433
+      dateCreatedStr: 1985-08-19 15:25:29
+      lastDateReadStr: 1986-02-28 16:08:33
+      lastDateWrittenStr: 1986-02-28 16:02:41
+      bpunValid: null
+    - name: WP-SETUP-M02:XCOM
+      type: XCOM
+      pages: 13
+      bytes: 26127
+      userName: FLOPPY-USER
+      dateCreated: 2384902810
+      lastDateRead: 2428043841
+      lastDateWritten: 2428043460
+      dateCreatedStr: 1985-08-19 11:42:26
+      lastDateReadStr: 1986-02-28 16:09:01
+      lastDateWrittenStr: 1986-02-28 16:03:04
+      bpunValid: null
+provenance:
+  contributor: fvdm
+  originalPath: 10079M05 (5.25 inch)/10079M05-XX-1D.img
+  dateImaged: 2026-06-12
+  importedAt: 2026-06-12T19:42:09.663Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10079-m05-d1-d0ec36d0
+  syncStatus: pending

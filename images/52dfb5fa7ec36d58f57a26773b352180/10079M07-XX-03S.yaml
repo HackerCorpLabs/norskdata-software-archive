@@ -1,0 +1,74 @@
+id: nd-10079-m07-d3-52dfb5fa
+volumeName: 10079M07-XX-3S
+md5: 52dfb5fa7ec36d58f57a26773b352180
+product:
+  id: ND-10079
+  version: M07
+  diskNumber: 3
+  language: XX
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 138
+  files:
+    - name: WP-PRM-M07:PROG
+      type: PROG
+      pages: 34
+      bytes: 145408
+      userName: FLOPPY-USER
+      dateCreated: 2503023223
+      lastDateRead: null
+      lastDateWritten: 2503023226
+      dateCreatedStr: 1987-04-24 17:41:55
+      lastDateReadStr: null
+      lastDateWrittenStr: 1987-04-24 17:41:58
+      bpunValid: null
+    - name: WP-UTIL-M07:PROG
+      type: PROG
+      pages: 53
+      bytes: 135168
+      userName: FLOPPY-USER
+      dateCreated: 2503023260
+      lastDateRead: null
+      lastDateWritten: 2503023262
+      dateCreatedStr: 1987-04-24 17:42:28
+      lastDateReadStr: null
+      lastDateWrittenStr: 1987-04-24 17:42:30
+      bpunValid: null
+    - name: WP-HYPH-M07:PROG
+      type: PROG
+      pages: 47
+      bytes: 135168
+      userName: FLOPPY-USER
+      dateCreated: 2503023362
+      lastDateRead: null
+      lastDateWritten: 2503023364
+      dateCreatedStr: 1987-04-24 17:44:02
+      lastDateReadStr: null
+      lastDateWrittenStr: 1987-04-24 17:44:04
+      bpunValid: null
+provenance:
+  contributor: fvdm
+  originalPath: 10079M07-NO/10079M07-XX-03S.img
+  dateImaged: 2026-06-12
+  importedAt: 2026-06-12T19:42:10.131Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10079-m07-d3-52dfb5fa
+  syncStatus: pending

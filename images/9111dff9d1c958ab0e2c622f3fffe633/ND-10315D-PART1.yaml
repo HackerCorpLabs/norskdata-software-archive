@@ -1,0 +1,61 @@
+id: nd-10315-d-d1-9111dff9
+volumeName: ND-10315D-PART1
+md5: 9111dff9d1c958ab0e2c622f3fffe633
+product:
+  id: ND-10315
+  version: D
+  diskNumber: 1
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: bpun
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 124
+  files:
+    - name: ACC-S-48-203899B:PROG
+      type: PROG
+      pages: 116
+      bytes: 479232
+      userName: FLOPPY-USER
+      dateCreated: 2232471016
+      lastDateRead: null
+      lastDateWritten: 2232471021
+      dateCreatedStr: 1983-04-08 12:55:40
+      lastDateReadStr: null
+      lastDateWrittenStr: 1983-04-08 12:55:45
+      bpunValid: null
+    - name: ACCRT-203074C:BPUN
+      type: BPUN
+      pages: 5
+      bytes: 8756
+      userName: FLOPPY-USER
+      dateCreated: 2232471169
+      lastDateRead: null
+      lastDateWritten: 2232471170
+      dateCreatedStr: 1983-04-08 12:58:01
+      lastDateReadStr: null
+      lastDateWrittenStr: 1983-04-08 12:58:02
+      bpunValid: true
+provenance:
+  contributor: fvdm
+  originalPath: ND-10315D/ND-10315D-PART1.img
+  dateImaged: 2026-06-12
+  importedAt: 2026-06-12T19:42:13.685Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10315-d-d1-9111dff9
+  syncStatus: pending

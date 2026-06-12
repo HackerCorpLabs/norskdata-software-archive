@@ -1,0 +1,170 @@
+id: nd-211245-c06-d1-e430d2f4
+volumeName: 211245C06-XX-01D
+md5: e430d2f4f464e3b600eaa32ee42134f3
+product:
+  id: ND-211245
+  version: C06
+  diskNumber: 1
+  language: XX
+image:
+  sizeBytes: 1310720
+  format: raw
+  controller: floppy
+  totalPages: 640
+  pageSize: 2048
+  bootFormat: none
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 313
+  files:
+    - name: XTRA-S11-C06:BRF
+      type: BRF
+      pages: 24
+      bytes: 48892
+      userName: FLOPPY-USER
+      dateCreated: 2555934876
+      lastDateRead: 2628431280
+      lastDateWritten: 2589138605
+      dateCreatedStr: 1988-01-12 07:34:28
+      lastDateReadStr: 1989-02-21 10:54:48
+      lastDateWrittenStr: 1988-09-09 17:58:45
+      bpunValid: null
+    - name: XTRA-S12-C06:BRF
+      type: BRF
+      pages: 33
+      bytes: 66620
+      userName: FLOPPY-USER
+      dateCreated: 2555934876
+      lastDateRead: 2628431289
+      lastDateWritten: 2555935115
+      dateCreatedStr: 1988-01-12 07:34:28
+      lastDateReadStr: 1989-02-21 10:54:57
+      lastDateWrittenStr: 1988-01-12 07:38:11
+      bpunValid: null
+    - name: XTRA-S13-C06:BRF
+      type: BRF
+      pages: 34
+      bytes: 69546
+      userName: FLOPPY-USER
+      dateCreated: 2555934876
+      lastDateRead: 2628431302
+      lastDateWritten: 2555935159
+      dateCreatedStr: 1988-01-12 07:34:28
+      lastDateReadStr: 1989-02-21 10:55:06
+      lastDateWrittenStr: 1988-01-12 07:38:55
+      bpunValid: null
+    - name: INSTALL-UNIQ:PROG
+      type: PROG
+      pages: 46
+      bytes: 156710
+      userName: FLOPPY-USER
+      dateCreated: 2505481812
+      lastDateRead: 2628430722
+      lastDateWritten: 2529475373
+      dateCreatedStr: 1987-05-11 09:57:20
+      lastDateReadStr: 1989-02-21 10:46:02
+      lastDateWrittenStr: 1987-11-02 11:44:45
+      bpunValid: null
+    - name: XTRA-S14-C06:BRF
+      type: BRF
+      pages: 27
+      bytes: 53814
+      userName: FLOPPY-USER
+      dateCreated: 2555934876
+      lastDateRead: 2628431312
+      lastDateWritten: 2555935193
+      dateCreatedStr: 1988-01-12 07:34:28
+      lastDateReadStr: 1989-02-21 10:55:16
+      lastDateWrittenStr: 1988-01-12 07:39:25
+      bpunValid: null
+    - name: XTRA-32-C06:BRF
+      type: BRF
+      pages: 1
+      bytes: 350
+      userName: FLOPPY-USER
+      dateCreated: 2555934876
+      lastDateRead: 2588739076
+      lastDateWritten: 2555934886
+      dateCreatedStr: 1988-01-12 07:34:28
+      lastDateReadStr: 1988-09-06 16:24:04
+      lastDateWrittenStr: 1988-01-12 07:34:38
+      bpunValid: null
+    - name: XTRA-48-C06:BRF
+      type: BRF
+      pages: 1
+      bytes: 335
+      userName: FLOPPY-USER
+      dateCreated: 2555934876
+      lastDateRead: 2628431335
+      lastDateWritten: 2555934888
+      dateCreatedStr: 1988-01-12 07:34:28
+      lastDateReadStr: 1989-02-21 10:55:39
+      lastDateWrittenStr: 1988-01-12 07:34:40
+      bpunValid: null
+    - name: XTRA-MAIN-C06:BRF
+      type: BRF
+      pages: 26
+      bytes: 51396
+      userName: FLOPPY-USER
+      dateCreated: 2555934875
+      lastDateRead: 2628431269
+      lastDateWritten: 2555934943
+      dateCreatedStr: 1988-01-12 07:34:27
+      lastDateReadStr: 1989-02-21 10:54:37
+      lastDateWrittenStr: 1988-01-12 07:35:31
+      bpunValid: null
+    - name: XTRA-IN-S1-C06:PROG
+      type: PROG
+      pages: 63
+      bytes: 191084
+      userName: FLOPPY-USER
+      dateCreated: 2555935431
+      lastDateRead: 2628430739
+      lastDateWritten: 2561707157
+      dateCreatedStr: 1988-01-12 07:43:07
+      lastDateReadStr: 1989-02-21 10:46:19
+      lastDateWrittenStr: 1988-02-24 08:50:21
+      bpunValid: null
+    - name: XTRA-LIB-C06:BRF
+      type: BRF
+      pages: 44
+      bytes: 89420
+      userName: FLOPPY-USER
+      dateCreated: 2555934876
+      lastDateRead: 2628431322
+      lastDateWritten: 2555935015
+      dateCreatedStr: 1988-01-12 07:34:28
+      lastDateReadStr: 1989-02-21 10:55:26
+      lastDateWrittenStr: 1988-01-12 07:36:39
+      bpunValid: null
+    - name: XTRA-DUMMY-C06:BRF
+      type: BRF
+      pages: 2
+      bytes: 3804
+      userName: FLOPPY-USER
+      dateCreated: 2555934877
+      lastDateRead: 2628431338
+      lastDateWritten: 2555935204
+      dateCreatedStr: 1988-01-12 07:34:29
+      lastDateReadStr: 1989-02-21 10:55:42
+      lastDateWrittenStr: 1988-01-12 07:39:36
+      bpunValid: null
+provenance:
+  contributor: fvdm
+  originalPath: Unique II (5.25 inch)/211245C06-XX-01D.img
+  dateImaged: 2026-06-12
+  importedAt: 2026-06-12T19:42:16.708Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-211245-c06-d1-e430d2f4
+  syncStatus: pending

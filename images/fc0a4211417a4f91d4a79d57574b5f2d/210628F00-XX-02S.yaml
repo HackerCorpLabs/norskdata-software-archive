@@ -1,0 +1,74 @@
+id: nd-210628-f00-d2-fc0a4211
+volumeName: 210628F00-XX-02S
+md5: fc0a4211417a4f91d4a79d57574b5f2d
+product:
+  id: ND-210628
+  version: F00
+  diskNumber: 2
+  language: XX
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: flomon
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 76
+  files:
+    - name: FLOPP-TO-WIN-E00:BPUN
+      type: BPUN
+      pages: 26
+      bytes: 51796
+      userName: FLOPPY-USER
+      dateCreated: 2506673144
+      lastDateRead: 2506806214
+      lastDateWritten: 2506673326
+      dateCreatedStr: 1987-05-20 12:47:56
+      lastDateReadStr: 1987-05-21 13:15:06
+      lastDateWrittenStr: 1987-05-20 12:50:46
+      bpunValid: true
+    - name: MCOPY-TANB-P03:BPUN
+      type: BPUN
+      pages: 23
+      bytes: 36678
+      userName: FLOPPY-USER
+      dateCreated: 2506660397
+      lastDateRead: 2506806243
+      lastDateWritten: 2506660397
+      dateCreatedStr: 1987-05-20 09:40:45
+      lastDateReadStr: 1987-05-21 13:15:35
+      lastDateWrittenStr: 1987-05-20 09:40:45
+      bpunValid: true
+    - name: WINCH-TO-FLO-E00:BPUN
+      type: BPUN
+      pages: 23
+      bytes: 46082
+      userName: FLOPPY-USER
+      dateCreated: 2506673412
+      lastDateRead: 2506806275
+      lastDateWritten: 2506673426
+      dateCreatedStr: 1987-05-20 12:52:04
+      lastDateReadStr: 1987-05-21 13:16:03
+      lastDateWrittenStr: 1987-05-20 12:52:18
+      bpunValid: true
+provenance:
+  contributor: fvdm
+  originalPath: 210628F00-XX/210628F00-XX-02S.img
+  dateImaged: 2026-06-12
+  importedAt: 2026-06-12T19:42:11.420Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-210628-f00-d2-fc0a4211
+  syncStatus: pending

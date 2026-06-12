@@ -1,0 +1,58 @@
+id: os-n-10-203-i-79833261
+volumeName: N-10-203-I
+md5: 7983326120224feda6f3410ab5ae60a8
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: flomon
+ndfs:
+  users:
+    - name: SYSTEM
+      pagesUsed: 148
+  files:
+    - name: MACM-1718K:BPUN
+      type: BPUN
+      pages: 20
+      bytes: 31916
+      userName: SYSTEM
+      dateCreated: 2367879130
+      lastDateRead: 2367879135
+      lastDateWritten: 2367879135
+      dateCreatedStr: 1985-04-17 15:31:26
+      lastDateReadStr: 1985-04-17 15:31:31
+      lastDateWrittenStr: 1985-04-17 15:31:31
+      bpunValid: true
+    - name: SINTRAN-I:DATA
+      type: DATA
+      pages: 127
+      bytes: 188931
+      userName: SYSTEM
+      dateCreated: 2367879133
+      lastDateRead: 2367879145
+      lastDateWritten: 2367879145
+      dateCreatedStr: 1985-04-17 15:31:29
+      lastDateReadStr: 1985-04-17 15:31:41
+      lastDateWrittenStr: 1985-04-17 15:31:41
+      bpunValid: null
+provenance:
+  contributor: fvdm
+  originalPath: Sintran III Version H 85-04-17/SINTRAN III H, N-10-203-I, 85.04.17 (backup).img
+  dateImaged: 2026-06-12
+  importedAt: 2026-06-12T19:42:14.996Z
+photos:
+  disk: []
+  set:
+    - SINTRAN III H, N-10-203.JPG
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-os-n-10-203-i-79833261
+  syncStatus: pending

@@ -1,0 +1,133 @@
+id: nd-10142-b-d4-68b2aaa1
+volumeName: ND-10142B-PART4
+md5: 68b2aaa1b8364625036752b8f4454f74
+product:
+  id: ND-10142
+  version: B
+  diskNumber: 4
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: binary
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 143
+  files:
+    - name: FREQX4-B:BRF
+      type: BRF
+      pages: 19
+      bytes: 37310
+      userName: FLOPPY-USER
+      dateCreated: 2243622174
+      lastDateRead: null
+      lastDateWritten: 2254116688
+      dateCreatedStr: 1983-06-29 15:20:30
+      lastDateReadStr: null
+      lastDateWrittenStr: 1983-09-13 17:29:16
+      bpunValid: null
+    - name: MEAN-B:BRF
+      type: BRF
+      pages: 29
+      bytes: 57940
+      userName: FLOPPY-USER
+      dateCreated: 2243622315
+      lastDateRead: null
+      lastDateWritten: 2243622316
+      dateCreatedStr: 1983-06-29 15:22:43
+      lastDateReadStr: null
+      lastDateWrittenStr: 1983-06-29 15:22:44
+      bpunValid: null
+    - name: XFER-B:BRF
+      type: BRF
+      pages: 9
+      bytes: 17129
+      userName: FLOPPY-USER
+      dateCreated: 2243622495
+      lastDateRead: null
+      lastDateWritten: 2243622496
+      dateCreatedStr: 1983-06-29 15:25:31
+      lastDateReadStr: null
+      lastDateWrittenStr: 1983-06-29 15:25:32
+      bpunValid: null
+    - name: MIX-B:BRF
+      type: BRF
+      pages: 12
+      bytes: 24179
+      userName: FLOPPY-USER
+      dateCreated: 2243622544
+      lastDateRead: null
+      lastDateWritten: 2243622545
+      dateCreatedStr: 1983-06-29 15:26:16
+      lastDateReadStr: null
+      lastDateWrittenStr: 1983-06-29 15:26:17
+      bpunValid: null
+    - name: STAT-B:BRF
+      type: BRF
+      pages: 12
+      bytes: 22713
+      userName: FLOPPY-USER
+      dateCreated: 2243622606
+      lastDateRead: null
+      lastDateWritten: 2243622607
+      dateCreatedStr: 1983-06-29 15:27:14
+      lastDateReadStr: null
+      lastDateWrittenStr: 1983-06-29 15:27:15
+      bpunValid: null
+    - name: MACREL-B:BRF
+      type: BRF
+      pages: 3
+      bytes: 5334
+      userName: FLOPPY-USER
+      dateCreated: 2243622667
+      lastDateRead: null
+      lastDateWritten: 2243622668
+      dateCreatedStr: 1983-06-29 15:28:11
+      lastDateReadStr: null
+      lastDateWrittenStr: 1983-06-29 15:28:12
+      bpunValid: null
+    - name: INSTALL-B:DP1
+      type: DP1
+      pages: 11
+      bytes: 22528
+      userName: FLOPPY-USER
+      dateCreated: 2243622689
+      lastDateRead: null
+      lastDateWritten: 2243622690
+      dateCreatedStr: 1983-06-29 15:28:33
+      lastDateReadStr: null
+      lastDateWrittenStr: 1983-06-29 15:28:34
+      bpunValid: null
+    - name: INSTALL-B:DP2
+      type: DP2
+      pages: 39
+      bytes: 79872
+      userName: FLOPPY-USER
+      dateCreated: 2243622722
+      lastDateRead: null
+      lastDateWritten: 2243622723
+      dateCreatedStr: 1983-06-29 15:29:02
+      lastDateReadStr: null
+      lastDateWrittenStr: 1983-06-29 15:29:03
+      bpunValid: null
+provenance:
+  contributor: fvdm
+  originalPath: ND-10142B (5.25 inch)/ND-10142B-PART4.img
+  dateImaged: 2026-06-12
+  importedAt: 2026-06-12T19:42:13.521Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10142-b-d4-68b2aaa1
+  syncStatus: pending

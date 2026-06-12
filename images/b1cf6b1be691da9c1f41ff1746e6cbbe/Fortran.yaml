@@ -1,0 +1,94 @@
+id: img-b1cf6b1be691
+volumeName: FLOPPY
+md5: b1cf6b1be691da9c1f41ff1746e6cbbe
+image:
+  sizeBytes: 1261568
+  format: raw
+  controller: floppy
+  totalPages: 616
+  pageSize: 2048
+  bootFormat: none
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 344
+  files:
+    - name: FORTRAN-100-E00:PROG
+      type: PROG
+      pages: 118
+      bytes: 608256
+      userName: FLOPPY-USER
+      dateCreated: 2372858667
+      lastDateRead: 2464992451
+      lastDateWritten: 2372858672
+      dateCreatedStr: 1985-05-23 15:12:43
+      lastDateReadStr: 1986-11-22 12:51:03
+      lastDateWrittenStr: 1985-05-23 15:12:48
+      bpunValid: null
+    - name: FORT48-1BANK-E0:BRF
+      type: BRF
+      pages: 54
+      bytes: 110384
+      userName: FLOPPY-USER
+      dateCreated: 2363270976
+      lastDateRead: 2429488516
+      lastDateWritten: 2375721711
+      dateCreatedStr: 1985-03-14 10:29:00
+      lastDateReadStr: 1986-03-07 16:54:04
+      lastDateWrittenStr: 1985-06-13 10:11:47
+      bpunValid: null
+    - name: FORT48-2BANK-E0:BRF
+      type: BRF
+      pages: 56
+      bytes: 114518
+      userName: FLOPPY-USER
+      dateCreated: 2363271049
+      lastDateRead: 2429490670
+      lastDateWritten: 2372965579
+      dateCreatedStr: 1985-03-14 10:30:09
+      lastDateReadStr: 1986-03-07 17:23:46
+      lastDateWrittenStr: 1985-05-24 09:19:11
+      bpunValid: null
+    - name: FORT32-1BANK-E0:BRF
+      type: BRF
+      pages: 54
+      bytes: 109964
+      userName: FLOPPY-USER
+      dateCreated: 2362896671
+      lastDateRead: null
+      lastDateWritten: 2372966277
+      dateCreatedStr: 1985-03-11 15:04:31
+      lastDateReadStr: null
+      lastDateWrittenStr: 1985-05-24 09:30:05
+      bpunValid: null
+    - name: FORT32-2BANK-E0:BRF
+      type: BRF
+      pages: 56
+      bytes: 114098
+      userName: FLOPPY-USER
+      dateCreated: 2362896736
+      lastDateRead: null
+      lastDateWritten: 2372966174
+      dateCreatedStr: 1985-03-11 15:05:32
+      lastDateReadStr: null
+      lastDateWrittenStr: 1985-05-24 09:28:30
+      bpunValid: null
+provenance:
+  contributor: fvdm
+  originalPath: Fortran (5.25 inch)/Fortran.img
+  dateImaged: 2026-06-12
+  importedAt: 2026-06-12T19:42:12.521Z
+photos:
+  disk:
+    - Fortran.JPG
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-b1cf6b1be691
+  syncStatus: pending

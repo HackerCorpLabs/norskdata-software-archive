@@ -1,0 +1,108 @@
+id: nd-10459-a-d1-f3c4b253
+volumeName: ND-10459A
+md5: f3c4b2532040a215bb6eb76f8ced6aac
+product:
+  id: ND-10459
+  version: A
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 25
+  files:
+    - name: DDB999-006-A-A:VTM
+      type: VTM
+      pages: 1
+      bytes: 336
+      userName: FLOPPY-USER
+      dateCreated: 2226319459
+      lastDateRead: null
+      lastDateWritten: 2226319460
+      dateCreatedStr: 1983-02-25 15:01:35
+      lastDateReadStr: null
+      lastDateWrittenStr: 1983-02-25 15:01:36
+      bpunValid: null
+    - name: DDBARRAYS006-B-A:VTM
+      type: VTM
+      pages: 4
+      bytes: 6712
+      userName: FLOPPY-USER
+      dateCreated: 2226319468
+      lastDateRead: null
+      lastDateWritten: 2226319469
+      dateCreatedStr: 1983-02-25 15:01:44
+      lastDateReadStr: null
+      lastDateWrittenStr: 1983-02-25 15:01:45
+      bpunValid: null
+    - name: VTM-1B-006-B-A:BRF
+      type: BRF
+      pages: 4
+      bytes: 6806
+      userName: FLOPPY-USER
+      dateCreated: 2226319477
+      lastDateRead: null
+      lastDateWritten: 2226319478
+      dateCreatedStr: 1983-02-25 15:01:53
+      lastDateReadStr: null
+      lastDateWrittenStr: 1983-02-25 15:01:54
+      bpunValid: null
+    - name: VTM-2B-006-B-A:BRF
+      type: BRF
+      pages: 4
+      bytes: 6808
+      userName: FLOPPY-USER
+      dateCreated: 2226319489
+      lastDateRead: null
+      lastDateWritten: 2226319490
+      dateCreatedStr: 1983-02-25 15:02:01
+      lastDateReadStr: null
+      lastDateWrittenStr: 1983-02-25 15:02:02
+      bpunValid: null
+    - name: VTM-500-006-B-A:NRF
+      type: NRF
+      pages: 5
+      bytes: 8404
+      userName: FLOPPY-USER
+      dateCreated: 2226699491
+      lastDateRead: null
+      lastDateWritten: 2226699492
+      dateCreatedStr: 1983-02-28 11:51:35
+      lastDateReadStr: null
+      lastDateWrittenStr: 1983-02-28 11:51:36
+      bpunValid: null
+    - name: DDB006-A-A:VTM
+      type: VTM
+      pages: 1
+      bytes: 644
+      userName: FLOPPY-USER
+      dateCreated: 2223409834
+      lastDateRead: 2333515213
+      lastDateWritten: 2223409838
+      dateCreatedStr: 1983-02-03 08:42:42
+      lastDateReadStr: 1984-12-11 09:55:13
+      lastDateWrittenStr: 1983-02-03 08:42:46
+      bpunValid: null
+provenance:
+  contributor: fvdm
+  originalPath: VMT Terminal Tables/ND-10459A.img
+  dateImaged: 2026-06-12
+  importedAt: 2026-06-12T19:42:17.187Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10459-a-d1-f3c4b253
+  syncStatus: pending

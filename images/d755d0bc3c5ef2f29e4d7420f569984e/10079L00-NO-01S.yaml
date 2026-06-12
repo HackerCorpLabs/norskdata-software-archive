@@ -1,0 +1,98 @@
+id: nd-10079-l00-d1-d755d0bc
+volumeName: 10079L00-NO-1
+md5: d755d0bc3c5ef2f29e4d7420f569984e
+product:
+  id: ND-10079
+  version: L00
+  diskNumber: 1
+  language: NO
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 141
+  files:
+    - name: DIRECTORY:TEST
+      type: TEST
+      pages: 0
+      bytes: 4294967296
+      userName: FLOPPY-USER
+      dateCreated: 2311911675
+      lastDateRead: 2332772381
+      lastDateWritten: null
+      dateCreatedStr: 1984-07-06 15:35:59
+      lastDateReadStr: 1984-12-05 20:32:29
+      lastDateWrittenStr: null
+      bpunValid: null
+    - name: WP-MAIN-NO-L00:BPUN
+      type: BPUN
+      pages: 17
+      bytes: 32790
+      userName: FLOPPY-USER
+      dateCreated: 2311912358
+      lastDateRead: 2332772395
+      lastDateWritten: 2320413872
+      dateCreatedStr: 1984-07-06 15:46:38
+      lastDateReadStr: 1984-12-05 20:32:43
+      lastDateWrittenStr: 1984-09-07 11:18:48
+      bpunValid: true
+    - name: NOTIS-WP-NOR-L00:HELP
+      type: HELP
+      pages: 99
+      bytes: 202752
+      userName: FLOPPY-USER
+      dateCreated: 2311912396
+      lastDateRead: 2333661857
+      lastDateWritten: 2311912397
+      dateCreatedStr: 1984-07-06 15:47:12
+      lastDateReadStr: 1984-12-12 13:42:33
+      lastDateWrittenStr: 1984-07-06 15:47:13
+      bpunValid: null
+    - name: NOTIS-WP-NOR-L00:ERR
+      type: ERR
+      pages: 19
+      bytes: 38144
+      userName: FLOPPY-USER
+      dateCreated: 2312311954
+      lastDateRead: 2332772481
+      lastDateWritten: 2312311955
+      dateCreatedStr: 1984-07-09 17:18:18
+      lastDateReadStr: 1984-12-05 20:34:01
+      lastDateWrittenStr: 1984-07-09 17:18:19
+      bpunValid: null
+    - name: NOTIS-WP-NOR-L:INIT
+      type: INIT
+      pages: 1
+      bytes: 212
+      userName: FLOPPY-USER
+      dateCreated: 2311912610
+      lastDateRead: 2332772410
+      lastDateWritten: 2311912611
+      dateCreatedStr: 1984-07-06 15:50:34
+      lastDateReadStr: 1984-12-05 20:32:58
+      lastDateWrittenStr: 1984-07-06 15:50:35
+      bpunValid: null
+provenance:
+  contributor: fvdm
+  originalPath: 10079L00 (5.25 inch)/10079L00-NO-01S.img
+  dateImaged: 2026-06-12
+  importedAt: 2026-06-12T19:42:09.352Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10079-l00-d1-d755d0bc
+  syncStatus: pending

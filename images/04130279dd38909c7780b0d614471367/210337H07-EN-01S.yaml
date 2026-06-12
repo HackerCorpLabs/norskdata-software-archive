@@ -1,0 +1,86 @@
+id: nd-210337-h07-d1-04130279
+volumeName: 210337H07-EN-01S
+md5: 04130279dd38909c7780b0d614471367
+product:
+  id: ND-210337
+  version: H07
+  diskNumber: 1
+  language: EN
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 140
+  files:
+    - name: INST-BASY-H00:PROG
+      type: PROG
+      pages: 62
+      bytes: 186658
+      userName: FLOPPY-USER
+      dateCreated: 2421901901
+      lastDateRead: 2493943240
+      lastDateWritten: 2441788869
+      dateCreatedStr: 1986-01-13 20:41:13
+      lastDateReadStr: 1987-02-19 08:55:08
+      lastDateWrittenStr: 1986-06-05 11:55:05
+      bpunValid: null
+    - name: RESERVE-SYSTEM:MODE
+      type: MODE
+      pages: 2
+      bytes: 2294
+      userName: FLOPPY-USER
+      dateCreated: 2372831336
+      lastDateRead: 2439821850
+      lastDateWritten: 2372966981
+      dateCreatedStr: 1985-05-23 08:33:40
+      lastDateReadStr: 1986-05-22 11:40:26
+      lastDateWrittenStr: 1985-05-24 09:41:05
+      bpunValid: null
+    - name: RESERVE-SYSTEM:BATC
+      type: BATC
+      pages: 1
+      bytes: 1438
+      userName: FLOPPY-USER
+      dateCreated: 2372846803
+      lastDateRead: 2439864995
+      lastDateWritten: 2372855763
+      dateCreatedStr: 1985-05-23 12:19:19
+      lastDateReadStr: 1986-05-22 22:10:35
+      lastDateWrittenStr: 1985-05-23 14:31:19
+      bpunValid: null
+    - name: UE-ERMSG-EN-B05:ERR
+      type: ERR
+      pages: 70
+      bytes: 142080
+      userName: FLOPPY-USER
+      dateCreated: 2436540063
+      lastDateRead: 2439040417
+      lastDateWritten: 2436540063
+      dateCreatedStr: 1986-04-29 10:26:31
+      lastDateReadStr: 1986-05-16 12:54:33
+      lastDateWrittenStr: 1986-04-29 10:26:31
+      bpunValid: null
+provenance:
+  contributor: fvdm
+  originalPath: 210337H07-EN/210337H07-EN-01S.img
+  dateImaged: 2026-06-12
+  importedAt: 2026-06-12T19:42:10.701Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-210337-h07-d1-04130279
+  syncStatus: pending

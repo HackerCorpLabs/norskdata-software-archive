@@ -1,0 +1,142 @@
+id: os-n-900-000-i-2e4e34e0
+volumeName: N-900-000-III
+md5: 2e4e34e09016b3027c2f50e7b8840f8e
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: flomon
+ndfs:
+  users:
+    - name: SYSTEM
+      pagesUsed: 148
+  files:
+    - name: SYMBOL-2-LIST:SYMB
+      type: SYMB
+      pages: 20
+      bytes: 21441
+      userName: SYSTEM
+      dateCreated: 2219735884
+      lastDateRead: 2457278999
+      lastDateWritten: 2219735902
+      dateCreatedStr: 1983-01-07 07:45:12
+      lastDateReadStr: 1986-09-27 17:40:23
+      lastDateWrittenStr: 1983-01-07 07:45:30
+      bpunValid: null
+    - name: SYMBOL-1-LIST:SYMB
+      type: SYMB
+      pages: 20
+      bytes: 34557
+      userName: SYSTEM
+      dateCreated: 2219735889
+      lastDateRead: 2457278989
+      lastDateWritten: 2219735897
+      dateCreatedStr: 1983-01-07 07:45:17
+      lastDateReadStr: 1986-09-27 17:40:13
+      lastDateWrittenStr: 1983-01-07 07:45:25
+      bpunValid: null
+    - name: FILSYS-SYMBOLS:SYMB
+      type: SYMB
+      pages: 15
+      bytes: 27436
+      userName: SYSTEM
+      dateCreated: 2219735890
+      lastDateRead: 2457279010
+      lastDateWritten: 2219735907
+      dateCreatedStr: 1983-01-07 07:45:18
+      lastDateReadStr: 1986-09-27 17:40:34
+      lastDateWrittenStr: 1983-01-07 07:45:35
+      bpunValid: null
+    - name: RTLO-SYMBOLS:SYMB
+      type: SYMB
+      pages: 9
+      bytes: 13307
+      userName: SYSTEM
+      dateCreated: 2219735891
+      lastDateRead: 2219735912
+      lastDateWritten: 2219735912
+      dateCreatedStr: 1983-01-07 07:45:19
+      lastDateReadStr: 1983-01-07 07:45:40
+      lastDateWrittenStr: 1983-01-07 07:45:40
+      bpunValid: null
+    - name: LIBRARY-MARKS:SYMB
+      type: SYMB
+      pages: 3
+      bytes: 1959
+      userName: SYSTEM
+      dateCreated: 2219735892
+      lastDateRead: 2457279018
+      lastDateWritten: 2219735915
+      dateCreatedStr: 1983-01-07 07:45:20
+      lastDateReadStr: 1986-09-27 17:40:42
+      lastDateWrittenStr: 1983-01-07 07:45:43
+      bpunValid: null
+    - name: NEW-SYSTEM:PROG
+      type: PROG
+      pages: 30
+      bytes: 23040
+      userName: SYSTEM
+      dateCreated: 2219735893
+      lastDateRead: 2457278977
+      lastDateWritten: 2219735917
+      dateCreatedStr: 1983-01-07 07:45:21
+      lastDateReadStr: 1986-09-27 17:40:01
+      lastDateWrittenStr: 1983-01-07 07:45:45
+      bpunValid: null
+    - name: F32-FMAC-1920C:PROG
+      type: PROG
+      pages: 15
+      bytes: 28792
+      userName: SYSTEM
+      dateCreated: 2219735894
+      lastDateRead: 2219735922
+      lastDateWritten: 2219735922
+      dateCreatedStr: 1983-01-07 07:45:22
+      lastDateReadStr: 1983-01-07 07:45:50
+      lastDateWrittenStr: 1983-01-07 07:45:50
+      bpunValid: null
+    - name: F48-FMAC-1408D:PROG
+      type: PROG
+      pages: 15
+      bytes: 28792
+      userName: SYSTEM
+      dateCreated: 2219735895
+      lastDateRead: 2457279023
+      lastDateWritten: 2219735927
+      dateCreatedStr: 1983-01-07 07:45:23
+      lastDateReadStr: 1986-09-27 17:40:47
+      lastDateWrittenStr: 1983-01-07 07:45:55
+      bpunValid: null
+    - name: DMAC-1915E:BPUN
+      type: BPUN
+      pages: 20
+      bytes: 36805
+      userName: SYSTEM
+      dateCreated: 2219735896
+      lastDateRead: 2457279031
+      lastDateWritten: 2219735936
+      dateCreatedStr: 1983-01-07 07:45:24
+      lastDateReadStr: 1986-09-27 17:40:55
+      lastDateWrittenStr: 1983-01-07 07:46:00
+      bpunValid: true
+provenance:
+  contributor: fvdm
+  originalPath: Standard Satellite-9 83.01.06 ver H/COSMOS Version Diskette 3.img
+  dateImaged: 2026-06-12
+  importedAt: 2026-06-12T19:42:16.159Z
+photos:
+  disk: []
+  set:
+    - DSC_0772.JPG
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-os-n-900-000-i-2e4e34e0
+  syncStatus: pending

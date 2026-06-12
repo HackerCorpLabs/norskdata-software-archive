@@ -1,0 +1,70 @@
+id: img-a2c9f0faa70a
+volumeName: GRAFS-3
+md5: a2c9f0faa70ac50bf91c8f8bf9eb25ed
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+ndfs:
+  users:
+    - name: GRAFS-USER
+      pagesUsed: 77
+  files:
+    - name: INIT-DATA:PROG
+      type: PROG
+      pages: 8
+      bytes: 15360
+      userName: GRAFS-USER
+      dateCreated: 2109012212
+      lastDateRead: 2124988658
+      lastDateWritten: 2109012230
+      dateCreatedStr: 1981-06-26 15:35:52
+      lastDateReadStr: 1981-10-20 12:03:50
+      lastDateWrittenStr: 1981-06-26 15:36:06
+      bpunValid: null
+    - name: CLEAR-DEVICE:PROG
+      type: PROG
+      pages: 6
+      bytes: 12288
+      userName: GRAFS-USER
+      dateCreated: 2109012253
+      lastDateRead: 2160553363
+      lastDateWritten: 2109012254
+      dateCreatedStr: 1981-06-26 15:36:29
+      lastDateReadStr: 1982-03-03 22:54:19
+      lastDateWrittenStr: 1981-06-26 15:36:30
+      bpunValid: null
+    - name: DCON:PROG
+      type: PROG
+      pages: 59
+      bytes: 119808
+      userName: GRAFS-USER
+      dateCreated: 2109012265
+      lastDateRead: 2160553381
+      lastDateWritten: 2109012266
+      dateCreatedStr: 1981-06-26 15:36:41
+      lastDateReadStr: 1982-03-03 22:54:37
+      lastDateWrittenStr: 1981-06-26 15:36:42
+      bpunValid: null
+provenance:
+  contributor: fvdm
+  originalPath: GRAFS Norsk versjon/GRAFS-3, Norsk versjon, 5-5-81.img
+  dateImaged: 2026-06-12
+  importedAt: 2026-06-12T19:42:12.746Z
+photos:
+  disk: []
+  set:
+    - DSC_0773.JPG
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-a2c9f0faa70a
+  syncStatus: pending

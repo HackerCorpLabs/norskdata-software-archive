@@ -1,0 +1,118 @@
+id: patch-patch-sintran-b4c16a60
+volumeName: PATCH-SINTRAN
+md5: b4c16a6064c87766a0ac5bb4de4becd1
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: flomon
+ndfs:
+  users:
+    - name: SYSTEM
+      pagesUsed: 102
+  files:
+    - name: FILE-TEST-H:PROG
+      type: PROG
+      pages: 9
+      bytes: 18432
+      userName: SYSTEM
+      dateCreated: 2297626976
+      lastDateRead: 2386969876
+      lastDateWritten: 2297626981
+      dateCreatedStr: 1984-03-25 16:05:32
+      lastDateReadStr: 1985-09-03 04:20:20
+      lastDateWrittenStr: 1984-03-25 16:05:37
+      bpunValid: null
+    - name: CPU-TYPE:PROG
+      type: PROG
+      pages: 2
+      bytes: 133120
+      userName: SYSTEM
+      dateCreated: 2297626989
+      lastDateRead: 2386968837
+      lastDateWritten: 2297626990
+      dateCreatedStr: 1984-03-25 16:05:45
+      lastDateReadStr: 1985-09-03 04:04:05
+      lastDateWrittenStr: 1984-03-25 16:05:46
+      bpunValid: null
+    - name: PATCH-FILE-G:MODE
+      type: MODE
+      pages: 3
+      bytes: 5080
+      userName: SYSTEM
+      dateCreated: 2297626994
+      lastDateRead: 2386968755
+      lastDateWritten: 2297626995
+      dateCreatedStr: 1984-03-25 16:05:50
+      lastDateReadStr: 1985-09-03 04:02:51
+      lastDateWrittenStr: 1984-03-25 16:05:51
+      bpunValid: null
+    - name: PATCH-FILE:PATC
+      type: PATC
+      pages: 72
+      bytes: 144608
+      userName: SYSTEM
+      dateCreated: 2297626999
+      lastDateRead: 2386968941
+      lastDateWritten: 2329080291
+      dateCreatedStr: 1984-03-25 16:05:55
+      lastDateReadStr: 1985-09-03 04:05:45
+      lastDateWrittenStr: 1984-11-09 15:07:35
+      bpunValid: null
+    - name: REFERENCE:FADM
+      type: FADM
+      pages: 2
+      bytes: 2886
+      userName: SYSTEM
+      dateCreated: 2297627088
+      lastDateRead: 2386968862
+      lastDateWritten: 2297627089
+      dateCreatedStr: 1984-03-25 16:07:16
+      lastDateReadStr: 1985-09-03 04:04:30
+      lastDateWrittenStr: 1984-03-25 16:07:17
+      bpunValid: null
+    - name: SYMBOLS:FADM
+      type: FADM
+      pages: 1
+      bytes: 17
+      userName: SYSTEM
+      dateCreated: 2297627094
+      lastDateRead: 2386968867
+      lastDateWritten: 2329080544
+      dateCreatedStr: 1984-03-25 16:07:22
+      lastDateReadStr: 1985-09-03 04:04:35
+      lastDateWrittenStr: 1984-11-09 15:11:32
+      bpunValid: null
+    - name: PATCH-FILE:OUT
+      type: OUT
+      pages: 5
+      bytes: 9689
+      userName: SYSTEM
+      dateCreated: 2329080692
+      lastDateRead: null
+      lastDateWritten: 2386968756
+      dateCreatedStr: 1984-11-09 15:13:52
+      lastDateReadStr: null
+      lastDateWrittenStr: 1985-09-03 04:02:52
+      bpunValid: null
+provenance:
+  contributor: fvdm
+  originalPath: Sintran III H Patch 223/SINTRAN III H Patchfile 223 (backup).img
+  dateImaged: 2026-06-12
+  importedAt: 2026-06-12T19:42:14.455Z
+photos:
+  disk: []
+  set:
+    - SINTRAN III H Patchfile 223.JPG
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-patch-patch-sintran-b4c16a60
+  syncStatus: pending

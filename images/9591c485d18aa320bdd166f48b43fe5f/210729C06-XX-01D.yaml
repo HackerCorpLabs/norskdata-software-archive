@@ -1,0 +1,182 @@
+id: nd-210729-c06-d1-9591c485
+volumeName: 210729C06-XX-01D
+md5: 9591c485d18aa320bdd166f48b43fe5f
+product:
+  id: ND-210729
+  version: C06
+  diskNumber: 1
+  language: XX
+image:
+  sizeBytes: 1310720
+  format: raw
+  controller: floppy
+  totalPages: 640
+  pageSize: 2048
+  bootFormat: none
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 390
+  files:
+    - name: INSTALL-UNIQ:PROG
+      type: PROG
+      pages: 46
+      bytes: 156710
+      userName: FLOPPY-USER
+      dateCreated: 2505481812
+      lastDateRead: 2598713813
+      lastDateWritten: 2529475373
+      dateCreatedStr: 1987-05-11 09:57:20
+      lastDateReadStr: 1988-11-18 19:39:21
+      lastDateWrittenStr: 1987-11-02 11:44:45
+      bpunValid: null
+    - name: UNIQ-IN-S1-C06:PROG
+      type: PROG
+      pages: 63
+      bytes: 191600
+      userName: FLOPPY-USER
+      dateCreated: 2508541573
+      lastDateRead: 2598713834
+      lastDateWritten: 2561714304
+      dateCreatedStr: 1987-06-02 20:58:05
+      lastDateReadStr: 1988-11-18 19:39:42
+      lastDateWrittenStr: 1988-02-24 10:34:00
+      bpunValid: null
+    - name: UNIQ-CONV-C06:PROG
+      type: PROG
+      pages: 105
+      bytes: 231424
+      userName: FLOPPY-USER
+      dateCreated: 2528547099
+      lastDateRead: 2598058395
+      lastDateWritten: 2555299720
+      dateCreatedStr: 1987-10-27 09:04:27
+      lastDateReadStr: 1988-11-13 19:38:27
+      lastDateWrittenStr: 1988-01-07 12:30:08
+      bpunValid: null
+    - name: UNIQ-S-RT-C06:BRF
+      type: BRF
+      pages: 38
+      bytes: 75912
+      userName: FLOPPY-USER
+      dateCreated: 2558196856
+      lastDateRead: 2598058310
+      lastDateWritten: 2560145303
+      dateCreatedStr: 1988-01-29 15:49:56
+      lastDateReadStr: 1988-11-13 19:37:06
+      lastDateWrittenStr: 1988-02-12 11:30:23
+      bpunValid: null
+    - name: UNIQ-S-MAIN-C06:BRF
+      type: BRF
+      pages: 31
+      bytes: 63280
+      userName: FLOPPY-USER
+      dateCreated: 2558196855
+      lastDateRead: 2598058289
+      lastDateWritten: 2589137988
+      dateCreatedStr: 1988-01-29 15:49:55
+      lastDateReadStr: 1988-11-13 19:36:49
+      lastDateWrittenStr: 1988-09-09 17:49:04
+      bpunValid: null
+    - name: UNIQ-S-COMP-C06:BRF
+      type: BRF
+      pages: 30
+      bytes: 60717
+      userName: FLOPPY-USER
+      dateCreated: 2558196856
+      lastDateRead: 2598058328
+      lastDateWritten: 2560145303
+      dateCreatedStr: 1988-01-29 15:49:56
+      lastDateReadStr: 1988-11-13 19:37:24
+      lastDateWrittenStr: 1988-02-12 11:30:23
+      bpunValid: null
+    - name: UNIQ-S-LIB-C06:BRF
+      type: BRF
+      pages: 56
+      bytes: 113559
+      userName: FLOPPY-USER
+      dateCreated: 2558196856
+      lastDateRead: 2598058350
+      lastDateWritten: 2560145304
+      dateCreatedStr: 1988-01-29 15:49:56
+      lastDateReadStr: 1988-11-13 19:37:46
+      lastDateWrittenStr: 1988-02-12 11:30:24
+      bpunValid: null
+    - name: UNIQ-S-SPEC-C06:BRF
+      type: BRF
+      pages: 4
+      bytes: 7833
+      userName: FLOPPY-USER
+      dateCreated: 2558196857
+      lastDateRead: 2598058343
+      lastDateWritten: 2560145304
+      dateCreatedStr: 1988-01-29 15:49:57
+      lastDateReadStr: 1988-11-13 19:37:39
+      lastDateWrittenStr: 1988-02-12 11:30:24
+      bpunValid: null
+    - name: UNIQ-S-DUMMY-C06:BRF
+      type: BRF
+      pages: 1
+      bytes: 1951
+      userName: FLOPPY-USER
+      dateCreated: 2558196857
+      lastDateRead: 2598058376
+      lastDateWritten: 2560145305
+      dateCreatedStr: 1988-01-29 15:49:57
+      lastDateReadStr: 1988-11-13 19:38:08
+      lastDateWrittenStr: 1988-02-12 11:30:25
+      bpunValid: null
+    - name: UNIQ-32-C06:BRF
+      type: BRF
+      pages: 1
+      bytes: 350
+      userName: FLOPPY-USER
+      dateCreated: 2507584031
+      lastDateRead: 2588738349
+      lastDateWritten: 2518108534
+      dateCreatedStr: 1987-05-27 11:08:31
+      lastDateReadStr: 1988-09-06 16:12:45
+      lastDateWrittenStr: 1987-08-11 20:37:54
+      bpunValid: null
+    - name: UNIQ-48-C06:BRF
+      type: BRF
+      pages: 1
+      bytes: 351
+      userName: FLOPPY-USER
+      dateCreated: 2507584031
+      lastDateRead: 2598058382
+      lastDateWritten: 2518108539
+      dateCreatedStr: 1987-05-27 11:08:31
+      lastDateReadStr: 1988-11-13 19:38:14
+      lastDateWrittenStr: 1987-08-11 20:37:59
+      bpunValid: null
+    - name: UNIQ-S-WP-N-C06:BRF
+      type: BRF
+      pages: 1
+      bytes: 358
+      userName: FLOPPY-USER
+      dateCreated: 2558196857
+      lastDateRead: 2598058388
+      lastDateWritten: 2560145305
+      dateCreatedStr: 1988-01-29 15:49:57
+      lastDateReadStr: 1988-11-13 19:38:20
+      lastDateWrittenStr: 1988-02-12 11:30:25
+      bpunValid: null
+provenance:
+  contributor: fvdm
+  originalPath: Unique II (5.25 inch)/210729C06-XX-01D.img
+  dateImaged: 2026-06-12
+  importedAt: 2026-06-12T19:42:16.583Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-210729-c06-d1-9591c485
+  syncStatus: pending

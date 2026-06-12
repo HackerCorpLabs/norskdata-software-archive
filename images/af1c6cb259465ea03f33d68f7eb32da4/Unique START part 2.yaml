@@ -1,0 +1,118 @@
+id: img-af1c6cb25946
+volumeName: UNIQUE
+md5: af1c6cb259465ea03f33d68f7eb32da4
+image:
+  sizeBytes: 1310720
+  format: raw
+  controller: floppy
+  totalPages: 640
+  pageSize: 2048
+  bootFormat: none
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 427
+  files:
+    - name: USLIB3:NRF
+      type: NRF
+      pages: 256
+      bytes: 522441
+      userName: FLOPPY-USER
+      dateCreated: 2762555419
+      lastDateRead: 2766452356
+      lastDateWritten: 2762555433
+      dateCreatedStr: 1991-02-20 20:00:27
+      lastDateReadStr: 1991-03-18 11:26:04
+      lastDateWrittenStr: 1991-02-20 20:00:41
+      bpunValid: null
+    - name: USNOTISN:NRF
+      type: NRF
+      pages: 1
+      bytes: 323
+      userName: FLOPPY-USER
+      dateCreated: 2761719505
+      lastDateRead: 2766452558
+      lastDateWritten: 2761860186
+      dateCreatedStr: 1991-02-14 07:59:17
+      lastDateReadStr: 1991-03-18 11:29:14
+      lastDateWrittenStr: 1991-02-15 10:17:26
+      bpunValid: null
+    - name: USNOTISO:NRF
+      type: NRF
+      pages: 1
+      bytes: 333
+      userName: FLOPPY-USER
+      dateCreated: 2761719506
+      lastDateRead: 2766452562
+      lastDateWritten: 2761860189
+      dateCreatedStr: 1991-02-14 07:59:18
+      lastDateReadStr: 1991-03-18 11:29:18
+      lastDateWrittenStr: 1991-02-15 10:17:29
+      bpunValid: null
+    - name: USDUMS2:NRF
+      type: NRF
+      pages: 1
+      bytes: 1473
+      userName: FLOPPY-USER
+      dateCreated: 2761853549
+      lastDateRead: 2766452565
+      lastDateWritten: 2761853551
+      dateCreatedStr: 1991-02-15 08:41:45
+      lastDateReadStr: 1991-03-18 11:29:21
+      lastDateWrittenStr: 1991-02-15 08:41:47
+      bpunValid: null
+    - name: USSPRINT:NRF
+      type: NRF
+      pages: 2
+      bytes: 2801
+      userName: FLOPPY-USER
+      dateCreated: 2761852185
+      lastDateRead: 2766452569
+      lastDateWritten: 2761860191
+      dateCreatedStr: 1991-02-15 08:20:25
+      lastDateReadStr: 1991-03-18 11:29:25
+      lastDateWrittenStr: 1991-02-15 10:17:31
+      bpunValid: null
+    - name: CAT-LIB-B06:NRF
+      type: NRF
+      pages: 108
+      bytes: 220885
+      userName: FLOPPY-USER
+      dateCreated: 2652285725
+      lastDateRead: 2766452573
+      lastDateWritten: 2761860190
+      dateCreatedStr: 1989-08-11 10:44:29
+      lastDateReadStr: 1991-03-18 11:29:29
+      lastDateWrittenStr: 1991-02-15 10:17:30
+      bpunValid: null
+    - name: NC-LIB-A06:NRF
+      type: NRF
+      pages: 50
+      bytes: 101442
+      userName: FLOPPY-USER
+      dateCreated: 2652285745
+      lastDateRead: 2766452709
+      lastDateWritten: 2761860194
+      dateCreatedStr: 1989-08-11 10:44:49
+      lastDateReadStr: 1991-03-18 11:31:37
+      lastDateWrittenStr: 1991-02-15 10:17:34
+      bpunValid: null
+provenance:
+  contributor: fvdm
+  originalPath: Unique Start (5.25 inch)/Unique START part 2.img
+  dateImaged: 2026-06-12
+  importedAt: 2026-06-12T19:42:17.058Z
+photos:
+  disk: []
+  set:
+    - Unique START.JPG
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-af1c6cb25946
+  syncStatus: pending

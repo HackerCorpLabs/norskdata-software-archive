@@ -1,0 +1,170 @@
+id: nd-10079-m05-d1-e16f390c
+volumeName: 10079M05-EN-1D
+md5: e16f390cae360a85fe2c6c4702a1a664
+product:
+  id: ND-10079
+  version: M05
+  diskNumber: 1
+  language: EN
+image:
+  sizeBytes: 1261568
+  format: raw
+  controller: floppy
+  totalPages: 616
+  pageSize: 2048
+  bootFormat: none
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 480
+  files:
+    - name: WP-MAIN-EN-M05:PROG
+      type: PROG
+      pages: 58
+      bytes: 202752
+      userName: FLOPPY-USER
+      dateCreated: 2422147318
+      lastDateRead: 2428055746
+      lastDateWritten: 2428055746
+      dateCreatedStr: 1986-01-15 16:35:54
+      lastDateReadStr: 1986-02-28 19:03:02
+      lastDateWrittenStr: 1986-02-28 19:03:02
+      bpunValid: null
+    - name: NOTIS-TF-EN-M05:PROG
+      type: PROG
+      pages: 99
+      bytes: 202752
+      userName: FLOPPY-USER
+      dateCreated: 2422543912
+      lastDateRead: 2428044326
+      lastDateWritten: 2425047752
+      dateCreatedStr: 1986-01-18 17:24:40
+      lastDateReadStr: 1986-02-28 16:16:38
+      lastDateWrittenStr: 1986-02-05 20:43:08
+      bpunValid: null
+    - name: NEW-FEAT-WP-EN-M:STXT
+      type: STXT
+      pages: 8
+      bytes: 17408
+      userName: FLOPPY-USER
+      dateCreated: 2382631054
+      lastDateRead: 2395642351
+      lastDateWritten: 2382631055
+      dateCreatedStr: 1985-08-02 01:02:14
+      lastDateReadStr: 1985-11-05 09:39:47
+      lastDateWrittenStr: 1985-08-02 01:02:15
+      bpunValid: null
+    - name: NEW-FEAT-WP-EN-M:TEXT
+      type: TEXT
+      pages: 2
+      bytes: 2061
+      userName: FLOPPY-USER
+      dateCreated: 2382631085
+      lastDateRead: 2395642379
+      lastDateWritten: 2382631086
+      dateCreatedStr: 1985-08-02 01:02:45
+      lastDateReadStr: 1985-11-05 09:40:11
+      lastDateWrittenStr: 1985-08-02 01:02:46
+      bpunValid: null
+    - name: NEW-FEAT-WP-EN-M:UDK
+      type: UDK
+      pages: 13
+      bytes: 26624
+      userName: FLOPPY-USER
+      dateCreated: 2382631093
+      lastDateRead: 2395642362
+      lastDateWritten: 2382631094
+      dateCreatedStr: 1985-08-02 01:02:53
+      lastDateReadStr: 1985-11-05 09:39:58
+      lastDateWrittenStr: 1985-08-02 01:02:54
+      bpunValid: null
+    - name: NOTIS-WP-EN-M02:HELP
+      type: HELP
+      pages: 209
+      bytes: 427008
+      userName: FLOPPY-USER
+      dateCreated: 2382631117
+      lastDateRead: 2428044374
+      lastDateWritten: 2425047580
+      dateCreatedStr: 1985-08-02 01:03:13
+      lastDateReadStr: 1986-02-28 16:17:22
+      lastDateWrittenStr: 1986-02-05 20:40:28
+      bpunValid: null
+    - name: NOTIS-WP-EN-M02:INIT
+      type: INIT
+      pages: 1
+      bytes: 698
+      userName: FLOPPY-USER
+      dateCreated: 2382631368
+      lastDateRead: 2395642524
+      lastDateWritten: 2427669010
+      dateCreatedStr: 1985-08-02 01:07:08
+      lastDateReadStr: 1985-11-05 09:42:28
+      lastDateWrittenStr: 1986-02-25 20:40:18
+      bpunValid: null
+    - name: NOTIS-WP-EN-M02:ERR
+      type: ERR
+      pages: 27
+      bytes: 55040
+      userName: FLOPPY-USER
+      dateCreated: 2382631454
+      lastDateRead: 2428044459
+      lastDateWritten: 2425047563
+      dateCreatedStr: 1985-08-02 01:08:30
+      lastDateReadStr: 1986-02-28 16:18:43
+      lastDateWrittenStr: 1986-02-05 20:40:11
+      bpunValid: null
+    - name: TAB-HY-EN-J1:HBRF
+      type: HBRF
+      pages: 16
+      bytes: 32651
+      userName: FLOPPY-USER
+      dateCreated: 2382631500
+      lastDateRead: 2428044482
+      lastDateWritten: 2382631502
+      dateCreatedStr: 1985-08-02 01:09:12
+      lastDateReadStr: 1986-02-28 16:19:02
+      lastDateWrittenStr: 1985-08-02 01:09:14
+      bpunValid: null
+    - name: NOTIS-TF-EN-M02:LIB
+      type: LIB
+      pages: 34
+      bytes: 68958
+      userName: FLOPPY-USER
+      dateCreated: 2401555177
+      lastDateRead: 2428029632
+      lastDateWritten: 2428029633
+      dateCreatedStr: 1985-12-18 13:11:41
+      lastDateReadStr: 1986-02-28 12:43:00
+      lastDateWrittenStr: 1986-02-28 12:43:01
+      bpunValid: null
+    - name: LANGUAGE-DEP-EN:LDEP
+      type: LDEP
+      pages: 1
+      bytes: 344
+      userName: FLOPPY-USER
+      dateCreated: 2382631637
+      lastDateRead: 2428044282
+      lastDateWritten: 2382631638
+      dateCreatedStr: 1985-08-02 01:11:21
+      lastDateReadStr: 1986-02-28 16:15:58
+      lastDateWrittenStr: 1985-08-02 01:11:22
+      bpunValid: null
+provenance:
+  contributor: fvdm
+  originalPath: 10079M05 (5.25 inch)/10079M05-EN-1D.img
+  dateImaged: 2026-06-12
+  importedAt: 2026-06-12T19:42:09.550Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10079-m05-d1-e16f390c
+  syncStatus: pending

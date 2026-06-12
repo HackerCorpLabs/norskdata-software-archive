@@ -1,0 +1,46 @@
+id: os-n-900-000-i-b8451475
+volumeName: N-900-000-II
+md5: b8451475736030d62432fbcdc50965c8
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: flomon
+ndfs:
+  users:
+    - name: SYSTEM
+      pagesUsed: 148
+  files:
+    - name: SINTRAN-II:DATA
+      type: DATA
+      pages: 147
+      bytes: 174302
+      userName: SYSTEM
+      dateCreated: 2219735830
+      lastDateRead: 2219735835
+      lastDateWritten: 2219735835
+      dateCreatedStr: 1983-01-07 07:44:22
+      lastDateReadStr: 1983-01-07 07:44:27
+      lastDateWrittenStr: 1983-01-07 07:44:27
+      bpunValid: null
+provenance:
+  contributor: fvdm
+  originalPath: Standard Satellite-9 83.01.06 ver H/COSMOS Version Diskette 2.img
+  dateImaged: 2026-06-12
+  importedAt: 2026-06-12T19:42:16.093Z
+photos:
+  disk: []
+  set:
+    - DSC_0772.JPG
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-os-n-900-000-i-b8451475
+  syncStatus: pending

@@ -1,0 +1,122 @@
+id: nd-210691-d04-d1-6c63dc47
+volumeName: 210691D04-NO-01D
+md5: 6c63dc47a88af1bc62b484646245e825
+product:
+  id: ND-210691
+  version: D04
+  diskNumber: 1
+  language: NO
+image:
+  sizeBytes: 1261568
+  format: raw
+  controller: floppy
+  totalPages: 616
+  pageSize: 2048
+  bootFormat: none
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 427
+  files:
+    - name: UE-RENAME-A01:PROG
+      type: PROG
+      pages: 19
+      bytes: 38912
+      userName: FLOPPY-USER
+      dateCreated: 2587809037
+      lastDateRead: null
+      lastDateWritten: 2587809041
+      dateCreatedStr: 1988-08-31 13:20:13
+      lastDateReadStr: null
+      lastDateWrittenStr: 1988-08-31 13:20:17
+      bpunValid: null
+    - name: UE-ERMSG-NO-C06:ERR
+      type: ERR
+      pages: 121
+      bytes: 247808
+      userName: FLOPPY-USER
+      dateCreated: 2587809054
+      lastDateRead: null
+      lastDateWritten: 2587809055
+      dateCreatedStr: 1988-08-31 13:20:30
+      lastDateReadStr: null
+      lastDateWrittenStr: 1988-08-31 13:20:31
+      bpunValid: null
+    - name: NOTIS-DS-NO-D04:PROG
+      type: PROG
+      pages: 116
+      bytes: 403456
+      userName: FLOPPY-USER
+      dateCreated: 2587809138
+      lastDateRead: null
+      lastDateWritten: 2587809139
+      dateCreatedStr: 1988-08-31 13:21:50
+      lastDateReadStr: null
+      lastDateWrittenStr: 1988-08-31 13:21:51
+      bpunValid: null
+    - name: NOTIS-DS-NO-D04:CONF
+      type: CONF
+      pages: 13
+      bytes: 154126
+      userName: FLOPPY-USER
+      dateCreated: 2587809250
+      lastDateRead: null
+      lastDateWritten: 2587809251
+      dateCreatedStr: 1988-08-31 13:23:34
+      lastDateReadStr: null
+      lastDateWrittenStr: 1988-08-31 13:23:35
+      bpunValid: null
+    - name: NOTIS-DS-NO-D04:NDPF
+      type: NDPF
+      pages: 32
+      bytes: 65536
+      userName: FLOPPY-USER
+      dateCreated: 2587809267
+      lastDateRead: null
+      lastDateWritten: 2587809268
+      dateCreatedStr: 1988-08-31 13:23:51
+      lastDateReadStr: null
+      lastDateWrittenStr: 1988-08-31 13:23:52
+      bpunValid: null
+    - name: DS-BACKUP-NO-D04:PROG
+      type: PROG
+      pages: 106
+      bytes: 401408
+      userName: FLOPPY-USER
+      dateCreated: 2587809308
+      lastDateRead: null
+      lastDateWritten: 2587809309
+      dateCreatedStr: 1988-08-31 13:24:28
+      lastDateReadStr: null
+      lastDateWrittenStr: 1988-08-31 13:24:29
+      bpunValid: null
+    - name: BA-PICT-NO-D04:CONF
+      type: CONF
+      pages: 12
+      bytes: 152898
+      userName: FLOPPY-USER
+      dateCreated: 2587809451
+      lastDateRead: null
+      lastDateWritten: 2587809452
+      dateCreatedStr: 1988-08-31 13:26:43
+      lastDateReadStr: null
+      lastDateWrittenStr: 1988-08-31 13:26:44
+      bpunValid: null
+provenance:
+  contributor: fvdm
+  originalPath: 210691D04-NO/210691D04-NO-01D.img
+  dateImaged: 2026-06-12
+  importedAt: 2026-06-12T19:42:12.283Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-210691-d04-d1-6c63dc47
+  syncStatus: pending

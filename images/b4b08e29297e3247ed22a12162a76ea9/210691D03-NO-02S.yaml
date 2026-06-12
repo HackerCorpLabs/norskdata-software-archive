@@ -1,0 +1,62 @@
+id: nd-210691-d03-d2-b4b08e29
+volumeName: 210691D03-NO-02S
+md5: b4b08e29297e3247ed22a12162a76ea9
+product:
+  id: ND-210691
+  version: D03
+  diskNumber: 2
+  language: NO
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 140
+  files:
+    - name: NOTIS-DS-NO-D03:NDPF
+      type: NDPF
+      pages: 32
+      bytes: 65536
+      userName: FLOPPY-USER
+      dateCreated: 2566591578
+      lastDateRead: 2566701617
+      lastDateWritten: 2566591587
+      dateCreatedStr: 1988-03-29 17:17:26
+      lastDateReadStr: 1988-03-30 12:08:49
+      lastDateWrittenStr: 1988-03-29 17:17:35
+      bpunValid: null
+    - name: DS-BACKUP-NO-D03:PROG
+      type: PROG
+      pages: 105
+      bytes: 401408
+      userName: FLOPPY-USER
+      dateCreated: 2566591620
+      lastDateRead: 2566691491
+      lastDateWritten: 2566591621
+      dateCreatedStr: 1988-03-29 17:18:04
+      lastDateReadStr: 1988-03-30 09:42:35
+      lastDateWrittenStr: 1988-03-29 17:18:05
+      bpunValid: null
+provenance:
+  contributor: fvdm
+  originalPath: 210691D03-NO/210691D03-NO-02S.img
+  dateImaged: 2026-06-12
+  importedAt: 2026-06-12T19:42:11.691Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-210691-d03-d2-b4b08e29
+  syncStatus: pending

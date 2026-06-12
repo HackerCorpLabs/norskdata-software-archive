@@ -1,0 +1,58 @@
+id: img-fd990abb1746
+volumeName: GRAFS-5
+md5: fd990abb174697dd6845b15e9a8a6a3d
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+ndfs:
+  users:
+    - name: GRAFS-USER
+      pagesUsed: 120
+  files:
+    - name: MTXT:PROG
+      type: PROG
+      pages: 59
+      bytes: 119808
+      userName: GRAFS-USER
+      dateCreated: 2109012761
+      lastDateRead: 2160554536
+      lastDateWritten: 2109012767
+      dateCreatedStr: 1981-06-26 15:44:25
+      lastDateReadStr: 1982-03-03 23:08:40
+      lastDateWrittenStr: 1981-06-26 15:44:31
+      bpunValid: null
+    - name: INDX:PROG
+      type: PROG
+      pages: 58
+      bytes: 117760
+      userName: GRAFS-USER
+      dateCreated: 2109012843
+      lastDateRead: 2160554570
+      lastDateWritten: 2109012844
+      dateCreatedStr: 1981-06-26 15:45:43
+      lastDateReadStr: 1982-03-03 23:09:10
+      lastDateWrittenStr: 1981-06-26 15:45:44
+      bpunValid: null
+provenance:
+  contributor: fvdm
+  originalPath: GRAFS Norsk versjon/GRAFS-5, Norsk versjon, 5-5-81.img
+  dateImaged: 2026-06-12
+  importedAt: 2026-06-12T19:42:12.890Z
+photos:
+  disk: []
+  set:
+    - DSC_0773.JPG
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-fd990abb1746
+  syncStatus: pending

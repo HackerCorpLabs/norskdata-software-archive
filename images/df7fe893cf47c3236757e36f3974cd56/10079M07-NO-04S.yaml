@@ -1,0 +1,98 @@
+id: nd-10079-m07-d4-df7fe893
+volumeName: 10079M07-NO-4S
+md5: df7fe893cf47c3236757e36f3974cd56
+product:
+  id: ND-10079
+  version: M07
+  diskNumber: 4
+  language: NO
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: binary
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 138
+  files:
+    - name: NOTIS-WP-NO-M06:HELP
+      type: HELP
+      pages: 52
+      bytes: 405504
+      userName: FLOPPY-USER
+      dateCreated: 2454366790
+      lastDateRead: 2501825371
+      lastDateWritten: 2454779459
+      dateCreatedStr: 1986-09-05 10:41:06
+      lastDateReadStr: 1987-04-15 13:13:27
+      lastDateWrittenStr: 1986-09-08 15:25:03
+      bpunValid: null
+    - name: NOTIS-WP-NO-M03:INIT
+      type: INIT
+      pages: 1
+      bytes: 698
+      userName: FLOPPY-USER
+      dateCreated: 2385163149
+      lastDateRead: 2501825430
+      lastDateWritten: 2444827089
+      dateCreatedStr: 1985-08-21 11:14:13
+      lastDateReadStr: 1987-04-15 13:14:22
+      lastDateWrittenStr: 1986-06-28 17:39:17
+      bpunValid: null
+    - name: NOTIS-WP-NO-M02:ERR
+      type: ERR
+      pages: 29
+      bytes: 58112
+      userName: FLOPPY-USER
+      dateCreated: 2382592165
+      lastDateRead: 2501825438
+      lastDateWritten: 2422919378
+      dateCreatedStr: 1985-08-01 23:34:37
+      lastDateReadStr: 1987-04-15 13:14:30
+      lastDateWrittenStr: 1986-01-21 13:03:18
+      bpunValid: null
+    - name: NOTIS-TF-NO-M04:LIB
+      type: LIB
+      pages: 34
+      bytes: 69144
+      userName: FLOPPY-USER
+      dateCreated: 2501823624
+      lastDateRead: 2501825413
+      lastDateWritten: 2501823625
+      dateCreatedStr: 1987-04-15 12:50:08
+      lastDateReadStr: 1987-04-15 13:14:05
+      lastDateWrittenStr: 1987-04-15 12:50:09
+      bpunValid: null
+    - name: TAB-HY-NO-J1:HBRF
+      type: HBRF
+      pages: 16
+      bytes: 32651
+      userName: FLOPPY-USER
+      dateCreated: 2382592270
+      lastDateRead: 2501825453
+      lastDateWritten: 2382592271
+      dateCreatedStr: 1985-08-01 23:36:14
+      lastDateReadStr: 1987-04-15 13:14:45
+      lastDateWrittenStr: 1985-08-01 23:36:15
+      bpunValid: null
+provenance:
+  contributor: fvdm
+  originalPath: 10079M07-NO/10079M07-NO-04S.img
+  dateImaged: 2026-06-12
+  importedAt: 2026-06-12T19:42:09.976Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10079-m07-d4-df7fe893
+  syncStatus: pending

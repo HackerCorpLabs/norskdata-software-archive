@@ -1,0 +1,202 @@
+id: img-6d8d16eac40d
+volumeName: UNIQUE
+md5: 6d8d16eac40ddb36a3210f9707bc0f4c
+image:
+  sizeBytes: 1261568
+  format: raw
+  controller: floppy
+  totalPages: 616
+  pageSize: 2048
+  bootFormat: none
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 270
+  files:
+    - name: UNIQ-I-100-B05:MCRO
+      type: MCRO
+      pages: 3
+      bytes: 4201
+      userName: FLOPPY-USER
+      dateCreated: 2434191375
+      lastDateRead: 2459346977
+      lastDateWritten: 2459346034
+      dateCreatedStr: 1986-04-11 13:00:15
+      lastDateReadStr: 1986-10-11 10:32:33
+      lastDateWrittenStr: 1986-10-11 10:17:50
+      bpunValid: null
+    - name: UNIQ-I-1-B05:BRF
+      type: BRF
+      pages: 56
+      bytes: 114687
+      userName: FLOPPY-USER
+      dateCreated: 2459221499
+      lastDateRead: 2459346260
+      lastDateWritten: 2459345947
+      dateCreatedStr: 1986-10-10 11:55:59
+      lastDateReadStr: 1986-10-11 10:21:20
+      lastDateWrittenStr: 1986-10-11 10:16:27
+      bpunValid: null
+    - name: UNIQ-I-2-B05:BRF
+      type: BRF
+      pages: 65
+      bytes: 131512
+      userName: FLOPPY-USER
+      dateCreated: 2459221506
+      lastDateRead: 2459346411
+      lastDateWritten: 2459345947
+      dateCreatedStr: 1986-10-10 11:56:02
+      lastDateReadStr: 1986-10-11 10:23:43
+      lastDateWrittenStr: 1986-10-11 10:16:27
+      bpunValid: null
+    - name: UNIQ-I-3-B05:BRF
+      type: BRF
+      pages: 52
+      bytes: 105466
+      userName: FLOPPY-USER
+      dateCreated: 2459221507
+      lastDateRead: 2460011093
+      lastDateWritten: 2460011093
+      dateCreatedStr: 1986-10-10 11:56:03
+      lastDateReadStr: 1986-10-16 12:41:21
+      lastDateWrittenStr: 1986-10-16 12:41:21
+      bpunValid: null
+    - name: UNIQ-I-LIB-B05:BRF
+      type: BRF
+      pages: 62
+      bytes: 126205
+      userName: FLOPPY-USER
+      dateCreated: 2456070132
+      lastDateRead: 2459346655
+      lastDateWritten: 2459346013
+      dateCreatedStr: 1986-09-18 10:31:52
+      lastDateReadStr: 1986-10-11 10:27:31
+      lastDateWrittenStr: 1986-10-11 10:17:29
+      bpunValid: null
+    - name: UNIQ-I-DUMMY-B05:BRF
+      type: BRF
+      pages: 9
+      bytes: 16684
+      userName: FLOPPY-USER
+      dateCreated: 2455823399
+      lastDateRead: 2459346305
+      lastDateWritten: 2459345965
+      dateCreatedStr: 1986-09-16 14:16:39
+      lastDateReadStr: 1986-10-11 10:22:01
+      lastDateWrittenStr: 1986-10-11 10:16:45
+      bpunValid: null
+    - name: 18KB-ISAM-BUFFER:BRF
+      type: BRF
+      pages: 1
+      bytes: 57
+      userName: FLOPPY-USER
+      dateCreated: 2440856173
+      lastDateRead: 2459075444
+      lastDateWritten: 2440856173
+      dateCreatedStr: 1986-05-30 08:09:45
+      lastDateReadStr: 1986-10-09 08:13:52
+      lastDateWrittenStr: 1986-05-30 08:09:45
+      bpunValid: null
+    - name: 22KB-ISAM-BUFFER:BRF
+      type: BRF
+      pages: 1
+      bytes: 57
+      userName: FLOPPY-USER
+      dateCreated: 2440856203
+      lastDateRead: 2459075445
+      lastDateWritten: 2440856203
+      dateCreatedStr: 1986-05-30 08:10:11
+      lastDateReadStr: 1986-10-09 08:13:53
+      lastDateWrittenStr: 1986-05-30 08:10:11
+      bpunValid: null
+    - name: 12KB-ISAM-BUFFER:BRF
+      type: BRF
+      pages: 1
+      bytes: 57
+      userName: FLOPPY-USER
+      dateCreated: 2434839185
+      lastDateRead: 2459075442
+      lastDateWritten: 2434839185
+      dateCreatedStr: 1986-04-16 11:10:17
+      lastDateReadStr: 1986-10-09 08:13:50
+      lastDateWrittenStr: 1986-04-16 11:10:17
+      bpunValid: null
+    - name: 14KB-ISAM-BUFFER:BRF
+      type: BRF
+      pages: 1
+      bytes: 57
+      userName: FLOPPY-USER
+      dateCreated: 2434840069
+      lastDateRead: 2459075443
+      lastDateWritten: 2434840070
+      dateCreatedStr: 1986-04-16 11:24:05
+      lastDateReadStr: 1986-10-09 08:13:51
+      lastDateWrittenStr: 1986-04-16 11:24:06
+      bpunValid: null
+    - name: 8KB-ISAM-BUFFER:BRF
+      type: BRF
+      pages: 1
+      bytes: 57
+      userName: FLOPPY-USER
+      dateCreated: 2434845509
+      lastDateRead: 2459075441
+      lastDateWritten: 2434845510
+      dateCreatedStr: 1986-04-16 12:45:05
+      lastDateReadStr: 1986-10-09 08:13:49
+      lastDateWrittenStr: 1986-04-16 12:45:06
+      bpunValid: null
+    - name: 10KB-ISAM-BUFFER:BRF
+      type: BRF
+      pages: 1
+      bytes: 57
+      userName: FLOPPY-USER
+      dateCreated: 2434845531
+      lastDateRead: 2459075442
+      lastDateWritten: 2434845531
+      dateCreatedStr: 1986-04-16 12:45:27
+      lastDateReadStr: 1986-10-09 08:13:50
+      lastDateWrittenStr: 1986-04-16 12:45:27
+      bpunValid: null
+    - name: 20KB-ISAM-BUFFER:BRF
+      type: BRF
+      pages: 1
+      bytes: 57
+      userName: FLOPPY-USER
+      dateCreated: 2434845556
+      lastDateRead: 2459075444
+      lastDateWritten: 2434845557
+      dateCreatedStr: 1986-04-16 12:45:52
+      lastDateReadStr: 1986-10-09 08:13:52
+      lastDateWrittenStr: 1986-04-16 12:45:53
+      bpunValid: null
+    - name: 16KB-ISAM-BUFFER:BRF
+      type: BRF
+      pages: 1
+      bytes: 57
+      userName: FLOPPY-USER
+      dateCreated: 2434845625
+      lastDateRead: 2459075443
+      lastDateWritten: 2434845626
+      dateCreatedStr: 1986-04-16 12:46:57
+      lastDateReadStr: 1986-10-09 08:13:51
+      lastDateWrittenStr: 1986-04-16 12:46:58
+      bpunValid: null
+provenance:
+  contributor: fvdm
+  originalPath: Unique On Line II (5.25 inch)/Unique On Line II.img
+  dateImaged: 2026-06-12
+  importedAt: 2026-06-12T19:42:16.789Z
+photos:
+  disk:
+    - Unique On Line II.JPG
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-6d8d16eac40d
+  syncStatus: pending

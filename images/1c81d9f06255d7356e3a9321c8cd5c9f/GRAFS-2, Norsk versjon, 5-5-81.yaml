@@ -1,0 +1,418 @@
+id: img-1c81d9f06255
+volumeName: GRAFS-2
+md5: 1c81d9f06255d7356e3a9321c8cd5c9f
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 93
+  files:
+    - name: VTM-SEGMENT:BPUN
+      type: BPUN
+      pages: 29
+      bytes: 57718
+      userName: FLOPPY-USER
+      dateCreated: 2109011616
+      lastDateRead: 694769447
+      lastDateWritten: 2109011649
+      dateCreatedStr: 1981-06-26 15:26:32
+      lastDateReadStr: 1960-05-20 21:28:39
+      lastDateWrittenStr: 1981-06-26 15:27:01
+      bpunValid: true
+    - name: DDB029:VTM
+      type: VTM
+      pages: 1
+      bytes: 242
+      userName: FLOPPY-USER
+      dateCreated: 2109011692
+      lastDateRead: 694769463
+      lastDateWritten: 2109011693
+      dateCreatedStr: 1981-06-26 15:27:44
+      lastDateReadStr: 1960-05-20 21:28:55
+      lastDateWrittenStr: 1981-06-26 15:27:45
+      bpunValid: null
+    - name: DDB999:VTM
+      type: VTM
+      pages: 1
+      bytes: 912
+      userName: FLOPPY-USER
+      dateCreated: 2109011700
+      lastDateRead: 2247676920
+      lastDateWritten: 2109011700
+      dateCreatedStr: 1981-06-26 15:27:52
+      lastDateReadStr: 1983-07-28 13:15:56
+      lastDateWrittenStr: 1981-06-26 15:27:52
+      bpunValid: null
+    - name: DDB034:VTM
+      type: VTM
+      pages: 1
+      bytes: 312
+      userName: FLOPPY-USER
+      dateCreated: 2109011706
+      lastDateRead: 694769473
+      lastDateWritten: 2109011706
+      dateCreatedStr: 1981-06-26 15:27:58
+      lastDateReadStr: 1960-05-20 21:29:01
+      lastDateWrittenStr: 1981-06-26 15:27:58
+      bpunValid: null
+    - name: DDB000:VTM
+      type: VTM
+      pages: 1
+      bytes: 196
+      userName: FLOPPY-USER
+      dateCreated: 2109011717
+      lastDateRead: 694769477
+      lastDateWritten: 2109011718
+      dateCreatedStr: 1981-06-26 15:28:05
+      lastDateReadStr: 1960-05-20 21:29:05
+      lastDateWrittenStr: 1981-06-26 15:28:06
+      bpunValid: null
+    - name: DDB001:VTM
+      type: VTM
+      pages: 1
+      bytes: 194
+      userName: FLOPPY-USER
+      dateCreated: 2109011728
+      lastDateRead: 694769480
+      lastDateWritten: 2109011729
+      dateCreatedStr: 1981-06-26 15:28:16
+      lastDateReadStr: 1960-05-20 21:29:08
+      lastDateWrittenStr: 1981-06-26 15:28:17
+      bpunValid: null
+    - name: DDB002:VTM
+      type: VTM
+      pages: 1
+      bytes: 202
+      userName: FLOPPY-USER
+      dateCreated: 2109011754
+      lastDateRead: 694769483
+      lastDateWritten: 2109011754
+      dateCreatedStr: 1981-06-26 15:28:42
+      lastDateReadStr: 1960-05-20 21:29:11
+      lastDateWrittenStr: 1981-06-26 15:28:42
+      bpunValid: null
+    - name: DDB003:VTM
+      type: VTM
+      pages: 1
+      bytes: 222
+      userName: FLOPPY-USER
+      dateCreated: 2109011765
+      lastDateRead: 2163930691
+      lastDateWritten: 2109011765
+      dateCreatedStr: 1981-06-26 15:28:53
+      lastDateReadStr: 1982-03-29 15:25:03
+      lastDateWrittenStr: 1981-06-26 15:28:53
+      bpunValid: null
+    - name: DDB004:VTM
+      type: VTM
+      pages: 1
+      bytes: 196
+      userName: FLOPPY-USER
+      dateCreated: 2109011776
+      lastDateRead: 694769489
+      lastDateWritten: 2109011777
+      dateCreatedStr: 1981-06-26 15:29:00
+      lastDateReadStr: 1960-05-20 21:29:17
+      lastDateWrittenStr: 1981-06-26 15:29:01
+      bpunValid: null
+    - name: DDB005:VTM
+      type: VTM
+      pages: 1
+      bytes: 486
+      userName: FLOPPY-USER
+      dateCreated: 2109011784
+      lastDateRead: 2282301450
+      lastDateWritten: 2109011784
+      dateCreatedStr: 1981-06-26 15:29:08
+      lastDateReadStr: null
+      lastDateWrittenStr: 1981-06-26 15:29:08
+      bpunValid: null
+    - name: DDB006:VTM
+      type: VTM
+      pages: 1
+      bytes: 334
+      userName: FLOPPY-USER
+      dateCreated: 2109011793
+      lastDateRead: 2282301835
+      lastDateWritten: 2109011793
+      dateCreatedStr: 1981-06-26 15:29:17
+      lastDateReadStr: null
+      lastDateWrittenStr: 1981-06-26 15:29:17
+      bpunValid: null
+    - name: DDB007:VTM
+      type: VTM
+      pages: 1
+      bytes: 196
+      userName: FLOPPY-USER
+      dateCreated: 2109011802
+      lastDateRead: 694769499
+      lastDateWritten: 2109011802
+      dateCreatedStr: 1981-06-26 15:29:26
+      lastDateReadStr: 1960-05-20 21:29:27
+      lastDateWrittenStr: 1981-06-26 15:29:26
+      bpunValid: null
+    - name: DDB008:VTM
+      type: VTM
+      pages: 1
+      bytes: 258
+      userName: FLOPPY-USER
+      dateCreated: 2109011814
+      lastDateRead: 694769503
+      lastDateWritten: 2109011816
+      dateCreatedStr: 1981-06-26 15:29:38
+      lastDateReadStr: 1960-05-20 21:29:31
+      lastDateWrittenStr: 1981-06-26 15:29:40
+      bpunValid: null
+    - name: DDB009:VTM
+      type: VTM
+      pages: 1
+      bytes: 196
+      userName: FLOPPY-USER
+      dateCreated: 2109011824
+      lastDateRead: 694769506
+      lastDateWritten: 2109011825
+      dateCreatedStr: 1981-06-26 15:29:48
+      lastDateReadStr: 1960-05-20 21:29:34
+      lastDateWrittenStr: 1981-06-26 15:29:49
+      bpunValid: null
+    - name: DDB010:VTM
+      type: VTM
+      pages: 1
+      bytes: 266
+      userName: FLOPPY-USER
+      dateCreated: 2109011844
+      lastDateRead: 694769510
+      lastDateWritten: 2109011844
+      dateCreatedStr: 1981-06-26 15:30:04
+      lastDateReadStr: 1960-05-20 21:29:38
+      lastDateWrittenStr: 1981-06-26 15:30:04
+      bpunValid: null
+    - name: DDB011:VTM
+      type: VTM
+      pages: 1
+      bytes: 202
+      userName: FLOPPY-USER
+      dateCreated: 2109011864
+      lastDateRead: 694769513
+      lastDateWritten: 2109011867
+      dateCreatedStr: 1981-06-26 15:30:24
+      lastDateReadStr: 1960-05-20 21:29:41
+      lastDateWrittenStr: 1981-06-26 15:30:27
+      bpunValid: null
+    - name: DDB012:VTM
+      type: VTM
+      pages: 1
+      bytes: 196
+      userName: FLOPPY-USER
+      dateCreated: 2109011885
+      lastDateRead: 694769517
+      lastDateWritten: 2109011885
+      dateCreatedStr: 1981-06-26 15:30:45
+      lastDateReadStr: 1960-05-20 21:29:45
+      lastDateWrittenStr: 1981-06-26 15:30:45
+      bpunValid: null
+    - name: DDB103:VTM
+      type: VTM
+      pages: 1
+      bytes: 254
+      userName: FLOPPY-USER
+      dateCreated: 2109011917
+      lastDateRead: 694769520
+      lastDateWritten: 2109011918
+      dateCreatedStr: 1981-06-26 15:31:13
+      lastDateReadStr: 1960-05-20 21:29:48
+      lastDateWrittenStr: 1981-06-26 15:31:14
+      bpunValid: null
+    - name: DDB106:VTM
+      type: VTM
+      pages: 1
+      bytes: 334
+      userName: FLOPPY-USER
+      dateCreated: 2109011929
+      lastDateRead: 694769523
+      lastDateWritten: 2109011930
+      dateCreatedStr: 1981-06-26 15:31:25
+      lastDateReadStr: 1960-05-20 21:29:51
+      lastDateWrittenStr: 1981-06-26 15:31:26
+      bpunValid: null
+    - name: DDB035:VTM
+      type: VTM
+      pages: 1
+      bytes: 202
+      userName: FLOPPY-USER
+      dateCreated: 2109011959
+      lastDateRead: 2160368577
+      lastDateWritten: 2109011960
+      dateCreatedStr: 1981-06-26 15:31:55
+      lastDateReadStr: 1982-03-02 09:47:01
+      lastDateWrittenStr: 1981-06-26 15:31:56
+      bpunValid: null
+    - name: DDB037:VTM
+      type: VTM
+      pages: 1
+      bytes: 196
+      userName: FLOPPY-USER
+      dateCreated: 2109011977
+      lastDateRead: 694769530
+      lastDateWritten: 2109011978
+      dateCreatedStr: 1981-06-26 15:32:09
+      lastDateReadStr: 1960-05-20 21:29:58
+      lastDateWrittenStr: 1981-06-26 15:32:10
+      bpunValid: null
+    - name: DDB036:VTM
+      type: VTM
+      pages: 1
+      bytes: 345
+      userName: FLOPPY-USER
+      dateCreated: 2109012002
+      lastDateRead: 694769538
+      lastDateWritten: 2109012002
+      dateCreatedStr: 1981-06-26 15:32:34
+      lastDateReadStr: 1960-05-20 21:30:02
+      lastDateWrittenStr: 1981-06-26 15:32:34
+      bpunValid: null
+    - name: DDB040:VTM
+      type: VTM
+      pages: 1
+      bytes: 358
+      userName: FLOPPY-USER
+      dateCreated: 2109012016
+      lastDateRead: 694769541
+      lastDateWritten: 2109012017
+      dateCreatedStr: 1981-06-26 15:32:48
+      lastDateReadStr: 1960-05-20 21:30:05
+      lastDateWrittenStr: 1981-06-26 15:32:49
+      bpunValid: null
+    - name: DDB041:VTM
+      type: VTM
+      pages: 1
+      bytes: 318
+      userName: FLOPPY-USER
+      dateCreated: 2109012033
+      lastDateRead: 694769545
+      lastDateWritten: 2109012033
+      dateCreatedStr: 1981-06-26 15:33:01
+      lastDateReadStr: 1960-05-20 21:30:09
+      lastDateWrittenStr: 1981-06-26 15:33:01
+      bpunValid: null
+    - name: DDB043:VTM
+      type: VTM
+      pages: 1
+      bytes: 298
+      userName: FLOPPY-USER
+      dateCreated: 2109012040
+      lastDateRead: 694769549
+      lastDateWritten: 2109012040
+      dateCreatedStr: 1981-06-26 15:33:08
+      lastDateReadStr: 1960-05-20 21:30:13
+      lastDateWrittenStr: 1981-06-26 15:33:08
+      bpunValid: null
+    - name: DDB030:VTM
+      type: VTM
+      pages: 1
+      bytes: 202
+      userName: FLOPPY-USER
+      dateCreated: 2109012052
+      lastDateRead: 694769553
+      lastDateWritten: 2109012054
+      dateCreatedStr: 1981-06-26 15:33:20
+      lastDateReadStr: 1960-05-20 21:30:17
+      lastDateWrittenStr: 1981-06-26 15:33:22
+      bpunValid: null
+    - name: DDB038:VTM
+      type: VTM
+      pages: 1
+      bytes: 196
+      userName: FLOPPY-USER
+      dateCreated: 2109012060
+      lastDateRead: 694769557
+      lastDateWritten: 2109012061
+      dateCreatedStr: 1981-06-26 15:33:28
+      lastDateReadStr: 1960-05-20 21:30:21
+      lastDateWrittenStr: 1981-06-26 15:33:29
+      bpunValid: null
+    - name: DDB039:VTM
+      type: VTM
+      pages: 1
+      bytes: 274
+      userName: FLOPPY-USER
+      dateCreated: 2109012068
+      lastDateRead: 694769561
+      lastDateWritten: 2109012068
+      dateCreatedStr: 1981-06-26 15:33:36
+      lastDateReadStr: 1960-05-20 21:30:25
+      lastDateWrittenStr: 1981-06-26 15:33:36
+      bpunValid: null
+    - name: DDB143:VTM
+      type: VTM
+      pages: 1
+      bytes: 298
+      userName: FLOPPY-USER
+      dateCreated: 2109012075
+      lastDateRead: 694769564
+      lastDateWritten: 2109012075
+      dateCreatedStr: 1981-06-26 15:33:43
+      lastDateReadStr: 1960-05-20 21:30:28
+      lastDateWrittenStr: 1981-06-26 15:33:43
+      bpunValid: null
+    - name: DDB044:VTM
+      type: VTM
+      pages: 1
+      bytes: 258
+      userName: FLOPPY-USER
+      dateCreated: 2109012082
+      lastDateRead: 694769568
+      lastDateWritten: 2109012082
+      dateCreatedStr: 1981-06-26 15:33:50
+      lastDateReadStr: 1960-05-20 21:30:32
+      lastDateWrittenStr: 1981-06-26 15:33:50
+      bpunValid: null
+    - name: DDB042:VTM
+      type: VTM
+      pages: 1
+      bytes: 258
+      userName: FLOPPY-USER
+      dateCreated: 2109012091
+      lastDateRead: 694769572
+      lastDateWritten: 2109012091
+      dateCreatedStr: 1981-06-26 15:33:59
+      lastDateReadStr: 1960-05-20 21:30:36
+      lastDateWrittenStr: 1981-06-26 15:33:59
+      bpunValid: null
+    - name: DDB016:VTM
+      type: VTM
+      pages: 1
+      bytes: 222
+      userName: FLOPPY-USER
+      dateCreated: 2109012102
+      lastDateRead: 694769576
+      lastDateWritten: 2109012102
+      dateCreatedStr: 1981-06-26 15:34:06
+      lastDateReadStr: 1960-05-20 21:30:40
+      lastDateWrittenStr: 1981-06-26 15:34:06
+      bpunValid: null
+provenance:
+  contributor: fvdm
+  originalPath: GRAFS Norsk versjon/GRAFS-2, Norsk versjon, 5-5-81.img
+  dateImaged: 2026-06-12
+  importedAt: 2026-06-12T19:42:12.674Z
+photos:
+  disk: []
+  set:
+    - DSC_0773.JPG
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-1c81d9f06255
+  syncStatus: pending

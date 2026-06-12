@@ -1,0 +1,70 @@
+id: img-00fef8df45e2
+volumeName: RDIR
+md5: 00fef8df45e2e5d4a2debcfe94965ee3
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 125
+  files:
+    - name: MAIN-SEGMENT-D:BPUN
+      type: BPUN
+      pages: 64
+      bytes: 130028
+      userName: FLOPPY-USER
+      dateCreated: 2255271984
+      lastDateRead: 2262076981
+      lastDateWritten: 2255271989
+      dateCreatedStr: 1983-09-22 11:32:48
+      lastDateReadStr: 1983-11-10 08:56:53
+      lastDateWrittenStr: 1983-09-22 11:32:53
+      bpunValid: true
+    - name: DB-SEGMENT-D:BPUN
+      type: BPUN
+      pages: 56
+      bytes: 112172
+      userName: FLOPPY-USER
+      dateCreated: 2255272073
+      lastDateRead: 2262077113
+      lastDateWritten: 2255272075
+      dateCreatedStr: 1983-09-22 11:34:09
+      lastDateReadStr: 1983-11-10 08:58:57
+      lastDateWrittenStr: 1983-09-22 11:34:11
+      bpunValid: true
+    - name: PATCH-SEGMENT-D:MODE
+      type: MODE
+      pages: 1
+      bytes: 187
+      userName: FLOPPY-USER
+      dateCreated: 2255272168
+      lastDateRead: 2262077455
+      lastDateWritten: 2255272169
+      dateCreatedStr: 1983-09-22 11:35:40
+      lastDateReadStr: 1983-11-10 09:00:15
+      lastDateWrittenStr: 1983-09-22 11:35:41
+      bpunValid: null
+provenance:
+  contributor: fvdm
+  originalPath: RDIR/RDIR Nr1.img
+  dateImaged: 2026-06-12
+  importedAt: 2026-06-12T19:42:14.173Z
+photos:
+  disk: []
+  set:
+    - DSC_0772.JPG
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-00fef8df45e2
+  syncStatus: pending

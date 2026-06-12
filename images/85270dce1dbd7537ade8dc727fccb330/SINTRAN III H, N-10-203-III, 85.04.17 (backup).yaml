@@ -1,0 +1,142 @@
+id: os-n-10-203-i-85270dce
+volumeName: N-10-203-III
+md5: 85270dce1dbd7537ade8dc727fccb330
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: flomon
+ndfs:
+  users:
+    - name: SYSTEM
+      pagesUsed: 148
+  files:
+    - name: SYMBOL-2-LIST:SYMB
+      type: SYMB
+      pages: 20
+      bytes: 19411
+      userName: SYSTEM
+      dateCreated: 2367879828
+      lastDateRead: 2386968625
+      lastDateWritten: 2367879860
+      dateCreatedStr: 1985-04-17 15:42:20
+      lastDateReadStr: 1985-09-03 04:00:49
+      lastDateWrittenStr: 1985-04-17 15:42:52
+      bpunValid: null
+    - name: SYMBOL-1-LIST:SYMB
+      type: SYMB
+      pages: 20
+      bytes: 34557
+      userName: SYSTEM
+      dateCreated: 2367879830
+      lastDateRead: 2386968611
+      lastDateWritten: 2367879846
+      dateCreatedStr: 1985-04-17 15:42:22
+      lastDateReadStr: 1985-09-03 04:00:35
+      lastDateWrittenStr: 1985-04-17 15:42:38
+      bpunValid: null
+    - name: FILSYS-SYMBOLS:SYMB
+      type: SYMB
+      pages: 15
+      bytes: 27436
+      userName: SYSTEM
+      dateCreated: 2367879832
+      lastDateRead: 2386968644
+      lastDateWritten: 2367879875
+      dateCreatedStr: 1985-04-17 15:42:24
+      lastDateReadStr: 1985-09-03 04:01:04
+      lastDateWrittenStr: 1985-04-17 15:43:03
+      bpunValid: null
+    - name: RTLO-SYMBOLS:SYMB
+      type: SYMB
+      pages: 9
+      bytes: 13307
+      userName: SYSTEM
+      dateCreated: 2367879834
+      lastDateRead: 2367879884
+      lastDateWritten: 2367879884
+      dateCreatedStr: 1985-04-17 15:42:26
+      lastDateReadStr: 1985-04-17 15:43:12
+      lastDateWrittenStr: 1985-04-17 15:43:12
+      bpunValid: null
+    - name: LIBRARY-MARKS:SYMB
+      type: SYMB
+      pages: 3
+      bytes: 1336
+      userName: SYSTEM
+      dateCreated: 2367879836
+      lastDateRead: 2386968655
+      lastDateWritten: 2367879890
+      dateCreatedStr: 1985-04-17 15:42:28
+      lastDateReadStr: 1985-09-03 04:01:15
+      lastDateWrittenStr: 1985-04-17 15:43:18
+      bpunValid: null
+    - name: NEW-SYSTEM:PROG
+      type: PROG
+      pages: 30
+      bytes: 23040
+      userName: SYSTEM
+      dateCreated: 2367879838
+      lastDateRead: 2386968587
+      lastDateWritten: 2367879892
+      dateCreatedStr: 1985-04-17 15:42:30
+      lastDateReadStr: 1985-09-03 04:00:11
+      lastDateWrittenStr: 1985-04-17 15:43:20
+      bpunValid: null
+    - name: F32-FMAC-1920C:PROG
+      type: PROG
+      pages: 15
+      bytes: 28792
+      userName: SYSTEM
+      dateCreated: 2367879841
+      lastDateRead: 2367879903
+      lastDateWritten: 2367879903
+      dateCreatedStr: 1985-04-17 15:42:33
+      lastDateReadStr: 1985-04-17 15:43:31
+      lastDateWrittenStr: 1985-04-17 15:43:31
+      bpunValid: null
+    - name: F48-FMAC-1408D:PROG
+      type: PROG
+      pages: 15
+      bytes: 28792
+      userName: SYSTEM
+      dateCreated: 2367879843
+      lastDateRead: 2386968660
+      lastDateWritten: 2367879915
+      dateCreatedStr: 1985-04-17 15:42:35
+      lastDateReadStr: 1985-09-03 04:01:20
+      lastDateWrittenStr: 1985-04-17 15:43:43
+      bpunValid: null
+    - name: DMAC-1915E:BPUN
+      type: BPUN
+      pages: 20
+      bytes: 36805
+      userName: SYSTEM
+      dateCreated: 2367879845
+      lastDateRead: 2386968672
+      lastDateWritten: 2367879929
+      dateCreatedStr: 1985-04-17 15:42:37
+      lastDateReadStr: 1985-09-03 04:01:32
+      lastDateWrittenStr: 1985-04-17 15:43:57
+      bpunValid: true
+provenance:
+  contributor: fvdm
+  originalPath: Sintran III Version H 85-04-17/SINTRAN III H, N-10-203-III, 85.04.17 (backup).img
+  dateImaged: 2026-06-12
+  importedAt: 2026-06-12T19:42:15.027Z
+photos:
+  disk: []
+  set:
+    - SINTRAN III H, N-10-203.JPG
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-os-n-10-203-i-85270dce
+  syncStatus: pending

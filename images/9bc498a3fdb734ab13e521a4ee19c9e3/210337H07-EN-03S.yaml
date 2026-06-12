@@ -1,0 +1,62 @@
+id: nd-210337-h07-d3-9bc498a3
+volumeName: 210337H07-EN-03S
+md5: 9bc498a3fdb734ab13e521a4ee19c9e3
+product:
+  id: ND-210337
+  version: H07
+  diskNumber: 3
+  language: EN
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 60
+  files:
+    - name: BACKUP-SERV-H04:PROG
+      type: PROG
+      pages: 55
+      bytes: 111104
+      userName: FLOPPY-USER
+      dateCreated: 2439304686
+      lastDateRead: 2493943503
+      lastDateWritten: 2490813941
+      dateCreatedStr: 1986-05-18 13:23:46
+      lastDateReadStr: 1987-02-19 08:59:15
+      lastDateWrittenStr: 1987-01-27 12:55:53
+      bpunValid: null
+    - name: BACKUP-LOAD-H00:MODE
+      type: MODE
+      pages: 2
+      bytes: 607
+      userName: FLOPPY-USER
+      dateCreated: 2318837111
+      lastDateRead: 2439865006
+      lastDateWritten: 2439816469
+      dateCreatedStr: 1984-08-27 10:21:55
+      lastDateReadStr: 1986-05-22 22:10:46
+      lastDateWrittenStr: 1986-05-22 10:20:21
+      bpunValid: null
+provenance:
+  contributor: fvdm
+  originalPath: 210337H07-EN/210337H07-EN-03S.img
+  dateImaged: 2026-06-12
+  importedAt: 2026-06-12T19:42:10.804Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-210337-h07-d3-9bc498a3
+  syncStatus: pending

@@ -1,0 +1,70 @@
+id: os-n-900-188-i-41603789
+volumeName: N-900-188-IV
+md5: 41603789633b64bc5ed94bec961a900d
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: flomon
+ndfs:
+  users:
+    - name: SYSTEM
+      pagesUsed: 46
+  files:
+    - name: SYMBOL-2-LIST:SYMB
+      type: SYMB
+      pages: 14
+      bytes: 27097
+      userName: SYSTEM
+      dateCreated: 2467594819
+      lastDateRead: 2468523361
+      lastDateWritten: 2467594841
+      dateCreatedStr: 1986-12-10 08:09:03
+      lastDateReadStr: 1986-12-17 10:53:33
+      lastDateWrittenStr: 1986-12-10 08:09:25
+      bpunValid: null
+    - name: SYMBOL-1-LIST:SYMB
+      type: SYMB
+      pages: 26
+      bytes: 53233
+      userName: SYSTEM
+      dateCreated: 2467594820
+      lastDateRead: 2468523350
+      lastDateWritten: 2467594821
+      dateCreatedStr: 1986-12-10 08:09:04
+      lastDateReadStr: 1986-12-17 10:53:22
+      lastDateWrittenStr: 1986-12-10 08:09:05
+      bpunValid: null
+    - name: LIBRARY-MARKS:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 3782
+      userName: SYSTEM
+      dateCreated: 2467594821
+      lastDateRead: 2468523368
+      lastDateWritten: 2467594856
+      dateCreatedStr: 1986-12-10 08:09:05
+      lastDateReadStr: 1986-12-17 10:53:40
+      lastDateWrittenStr: 1986-12-10 08:09:40
+      bpunValid: null
+provenance:
+  contributor: fvdm
+  originalPath: Sintran III Version J 86-12-09/N-900-188-IV.img
+  dateImaged: 2026-06-12
+  importedAt: 2026-06-12T19:42:15.924Z
+photos:
+  disk: []
+  set:
+    - DSC_0776.JPG
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-os-n-900-188-i-41603789
+  syncStatus: pending

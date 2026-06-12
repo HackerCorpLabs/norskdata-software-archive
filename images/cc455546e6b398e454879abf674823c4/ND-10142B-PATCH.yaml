@@ -1,0 +1,58 @@
+id: img-cc455546e6b3
+volumeName: ND-10142B-PATCH1
+md5: cc455546e6b398e454879abf674823c4
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 22
+  files:
+    - name: FTNLIBR-2091F:BRF
+      type: BRF
+      pages: 18
+      bytes: 35092
+      userName: FLOPPY-USER
+      dateCreated: 2325784993
+      lastDateRead: null
+      lastDateWritten: 2325784995
+      dateCreatedStr: 1984-10-16 10:38:33
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-10-16 10:38:35
+      bpunValid: null
+    - name: INSTALL-B:MODE
+      type: MODE
+      pages: 1
+      bytes: 1797
+      userName: FLOPPY-USER
+      dateCreated: 2243624462
+      lastDateRead: 2324374325
+      lastDateWritten: 2325015410
+      dateCreatedStr: 1983-06-29 15:56:14
+      lastDateReadStr: 1984-10-05 18:12:53
+      lastDateWrittenStr: 1984-10-10 14:45:50
+      bpunValid: null
+provenance:
+  contributor: fvdm
+  originalPath: ND-10142B (5.25 inch)/ND-10142B-PATCH.img
+  dateImaged: 2026-06-12
+  importedAt: 2026-06-12T19:42:13.598Z
+photos:
+  disk: []
+  set:
+    - ND-10142B.JPG
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-cc455546e6b3
+  syncStatus: pending

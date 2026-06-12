@@ -1,0 +1,265 @@
+id: nd-10142-b-d5-91de1e9b
+volumeName: ND-10142B-PART5
+md5: 91de1e9bacb18905738257c8d57a2525
+product:
+  id: ND-10142
+  version: B
+  diskNumber: 5
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: binary
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 128
+  files:
+    - name: JOIN-B:BRF
+      type: BRF
+      pages: 2
+      bytes: 4076
+      userName: FLOPPY-USER
+      dateCreated: 2243622979
+      lastDateRead: 2294505197
+      lastDateWritten: 2243622987
+      dateCreatedStr: 1983-06-29 15:33:03
+      lastDateReadStr: 1984-03-01 21:59:45
+      lastDateWrittenStr: 1983-06-29 15:33:11
+      bpunValid: null
+    - name: NONCAN-B:BRF
+      type: BRF
+      pages: 13
+      bytes: 24836
+      userName: FLOPPY-USER
+      dateCreated: 2243623004
+      lastDateRead: 2294505201
+      lastDateWritten: 2243623005
+      dateCreatedStr: 1983-06-29 15:33:28
+      lastDateReadStr: 1984-03-01 21:59:49
+      lastDateWrittenStr: 1983-06-29 15:33:29
+      bpunValid: null
+    - name: FACT-B:BRF
+      type: BRF
+      pages: 8
+      bytes: 15262
+      userName: FLOPPY-USER
+      dateCreated: 2243623063
+      lastDateRead: 2294505208
+      lastDateWritten: 2243623065
+      dateCreatedStr: 1983-06-29 15:34:23
+      lastDateReadStr: 1984-03-01 21:59:56
+      lastDateWrittenStr: 1983-06-29 15:34:25
+      bpunValid: null
+    - name: DISCRIM-B:BRF
+      type: BRF
+      pages: 9
+      bytes: 17046
+      userName: FLOPPY-USER
+      dateCreated: 2243623104
+      lastDateRead: 2294505474
+      lastDateWritten: 2243623106
+      dateCreatedStr: 1983-06-29 15:35:00
+      lastDateReadStr: 1984-03-01 22:00:02
+      lastDateWrittenStr: 1983-06-29 15:35:02
+      bpunValid: null
+    - name: INSTALL-B:TEST
+      type: TEST
+      pages: 2
+      bytes: 2058
+      userName: FLOPPY-USER
+      dateCreated: 2243623148
+      lastDateRead: 2294505480
+      lastDateWritten: 2243623150
+      dateCreatedStr: 1983-06-29 15:35:44
+      lastDateReadStr: 1984-03-01 22:00:08
+      lastDateWrittenStr: 1983-06-29 15:35:46
+      bpunValid: null
+    - name: REPL-B:BRF
+      type: BRF
+      pages: 5
+      bytes: 8850
+      userName: FLOPPY-USER
+      dateCreated: 2243623159
+      lastDateRead: 2294505485
+      lastDateWritten: 2243623161
+      dateCreatedStr: 1983-06-29 15:35:55
+      lastDateReadStr: 1984-03-01 22:00:13
+      lastDateWrittenStr: 1983-06-29 15:35:57
+      bpunValid: null
+    - name: SREG-B:BRF
+      type: BRF
+      pages: 3
+      bytes: 5521
+      userName: FLOPPY-USER
+      dateCreated: 2243623191
+      lastDateRead: 2294505490
+      lastDateWritten: 2243623193
+      dateCreatedStr: 1983-06-29 15:36:23
+      lastDateReadStr: 1984-03-01 22:00:18
+      lastDateWrittenStr: 1983-06-29 15:36:25
+      bpunValid: null
+    - name: SREGP-B:BRF
+      type: BRF
+      pages: 4
+      bytes: 6193
+      userName: FLOPPY-USER
+      dateCreated: 2243623213
+      lastDateRead: 2294505495
+      lastDateWritten: 2243623214
+      dateCreatedStr: 1983-06-29 15:36:45
+      lastDateReadStr: 1984-03-01 22:00:23
+      lastDateWrittenStr: 1983-06-29 15:36:46
+      bpunValid: null
+    - name: SREGV-B:BRF
+      type: BRF
+      pages: 3
+      bytes: 5634
+      userName: FLOPPY-USER
+      dateCreated: 2243623240
+      lastDateRead: 2294505500
+      lastDateWritten: 2243623242
+      dateCreatedStr: 1983-06-29 15:37:08
+      lastDateReadStr: 1984-03-01 22:00:28
+      lastDateWrittenStr: 1983-06-29 15:37:10
+      bpunValid: null
+    - name: SREGX-B:BRF
+      type: BRF
+      pages: 3
+      bytes: 5335
+      userName: FLOPPY-USER
+      dateCreated: 2243623261
+      lastDateRead: 2294505505
+      lastDateWritten: 2243623263
+      dateCreatedStr: 1983-06-29 15:37:29
+      lastDateReadStr: 1984-03-01 22:00:33
+      lastDateWrittenStr: 1983-06-29 15:37:31
+      bpunValid: null
+    - name: SREG4-B:BRF
+      type: BRF
+      pages: 4
+      bytes: 7479
+      userName: FLOPPY-USER
+      dateCreated: 2243623282
+      lastDateRead: 2294505510
+      lastDateWritten: 2243623283
+      dateCreatedStr: 1983-06-29 15:37:50
+      lastDateReadStr: 1984-03-01 22:00:38
+      lastDateWrittenStr: 1983-06-29 15:37:51
+      bpunValid: null
+    - name: SREG5-B:BRF
+      type: BRF
+      pages: 9
+      bytes: 18152
+      userName: FLOPPY-USER
+      dateCreated: 2243623311
+      lastDateRead: 2294505515
+      lastDateWritten: 2243623312
+      dateCreatedStr: 1983-06-29 15:38:15
+      lastDateReadStr: 1984-03-01 22:00:43
+      lastDateWrittenStr: 1983-06-29 15:38:16
+      bpunValid: null
+    - name: SREG6-B:BRF
+      type: BRF
+      pages: 2
+      bytes: 3872
+      userName: FLOPPY-USER
+      dateCreated: 2243623362
+      lastDateRead: 2294505522
+      lastDateWritten: 2243623363
+      dateCreatedStr: 1983-06-29 15:39:02
+      lastDateReadStr: 1984-03-01 22:00:50
+      lastDateWrittenStr: 1983-06-29 15:39:03
+      bpunValid: null
+    - name: SREG78-B:BRF
+      type: BRF
+      pages: 5
+      bytes: 8672
+      userName: FLOPPY-USER
+      dateCreated: 2243623380
+      lastDateRead: 2294505527
+      lastDateWritten: 2243623381
+      dateCreatedStr: 1983-06-29 15:39:20
+      lastDateReadStr: 1984-03-01 22:00:55
+      lastDateWrittenStr: 1983-06-29 15:39:21
+      bpunValid: null
+    - name: IMPORT-B:BRF
+      type: BRF
+      pages: 11
+      bytes: 21119
+      userName: FLOPPY-USER
+      dateCreated: 2243623408
+      lastDateRead: 2294505537
+      lastDateWritten: 2243623409
+      dateCreatedStr: 1983-06-29 15:39:48
+      lastDateReadStr: 1984-03-01 22:01:01
+      lastDateWrittenStr: 1983-06-29 15:39:49
+      bpunValid: null
+    - name: CHOICE-B:BRF
+      type: BRF
+      pages: 8
+      bytes: 16152
+      userName: FLOPPY-USER
+      dateCreated: 2243623468
+      lastDateRead: 2294505544
+      lastDateWritten: 2243623470
+      dateCreatedStr: 1983-06-29 15:40:44
+      lastDateReadStr: 1984-03-01 22:01:08
+      lastDateWrittenStr: 1983-06-29 15:40:46
+      bpunValid: null
+    - name: SING-B:BRF
+      type: BRF
+      pages: 4
+      bytes: 6699
+      userName: FLOPPY-USER
+      dateCreated: 2243623515
+      lastDateRead: 2294505551
+      lastDateWritten: 2243623516
+      dateCreatedStr: 1983-06-29 15:41:27
+      lastDateReadStr: 1984-03-01 22:01:15
+      lastDateWrittenStr: 1983-06-29 15:41:28
+      bpunValid: null
+    - name: LOADDDPP-B:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 50
+      userName: FLOPPY-USER
+      dateCreated: 2243623542
+      lastDateRead: 2294505557
+      lastDateWritten: 2243623544
+      dateCreatedStr: 1983-06-29 15:41:54
+      lastDateReadStr: 1984-03-01 22:01:21
+      lastDateWrittenStr: 1983-06-29 15:41:56
+      bpunValid: null
+    - name: EXPORT-B:BRF
+      type: BRF
+      pages: 12
+      bytes: 22840
+      userName: FLOPPY-USER
+      dateCreated: 2243623556
+      lastDateRead: 2294505562
+      lastDateWritten: 2243623558
+      dateCreatedStr: 1983-06-29 15:42:04
+      lastDateReadStr: 1984-03-01 22:01:26
+      lastDateWrittenStr: 1983-06-29 15:42:06
+      bpunValid: null
+provenance:
+  contributor: fvdm
+  originalPath: ND-10142B/ND-10142B-PART5.img
+  dateImaged: 2026-06-12
+  importedAt: 2026-06-12T19:42:13.308Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10142-b-d5-91de1e9b
+  syncStatus: pending

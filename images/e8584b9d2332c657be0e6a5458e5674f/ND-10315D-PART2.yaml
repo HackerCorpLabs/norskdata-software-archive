@@ -1,0 +1,49 @@
+id: nd-10315-d-d2-e8584b9d
+volumeName: ND-10315D-PART2
+md5: e8584b9d2332c657be0e6a5458e5674f
+product:
+  id: ND-10315
+  version: D
+  diskNumber: 2
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 118
+  files:
+    - name: ACC-S-32-203900A:PROG
+      type: PROG
+      pages: 116
+      bytes: 479232
+      userName: FLOPPY-USER
+      dateCreated: 2226166411
+      lastDateRead: null
+      lastDateWritten: 2226166416
+      dateCreatedStr: 1983-02-24 09:42:11
+      lastDateReadStr: null
+      lastDateWrittenStr: 1983-02-24 09:42:16
+      bpunValid: null
+provenance:
+  contributor: fvdm
+  originalPath: ND-10315D/ND-10315D-PART2.img
+  dateImaged: 2026-06-12
+  importedAt: 2026-06-12T19:42:13.744Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10315-d-d2-e8584b9d
+  syncStatus: pending

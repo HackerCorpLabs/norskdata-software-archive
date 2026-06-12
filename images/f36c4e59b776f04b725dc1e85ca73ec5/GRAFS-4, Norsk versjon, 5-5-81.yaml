@@ -1,0 +1,58 @@
+id: img-f36c4e59b776
+volumeName: GRAFS-4
+md5: f36c4e59b776f04b725dc1e85ca73ec5
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+ndfs:
+  users:
+    - name: GRAFS-USER
+      pagesUsed: 121
+  files:
+    - name: MERO:PROG
+      type: PROG
+      pages: 59
+      bytes: 119808
+      userName: GRAFS-USER
+      dateCreated: 2109012463
+      lastDateRead: 2160554006
+      lastDateWritten: 2109012470
+      dateCreatedStr: 1981-06-26 15:39:47
+      lastDateReadStr: 1982-03-03 23:00:22
+      lastDateWrittenStr: 1981-06-26 15:39:54
+      bpunValid: null
+    - name: CONO:PROG
+      type: PROG
+      pages: 59
+      bytes: 119808
+      userName: GRAFS-USER
+      dateCreated: 2109012562
+      lastDateRead: 2160554064
+      lastDateWritten: 2109012563
+      dateCreatedStr: 1981-06-26 15:41:18
+      lastDateReadStr: 1982-03-03 23:01:16
+      lastDateWrittenStr: 1981-06-26 15:41:19
+      bpunValid: null
+provenance:
+  contributor: fvdm
+  originalPath: GRAFS Norsk versjon/GRAFS-4, Norsk versjon, 5-5-81.img
+  dateImaged: 2026-06-12
+  importedAt: 2026-06-12T19:42:12.819Z
+photos:
+  disk: []
+  set:
+    - DSC_0773.JPG
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-f36c4e59b776
+  syncStatus: pending

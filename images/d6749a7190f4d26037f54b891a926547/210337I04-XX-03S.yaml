@@ -1,0 +1,50 @@
+id: nd-210337-i04-d3-d6749a71
+volumeName: 210337I04-XX-03S
+md5: d6749a7190f4d26037f54b891a926547
+product:
+  id: ND-210337
+  version: I04
+  diskNumber: 3
+  language: XX
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 112
+  files:
+    - name: UE-ERMSG-EN-C05:ERR
+      type: ERR
+      pages: 110
+      bytes: 224512
+      userName: FLOPPY-USER
+      dateCreated: 2522157964
+      lastDateRead: null
+      lastDateWritten: 2522157974
+      dateCreatedStr: 1987-09-10 17:14:12
+      lastDateReadStr: null
+      lastDateWrittenStr: 1987-09-10 17:14:22
+      bpunValid: null
+provenance:
+  contributor: fvdm
+  originalPath: 210337I04-XX/210337I04-XX-03S.img
+  dateImaged: 2026-06-12
+  importedAt: 2026-06-12T19:42:11.025Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-210337-i04-d3-d6749a71
+  syncStatus: pending

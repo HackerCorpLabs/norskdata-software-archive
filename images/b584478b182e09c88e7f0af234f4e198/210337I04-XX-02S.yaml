@@ -1,0 +1,50 @@
+id: nd-210337-i04-d2-b584478b
+volumeName: 210337I04-XX-02S
+md5: b584478b182e09c88e7f0af234f4e198
+product:
+  id: ND-210337
+  version: I04
+  diskNumber: 2
+  language: XX
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 122
+  files:
+    - name: BACKUP-SYS-I02:PROG
+      type: PROG
+      pages: 120
+      bytes: 245248
+      userName: FLOPPY-USER
+      dateCreated: 2522157720
+      lastDateRead: 2523853711
+      lastDateWritten: 2522157730
+      dateCreatedStr: 1987-09-10 17:10:24
+      lastDateReadStr: 1987-09-23 15:14:15
+      lastDateWrittenStr: 1987-09-10 17:10:34
+      bpunValid: null
+provenance:
+  contributor: fvdm
+  originalPath: 210337I04-XX/210337I04-XX-02S.img
+  dateImaged: 2026-06-12
+  importedAt: 2026-06-12T19:42:10.955Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-210337-i04-d2-b584478b
+  syncStatus: pending
