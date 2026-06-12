@@ -4401,8 +4401,13 @@ code, pre { font-family: 'Consolas', 'Courier New', monospace; }
       // Diff output area
       h += '<div id="actions-diff-area"></div>';
 
-      // PR link (populated after Commit & PR)
-      h += '<div id="actions-pr-link" style="margin:0.75rem 0"></div>';
+      // PR link (populated after Commit & PR). Rendered from module state so it
+      // survives the async re-render that follows a successful Commit & PR.
+      h += '<div id="actions-pr-link" style="margin:0.75rem 0">';
+      if (lastPrUrl) {
+        h += '<a href="' + esc(lastPrUrl) + '" target="_blank" rel="noopener" class="nd-btn nd-btn-primary">Show pull request on GitHub &#8599;</a>';
+      }
+      h += '</div>';
 
       // Action log
       h += '<div id="actions-log" class="nd-action-log" style="display:none"></div>';
@@ -4476,6 +4481,7 @@ code, pre { font-family: 'Consolas', 'Courier New', monospace; }
         }).then(function(r) { return r.json(); }).then(function(data) {
           if (data.error) { logEl.textContent += 'Error: ' + data.error + '\n'; return; }
           logEl.textContent += 'On branch "' + data.branch + '". Now Commit, then Commit & PR.\n';
+          lastPrUrl = null;
           loadGitStatus().then(function() { renderActions(el); });
         }).catch(function(err) {
           logEl.textContent += 'Error: ' + String(err) + '\n';
@@ -4494,6 +4500,7 @@ code, pre { font-family: 'Consolas', 'Courier New', monospace; }
             logEl.textContent += (data.log || '') + '\n';
             logEl.textContent += data.deletedBranch ? ('Deleted merged branch "' + data.deletedBranch + '".\n') : '';
             logEl.textContent += 'Now on main.\n';
+            lastPrUrl = null;
             loadGitStatus().then(function() { renderActions(el); });
           }).catch(function(err) { logEl.textContent += 'Error: ' + String(err) + '\n'; });
       });
@@ -4514,17 +4521,12 @@ code, pre { font-family: 'Consolas', 'Courier New', monospace; }
         }).then(function(r) { return r.json(); }).then(function(data) {
           if (data.error) { logEl.textContent += 'Error: ' + data.error + '\n'; return; }
           logEl.textContent += (data.log || '') + '\n';
-          // Re-render (button states change), then surface the PR as a button.
-          loadGitStatus().then(function() {
-            renderActions(el);
-            var prLink = document.getElementById('actions-pr-link');
-            var match = data.prUrl ? String(data.prUrl).match(/https:\/\/github\.com\/\S+\/pull\/\d+/) : null;
-            if (prLink && match) {
-              prLink.innerHTML = '<a href="' + esc(match[0]) + '" target="_blank" rel="noopener" class="nd-btn nd-btn-primary">Show pull request on GitHub ↗</a>';
-            } else if (prLink) {
-              prLink.innerHTML = '<span class="nd-text-muted">Branch pushed &mdash; open the pull request on GitHub.</span>';
-            }
-          });
+          // Stash the PR URL so renderActions can surface it as a button -- the
+          // re-render is async, so we cannot poke the DOM right after it returns.
+          var match = data.prUrl ? String(data.prUrl).match(/https:\/\/github\.com\/\S+\/pull\/\d+/) : null;
+          lastPrUrl = match ? match[0] : null;
+          if (!lastPrUrl) logEl.textContent += 'Branch pushed -- open the pull request on GitHub.\n';
+          loadGitStatus().then(function() { renderActions(el); });
         }).catch(function(err) {
           logEl.textContent += 'Error: ' + String(err) + '\n';
         });
@@ -5653,6 +5655,9 @@ code, pre { font-family: 'Consolas', 'Courier New', monospace; }
   // ==============================================================
   var cachedStats = null;
   var cachedGitStatus = null;
+  // URL of the most recently opened pull request, surfaced as a button on the
+  // Changes page. Cleared when a new branch is started or we switch to main.
+  var lastPrUrl = null;
 
   function updateStatusBar() {
     var statusEl = document.getElementById('nd-status');

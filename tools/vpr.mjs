@@ -1,0 +1,17 @@
+import puppeteer from 'puppeteer';
+let f=0; const ck=(c,m)=>{console.log((c?'PASS':'FAIL')+' - '+m); if(!c)f++;};
+const b=await puppeteer.launch({headless:'new',args:['--no-sandbox','--disable-setuid-sandbox']});
+const p=await b.newPage(); p.on('dialog',async d=>{await d.accept('test-prbtn-1781259892');});
+await p.goto('http://127.0.0.1:3000/#/changes',{waitUntil:'networkidle0'}); await new Promise(r=>setTimeout(r,800));
+await p.click('#actions-branch-btn'); await new Promise(r=>setTimeout(r,1500));
+await p.evaluate(()=>{const t=document.getElementById('actions-pr-body'); if(t)t.value='## Custom body\n- edited before PR';});
+const resp=p.waitForResponse(r=>r.url().includes('/api/git/commit-pr'),{timeout:20000});
+await p.click('#actions-commitpr-btn'); const r=await resp; const d=await r.json();
+ck(d.success && /pull\/\d+/.test(d.prUrl||''),'PR created: '+d.prUrl);
+await new Promise(r=>setTimeout(r,2500));
+const href=await p.$eval('#actions-pr-link a',a=>a.href).catch(()=>null);
+ck(href && /pull\/\d+/.test(href),'"Show pull request on GitHub" button visible & links to PR ('+href+')');
+const txt=await p.$eval('#actions-pr-link a',a=>a.textContent).catch(()=>null);
+ck(txt && txt.indexOf('Show pull request')!==-1,'button text correct ('+JSON.stringify(txt)+')');
+console.log(f===0?'PASSED':f+' FAILED');
+await b.close(); process.exit(f?1:0);
