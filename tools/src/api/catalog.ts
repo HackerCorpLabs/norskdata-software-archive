@@ -494,6 +494,12 @@ export async function loadCatalog(rootDir: string): Promise<Catalog> {
     if (g.labelTranscription) e.storage.git.labelTranscription = g.labelTranscription;
   }
 
+  // Deterministic order. The YAML files are read in filesystem glob order, which
+  // is not stable across machines/runs -- without this, every regenerate would
+  // reshuffle catalog/floppies.json and every import PR would diff the whole
+  // file. Sort by id so the generated JSON is stable and diffs show real changes.
+  entries.sort((a, b) => a.id.localeCompare(b.id));
+
   return { entries };
 }
 
