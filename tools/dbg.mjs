@@ -1,0 +1,14 @@
+import puppeteer from 'puppeteer';
+const b=await puppeteer.launch({headless:'new',args:['--no-sandbox','--disable-setuid-sandbox']});
+const p=await b.newPage(); const errs=[]; p.on('pageerror',e=>errs.push(e.message)); p.on('dialog',async d=>{await d.accept('test-dbg-1781259690');});
+await p.goto('http://127.0.0.1:3000/#/changes',{waitUntil:'networkidle0'}); await new Promise(r=>setTimeout(r,700));
+await p.click('#actions-branch-btn'); await new Promise(r=>setTimeout(r,1500));
+const resp=p.waitForResponse(r=>r.url().includes('/api/git/commit-pr'),{timeout:20000});
+await p.click('#actions-commitpr-btn'); const r=await resp; const d=await r.json();
+console.log('response prUrl:', JSON.stringify(d.prUrl));
+await new Promise(r=>setTimeout(r,2500));
+console.log('pr-link div exists:', await p.evaluate(()=>!!document.getElementById('actions-pr-link')));
+console.log('pr-link innerHTML:', await p.evaluate(()=>{const e=document.getElementById('actions-pr-link');return e?e.innerHTML:'NO DIV';}));
+console.log('on route:', await p.evaluate(()=>location.hash));
+console.log('page errors:', errs.slice(0,3));
+await b.close();
