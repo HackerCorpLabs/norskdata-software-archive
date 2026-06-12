@@ -4382,11 +4382,27 @@ code, pre { font-family: 'Consolas', 'Courier New', monospace; }
         defaultMsg = parts.join(', ');
       }
       h += '<div class="nd-commit-input">';
-      h += '<input class="nd-input" id="actions-commit-msg" type="text" placeholder="Commit message" value="' + esc(defaultMsg) + '">';
+      h += '<input class="nd-input" id="actions-commit-msg" type="text" placeholder="Commit message / PR title" value="' + esc(defaultMsg) + '">';
       h += '</div>';
+
+      // PR description -- pre-filled default from the change summary, editable
+      // before the PR is opened.
+      var defaultBody = '';
+      if (!gs.clean) {
+        var bparts = [];
+        if (gs.summary.newImages > 0) bparts.push('- Imported ' + gs.summary.newImages + ' disk image' + (gs.summary.newImages !== 1 ? 's' : ''));
+        if (gs.summary.modifiedEntries > 0) bparts.push('- Updated ' + gs.summary.modifiedEntries + ' catalog entr' + (gs.summary.modifiedEntries !== 1 ? 'ies' : 'y'));
+        if (gs.summary.newProducts > 0) bparts.push('- Updated ' + gs.summary.newProducts + ' product' + (gs.summary.newProducts !== 1 ? 's' : ''));
+        if (gs.summary.otherFiles > 0) bparts.push('- ' + gs.summary.otherFiles + ' other file' + (gs.summary.otherFiles !== 1 ? 's' : ''));
+        if (bparts.length) defaultBody = '## Changes\n' + bparts.join('\n');
+      }
+      h += '<textarea class="nd-input" id="actions-pr-body" rows="5" placeholder="Pull request description (editable)" style="width:100%;margin-top:0.5rem;font-family:inherit;resize:vertical">' + esc(defaultBody) + '</textarea>';
 
       // Diff output area
       h += '<div id="actions-diff-area"></div>';
+
+      // PR link (populated after Commit & PR)
+      h += '<div id="actions-pr-link" style="margin:0.75rem 0"></div>';
 
       // Action log
       h += '<div id="actions-log" class="nd-action-log" style="display:none"></div>';
@@ -4487,18 +4503,28 @@ code, pre { font-family: 'Consolas', 'Courier New', monospace; }
       if (commitPrBtn) commitPrBtn.addEventListener('click', function() {
         var title = (document.getElementById('actions-commit-msg').value || '').trim();
         if (!title) { title = prompt('Pull request title:', 'Update catalog') || ''; if (!title) return; }
+        var prBody = (document.getElementById('actions-pr-body').value || '').trim();
         var logEl = document.getElementById('actions-log');
         logEl.style.display = 'block';
         logEl.textContent = 'Committing, pushing branch, opening PR...\n';
         fetch('/api/git/commit-pr', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ title: title, message: title })
+          body: JSON.stringify({ title: title, message: title, body: prBody })
         }).then(function(r) { return r.json(); }).then(function(data) {
           if (data.error) { logEl.textContent += 'Error: ' + data.error + '\n'; return; }
           logEl.textContent += (data.log || '') + '\n';
-          logEl.textContent += data.prUrl ? ('\n✓ Pull request: ' + data.prUrl + '\n') : '\nBranch pushed; open the PR on GitHub.\n';
-          loadGitStatus().then(function() { renderActions(el); });
+          // Re-render (button states change), then surface the PR as a button.
+          loadGitStatus().then(function() {
+            renderActions(el);
+            var prLink = document.getElementById('actions-pr-link');
+            var match = data.prUrl ? String(data.prUrl).match(/https:\/\/github\.com\/\S+\/pull\/\d+/) : null;
+            if (prLink && match) {
+              prLink.innerHTML = '<a href="' + esc(match[0]) + '" target="_blank" rel="noopener" class="nd-btn nd-btn-primary">Show pull request on GitHub ↗</a>';
+            } else if (prLink) {
+              prLink.innerHTML = '<span class="nd-text-muted">Branch pushed &mdash; open the pull request on GitHub.</span>';
+            }
+          });
         }).catch(function(err) {
           logEl.textContent += 'Error: ' + String(err) + '\n';
         });
