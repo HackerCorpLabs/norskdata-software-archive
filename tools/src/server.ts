@@ -1,0 +1,2704 @@
+/**
+ * Express backend for the Norsk Data Software Archive web UI.
+ * Serves REST API endpoints and a vanilla HTML/JS frontend.
+ */
+
+import express from 'express';
+import multer from 'multer';
+import { readFile, readdir, stat, writeFile, rename, copyFile } from 'fs/promises';
+import { join, resolve, extname, basename, sep } from 'path';
+import { execSync } from 'child_process';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+import { existsSync, mkdirSync } from 'fs';
+
+import { parse as yamlParse, stringify as yamlStringify } from 'yaml';
+import { loadCatalog, loadProducts, saveProducts, saveProductYaml, saveFloppyYaml, generateCatalogJson, persistCatalog, findByVolumeName, findByMd5 } from './api/catalog.js';
+import { importImage } from './api/import.js';
+import { importFolder, findImageFolders } from './api/import-folder.js';
+import { writeIndex } from './api/index-builder.js';
+import { buildStaticSite } from './api/static-site-builder.js';
+import { parseVolumeName, matchDistribution } from './api/name-parser.js';
+import type { Catalog, CatalogEntry, Product } from './types.js';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+// Root of the repository (two levels up from tools/dist/)
+const ROOT_DIR = resolve(__dirname, '..', '..');
+
+/** Convert new Product[] format to legacy { Id, Name } format for server use */
+function toLegacyProducts(products: Product[]): Array<{ Id: string; Name: string }> {
+  return products.map(p => ({ Id: p.id, Name: p.name }));
+}
+
+const app = express();
+const PORT = parseInt(process.env.PORT ?? '3000', 10);
+
+// Middleware
+app.use(express.json({ limit: '50mb' }));
+
+// Auto-rebuild the search index + static site after ANY successful mutation to
+// catalog/product/photo data. A single debounced rebuild at the server covers
+// every assignment / edit / import path, so no UI handler ever has to remember
+// to trigger one (that was unreliable -- it depended on the client running the
+// latest JS and on covering each path). GET/HEAD and the rebuild endpoints
+// themselves are excluded.
+const SITE_AFFECTING_ROUTE = /^\/api\/(match|products|floppy|floppies|tags|import|images|categories)\b/;
+app.use((req, res, next) => {
+  if (req.method === 'GET' || req.method === 'HEAD') return next();
+  if (!SITE_AFFECTING_ROUTE.test(req.path)) return next();
+  res.on('finish', () => {
+    if (res.statusCode >= 200 && res.statusCode < 300) scheduleSiteRebuild();
+  });
+  next();
+});
+
+// Multer for file uploads - store in temp dir
+const upload = multer({ dest: '/tmp/ndarchive-uploads/' });
+
+// In-memory catalog and products cache - loaded from YAML on startup
+let catalog: Catalog | null = null;
+let productsCache: Array<{ Id: string; Name: string }> | null = null;
+
+async function getCatalog(): Promise<Catalog> {
+  if (!catalog) {
+    catalog = await loadCatalog(ROOT_DIR);
+  }
+  return catalog;
+}
+
+async function reloadCatalog(): Promise<Catalog> {
+  catalog = await loadCatalog(ROOT_DIR);
+  return catalog;
+}
+
+async function reloadAndRegenerate(): Promise<void> {
+  catalog = await loadCatalog(ROOT_DIR);
+  productsCache = null;
+  await generateCatalogJson(ROOT_DIR);
+}
+
+// ============================================================
+// Folder browser endpoint
+// ============================================================
+
+app.get('/api/browse', async (req, res) => {
+  try {
+    const requestedPath = String(req.query.path ?? '/');
+    const absPath = resolve(requestedPath);
+
+    // Safety: must exist and be a directory
+    const st = await import('fs/promises').then(m => m.stat(absPath));
+    if (!st.isDirectory()) {
+      res.status(400).json({ error: 'Not a directory' });
+      return;
+    }
+
+    const entries = await import('fs/promises').then(m => m.readdir(absPath, { withFileTypes: true }));
+
+    const folders: string[] = [];
+    let imgCount = 0;
+
+    for (const entry of entries) {
+      if (entry.name.startsWith('.')) continue; // skip hidden
+      if (entry.isDirectory()) {
+        folders.push(entry.name);
+      } else if (entry.isFile() && /\.img$/i.test(entry.name)) {
+        imgCount++;
+      }
+    }
+
+    folders.sort((a, b) => a.localeCompare(b, undefined, { sensitivity: 'base' }));
+
+    // Compute parent
+    const parent = absPath === '/' ? null : resolve(absPath, '..');
+
+    res.json({
+      path: absPath,
+      parent,
+      folders,
+      imgCount,
+    });
+  } catch (err) {
+    res.status(500).json({ error: String(err) });
+  }
+});
+
+// Native folder picker (zenity/kdialog)
+// ============================================================
+
+app.get('/api/pick-folder', async (req, res) => {
+  try {
+    const startPath = String(req.query.start ?? '');
+    const { execSync } = await import('child_process');
+
+    // Try zenity first, then kdialog
+    let cmd: string;
+    try {
+      execSync('which zenity', { stdio: 'pipe' });
+      cmd = 'zenity --file-selection --directory' + (startPath ? ' --filename=' + JSON.stringify(startPath + '/') : '') + ' 2>/dev/null';
+    } catch {
+      try {
+        execSync('which kdialog', { stdio: 'pipe' });
+        cmd = 'kdialog --getexistingdirectory ' + (startPath ? JSON.stringify(startPath) : JSON.stringify('/'));
+      } catch {
+        res.status(501).json({ error: 'No dialog tool available (install zenity or kdialog)' });
+        return;
+      }
+    }
+
+    const result = execSync(cmd, { encoding: 'utf8', timeout: 120000 }).trim();
+    if (result) {
+      res.json({ path: result });
+    } else {
+      res.json({ path: null, cancelled: true });
+    }
+  } catch {
+    // User cancelled the dialog (exit code 1) or timeout
+    res.json({ path: null, cancelled: true });
+  }
+});
+
+// Catalog endpoints
+// ============================================================
+
+app.get('/api/catalog', async (_req, res) => {
+  try {
+    const cat = await getCatalog();
+    const summary = cat.entries.map(e => ({
+      id: e.id,
+      volumeName: e.volumeName,
+      productId: e.productId,
+      version: e.version,
+      bootFormat: e.bootFormat,
+      storageClass: e.storageClass,
+      imageSizeBytes: e.imageSizeBytes,
+      totalPages: e.totalPages,
+      fileCount: e.ndfs?.files?.length ?? 0,
+      importedAt: e.importedAt,
+    }));
+    res.json(summary);
+  } catch (err) {
+    res.status(500).json({ error: String(err) });
+  }
+});
+
+app.get('/api/catalog/:id', async (req, res) => {
+  try {
+    const cat = await getCatalog();
+    const entry = cat.entries.find(e => e.id === req.params.id);
+    if (!entry) {
+      res.status(404).json({ error: 'Entry not found' });
+      return;
+    }
+
+    // Resolve product name with sibling fallback
+    let productName: string | null = null;
+    if (entry.productId) {
+      const products = toLegacyProducts(await loadProducts(ROOT_DIR));
+      const pMap = new Map(products.map(p => [p.Id, p.Name]));
+      const n = pMap.get(entry.productId);
+      if (n && n !== entry.productId) {
+        productName = n;
+      } else {
+        const m2 = entry.productId.match(/^ND-(\d+)$/);
+        if (m2) {
+          const d = m2[1];
+          const cands: string[] = [];
+          if (d.length === 5 && d.startsWith('1')) cands.push(`ND-2${d}`);
+          if (d.length === 6 && d.startsWith('21')) cands.push(`ND-${d.substring(1)}`);
+          if (d.length === 6 && d.startsWith('2')) cands.push(`ND-${d.substring(1)}`);
+          for (const c of cands) { const cn = pMap.get(c); if (cn && cn !== c) { productName = cn; break; } }
+        }
+      }
+    }
+
+    res.json({ ...entry, productName });
+  } catch (err) {
+    res.status(500).json({ error: String(err) });
+  }
+});
+
+app.get('/api/products', async (_req, res) => {
+  try {
+    const cat = await getCatalog();
+    const products = toLegacyProducts(await loadProducts(ROOT_DIR));
+    const countMap = new Map<string, number>();
+    for (const e of cat.entries) {
+      const pid = e.productId ?? '(unmatched)';
+      countMap.set(pid, (countMap.get(pid) ?? 0) + 1);
+    }
+
+    const productMap = new Map<string, string>();
+    for (const p of products) {
+      productMap.set(p.Id, p.Name);
+    }
+
+    // Sibling name resolution for unnamed products
+    function resolveName(pid: string): string {
+      const name = productMap.get(pid);
+      if (name && name !== pid) return name;
+      // Check sibling
+      const m2 = pid.match(/^ND-(\d+)$/);
+      if (m2) {
+        const d = m2[1];
+        const candidates: string[] = [];
+        if (d.length === 5 && d.startsWith('1')) candidates.push(`ND-2${d}`);
+        if (d.length === 6 && d.startsWith('21')) candidates.push(`ND-${d.substring(1)}`);
+        if (d.length === 6 && d.startsWith('2')) candidates.push(`ND-${d.substring(1)}`);
+        for (const c of candidates) {
+          const cn = productMap.get(c);
+          if (cn && cn !== c) return cn;
+        }
+      }
+      return name ?? pid;
+    }
+
+    // Build lookups from raw product data
+    const rawProducts = await loadProducts(ROOT_DIR);
+    const categoryMap = new Map<string, string[]>();
+    const platformMap = new Map<string, string[]>();
+    const descriptionMap = new Map<string, string>();
+    for (const rp of rawProducts) {
+      if (rp.categories && rp.categories.length > 0) categoryMap.set(rp.id, rp.categories);
+      if (rp.platform && rp.platform.length > 0) platformMap.set(rp.id, rp.platform);
+      if (rp.description) descriptionMap.set(rp.id, rp.description);
+    }
+
+    // Start with all known products (even those with 0 images)
+    const seen = new Set<string>();
+    const result: Array<{ productId: string; name: string; description: string | null; imageCount: number; categories: string[]; platform: string[] }> = [];
+
+    // Products from catalog (have images)
+    for (const [id, count] of countMap) {
+      seen.add(id);
+      result.push({ productId: id, name: resolveName(id), description: descriptionMap.get(id) ?? null, imageCount: count, categories: categoryMap.get(id) ?? [], platform: platformMap.get(id) ?? [] });
+    }
+
+    // Products from YAML (may have 0 images)
+    for (const p of products) {
+      if (!seen.has(p.Id)) {
+        result.push({ productId: p.Id, name: resolveName(p.Id), description: descriptionMap.get(p.Id) ?? null, imageCount: 0, categories: categoryMap.get(p.Id) ?? [], platform: platformMap.get(p.Id) ?? [] });
+      }
+    }
+
+    result.sort((a, b) => b.imageCount - a.imageCount || a.productId.localeCompare(b.productId));
+    res.json(result);
+  } catch (err) {
+    res.status(500).json({ error: String(err) });
+  }
+});
+
+// Product detail
+app.get('/api/product-detail', async (req: express.Request, res: express.Response) => {
+  try {
+    const productId = String(req.query.id ?? '');
+    if (!productId) { res.status(400).json({ error: 'Missing id parameter' }); return; }
+
+    const cat = await getCatalog();
+    const productsList = toLegacyProducts(await loadProducts(ROOT_DIR));
+    const productMap = new Map(productsList.map(p => [p.Id, p.Name]));
+    const product = productsList.find((p: { Id: string; Name: string }) => p.Id === productId);
+    let productName = product ? product.Name : productId;
+
+    // Sibling resolution: if name equals ID (unnamed) or missing, check old/new number counterpart
+    let siblingId: string | null = null;
+    let siblingName: string | null = null;
+    const m = productId.match(/^ND-(\d+)$/);
+    if (m) {
+      const digits = m[1];
+      const candidates: string[] = [];
+      if (digits.length === 5 && digits.startsWith('1')) candidates.push(`ND-2${digits}`);
+      if (digits.length === 6 && digits.startsWith('21')) candidates.push(`ND-${digits.substring(1)}`);
+      if (digits.length === 6 && digits.startsWith('2')) candidates.push(`ND-${digits.substring(1)}`);
+      for (const cand of candidates) {
+        const candName = productMap.get(cand);
+        if (candName && candName !== cand) {
+          siblingId = cand;
+          siblingName = candName;
+          // If our product is unnamed, use the sibling name
+          if (productName === productId || !product) {
+            productName = candName;
+          }
+          break;
+        }
+      }
+    }
+
+    const floppies = cat.entries.filter((e: CatalogEntry) => e.productId === productId);
+    if (floppies.length === 0 && !product) { res.status(404).json({ error: 'Product not found' }); return; }
+
+    // Group by version, then by language
+    interface DiskInfo { id: string; volumeName: string | null; diskNumber: number | null; bootFormat: string | null; totalPages: number | null; fileCount: number; storageClass: string | null; diskPhotos: string[]; setPhotos: string[]; hasLabelTranscription: boolean }
+    // setPhotos keyed by filename: the same set photo is physically copied into
+    // every disk's MD5 folder, so dedup by basename to show it once per version.
+    const versionMap = new Map<string, { langMap: Map<string, DiskInfo[]>; setPhotos: Map<string, string>; labelTranscription: string | null }>();
+
+    for (const e of floppies) {
+      const ver = e.version ?? '(unknown)';
+      const parsed = parseVolumeName(e.volumeName ?? '');
+      const lang = parsed?.language ?? 'XX';
+
+      if (!versionMap.has(ver)) versionMap.set(ver, { langMap: new Map(), setPhotos: new Map(), labelTranscription: null });
+      const verData = versionMap.get(ver)!;
+      if (!verData.langMap.has(lang)) verData.langMap.set(lang, []);
+
+      // Collect set photos at version level, deduped by filename (the same
+      // photo is copied into each disk folder, so paths differ but names match)
+      const sp = e.storage?.git?.setPhotos ?? [];
+      for (const p of sp) { const bn = basename(p); if (!verData.setPhotos.has(bn)) verData.setPhotos.set(bn, p); }
+      if (e.storage?.git?.labelTranscription && !verData.labelTranscription) {
+        verData.labelTranscription = e.storage.git.labelTranscription;
+      }
+
+      verData.langMap.get(lang)!.push({
+        id: e.id,
+        volumeName: e.volumeName,
+        diskNumber: e.diskNumber,
+        bootFormat: e.bootFormat,
+        totalPages: e.totalPages,
+        fileCount: e.ndfs?.files?.length ?? 0,
+        storageClass: e.storageClass,
+        diskPhotos: e.storage?.git?.diskPhotos ?? [],
+        setPhotos: sp,
+        hasLabelTranscription: !!e.storage?.git?.labelTranscription,
+      });
+    }
+
+    const versions = Array.from(versionMap.entries())
+      .sort((a, b) => b[0].localeCompare(a[0]))
+      .map(([version, verData]) => ({
+        version,
+        setPhotos: Array.from(verData.setPhotos.values()),
+        labelTranscription: verData.labelTranscription,
+        languages: Object.fromEntries(
+          Array.from(verData.langMap.entries()).sort((a, b) => a[0].localeCompare(b[0]))
+        ),
+      }));
+
+    // Get categories for this product
+    const rawProducts = await loadProducts(ROOT_DIR);
+    const rawProduct = rawProducts.find(p => p.id === productId);
+    const categories = rawProduct?.categories ?? [];
+
+    const description = rawProduct?.description ?? null;
+    const platform = rawProduct?.platform ?? [];
+    res.json({ productId, productName, description, platform, siblingId, siblingName, totalImages: floppies.length, categories, versions });
+  } catch (err) {
+    res.status(500).json({ error: String(err) });
+  }
+});
+
+app.get('/api/search', async (req, res) => {
+  try {
+    const q = String(req.query.q ?? '').toLowerCase().trim();
+    const limit = parseInt(String(req.query.limit ?? '20'), 10);
+    if (!q || q.length < 2) {
+      res.json([]);
+      return;
+    }
+
+    const cat = await getCatalog();
+    const results: Array<{ entry: CatalogEntry; score: number }> = [];
+
+    for (const e of cat.entries) {
+      let score = 0;
+      if (e.id.toLowerCase().includes(q)) score += 3;
+      if (e.volumeName?.toLowerCase().includes(q)) score += 3;
+      if (e.productId?.toLowerCase().includes(q)) score += 2;
+      if (e.version?.toLowerCase().includes(q)) score += 1;
+      if (e.bootFormat?.toLowerCase().includes(q)) score += 1;
+      if (e.md5.toLowerCase().includes(q)) score += 2;
+      if (e.tags) {
+        for (const t of e.tags) {
+          if (t.toLowerCase().includes(q)) score += 1;
+        }
+      }
+      if (e.ndfs?.files) {
+        for (const f of e.ndfs.files) {
+          if (f.name.toLowerCase().includes(q)) { score += 1; break; }
+        }
+      }
+      if (score > 0) results.push({ entry: e, score });
+    }
+
+    results.sort((a, b) => b.score - a.score);
+    const top = results.slice(0, limit).map(r => r.entry);
+    res.json(top);
+  } catch (err) {
+    res.status(500).json({ error: String(err) });
+  }
+});
+
+app.get('/api/stats', async (_req, res) => {
+  try {
+    const cat = await getCatalog();
+    const productsList = toLegacyProducts(await loadProducts(ROOT_DIR));
+    const productMap = new Map<string, string>();
+    for (const p of productsList) {
+      productMap.set(p.Id, p.Name);
+    }
+
+    const productIds = new Set<string>();
+    const byContributor: Record<string, number> = {};
+    const byFileType: Record<string, number> = {};
+    const byLang: Record<string, number> = {};
+    const inferredProductCounts: Record<string, number> = {};
+    let broken = 0;
+    let assigned = 0;
+    let unassigned = 0;
+
+    // Match queue counters
+    let queueAuto = 0;
+    let queueNew = 0;
+    let queueManual = 0;
+    let queueBroken = 0;
+
+    for (const e of cat.entries) {
+      // Product tracking
+      if (e.productId) {
+        productIds.add(e.productId);
+        assigned++;
+        inferredProductCounts[e.productId] = (inferredProductCounts[e.productId] ?? 0) + 1;
+      } else {
+        unassigned++;
+      }
+
+      // Broken (hidden-in-legacy)
+      if (e.tags?.includes('hidden-in-legacy')) {
+        broken++;
+      }
+
+      // Contributor from provenance
+      const contributor = e.provenance?.contributor ?? 'unknown';
+      byContributor[contributor] = (byContributor[contributor] ?? 0) + 1;
+
+      // File types from ndfs or directoryContentRaw
+      if (e.ndfs?.files) {
+        for (const f of e.ndfs.files) {
+          if (f.type) {
+            byFileType[f.type] = (byFileType[f.type] ?? 0) + 1;
+          }
+        }
+      } else if (e.directoryContentRaw) {
+        const typeMatches = e.directoryContentRaw.matchAll(/:(\w+)\s+Type:/g);
+        for (const tm of typeMatches) {
+          const ft = tm[1];
+          byFileType[ft] = (byFileType[ft] ?? 0) + 1;
+        }
+      }
+
+      // Language from volume name parsing
+      const parsed = parseVolumeName(e.volumeName ?? '');
+      const lang = parsed?.language ?? 'unknown';
+      byLang[lang] = (byLang[lang] ?? 0) + 1;
+
+      // Match queue classification (skip already-linked and reviewed-skipped)
+      var needsWork = !e.productId && !e.tags?.includes('reviewed-unassigned');
+      if (e.tags?.includes('hidden-in-legacy')) {
+        queueBroken++;
+      } else if (needsWork) {
+        if (parsed) {
+          if (productMap.has(parsed.productId)) {
+            queueAuto++;
+          } else {
+            queueNew++;
+          }
+        } else {
+          queueManual++;
+        }
+      }
+    }
+
+    // Build byInferredProduct
+    const byInferredProduct = Object.entries(inferredProductCounts)
+      .map(([productId, count]) => ({
+        productId,
+        name: productMap.get(productId) ?? productId,
+        count,
+      }))
+      .sort((a, b) => b.count - a.count);
+
+    res.json({
+      totalFloppies: cat.entries.length,
+      totalProducts: productsList.length,
+      broken,
+      unassigned,
+      assigned,
+      byContributor,
+      byInferredProduct,
+      byFileType,
+      byLang,
+      matchQueue: {
+        auto: queueAuto,
+        new: queueNew,
+        manual: queueManual,
+        broken: queueBroken,
+      },
+    });
+  } catch (err) {
+    res.status(500).json({ error: String(err) });
+  }
+});
+
+// ============================================================
+// Floppies endpoint (paginated, filtered)
+// ============================================================
+
+app.get('/api/floppies', async (req, res) => {
+  try {
+    const cat = await getCatalog();
+    const limit = Math.min(parseInt(String(req.query.limit ?? '50'), 10), 500);
+    const offset = parseInt(String(req.query.offset ?? '0'), 10);
+    const filterProductId = req.query.productId ? String(req.query.productId) : null;
+    const filterStatus = req.query.status ? String(req.query.status) : null;
+    const filterTag = req.query.tag ? String(req.query.tag) : null;
+    const filterContributor = req.query.contributor ? String(req.query.contributor) : null;
+    const filterQ = req.query.q ? String(req.query.q).trim().toLowerCase() : null;
+
+    let results = cat.entries;
+
+    if (filterProductId) {
+      results = results.filter(e => e.productId === filterProductId);
+    }
+    if (filterStatus) {
+      if (filterStatus === 'assigned') {
+        results = results.filter(e => e.productId !== null);
+      } else if (filterStatus === 'unassigned') {
+        results = results.filter(e => e.productId === null);
+      } else if (filterStatus === 'broken') {
+        results = results.filter(e => e.tags?.includes('hidden-in-legacy'));
+      }
+    }
+    if (filterTag) {
+      results = results.filter(e => e.tags?.includes(filterTag));
+    }
+    if (filterContributor) {
+      results = results.filter(e => e.provenance?.contributor === filterContributor);
+    }
+    if (filterQ) {
+      // Resolve product names for searching
+      const productsList2 = toLegacyProducts(await loadProducts(ROOT_DIR));
+      const pMap2 = new Map(productsList2.map(p => [p.Id, p.Name.toLowerCase()]));
+
+      results = results.filter(e => {
+        if (e.id.toLowerCase().includes(filterQ)) return true;
+        if (e.volumeName?.toLowerCase().includes(filterQ)) return true;
+        if (e.productId?.toLowerCase().includes(filterQ)) return true;
+        if (e.md5.toLowerCase().includes(filterQ)) return true;
+        if (e.version?.toLowerCase().includes(filterQ)) return true;
+        if (e.bootFormat?.toLowerCase().includes(filterQ)) return true;
+        if (e.provenance?.contributor?.toLowerCase().includes(filterQ)) return true;
+        if (e.tags?.some(t => t.toLowerCase().includes(filterQ))) return true;
+        // Search product name
+        if (e.productId && pMap2.get(e.productId)?.includes(filterQ)) return true;
+        // Search NDFS file names
+        if (e.ndfs?.files?.some(f => f.name.toLowerCase().includes(filterQ))) return true;
+        // Search directory content raw (legacy)
+        if (e.directoryContentRaw?.toLowerCase().includes(filterQ)) return true;
+        return false;
+      });
+    }
+
+    const total = results.length;
+    const page = results.slice(offset, offset + limit);
+
+    // Resolve product names (with sibling fallback)
+    const productsList = toLegacyProducts(await loadProducts(ROOT_DIR));
+    const pMap = new Map(productsList.map(p => [p.Id, p.Name]));
+    function resolveProdName(pid: string | null): string | null {
+      if (!pid) return null;
+      const n = pMap.get(pid);
+      if (n && n !== pid) return n;
+      const m2 = pid.match(/^ND-(\d+)$/);
+      if (m2) {
+        const d = m2[1];
+        const cands: string[] = [];
+        if (d.length === 5 && d.startsWith('1')) cands.push(`ND-2${d}`);
+        if (d.length === 6 && d.startsWith('21')) cands.push(`ND-${d.substring(1)}`);
+        if (d.length === 6 && d.startsWith('2')) cands.push(`ND-${d.substring(1)}`);
+        for (const c of cands) { const cn = pMap.get(c); if (cn && cn !== c) return cn; }
+      }
+      return n ?? null;
+    }
+
+    res.json({
+      total,
+      limit,
+      offset,
+      entries: page.map(e => ({
+        id: e.id,
+        md5: e.md5,
+        volumeName: e.volumeName,
+        productId: e.productId,
+        productName: resolveProdName(e.productId),
+        version: e.version,
+        diskNumber: e.diskNumber,
+        bootFormat: e.bootFormat,
+        totalPages: e.totalPages,
+        fileCount: e.ndfs?.files?.length ?? 0,
+        storageClass: e.storageClass,
+        tags: e.tags,
+        contributor: e.provenance?.contributor ?? 'unknown',
+        importedAt: e.importedAt,
+      })),
+    });
+  } catch (err) {
+    res.status(500).json({ error: String(err) });
+  }
+});
+
+// ============================================================
+// Matcher API endpoints
+// ============================================================
+
+app.get('/api/match/queue', async (req, res) => {
+  try {
+    const cat = await getCatalog();
+    const productsList = toLegacyProducts(await loadProducts(ROOT_DIR));
+    const productMap = new Map<string, string>();
+    for (const p of productsList) {
+      productMap.set(p.Id, p.Name);
+    }
+
+    const mode = String(req.query.mode ?? 'auto');
+    const limit = Math.min(parseInt(String(req.query.limit ?? '50'), 10), 500);
+    const offset = parseInt(String(req.query.offset ?? '0'), 10);
+
+    // Build sibling lookup: for any unknown ND-XXXXX, find if the old/new counterpart is known
+    // ND-1xxxx (old) <-> ND-21xxxx (new) are the same product with different numbering
+    function findSibling(unknownPid: string): { productId: string; name: string } | null {
+      const m = unknownPid.match(/^ND-(\d+)$/);
+      if (!m) return null;
+      const digits = m[1];
+      // Unknown is ND-1xxxx -> look for known ND-21xxxx
+      if (digits.length === 5 && digits.startsWith('1')) {
+        const sibling = `ND-2${digits}`;
+        if (productMap.has(sibling)) return { productId: sibling, name: productMap.get(sibling)! };
+      }
+      // Unknown is ND-21xxxx -> look for known ND-1xxxx
+      if (digits.length === 6 && digits.startsWith('21')) {
+        const sibling = `ND-${digits.substring(1)}`;
+        if (productMap.has(sibling)) return { productId: sibling, name: productMap.get(sibling)! };
+      }
+      // Unknown is ND-2xxxxx (6-digit starting with 2 but not 21) -> look for ND-xxxxx (5-digit)
+      if (digits.length === 6 && digits.startsWith('2')) {
+        const sibling = `ND-${digits.substring(1)}`;
+        if (productMap.has(sibling)) return { productId: sibling, name: productMap.get(sibling)! };
+      }
+      return null;
+    }
+
+    const results: Array<{
+      floppy: { id: string; volumeName: string | null; md5: string; status: string; ndfsFiles: string[]; sourceFolder: string | null; originalFilename: string | null };
+      parsed: ReturnType<typeof parseVolumeName>;
+      suggested: {
+        productId: string | null;
+        productName: string | null;
+        confidence: number;
+        isNew: boolean;
+        siblingOf: string | null;
+        alternates: string[];
+      } | null;
+    }> = [];
+
+    for (const e of cat.entries) {
+      // Skip entries already linked to a product (they're done)
+      if (e.productId && mode !== 'broken') continue;
+      // Skip entries tagged as reviewed/skipped
+      if (e.tags?.includes('reviewed-unassigned') && mode !== 'broken') continue;
+
+      const parsed = parseVolumeName(e.volumeName ?? '');
+      const isBroken = e.tags?.includes('hidden-in-legacy') ?? false;
+
+      let entryMode: string;
+      if (isBroken) {
+        entryMode = 'broken';
+      } else if (parsed) {
+        if (productMap.has(parsed.productId)) {
+          entryMode = 'auto';
+        } else {
+          entryMode = 'new';
+        }
+      } else {
+        entryMode = 'manual';
+      }
+
+      if (entryMode !== mode) continue;
+
+      // Extract NDFS file names for display (from parsed ndfs or directoryContentRaw)
+      let ndfsFiles: string[] = [];
+      if (e.ndfs?.files) {
+        ndfsFiles = e.ndfs.files.map(f => f.name).slice(0, 10);
+      } else if (e.directoryContentRaw) {
+        const matches = e.directoryContentRaw.match(/\)([A-Z0-9_-]+:[A-Z0-9]+)/g);
+        if (matches) ndfsFiles = matches.map(m => m.substring(1)).slice(0, 10);
+      }
+
+      let suggested: typeof results[0]['suggested'] = null;
+      if (parsed) {
+        const isNew = !productMap.has(parsed.productId);
+        let siblingOf: string | null = null;
+        let suggestedName = productMap.get(parsed.productId) ?? null;
+
+        // For new products, check if there's a sibling (old/new number for same product)
+        if (isNew) {
+          const sib = findSibling(parsed.productId);
+          if (sib) {
+            siblingOf = sib.productId;
+            suggestedName = sib.name;
+          }
+        }
+
+        suggested = {
+          productId: parsed.productId,
+          productName: suggestedName,
+          confidence: parsed.confidence,
+          isNew,
+          siblingOf,
+          alternates: [],
+        };
+      } else if (mode === 'manual' && e.directoryContentRaw) {
+        const fileNames = e.directoryContentRaw.match(/\)\s*([^:]+:[A-Z]+)/g);
+        if (fileNames) {
+          for (const [pid, pname] of productMap) {
+            const pnLower = pname.toLowerCase();
+            for (const fn of fileNames) {
+              if (fn.toLowerCase().includes(pnLower.split(' ')[0]?.toLowerCase() ?? '')) {
+                suggested = {
+                  productId: pid,
+                  productName: pname,
+                  confidence: 0.3,
+                  isNew: false,
+                  siblingOf: null,
+                  alternates: [],
+                };
+                break;
+              }
+            }
+            if (suggested) break;
+          }
+        }
+      }
+
+      const status = e.productId ? 'assigned' : (isBroken ? 'broken' : 'unassigned');
+
+      results.push({
+        floppy: {
+          id: e.id,
+          volumeName: e.volumeName,
+          md5: e.md5,
+          status,
+          ndfsFiles,
+          sourceFolder: e.provenance?.originalPath ? e.provenance.originalPath.replace(/\/[^/]+$/, '').replace(/.*\//, '') : null,
+          originalFilename: e.provenance?.originalPath ? e.provenance.originalPath.replace(/.*\//, '') : null,
+        },
+        parsed,
+        suggested,
+      });
+    }
+
+    const total = results.length;
+    const page = results.slice(offset, offset + limit);
+
+    res.json({ total, limit, offset, entries: page });
+  } catch (err) {
+    res.status(500).json({ error: String(err) });
+  }
+});
+
+app.post('/api/match/confirm', async (req, res) => {
+  try {
+    const { floppyIds, target, overrides } = req.body as {
+      floppyIds: string[];
+      target: { productId?: string; newProduct?: { id: string; name: string } };
+      overrides?: { version?: string; language?: string; diskNumber?: number };
+    };
+
+    if (!floppyIds?.length || !target) {
+      res.status(400).json({ error: 'floppyIds and target are required' });
+      return;
+    }
+
+    const cat = await getCatalog();
+
+    // If creating a new product, add it first
+    let productId: string;
+    if (target.newProduct) {
+      await saveProductYaml(ROOT_DIR, target.newProduct.id, { name: target.newProduct.name });
+      const products = await loadProducts(ROOT_DIR);
+      await saveProducts(ROOT_DIR, products.map(p => ({ Id: p.id, Name: p.name })));
+      productsCache = null;
+      productId = target.newProduct.id;
+    } else if (target.productId) {
+      productId = target.productId;
+    } else {
+      res.status(400).json({ error: 'target must have productId or newProduct' });
+      return;
+    }
+
+    // Update each floppy
+    let updated = 0;
+    for (const fid of floppyIds) {
+      const entry = cat.entries.find(e => e.id === fid);
+      if (!entry) continue;
+      entry.productId = productId;
+      if (overrides?.version !== undefined) entry.version = overrides.version;
+      if (overrides?.diskNumber !== undefined) entry.diskNumber = overrides.diskNumber;
+      // Write YAML if entry has one
+      if (entry.storage?.git?.yamlPath) {
+        await saveFloppyYaml(ROOT_DIR, entry);
+      }
+      updated++;
+    }
+
+    // Now that these floppies have a product, consolidate their set photos
+    // into the product group folder + regenerate JSON from YAML.
+    await persistCatalog(ROOT_DIR);
+    catalog = null; // invalidate cache; next read reloads from regenerated catalog
+
+    res.json({ success: true, updated, productId });
+  } catch (err) {
+    res.status(500).json({ error: String(err) });
+  }
+});
+
+app.post('/api/match/skip', async (req, res) => {
+  try {
+    const { floppyIds } = req.body as { floppyIds: string[] };
+    if (!floppyIds?.length) {
+      res.status(400).json({ error: 'floppyIds is required' });
+      return;
+    }
+
+    const cat = await getCatalog();
+    let updated = 0;
+
+    for (const fid of floppyIds) {
+      const entry = cat.entries.find(e => e.id === fid);
+      if (!entry) continue;
+      if (!entry.tags) entry.tags = [];
+      if (!entry.tags.includes('reviewed-unassigned')) {
+        entry.tags.push('reviewed-unassigned');
+      }
+      // Persist to YAML (source of truth) -- otherwise the tag is regenerated
+      // away the next time the catalog is rebuilt from YAML.
+      if (entry.storage?.git?.yamlPath) await saveFloppyYaml(ROOT_DIR, entry);
+      updated++;
+    }
+
+    await persistCatalog(ROOT_DIR);
+    catalog = null;
+
+    res.json({ success: true, updated });
+  } catch (err) {
+    res.status(500).json({ error: String(err) });
+  }
+});
+
+// ============================================================
+// Product creation endpoint
+// ============================================================
+
+app.post('/api/products', async (req, res) => {
+  try {
+    const { id, name } = req.body as { id: string; name: string };
+    if (!id || !name) {
+      res.status(400).json({ error: 'id and name are required' });
+      return;
+    }
+
+    const products = await loadProducts(ROOT_DIR);
+    const exists = products.find(p => p.id === id);
+    if (exists) {
+      res.status(409).json({ error: 'Product already exists', product: { Id: exists.id, Name: exists.name } });
+      return;
+    }
+
+    // Write product YAML (source of truth)
+    await saveProductYaml(ROOT_DIR, id, { name });
+    // Regenerate JSON
+    const updated = await loadProducts(ROOT_DIR);
+    await saveProducts(ROOT_DIR, updated.map(p => ({ Id: p.id, Name: p.name })));
+    productsCache = null;
+
+    res.json({ success: true, product: { Id: id, Name: name } });
+  } catch (err) {
+    res.status(500).json({ error: String(err) });
+  }
+});
+
+// Rename/update a product
+app.patch('/api/products', async (req, res) => {
+  try {
+    const { id, name, description, categories, platform } = req.body as { id: string; name?: string; description?: string; categories?: string[]; platform?: string[] };
+    if (!id) {
+      res.status(400).json({ error: 'id is required' });
+      return;
+    }
+    const existingProducts = await loadProducts(ROOT_DIR);
+    const existing = existingProducts.find(p => p.id === id);
+    const finalName = name || existing?.name || id;
+    await saveProductYaml(ROOT_DIR, id, { name: finalName, description, categories, platform });
+    // Also update the JSON for backward compat
+    const products = await loadProducts(ROOT_DIR);
+    const asLegacy = products.map(p => ({ Id: p.id, Name: p.name }));
+    await saveProducts(ROOT_DIR, asLegacy);
+    productsCache = null;
+    res.json({ success: true, product: { Id: id, Name: finalName, categories: categories ?? existing?.categories ?? [] } });
+  } catch (err) {
+    res.status(500).json({ error: String(err) });
+  }
+});
+
+// Delete a product
+app.delete('/api/products', async (req, res) => {
+  try {
+    const { id } = req.body as { id: string };
+    if (!id) { res.status(400).json({ error: 'id is required' }); return; }
+    const { unlink } = await import('fs/promises');
+    const filePath = join(ROOT_DIR, 'products', `${id}.yaml`);
+    try { await unlink(filePath); } catch { /* may not exist */ }
+    const products = await loadProducts(ROOT_DIR);
+    const asLegacy = products.filter(p => p.id !== id).map(p => ({ Id: p.id, Name: p.name }));
+    await saveProducts(ROOT_DIR, asLegacy);
+    productsCache = null;
+    res.json({ success: true, deleted: id });
+  } catch (err) {
+    res.status(500).json({ error: String(err) });
+  }
+});
+
+// Change a product's ID and cascade the new ID into every linked floppy YAML.
+// Call with { confirm: false } first to preview the affected floppies, then
+// { confirm: true } to apply. This is the only path that rewrites product.id in
+// floppy YAMLs -- a bare YAML rename would orphan the floppies.
+app.post('/api/products/rename-id', async (req, res) => {
+  try {
+    const body = req.body as { oldId?: string; newId?: string; confirm?: boolean };
+    const oldId = String(body.oldId ?? '').trim();
+    let newId = String(body.newId ?? '').trim();
+    if (!oldId || !newId) { res.status(400).json({ error: 'oldId and newId are required' }); return; }
+    if (oldId === '(unmatched)') { res.status(400).json({ error: '"(unmatched)" is not a real product and cannot be renamed' }); return; }
+    if (/^\d/.test(newId)) newId = 'ND-' + newId; // match the convention used elsewhere
+    if (newId === oldId) { res.status(400).json({ error: 'New ID must differ from the current ID' }); return; }
+
+    const cat = await getCatalog();
+    const products = await loadProducts(ROOT_DIR);
+    const oldProduct = products.find(p => p.id === oldId);
+
+    // Floppies that will be re-linked
+    const affected = cat.entries
+      .filter(e => e.productId === oldId)
+      .map(e => ({ id: e.id, volumeName: e.volumeName, version: e.version, diskNumber: e.diskNumber }))
+      .sort((a, b) => (a.volumeName ?? a.id).localeCompare(b.volumeName ?? b.id));
+
+    // Other products that reference oldId as their sibling
+    const siblingProducts = products.filter(p => p.siblingId === oldId).map(p => p.id);
+
+    // Nothing to rename: no product record and no linked floppies
+    const notARealProduct = !oldProduct && affected.length === 0;
+    // A rename onto an existing product would be a merge -- not supported here
+    const newProductExists = products.some(p => p.id === newId);
+    const newIdInUse = cat.entries.some(e => e.productId === newId);
+    const conflict = notARealProduct || newProductExists || newIdInUse;
+    const conflictReason = notARealProduct
+      ? `${oldId} is not a real product (no record and no linked floppies) -- nothing to rename`
+      : newProductExists
+        ? `A product with ID ${newId} already exists`
+        : newIdInUse ? `Floppies are already linked to ${newId}` : null;
+
+    if (!body.confirm) {
+      res.json({ preview: true, oldId, newId, productName: oldProduct?.name ?? null, affected, siblingProducts, conflict, conflictReason });
+      return;
+    }
+
+    if (conflict) { res.status(409).json({ error: conflictReason ?? 'Conflict' }); return; }
+
+    const { unlink } = await import('fs/promises');
+
+    // 1. Recreate the product YAML under the new ID, preserving all fields, then delete the old one
+    if (oldProduct) {
+      await saveProductYaml(ROOT_DIR, newId, {
+        name: oldProduct.name,
+        description: oldProduct.description ?? null,
+        siblingId: oldProduct.siblingId ?? null,
+        categories: oldProduct.categories ?? [],
+        platform: oldProduct.platform ?? [],
+      });
+      await unlink(join(ROOT_DIR, 'products', `${oldId}.yaml`)).catch(() => { /* may not exist */ });
+    }
+
+    // 2. Repoint any sibling references
+    for (const p of siblingProducts) {
+      await saveProductYaml(ROOT_DIR, p, { siblingId: newId });
+    }
+
+    // 3. Re-link every affected floppy and rewrite its YAML
+    let updated = 0;
+    for (const e of cat.entries) {
+      if (e.productId !== oldId) continue;
+      e.productId = newId;
+      if (e.storage?.git?.yamlPath) await saveFloppyYaml(ROOT_DIR, e);
+      updated++;
+    }
+
+    // 4. YAML is already written (source of truth); regenerate JSON from it.
+    await persistCatalog(ROOT_DIR);
+    catalog = null;
+    productsCache = null;
+
+    res.json({ success: true, oldId, newId, updated, siblingProducts });
+  } catch (err) {
+    res.status(500).json({ error: String(err) });
+  }
+});
+
+// ============================================================
+// Categories API
+// ============================================================
+
+const CATEGORIES_FILE = join(ROOT_DIR, 'categories', 'product-categories.yaml');
+
+interface CategoryDef {
+  id: string;
+  name: string;
+  description: string;
+}
+
+async function loadCategories(): Promise<CategoryDef[]> {
+  try {
+    const raw = await readFile(CATEGORIES_FILE, 'utf-8');
+    const parsed = yamlParse(raw);
+    return Array.isArray(parsed) ? parsed : [];
+  } catch {
+    return [];
+  }
+}
+
+async function saveCategories(categories: CategoryDef[]): Promise<void> {
+  const yamlStr = yamlStringify(categories, { lineWidth: 0 });
+  await writeFile(CATEGORIES_FILE, '# Product categories for the Norsk Data Software Archive\n# Products reference these by ID in their categories field\n\n' + yamlStr, 'utf-8');
+}
+
+app.get('/api/categories', async (_req, res) => {
+  try {
+    const categories = await loadCategories();
+    const products = await loadProducts(ROOT_DIR);
+
+    // Count products per category
+    const counts = new Map<string, number>();
+    for (const p of products) {
+      if (p.categories) {
+        for (const catId of p.categories) {
+          counts.set(catId, (counts.get(catId) ?? 0) + 1);
+        }
+      }
+    }
+
+    const result = categories.map(c => ({
+      ...c,
+      productCount: counts.get(c.id) ?? 0,
+    }));
+
+    res.json(result);
+  } catch (err) {
+    res.status(500).json({ error: String(err) });
+  }
+});
+
+app.post('/api/categories', async (req, res) => {
+  try {
+    const { id, name, description } = req.body as { id: string; name: string; description: string };
+    if (!id || !name) {
+      res.status(400).json({ error: 'id and name are required' });
+      return;
+    }
+
+    const categories = await loadCategories();
+    if (categories.find(c => c.id === id)) {
+      res.status(409).json({ error: 'Category already exists' });
+      return;
+    }
+
+    categories.push({ id, name, description: description || '' });
+    await saveCategories(categories);
+    res.json({ success: true, category: { id, name, description: description || '' } });
+  } catch (err) {
+    res.status(500).json({ error: String(err) });
+  }
+});
+
+app.patch('/api/categories', async (req, res) => {
+  try {
+    const { id, name, description } = req.body as { id: string; name?: string; description?: string };
+    if (!id) {
+      res.status(400).json({ error: 'id is required' });
+      return;
+    }
+
+    const categories = await loadCategories();
+    const cat = categories.find(c => c.id === id);
+    if (!cat) {
+      res.status(404).json({ error: 'Category not found' });
+      return;
+    }
+
+    if (name !== undefined) cat.name = name;
+    if (description !== undefined) cat.description = description;
+    await saveCategories(categories);
+    res.json({ success: true, category: cat });
+  } catch (err) {
+    res.status(500).json({ error: String(err) });
+  }
+});
+
+app.delete('/api/categories', async (req, res) => {
+  try {
+    const { id } = req.body as { id: string };
+    if (!id) {
+      res.status(400).json({ error: 'id is required' });
+      return;
+    }
+
+    const categories = await loadCategories();
+    const idx = categories.findIndex(c => c.id === id);
+    if (idx === -1) {
+      res.status(404).json({ error: 'Category not found' });
+      return;
+    }
+
+    categories.splice(idx, 1);
+    await saveCategories(categories);
+
+    // Remove this category from all product YAML files
+    const products = await loadProducts(ROOT_DIR);
+    for (const p of products) {
+      if (p.categories && p.categories.includes(id)) {
+        const newCats = p.categories.filter(c => c !== id);
+        await saveProductYaml(ROOT_DIR, p.id, { name: p.name, categories: newCats });
+      }
+    }
+
+    productsCache = null;
+    res.json({ success: true });
+  } catch (err) {
+    res.status(500).json({ error: String(err) });
+  }
+});
+
+// ============================================================
+// Tags API
+// ============================================================
+
+app.get('/api/tags', async (_req, res) => {
+  try {
+    const cat = await getCatalog();
+    const tagCounts: Record<string, number> = {};
+
+    for (const e of cat.entries) {
+      if (e.tags) {
+        for (const t of e.tags) {
+          tagCounts[t] = (tagCounts[t] ?? 0) + 1;
+        }
+      }
+    }
+
+    const result = Object.entries(tagCounts)
+      .map(([name, count]) => ({ name, count }))
+      .sort((a, b) => b.count - a.count);
+
+    res.json(result);
+  } catch (err) {
+    res.status(500).json({ error: String(err) });
+  }
+});
+
+app.post('/api/tags/assign', async (req, res) => {
+  try {
+    const { floppyIds, tags } = req.body as { floppyIds: string[]; tags: string[] };
+    if (!floppyIds?.length || !tags?.length) {
+      res.status(400).json({ error: 'floppyIds and tags are required' });
+      return;
+    }
+
+    const cat = await getCatalog();
+    let updated = 0;
+
+    for (const fid of floppyIds) {
+      const entry = cat.entries.find(e => e.id === fid);
+      if (!entry) continue;
+      if (!entry.tags) entry.tags = [];
+      for (const tag of tags) {
+        if (!entry.tags.includes(tag)) {
+          entry.tags.push(tag);
+        }
+      }
+      // Persist to YAML (source of truth) so the tags survive catalog rebuilds.
+      if (entry.storage?.git?.yamlPath) await saveFloppyYaml(ROOT_DIR, entry);
+      updated++;
+    }
+
+    await persistCatalog(ROOT_DIR);
+    catalog = null;
+
+    res.json({ success: true, updated });
+  } catch (err) {
+    res.status(500).json({ error: String(err) });
+  }
+});
+
+// ============================================================
+// Import endpoints
+// ============================================================
+
+app.post('/api/import/file', upload.single('image'), async (req, res) => {
+  try {
+    if (!req.file) {
+      res.status(400).json({ error: 'No file uploaded' });
+      return;
+    }
+
+    const contributor = String(req.body.contributor ?? 'web-upload');
+    const source = String(req.body.source ?? 'web-upload');
+    const cat = await getCatalog();
+
+    const result = await importImage(cat, req.file.path, ROOT_DIR, {
+      contributor,
+      source,
+    });
+
+    if (!result.isDuplicate) {
+      cat.entries.push(result.entry);
+      // YAML written by the import; regenerate JSON + consolidate set photos.
+      await persistCatalog(ROOT_DIR);
+      catalog = null;
+    }
+
+    res.json({
+      entry: result.entry,
+      isDuplicate: result.isDuplicate,
+      isVariant: result.isVariant,
+      status: result.isDuplicate ? 'duplicate' : 'imported',
+    });
+  } catch (err) {
+    res.status(500).json({ error: String(err) });
+  }
+});
+
+app.post('/api/import/folder', async (req, res) => {
+  try {
+    const { path: folderPath } = req.body;
+    if (!folderPath) {
+      res.status(400).json({ error: 'path is required' });
+      return;
+    }
+
+    const absPath = resolve(folderPath);
+
+    // Check folder exists
+    try {
+      const s = await stat(absPath);
+      if (!s.isDirectory()) {
+        res.status(400).json({ error: 'Path is not a directory' });
+        return;
+      }
+    } catch {
+      res.status(400).json({ error: 'Path does not exist or is not accessible' });
+      return;
+    }
+
+    // Find .img files and preview them
+    const files = await readdir(absPath);
+    const imgFiles = files.filter(f => extname(f).toLowerCase() === '.img').sort();
+
+    if (imgFiles.length === 0) {
+      res.json({ path: absPath, images: [], count: 0 });
+      return;
+    }
+
+    // Preview each file (parse NDFS, check duplicates)
+    const cat = await getCatalog();
+    const previews = [];
+
+    for (const imgFile of imgFiles) {
+      const filePath = join(absPath, imgFile);
+      try {
+        const result = await importImage(cat, filePath, undefined, {});
+
+        // Determine status and existing entry info for duplicates
+        let status: 'new' | 'duplicate' | 'variant' = 'new';
+        let existingEntry: { id: string; volumeName: string | null; importedAt: string | null } | null = null;
+
+        if (result.isDuplicate) {
+          status = 'duplicate';
+          existingEntry = {
+            id: result.entry.id,
+            volumeName: result.entry.volumeName,
+            importedAt: result.entry.importedAt,
+          };
+        } else if (result.isVariant) {
+          status = 'variant';
+        }
+
+        previews.push({
+          file: imgFile,
+          volumeName: result.entry.volumeName,
+          productId: result.entry.productId,
+          version: result.entry.version,
+          bootFormat: result.entry.bootFormat,
+          sizeMB: result.entry.imageSizeBytes
+            ? (result.entry.imageSizeBytes / (1024 * 1024)).toFixed(2)
+            : null,
+          isDuplicate: result.isDuplicate,
+          isVariant: result.isVariant,
+          status,
+          existingEntry,
+          storageClass: result.entry.storageClass,
+        });
+      } catch (err) {
+        previews.push({
+          file: imgFile,
+          error: String(err),
+          status: 'error' as const,
+        });
+      }
+    }
+
+    // Scan for photos, docs, unmapped files
+    const { DEFAULT_SCAN_EXTENSIONS, scanFolderArtifacts } = await import('./api/import.js');
+    const scanExt = req.body.extensions ? {
+      image: req.body.extensions.image ?? DEFAULT_SCAN_EXTENSIONS.image,
+      photo: req.body.extensions.photo ?? DEFAULT_SCAN_EXTENSIONS.photo,
+      document: req.body.extensions.document ?? DEFAULT_SCAN_EXTENSIONS.document,
+    } : DEFAULT_SCAN_EXTENSIONS;
+
+    const volNames = previews.map(p => ('volumeName' in p ? p.volumeName : null) as string | null);
+    const artifacts = await scanFolderArtifacts(absPath, imgFiles, volNames, scanExt);
+
+    const photoFiles = [...artifacts.setPhotos];
+    for (const [, diskPhotos] of artifacts.diskPhotos) {
+      photoFiles.push(...diskPhotos);
+    }
+    const docFiles = [...artifacts.imagingLogs];
+    if (artifacts.transcription) docFiles.push(artifacts.transcription);
+
+    res.json({
+      path: absPath,
+      images: previews,
+      count: imgFiles.length,
+      photos: photoFiles,
+      documents: docFiles,
+      unmapped: artifacts.unmapped,
+    });
+  } catch (err) {
+    res.status(500).json({ error: String(err) });
+  }
+});
+
+app.post('/api/import/folder/confirm', async (req, res) => {
+  try {
+    const { path: folderPath, contributor, source, skipDuplicates } = req.body;
+    if (!folderPath) {
+      res.status(400).json({ error: 'path is required' });
+      return;
+    }
+
+    const absPath = resolve(folderPath);
+    const cat = await getCatalog();
+
+    // skipDuplicates defaults to true unless explicitly set to false
+    const shouldSkipDuplicates = skipDuplicates !== false;
+
+    const result = await importFolder(cat, absPath, {
+      contributor: contributor ?? 'web-import',
+      source: source ?? 'web-import',
+      rootDir: ROOT_DIR,
+      skipDuplicates: shouldSkipDuplicates,
+    });
+
+    // Consolidate set photos + regenerate catalog JSON. The search index and
+    // static site are rebuilt by the post-mutation middleware (debounced).
+    await persistCatalog(ROOT_DIR);
+    catalog = null;
+
+    res.json({
+      imported: result.imported.map(e => ({
+        id: e.id,
+        volumeName: e.volumeName,
+        productId: e.productId,
+        storageClass: e.storageClass,
+      })),
+      duplicates: result.duplicates,
+      variants: result.variants,
+      errors: result.errors,
+    });
+  } catch (err) {
+    res.status(500).json({ error: String(err) });
+  }
+});
+
+app.post('/api/import/folder-recursive', async (req, res) => {
+  try {
+    const { path: basePath, extensions } = req.body as {
+      path: string;
+      extensions?: { image?: string[]; photo?: string[]; document?: string[] };
+    };
+    if (!basePath) {
+      res.status(400).json({ error: 'path is required' });
+      return;
+    }
+
+    const { DEFAULT_SCAN_EXTENSIONS, scanFolderArtifacts } = await import('./api/import.js');
+    const scanExt = {
+      image: extensions?.image ?? DEFAULT_SCAN_EXTENSIONS.image,
+      photo: extensions?.photo ?? DEFAULT_SCAN_EXTENSIONS.photo,
+      document: extensions?.document ?? DEFAULT_SCAN_EXTENSIONS.document,
+    };
+    const imageExtSet = new Set(scanExt.image.map(e => e.toLowerCase()));
+
+    const absPath = resolve(basePath);
+    const folders = await findImageFolders(absPath, scanExt.image);
+    const cat = await getCatalog();
+
+    const { createHash } = await import('crypto');
+    const { readFile: readF } = await import('fs/promises');
+
+    let totalNew = 0;
+    let totalDuplicate = 0;
+    let totalUnmapped = 0;
+    const result = [];
+
+    for (const folder of folders) {
+      const allFiles = (await readdir(folder)).sort();
+      const imgFiles = allFiles.filter(f => imageExtSet.has(extname(f).toLowerCase()));
+      let folderNew = 0;
+      let folderDup = 0;
+
+      for (const file of imgFiles) {
+        const buf = await readF(join(folder, file));
+        const md5 = createHash('md5').update(buf).digest('hex');
+        const exists = cat.entries.some(e => e.md5 === md5);
+        if (exists) folderDup++;
+        else folderNew++;
+      }
+
+      // Scan artifacts to find unmapped files
+      const artifacts = await scanFolderArtifacts(folder, imgFiles, imgFiles.map(() => null), scanExt);
+      const unmapped = artifacts.unmapped;
+      totalUnmapped += unmapped.length;
+
+      totalNew += folderNew;
+      totalDuplicate += folderDup;
+      result.push({
+        path: folder,
+        imageCount: folderNew + folderDup,
+        newCount: folderNew,
+        duplicateCount: folderDup,
+        photos: artifacts.setPhotos.length + Array.from(artifacts.diskPhotos.values()).reduce((s, a) => s + a.length, 0),
+        documents: artifacts.imagingLogs.length + (artifacts.transcription ? 1 : 0),
+        unmapped,
+      });
+    }
+
+    res.json({
+      basePath: absPath,
+      folders: result,
+      totalFolders: result.length,
+      totalImages: totalNew + totalDuplicate,
+      totalNew,
+      totalDuplicate,
+      totalUnmapped,
+      extensions: scanExt,
+    });
+  } catch (err) {
+    res.status(500).json({ error: String(err) });
+  }
+});
+
+app.post('/api/import/folder-recursive/confirm', async (req, res) => {
+  try {
+    const { path: basePath, contributor, source } = req.body;
+    if (!basePath) {
+      res.status(400).json({ error: 'path is required' });
+      return;
+    }
+
+    const absPath = resolve(basePath);
+    const folders = await findImageFolders(absPath);
+    const cat = await getCatalog();
+
+    const allResults = {
+      imported: [] as Array<{ id: string; volumeName: string | null; productId: string | null }>,
+      duplicates: [] as string[],
+      variants: [] as string[],
+      errors: [] as Array<{ file: string; error: string }>,
+      foldersProcessed: 0,
+    };
+
+    for (const folder of folders) {
+      const result = await importFolder(cat, folder, {
+        contributor: contributor ?? 'web-import',
+        source: source ?? 'web-import',
+        rootDir: ROOT_DIR,
+      });
+
+      allResults.imported.push(
+        ...result.imported.map(e => ({
+          id: e.id,
+          volumeName: e.volumeName,
+          productId: e.productId,
+        }))
+      );
+      allResults.duplicates.push(...result.duplicates);
+      allResults.variants.push(...result.variants);
+      allResults.errors.push(...result.errors);
+      allResults.foldersProcessed++;
+    }
+
+    // Consolidate set photos + regenerate catalog JSON. The search index and
+    // static site are rebuilt by the post-mutation middleware (debounced).
+    await persistCatalog(ROOT_DIR);
+    catalog = null;
+
+    res.json(allResults);
+  } catch (err) {
+    res.status(500).json({ error: String(err) });
+  }
+});
+
+// ============================================================
+// Action endpoints
+// ============================================================
+
+app.post('/api/rebuild-catalog', async (_req, res) => {
+  try {
+    await reloadAndRegenerate();
+    const cat = await getCatalog();
+    res.json({ success: true, entries: cat.entries.length });
+  } catch (err) {
+    res.status(500).json({ error: String(err) });
+  }
+});
+
+/**
+ * Regenerate the search index (catalog/index.json) and the static site
+ * (site/, what :8000 serves) from the current YAML/catalog. Run after any
+ * import or product assignment so the browseable site stays in sync without a
+ * manual "rebuild" step.
+ */
+async function rebuildIndexAndSite(): Promise<void> {
+  const cat = await reloadCatalog();
+  await writeIndex(ROOT_DIR, cat);
+  await buildStaticSite(ROOT_DIR);
+}
+
+// Debounced background rebuild of the search index + static site. Any endpoint
+// that mutates catalog/product data calls this; rapid successive mutations
+// (e.g. confirming several product groups, or a burst of edits) coalesce into a
+// single rebuild shortly after the last change. This keeps the :8000 static
+// preview in sync regardless of which client path made the change -- the
+// rebuild lives at the server, not sprinkled across UI handlers.
+let siteRebuildTimer: ReturnType<typeof setTimeout> | null = null;
+let siteRebuildRunning = false;
+let siteRebuildQueuedAgain = false;
+function scheduleSiteRebuild(): void {
+  if (siteRebuildTimer) clearTimeout(siteRebuildTimer);
+  siteRebuildTimer = setTimeout(async () => {
+    siteRebuildTimer = null;
+    if (siteRebuildRunning) { siteRebuildQueuedAgain = true; return; }
+    siteRebuildRunning = true;
+    try {
+      do {
+        siteRebuildQueuedAgain = false;
+        await rebuildIndexAndSite();
+      } while (siteRebuildQueuedAgain);
+    } catch (err) {
+      console.error('Background site rebuild failed:', err);
+    } finally {
+      siteRebuildRunning = false;
+    }
+  }, 1200);
+}
+
+app.post('/api/rebuild-index', async (_req, res) => {
+  try {
+    const cat = await reloadCatalog();
+    await writeIndex(ROOT_DIR, cat);
+    res.json({ success: true, entries: cat.entries.length });
+  } catch (err) {
+    res.status(500).json({ error: String(err) });
+  }
+});
+
+app.post('/api/rebuild-site', async (_req, res) => {
+  try {
+    await buildStaticSite(ROOT_DIR);
+    res.json({ success: true });
+  } catch (err) {
+    res.status(500).json({ error: String(err) });
+  }
+});
+
+// Rebuild both the search index and the static site in one call. Used by the
+// Matcher after a confirm batch so the :8000 preview reflects new assignments
+// without rebuilding once per product group.
+app.post('/api/rebuild-index-and-site', async (_req, res) => {
+  try {
+    await rebuildIndexAndSite();
+    res.json({ success: true });
+  } catch (err) {
+    res.status(500).json({ error: String(err) });
+  }
+});
+
+function currentBranch(): string {
+  return execSync('git branch --show-current', { cwd: ROOT_DIR }).toString().trim();
+}
+
+app.post('/api/git/commit', async (req, res) => {
+  try {
+    const { message } = req.body;
+    if (!message) {
+      res.status(400).json({ error: 'message is required' });
+      return;
+    }
+    const branch = currentBranch();
+    if (branch === 'main' || branch === 'master') {
+      res.status(403).json({ error: `Don't commit on ${branch}. Create a branch first.` });
+      return;
+    }
+    execSync('git add -A', { cwd: ROOT_DIR });
+    execSync(`git commit -m ${JSON.stringify(message)}`, { cwd: ROOT_DIR });
+    res.json({ success: true, message });
+  } catch (err) {
+    res.status(500).json({ error: String(err) });
+  }
+});
+
+const DEFAULT_BRANCH = 'main';
+
+app.post('/api/git/push', async (_req, res) => {
+  try {
+    const branch = execSync('git branch --show-current', { cwd: ROOT_DIR }).toString().trim();
+    // Direct push to the default branch is not allowed -- changes must go through
+    // a feature branch and a pull request.
+    if (branch === DEFAULT_BRANCH || branch === 'master') {
+      res.status(403).json({ error: `Direct push to ${branch} is not allowed. Use "Create branch & PR" to open a pull request.` });
+      return;
+    }
+    const output = execSync(`git push -u origin ${branch} 2>&1`, { cwd: ROOT_DIR }).toString();
+    res.json({ success: true, output });
+  } catch (err) {
+    res.status(500).json({ error: String(err) });
+  }
+});
+
+// Step 1: create a feature branch and switch to it. Any uncommitted changes on
+// the default branch come along, so you commit them on the branch next.
+app.post('/api/git/branch', async (req, res) => {
+  try {
+    const branch = String((req.body as { branch?: string }).branch ?? '').trim().replace(/\s+/g, '-').replace(/[^a-zA-Z0-9._/-]/g, '');
+    if (!branch) { res.status(400).json({ error: 'A branch name is required' }); return; }
+    if (branch === DEFAULT_BRANCH || branch === 'master') { res.status(400).json({ error: 'Pick a branch name other than the default branch' }); return; }
+    const output = execSync(`git checkout -b ${branch} 2>&1`, { cwd: ROOT_DIR }).toString();
+    res.json({ success: true, branch, output });
+  } catch (err) {
+    res.status(500).json({ error: String(err) });
+  }
+});
+
+// Step 2: commit any pending changes on the current feature branch, push it, and
+// open a pull request. Refuses to run on the default branch.
+app.post('/api/git/commit-pr', async (req, res) => {
+  try {
+    const body = req.body as { message?: string; title?: string; body?: string };
+    const branch = currentBranch();
+    if (branch === DEFAULT_BRANCH || branch === 'master') {
+      res.status(403).json({ error: 'You are on the default branch. Create a branch first.' });
+      return;
+    }
+    const message = String(body.message ?? body.title ?? 'Update').trim();
+    const title = String(body.title ?? message).trim();
+    const prBody = String(body.body ?? '').trim();
+    const log: string[] = [];
+    const run = (cmd: string) => { const out = execSync(cmd, { cwd: ROOT_DIR }).toString(); log.push(`$ ${cmd}\n${out}`.trim()); return out; };
+
+    const dirty = execSync('git status --porcelain', { cwd: ROOT_DIR }).toString().trim();
+    if (dirty) {
+      run('git add -A');
+      run(`git commit -m ${JSON.stringify(message)}`);
+    }
+    run(`git push -u origin ${branch} 2>&1`);
+
+    let prUrl: string | null = null;
+    try {
+      prUrl = run(`gh pr create --base ${DEFAULT_BRANCH} --head ${branch} --title ${JSON.stringify(title)} --body ${JSON.stringify(prBody)} 2>&1`).trim();
+    } catch (e) {
+      log.push(`gh pr create failed (branch is pushed; open the PR manually): ${String(e)}`);
+    }
+    res.json({ success: true, branch, prUrl, log: log.join('\n\n') });
+  } catch (err) {
+    res.status(500).json({ error: String(err) });
+  }
+});
+
+// Switch back to an up-to-date default branch (after a PR merged). Requires a
+// clean working tree; deletes the branch you were on if it's been merged.
+app.post('/api/git/sync-main', async (_req, res) => {
+  try {
+    const dirty = execSync('git status --porcelain', { cwd: ROOT_DIR }).toString().trim();
+    if (dirty) { res.status(400).json({ error: 'You have uncommitted changes. Commit them (and PR) or revert first.' }); return; }
+    const from = currentBranch();
+    const log: string[] = [];
+    const run = (cmd: string) => { const out = execSync(cmd, { cwd: ROOT_DIR }).toString(); log.push(`$ ${cmd}\n${out}`.trim()); return out; };
+
+    run('git fetch origin --prune 2>&1');
+    run(`git checkout ${DEFAULT_BRANCH} 2>&1`);
+    run(`git pull --ff-only origin ${DEFAULT_BRANCH} 2>&1`);
+
+    // Delete the previous branch if it's fully merged (git branch -d is safe -
+    // it refuses if not merged, e.g. a squash-merge, which we just report).
+    let deletedBranch: string | null = null;
+    if (from && from !== DEFAULT_BRANCH && from !== 'master') {
+      try { run(`git branch -d ${from} 2>&1`); deletedBranch = from; }
+      catch { log.push(`(kept local branch "${from}" - not a fast-forward merge; delete it manually if the PR was squash/rebase merged)`); }
+    }
+    res.json({ success: true, deletedBranch, log: log.join('\n\n') });
+  } catch (err) {
+    res.status(500).json({ error: String(err) });
+  }
+});
+
+app.get('/api/git/status', async (_req, res) => {
+  try {
+    const statusOutput = execSync('git status --porcelain', { cwd: ROOT_DIR }).toString();
+    // Split on newline but don't trim the whole string (leading spaces are significant in porcelain format)
+    const lines = statusOutput.replace(/\n$/, '').split('\n').filter(l => l.length > 0);
+    const isDirty = lines.length > 0;
+
+    let unpushed = 0;
+    try {
+      const logOutput = execSync('git log origin/main..HEAD --oneline 2>/dev/null', { cwd: ROOT_DIR }).toString();
+      unpushed = logOutput.trim() ? logOutput.trim().split('\n').length : 0;
+    } catch {
+      // No remote tracking or no commits
+    }
+
+    let branch = 'unknown';
+    try {
+      branch = execSync('git branch --show-current', { cwd: ROOT_DIR }).toString().trim();
+    } catch { /* ignore */ }
+
+    // Categorize changes from porcelain output
+    const added: string[] = [];
+    const modified: string[] = [];
+    const deleted: string[] = [];
+
+    for (const line of lines) {
+      if (line.length < 3) continue;
+      const xy = line.substring(0, 2);
+      // Git porcelain: XY then space then path. When Y is space, the space and separator merge.
+      const filePath = line.substring(2).trimStart();
+      if (xy.includes('D')) {
+        deleted.push(filePath);
+      } else if (xy === '??' || xy === 'A ' || xy === 'AM') {
+        added.push(filePath);
+      } else {
+        modified.push(filePath);
+      }
+    }
+
+    // Build summary + enrich image files with catalog data
+    const cat = await getCatalog();
+    const imagesByPath = new Map<string, { volumeName: string | null; productId: string | null; version: string | null; contributor: string | null }>();
+    for (const e of cat.entries) {
+      if (e.storage?.git?.imagePath) {
+        imagesByPath.set(e.storage.git.imagePath, {
+          volumeName: e.volumeName,
+          productId: e.productId,
+          version: e.version,
+          contributor: e.provenance?.contributor ?? null,
+        });
+      }
+    }
+
+    let newImages = 0;
+    let modifiedEntries = 0;
+    let newProducts = 0;
+    let otherFiles = 0;
+
+    interface EnrichedFile { path: string; status: string; type: string; volumeName?: string | null; productId?: string | null; version?: string | null; contributor?: string | null }
+    const enrichedFiles: EnrichedFile[] = [];
+
+    const allChanges = [
+      ...added.map(f => ({ path: f, status: 'added' })),
+      ...modified.map(f => ({ path: f, status: 'modified' })),
+      ...deleted.map(f => ({ path: f, status: 'deleted' })),
+    ];
+
+    for (const f of allChanges) {
+      let type = 'other';
+      const enriched: EnrichedFile = { path: f.path, status: f.status, type };
+
+      if (f.path.startsWith('images/') && (f.path.endsWith('.img.gz') || f.path.endsWith('.JPG') || f.path.endsWith('.jpg') || f.path.endsWith('.txt') || f.path.endsWith('.log'))) {
+        type = f.path.endsWith('.img.gz') ? 'image' : 'artifact';
+        newImages++;
+        // Find matching catalog entry
+        const match = imagesByPath.get(f.path);
+        if (match) {
+          enriched.volumeName = match.volumeName;
+          enriched.productId = match.productId;
+          enriched.version = match.version;
+          enriched.contributor = match.contributor;
+        } else {
+          // Try to find by directory match (set photos, labels)
+          for (const [imgPath, info] of imagesByPath) {
+            const imgDir = imgPath.substring(0, imgPath.lastIndexOf('/'));
+            if (f.path.startsWith(imgDir)) {
+              enriched.productId = info.productId;
+              enriched.version = info.version;
+              enriched.contributor = info.contributor;
+              break;
+            }
+          }
+        }
+      } else if (f.path.includes('catalog/') && f.path.endsWith('.json')) {
+        type = 'catalog';
+        modifiedEntries++;
+      } else if (f.path.includes('products') && f.path.endsWith('.json')) {
+        type = 'products';
+        newProducts++;
+      } else {
+        otherFiles++;
+      }
+      enriched.type = type;
+      enrichedFiles.push(enriched);
+    }
+
+    res.json({
+      clean: !isDirty,
+      branch,
+      unpushed,
+      changes: { added, modified, deleted },
+      enrichedFiles,
+      summary: { newImages, modifiedEntries, newProducts, otherFiles },
+      isDirty,
+      changedFiles: lines.length,
+      unpushedCommits: unpushed,
+      status: statusOutput,
+    });
+  } catch (err) {
+    res.status(500).json({ error: String(err) });
+  }
+});
+
+// ============================================================
+// Git diff endpoint
+// ============================================================
+
+app.get('/api/git/diff', async (req, res) => {
+  try {
+    const file = req.query.file ? String(req.query.file) : null;
+
+    if (file) {
+      // Diff for a specific file
+      let diff = '';
+      try {
+        // Check if tracked or untracked
+        const isTracked = execSync(`git ls-files ${JSON.stringify(file)}`, { cwd: ROOT_DIR }).toString().trim();
+        if (isTracked) {
+          diff = execSync(`git diff HEAD -- ${JSON.stringify(file)} 2>/dev/null`, { cwd: ROOT_DIR }).toString();
+        } else {
+          // Untracked: show full content as "new file"
+          const content = await readFile(join(ROOT_DIR, file), 'utf-8');
+          diff = `New file: ${file}\n${'─'.repeat(60)}\n${content}`;
+        }
+      } catch {
+        diff = '(unable to diff)';
+      }
+      res.json({ file, diff });
+    } else {
+      // Overall diff stat
+      let stat = '';
+      try {
+        stat = execSync('git diff --stat HEAD 2>/dev/null', { cwd: ROOT_DIR }).toString();
+        const untracked = execSync('git ls-files --others --exclude-standard', { cwd: ROOT_DIR }).toString().trim();
+        if (untracked) {
+          const untrackedFiles = untracked.split('\n');
+          stat += '\n' + untrackedFiles.length + ' untracked file(s):\n';
+          for (const f of untrackedFiles.slice(0, 50)) {
+            stat += '  ' + f + '\n';
+          }
+          if (untrackedFiles.length > 50) {
+            stat += '  ... and ' + (untrackedFiles.length - 50) + ' more\n';
+          }
+        }
+      } catch {
+        stat = '(no changes to diff)';
+      }
+      res.json({ stat });
+    }
+  } catch (err) {
+    res.status(500).json({ error: String(err) });
+  }
+});
+
+// ============================================================
+// Git revert endpoint
+// ============================================================
+
+app.post('/api/git/revert', async (req, res) => {
+  try {
+    const { confirm } = req.body;
+    if (!confirm) {
+      res.status(400).json({ error: 'confirm: true is required' });
+      return;
+    }
+
+    // Count files that will be reverted
+    const statusOutput = execSync('git status --porcelain', { cwd: ROOT_DIR }).toString();
+    const lines = statusOutput.trim() ? statusOutput.trim().split('\n') : [];
+    const reverted = lines.length;
+
+    execSync('git checkout -- .', { cwd: ROOT_DIR });
+    execSync('git clean -fd images/', { cwd: ROOT_DIR });
+
+    // Reload catalog since files changed on disk
+    await reloadCatalog();
+
+    res.json({ success: true, reverted });
+  } catch (err) {
+    res.status(500).json({ error: String(err) });
+  }
+});
+
+// ============================================================
+// Catalog entry PATCH (metadata editor)
+// ============================================================
+
+app.patch('/api/catalog-entry', async (req, res) => {
+  try {
+    const entryId = String(req.query.id ?? '');
+    if (!entryId) {
+      res.status(400).json({ error: 'Missing id query parameter' });
+      return;
+    }
+
+    const cat = await getCatalog();
+    const entry = cat.entries.find(e => e.id === entryId);
+    if (!entry) {
+      res.status(404).json({ error: 'Entry not found' });
+      return;
+    }
+
+    const updates = req.body;
+
+    // Update tags
+    if (updates.tags !== undefined) {
+      entry.tags = Array.isArray(updates.tags) ? updates.tags : null;
+    }
+
+    // Update docs
+    if (updates.docs !== undefined) {
+      entry.docs = updates.docs;
+    }
+
+    // Update provenance
+    if (updates.provenance !== undefined) {
+      if (entry.provenance) {
+        if (updates.provenance.contributor !== undefined) entry.provenance.contributor = updates.provenance.contributor;
+        if (updates.provenance.method !== undefined) entry.provenance.method = updates.provenance.method;
+        if (updates.provenance.dateImaged !== undefined) entry.provenance.dateImaged = updates.provenance.dateImaged;
+        if (updates.provenance.notes !== undefined) entry.provenance.notes = updates.provenance.notes;
+      } else {
+        entry.provenance = updates.provenance;
+      }
+    }
+
+    // Update mediaRole
+    if (updates.mediaRole !== undefined) {
+      entry.mediaRole = updates.mediaRole;
+    }
+
+    // Write YAML file if entry has a yamlPath
+    if (entry.storage?.git?.yamlPath) {
+      await saveFloppyYaml(ROOT_DIR, entry);
+    }
+
+    await persistCatalog(ROOT_DIR);
+    catalog = null;
+
+    res.json({ success: true, entry });
+  } catch (err) {
+    res.status(500).json({ error: String(err) });
+  }
+});
+
+// ============================================================
+// Catalog entry file upload
+// ============================================================
+
+// Attach photos/docs from a source folder to existing duplicate entries
+app.post('/api/import/attach-artifacts', async (req, res) => {
+  try {
+    const { sourcePath, entryIds } = req.body as { sourcePath: string; entryIds: string[] };
+    if (!sourcePath || !entryIds || entryIds.length === 0) {
+      res.status(400).json({ error: 'sourcePath and entryIds are required' });
+      return;
+    }
+
+    const { scanFolderArtifacts, copySetArtifacts, copyDiskPhotos } = await import('./api/import.js');
+    const { saveFloppyYaml } = await import('./api/catalog.js');
+    const cat = await getCatalog();
+
+    // Find the entries
+    const entries = entryIds.map(id => cat.entries.find(e => e.id === id)).filter(Boolean) as CatalogEntry[];
+    if (entries.length === 0) {
+      res.status(404).json({ error: 'No matching entries found' });
+      return;
+    }
+
+    // Scan the source folder for artifacts
+    const imgFiles = entries.map(e => {
+      const p = e.storage?.git?.imagePath;
+      return p ? basename(p).replace(/\.gz$/, '') : '';
+    }).filter(Boolean);
+    const volNames = entries.map(e => e.volumeName);
+    const artifacts = await scanFolderArtifacts(sourcePath, imgFiles, volNames);
+
+    let attached = 0;
+
+    for (const entry of entries) {
+      if (!entry.storage?.git) continue;
+      const targetDir = dirname(entry.storage.git.imagePath);
+
+      // Copy set photos/labels/logs
+      if (artifacts.setPhotos.length > 0 || artifacts.transcription || artifacts.imagingLogs.length > 0) {
+        const setResult = await copySetArtifacts(ROOT_DIR, sourcePath, targetDir, artifacts);
+        // Merge into entry (don't replace, add new ones)
+        const existingSet = new Set(entry.storage.git.setPhotos || []);
+        for (const p of setResult.setPhotos) { if (!existingSet.has(p)) { entry.storage.git.setPhotos.push(p); } }
+        if (setResult.labelTranscription && !entry.storage.git.labelTranscription) {
+          entry.storage.git.labelTranscription = setResult.labelTranscription;
+        }
+        const existingLogs = new Set(entry.storage.git.imagingLogs || []);
+        for (const l of setResult.imagingLogs) { if (!existingLogs.has(l)) { entry.storage.git.imagingLogs.push(l); } }
+      }
+
+      // Copy disk photos
+      const imgBase = basename(entry.storage.git.imagePath).replace(/\.img\.gz$/, '.img');
+      const myDiskPhotos = artifacts.diskPhotos.get(imgBase) ?? [];
+      if (myDiskPhotos.length > 0) {
+        const diskResult = await copyDiskPhotos(ROOT_DIR, sourcePath, targetDir, myDiskPhotos);
+        const existingDisk = new Set(entry.storage.git.diskPhotos || []);
+        for (const p of diskResult) { if (!existingDisk.has(p)) { entry.storage.git.diskPhotos.push(p); } }
+      }
+
+      await saveFloppyYaml(ROOT_DIR, entry);
+      attached++;
+    }
+
+    await reloadAndRegenerate();
+    res.json({ success: true, attached, entries: entries.map(e => e.id) });
+  } catch (err) {
+    res.status(500).json({ error: String(err) });
+  }
+});
+
+app.post('/api/catalog-entry/upload', upload.single('file'), async (req, res) => {
+  try {
+    const entryId = String(req.query.id ?? '');
+    if (!entryId) {
+      res.status(400).json({ error: 'Missing id query parameter' });
+      return;
+    }
+    if (!req.file) {
+      res.status(400).json({ error: 'No file uploaded' });
+      return;
+    }
+
+    const fileType = String(req.body.type ?? 'documentation');
+    const validTypes = ['disk-photo', 'set-photo', 'imaging-log', 'documentation'];
+    if (!validTypes.includes(fileType)) {
+      res.status(400).json({ error: 'Invalid type. Must be one of: ' + validTypes.join(', ') });
+      return;
+    }
+
+    const cat = await getCatalog();
+    const entry = cat.entries.find(e => e.id === entryId);
+    if (!entry) {
+      res.status(404).json({ error: 'Entry not found' });
+      return;
+    }
+
+    // Determine destination folder from the entry's git storage path
+    let batchDir: string;
+    if (entry.storage?.git?.imagePath) {
+      // e.g. images/62caae43d67b7bfedb18bf17dc079e0d/10079M07-NO-01S.img.gz
+      const imgDir = dirname(entry.storage.git.imagePath);
+      batchDir = resolve(ROOT_DIR, imgDir);
+    } else {
+      res.status(400).json({ error: 'Entry has no git storage path, cannot determine upload folder' });
+      return;
+    }
+
+    if (!existsSync(batchDir)) {
+      mkdirSync(batchDir, { recursive: true });
+    }
+
+    // Determine filename
+    const origName = req.file.originalname || 'upload';
+    const ext = extname(origName).toLowerCase();
+    const safeName = basename(origName).replace(/[^a-zA-Z0-9._-]/g, '_');
+    const destPath = join(batchDir, safeName);
+
+    // Copy temp file to destination
+    await copyFile(req.file.path, destPath);
+
+    // Update catalog entry based on type
+    const relPath = destPath.substring(ROOT_DIR.length + 1); // relative to ROOT_DIR
+
+    if (!entry.storage) {
+      entry.storage = { git: null, internetArchive: null, legacyAzure: null };
+    }
+    if (!entry.storage.git) {
+      entry.storage.git = { imagePath: '', yamlPath: '', diskPhotos: [], setPhotos: [], imagingLogs: [] };
+    }
+
+    let photoChanged = false;
+    if (fileType === 'disk-photo') {
+      entry.storage.git.diskPhotos.push(relPath);
+      photoChanged = true;
+    } else if (fileType === 'set-photo') {
+      entry.storage.git.setPhotos.push(relPath);
+      photoChanged = true;
+    } else if (fileType === 'imaging-log') {
+      entry.storage.git.imagingLogs.push(relPath);
+      photoChanged = true;
+    }
+    // documentation type: just save the file, no catalog reference needed
+
+    // Persist the new photo reference to YAML (source of truth) -- otherwise it
+    // is regenerated away on the next catalog rebuild and the file is orphaned.
+    if (photoChanged && entry.storage?.git?.yamlPath) await saveFloppyYaml(ROOT_DIR, entry);
+
+    await persistCatalog(ROOT_DIR);
+    catalog = null;
+
+    res.json({ success: true, path: relPath, type: fileType });
+  } catch (err) {
+    res.status(500).json({ error: String(err) });
+  }
+});
+
+// ============================================================
+// NDFS viewer endpoints
+// ============================================================
+
+app.get('/api/ndfs/raw', async (req, res) => {
+  try {
+    const entryId = String(req.query.id ?? '');
+    if (!entryId) {
+      res.status(400).json({ error: 'Missing id parameter' });
+      return;
+    }
+
+    const cat = await getCatalog();
+    const entry = cat.entries.find(e => e.id === entryId);
+    if (!entry) {
+      res.status(404).json({ error: 'Entry not found' });
+      return;
+    }
+
+    const imagePath = entry.storage?.git?.imagePath;
+    if (!imagePath) {
+      res.status(404).json({ error: 'No image file for this entry' });
+      return;
+    }
+
+    const filePath = resolve(ROOT_DIR, imagePath);
+
+    // Security: ensure path is within repo
+    if (!filePath.startsWith(ROOT_DIR)) {
+      res.status(403).json({ error: 'Access denied' });
+      return;
+    }
+
+    const compressed = await readFile(filePath);
+
+    // gunzip
+    const { gunzipSync } = await import('zlib');
+    const raw = gunzipSync(compressed);
+
+    res.setHeader('Content-Type', 'application/octet-stream');
+    res.send(raw);
+  } catch (err) {
+    res.status(500).json({ error: String(err) });
+  }
+});
+
+app.get('/api/ndfs/info', async (req, res) => {
+  try {
+    const entryId = String(req.query.id ?? '');
+    if (!entryId) {
+      res.status(400).json({ error: 'Missing id parameter' });
+      return;
+    }
+
+    const cat = await getCatalog();
+    const entry = cat.entries.find(e => e.id === entryId);
+    if (!entry) {
+      res.status(404).json({ error: 'Entry not found' });
+      return;
+    }
+
+    const imagePath = entry.storage?.git?.imagePath;
+    if (!imagePath) {
+      res.status(404).json({ error: 'No image file for this entry' });
+      return;
+    }
+
+    const filePath = resolve(ROOT_DIR, imagePath);
+    if (!filePath.startsWith(ROOT_DIR)) {
+      res.status(403).json({ error: 'Access denied' });
+      return;
+    }
+
+    const compressed = await readFile(filePath);
+    const { gunzipSync } = await import('zlib');
+    const raw = gunzipSync(compressed);
+
+    const { NdfsFileSystem } = await import('../../externals/norskdata-ndfs/ndfs-ts/dist/index.js');
+    const fs = new NdfsFileSystem(new Uint8Array(raw.buffer, raw.byteOffset, raw.byteLength), true);
+
+    const mb = fs.getMasterBlock();
+    const users = fs.getUsers().map((u: any) => ({
+      index: u.userIndex,
+      name: u.userName,
+      pagesReserved: u.pagesReserved,
+      pagesUsed: u.pagesUsed,
+    }));
+
+    const bootFormat = fs.detectBootFormat();
+
+    res.json({
+      volumeName: mb.directoryName,
+      totalPages: mb.imageSize,
+      unreservedPages: mb.unreservedPages,
+      bootFormat,
+      users,
+    });
+  } catch (err) {
+    res.status(500).json({ error: String(err) });
+  }
+});
+
+app.get('/api/ndfs/files', async (req, res) => {
+  try {
+    const entryId = String(req.query.id ?? '');
+    const userName = req.query.user ? String(req.query.user) : null;
+    if (!entryId) {
+      res.status(400).json({ error: 'Missing id parameter' });
+      return;
+    }
+
+    const cat = await getCatalog();
+    const entry = cat.entries.find(e => e.id === entryId);
+    if (!entry) {
+      res.status(404).json({ error: 'Entry not found' });
+      return;
+    }
+
+    const imagePath = entry.storage?.git?.imagePath;
+    if (!imagePath) {
+      res.status(404).json({ error: 'No image file for this entry' });
+      return;
+    }
+
+    const filePath = resolve(ROOT_DIR, imagePath);
+    if (!filePath.startsWith(ROOT_DIR)) {
+      res.status(403).json({ error: 'Access denied' });
+      return;
+    }
+
+    const compressed = await readFile(filePath);
+    const { gunzipSync } = await import('zlib');
+    const raw = gunzipSync(compressed);
+
+    const { NdfsFileSystem } = await import('../../externals/norskdata-ndfs/ndfs-ts/dist/index.js');
+    const { ndTimeToDate } = await import('../../externals/norskdata-ndfs/ndfs-ts/dist/nd-time.js');
+    const fs = new NdfsFileSystem(new Uint8Array(raw.buffer, raw.byteOffset, raw.byteLength), true);
+
+    const objects = fs.getObjectEntries();
+    const files = objects
+      .filter((obj: any) => !userName || obj.userName === userName)
+      .map((obj: any) => {
+        const dateCreated = ndTimeToDate(obj.dateCreated);
+        const lastDateWritten = ndTimeToDate(obj.lastDateWritten);
+
+        // BPUN checksum validation
+        let bpunValid: boolean | null = null;
+        if (obj.type === 'BPUN') {
+          try {
+            const fileData = fs.readFile(`${obj.userName}/${obj.objectName}:${obj.type}`);
+            if (fileData && fileData.length >= 10) {
+              // Find the '!' marker (0x21 or 0xA1 with parity) that starts binary data
+              let bangOff = -1;
+              for (let i = 0; i < fileData.length; i++) {
+                if (fileData[i] === 0x21 || (fileData[i] & 0x7F) === 0x21) {
+                  bangOff = i;
+                  break;
+                }
+              }
+
+              // After '!': address(2), count(2), data(count*2), checksum(2), action(2)
+              let dataOff = bangOff >= 0 ? bangOff + 1 : 0;
+
+              if (dataOff + 4 <= fileData.length) {
+                const address = (fileData[dataOff] << 8) | fileData[dataOff + 1];
+                const count = (fileData[dataOff + 2] << 8) | fileData[dataOff + 3];
+
+                if (count > 0) {
+                  const wordsStart = dataOff + 4;
+                  const wordsEnd = wordsStart + count * 2;
+                  if (wordsEnd + 2 <= fileData.length) {
+                    let calcSum = 0;
+                    for (let i = wordsStart; i < wordsEnd; i += 2) {
+                      calcSum = (calcSum + ((fileData[i] << 8) | fileData[i + 1])) & 0xFFFF;
+                    }
+                    const storedChecksum = (fileData[wordsEnd] << 8) | fileData[wordsEnd + 1];
+                    bpunValid = (calcSum === storedChecksum);
+                  }
+                }
+              }
+            }
+          } catch { /* ignore parse errors */ }
+        }
+
+        return {
+          name: obj.objectName,
+          type: obj.type,
+          fullName: obj.fullName,
+          userName: obj.userName,
+          userIndex: obj.userIndex,
+          pages: obj.pagesInFile,
+          bytes: obj.bytesInFile,
+          fileType: obj.fileTypeAsText,
+          dateCreated: dateCreated ? dateCreated.toISOString() : null,
+          lastDateWritten: lastDateWritten ? lastDateWritten.toISOString() : null,
+          bpunValid,
+        };
+      });
+
+    files.sort((a: any, b: any) => a.fullName.localeCompare(b.fullName));
+
+    res.json({ files });
+  } catch (err) {
+    res.status(500).json({ error: String(err) });
+  }
+});
+
+app.get('/api/ndfs/read-file', async (req, res) => {
+  try {
+    const entryId = String(req.query.id ?? '');
+    const filePath2 = String(req.query.file ?? '');
+    const parity = String(req.query.parity ?? 'none');
+    if (!entryId || !filePath2) {
+      res.status(400).json({ error: 'Missing id or file parameter' });
+      return;
+    }
+
+    const cat = await getCatalog();
+    const entry = cat.entries.find(e => e.id === entryId);
+    if (!entry) {
+      res.status(404).json({ error: 'Entry not found' });
+      return;
+    }
+
+    const imagePath = entry.storage?.git?.imagePath;
+    if (!imagePath) {
+      res.status(404).json({ error: 'No image file for this entry' });
+      return;
+    }
+
+    const diskPath = resolve(ROOT_DIR, imagePath);
+    if (!diskPath.startsWith(ROOT_DIR)) {
+      res.status(403).json({ error: 'Access denied' });
+      return;
+    }
+
+    const compressed = await readFile(diskPath);
+    const { gunzipSync } = await import('zlib');
+    const raw = gunzipSync(compressed);
+
+    const { NdfsFileSystem } = await import('../../externals/norskdata-ndfs/ndfs-ts/dist/index.js');
+    const fs = new NdfsFileSystem(new Uint8Array(raw.buffer, raw.byteOffset, raw.byteLength), true);
+
+    const parityMode = parity === 'strip' ? 'strip' : 'none';
+    const data = fs.readFile(filePath2, parityMode as any);
+
+    res.setHeader('Content-Type', 'application/octet-stream');
+    res.send(Buffer.from(data));
+  } catch (err) {
+    res.status(500).json({ error: String(err) });
+  }
+});
+
+app.get('/api/ndfs/hex', async (req, res) => {
+  try {
+    const entryId = String(req.query.id ?? '');
+    const filePath2 = String(req.query.file ?? '');
+    const offset = parseInt(String(req.query.offset ?? '0'), 10);
+    const length = Math.min(parseInt(String(req.query.length ?? '512'), 10), 8192);
+    if (!entryId || !filePath2) {
+      res.status(400).json({ error: 'Missing id or file parameter' });
+      return;
+    }
+
+    const cat = await getCatalog();
+    const entry = cat.entries.find(e => e.id === entryId);
+    if (!entry) {
+      res.status(404).json({ error: 'Entry not found' });
+      return;
+    }
+
+    const imagePath = entry.storage?.git?.imagePath;
+    if (!imagePath) {
+      res.status(404).json({ error: 'No image file for this entry' });
+      return;
+    }
+
+    const diskPath = resolve(ROOT_DIR, imagePath);
+    if (!diskPath.startsWith(ROOT_DIR)) {
+      res.status(403).json({ error: 'Access denied' });
+      return;
+    }
+
+    const compressed = await readFile(diskPath);
+    const { gunzipSync } = await import('zlib');
+    const raw = gunzipSync(compressed);
+
+    const { NdfsFileSystem } = await import('../../externals/norskdata-ndfs/ndfs-ts/dist/index.js');
+    const fs = new NdfsFileSystem(new Uint8Array(raw.buffer, raw.byteOffset, raw.byteLength), true);
+
+    const data = fs.readFile(filePath2);
+    const totalSize = data.length;
+    const slice = data.slice(offset, offset + length);
+
+    // Build hex dump
+    const lines: string[] = [];
+    const bytesPerLine = 16;
+    for (let i = 0; i < slice.length; i += bytesPerLine) {
+      const lineBytes = Math.min(bytesPerLine, slice.length - i);
+      let hex = '';
+      let ascii = '';
+      for (let j = 0; j < bytesPerLine; j++) {
+        if (j < lineBytes) {
+          hex += slice[i + j].toString(16).padStart(2, '0') + ' ';
+          const b = slice[i + j] & 0x7f;
+          ascii += (b >= 0x20 && b < 0x7f) ? String.fromCharCode(b) : '.';
+        } else {
+          hex += '   ';
+          ascii += ' ';
+        }
+        if (j === 7) hex += ' ';
+      }
+      lines.push((offset + i).toString(16).padStart(8, '0') + '  ' + hex + ' |' + ascii + '|');
+    }
+
+    res.json({
+      totalSize,
+      offset,
+      length: slice.length,
+      hex: lines.join('\n'),
+    });
+  } catch (err) {
+    res.status(500).json({ error: String(err) });
+  }
+});
+
+// ============================================================
+// File serving
+// ============================================================
+
+// Serve image files from images/ directory
+// Photo cache-busting versions: repo-relative path -> file mtime. The UI loads
+// this once and appends ?v=<version> to every photo URL, so an edited photo
+// (new mtime) gets a fresh immutable URL without any revalidation.
+app.get('/api/photo-versions', async (_req, res) => {
+  try {
+    const out: Record<string, number> = {};
+    for (const root of ['images', 'collections']) {
+      const base = resolve(ROOT_DIR, root);
+      let dirs: string[];
+      try { dirs = await readdir(base); } catch { continue; }
+      for (const d of dirs) {
+        const sub = join(base, d);
+        try { if (!(await stat(sub)).isDirectory()) continue; } catch { continue; }
+        let files: string[];
+        try { files = await readdir(sub); } catch { continue; }
+        for (const f of files) {
+          if (!/\.(jpe?g|png)$/i.test(f)) continue;
+          try { out[`${root}/${d}/${f}`] = Math.round((await stat(join(sub, f))).mtimeMs); } catch { /* skip */ }
+        }
+      }
+    }
+    res.json(out);
+  } catch (err) {
+    res.status(500).json({ error: String(err) });
+  }
+});
+
+app.get('/api/images/{*imgpath}', async (req, res) => {
+  try {
+    // Get the path after /api/images/
+    const params = req.params as Record<string, string | string[]>;
+    const paramPath = params['imgpath'] ?? '';
+    const requestedPath = Array.isArray(paramPath) ? paramPath.join('/') : String(paramPath);
+    const filePath = resolve(ROOT_DIR, 'images', requestedPath);
+
+    // Security: ensure path is within images/
+    if (!filePath.startsWith(resolve(ROOT_DIR, 'images'))) {
+      res.status(403).json({ error: 'Access denied' });
+      return;
+    }
+
+    const s = await stat(filePath);
+    if (!s.isFile()) {
+      res.status(404).json({ error: 'Not found' });
+      return;
+    }
+
+    // Best practice: photo URLs are versioned (?v=<mtime>), so each version is a
+    // distinct immutable resource -- cache it forever, no revalidation needed.
+    // A changed photo gets a new ?v from /api/photo-versions and is fetched fresh.
+    res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
+
+    if (filePath.endsWith('.img.gz')) {
+      res.setHeader('Content-Type', 'application/gzip');
+    } else if (filePath.endsWith('.jpg') || filePath.endsWith('.jpeg')) {
+      res.setHeader('Content-Type', 'image/jpeg');
+    } else if (filePath.endsWith('.png')) {
+      res.setHeader('Content-Type', 'image/png');
+    }
+
+    const data = await readFile(filePath);
+    res.send(data);
+  } catch {
+    res.status(404).json({ error: 'Not found' });
+  }
+});
+
+// Serve group-folder files (set photos / transcriptions shared per product+version)
+app.get('/api/collections/{*cpath}', async (req, res) => {
+  try {
+    const params = req.params as Record<string, string | string[]>;
+    const paramPath = params['cpath'] ?? '';
+    const requestedPath = Array.isArray(paramPath) ? paramPath.join('/') : String(paramPath);
+    const filePath = resolve(ROOT_DIR, 'collections', requestedPath);
+    if (!filePath.startsWith(resolve(ROOT_DIR, 'collections'))) {
+      res.status(403).json({ error: 'Access denied' });
+      return;
+    }
+    const s = await stat(filePath);
+    if (!s.isFile()) { res.status(404).json({ error: 'Not found' }); return; }
+    res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
+    if (/\.jpe?g$/i.test(filePath)) res.setHeader('Content-Type', 'image/jpeg');
+    else if (filePath.endsWith('.png')) res.setHeader('Content-Type', 'image/png');
+    res.send(await readFile(filePath));
+  } catch {
+    res.status(404).json({ error: 'Not found' });
+  }
+});
+
+// Save a rotated label photo back to disk. The browser re-encodes the image to
+// a canvas-rotated JPEG and posts the bytes; we validate the target is an
+// existing image inside images/ and overwrite it. No server-side image library.
+app.post('/api/images/save-rotation', upload.single('image'), async (req, res) => {
+  try {
+    const relPath = String((req.body as { path?: string }).path ?? '').trim();
+    if (!relPath || !req.file) {
+      res.status(400).json({ error: 'path and image are required' });
+      return;
+    }
+    const imagesRoot = resolve(ROOT_DIR, 'images');
+    const collsRoot = resolve(ROOT_DIR, 'collections');
+    const target = resolve(ROOT_DIR, relPath);
+    const inside = (root: string) => target === root || target.startsWith(root + sep);
+    if (!inside(imagesRoot) && !inside(collsRoot)) {
+      res.status(403).json({ error: 'Path must be inside images/ or collections/' });
+      return;
+    }
+    if (!/\.(jpe?g|png)$/i.test(target)) {
+      res.status(400).json({ error: 'Target is not an image file' });
+      return;
+    }
+    const st = await stat(target).catch(() => null);
+    if (!st || !st.isFile()) {
+      res.status(404).json({ error: 'Image not found' });
+      return;
+    }
+    const data = await readFile(req.file.path);
+    await writeFile(target, data);
+    const { unlink } = await import('fs/promises');
+    await unlink(req.file.path).catch(() => { /* temp cleanup best-effort */ });
+    const newVersion = Math.round((await stat(target)).mtimeMs); // for versioned-URL cache bust
+    res.json({ success: true, path: relPath, bytes: data.length, version: newVersion });
+  } catch (err) {
+    res.status(500).json({ error: String(err) });
+  }
+});
+
+// Serve favicon
+app.get('/favicon.ico', async (_req, res) => {
+  const paths = [
+    resolve(__dirname, '..', 'src', 'ui', 'favicon.ico'),
+    resolve(__dirname, 'ui', 'favicon.ico'),
+  ];
+  for (const p of paths) {
+    try {
+      const data = await readFile(p);
+      res.setHeader('Content-Type', 'image/x-icon');
+      res.send(data);
+      return;
+    } catch { /* try next */ }
+  }
+  res.status(404).end();
+});
+
+// Serve the web UI
+app.get('/', async (_req, res) => {
+  try {
+    // Try to serve from src/ui/ first (for development), then from dist/ui/
+    const uiPaths = [
+      resolve(__dirname, '..', 'src', 'ui', 'index.html'),
+      resolve(__dirname, 'ui', 'index.html'),
+    ];
+
+    for (const uiPath of uiPaths) {
+      try {
+        const html = await readFile(uiPath, 'utf-8');
+        res.setHeader('Content-Type', 'text/html');
+        res.send(html);
+        return;
+      } catch {
+        // Try next path
+      }
+    }
+
+    res.status(500).send('UI file not found');
+  } catch (err) {
+    res.status(500).json({ error: String(err) });
+  }
+});
+
+// ============================================================
+// Start server
+// ============================================================
+
+app.listen(PORT, () => {
+  console.log(`Norsk Data Software Archive UI running at http://localhost:${PORT}`);
+  console.log(`Repository root: ${ROOT_DIR}`);
+});

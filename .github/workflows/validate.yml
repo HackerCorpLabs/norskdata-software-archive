@@ -1,0 +1,35 @@
+name: Validate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: true
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Build norskdata-ndfs
+        working-directory: externals/norskdata-ndfs/ndfs-ts
+        run: npm install && npx tsc
+
+      - name: Install dependencies
+        working-directory: tools
+        run: npm install
+
+      - name: Build tools
+        working-directory: tools
+        run: npm run build
+
+      - name: Validate catalog
+        run: make check

@@ -1,0 +1,384 @@
+#!/usr/bin/env node
+
+/**
+ * MCP server for the Norsk Data Software Archive.
+ * Exposes floppy catalog search and retrieval tools via the Model Context Protocol.
+ */
+
+import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
+import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js';
+import { z } from 'zod';
+import { readFile } from 'fs/promises';
+import { join, resolve } from 'path';
+import type { CatalogEntry } from '../types.js';
+
+// --- Data loading ---
+
+interface Product {
+  Id: string;
+  Name: string;
+}
+
+let entries: CatalogEntry[] = [];
+let products: Product[] = [];
+let searchIndex: { entry: CatalogEntry; text: string }[] = [];
+
+/**
+ * Resolve the archive root directory.
+ * Uses ARCHIVE_ROOT env var, or falls back to repo root relative to this file.
+ */
+function getArchiveRoot(): string {
+  if (process.env.ARCHIVE_ROOT) {
+    return resolve(process.env.ARCHIVE_ROOT);
+  }
+  // server.ts -> src/mcp/server.ts -> compiled to dist/mcp/server.js
+  // repo root is three levels up from dist/mcp/
+  return resolve(import.meta.dirname ?? '.', '..', '..', '..');
+}
+
+async function loadData(): Promise<void> {
+  const root = getArchiveRoot();
+
+  const floppiesRaw = await readFile(join(root, 'catalog/floppies.json'), 'utf-8');
+  entries = JSON.parse(floppiesRaw);
+
+  const productsRaw = await readFile(join(root, 'catalog/products.json'), 'utf-8');
+  products = JSON.parse(productsRaw);
+
+  // Build search index: concatenate searchable fields into a single lowercase string
+  searchIndex = entries.map(entry => {
+    const parts: string[] = [
+      entry.id,
+      entry.volumeName ?? '',
+      entry.productId ?? '',
+      entry.version ?? '',
+      entry.bootFormat ?? '',
+      entry.storageClass ?? '',
+      ...(entry.tags ?? []),
+    ];
+
+    // Add NDFS file names if available
+    if (entry.ndfs?.files) {
+      for (const f of entry.ndfs.files) {
+        parts.push(f.name);
+      }
+    }
+
+    // Add directory content for legacy entries without parsed NDFS
+    if (entry.directoryContentRaw) {
+      parts.push(entry.directoryContentRaw);
+    }
+
+    return { entry, text: parts.join(' ').toLowerCase() };
+  });
+}
+
+// --- Helper functions ---
+
+function summarizeEntry(entry: CatalogEntry) {
+  return {
+    id: entry.id,
+    volumeName: entry.volumeName,
+    productId: entry.productId,
+    version: entry.version,
+    bootFormat: entry.bootFormat,
+    imageSizeBytes: entry.imageSizeBytes,
+    storageClass: entry.storageClass,
+  };
+}
+
+function findEntry(id: string): CatalogEntry | undefined {
+  const lower = id.toLowerCase();
+  return entries.find(e =>
+    e.id.toLowerCase() === lower ||
+    e.md5.toLowerCase() === lower ||
+    (e.volumeName && e.volumeName.toLowerCase() === lower)
+  );
+}
+
+// --- MCP Server setup ---
+
+const server = new McpServer({
+  name: 'norskdata-software-archive',
+  version: '1.0.0',
+});
+
+// Tool: search_floppies
+server.tool(
+  'search_floppies',
+  'Full-text search across floppy volume names, product IDs, NDFS file names, tags, and directory content',
+  {
+    query: z.string().describe('Search query (substring match)'),
+    limit: z.number().default(10).describe('Maximum results to return'),
+  },
+  async ({ query, limit }) => {
+    const lowerQuery = query.toLowerCase();
+    const matches = searchIndex
+      .filter(item => item.text.includes(lowerQuery))
+      .slice(0, limit)
+      .map(item => summarizeEntry(item.entry));
+
+    return {
+      content: [{
+        type: 'text' as const,
+        text: JSON.stringify({ count: matches.length, results: matches }, null, 2),
+      }],
+    };
+  }
+);
+
+// Tool: get_floppy
+server.tool(
+  'get_floppy',
+  'Get full metadata for a specific floppy image by ID, MD5, SHA256, or volume name',
+  {
+    id: z.string().describe('Catalog ID, MD5 hash, SHA256 hash, or volume name'),
+  },
+  async ({ id }) => {
+    const entry = findEntry(id);
+    if (!entry) {
+      return {
+        content: [{
+          type: 'text' as const,
+          text: JSON.stringify({ error: `No entry found for "${id}"` }),
+        }],
+        isError: true,
+      };
+    }
+    return {
+      content: [{
+        type: 'text' as const,
+        text: JSON.stringify(entry, null, 2),
+      }],
+    };
+  }
+);
+
+// Tool: list_product_floppies
+server.tool(
+  'list_product_floppies',
+  'List all floppy images associated with a product ID',
+  {
+    productId: z.string().describe('Product ID (e.g., "ND-10325")'),
+  },
+  async ({ productId }) => {
+    const lower = productId.toLowerCase();
+    const matches = entries
+      .filter(e => e.productId?.toLowerCase() === lower)
+      .map(summarizeEntry);
+
+    return {
+      content: [{
+        type: 'text' as const,
+        text: JSON.stringify({ productId, count: matches.length, floppies: matches }, null, 2),
+      }],
+    };
+  }
+);
+
+// Tool: list_products
+server.tool(
+  'list_products',
+  'List all known products with their floppy image counts',
+  {},
+  async () => {
+    // Count images per product
+    const countMap = new Map<string, number>();
+    for (const entry of entries) {
+      if (entry.productId) {
+        countMap.set(entry.productId, (countMap.get(entry.productId) ?? 0) + 1);
+      }
+    }
+
+    const result = products.map(p => ({
+      productId: p.Id,
+      productName: p.Name,
+      imageCount: countMap.get(p.Id) ?? 0,
+    }));
+
+    // Also include products that appear in catalog but not in products.json
+    for (const [pid, count] of countMap) {
+      if (!products.find(p => p.Id === pid)) {
+        result.push({ productId: pid, productName: '(unknown)', imageCount: count });
+      }
+    }
+
+    result.sort((a, b) => b.imageCount - a.imageCount);
+
+    return {
+      content: [{
+        type: 'text' as const,
+        text: JSON.stringify({ count: result.length, products: result }, null, 2),
+      }],
+    };
+  }
+);
+
+// Tool: download_floppy
+server.tool(
+  'download_floppy',
+  'Get the local path or Internet Archive URL for a floppy image file',
+  {
+    id: z.string().describe('Catalog ID, MD5 hash, SHA256 hash, or volume name'),
+    targetDir: z.string().optional().describe('Optional target directory for downloaded files'),
+  },
+  async ({ id, targetDir: _targetDir }) => {
+    const entry = findEntry(id);
+    if (!entry) {
+      return {
+        content: [{
+          type: 'text' as const,
+          text: JSON.stringify({ error: `No entry found for "${id}"` }),
+        }],
+        isError: true,
+      };
+    }
+
+    const root = getArchiveRoot();
+    const result: Record<string, string | null> = {
+      id: entry.id,
+      storageClass: entry.storageClass,
+      localPath: null,
+      iaUrl: null,
+    };
+
+    // If in git, provide the local .img.gz path
+    if (entry.storage?.git?.imagePath) {
+      result.localPath = join(root, entry.storage.git.imagePath);
+    }
+
+    // Internet Archive URL
+    if (entry.storage?.internetArchive?.itemId) {
+      const itemId = entry.storage.internetArchive.itemId;
+      result.iaUrl = `https://archive.org/details/${itemId}`;
+    }
+
+    // Legacy Azure URL as fallback
+    if (!result.localPath && !result.iaUrl && entry.storage?.legacyAzure) {
+      result.iaUrl = entry.storage.legacyAzure;
+    }
+
+    return {
+      content: [{
+        type: 'text' as const,
+        text: JSON.stringify(result, null, 2),
+      }],
+    };
+  }
+);
+
+// Tool: list_floppy_files
+server.tool(
+  'list_floppy_files',
+  'List NDFS files inside a floppy image from cached metadata (no download needed)',
+  {
+    id: z.string().describe('Catalog ID, MD5 hash, SHA256 hash, or volume name'),
+  },
+  async ({ id }) => {
+    const entry = findEntry(id);
+    if (!entry) {
+      return {
+        content: [{
+          type: 'text' as const,
+          text: JSON.stringify({ error: `No entry found for "${id}"` }),
+        }],
+        isError: true,
+      };
+    }
+
+    if (!entry.ndfs && !entry.directoryContentRaw) {
+      return {
+        content: [{
+          type: 'text' as const,
+          text: JSON.stringify({
+            id: entry.id,
+            volumeName: entry.volumeName,
+            message: 'No NDFS metadata or directory content available for this image',
+          }, null, 2),
+        }],
+      };
+    }
+
+    const result: Record<string, unknown> = {
+      id: entry.id,
+      volumeName: entry.volumeName,
+      bootFormat: entry.bootFormat,
+    };
+
+    if (entry.ndfs) {
+      result.users = entry.ndfs.users;
+      result.files = entry.ndfs.files;
+    } else if (entry.directoryContentRaw) {
+      result.directoryContentRaw = entry.directoryContentRaw;
+    }
+
+    return {
+      content: [{
+        type: 'text' as const,
+        text: JSON.stringify(result, null, 2),
+      }],
+    };
+  }
+);
+
+// Tool: get_archive_stats
+server.tool(
+  'get_archive_stats',
+  'Get summary statistics about the floppy archive',
+  {},
+  async () => {
+    const byStorageClass: Record<string, number> = {};
+    const byBootFormat: Record<string, number> = {};
+    const productCounts: Record<string, number> = {};
+
+    for (const entry of entries) {
+      const sc = entry.storageClass ?? 'unknown';
+      byStorageClass[sc] = (byStorageClass[sc] ?? 0) + 1;
+
+      const bf = entry.bootFormat ?? 'unknown';
+      byBootFormat[bf] = (byBootFormat[bf] ?? 0) + 1;
+
+      if (entry.productId) {
+        productCounts[entry.productId] = (productCounts[entry.productId] ?? 0) + 1;
+      }
+    }
+
+    // Top 10 products by image count
+    const topProducts = Object.entries(productCounts)
+      .sort(([, a], [, b]) => b - a)
+      .slice(0, 10)
+      .map(([productId, count]) => {
+        const product = products.find(p => p.Id === productId);
+        return { productId, productName: product?.Name ?? '(unknown)', imageCount: count };
+      });
+
+    const stats = {
+      totalImages: entries.length,
+      byStorageClass,
+      byBootFormat,
+      productCount: Object.keys(productCounts).length,
+      topProducts,
+    };
+
+    return {
+      content: [{
+        type: 'text' as const,
+        text: JSON.stringify(stats, null, 2),
+      }],
+    };
+  }
+);
+
+// --- Start server ---
+
+async function main() {
+  await loadData();
+
+  const transport = new StdioServerTransport();
+  await server.connect(transport);
+}
+
+main().catch(err => {
+  console.error('MCP server failed to start:', err);
+  process.exit(1);
+});
