@@ -4692,6 +4692,14 @@ code, pre { font-family: 'Consolas', 'Courier New', monospace; }
       html += '<div style="margin-top:0.75rem"><button class="nd-btn nd-btn-primary nd-btn-sm" id="floppy-save-docs-btn">Save docs</button></div>';
       html += '</div></details>';
 
+      // Danger zone: delete this floppy (write-only)
+      html += '<details class="nd-write-only nd-edit-section nd-card" style="border-color:var(--danger)">';
+      html += '<summary style="cursor:pointer;font-weight:600;color:var(--danger)">Danger zone</summary>';
+      html += '<div style="padding-top:0.75rem">';
+      html += '<p class="nd-text-muted" style="font-size:0.85rem;margin-bottom:0.6rem">Permanently delete this floppy &mdash; removes its <code>.img.gz</code>, <code>.yaml</code> and disk photos from <code>images/' + esc(e.md5 || '') + '/</code> and drops it from the catalog. Shared "set" photos are kept. You still need to commit the change (it shows up on the Changes page).</p>';
+      html += '<button class="nd-btn nd-btn-danger nd-btn-sm" id="floppy-delete-btn" data-id="' + esc(e.id) + '" data-vol="' + esc(e.volumeName || e.id) + '">Delete this floppy</button>';
+      html += '</div></details>';
+
       // NDFS file table
       if (e.ndfs && e.ndfs.files && e.ndfs.files.length > 0) {
         html += '<div class="nd-card" style="padding:0;overflow-x:auto">';
@@ -4833,6 +4841,44 @@ code, pre { font-family: 'Consolas', 'Courier New', monospace; }
       // Wire up edit controls (write-only)
       var mode = document.documentElement.getAttribute('data-mode');
       if (mode !== 'public') {
+        // Delete this floppy -- preview the exact files first, then approve.
+        var delFloppyBtn = document.getElementById('floppy-delete-btn');
+        if (delFloppyBtn) {
+          delFloppyBtn.addEventListener('click', function() {
+            var fid2 = this.getAttribute('data-id');
+            var vol = this.getAttribute('data-vol');
+            var btn = this;
+            function fmtKB(b) { return b >= 1048576 ? (b/1048576).toFixed(1) + ' MB' : Math.max(1, Math.round(b/1024)) + ' KB'; }
+            btn.disabled = true; btn.textContent = 'Checking...';
+            // 1) dry run: ask the server exactly what would be deleted
+            fetch('/api/catalog-entry?id=' + encodeURIComponent(fid2) + '&dryRun=1', { method: 'DELETE' })
+              .then(function(r) { return r.json(); })
+              .then(function(p) {
+                btn.disabled = false; btn.textContent = 'Delete this floppy';
+                if (p.error) { alert('Error: ' + p.error); return; }
+                if (!p.count) { alert('Nothing on disk to delete for this floppy.'); return; }
+                var list = p.files.map(function(f) { return '  - ' + f.path + '  (' + fmtKB(f.bytes) + ')'; }).join('\n');
+                var msg = 'Delete floppy "' + vol + '"?\n\n'
+                  + 'These ' + p.count + ' file(s) (' + fmtKB(p.totalBytes) + ') will be PERMANENTLY deleted:\n\n'
+                  + list + '\n\n'
+                  + 'The floppy is then dropped from the catalog. Shared "set" photos are kept. '
+                  + 'You still need to commit the change on the Changes page.';
+                // 2) approval
+                if (!confirm(msg)) return;
+                // 3) apply
+                btn.disabled = true; btn.textContent = 'Deleting...';
+                fetch('/api/catalog-entry?id=' + encodeURIComponent(fid2), { method: 'DELETE' })
+                  .then(function(r) { return r.json(); })
+                  .then(function(data) {
+                    if (data.error) { alert('Error: ' + data.error); btn.disabled = false; btn.textContent = 'Delete this floppy'; return; }
+                    window.location.hash = '#/catalog';
+                  })
+                  .catch(function(err) { alert('Error: ' + String(err)); btn.disabled = false; btn.textContent = 'Delete this floppy'; });
+              })
+              .catch(function(err) { btn.disabled = false; btn.textContent = 'Delete this floppy'; alert('Error: ' + String(err)); });
+          });
+        }
+
         // Tag add
         var addTagBtn = document.getElementById('floppy-add-tag-btn');
         if (addTagBtn) {

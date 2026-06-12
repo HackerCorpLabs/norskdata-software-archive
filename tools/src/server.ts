@@ -5,7 +5,7 @@
 
 import express from 'express';
 import multer from 'multer';
-import { readFile, readdir, stat, writeFile, rename, copyFile } from 'fs/promises';
+import { readFile, readdir, stat, writeFile, rename, copyFile, rm } from 'fs/promises';
 import { join, resolve, extname, basename, sep } from 'path';
 import { execSync } from 'child_process';
 import { fileURLToPath } from 'url';
@@ -2041,6 +2041,82 @@ app.patch('/api/catalog-entry', async (req, res) => {
     catalog = null;
 
     res.json({ success: true, entry });
+  } catch (err) {
+    res.status(500).json({ error: String(err) });
+  }
+});
+
+// Delete a floppy: remove its .img.gz / .yaml / disk photos from disk, then
+// regenerate the catalog from YAML so it drops out. The change still has to be
+// committed (a tracked floppy shows as a git deletion; an uncommitted import is
+// simply gone). Safety: never delete outside images/; if more than one floppy
+// shares the md5 folder, delete only this entry's own files, not the folder.
+app.delete('/api/catalog-entry', async (req, res) => {
+  try {
+    const entryId = String(req.query.id ?? '');
+    const dryRun = req.query.dryRun === '1' || req.query.dryRun === 'true';
+    if (!entryId) { res.status(400).json({ error: 'Missing id query parameter' }); return; }
+
+    const cat = await getCatalog();
+    const entry = cat.entries.find(e => e.id === entryId);
+    if (!entry) { res.status(404).json({ error: 'Entry not found' }); return; }
+
+    const git = entry.storage?.git;
+    if (!git?.yamlPath) { res.status(400).json({ error: 'Entry has no file on disk to delete' }); return; }
+
+    const imagesRoot = resolve(ROOT_DIR, 'images');
+    const insideImages = (rel: string) => {
+      const abs = resolve(ROOT_DIR, rel);
+      return abs === imagesRoot || abs.startsWith(imagesRoot + sep) ? abs : null;
+    };
+
+    const folderRel = dirname(git.yamlPath);
+    const folderAbs = insideImages(folderRel);
+    if (!folderAbs || folderAbs === imagesRoot) {
+      res.status(400).json({ error: `Refusing to delete outside an images/{md5} folder: ${folderRel}` });
+      return;
+    }
+
+    // How many catalog entries live in this same folder?
+    const siblings = cat.entries.filter(
+      e => e.storage?.git?.yamlPath && dirname(e.storage.git.yamlPath) === folderRel
+    );
+    const wholeFolder = siblings.length <= 1;
+
+    // Build the exact list of files that will be removed -- the .img.gz, .yaml,
+    // photos, labels.txt, logs -- with sizes, so the UI can show it for approval.
+    const plan: { path: string; bytes: number }[] = [];
+    const addFile = async (rel: string) => {
+      const abs = insideImages(rel);
+      if (!abs) return;
+      try { const s = await stat(abs); if (s.isFile()) plan.push({ path: rel, bytes: s.size }); } catch { /* gone */ }
+    };
+    if (wholeFolder) {
+      // Sole occupant -> everything in the md5 folder.
+      for (const name of await readdir(folderAbs)) await addFile(join(folderRel, name));
+    } else {
+      // Shared folder -> only this entry's own files (img, yaml, disk photos).
+      for (const rel of [git.imagePath, git.yamlPath, ...(git.diskPhotos ?? [])].filter(Boolean) as string[]) await addFile(rel);
+    }
+
+    if (dryRun) {
+      res.json({
+        preview: true, id: entryId, volumeName: entry.volumeName, wholeFolder, folder: folderRel,
+        files: plan, count: plan.length, totalBytes: plan.reduce((a, f) => a + f.bytes, 0),
+      });
+      return;
+    }
+
+    // Apply.
+    if (wholeFolder) {
+      await rm(folderAbs, { recursive: true, force: true });
+    } else {
+      for (const f of plan) { const abs = insideImages(f.path); if (abs) await rm(abs, { force: true }); }
+    }
+    await persistCatalog(ROOT_DIR);
+    catalog = null;
+
+    res.json({ success: true, deleted: entryId, removed: plan.map(f => f.path) });
   } catch (err) {
     res.status(500).json({ error: String(err) });
   }
