@@ -1778,12 +1778,22 @@ app.get('/api/git/status', async (_req, res) => {
     const lines = statusOutput.replace(/\n$/, '').split('\n').filter(l => l.length > 0);
     const isDirty = lines.length > 0;
 
+    // "Unpushed" = commits on this branch not yet on ITS OWN remote branch
+    // (@{u}). Counting against origin/main is wrong: a pushed feature branch
+    // shows its commits as "unpushed" even though they're already on the remote
+    // (and in a PR). Fall back to origin/main only when the branch has no
+    // upstream yet (never pushed -- then everything ahead of main is unpushed).
     let unpushed = 0;
     try {
-      const logOutput = execSync('git log origin/main..HEAD --oneline 2>/dev/null', { cwd: ROOT_DIR }).toString();
+      const logOutput = execSync('git log @{u}..HEAD --oneline 2>/dev/null', { cwd: ROOT_DIR }).toString();
       unpushed = logOutput.trim() ? logOutput.trim().split('\n').length : 0;
     } catch {
-      // No remote tracking or no commits
+      try {
+        const logOutput = execSync('git log origin/main..HEAD --oneline 2>/dev/null', { cwd: ROOT_DIR }).toString();
+        unpushed = logOutput.trim() ? logOutput.trim().split('\n').length : 0;
+      } catch {
+        // No remote tracking or no commits
+      }
     }
 
     let branch = 'unknown';
