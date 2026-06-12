@@ -20,12 +20,13 @@ GitHub repo (this)              Internet Archive
   images/{md5}/                   norskdata-software collection
     image.img.gz                  (permanent binary storage)
     metadata.yaml                  stable download URLs
-  catalog/floppies.json
+  collections/{product}/          shared "set" photos (one copy per product+version)
+  catalog/floppies.json           generated from the YAML
   tools/ (CLI + web UI + MCP)
-  site/ (GitHub Pages)
+  site/                           generated + gitignored (GitHub Pages preview)
 ```
 
-- **YAML per floppy is the source of truth.** Each `.img.gz` has a `.yaml` file next to it with all metadata. `catalog/floppies.json` is generated from these YAML files.
+- **YAML per floppy is the source of truth.** Each `.img.gz` has a `.yaml` file next to it with all metadata. `catalog/floppies.json`, `catalog/products.json`, `catalog/index.json` and `site/` are all **generated** from the YAML -- never edited by hand. `site/` is gitignored (CI rebuilds it on every push).
 - **Content-addressed storage.** Each image lives in `images/{md5}/` -- the folder is named by the full MD5 hash of the raw image. Folders never change, even when metadata is updated.
 - **NDFS parsing.** Every image is parsed using the [norskdata-ndfs](https://github.com/HackerCorpLabs/norskdata-ndfs) library to extract volume name, boot format, user listings, and file listings.
 - **Floppy images in git.** Images <=1.3 MB are stored compressed in the repo. Larger artifacts (HDD images, tapes) go to Internet Archive.
@@ -196,6 +197,8 @@ images/
 ```
 
 The YAML file contains all classification (product, version, tags). The folder structure is purely content-addressed and never changes.
+
+**Per-disk vs. set photos.** A photo whose name matches the disk (e.g. `ND-10022T.JPG`) stays in the image folder as that disk's photo. A *shared* "set" photo (one label/box photo for a whole multi-disk product) is consolidated into a product group folder, `collections/{product}-{version}/`, so it is stored once and attached to every disk in that set instead of duplicated per image.
 
 ---
 
@@ -400,8 +403,13 @@ images/                     Compressed floppy images + metadata
   {md5}/                      One folder per image (MD5 hash)
     filename.img.gz             Compressed floppy image
     filename.yaml               Metadata (source of truth)
-    *.JPG                       Label photos
+    *.JPG                       Per-disk label photos
     labels.txt                  Label transcription
+
+collections/                Shared "set" photos, grouped by product+version
+  {product}-{version}/        One folder per set; photos attached to every disk
+    group.yaml                  Which photos belong to the set
+    *.JPG                       The shared set/box photos
 
 products/                   Product YAML files (id, name, categories, platform)
 
@@ -417,15 +425,18 @@ tools/                      Node.js/TypeScript tooling
       import.ts               Single image import pipeline
       import-folder.ts        Batch folder import
       product-matcher.ts      ND product number matching
-      catalog.ts              YAML/JSON catalog read/write
+      catalog.ts              YAML/JSON catalog read/write (single persist path)
       static-site-builder.ts  GitHub Pages generator (main site)
       site-builder.ts         Per-product HTML pages
     mcp/
       server.ts               MCP server
     ui/
       index.html              Web UI (single-page app)
+  scripts/
+    persistence-proof.sh      Proof: mutations survive a regenerate-from-YAML
+    roundtrip-proof.mjs       Proof: every field round-trips through YAML
 
-site/                       GitHub Pages static site (generated)
+site/                       GitHub Pages static site (generated, gitignored)
 ```
 
 ---
