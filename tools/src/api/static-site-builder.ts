@@ -1168,6 +1168,21 @@ code, pre { font-family: 'Consolas', 'Courier New', monospace; }
   .ndfs-viewer-layout { flex-direction: column; }
   .ndfs-user-panel { width: 100%; border-right: none; border-bottom: 1px solid var(--border); }
 }
+
+/* About page typography. The global reset (* { margin:0; padding:0 }) strips
+   list indentation, which left bullets flush against the card edge. Restore a
+   comfortable, well-indented layout -- scoped to .nd-about. */
+.nd-about h2 { margin-bottom: 0.5rem; }
+.nd-about .nd-card { padding: 1.25rem 1.5rem; margin-bottom: 1.1rem; }
+.nd-about .nd-card h3 { margin-bottom: 0.7rem; }
+.nd-about p { line-height: 1.7; margin-bottom: 0.6rem; }
+.nd-about p:last-child { margin-bottom: 0; }
+.nd-about ul, .nd-about ol { padding-left: 2.25rem; margin: 0.5rem 0 0.25rem; }
+.nd-about ul { list-style: disc; }
+.nd-about ol { list-style: decimal; }
+.nd-about li { margin-bottom: 0.55rem; line-height: 1.65; padding-left: 0.35rem; }
+.nd-about li:last-child { margin-bottom: 0; }
+.nd-about li::marker { color: var(--text-muted); }
 `;
 }
 
@@ -1866,7 +1881,7 @@ function getAppJS(): string {
     }
 
     view.innerHTML =
-      '<div style="max-width:800px">' +
+      '<div class="nd-about" style="max-width:820px">' +
 
       '<h2>About this project</h2>' +
       '<p style="font-size:1.05rem;line-height:1.7;margin-bottom:1.5rem">' +
