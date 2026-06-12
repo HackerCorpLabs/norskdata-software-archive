@@ -1589,10 +1589,63 @@ app.post('/api/git/commit', async (req, res) => {
   }
 });
 
+const DEFAULT_BRANCH = 'main';
+
 app.post('/api/git/push', async (_req, res) => {
   try {
-    const output = execSync('git push origin main 2>&1', { cwd: ROOT_DIR }).toString();
+    const branch = execSync('git branch --show-current', { cwd: ROOT_DIR }).toString().trim();
+    // Direct push to the default branch is not allowed -- changes must go through
+    // a feature branch and a pull request.
+    if (branch === DEFAULT_BRANCH || branch === 'master') {
+      res.status(403).json({ error: `Direct push to ${branch} is not allowed. Use "Create branch & PR" to open a pull request.` });
+      return;
+    }
+    const output = execSync(`git push -u origin ${branch} 2>&1`, { cwd: ROOT_DIR }).toString();
     res.json({ success: true, output });
+  } catch (err) {
+    res.status(500).json({ error: String(err) });
+  }
+});
+
+// Move the current changes (uncommitted and/or local commits on the default
+// branch) onto a NEW feature branch, push it, and open a pull request. Leaves
+// the default branch clean (reset to origin), so nothing lands on it directly.
+app.post('/api/git/branch-pr', async (req, res) => {
+  try {
+    const body = req.body as { branch?: string; title?: string; message?: string; body?: string };
+    const branch = String(body.branch ?? '').trim().replace(/\s+/g, '-').replace(/[^a-zA-Z0-9._/-]/g, '');
+    if (!branch) { res.status(400).json({ error: 'A branch name is required' }); return; }
+    if (branch === DEFAULT_BRANCH || branch === 'master') { res.status(400).json({ error: 'Pick a branch name other than the default branch' }); return; }
+
+    const message = String(body.message ?? body.title ?? 'Update').trim();
+    const title = String(body.title ?? message).trim();
+    const prBody = String(body.body ?? '').trim();
+    const log: string[] = [];
+    const run = (cmd: string) => { const out = execSync(cmd, { cwd: ROOT_DIR }).toString(); log.push(`$ ${cmd}\n${out}`.trim()); return out; };
+
+    // Create the branch at the current HEAD (carries uncommitted changes + any
+    // local commits along), then commit anything still uncommitted.
+    run(`git checkout -b ${branch}`);
+    const dirty = execSync('git status --porcelain', { cwd: ROOT_DIR }).toString().trim();
+    if (dirty) {
+      run('git add -A');
+      run(`git commit -m ${JSON.stringify(message)}`);
+    }
+    run(`git push -u origin ${branch} 2>&1`);
+
+    let prUrl: string | null = null;
+    try {
+      prUrl = run(`gh pr create --base ${DEFAULT_BRANCH} --head ${branch} --title ${JSON.stringify(title)} --body ${JSON.stringify(prBody)} 2>&1`).trim();
+    } catch (e) {
+      log.push(`gh pr create failed (branch is pushed; open the PR manually): ${String(e)}`);
+    }
+
+    // Leave the default branch clean: switch back and reset to origin so nothing
+    // stays committed on it locally.
+    run(`git checkout ${DEFAULT_BRANCH}`);
+    run(`git reset --hard origin/${DEFAULT_BRANCH}`);
+
+    res.json({ success: true, branch, prUrl, log: log.join('\n\n') });
   } catch (err) {
     res.status(500).json({ error: String(err) });
   }

@@ -4357,8 +4357,15 @@ code, pre { font-family: 'Consolas', 'Courier New', monospace; }
       // Diff button
       h += '<div class="nd-action-btns">';
       h += '<button class="nd-btn" id="actions-diff-btn">Review diff</button>';
+      var onDefaultBranch = (gs.branch === 'main' || gs.branch === 'master');
+      var hasWork = !gs.clean || gs.unpushed > 0;
       h += '<button class="nd-btn nd-btn-primary" id="actions-commit-btn"' + (gs.clean ? ' disabled' : '') + '>Commit</button>';
-      h += '<button class="nd-btn" id="actions-push-btn"' + (gs.unpushed === 0 ? ' disabled' : '') + '>Push</button>';
+      if (onDefaultBranch) {
+        // Direct push to main is not allowed -- go through a branch + PR.
+        h += '<button class="nd-btn" id="actions-branchpr-btn"' + (hasWork ? '' : ' disabled') + ' title="Move these changes to a new branch and open a pull request">Create branch &amp; PR</button>';
+      } else {
+        h += '<button class="nd-btn" id="actions-push-btn"' + (gs.unpushed === 0 ? ' disabled' : '') + '>Push branch</button>';
+      }
       h += '<button class="nd-btn nd-btn-danger" id="actions-revert-btn"' + (gs.clean ? ' disabled' : '') + '>Revert all</button>';
       h += '</div>';
 
@@ -4434,10 +4441,11 @@ code, pre { font-family: 'Consolas', 'Courier New', monospace; }
         });
       });
 
-      document.getElementById('actions-push-btn').addEventListener('click', function() {
+      var pushBtn = document.getElementById('actions-push-btn');
+      if (pushBtn) pushBtn.addEventListener('click', function() {
         var logEl = document.getElementById('actions-log');
         logEl.style.display = 'block';
-        logEl.textContent = 'Pushing to origin...\n';
+        logEl.textContent = 'Pushing branch to origin...\n';
         fetch('/api/git/push', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
@@ -4445,6 +4453,30 @@ code, pre { font-family: 'Consolas', 'Courier New', monospace; }
         }).then(function(r) { return r.json(); }).then(function(data) {
           if (data.error) { logEl.textContent += 'Error: ' + data.error + '\n'; return; }
           logEl.textContent += 'Pushed: ' + (data.output || 'OK') + '\n';
+          loadGitStatus().then(function() { renderActions(el); });
+        }).catch(function(err) {
+          logEl.textContent += 'Error: ' + String(err) + '\n';
+        });
+      });
+
+      var branchPrBtn = document.getElementById('actions-branchpr-btn');
+      if (branchPrBtn) branchPrBtn.addEventListener('click', function() {
+        var suggested = 'import-' + new Date().toISOString().slice(0, 10);
+        var branch = prompt('New branch name (changes will be moved here, then a PR opened):', suggested);
+        if (!branch) return;
+        var title = (document.getElementById('actions-commit-msg').value || '').trim();
+        if (!title) { title = prompt('Pull request title:', 'Update catalog') || ''; if (!title) return; }
+        var logEl = document.getElementById('actions-log');
+        logEl.style.display = 'block';
+        logEl.textContent = 'Creating branch "' + branch + '", committing, pushing, opening PR...\n';
+        fetch('/api/git/branch-pr', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ branch: branch, title: title, message: title })
+        }).then(function(r) { return r.json(); }).then(function(data) {
+          if (data.error) { logEl.textContent += 'Error: ' + data.error + '\n'; return; }
+          logEl.textContent += (data.log || '') + '\n';
+          logEl.textContent += data.prUrl ? ('\n✓ Pull request: ' + data.prUrl + '\n') : '\nBranch pushed; open the PR on GitHub.\n';
           loadGitStatus().then(function() { renderActions(el); });
         }).catch(function(err) {
           logEl.textContent += 'Error: ' + String(err) + '\n';
@@ -4969,7 +5001,7 @@ code, pre { font-family: 'Consolas', 'Courier New', monospace; }
           '<li>The page shows all uncommitted files grouped by type (images, products, catalog, etc.)</li>' +
           '<li>Review the changes to make sure everything looks right</li>' +
           '<li>Enter a commit message and click <strong>Commit</strong></li>' +
-          '<li>After committing, click <strong>Push</strong> to publish to GitHub</li>' +
+          '<li>Click <strong>Create branch &amp; PR</strong> to move the changes to a branch and open a pull request (direct push to main is not allowed)</li>' +
         '</ol>' +
         '<p style="margin-top:0.5rem"><strong>Tip:</strong> The status bar at the bottom shows uncommitted changes and unpushed commits at all times.</p>' +
       '</div>' +
@@ -4982,7 +5014,7 @@ code, pre { font-family: 'Consolas', 'Courier New', monospace; }
           '<li><strong>Match</strong> &mdash; Go through the matcher queue: link, create, or manually assign products</li>' +
           '<li><strong>Enrich</strong> &mdash; Add descriptions, platforms, and categories to new products</li>' +
           '<li><strong>Review</strong> &mdash; Check the Changes page, commit with a descriptive message</li>' +
-          '<li><strong>Push</strong> &mdash; Push to GitHub so it shows up on the public site</li>' +
+          '<li><strong>Create branch &amp; PR</strong> &mdash; Move your commits to a feature branch and open a pull request (review &amp; merge on GitHub; nothing is pushed straight to main)</li>' +
         '</ol>' +
       '</div>' +
 
