@@ -1,0 +1,46 @@
+id: img-6d200001bc4c
+volumeName: RDIR
+md5: 6d200001bc4cf136d4a491120475bb2f
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 123
+  files:
+    - name: IR-UPDATE-B:PROG
+      type: PROG
+      pages: 121
+      bytes: 313344
+      userName: FLOPPY-USER
+      dateCreated: 2254239409
+      lastDateRead: 2262078402
+      lastDateWritten: 2254239414
+      dateCreatedStr: 1983-09-14 15:26:49
+      lastDateReadStr: 1983-11-10 09:15:02
+      lastDateWrittenStr: 1983-09-14 15:26:54
+      bpunValid: null
+provenance:
+  contributor: fvdm
+  originalPath: RDIR/RDIR Nr4.img
+  dateImaged: 2026-06-12
+  importedAt: 2026-06-12T19:42:14.342Z
+photos:
+  disk: []
+  set:
+    - DSC_0772.JPG
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-6d200001bc4c
+  syncStatus: pending

@@ -1,0 +1,86 @@
+id: nd-210337-i04-d1-2b3843b6
+volumeName: 210337I04-XX-01S
+md5: 2b3843b6929c3736836c8e67df2074e9
+product:
+  id: ND-210337
+  version: I04
+  diskNumber: 1
+  language: XX
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 126
+  files:
+    - name: INST-BASY-I04:PROG
+      type: PROG
+      pages: 60
+      bytes: 181592
+      userName: FLOPPY-USER
+      dateCreated: 2522778703
+      lastDateRead: 2523853606
+      lastDateWritten: 2522778704
+      dateCreatedStr: 1987-09-15 08:49:15
+      lastDateReadStr: 1987-09-23 15:12:38
+      lastDateWrittenStr: 1987-09-15 08:49:16
+      bpunValid: null
+    - name: RESERVE-SYSTEM:MODE
+      type: MODE
+      pages: 2
+      bytes: 2692
+      userName: FLOPPY-USER
+      dateCreated: 2522157530
+      lastDateRead: null
+      lastDateWritten: 2522157532
+      dateCreatedStr: 1987-09-10 17:07:26
+      lastDateReadStr: null
+      lastDateWrittenStr: 1987-09-10 17:07:28
+      bpunValid: null
+    - name: RESERVE-SYSTEM:BATC
+      type: BATC
+      pages: 1
+      bytes: 1830
+      userName: FLOPPY-USER
+      dateCreated: 2522157538
+      lastDateRead: null
+      lastDateWritten: 2522157539
+      dateCreatedStr: 1987-09-10 17:07:34
+      lastDateReadStr: null
+      lastDateWrittenStr: 1987-09-10 17:07:35
+      bpunValid: null
+    - name: BACKUP-SERV-I02:PROG
+      type: PROG
+      pages: 58
+      bytes: 117032
+      userName: FLOPPY-USER
+      dateCreated: 2522157544
+      lastDateRead: 2523853650
+      lastDateWritten: 2522157546
+      dateCreatedStr: 1987-09-10 17:07:40
+      lastDateReadStr: 1987-09-23 15:13:18
+      lastDateWrittenStr: 1987-09-10 17:07:42
+      bpunValid: null
+provenance:
+  contributor: fvdm
+  originalPath: 210337I04-XX/210337I04-XX-01S.img
+  dateImaged: 2026-06-12
+  importedAt: 2026-06-12T19:42:10.893Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-210337-i04-d1-2b3843b6
+  syncStatus: pending

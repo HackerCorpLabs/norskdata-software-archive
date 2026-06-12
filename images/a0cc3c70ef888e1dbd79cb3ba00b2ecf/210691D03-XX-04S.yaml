@@ -1,0 +1,62 @@
+id: nd-210691-d03-d4-a0cc3c70
+volumeName: 210691D03-XX-04S
+md5: a0cc3c70ef888e1dbd79cb3ba00b2ecf
+product:
+  id: ND-210691
+  version: D03
+  diskNumber: 4
+  language: XX
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 130
+  files:
+    - name: DS-SUPPORT-D03:PROG
+      type: PROG
+      pages: 113
+      bytes: 262144
+      userName: FLOPPY-USER
+      dateCreated: 2566589203
+      lastDateRead: 2566701261
+      lastDateWritten: 2566589213
+      dateCreatedStr: 1988-03-29 16:44:19
+      lastDateReadStr: 1988-03-30 12:03:13
+      lastDateWrittenStr: 1988-03-29 16:44:29
+      bpunValid: null
+    - name: DS-SUBSTITUTE:PROG
+      type: PROG
+      pages: 14
+      bytes: 28672
+      userName: FLOPPY-USER
+      dateCreated: 2566589352
+      lastDateRead: 2566701253
+      lastDateWritten: 2566589353
+      dateCreatedStr: 1988-03-29 16:46:40
+      lastDateReadStr: 1988-03-30 12:03:05
+      lastDateWrittenStr: 1988-03-29 16:46:41
+      bpunValid: null
+provenance:
+  contributor: fvdm
+  originalPath: 210691D03-NO/210691D03-XX-04S.img
+  dateImaged: 2026-06-12
+  importedAt: 2026-06-12T19:42:12.014Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-210691-d03-d4-a0cc3c70
+  syncStatus: pending

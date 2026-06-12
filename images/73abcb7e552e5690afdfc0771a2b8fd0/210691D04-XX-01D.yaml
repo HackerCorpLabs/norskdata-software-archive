@@ -1,0 +1,122 @@
+id: nd-210691-d04-d1-73abcb7e
+volumeName: 210691D04-XX-01D
+md5: 73abcb7e552e5690afdfc0771a2b8fd0
+product:
+  id: ND-210691
+  version: D04
+  diskNumber: 1
+  language: XX
+image:
+  sizeBytes: 1261568
+  format: raw
+  controller: floppy
+  totalPages: 616
+  pageSize: 2048
+  bootFormat: none
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 307
+  files:
+    - name: DS-XCOM-A06:PROG
+      type: PROG
+      pages: 45
+      bytes: 151552
+      userName: FLOPPY-USER
+      dateCreated: 2588985720
+      lastDateRead: null
+      lastDateWritten: 2588985728
+      dateCreatedStr: 1988-09-08 12:37:56
+      lastDateReadStr: null
+      lastDateWrittenStr: 1988-09-08 12:38:00
+      bpunValid: null
+    - name: DS-INSTALL-D:XCOM
+      type: XCOM
+      pages: 41
+      bytes: 81031
+      userName: FLOPPY-USER
+      dateCreated: 2588985752
+      lastDateRead: null
+      lastDateWritten: 2588985753
+      dateCreatedStr: 1988-09-08 12:38:24
+      lastDateReadStr: null
+      lastDateWrittenStr: 1988-09-08 12:38:25
+      bpunValid: null
+    - name: INSTALL-DS-D:PROG
+      type: PROG
+      pages: 4
+      bytes: 135168
+      userName: FLOPPY-USER
+      dateCreated: 2588985779
+      lastDateRead: null
+      lastDateWritten: 2588985780
+      dateCreatedStr: 1988-09-08 12:38:51
+      lastDateReadStr: null
+      lastDateWrittenStr: 1988-09-08 12:38:52
+      bpunValid: null
+    - name: DDBTABLES-G03:VTM
+      type: VTM
+      pages: 37
+      bytes: 75320
+      userName: FLOPPY-USER
+      dateCreated: 2588985786
+      lastDateRead: null
+      lastDateWritten: 2588985792
+      dateCreatedStr: 1988-09-08 12:38:58
+      lastDateReadStr: null
+      lastDateWrittenStr: 1988-09-08 12:39:00
+      bpunValid: null
+    - name: DS-SEG1-D04:PROG
+      type: PROG
+      pages: 69
+      bytes: 409600
+      userName: FLOPPY-USER
+      dateCreated: 2588985817
+      lastDateRead: null
+      lastDateWritten: 2588985819
+      dateCreatedStr: 1988-09-08 12:39:25
+      lastDateReadStr: null
+      lastDateWrittenStr: 1988-09-08 12:39:27
+      bpunValid: null
+    - name: DS-SEG2-D04:PROG
+      type: PROG
+      pages: 60
+      bytes: 403456
+      userName: FLOPPY-USER
+      dateCreated: 2588985883
+      lastDateRead: null
+      lastDateWritten: 2588985884
+      dateCreatedStr: 1988-09-08 12:40:27
+      lastDateReadStr: null
+      lastDateWrittenStr: 1988-09-08 12:40:28
+      bpunValid: null
+    - name: DS-BDSEG-D04:BPUN
+      type: BPUN
+      pages: 43
+      bytes: 87467
+      userName: FLOPPY-USER
+      dateCreated: 2588985947
+      lastDateRead: null
+      lastDateWritten: 2588985948
+      dateCreatedStr: 1988-09-08 12:41:27
+      lastDateReadStr: null
+      lastDateWrittenStr: 1988-09-08 12:41:28
+      bpunValid: true
+provenance:
+  contributor: fvdm
+  originalPath: 210691D04-NO/210691D04-XX-01D.img
+  dateImaged: 2026-06-12
+  importedAt: 2026-06-12T19:42:12.356Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-210691-d04-d1-73abcb7e
+  syncStatus: pending

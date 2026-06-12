@@ -1,0 +1,62 @@
+id: nd-10079-m08-d2-420c29d7
+volumeName: 10079M08-XX-2S
+md5: 420c29d708e0b937b6422c7fe97b2d4a
+product:
+  id: ND-10079
+  version: M08
+  diskNumber: 2
+  language: XX
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 136
+  files:
+    - name: WP-EDITOR-M08:PROG
+      type: PROG
+      pages: 66
+      bytes: 135168
+      userName: FLOPPY-USER
+      dateCreated: 2565785187
+      lastDateRead: null
+      lastDateWritten: 2565785190
+      dateCreatedStr: 1988-03-23 12:25:35
+      lastDateReadStr: null
+      lastDateWrittenStr: 1988-03-23 12:25:38
+      bpunValid: null
+    - name: WP-CMD-M08:PROG
+      type: PROG
+      pages: 67
+      bytes: 137216
+      userName: FLOPPY-USER
+      dateCreated: 2565785257
+      lastDateRead: null
+      lastDateWritten: 2565785259
+      dateCreatedStr: 1988-03-23 12:26:41
+      lastDateReadStr: null
+      lastDateWrittenStr: 1988-03-23 12:26:43
+      bpunValid: null
+provenance:
+  contributor: fvdm
+  originalPath: 10079M08-NO/10079M08-XX-02S.img
+  dateImaged: 2026-06-12
+  importedAt: 2026-06-12T19:42:10.547Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10079-m08-d2-420c29d7
+  syncStatus: pending

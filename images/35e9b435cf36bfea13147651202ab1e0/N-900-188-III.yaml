@@ -1,0 +1,118 @@
+id: os-n-900-188-i-35e9b435
+volumeName: N-900-188-III
+md5: 35e9b435cf36bfea13147651202ab1e0
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+ndfs:
+  users:
+    - name: SYSTEM
+      pagesUsed: 114
+  files:
+    - name: NEW-SYSTEM:PROG
+      type: PROG
+      pages: 22
+      bytes: 36864
+      userName: SYSTEM
+      dateCreated: 2385286380
+      lastDateRead: 2457665972
+      lastDateWritten: 2385286385
+      dateCreatedStr: 1985-08-22 09:19:44
+      lastDateReadStr: 1986-09-30 16:06:52
+      lastDateWrittenStr: 1985-08-22 09:19:49
+      bpunValid: null
+    - name: F32-FMAC-1920C:PROG
+      type: PROG
+      pages: 15
+      bytes: 28792
+      userName: SYSTEM
+      dateCreated: 2334336881
+      lastDateRead: 2334336898
+      lastDateWritten: 2334336898
+      dateCreatedStr: 1984-12-17 18:29:49
+      lastDateReadStr: 1984-12-17 18:30:02
+      lastDateWrittenStr: 1984-12-17 18:30:02
+      bpunValid: null
+    - name: F48-FMAC-1408D:PROG
+      type: PROG
+      pages: 15
+      bytes: 28792
+      userName: SYSTEM
+      dateCreated: 2334336882
+      lastDateRead: 2457666006
+      lastDateWritten: 2334336903
+      dateCreatedStr: 1984-12-17 18:29:50
+      lastDateReadStr: 1986-09-30 16:07:22
+      lastDateWrittenStr: 1984-12-17 18:30:07
+      bpunValid: null
+    - name: DMAC-1915F:BPUN
+      type: BPUN
+      pages: 20
+      bytes: 37001
+      userName: SYSTEM
+      dateCreated: 2334336883
+      lastDateRead: 2457666013
+      lastDateWritten: 2334336908
+      dateCreatedStr: 1984-12-17 18:29:51
+      lastDateReadStr: 1986-09-30 16:07:29
+      lastDateWrittenStr: 1984-12-17 18:30:12
+      bpunValid: true
+    - name: FILSYS-SYMBOLS:SYMB
+      type: SYMB
+      pages: 25
+      bytes: 39191
+      userName: SYSTEM
+      dateCreated: 2334336884
+      lastDateRead: 2457665992
+      lastDateWritten: 2334336915
+      dateCreatedStr: 1984-12-17 18:29:52
+      lastDateReadStr: 1986-09-30 16:07:08
+      lastDateWrittenStr: 1984-12-17 18:30:19
+      bpunValid: null
+    - name: RTLO-SYMBOLS:SYMB
+      type: SYMB
+      pages: 9
+      bytes: 16378
+      userName: SYSTEM
+      dateCreated: 2334336886
+      lastDateRead: 2457666001
+      lastDateWritten: 2334336922
+      dateCreatedStr: 1984-12-17 18:29:54
+      lastDateReadStr: 1986-09-30 16:07:17
+      lastDateWrittenStr: 1984-12-17 18:30:26
+      bpunValid: null
+    - name: COS-TADADM:BPUN
+      type: BPUN
+      pages: 6
+      bytes: 7184
+      userName: SYSTEM
+      dateCreated: 2334336887
+      lastDateRead: 2457666022
+      lastDateWritten: 2334336925
+      dateCreatedStr: 1984-12-17 18:29:55
+      lastDateReadStr: 1986-09-30 16:07:38
+      lastDateWrittenStr: 1984-12-17 18:30:29
+      bpunValid: true
+provenance:
+  contributor: fvdm
+  originalPath: Sintran III Version J 86-08-04/N-900-188-III.img
+  dateImaged: 2026-06-12
+  importedAt: 2026-06-12T19:42:15.249Z
+photos:
+  disk: []
+  set:
+    - DSC_0778.JPG
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-os-n-900-188-i-35e9b435
+  syncStatus: pending

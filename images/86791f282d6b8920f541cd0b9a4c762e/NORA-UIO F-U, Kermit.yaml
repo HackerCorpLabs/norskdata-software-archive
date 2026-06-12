@@ -1,0 +1,82 @@
+id: img-86791f282d6b
+volumeName: NORA-UIO
+md5: 86791f282d6b8920f541cd0b9a4c762e
+image:
+  sizeBytes: 1261568
+  format: raw
+  controller: floppy
+  totalPages: 616
+  pageSize: 2048
+  bootFormat: none
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 34
+  files:
+    - name: KERMIT:DOC
+      type: DOC
+      pages: 1
+      bytes: 1964
+      userName: FLOPPY-USER
+      dateCreated: 2376163879
+      lastDateRead: 2781269263
+      lastDateWritten: 2376163880
+      dateCreatedStr: 1985-06-16 22:08:39
+      lastDateReadStr: 1991-07-03 12:52:15
+      lastDateWrittenStr: 1985-06-16 22:08:40
+      bpunValid: null
+    - name: KERMIT:PROG
+      type: PROG
+      pages: 23
+      bytes: 45568
+      userName: FLOPPY-USER
+      dateCreated: 2376163842
+      lastDateRead: 2781269268
+      lastDateWritten: 2376163847
+      dateCreatedStr: 1985-06-16 22:08:02
+      lastDateReadStr: 1991-07-03 12:52:20
+      lastDateWrittenStr: 1985-06-16 22:08:07
+      bpunValid: null
+    - name: KERMIT:HELP
+      type: HELP
+      pages: 4
+      bytes: 6915
+      userName: FLOPPY-USER
+      dateCreated: 2376163866
+      lastDateRead: 2781269278
+      lastDateWritten: 2376163868
+      dateCreatedStr: 1985-06-16 22:08:26
+      lastDateReadStr: 1991-07-03 12:52:30
+      lastDateWrittenStr: 1985-06-16 22:08:28
+      bpunValid: null
+    - name: KERMIT:HLIB
+      type: HLIB
+      pages: 1
+      bytes: 420
+      userName: FLOPPY-USER
+      dateCreated: 2376163874
+      lastDateRead: 2781269282
+      lastDateWritten: 2376163875
+      dateCreatedStr: 1985-06-16 22:08:34
+      lastDateReadStr: 1991-07-03 12:52:34
+      lastDateWrittenStr: 1985-06-16 22:08:35
+      bpunValid: null
+provenance:
+  contributor: fvdm
+  originalPath: NTH-Ketmit (5.25 inch)/NORA-UIO F-U, Kermit.img
+  dateImaged: 2026-06-12
+  importedAt: 2026-06-12T19:42:14.085Z
+photos:
+  disk:
+    - NORA-UIO F-U, Kermit.JPG
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-86791f282d6b
+  syncStatus: pending

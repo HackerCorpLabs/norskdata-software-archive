@@ -1,0 +1,86 @@
+id: nd-210691-d03-d1-f6f6511f
+volumeName: 210691D03-XX-01S
+md5: f6f6511f1a437560a91ce7b11d37d622
+product:
+  id: ND-210691
+  version: D03
+  diskNumber: 1
+  language: XX
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 132
+  files:
+    - name: DS-XCOM-A06:PROG
+      type: PROG
+      pages: 45
+      bytes: 151552
+      userName: FLOPPY-USER
+      dateCreated: 2566702950
+      lastDateRead: null
+      lastDateWritten: 2566702960
+      dateCreatedStr: 1988-03-30 12:29:38
+      lastDateReadStr: null
+      lastDateWrittenStr: 1988-03-30 12:29:48
+      bpunValid: null
+    - name: DS-INSTALL-D:XCOM
+      type: XCOM
+      pages: 41
+      bytes: 80865
+      userName: FLOPPY-USER
+      dateCreated: 2566703004
+      lastDateRead: null
+      lastDateWritten: 2566703005
+      dateCreatedStr: 1988-03-30 12:30:28
+      lastDateReadStr: null
+      lastDateWrittenStr: 1988-03-30 12:30:29
+      bpunValid: null
+    - name: INSTALL-DS-D:PROG
+      type: PROG
+      pages: 4
+      bytes: 135168
+      userName: FLOPPY-USER
+      dateCreated: 2566703062
+      lastDateRead: null
+      lastDateWritten: 2566703064
+      dateCreatedStr: 1988-03-30 12:31:22
+      lastDateReadStr: null
+      lastDateWrittenStr: 1988-03-30 12:31:24
+      bpunValid: null
+    - name: DDBTABLES-G03:VTM
+      type: VTM
+      pages: 37
+      bytes: 75320
+      userName: FLOPPY-USER
+      dateCreated: 2566703074
+      lastDateRead: null
+      lastDateWritten: 2566703075
+      dateCreatedStr: 1988-03-30 12:31:34
+      lastDateReadStr: null
+      lastDateWrittenStr: 1988-03-30 12:31:35
+      bpunValid: null
+provenance:
+  contributor: fvdm
+  originalPath: 210691D03-NO/210691D03-XX-01S.img
+  dateImaged: 2026-06-12
+  importedAt: 2026-06-12T19:42:11.838Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-210691-d03-d1-f6f6511f
+  syncStatus: pending

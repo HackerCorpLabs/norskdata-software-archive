@@ -1,0 +1,109 @@
+id: nd-10079-l01-d1-94431c61
+volumeName: 10079L01-1
+md5: 94431c610794510a56387f8e3ee35767
+product:
+  id: ND-10079
+  version: L01
+  diskNumber: 1
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 101
+  files:
+    - name: WP-PRINTERS-L00:SYMB
+      type: SYMB
+      pages: 3
+      bytes: 3849
+      userName: FLOPPY-USER
+      dateCreated: 2321992230
+      lastDateRead: 2332772176
+      lastDateWritten: 2321992235
+      dateCreatedStr: 1984-09-19 12:40:38
+      lastDateReadStr: 1984-12-05 20:29:16
+      lastDateWrittenStr: 1984-09-19 12:40:43
+      bpunValid: null
+    - name: DDBTABLES-D-D:VTM
+      type: VTM
+      pages: 6
+      bytes: 11180
+      userName: FLOPPY-USER
+      dateCreated: 2321992248
+      lastDateRead: 2332772187
+      lastDateWritten: 2321992249
+      dateCreatedStr: 1984-09-19 12:40:56
+      lastDateReadStr: 1984-12-05 20:29:27
+      lastDateWrittenStr: 1984-09-19 12:40:57
+      bpunValid: null
+    - name: INST-WP-100-L01:COM
+      type: COM
+      pages: 21
+      bytes: 40739
+      userName: FLOPPY-USER
+      dateCreated: 2321992306
+      lastDateRead: 2332772069
+      lastDateWritten: 2325786289
+      dateCreatedStr: 1984-09-19 12:41:50
+      lastDateReadStr: 1984-12-05 20:27:37
+      lastDateWrittenStr: 1984-10-16 10:58:49
+      bpunValid: null
+    - name: INSTALL-WP-100-L:PROG
+      type: PROG
+      pages: 3
+      bytes: 6144
+      userName: FLOPPY-USER
+      dateCreated: 2321992340
+      lastDateRead: 2332772046
+      lastDateWritten: 2321992342
+      dateCreatedStr: 1984-09-19 12:42:20
+      lastDateReadStr: 1984-12-05 20:27:14
+      lastDateWrittenStr: 1984-09-19 12:42:22
+      bpunValid: null
+    - name: XCOM-L02:PROG
+      type: PROG
+      pages: 59
+      bytes: 182272
+      userName: FLOPPY-USER
+      dateCreated: 2321992695
+      lastDateRead: 2332772048
+      lastDateWritten: 2321992696
+      dateCreatedStr: 1984-09-19 12:47:55
+      lastDateReadStr: 1984-12-05 20:27:16
+      lastDateWrittenStr: 1984-09-19 12:47:56
+      bpunValid: null
+    - name: DITAP:PROG
+      type: PROG
+      pages: 2
+      bytes: 2088
+      userName: FLOPPY-USER
+      dateCreated: 2321993064
+      lastDateRead: 2332772199
+      lastDateWritten: 2321993065
+      dateCreatedStr: 1984-09-19 12:53:40
+      lastDateReadStr: 1984-12-05 20:29:39
+      lastDateWrittenStr: 1984-09-19 12:53:41
+      bpunValid: null
+provenance:
+  contributor: fvdm
+  originalPath: 10079L01 (5.25 inch)/10079L01-XX-01S.img
+  dateImaged: 2026-06-12
+  importedAt: 2026-06-12T19:42:09.436Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10079-l01-d1-94431c61
+  syncStatus: pending

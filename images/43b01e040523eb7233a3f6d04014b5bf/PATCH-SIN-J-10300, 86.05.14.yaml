@@ -1,0 +1,106 @@
+id: patch-nd-patch-sin-j-43b01e04
+volumeName: ND-PATCH-SIN-J
+md5: 43b01e040523eb7233a3f6d04014b5bf
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+ndfs:
+  users:
+    - name: SYSTEM
+      pagesUsed: 139
+  files:
+    - name: MULTI-FUNCTION:PROG
+      type: PROG
+      pages: 18
+      bytes: 36864
+      userName: SYSTEM
+      dateCreated: 2438810845
+      lastDateRead: 2457667375
+      lastDateWritten: 2438810850
+      dateCreatedStr: 1986-05-14 20:51:29
+      lastDateReadStr: 1986-09-30 16:28:47
+      lastDateWrittenStr: 1986-05-14 20:51:34
+      bpunValid: null
+    - name: START-PATCH-FILE:MODE
+      type: MODE
+      pages: 3
+      bytes: 4193
+      userName: SYSTEM
+      dateCreated: 2438810880
+      lastDateRead: 2457666117
+      lastDateWritten: 2438810881
+      dateCreatedStr: 1986-05-14 20:52:00
+      lastDateReadStr: 1986-09-30 16:09:05
+      lastDateWrittenStr: 1986-05-14 20:52:01
+      bpunValid: null
+    - name: PATCH-FILE:MODE
+      type: MODE
+      pages: 2
+      bytes: 3677
+      userName: SYSTEM
+      dateCreated: 2438810896
+      lastDateRead: 2457666317
+      lastDateWritten: 2438810897
+      dateCreatedStr: 1986-05-14 20:52:16
+      lastDateReadStr: 1986-09-30 16:12:13
+      lastDateWrittenStr: 1986-05-14 20:52:17
+      bpunValid: null
+    - name: PATCHES:PATC
+      type: PATC
+      pages: 105
+      bytes: 214193
+      userName: SYSTEM
+      dateCreated: 2438810903
+      lastDateRead: 2457666458
+      lastDateWritten: 2438810904
+      dateCreatedStr: 1986-05-14 20:52:23
+      lastDateReadStr: 1986-09-30 16:14:26
+      lastDateWrittenStr: 1986-05-14 20:52:24
+      bpunValid: null
+    - name: REFERENCE:FADM
+      type: FADM
+      pages: 3
+      bytes: 4998
+      userName: SYSTEM
+      dateCreated: 2438811077
+      lastDateRead: 2457666370
+      lastDateWritten: 2438811079
+      dateCreatedStr: 1986-05-14 20:55:05
+      lastDateReadStr: 1986-09-30 16:13:02
+      lastDateWrittenStr: 1986-05-14 20:55:07
+      bpunValid: null
+    - name: SYMBOLS:FADM
+      type: FADM
+      pages: 1
+      bytes: 33
+      userName: SYSTEM
+      dateCreated: 2438811089
+      lastDateRead: 2457666377
+      lastDateWritten: 2438811090
+      dateCreatedStr: 1986-05-14 20:55:17
+      lastDateReadStr: 1986-09-30 16:13:09
+      lastDateWrittenStr: 1986-05-14 20:55:18
+      bpunValid: null
+provenance:
+  contributor: fvdm
+  originalPath: Sintran III J Patch 10300/PATCH-SIN-J-10300, 86.05.14.img
+  dateImaged: 2026-06-12
+  importedAt: 2026-06-12T19:42:14.566Z
+photos:
+  disk: []
+  set:
+    - DSC_0793.JPG
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-patch-nd-patch-sin-j-43b01e04
+  syncStatus: pending

@@ -1,0 +1,98 @@
+id: nd-10079-m08-d4-a34ba51c
+volumeName: 10079M08-NO-4S
+md5: a34ba51ce14eb2e4e78b11c9fd1dc149
+product:
+  id: ND-10079
+  version: M08
+  diskNumber: 4
+  language: NO
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 137
+  files:
+    - name: NOTIS-WP-NO-M06:HELP
+      type: HELP
+      pages: 52
+      bytes: 405504
+      userName: FLOPPY-USER
+      dateCreated: 2565799554
+      lastDateRead: 2565799557
+      lastDateWritten: 2565799557
+      dateCreatedStr: 1988-03-23 15:58:02
+      lastDateReadStr: 1988-03-23 15:58:05
+      lastDateWrittenStr: 1988-03-23 15:58:05
+      bpunValid: null
+    - name: NOTIS-TF-NO-M05:LIB
+      type: LIB
+      pages: 33
+      bytes: 67568
+      userName: FLOPPY-USER
+      dateCreated: 2565799620
+      lastDateRead: null
+      lastDateWritten: 2565799621
+      dateCreatedStr: 1988-03-23 15:59:04
+      lastDateReadStr: null
+      lastDateWrittenStr: 1988-03-23 15:59:05
+      bpunValid: null
+    - name: TAB-HY-NO-J1:HBRF
+      type: HBRF
+      pages: 16
+      bytes: 32651
+      userName: FLOPPY-USER
+      dateCreated: 2565799663
+      lastDateRead: null
+      lastDateWritten: 2565799665
+      dateCreatedStr: 1988-03-23 15:59:47
+      lastDateReadStr: null
+      lastDateWrittenStr: 1988-03-23 15:59:49
+      bpunValid: null
+    - name: NOTIS-WP-NO-M03:ERR
+      type: ERR
+      pages: 29
+      bytes: 59136
+      userName: FLOPPY-USER
+      dateCreated: 2565799951
+      lastDateRead: null
+      lastDateWritten: 2565799952
+      dateCreatedStr: 1988-03-23 16:00:15
+      lastDateReadStr: null
+      lastDateWrittenStr: 1988-03-23 16:00:16
+      bpunValid: null
+    - name: NOTIS-WP-NO-M03:INIT
+      type: INIT
+      pages: 1
+      bytes: 698
+      userName: FLOPPY-USER
+      dateCreated: 2565800008
+      lastDateRead: null
+      lastDateWritten: 2565800009
+      dateCreatedStr: 1988-03-23 16:01:08
+      lastDateReadStr: null
+      lastDateWrittenStr: 1988-03-23 16:01:09
+      bpunValid: null
+provenance:
+  contributor: fvdm
+  originalPath: 10079M08-NO/10079M08-NO-04S.img
+  dateImaged: 2026-06-12
+  importedAt: 2026-06-12T19:42:10.431Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10079-m08-d4-a34ba51c
+  syncStatus: pending

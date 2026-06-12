@@ -1,0 +1,181 @@
+id: nd-10142-b-d3-8d3eabae
+volumeName: ND-10142B-PART3
+md5: 8d3eabae040bb3564fa0f865adadc97b
+product:
+  id: ND-10142
+  version: B
+  diskNumber: 3
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: flomon
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 115
+  files:
+    - name: BOOK-B:BRF
+      type: BRF
+      pages: 16
+      bytes: 31699
+      userName: FLOPPY-USER
+      dateCreated: 2243621012
+      lastDateRead: 2294504960
+      lastDateWritten: 2243621019
+      dateCreatedStr: 1983-06-29 15:02:20
+      lastDateReadStr: 1984-03-01 21:56:00
+      lastDateWrittenStr: 1983-06-29 15:02:27
+      bpunValid: null
+    - name: LOAD-B:BRF
+      type: BRF
+      pages: 16
+      bytes: 32613
+      userName: FLOPPY-USER
+      dateCreated: 2243621088
+      lastDateRead: 2294504969
+      lastDateWritten: 2243621090
+      dateCreatedStr: 1983-06-29 15:03:32
+      lastDateReadStr: 1984-03-01 21:56:09
+      lastDateWrittenStr: 1983-06-29 15:03:34
+      bpunValid: null
+    - name: EDIT-B:BRF
+      type: BRF
+      pages: 18
+      bytes: 34906
+      userName: FLOPPY-USER
+      dateCreated: 2243621160
+      lastDateRead: 2294504977
+      lastDateWritten: 2243621161
+      dateCreatedStr: 1983-06-29 15:04:40
+      lastDateReadStr: 1984-03-01 21:56:17
+      lastDateWrittenStr: 1983-06-29 15:04:41
+      bpunValid: null
+    - name: SORT-B:BRF
+      type: BRF
+      pages: 10
+      bytes: 19050
+      userName: FLOPPY-USER
+      dateCreated: 2243621241
+      lastDateRead: 2294504987
+      lastDateWritten: 2243621242
+      dateCreatedStr: 1983-06-29 15:05:57
+      lastDateReadStr: 1984-03-01 21:56:27
+      lastDateWrittenStr: 1983-06-29 15:05:58
+      bpunValid: null
+    - name: FREQPV-B:BRF
+      type: BRF
+      pages: 10
+      bytes: 20400
+      userName: FLOPPY-USER
+      dateCreated: 2243621293
+      lastDateRead: 2294504994
+      lastDateWritten: 2254116527
+      dateCreatedStr: 1983-06-29 15:06:45
+      lastDateReadStr: 1984-03-01 21:56:34
+      lastDateWrittenStr: 1983-09-13 17:26:47
+      bpunValid: null
+    - name: FREQX1-B:BRF
+      type: BRF
+      pages: 1
+      bytes: 1256
+      userName: FLOPPY-USER
+      dateCreated: 2243621344
+      lastDateRead: 2294505002
+      lastDateWritten: 2243621345
+      dateCreatedStr: 1983-06-29 15:07:32
+      lastDateReadStr: 1984-03-01 21:56:42
+      lastDateWrittenStr: 1983-06-29 15:07:33
+      bpunValid: null
+    - name: FREQX2-B:BRF
+      type: BRF
+      pages: 1
+      bytes: 1858
+      userName: FLOPPY-USER
+      dateCreated: 2243621358
+      lastDateRead: 2294505006
+      lastDateWritten: 2243621360
+      dateCreatedStr: 1983-06-29 15:07:46
+      lastDateReadStr: 1984-03-01 21:56:46
+      lastDateWrittenStr: 1983-06-29 15:07:48
+      bpunValid: null
+    - name: FREQX3-B:BRF
+      type: BRF
+      pages: 4
+      bytes: 6915
+      userName: FLOPPY-USER
+      dateCreated: 2243621377
+      lastDateRead: 2294505011
+      lastDateWritten: 2243621379
+      dateCreatedStr: 1983-06-29 15:08:01
+      lastDateReadStr: 1984-03-01 21:56:51
+      lastDateWrittenStr: 1983-06-29 15:08:03
+      bpunValid: null
+    - name: FREQX6-B:BRF
+      type: BRF
+      pages: 7
+      bytes: 13467
+      userName: FLOPPY-USER
+      dateCreated: 2243621404
+      lastDateRead: 2294505016
+      lastDateWritten: 2243621406
+      dateCreatedStr: 1983-06-29 15:08:28
+      lastDateReadStr: 1984-03-01 21:56:56
+      lastDateWrittenStr: 1983-06-29 15:08:30
+      bpunValid: null
+    - name: FREQP1-B:BRF
+      type: BRF
+      pages: 8
+      bytes: 15540
+      userName: FLOPPY-USER
+      dateCreated: 2243621450
+      lastDateRead: 2294505026
+      lastDateWritten: 2243621451
+      dateCreatedStr: 1983-06-29 15:09:10
+      lastDateReadStr: 1984-03-01 21:57:02
+      lastDateWrittenStr: 1983-06-29 15:09:11
+      bpunValid: null
+    - name: FREQP2-B:BRF
+      type: BRF
+      pages: 3
+      bytes: 5556
+      userName: FLOPPY-USER
+      dateCreated: 2243621522
+      lastDateRead: 2294505033
+      lastDateWritten: 2243621524
+      dateCreatedStr: 1983-06-29 15:10:18
+      lastDateReadStr: 1984-03-01 21:57:09
+      lastDateWrittenStr: 1983-06-29 15:10:20
+      bpunValid: null
+    - name: FREQP6-B:BRF
+      type: BRF
+      pages: 8
+      bytes: 16384
+      userName: FLOPPY-USER
+      dateCreated: 2243621547
+      lastDateRead: 2294505038
+      lastDateWritten: 2243621548
+      dateCreatedStr: 1983-06-29 15:10:43
+      lastDateReadStr: 1984-03-01 21:57:14
+      lastDateWrittenStr: 1983-06-29 15:10:44
+      bpunValid: null
+provenance:
+  contributor: fvdm
+  originalPath: ND-10142B/ND-10142B-PART3.img
+  dateImaged: 2026-06-12
+  importedAt: 2026-06-12T19:42:13.193Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10142-b-d3-8d3eabae
+  syncStatus: pending

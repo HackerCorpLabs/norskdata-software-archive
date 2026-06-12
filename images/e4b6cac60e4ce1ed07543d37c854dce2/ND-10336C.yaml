@@ -1,0 +1,48 @@
+id: nd-10336-c-d1-e4b6cac6
+volumeName: ND-10336C
+md5: e4b6cac60e4ce1ed07543d37c854dce2
+product:
+  id: ND-10336
+  version: C
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: bpun
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 55
+  files:
+    - name: DEBUGGER:BPUN
+      type: BPUN
+      pages: 53
+      bytes: 107060
+      userName: FLOPPY-USER
+      dateCreated: 2193161706
+      lastDateRead: 2199947123
+      lastDateWritten: 2199311268
+      dateCreatedStr: 1982-10-28 15:55:42
+      lastDateReadStr: 1982-12-16 08:29:51
+      lastDateWrittenStr: 1982-12-11 13:14:36
+      bpunValid: true
+provenance:
+  contributor: fvdm
+  originalPath: ND-10336C/ND-10336C.img
+  dateImaged: 2026-06-12
+  importedAt: 2026-06-12T19:42:13.866Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10336-c-d1-e4b6cac6
+  syncStatus: pending

@@ -1,0 +1,106 @@
+id: patch-nd-patch-sin-k-33a02cb7
+volumeName: ND-PATCH-SIN-K
+md5: 33a02cb7dc37d459d238cebde260bc21
+image:
+  sizeBytes: 1310720
+  format: raw
+  controller: floppy
+  totalPages: 640
+  pageSize: 2048
+  bootFormat: flomon
+ndfs:
+  users:
+    - name: SYSTEM
+      pagesUsed: 157
+  files:
+    - name: NEW-SYSTEM:PROG
+      type: PROG
+      pages: 18
+      bytes: 36864
+      userName: SYSTEM
+      dateCreated: 2586748117
+      lastDateRead: 2592816453
+      lastDateWritten: 2586748125
+      dateCreatedStr: 1988-08-23 10:19:21
+      lastDateReadStr: 1988-10-05 19:53:05
+      lastDateWrittenStr: 1988-08-23 10:19:29
+      bpunValid: null
+    - name: START-PATCH-FILE:MODE
+      type: MODE
+      pages: 1
+      bytes: 1808
+      userName: SYSTEM
+      dateCreated: 2586748121
+      lastDateRead: 2592815384
+      lastDateWritten: 2586748129
+      dateCreatedStr: 1988-08-23 10:19:25
+      lastDateReadStr: 1988-10-05 19:36:24
+      lastDateWrittenStr: 1988-08-23 10:19:33
+      bpunValid: null
+    - name: PATCH-FILE:MODE
+      type: MODE
+      pages: 2
+      bytes: 3138
+      userName: SYSTEM
+      dateCreated: 2586748122
+      lastDateRead: 2592815410
+      lastDateWritten: 2586748130
+      dateCreatedStr: 1988-08-23 10:19:26
+      lastDateReadStr: 1988-10-05 19:36:50
+      lastDateWrittenStr: 1988-08-23 10:19:34
+      bpunValid: null
+    - name: SYMBOLS:FADM
+      type: FADM
+      pages: 1
+      bytes: 17
+      userName: SYSTEM
+      dateCreated: 2588058342
+      lastDateRead: 2592815433
+      lastDateWritten: 2590802488
+      dateCreatedStr: 1988-09-01 10:11:38
+      lastDateReadStr: 1988-10-05 19:37:09
+      lastDateWrittenStr: 1988-09-22 08:08:56
+      bpunValid: null
+    - name: PATCHES:PATC
+      type: PATC
+      pages: 127
+      bytes: 258222
+      userName: SYSTEM
+      dateCreated: 2588058390
+      lastDateRead: 2592815566
+      lastDateWritten: 2590701399
+      dateCreatedStr: 1988-09-01 10:12:22
+      lastDateReadStr: 1988-10-05 19:39:14
+      lastDateWrittenStr: 1988-09-21 15:29:23
+      bpunValid: null
+    - name: REFERENCE:FADM
+      type: FADM
+      pages: 5
+      bytes: 8991
+      userName: SYSTEM
+      dateCreated: 2586748210
+      lastDateRead: 2592815412
+      lastDateWritten: 2586748211
+      dateCreatedStr: 1988-08-23 10:20:50
+      lastDateReadStr: 1988-10-05 19:36:52
+      lastDateWrittenStr: 1988-08-23 10:20:51
+      bpunValid: null
+provenance:
+  contributor: fvdm
+  originalPath: Sintran III K Patch 011411 (211291K12, 5.25 inch)/211291K12-XX-01D.img
+  dateImaged: 2026-06-12
+  importedAt: 2026-06-12T19:42:14.945Z
+photos:
+  disk:
+    - 211291K12-XX-01D.JPG
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-patch-nd-patch-sin-k-33a02cb7
+  syncStatus: pending

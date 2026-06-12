@@ -1,0 +1,50 @@
+id: nd-10079-m07-d2-1be01d4d
+volumeName: 10079M07-NO-2S
+md5: 1be01d4de7bbfc2fb0aef61691ec37d5
+product:
+  id: ND-10079
+  version: M07
+  diskNumber: 2
+  language: NO
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 101
+  files:
+    - name: NOTIS-TF-NO-M07:PROG
+      type: PROG
+      pages: 99
+      bytes: 202752
+      userName: FLOPPY-USER
+      dateCreated: 2501823430
+      lastDateRead: 2501825076
+      lastDateWritten: 2501823433
+      dateCreatedStr: 1987-04-15 12:47:06
+      lastDateReadStr: 1987-04-15 13:08:52
+      lastDateWrittenStr: 1987-04-15 12:47:09
+      bpunValid: null
+provenance:
+  contributor: fvdm
+  originalPath: 10079M07-NO/10079M07-NO-02S.img
+  dateImaged: 2026-06-12
+  importedAt: 2026-06-12T19:42:09.852Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10079-m07-d2-1be01d4d
+  syncStatus: pending

@@ -1,0 +1,98 @@
+id: nd-10079-m08-d1-ff060602
+volumeName: 10079M08-XX-1S
+md5: ff060602701c7ad4b598034095a4f809
+product:
+  id: ND-10079
+  version: M08
+  diskNumber: 1
+  language: XX
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 113
+  files:
+    - name: WP-SETUP-M03:XCOM
+      type: XCOM
+      pages: 13
+      bytes: 24151
+      userName: FLOPPY-USER
+      dateCreated: 2565781898
+      lastDateRead: null
+      lastDateWritten: 2565781899
+      dateCreatedStr: 1988-03-23 11:38:10
+      lastDateReadStr: null
+      lastDateWrittenStr: 1988-03-23 11:38:11
+      bpunValid: null
+    - name: INST-WP-100-M04:PROG
+      type: PROG
+      pages: 66
+      bytes: 195144
+      userName: FLOPPY-USER
+      dateCreated: 2565781775
+      lastDateRead: null
+      lastDateWritten: 2565781776
+      dateCreatedStr: 1988-03-23 11:36:15
+      lastDateReadStr: null
+      lastDateWrittenStr: 1988-03-23 11:36:16
+      bpunValid: null
+    - name: DDBTABLES-E05:VTM
+      type: VTM
+      pages: 11
+      bytes: 20756
+      userName: FLOPPY-USER
+      dateCreated: 2565781916
+      lastDateRead: null
+      lastDateWritten: 2565781917
+      dateCreatedStr: 1988-03-23 11:38:28
+      lastDateReadStr: null
+      lastDateWrittenStr: 1988-03-23 11:38:29
+      bpunValid: null
+    - name: WP-PRINTERS-L04:SYMB
+      type: SYMB
+      pages: 4
+      bytes: 7070
+      userName: FLOPPY-USER
+      dateCreated: 2565781933
+      lastDateRead: null
+      lastDateWritten: 2565781934
+      dateCreatedStr: 1988-03-23 11:38:45
+      lastDateReadStr: null
+      lastDateWrittenStr: 1988-03-23 11:38:46
+      bpunValid: null
+    - name: TF-LIB-COMPRESS:PROG
+      type: PROG
+      pages: 13
+      bytes: 26624
+      userName: FLOPPY-USER
+      dateCreated: 2565782728
+      lastDateRead: null
+      lastDateWritten: 2565782729
+      dateCreatedStr: 1988-03-23 11:51:08
+      lastDateReadStr: null
+      lastDateWrittenStr: 1988-03-23 11:51:09
+      bpunValid: null
+provenance:
+  contributor: fvdm
+  originalPath: 10079M08-NO/10079M08-XX-01S.img
+  dateImaged: 2026-06-12
+  importedAt: 2026-06-12T19:42:10.491Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10079-m08-d1-ff060602
+  syncStatus: pending

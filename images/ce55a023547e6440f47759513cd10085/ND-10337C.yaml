@@ -1,0 +1,48 @@
+id: nd-10337-c-d1-ce55a023
+volumeName: ND-10337C
+md5: ce55a023547e6440f47759513cd10085
+product:
+  id: ND-10337
+  version: C
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: bpun
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 46
+  files:
+    - name: BACKUP-SYSTEM-C:BPUN
+      type: BPUN
+      pages: 44
+      bytes: 88615
+      userName: FLOPPY-USER
+      dateCreated: 2222260371
+      lastDateRead: 2223413315
+      lastDateWritten: 2223298076
+      dateCreatedStr: 1983-01-26 16:02:19
+      lastDateReadStr: 1983-02-03 09:33:03
+      lastDateWrittenStr: 1983-02-02 13:24:28
+      bpunValid: true
+provenance:
+  contributor: fvdm
+  originalPath: ND-10337C/ND-10337C.img
+  dateImaged: 2026-06-12
+  importedAt: 2026-06-12T19:42:13.969Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10337-c-d1-ce55a023
+  syncStatus: pending

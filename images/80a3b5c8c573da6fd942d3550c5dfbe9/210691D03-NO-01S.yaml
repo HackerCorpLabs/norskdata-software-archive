@@ -1,0 +1,62 @@
+id: nd-210691-d03-d1-80a3b5c8
+volumeName: 210691D03-NO-01S
+md5: 80a3b5c8c573da6fd942d3550c5dfbe9
+product:
+  id: ND-210691
+  version: D03
+  diskNumber: 1
+  language: NO
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 143
+  files:
+    - name: UE-RENAME-A01:PROG
+      type: PROG
+      pages: 19
+      bytes: 38912
+      userName: FLOPPY-USER
+      dateCreated: 2566591290
+      lastDateRead: null
+      lastDateWritten: 2566591303
+      dateCreatedStr: 1988-03-29 17:12:58
+      lastDateReadStr: null
+      lastDateWrittenStr: 1988-03-29 17:13:07
+      bpunValid: null
+    - name: UE-ERMSG-NO-C06:ERR
+      type: ERR
+      pages: 121
+      bytes: 247808
+      userName: FLOPPY-USER
+      dateCreated: 2566591319
+      lastDateRead: null
+      lastDateWritten: 2566591321
+      dateCreatedStr: 1988-03-29 17:13:23
+      lastDateReadStr: null
+      lastDateWrittenStr: 1988-03-29 17:13:25
+      bpunValid: null
+provenance:
+  contributor: fvdm
+  originalPath: 210691D03-NO/210691D03-NO-01S.img
+  dateImaged: 2026-06-12
+  importedAt: 2026-06-12T19:42:11.622Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-210691-d03-d1-80a3b5c8
+  syncStatus: pending

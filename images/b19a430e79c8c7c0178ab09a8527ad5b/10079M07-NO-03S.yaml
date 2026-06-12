@@ -1,0 +1,50 @@
+id: nd-10079-m07-d3-b19a430e
+volumeName: 10079M07-NO-3S
+md5: b19a430e79c8c7c0178ab09a8527ad5b
+product:
+  id: ND-10079
+  version: M07
+  diskNumber: 3
+  language: NO
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: flomon
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 148
+  files:
+    - name: NOTIS-WP-NO-M06:HELP
+      type: HELP
+      pages: 146
+      bytes: 299008
+      userName: FLOPPY-USER
+      dateCreated: 2454367617
+      lastDateRead: 2501825244
+      lastDateWritten: 2454779400
+      dateCreatedStr: 1986-09-05 10:54:01
+      lastDateReadStr: 1987-04-15 13:11:28
+      lastDateWrittenStr: 1986-09-08 15:24:08
+      bpunValid: null
+provenance:
+  contributor: fvdm
+  originalPath: 10079M07-NO/10079M07-NO-03S.img
+  dateImaged: 2026-06-12
+  importedAt: 2026-06-12T19:42:09.912Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10079-m07-d3-b19a430e
+  syncStatus: pending

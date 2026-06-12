@@ -1,0 +1,74 @@
+id: nd-210691-d03-d3-419e58da
+volumeName: 210691D03-NO-03S
+md5: 419e58daee82bf7089ae9a3fbe1572d8
+product:
+  id: ND-210691
+  version: D03
+  diskNumber: 3
+  language: NO
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 145
+  files:
+    - name: NOTIS-DS-NO-D03:PROG
+      type: PROG
+      pages: 116
+      bytes: 403456
+      userName: FLOPPY-USER
+      dateCreated: 2566591862
+      lastDateRead: 2566691546
+      lastDateWritten: 2566591867
+      dateCreatedStr: 1988-03-29 17:21:54
+      lastDateReadStr: 1988-03-30 09:43:26
+      lastDateWrittenStr: 1988-03-29 17:21:59
+      bpunValid: null
+    - name: NOTIS-DS-NO-D03:CONF
+      type: CONF
+      pages: 13
+      bytes: 154126
+      userName: FLOPPY-USER
+      dateCreated: 2566592028
+      lastDateRead: 2566701653
+      lastDateWritten: 2566592030
+      dateCreatedStr: 1988-03-29 17:24:28
+      lastDateReadStr: 1988-03-30 12:09:21
+      lastDateWrittenStr: 1988-03-29 17:24:30
+      bpunValid: null
+    - name: BA-PICT-NO-D03:CONF
+      type: CONF
+      pages: 12
+      bytes: 152892
+      userName: FLOPPY-USER
+      dateCreated: 2566592056
+      lastDateRead: 2566701661
+      lastDateWritten: 2566592057
+      dateCreatedStr: 1988-03-29 17:24:56
+      lastDateReadStr: 1988-03-30 12:09:29
+      lastDateWrittenStr: 1988-03-29 17:24:57
+      bpunValid: null
+provenance:
+  contributor: fvdm
+  originalPath: 210691D03-NO/210691D03-NO-03S.img
+  dateImaged: 2026-06-12
+  importedAt: 2026-06-12T19:42:11.761Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-210691-d03-d3-419e58da
+  syncStatus: pending

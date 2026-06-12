@@ -1,0 +1,142 @@
+id: img-b154be0f7b24
+volumeName: GRAFS-1
+md5: b154be0f7b241782de5f618230e85269
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+ndfs:
+  users:
+    - name: LASSE
+      pagesUsed: 139
+  files:
+    - name: GRAFS:BPUN
+      type: BPUN
+      pages: 65
+      bytes: 131446
+      userName: LASSE
+      dateCreated: 2109011122
+      lastDateRead: 694769253
+      lastDateWritten: 2109011138
+      dateCreatedStr: 1981-06-26 15:18:50
+      lastDateReadStr: 1960-05-20 21:25:37
+      lastDateWrittenStr: 1981-06-26 15:19:02
+      bpunValid: null
+    - name: MAIN-GRAFS:BPUN
+      type: BPUN
+      pages: 29
+      bytes: 57718
+      userName: LASSE
+      dateCreated: 2109011235
+      lastDateRead: 694769292
+      lastDateWritten: 2109011236
+      dateCreatedStr: 1981-06-26 15:20:35
+      lastDateReadStr: 1960-05-20 21:26:12
+      lastDateWrittenStr: 1981-06-26 15:20:36
+      bpunValid: true
+    - name: DB-GRAFS:BPUN
+      type: BPUN
+      pages: 29
+      bytes: 57718
+      userName: LASSE
+      dateCreated: 2109011292
+      lastDateRead: 694769309
+      lastDateWritten: 2109011295
+      dateCreatedStr: 1981-06-26 15:21:28
+      lastDateReadStr: 1960-05-20 21:26:29
+      lastDateWrittenStr: 1981-06-26 15:21:31
+      bpunValid: true
+    - name: DUMP-GRAFS:MODE
+      type: MODE
+      pages: 1
+      bytes: 443
+      userName: LASSE
+      dateCreated: 2109011359
+      lastDateRead: 2257113104
+      lastDateWritten: 2109011360
+      dateCreatedStr: 1981-06-26 15:22:31
+      lastDateReadStr: 1983-10-04 13:00:16
+      lastDateWrittenStr: 1981-06-26 15:22:32
+      bpunValid: null
+    - name: PATCH-SEGMENT:MODE
+      type: MODE
+      pages: 1
+      bytes: 251
+      userName: LASSE
+      dateCreated: 2109011382
+      lastDateRead: 2257113153
+      lastDateWritten: 2109011383
+      dateCreatedStr: 1981-06-26 15:22:54
+      lastDateReadStr: 1983-10-04 13:01:01
+      lastDateWrittenStr: 1981-06-26 15:22:55
+      bpunValid: null
+    - name: CREATE-SCHEMA-DB:MODE
+      type: MODE
+      pages: 1
+      bytes: 383
+      userName: LASSE
+      dateCreated: 2109011399
+      lastDateRead: 2257113204
+      lastDateWritten: 2109011401
+      dateCreatedStr: 1981-06-26 15:23:07
+      lastDateReadStr: 1983-10-04 13:01:52
+      lastDateWrittenStr: 1981-06-26 15:23:09
+      bpunValid: null
+    - name: CREATE-DATABASE:MODE
+      type: MODE
+      pages: 1
+      bytes: 720
+      userName: LASSE
+      dateCreated: 2109011418
+      lastDateRead: 2257113254
+      lastDateWritten: 2109011428
+      dateCreatedStr: 1981-06-26 15:23:26
+      lastDateReadStr: 1983-10-04 13:02:38
+      lastDateWrittenStr: 1981-06-26 15:23:36
+      bpunValid: null
+    - name: INIT-DATABASE:MODE
+      type: MODE
+      pages: 1
+      bytes: 150
+      userName: LASSE
+      dateCreated: 2109011457
+      lastDateRead: 2257113305
+      lastDateWritten: 2109011463
+      dateCreatedStr: 1981-06-26 15:24:01
+      lastDateReadStr: 1983-10-04 13:03:25
+      lastDateWrittenStr: 1981-06-26 15:24:07
+      bpunValid: null
+    - name: UPDATE-DATABASE:MODE
+      type: MODE
+      pages: 1
+      bytes: 217
+      userName: LASSE
+      dateCreated: 2109011472
+      lastDateRead: 2257113337
+      lastDateWritten: 2109011473
+      dateCreatedStr: 1981-06-26 15:24:16
+      lastDateReadStr: 1983-10-04 13:03:57
+      lastDateWrittenStr: 1981-06-26 15:24:17
+      bpunValid: null
+provenance:
+  contributor: fvdm
+  originalPath: GRAFS Norsk versjon/GRAFS-1, Norsk versjon, 5-5-81.img
+  dateImaged: 2026-06-12
+  importedAt: 2026-06-12T19:42:12.613Z
+photos:
+  disk: []
+  set:
+    - DSC_0773.JPG
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-b154be0f7b24
+  syncStatus: pending

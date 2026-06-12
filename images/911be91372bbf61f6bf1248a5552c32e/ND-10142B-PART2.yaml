@@ -1,0 +1,121 @@
+id: nd-10142-b-d2-911be913
+volumeName: ND-10142B-PART2
+md5: 911be91372bbf61f6bf1248a5552c32e
+product:
+  id: ND-10142
+  version: B
+  diskNumber: 2
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: binary
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 116
+  files:
+    - name: DDPPMES-B:DATA
+      type: DATA
+      pages: 68
+      bytes: 138560
+      userName: FLOPPY-USER
+      dateCreated: 2243620246
+      lastDateRead: null
+      lastDateWritten: 2254115806
+      dateCreatedStr: 1983-06-29 14:54:22
+      lastDateReadStr: null
+      lastDateWrittenStr: 1983-09-13 17:15:30
+      bpunValid: null
+    - name: DDPP-B:MODE
+      type: MODE
+      pages: 1
+      bytes: 1782
+      userName: FLOPPY-USER
+      dateCreated: 2243620379
+      lastDateRead: 2254111319
+      lastDateWritten: 2254111319
+      dateCreatedStr: 1983-06-29 14:56:27
+      lastDateReadStr: 1983-09-13 16:09:23
+      lastDateWrittenStr: 1983-09-13 16:09:23
+      bpunValid: null
+    - name: AID-B:BRF
+      type: BRF
+      pages: 17
+      bytes: 34525
+      userName: FLOPPY-USER
+      dateCreated: 2243620395
+      lastDateRead: null
+      lastDateWritten: 2243620396
+      dateCreatedStr: 1983-06-29 14:56:43
+      lastDateReadStr: null
+      lastDateWrittenStr: 1983-06-29 14:56:44
+      bpunValid: null
+    - name: DSTART-B:BRF
+      type: BRF
+      pages: 2
+      bytes: 4079
+      userName: FLOPPY-USER
+      dateCreated: 2243620485
+      lastDateRead: 2244148620
+      lastDateWritten: 2244148620
+      dateCreatedStr: 1983-06-29 14:58:05
+      lastDateReadStr: 1983-07-01 15:54:12
+      lastDateWrittenStr: 1983-07-01 15:54:12
+      bpunValid: null
+    - name: TTY-B:BRF
+      type: BRF
+      pages: 1
+      bytes: 1414
+      userName: FLOPPY-USER
+      dateCreated: 2243620504
+      lastDateRead: null
+      lastDateWritten: 2243620505
+      dateCreatedStr: 1983-06-29 14:58:24
+      lastDateReadStr: null
+      lastDateWrittenStr: 1983-06-29 14:58:25
+      bpunValid: null
+    - name: FREQ-B:BRF
+      type: BRF
+      pages: 7
+      bytes: 13067
+      userName: FLOPPY-USER
+      dateCreated: 2243620518
+      lastDateRead: null
+      lastDateWritten: 2254116087
+      dateCreatedStr: 1983-06-29 14:58:38
+      lastDateReadStr: null
+      lastDateWrittenStr: 1983-09-13 17:19:55
+      bpunValid: null
+    - name: FREQ11-B:BRF
+      type: BRF
+      pages: 12
+      bytes: 24255
+      userName: FLOPPY-USER
+      dateCreated: 2254110074
+      lastDateRead: null
+      lastDateWritten: 2254110075
+      dateCreatedStr: 1983-09-13 15:53:58
+      lastDateReadStr: null
+      lastDateWrittenStr: 1983-09-13 15:53:59
+      bpunValid: null
+provenance:
+  contributor: fvdm
+  originalPath: ND-10142B (5.25 inch)/ND-10142B-PART2.img
+  dateImaged: 2026-06-12
+  importedAt: 2026-06-12T19:42:13.456Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10142-b-d2-911be913
+  syncStatus: pending
