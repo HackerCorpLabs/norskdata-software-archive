@@ -5,12 +5,15 @@
  */
 
 import { readFile, writeFile, mkdir } from 'fs/promises';
+import { marked } from 'marked';
 import { join } from 'path';
 import { parse as yamlParse } from 'yaml';
 import { readdir } from 'fs/promises';
 import { createHash } from 'crypto';
 import type { CatalogEntry } from '../types.js';
 import { generateCatalogJson } from './catalog.js';
+import { DOC_DIRS, DOC_KIND_LABELS, docTitle } from './nd-docs.js';
+import type { DocKind } from './nd-docs.js';
 
 interface ProductData {
   id: string;
@@ -18,6 +21,8 @@ interface ProductData {
   description?: string | null;
   categories?: string[];
   platform?: string[];
+  /** ND document ids; the files live in docs/nd/<collection>/<id>.md */
+  docs?: { productInfo?: string[]; installationDescription?: string[] };
 }
 
 interface CategoryData {
@@ -57,6 +62,10 @@ export async function buildStaticSite(rootDir: string): Promise<void> {
           description: doc.description ?? null,
           categories: Array.isArray(doc.categories) ? doc.categories : undefined,
           platform: Array.isArray(doc.platform) ? doc.platform : undefined,
+          docs: doc.docs && typeof doc.docs === 'object' ? {
+            productInfo: Array.isArray(doc.docs.productInfo) ? doc.docs.productInfo : undefined,
+            installationDescription: Array.isArray(doc.docs.installationDescription) ? doc.docs.installationDescription : undefined,
+          } : undefined,
         });
       }
     } catch { /* skip malformed */ }
@@ -99,13 +108,135 @@ export async function buildStaticSite(rootDir: string): Promise<void> {
 
   await mkdir(siteDir, { recursive: true });
 
-  const html = generateHtml(entries, products, categoriesRaw, ndfsBundleJS, photoVersions);
+  const docTitles = await buildDocPages(rootDir, siteDir, products);
+
+  const html = generateHtml(entries, products, categoriesRaw, ndfsBundleJS, photoVersions, docTitles);
   const outPath = join(siteDir, 'index.html');
   await writeFile(outPath, html, 'utf-8');
 
   const sizeKB = (Buffer.byteLength(html, 'utf-8') / 1024).toFixed(1);
   console.log(`Static site built: ${outPath} (${sizeKB} KB)`);
 }
+
+
+/** Every document id referenced by any product, with its collection. */
+function referencedDocs(products: ProductData[]): Map<string, DocKind> {
+  const out = new Map<string, DocKind>();
+  for (const p of products) {
+    for (const kind of ['productInfo', 'installationDescription'] as const) {
+      for (const id of p.docs?.[kind] ?? []) out.set(id, kind);
+    }
+  }
+  return out;
+}
+
+/**
+ * Render each referenced ND document from docs/nd/<collection>/<id>.md into its
+ * own site/docs/<id>.html. Kept out of index.html on purpose: the documents are
+ * ~4 MB in total and a reader opens one at a time. Plain links, no fetch(), so
+ * the site still works over file://.
+ * Returns docId -> display title, for the links on the product page.
+ */
+async function buildDocPages(
+  rootDir: string,
+  siteDir: string,
+  products: ProductData[],
+): Promise<Record<string, string>> {
+  const refs = referencedDocs(products);
+  if (refs.size === 0) return {};
+
+  // Which products cite each document (one document can cover several).
+  const citedBy = new Map<string, ProductData[]>();
+  for (const p of products) {
+    for (const kind of ['productInfo', 'installationDescription'] as const) {
+      for (const id of p.docs?.[kind] ?? []) {
+        if (!citedBy.has(id)) citedBy.set(id, []);
+        citedBy.get(id)!.push(p);
+      }
+    }
+  }
+
+  const outDir = join(siteDir, 'docs');
+  await mkdir(outDir, { recursive: true });
+  await writeFile(join(outDir, 'doc.css'), DOC_CSS, 'utf-8');
+
+  const titles: Record<string, string> = {};
+  let written = 0, missing = 0;
+  for (const [id, kind] of refs) {
+    const src = join(rootDir, 'docs/nd', DOC_DIRS[kind], `${id}.md`);
+    let md: string;
+    try {
+      md = await readFile(src, 'utf-8');
+    } catch {
+      missing++;
+      continue;
+    }
+    titles[id] = docTitle(md, id);
+    const body = await marked.parse(md);
+    const cites = (citedBy.get(id) ?? [])
+      .map(p => `<a href="../index.html#/products/${encodeURIComponent(p.id)}">${escHtml(p.id)} ${escHtml(p.name)}</a>`)
+      .join(' &middot; ');
+    await writeFile(join(outDir, `${id}.html`), `<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>${escHtml(id)} - ${escHtml(titles[id])}</title>
+<link rel="stylesheet" href="doc.css">
+</head>
+<body>
+<div class="nd-doc">
+<p class="nd-doc-back"><a href="../index.html#/products">&larr; Products</a></p>
+<h1 class="nd-doc-id">${escHtml(id)}</h1>
+<p class="nd-doc-kind">${DOC_KIND_LABELS[kind]}</p>
+${cites ? `<p class="nd-doc-cited">Describes: ${cites}</p>` : ''}
+<hr>
+${body}
+</div>
+</body>
+</html>
+`, 'utf-8');
+    written++;
+  }
+  console.log(`Document pages: ${written} written${missing ? `, ${missing} referenced but missing on disk` : ''}`);
+  return titles;
+}
+
+function escHtml(s: string): string {
+  return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
+
+/** Stand-alone stylesheet for the rendered ND documents (same tokens as index.html). */
+const DOC_CSS = `:root, html[data-theme="dark"] {
+  --bg:#14181f; --bg-elev:#1c222c; --bg-sunken:#0d1116; --border:#2b323d;
+  --text:#e7eaf0; --text-muted:#99a2b2; --accent:#5b9dff;
+}
+html[data-theme="light"] {
+  --bg:#ffffff; --bg-elev:#f7f8fa; --bg-sunken:#eef0f4; --border:#d5dae2;
+  --text:#1a1f28; --text-muted:#5a6472; --accent:#0d47a1;
+}
+* { box-sizing:border-box; }
+body { margin:0; background:var(--bg); color:var(--text);
+  font:15px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; }
+.nd-doc { max-width:960px; margin:0 auto; padding:2rem 1.25rem 4rem; }
+.nd-doc-back { margin:0 0 1rem; }
+.nd-doc-id { margin:0; font-size:1.5rem; }
+.nd-doc-kind { margin:0.25rem 0 0; color:var(--text-muted); font-size:0.9rem; }
+.nd-doc-cited { margin:0.5rem 0 0; color:var(--text-muted); font-size:0.9rem; }
+a { color:var(--accent); }
+hr { border:0; border-top:1px solid var(--border); margin:1.5rem 0; }
+h1,h2,h3,h4 { line-height:1.3; margin:1.75rem 0 0.75rem; }
+h2 { font-size:1.25rem; } h3 { font-size:1.1rem; }
+p, li { overflow-wrap:break-word; }
+code, pre { background:var(--bg-sunken); border:1px solid var(--border); border-radius:4px; }
+code { padding:0.1rem 0.3rem; font-size:0.9em; }
+pre { padding:0.75rem; overflow-x:auto; } pre code { border:0; padding:0; }
+table { border-collapse:collapse; width:100%; margin:1rem 0; display:block; overflow-x:auto; }
+th, td { border:1px solid var(--border); padding:0.4rem 0.6rem; text-align:left; vertical-align:top; }
+th { background:var(--bg-elev); }
+blockquote { margin:1rem 0; padding:0.5rem 1rem; border-left:3px solid var(--border); color:var(--text-muted); }
+img { max-width:100%; }
+`;
 
 function escJson(data: unknown): string {
   // Escape </script> inside JSON to prevent breaking the HTML
@@ -118,6 +249,7 @@ function generateHtml(
   categories: CategoryData[],
   ndfsBundleJS: string,
   photoVersions: Record<string, string>,
+  docTitles: Record<string, string>,
 ): string {
   // Escape </script> in the bundle to prevent breaking HTML
   const safeBundleJS = ndfsBundleJS.replace(/<\/script/gi, '<\\/script');
@@ -174,6 +306,7 @@ var CATALOG = ${escJson(catalog)};
 var PRODUCTS = ${escJson(products)};
 var PHOTO_VERSIONS = ${escJson(photoVersions)};
 var CATEGORIES = ${escJson(categories)};
+var DOC_TITLES = ${escJson(docTitles)};
 </script>
 <script>
 ${getAppJS()}
@@ -382,6 +515,23 @@ code, pre { font-family: 'Consolas', 'Courier New', monospace; }
 /* ================================================================
    Component: nd-badge
    ================================================================ */
+/* Documentation presence markers in the products table. Deliberately quiet:
+   muted, unboxed, no colour - they mark a fact, they are not a call to action. */
+.nd-docmark {
+  display: inline-block;
+  margin-right: 0.4rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+  text-decoration: none;
+}
+.nd-docmark:hover, .nd-docmark:focus-visible {
+  color: var(--accent);
+  text-decoration: underline;
+}
+.nd-docmark sup { font-size: 0.65em; margin-left: 0.05rem; }
+.nd-docmark:last-child { margin-right: 0; }
+
 .nd-badge {
   display: inline-block;
   padding: 0.1rem 0.5rem;
@@ -1802,9 +1952,9 @@ function getAppJS(): string {
     document.getElementById('prod-count').textContent = filtered.length + ' products';
 
     var html = '<table class="nd-table" id="prod-table">';
-    html += '<colgroup><col style="width:13%"><col style="width:37%"><col style="width:22%"><col style="width:16%"><col style="width:12%"></colgroup>';
+    html += '<colgroup><col style="width:12%"><col style="width:33%"><col style="width:20%"><col style="width:14%"><col style="width:10%"><col style="width:11%"></colgroup>';
     html += '<thead><tr>';
-    var prodCols = ['ID', 'Name', 'Categories', 'Platform', 'Images'];
+    var prodCols = ['ID', 'Name', 'Categories', 'Platform', 'Images', 'Docs'];
     for (var pc = 0; pc < prodCols.length; pc++) {
       var parrow = '';
       if (productsState.sortCol === pc) parrow = productsState.sortDir === 'asc' ? ' \\u25B2' : ' \\u25BC';
@@ -1833,6 +1983,7 @@ function getAppJS(): string {
       html += '<td>' + cats + '</td>';
       html += '<td>' + plat + '</td>';
       html += '<td>' + (count > 0 ? '<span class="nd-badge nd-badge-ok">' + count + '</span>' : '<span style="color:var(--text-muted)">0</span>') + '</td>';
+      html += '<td>' + docMarks(p) + '</td>';
       html += '</tr>';
     }
     html += '</tbody></table>';
@@ -1864,6 +2015,7 @@ function getAppJS(): string {
         case 2: av = (a.categories || []).join(',').toLowerCase(); bv = (b.categories || []).join(',').toLowerCase(); break;
         case 3: av = (a.platform || []).join(',').toLowerCase(); bv = (b.platform || []).join(',').toLowerCase(); break;
         case 4: av = imgCount[a.id] || 0; bv = imgCount[b.id] || 0; return dir === 'asc' ? av - bv : bv - av;
+        case 5: av = docScore(a); bv = docScore(b); return dir === 'asc' ? av - bv : bv - av;
         default: av = ''; bv = '';
       }
       if (av < bv) return dir === 'asc' ? -1 : 1;
@@ -1956,6 +2108,61 @@ function getAppJS(): string {
   }
 
   // ── Product Detail ───────────────────────────────────────────
+  // Quiet presence markers for the products table: ID = Program/Installation
+  // Description, PI = Product Information sheet. Muted and unbadged on purpose -
+  // 334 of 444 products have at least one, so a badge here would shout on most rows.
+  function docMarks(product) {
+    var d = product.docs;
+    if (!d) return '';
+    var out = '';
+    out += docMark(d.installationDescription, 'ID', 'Program / Installation Description');
+    out += docMark(d.productInfo, 'PI', 'Product Information sheet');
+    return out;
+  }
+
+  // One marker, linked straight to the rendered document. With several documents
+  // of the same kind the marker carries a count and links to the first; the rest
+  // are listed on the product page.
+  function docMark(ids, label, kindLabel) {
+    if (!ids || !ids.length) return '';
+    var title = ids.length === 1
+      ? kindLabel + ': ' + (DOC_TITLES[ids[0]] || ids[0])
+      : ids.length + ' ' + kindLabel + 's - opens ' + (DOC_TITLES[ids[0]] || ids[0]);
+    return '<a class="nd-docmark" href="docs/' + encodeURIComponent(ids[0]) + '.html" title="' + esc(title) + '">' +
+           label + (ids.length > 1 ? '<sup>' + ids.length + '</sup>' : '') + '</a>';
+  }
+
+  function docScore(product) {
+    var d = product.docs || {};
+    return ((d.installationDescription && d.installationDescription.length) ? 2 : 0) +
+           ((d.productInfo && d.productInfo.length) ? 1 : 0);
+  }
+
+  // ND documentation attached to this product. The documents are pre-rendered
+  // to site/docs/<id>.html at build time and linked, not inlined - together they
+  // are ~4 MB and a reader opens one at a time.
+  function renderProductDocs(product) {
+    if (!product.docs) return '';
+    var groups = [
+      ['installationDescription', 'Installation Description'],
+      ['productInfo', 'Product Information']
+    ];
+    var out = '';
+    for (var g = 0; g < groups.length; g++) {
+      var ids = product.docs[groups[g][0]];
+      if (!ids || !ids.length) continue;
+      out += '<div style="margin-bottom:0.75rem">';
+      out += '<div style="color:var(--text-muted);font-size:0.85rem;margin-bottom:0.25rem">' + esc(groups[g][1]) + '</div>';
+      for (var i = 0; i < ids.length; i++) {
+        var t = DOC_TITLES[ids[i]] || ids[i];
+        out += '<div><a href="docs/' + encodeURIComponent(ids[i]) + '.html"><code>' + esc(ids[i]) + '</code></a> &ndash; ' + esc(t) + '</div>';
+      }
+      out += '</div>';
+    }
+    if (!out) return '';
+    return '<div class="nd-card" style="margin-bottom:1rem"><h3 style="margin-top:0">Documentation</h3>' + out + '</div>';
+  }
+
   function renderProductDetail(pid) {
     var product = productMap[pid];
     var pName = product ? product.name : pid;
@@ -1981,6 +2188,7 @@ function getAppJS(): string {
         }
       }
       if (meta) html += '<p style="margin-bottom:1rem">' + meta + '</p>';
+      html += renderProductDocs(product);
     }
 
     html += '<p><span class="nd-badge">' + entries.length + ' image' + (entries.length !== 1 ? 's' : '') + '</span></p>';
