@@ -1,0 +1,264 @@
+id: nd-10130-j00-d1-4e068fb4
+volumeName: 10130J00
+md5: 4e068fb445ae93839b536799beff43a2
+product:
+  id: ND-10130
+  version: J00
+image:
+  sizeBytes: 1261568
+  format: raw
+  controller: floppy
+  totalPages: 616
+  pageSize: 2048
+  bootFormat: none
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 312
+  files:
+    - name: XMSG-IN-S-J00:COM
+      type: COM
+      pages: 5
+      bytes: 9470
+      userName: FLOPPY-USER
+      dateCreated: 2374587146
+      lastDateRead: null
+      lastDateWritten: 2374587150
+      dateCreatedStr: 1985-06-04 21:12:10
+      lastDateReadStr: null
+      lastDateWrittenStr: 1985-06-04 21:12:14
+      bpunValid: null
+    - name: XMSG-01-S-J00:COM
+      type: COM
+      pages: 4
+      bytes: 6863
+      userName: FLOPPY-USER
+      dateCreated: 2374587155
+      lastDateRead: null
+      lastDateWritten: 2374587157
+      dateCreatedStr: 1985-06-04 21:12:19
+      lastDateReadStr: null
+      lastDateWrittenStr: 1985-06-04 21:12:21
+      bpunValid: null
+    - name: XMSG-02-S-J00:COM
+      type: COM
+      pages: 26
+      bytes: 52501
+      userName: FLOPPY-USER
+      dateCreated: 2374587161
+      lastDateRead: null
+      lastDateWritten: 2374587163
+      dateCreatedStr: 1985-06-04 21:12:25
+      lastDateReadStr: null
+      lastDateWrittenStr: 1985-06-04 21:12:27
+      bpunValid: null
+    - name: XCOM-L01:PROG
+      type: PROG
+      pages: 34
+      bytes: 69632
+      userName: FLOPPY-USER
+      dateCreated: 2374587178
+      lastDateRead: null
+      lastDateWritten: 2374587179
+      dateCreatedStr: 1985-06-04 21:12:42
+      lastDateReadStr: null
+      lastDateWrittenStr: 1985-06-04 21:12:43
+      bpunValid: null
+    - name: XMSG-LOAD-S-J00:MODE
+      type: MODE
+      pages: 1
+      bytes: 1533
+      userName: FLOPPY-USER
+      dateCreated: 2374587206
+      lastDateRead: null
+      lastDateWritten: 2374587207
+      dateCreatedStr: 1985-06-04 21:13:06
+      lastDateReadStr: null
+      lastDateWrittenStr: 1985-06-04 21:13:07
+      bpunValid: null
+    - name: XMSG-START-S-J00:MODE
+      type: MODE
+      pages: 3
+      bytes: 2849
+      userName: FLOPPY-USER
+      dateCreated: 2374587210
+      lastDateRead: null
+      lastDateWritten: 2374587211
+      dateCreatedStr: 1985-06-04 21:13:10
+      lastDateReadStr: null
+      lastDateWrittenStr: 1985-06-04 21:13:11
+      bpunValid: null
+    - name: XMSG-START-S-J00:BATC
+      type: BATC
+      pages: 1
+      bytes: 886
+      userName: FLOPPY-USER
+      dateCreated: 2374587217
+      lastDateRead: null
+      lastDateWritten: 2374587218
+      dateCreatedStr: 1985-06-04 21:13:17
+      lastDateReadStr: null
+      lastDateWrittenStr: 1985-06-04 21:13:18
+      bpunValid: null
+    - name: XMSG-SYSTABS-J00:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 3075
+      userName: FLOPPY-USER
+      dateCreated: 2374587221
+      lastDateRead: null
+      lastDateWritten: 2374587222
+      dateCreatedStr: 1985-06-04 21:13:21
+      lastDateReadStr: null
+      lastDateWrittenStr: 1985-06-04 21:13:22
+      bpunValid: null
+    - name: XMSG-POFTABS-J00:SYMB
+      type: SYMB
+      pages: 15
+      bytes: 29384
+      userName: FLOPPY-USER
+      dateCreated: 2374587227
+      lastDateRead: null
+      lastDateWritten: 2374587228
+      dateCreatedStr: 1985-06-04 21:13:27
+      lastDateReadStr: null
+      lastDateWrittenStr: 1985-06-04 21:13:28
+      bpunValid: null
+    - name: XMSG-VALUES-J:SYMB
+      type: SYMB
+      pages: 9
+      bytes: 17399
+      userName: FLOPPY-USER
+      dateCreated: 2374587241
+      lastDateRead: null
+      lastDateWritten: 2374587242
+      dateCreatedStr: 1985-06-04 21:13:41
+      lastDateReadStr: null
+      lastDateWrittenStr: 1985-06-04 21:13:42
+      bpunValid: null
+    - name: XMSG-PL-VALUES-J:INCL
+      type: INCL
+      pages: 9
+      bytes: 17826
+      userName: FLOPPY-USER
+      dateCreated: 2374587251
+      lastDateRead: null
+      lastDateWritten: 2374587252
+      dateCreatedStr: 1985-06-04 21:13:51
+      lastDateReadStr: null
+      lastDateWrittenStr: 1985-06-04 21:13:52
+      bpunValid: null
+    - name: XMSG-LIBRARY-J00:BRF
+      type: BRF
+      pages: 13
+      bytes: 25664
+      userName: FLOPPY-USER
+      dateCreated: 2374587266
+      lastDateRead: null
+      lastDateWritten: 2374587267
+      dateCreatedStr: 1985-06-04 21:14:02
+      lastDateReadStr: null
+      lastDateWrittenStr: 1985-06-04 21:14:03
+      bpunValid: null
+    - name: XMSG-KE-S-CX-J00:BPUN
+      type: BPUN
+      pages: 13
+      bytes: 25070
+      userName: FLOPPY-USER
+      dateCreated: 2374587279
+      lastDateRead: null
+      lastDateWritten: 2374587280
+      dateCreatedStr: 1985-06-04 21:14:15
+      lastDateReadStr: null
+      lastDateWrittenStr: 1985-06-04 21:14:16
+      bpunValid: true
+    - name: XMSG-XR-S-CX-J00:BPUN
+      type: BPUN
+      pages: 42
+      bytes: 86014
+      userName: FLOPPY-USER
+      dateCreated: 2374587294
+      lastDateRead: null
+      lastDateWritten: 2374587295
+      dateCreatedStr: 1985-06-04 21:14:30
+      lastDateReadStr: null
+      lastDateWrittenStr: 1985-06-04 21:14:31
+      bpunValid: false
+    - name: XMSG-SY-S-CX-J00:SYMB
+      type: SYMB
+      pages: 11
+      bytes: 21229
+      userName: FLOPPY-USER
+      dateCreated: 2374587336
+      lastDateRead: null
+      lastDateWritten: 2374587337
+      dateCreatedStr: 1985-06-04 21:15:08
+      lastDateReadStr: null
+      lastDateWrittenStr: 1985-06-04 21:15:09
+      bpunValid: null
+    - name: XMSG-KE-S-NX-J00:BPUN
+      type: BPUN
+      pages: 13
+      bytes: 25082
+      userName: FLOPPY-USER
+      dateCreated: 2374587350
+      lastDateRead: null
+      lastDateWritten: 2374587351
+      dateCreatedStr: 1985-06-04 21:15:22
+      lastDateReadStr: null
+      lastDateWrittenStr: 1985-06-04 21:15:23
+      bpunValid: true
+    - name: XMSG-XR-S-NX-J00:BPUN
+      type: BPUN
+      pages: 43
+      bytes: 86062
+      userName: FLOPPY-USER
+      dateCreated: 2374587366
+      lastDateRead: null
+      lastDateWritten: 2374587367
+      dateCreatedStr: 1985-06-04 21:15:38
+      lastDateReadStr: null
+      lastDateWrittenStr: 1985-06-04 21:15:39
+      bpunValid: true
+    - name: XMSG-SY-S-NX-J00:SYMB
+      type: SYMB
+      pages: 11
+      bytes: 21229
+      userName: FLOPPY-USER
+      dateCreated: 2374587417
+      lastDateRead: null
+      lastDateWritten: 2374587418
+      dateCreatedStr: 1985-06-04 21:16:25
+      lastDateReadStr: null
+      lastDateWrittenStr: 1985-06-04 21:16:26
+      bpunValid: null
+    - name: XMSG-COMMAND-J00:PROG
+      type: PROG
+      pages: 37
+      bytes: 74240
+      userName: FLOPPY-USER
+      dateCreated: 2374587433
+      lastDateRead: null
+      lastDateWritten: 2374587434
+      dateCreatedStr: 1985-06-04 21:16:41
+      lastDateReadStr: null
+      lastDateWrittenStr: 1985-06-04 21:16:42
+      bpunValid: null
+provenance:
+  contributor: ndwiki
+  originalPath: tingo/8_nd_f17b_10130j00-1d.img
+  dateImaged: 2026-08-10
+  importedAt: 2026-08-11T12:29:23.331Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10130-j00-d1-4e068fb4
+  syncStatus: pending

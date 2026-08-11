@@ -492,12 +492,20 @@
     "Name": "VTM/VMT Terminal Table product (UNVERIFIED)"
   },
   {
+    "Id": "ND-10491",
+    "Name": "PLANC for MC68000"
+  },
+  {
     "Id": "ND-10493",
     "Name": "PIOC Basic Software"
   },
   {
     "Id": "ND-10510",
     "Name": "FORTRAN Runtime System for ND-500"
+  },
+  {
+    "Id": "ND-10511",
+    "Name": "Exception Handling System"
   },
   {
     "Id": "ND-10516",
@@ -572,6 +580,14 @@
     "Name": "COSMOS Programmers Library"
   },
   {
+    "Id": "ND-10624",
+    "Name": "ND-GAMES for ND-100 / NORD-10"
+  },
+  {
+    "Id": "ND-10628",
+    "Name": "SINTRAN III VSE/VSX Utility Programs"
+  },
+  {
     "Id": "ND-10634",
     "Name": "Memory To floppy dump (MEMTOF-100)"
   },
@@ -592,12 +608,24 @@
     "Name": "NOTIS-DS Document Storage"
   },
   {
+    "Id": "ND-10704",
+    "Name": "Fortran interface"
+  },
+  {
     "Id": "ND-10715",
     "Name": "ND-BENCH Environment for ND-500"
   },
   {
     "Id": "ND-10724",
     "Name": "NOTIS-BG for ND-100 (Business Graphics) 48 bits floating format"
+  },
+  {
+    "Id": "ND-10730",
+    "Name": "UNIQUE II for ND-500 (English)"
+  },
+  {
+    "Id": "ND-10732",
+    "Name": "ND Telex"
   },
   {
     "Id": "ND-10741",
@@ -630,6 +658,10 @@
   {
     "Id": "ND-10777",
     "Name": "IBM 2780/3780-II Emulator"
+  },
+  {
+    "Id": "ND-10793",
+    "Name": "NOTIS-BG for ND-500?"
   },
   {
     "Id": "ND-10803",
@@ -692,6 +724,10 @@
     "Name": "NORTEXT-100 Ad Integrated Administration System"
   },
   {
+    "Id": "ND-210005",
+    "Name": "Subsystem package. (BRF-EDITOR)"
+  },
+  {
     "Id": "ND-210007",
     "Name": "Scientific Subroutine Package (SSP)"
   },
@@ -712,6 +748,10 @@
     "Name": "NOTIS-WP for ND-100"
   },
   {
+    "Id": "ND-210080",
+    "Name": "PED"
+  },
+  {
     "Id": "ND-210142",
     "Name": "DDPP - Discrete Data Program Package"
   },
@@ -726,6 +766,10 @@
   {
     "Id": "ND-210177",
     "Name": "COBOL-85 for ND-500/5000"
+  },
+  {
+    "Id": "ND-210180",
+    "Name": "FORTRAN for ND-500"
   },
   {
     "Id": "ND-210185",
@@ -752,8 +796,16 @@
     "Name": "SIBAS Backend Communication Module for ND-100/ND-500"
   },
   {
+    "Id": "ND-210260",
+    "Name": "NORTEXT-100 Book Pagination"
+  },
+  {
     "Id": "ND-210306",
     "Name": "ND SNA RJE Support"
+  },
+  {
+    "Id": "ND-210310",
+    "Name": "PLANC for ND-500 compiling on ND-500"
   },
   {
     "Id": "ND-210315",
@@ -768,8 +820,16 @@
     "Name": "ND-500 Monitor (Background Monitor)"
   },
   {
+    "Id": "ND-210336",
+    "Name": "ND-100 Symbolic Debugger"
+  },
+  {
     "Id": "ND-210337",
     "Name": "Backup-System"
+  },
+  {
+    "Id": "ND-210340",
+    "Name": "SIBAS II for ND-500"
   },
   {
     "Id": "ND-210373",
@@ -792,12 +852,20 @@
     "Name": "COSMOS X.29 PAD"
   },
   {
+    "Id": "ND-210412",
+    "Name": "ND-500/1 CXA Microprogram"
+  },
+  {
     "Id": "ND-210455",
     "Name": "VTM terminal tables (Standard)"
   },
   {
     "Id": "ND-210507",
     "Name": "Software Keys"
+  },
+  {
+    "Id": "ND-210510",
+    "Name": "FORTRAN Runtime system for ND-500"
   },
   {
     "Id": "ND-210518",
@@ -854,6 +922,10 @@
   {
     "Id": "ND-210628",
     "Name": "SINTRAN III Utility programs"
+  },
+  {
+    "Id": "ND-210636",
+    "Name": "NORTEXT-100 AD System, AD Order Entry w/ Editor Extension"
   },
   {
     "Id": "ND-210691",
@@ -916,6 +988,10 @@
     "Name": "TELEX Remote User Module"
   },
   {
+    "Id": "ND-210733",
+    "Name": "NORTEXT-100 AD System, AD Order Entry Module"
+  },
+  {
     "Id": "ND-210741",
     "Name": "SNA Gateway Single Line"
   },
@@ -934,6 +1010,10 @@
   {
     "Id": "ND-210755",
     "Name": "BASIC for ND-500"
+  },
+  {
+    "Id": "ND-210757",
+    "Name": "CBASIC Compiler for ND-100"
   },
   {
     "Id": "ND-210761",
@@ -1012,6 +1092,10 @@
     "Name": "MERCUR for ND-500"
   },
   {
+    "Id": "ND-210865",
+    "Name": "Mercur for ND-500"
+  },
+  {
     "Id": "ND-210866",
     "Name": "ND Coloured Books File Transfer"
   },
@@ -1030,6 +1114,10 @@
   {
     "Id": "ND-210886",
     "Name": "AUTOMAKE for ND-100/ND-500"
+  },
+  {
+    "Id": "ND-210887",
+    "Name": "AUTOMAKE for ND-500"
   },
   {
     "Id": "ND-210895",
@@ -1052,12 +1140,20 @@
     "Name": "NDIX"
   },
   {
+    "Id": "ND-210907",
+    "Name": "T2000 HSTI Software"
+  },
+  {
     "Id": "ND-210913",
     "Name": "SINTRAN III Monitor Call Package"
   },
   {
     "Id": "ND-210917",
     "Name": "TECHNOTIS"
+  },
+  {
+    "Id": "ND-210918",
+    "Name": "ND TELEX Remote User Module"
   },
   {
     "Id": "ND-210937",
@@ -1136,8 +1232,24 @@
     "Name": "ND-500 Swapper"
   },
   {
+    "Id": "ND-211035",
+    "Name": "CBASIC Compiler for ND-500/5000"
+  },
+  {
+    "Id": "ND-211036",
+    "Name": "CBASIC-Utilities and Runtime for ND-100/500/5000"
+  },
+  {
     "Id": "ND-211037",
     "Name": "PLANC for ND-110 compiling on ND-500/5000"
+  },
+  {
+    "Id": "ND-211038",
+    "Name": "PLANC for MC68000, compiling on ND-500/5000"
+  },
+  {
+    "Id": "ND-211039",
+    "Name": "COBOL-85 Runtime"
   },
   {
     "Id": "ND-211041",
@@ -1154,6 +1266,10 @@
   {
     "Id": "ND-211053",
     "Name": "NOTIS Personal Manager"
+  },
+  {
+    "Id": "ND-211054",
+    "Name": "NOTIS-PM for ND-500"
   },
   {
     "Id": "ND-211055",
@@ -1220,6 +1336,14 @@
     "Name": "UNIQUE-II SIBAS Runtime for ND-500/5000"
   },
   {
+    "Id": "ND-211087",
+    "Name": "SINTRAN III for Butterfly-110"
+  },
+  {
+    "Id": "ND-211092",
+    "Name": "Butterfly-110 ND System software"
+  },
+  {
     "Id": "ND-211104",
     "Name": "COSMOS Network Monitor"
   },
@@ -1240,6 +1364,10 @@
     "Name": "TRUE Basic System and TRUEMAN (Transaction User Environment)"
   },
   {
+    "Id": "ND-211128",
+    "Name": "FTX Error Logger"
+  },
+  {
     "Id": "ND-211149",
     "Name": "ND C Programming Language for ND-500/ND-5000"
   },
@@ -1252,12 +1380,24 @@
     "Name": "LED-DEBUGGER for ND-500/5000"
   },
   {
+    "Id": "ND-211158",
+    "Name": "LED-PLANC"
+  },
+  {
+    "Id": "ND-211159",
+    "Name": "LED-FORTRAN"
+  },
+  {
     "Id": "ND-211160",
     "Name": "LED - Language Editor (LED, LED-FORTRAN, LED-PLANC, LED-DEBUGGER)"
   },
   {
     "Id": "ND-211168",
     "Name": "FTX - Automatic Reconfiguration Module"
+  },
+  {
+    "Id": "ND-211180",
+    "Name": "NOTIS-PRO for ND-500/5000"
   },
   {
     "Id": "ND-211185",
@@ -1290,6 +1430,10 @@
   {
     "Id": "ND-211226",
     "Name": "Backup Manager for ND-500/5000"
+  },
+  {
+    "Id": "ND-211227",
+    "Name": "File Restore"
   },
   {
     "Id": "ND-211229",
@@ -1612,6 +1756,10 @@
     "Name": "Micrografx Graph Plus"
   },
   {
+    "Id": "ND-230050",
+    "Name": "LED for OWS"
+  },
+  {
     "Id": "ND-230051",
     "Name": "NORTEXT NEWS"
   },
@@ -1684,6 +1832,10 @@
     "Name": "Mini-Line editor (MLE) for ND-100/500"
   },
   {
+    "Id": "ND-250009",
+    "Name": "NDP"
+  },
+  {
     "Id": "ND-250196",
     "Name": "REPRO for ND-100"
   },
@@ -1706,6 +1858,10 @@
   {
     "Id": "ND-250379",
     "Name": "System files"
+  },
+  {
+    "Id": "ND-250405",
+    "Name": "PLANC for Intel-386, compiling on ND-500/5000"
   },
   {
     "Id": "ND-300000",
@@ -1782,5 +1938,9 @@
   {
     "Id": "ND-382300",
     "Name": "Patch Kit for ND tpServer"
+  },
+  {
+    "Id": "PLANC-SCREEN",
+    "Name": "PLANC Screen Handling"
   }
 ]

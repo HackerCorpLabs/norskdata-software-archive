@@ -1,0 +1,49 @@
+id: nd-10191-e00-d1-0a0a4306
+volumeName: 10191E00-1S
+md5: 0a0a4306731476417831781e32f961a2
+product:
+  id: ND-10191
+  version: E00
+  diskNumber: 1
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 120
+  files:
+    - name: FORTRAN-100-E00:PROG
+      type: PROG
+      pages: 118
+      bytes: 608256
+      userName: FLOPPY-USER
+      dateCreated: 2372858667
+      lastDateRead: 2437872142
+      lastDateWritten: 2372858672
+      dateCreatedStr: 1985-05-23 15:12:43
+      lastDateReadStr: 1986-05-07 15:40:14
+      lastDateWrittenStr: 1985-05-23 15:12:48
+      bpunValid: null
+provenance:
+  contributor: ndwiki
+  originalPath: tingo/8_nd_f0b_10191e00-1s.img
+  dateImaged: 2026-08-10
+  importedAt: 2026-08-11T12:29:22.619Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10191-e00-d1-0a0a4306
+  syncStatus: pending

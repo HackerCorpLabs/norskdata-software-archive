@@ -1,0 +1,61 @@
+id: nd-10191-e00-d2-e82ce5af
+volumeName: 10191E00-2S
+md5: e82ce5af842041c8b11858a916b1d0bf
+product:
+  id: ND-10191
+  version: E00
+  diskNumber: 2
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 113
+  files:
+    - name: FORT48-1BANK-E0:BRF
+      type: BRF
+      pages: 54
+      bytes: 110384
+      userName: FLOPPY-USER
+      dateCreated: 2363270976
+      lastDateRead: 2437872359
+      lastDateWritten: 2375721711
+      dateCreatedStr: 1985-03-14 10:29:00
+      lastDateReadStr: 1986-05-07 15:43:39
+      lastDateWrittenStr: 1985-06-13 10:11:47
+      bpunValid: null
+    - name: FORT48-2BANK-E0:BRF
+      type: BRF
+      pages: 56
+      bytes: 114518
+      userName: FLOPPY-USER
+      dateCreated: 2363271049
+      lastDateRead: 2437872397
+      lastDateWritten: 2372965579
+      dateCreatedStr: 1985-03-14 10:30:09
+      lastDateReadStr: 1986-05-07 15:44:13
+      lastDateWrittenStr: 1985-05-24 09:19:11
+      bpunValid: null
+provenance:
+  contributor: ndwiki
+  originalPath: tingo/8_nd_f0b_10191e00-2s.img
+  dateImaged: 2026-08-10
+  importedAt: 2026-08-11T12:29:22.640Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10191-e00-d2-e82ce5af
+  syncStatus: pending

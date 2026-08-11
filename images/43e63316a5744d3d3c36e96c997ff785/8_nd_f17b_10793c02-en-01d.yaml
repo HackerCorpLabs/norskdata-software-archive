@@ -1,0 +1,122 @@
+id: nd-10793-c02-d1-43e63316
+volumeName: 10793C02-EN-01D
+md5: 43e63316a5744d3d3c36e96c997ff785
+product:
+  id: ND-10793
+  version: C02
+  diskNumber: 1
+  language: EN
+image:
+  sizeBytes: 1261568
+  format: raw
+  controller: floppy
+  totalPages: 616
+  pageSize: 2048
+  bootFormat: none
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 566
+  files:
+    - name: INST-BG-500-C02:PROG
+      type: PROG
+      pages: 66
+      bytes: 194560
+      userName: FLOPPY-USER
+      dateCreated: 2500258776
+      lastDateRead: 2514675718
+      lastDateWritten: 2500258781
+      dateCreatedStr: 1987-04-03 14:47:24
+      lastDateReadStr: 1987-07-17 14:32:06
+      lastDateWrittenStr: 1987-04-03 14:47:29
+      bpunValid: null
+    - name: BG-SETUP-C02:XCOM
+      type: XCOM
+      pages: 6
+      bytes: 11188
+      userName: FLOPPY-USER
+      dateCreated: 2500258836
+      lastDateRead: 2514673120
+      lastDateWritten: 2500258837
+      dateCreatedStr: 1987-04-03 14:48:20
+      lastDateReadStr: 1987-07-17 13:55:32
+      lastDateWrittenStr: 1987-04-03 14:48:21
+      bpunValid: null
+    - name: UE-ERMSG-EN-C00:ERR
+      type: ERR
+      pages: 63
+      bytes: 128000
+      userName: FLOPPY-USER
+      dateCreated: 2500258844
+      lastDateRead: null
+      lastDateWritten: 2500258845
+      dateCreatedStr: 1987-04-03 14:48:28
+      lastDateReadStr: null
+      lastDateWrittenStr: 1987-04-03 14:48:29
+      bpunValid: null
+    - name: DESCRIPTION-FILE:DESC
+      type: DESC
+      pages: 8
+      bytes: 22528
+      userName: FLOPPY-USER
+      dateCreated: 2500258901
+      lastDateRead: 2514670239
+      lastDateWritten: 2500259483
+      dateCreatedStr: 1987-04-03 14:49:21
+      lastDateReadStr: 1987-07-17 13:10:31
+      lastDateWrittenStr: 1987-04-03 14:58:27
+      bpunValid: null
+    - name: BG-500-EN-C02:LINK
+      type: LINK
+      pages: 28
+      bytes: 55873
+      userName: FLOPPY-USER
+      dateCreated: 2500258944
+      lastDateRead: 2514670243
+      lastDateWritten: 2500258945
+      dateCreatedStr: 1987-04-03 14:50:00
+      lastDateReadStr: 1987-07-17 13:10:35
+      lastDateWrittenStr: 1987-04-03 14:50:01
+      bpunValid: null
+    - name: BG-500-EN-C02:DSEG
+      type: DSEG
+      pages: 183
+      bytes: 542721
+      userName: FLOPPY-USER
+      dateCreated: 2500258946
+      lastDateRead: 2514670243
+      lastDateWritten: 2500258948
+      dateCreatedStr: 1987-04-03 14:50:02
+      lastDateReadStr: 1987-07-17 13:10:35
+      lastDateWrittenStr: 1987-04-03 14:50:04
+      bpunValid: null
+    - name: BG-500-EN-C02:PSEG
+      type: PSEG
+      pages: 203
+      bytes: 413984
+      userName: FLOPPY-USER
+      dateCreated: 2500258949
+      lastDateRead: 2514670242
+      lastDateWritten: 2500258950
+      dateCreatedStr: 1987-04-03 14:50:05
+      lastDateReadStr: 1987-07-17 13:10:34
+      lastDateWrittenStr: 1987-04-03 14:50:06
+      bpunValid: null
+provenance:
+  contributor: ndwiki
+  originalPath: tingo/8_nd_f17b_10793c02-en-01d.img
+  dateImaged: 2026-08-10
+  importedAt: 2026-08-11T12:29:23.842Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10793-c02-d1-43e63316
+  syncStatus: pending

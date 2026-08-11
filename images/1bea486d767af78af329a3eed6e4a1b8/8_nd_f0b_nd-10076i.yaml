@@ -1,0 +1,72 @@
+id: nd-10076-i-d1-1bea486d
+volumeName: ND-10076I
+md5: 1bea486d767af78af329a3eed6e4a1b8
+product:
+  id: ND-10076
+  version: I
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 96
+  files:
+    - name: PASCAL-COD-2349I:BRF
+      type: BRF
+      pages: 75
+      bytes: 153129
+      userName: FLOPPY-USER
+      dateCreated: 2230364329
+      lastDateRead: 2263927541
+      lastDateWritten: 2230499707
+      dateCreatedStr: 1983-03-24 10:34:41
+      lastDateReadStr: 1983-11-24 12:43:53
+      lastDateWrittenStr: 1983-03-25 11:37:59
+      bpunValid: null
+    - name: PASCAL-LIB-2351I:BRF
+      type: BRF
+      pages: 13
+      bytes: 26001
+      userName: FLOPPY-USER
+      dateCreated: 2230364560
+      lastDateRead: 2263927592
+      lastDateWritten: 2230364561
+      dateCreatedStr: 1983-03-24 10:38:16
+      lastDateReadStr: 1983-11-24 12:44:40
+      lastDateWrittenStr: 1983-03-24 10:38:17
+      bpunValid: null
+    - name: PASCAL-ERR-2350I:SYMB
+      type: SYMB
+      pages: 4
+      bytes: 7366
+      userName: FLOPPY-USER
+      dateCreated: 2230364612
+      lastDateRead: 2263927269
+      lastDateWritten: 2230364614
+      dateCreatedStr: 1983-03-24 10:39:04
+      lastDateReadStr: 1983-11-24 12:39:37
+      lastDateWrittenStr: 1983-03-24 10:39:06
+      bpunValid: null
+provenance:
+  contributor: ndwiki
+  originalPath: tingo/8_nd_f0b_nd-10076i.img
+  dateImaged: 2026-08-10
+  importedAt: 2026-08-11T12:29:23.085Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10076-i-d1-1bea486d
+  syncStatus: pending

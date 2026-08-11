@@ -1,0 +1,62 @@
+id: nd-210166-f02-d4-a86bb31b
+volumeName: 210166F02-XX-04S
+md5: a86bb31bf5f63a5cd6cc5efe64735e37
+product:
+  id: ND-210166
+  version: F02
+  diskNumber: 4
+  language: XX
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 123
+  files:
+    - name: MAKEDRL-F02:PROG
+      type: PROG
+      pages: 20
+      bytes: 40960
+      userName: FLOPPY-USER
+      dateCreated: 2446384115
+      lastDateRead: 2464860825
+      lastDateWritten: 2464333213
+      dateCreatedStr: 1986-07-08 13:47:51
+      lastDateReadStr: 1986-11-21 12:42:25
+      lastDateWrittenStr: 1986-11-17 11:54:29
+      bpunValid: null
+    - name: SIB2-DRL-A-F02:PROG
+      type: PROG
+      pages: 100
+      bytes: 532480
+      userName: FLOPPY-USER
+      dateCreated: 2446384145
+      lastDateRead: 2464860838
+      lastDateWritten: 2464860838
+      dateCreatedStr: 1986-07-08 13:48:17
+      lastDateReadStr: 1986-11-21 12:42:38
+      lastDateWrittenStr: 1986-11-21 12:42:38
+      bpunValid: null
+provenance:
+  contributor: ndwiki
+  originalPath: tingo/8_nd_f0b_210166f02-xx-04s.img
+  dateImaged: 2026-08-10
+  importedAt: 2026-08-11T12:29:22.772Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-210166-f02-d4-a86bb31b
+  syncStatus: pending

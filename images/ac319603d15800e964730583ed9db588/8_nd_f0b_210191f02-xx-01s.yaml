@@ -1,0 +1,50 @@
+id: nd-210191-f02-d1-ac319603
+volumeName: 210191F02-XX-01S
+md5: ac319603d15800e964730583ed9db588
+product:
+  id: ND-210191
+  version: F02
+  diskNumber: 1
+  language: XX
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 139
+  files:
+    - name: FORTRAN-100-F02:PROG
+      type: PROG
+      pages: 137
+      bytes: 655360
+      userName: FLOPPY-USER
+      dateCreated: 2464715987
+      lastDateRead: 2514228526
+      lastDateWritten: 2464716199
+      dateCreatedStr: 1986-11-20 09:19:19
+      lastDateReadStr: 1987-07-14 01:20:46
+      lastDateWrittenStr: 1986-11-20 09:22:39
+      bpunValid: null
+provenance:
+  contributor: ndwiki
+  originalPath: tingo/8_nd_f0b_210191f02-xx-01s.img
+  dateImaged: 2026-08-10
+  importedAt: 2026-08-11T12:29:22.903Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-210191-f02-d1-ac319603
+  syncStatus: pending

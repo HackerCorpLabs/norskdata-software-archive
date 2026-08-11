@@ -1,0 +1,182 @@
+id: nd-210793-c01-d2-ba405762
+volumeName: 210793C01-EN-02D
+md5: ba4057624a8fb1badb457508cc562f9a
+product:
+  id: ND-210793
+  version: C01
+  diskNumber: 2
+  language: EN
+image:
+  sizeBytes: 1261568
+  format: raw
+  controller: floppy
+  totalPages: 616
+  pageSize: 2048
+  bootFormat: none
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 145
+  files:
+    - name: DDBTABLES-E-E04:VTM
+      type: VTM
+      pages: 11
+      bytes: 20756
+      userName: FLOPPY-USER
+      dateCreated: 2498136907
+      lastDateRead: 2499719974
+      lastDateWritten: 2498136911
+      dateCreatedStr: 1987-03-19 08:45:11
+      lastDateReadStr: 1987-03-31 11:12:38
+      lastDateWrittenStr: 1987-03-19 08:45:15
+      bpunValid: null
+    - name: DDB078:VTM
+      type: VTM
+      pages: 1
+      bytes: 625
+      userName: FLOPPY-USER
+      dateCreated: 2498136918
+      lastDateRead: null
+      lastDateWritten: 2498136920
+      dateCreatedStr: 1987-03-19 08:45:22
+      lastDateReadStr: null
+      lastDateWrittenStr: 1987-03-19 08:45:24
+      bpunValid: null
+    - name: VTM-COMPOUND:PROG
+      type: PROG
+      pages: 54
+      bytes: 110592
+      userName: FLOPPY-USER
+      dateCreated: 2498136923
+      lastDateRead: null
+      lastDateWritten: 2498136924
+      dateCreatedStr: 1987-03-19 08:45:27
+      lastDateReadStr: null
+      lastDateWrittenStr: 1987-03-19 08:45:28
+      bpunValid: null
+    - name: BG-PRINTERS-C01:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 653
+      userName: FLOPPY-USER
+      dateCreated: 2498136955
+      lastDateRead: 2499719967
+      lastDateWritten: 2498136960
+      dateCreatedStr: 1987-03-19 08:45:59
+      lastDateReadStr: 1987-03-31 11:12:31
+      lastDateWrittenStr: 1987-03-19 08:46:00
+      bpunValid: null
+    - name: BG-EX01-EN-C01:CDBG
+      type: CDBG
+      pages: 2
+      bytes: 2460
+      userName: FLOPPY-USER
+      dateCreated: 2498136964
+      lastDateRead: 2498144501
+      lastDateWritten: 2498136965
+      dateCreatedStr: 1987-03-19 08:46:04
+      lastDateReadStr: 1987-03-19 10:35:53
+      lastDateWrittenStr: 1987-03-19 08:46:05
+      bpunValid: null
+    - name: BG-EX02-EN-C01:DABG
+      type: DABG
+      pages: 4
+      bytes: 6971
+      userName: FLOPPY-USER
+      dateCreated: 2498136970
+      lastDateRead: 2498144523
+      lastDateWritten: 2498136971
+      dateCreatedStr: 1987-03-19 08:46:10
+      lastDateReadStr: 1987-03-19 10:36:11
+      lastDateWrittenStr: 1987-03-19 08:46:11
+      bpunValid: null
+    - name: BG-EX03-EN-C01:CDBG
+      type: CDBG
+      pages: 2
+      bytes: 2563
+      userName: FLOPPY-USER
+      dateCreated: 2498136976
+      lastDateRead: 2498144536
+      lastDateWritten: 2498136977
+      dateCreatedStr: 1987-03-19 08:46:16
+      lastDateReadStr: 1987-03-19 10:36:24
+      lastDateWrittenStr: 1987-03-19 08:46:17
+      bpunValid: null
+    - name: BG-EX04-EN-C01:DABG
+      type: DABG
+      pages: 3
+      bytes: 4923
+      userName: FLOPPY-USER
+      dateCreated: 2498136982
+      lastDateRead: 2498144547
+      lastDateWritten: 2498136983
+      dateCreatedStr: 1987-03-19 08:46:22
+      lastDateReadStr: 1987-03-19 10:36:35
+      lastDateWrittenStr: 1987-03-19 08:46:23
+      bpunValid: null
+    - name: BG-EX05-EN-C01:CDBG
+      type: CDBG
+      pages: 2
+      bytes: 2254
+      userName: FLOPPY-USER
+      dateCreated: 2498136989
+      lastDateRead: 2498144560
+      lastDateWritten: 2498136990
+      dateCreatedStr: 1987-03-19 08:46:29
+      lastDateReadStr: 1987-03-19 10:36:48
+      lastDateWrittenStr: 1987-03-19 08:46:30
+      bpunValid: null
+    - name: BG-EX06-EN-C01:DABG
+      type: DABG
+      pages: 3
+      bytes: 4923
+      userName: FLOPPY-USER
+      dateCreated: 2498136995
+      lastDateRead: 2498144571
+      lastDateWritten: 2498136996
+      dateCreatedStr: 1987-03-19 08:46:35
+      lastDateReadStr: 1987-03-19 10:36:59
+      lastDateWrittenStr: 1987-03-19 08:46:36
+      bpunValid: null
+    - name: BG-EX07-EN-C01:PABG
+      type: PABG
+      pages: 1
+      bytes: 283
+      userName: FLOPPY-USER
+      dateCreated: 2498137001
+      lastDateRead: 2498144586
+      lastDateWritten: 2498137002
+      dateCreatedStr: 1987-03-19 08:46:41
+      lastDateReadStr: 1987-03-19 10:37:10
+      lastDateWrittenStr: 1987-03-19 08:46:42
+      bpunValid: null
+    - name: BG-500-FONTS-C01:DATA
+      type: DATA
+      pages: 48
+      bytes: 97280
+      userName: FLOPPY-USER
+      dateCreated: 2498141300
+      lastDateRead: 2499719981
+      lastDateWritten: 2498141464
+      dateCreatedStr: 1987-03-19 09:49:52
+      lastDateReadStr: 1987-03-31 11:12:45
+      lastDateWrittenStr: 1987-03-19 09:52:24
+      bpunValid: null
+provenance:
+  contributor: ndwiki
+  originalPath: tingo/8_nd_f17b_210793c01-en-02d.img
+  dateImaged: 2026-08-10
+  importedAt: 2026-08-11T12:29:24.314Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-210793-c01-d2-ba405762
+  syncStatus: pending

@@ -1,0 +1,62 @@
+id: nd-211067-a02-d1-faa9612e
+volumeName: 211067A02-XX-01D
+md5: faa9612e6a353594c483e36cad6c22bc
+product:
+  id: ND-211067
+  version: A02
+  diskNumber: 1
+  language: XX
+image:
+  sizeBytes: 1261568
+  format: raw
+  controller: floppy
+  totalPages: 616
+  pageSize: 2048
+  bootFormat: flomon
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 66
+  files:
+    - name: TPE-MON-100-A01:BPUN
+      type: BPUN
+      pages: 28
+      bytes: 56182
+      userName: FLOPPY-USER
+      dateCreated: 2458871602
+      lastDateRead: 2463549450
+      lastDateWritten: 2458871602
+      dateCreatedStr: 1986-10-07 22:28:50
+      lastDateReadStr: 1986-11-11 12:32:10
+      lastDateWrittenStr: 1986-10-07 22:28:50
+      bpunValid: true
+    - name: DISC-TEMA-I11:TEST
+      type: TEST
+      pages: 35
+      bytes: 71680
+      userName: FLOPPY-USER
+      dateCreated: 2463542441
+      lastDateRead: 2463549470
+      lastDateWritten: 2463542441
+      dateCreatedStr: 1986-11-11 10:50:41
+      lastDateReadStr: 1986-11-11 12:32:30
+      lastDateWrittenStr: 1986-11-11 10:50:41
+      bpunValid: null
+provenance:
+  contributor: ndwiki
+  originalPath: tingo/8_nd_f17b_211067a02-xx-01d.img
+  dateImaged: 2026-08-10
+  importedAt: 2026-08-11T12:29:24.546Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-211067-a02-d1-faa9612e
+  syncStatus: pending

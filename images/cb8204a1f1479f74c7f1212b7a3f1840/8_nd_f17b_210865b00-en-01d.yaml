@@ -1,0 +1,302 @@
+id: nd-210865-b00-d1-cb8204a1
+volumeName: 210865B00-EN-01D
+md5: cb8204a1f1479f74c7f1212b7a3f1840
+product:
+  id: ND-210865
+  version: B00
+  diskNumber: 1
+  language: EN
+image:
+  sizeBytes: 1261568
+  format: raw
+  controller: floppy
+  totalPages: 616
+  pageSize: 2048
+  bootFormat: none
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 508
+  files:
+    - name: MRC-MAIN1-EN-B00:NRF
+      type: NRF
+      pages: 2
+      bytes: 3815
+      userName: FLOPPY-USER
+      dateCreated: 2435492072
+      lastDateRead: 2435518090
+      lastDateWritten: 2435492076
+      dateCreatedStr: 1986-04-21 10:35:40
+      lastDateReadStr: 1986-04-21 16:58:10
+      lastDateWrittenStr: 1986-04-21 10:35:44
+      bpunValid: null
+    - name: MRC-MAIN2-EN-B00:NRF
+      type: NRF
+      pages: 1
+      bytes: 1559
+      userName: FLOPPY-USER
+      dateCreated: 2435492081
+      lastDateRead: 2435518092
+      lastDateWritten: 2435492083
+      dateCreatedStr: 1986-04-21 10:35:49
+      lastDateReadStr: 1986-04-21 16:58:12
+      lastDateWrittenStr: 1986-04-21 10:35:51
+      bpunValid: null
+    - name: MRC-MAIN3-EN-B00:NRF
+      type: NRF
+      pages: 11
+      bytes: 20937
+      userName: FLOPPY-USER
+      dateCreated: 2435492087
+      lastDateRead: 2435518094
+      lastDateWritten: 2435492088
+      dateCreatedStr: 1986-04-21 10:35:55
+      lastDateReadStr: 1986-04-21 16:58:14
+      lastDateWrittenStr: 1986-04-21 10:35:56
+      bpunValid: null
+    - name: MRC-MAIN4-EN-B00:NRF
+      type: NRF
+      pages: 129
+      bytes: 262538
+      userName: FLOPPY-USER
+      dateCreated: 2435492104
+      lastDateRead: 2435518097
+      lastDateWritten: 2435492106
+      dateCreatedStr: 1986-04-21 10:36:08
+      lastDateReadStr: 1986-04-21 16:58:17
+      lastDateWrittenStr: 1986-04-21 10:36:10
+      bpunValid: null
+    - name: MRC-MAIN5-EN-B00:NRF
+      type: NRF
+      pages: 35
+      bytes: 70826
+      userName: FLOPPY-USER
+      dateCreated: 2435492241
+      lastDateRead: 2435518121
+      lastDateWritten: 2435492242
+      dateCreatedStr: 1986-04-21 10:38:17
+      lastDateReadStr: 1986-04-21 16:58:41
+      lastDateWrittenStr: 1986-04-21 10:38:18
+      bpunValid: null
+    - name: MRC-MAIN6-EN-B00:NRF
+      type: NRF
+      pages: 4
+      bytes: 6380
+      userName: FLOPPY-USER
+      dateCreated: 2435492298
+      lastDateRead: 2435518129
+      lastDateWritten: 2435492301
+      dateCreatedStr: 1986-04-21 10:39:10
+      lastDateReadStr: 1986-04-21 16:58:49
+      lastDateWrittenStr: 1986-04-21 10:39:13
+      bpunValid: null
+    - name: MRC-MAIN7-EN-B00:NRF
+      type: NRF
+      pages: 15
+      bytes: 29268
+      userName: FLOPPY-USER
+      dateCreated: 2435492309
+      lastDateRead: 2435518131
+      lastDateWritten: 2435492311
+      dateCreatedStr: 1986-04-21 10:39:21
+      lastDateReadStr: 1986-04-21 16:58:51
+      lastDateWrittenStr: 1986-04-21 10:39:23
+      bpunValid: null
+    - name: MRC-INT1-EN-B00:NRF
+      type: NRF
+      pages: 3
+      bytes: 4991
+      userName: FLOPPY-USER
+      dateCreated: 2435616451
+      lastDateRead: 2435617586
+      lastDateWritten: 2435616457
+      dateCreatedStr: 1986-04-22 08:59:03
+      lastDateReadStr: 1986-04-22 09:12:50
+      lastDateWrittenStr: 1986-04-22 08:59:09
+      bpunValid: null
+    - name: MRC-INP1-EN-B00:NRF
+      type: NRF
+      pages: 2
+      bytes: 3733
+      userName: FLOPPY-USER
+      dateCreated: 2435616451
+      lastDateRead: 2435617638
+      lastDateWritten: 2435616466
+      dateCreatedStr: 1986-04-22 08:59:03
+      lastDateReadStr: 1986-04-22 09:13:38
+      lastDateWrittenStr: 1986-04-22 08:59:18
+      bpunValid: null
+    - name: MRC-SUB1-EN-B00:NRF
+      type: NRF
+      pages: 116
+      bytes: 237348
+      userName: FLOPPY-USER
+      dateCreated: 2435492342
+      lastDateRead: 2435518145
+      lastDateWritten: 2435492343
+      dateCreatedStr: 1986-04-21 10:39:54
+      lastDateReadStr: 1986-04-21 16:59:01
+      lastDateWrittenStr: 1986-04-21 10:39:55
+      bpunValid: null
+    - name: MRC-SUB2-EN-B00:NRF
+      type: NRF
+      pages: 37
+      bytes: 74435
+      userName: FLOPPY-USER
+      dateCreated: 2435492506
+      lastDateRead: 2435518167
+      lastDateWritten: 2435492507
+      dateCreatedStr: 1986-04-21 10:42:26
+      lastDateReadStr: 1986-04-21 16:59:23
+      lastDateWrittenStr: 1986-04-21 10:42:27
+      bpunValid: null
+    - name: MRC-SUB3-EN-B00:NRF
+      type: NRF
+      pages: 10
+      bytes: 18649
+      userName: FLOPPY-USER
+      dateCreated: 2435492560
+      lastDateRead: 2435518176
+      lastDateWritten: 2435492561
+      dateCreatedStr: 1986-04-21 10:43:16
+      lastDateReadStr: 1986-04-21 16:59:32
+      lastDateWrittenStr: 1986-04-21 10:43:17
+      bpunValid: null
+    - name: MRC-SUB4-EN-B00:NRF
+      type: NRF
+      pages: 8
+      bytes: 15561
+      userName: FLOPPY-USER
+      dateCreated: 2435492581
+      lastDateRead: 2435518180
+      lastDateWritten: 2435492582
+      dateCreatedStr: 1986-04-21 10:43:37
+      lastDateReadStr: 1986-04-21 16:59:36
+      lastDateWrittenStr: 1986-04-21 10:43:38
+      bpunValid: null
+    - name: MRC-SUB5-EN-B00:NRF
+      type: NRF
+      pages: 3
+      bytes: 4841
+      userName: FLOPPY-USER
+      dateCreated: 2435492596
+      lastDateRead: 2435518183
+      lastDateWritten: 2435492597
+      dateCreatedStr: 1986-04-21 10:43:52
+      lastDateReadStr: 1986-04-21 16:59:39
+      lastDateWrittenStr: 1986-04-21 10:43:53
+      bpunValid: null
+    - name: MRC-SUB6-EN-B00:NRF
+      type: NRF
+      pages: 3
+      bytes: 5758
+      userName: FLOPPY-USER
+      dateCreated: 2435492610
+      lastDateRead: 2435518186
+      lastDateWritten: 2435492611
+      dateCreatedStr: 1986-04-21 10:44:02
+      lastDateReadStr: 1986-04-21 16:59:42
+      lastDateWrittenStr: 1986-04-21 10:44:03
+      bpunValid: null
+    - name: MRC-SUB7-EN-B00:NRF
+      type: NRF
+      pages: 58
+      bytes: 117200
+      userName: FLOPPY-USER
+      dateCreated: 2435492619
+      lastDateRead: 2435518189
+      lastDateWritten: 2435492620
+      dateCreatedStr: 1986-04-21 10:44:11
+      lastDateReadStr: 1986-04-21 16:59:45
+      lastDateWrittenStr: 1986-04-21 10:44:12
+      bpunValid: null
+    - name: MRC-SUB8-EN-B00:NRF
+      type: NRF
+      pages: 8
+      bytes: 16351
+      userName: FLOPPY-USER
+      dateCreated: 2435492724
+      lastDateRead: 2435518201
+      lastDateWritten: 2435492725
+      dateCreatedStr: 1986-04-21 10:45:52
+      lastDateReadStr: 1986-04-21 16:59:57
+      lastDateWrittenStr: 1986-04-21 10:45:53
+      bpunValid: null
+    - name: MRC-SUB9-EN-B00:NRF
+      type: NRF
+      pages: 10
+      bytes: 18474
+      userName: FLOPPY-USER
+      dateCreated: 2435492748
+      lastDateRead: 2435518465
+      lastDateWritten: 2435492749
+      dateCreatedStr: 1986-04-21 10:46:12
+      lastDateReadStr: 1986-04-21 17:00:01
+      lastDateWrittenStr: 1986-04-21 10:46:13
+      bpunValid: null
+    - name: MRCFILE-E-500-B0:DATA
+      type: DATA
+      pages: 17
+      bytes: 34816
+      userName: FLOPPY-USER
+      dateCreated: 2435492769
+      lastDateRead: 2435518470
+      lastDateWritten: 2435492770
+      dateCreatedStr: 1986-04-21 10:46:33
+      lastDateReadStr: 1986-04-21 17:00:06
+      lastDateWrittenStr: 1986-04-21 10:46:34
+      bpunValid: null
+    - name: MRC-SYST-EN-B00:MODE
+      type: MODE
+      pages: 1
+      bytes: 812
+      userName: FLOPPY-USER
+      dateCreated: 2435492820
+      lastDateRead: 2435622604
+      lastDateWritten: 2435519800
+      dateCreatedStr: 1986-04-21 10:47:20
+      lastDateReadStr: 1986-04-22 10:27:12
+      lastDateWrittenStr: 1986-04-21 17:20:56
+      bpunValid: null
+    - name: DDBTABLES-E-E04:VTM
+      type: VTM
+      pages: 11
+      bytes: 20756
+      userName: FLOPPY-USER
+      dateCreated: 2435492827
+      lastDateRead: 2435518478
+      lastDateWritten: 2435492828
+      dateCreatedStr: 1986-04-21 10:47:27
+      lastDateReadStr: 1986-04-21 17:00:14
+      lastDateWrittenStr: 1986-04-21 10:47:28
+      bpunValid: null
+    - name: MRC-LINK-EN-B00:MODE
+      type: MODE
+      pages: 1
+      bytes: 1749
+      userName: FLOPPY-USER
+      dateCreated: 2435622499
+      lastDateRead: 2435622499
+      lastDateWritten: 2435622499
+      dateCreatedStr: 1986-04-22 10:25:35
+      lastDateReadStr: 1986-04-22 10:25:35
+      lastDateWrittenStr: 1986-04-22 10:25:35
+      bpunValid: null
+provenance:
+  contributor: ndwiki
+  originalPath: tingo/8_nd_f17b_210865b00-en-01d.img
+  dateImaged: 2026-08-10
+  importedAt: 2026-08-11T12:29:24.519Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-210865-b00-d1-cb8204a1
+  syncStatus: pending

@@ -1,0 +1,62 @@
+id: nd-210166-f02-d8-9d16d682
+volumeName: 210166F02-XX-08S
+md5: 9d16d68298499b2369371940be12bcfc
+product:
+  id: ND-210166
+  version: F02
+  diskNumber: 8
+  language: XX
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 136
+  files:
+    - name: UE-ERMSG-EN-B04:ERR
+      type: ERR
+      pages: 65
+      bytes: 131840
+      userName: FLOPPY-USER
+      dateCreated: 2446385959
+      lastDateRead: 2464861163
+      lastDateWritten: 2446385964
+      dateCreatedStr: 1986-07-08 14:12:39
+      lastDateReadStr: 1986-11-21 12:47:43
+      lastDateWrittenStr: 1986-07-08 14:12:44
+      bpunValid: null
+    - name: UE-ERMSG-NO-B04:ERR
+      type: ERR
+      pages: 68
+      bytes: 137472
+      userName: FLOPPY-USER
+      dateCreated: 2446386057
+      lastDateRead: 2464861136
+      lastDateWritten: 2446386058
+      dateCreatedStr: 1986-07-08 14:14:09
+      lastDateReadStr: 1986-11-21 12:47:16
+      lastDateWrittenStr: 1986-07-08 14:14:10
+      bpunValid: null
+provenance:
+  contributor: ndwiki
+  originalPath: tingo/8_nd_f0b_210166f02-xx-08s.img
+  dateImaged: 2026-08-10
+  importedAt: 2026-08-11T12:29:22.854Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-210166-f02-d8-9d16d682
+  syncStatus: pending

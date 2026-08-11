@@ -1,0 +1,421 @@
+id: nd-10340-d-d2-f57e0215
+volumeName: ND-10340D-PART2
+md5: f57e02151b0250242fc7dd50106da1b0
+product:
+  id: ND-10340
+  version: D
+  diskNumber: 2
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: binary
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 99
+  files:
+    - name: SIBAS-MESS-ARE:NRF
+      type: NRF
+      pages: 1
+      bytes: 168
+      userName: FLOPPY-USER
+      dateCreated: 2227769038
+      lastDateRead: 2236807106
+      lastDateWritten: 2232982694
+      dateCreatedStr: 1983-03-04 16:59:14
+      lastDateReadStr: 1983-05-09 15:31:02
+      lastDateWrittenStr: 1983-04-12 09:50:38
+      bpunValid: null
+    - name: SIBAS-MESS-USE:NRF
+      type: NRF
+      pages: 1
+      bytes: 1685
+      userName: FLOPPY-USER
+      dateCreated: 2227769046
+      lastDateRead: 2236807111
+      lastDateWritten: 2232982696
+      dateCreatedStr: 1983-03-04 16:59:22
+      lastDateReadStr: 1983-05-09 15:31:07
+      lastDateWrittenStr: 1983-04-12 09:50:40
+      bpunValid: null
+    - name: SIBAS-LIBRARY:NRF
+      type: NRF
+      pages: 17
+      bytes: 34127
+      userName: FLOPPY-USER
+      dateCreated: 2227769052
+      lastDateRead: 2236807118
+      lastDateWritten: 2236270811
+      dateCreatedStr: 1983-03-04 16:59:28
+      lastDateReadStr: 1983-05-09 15:31:14
+      lastDateWrittenStr: 1983-05-05 12:35:27
+      bpunValid: null
+    - name: SERVER-MAIN:NRF
+      type: NRF
+      pages: 1
+      bytes: 971
+      userName: FLOPPY-USER
+      dateCreated: 2227769063
+      lastDateRead: 2236807135
+      lastDateWritten: 2232982689
+      dateCreatedStr: 1983-03-04 16:59:39
+      lastDateReadStr: 1983-05-09 15:31:31
+      lastDateWrittenStr: 1983-04-12 09:50:33
+      bpunValid: null
+    - name: SI5-DML-SIB2:NRF
+      type: NRF
+      pages: 1
+      bytes: 776
+      userName: FLOPPY-USER
+      dateCreated: 2227769070
+      lastDateRead: 2236807141
+      lastDateWritten: 2232982705
+      dateCreatedStr: 1983-03-04 16:59:46
+      lastDateReadStr: 1983-05-09 15:31:37
+      lastDateWrittenStr: 1983-04-12 09:50:49
+      bpunValid: null
+    - name: ND500-SIB2D:BRF
+      type: BRF
+      pages: 1
+      bytes: 394
+      userName: FLOPPY-USER
+      dateCreated: 2229202163
+      lastDateRead: 2241799637
+      lastDateWritten: 2241684560
+      dateCreatedStr: 1983-03-15 14:51:51
+      lastDateReadStr: 1983-06-15 18:23:21
+      lastDateWrittenStr: 1983-06-14 22:17:16
+      bpunValid: null
+    - name: SERVER-UTILITY:NRF
+      type: NRF
+      pages: 1
+      bytes: 287
+      userName: FLOPPY-USER
+      dateCreated: 2227769344
+      lastDateRead: 2236807154
+      lastDateWritten: 2232982691
+      dateCreatedStr: 1983-03-04 17:00:00
+      lastDateReadStr: 1983-05-09 15:31:50
+      lastDateWrittenStr: 1983-04-12 09:50:35
+      bpunValid: null
+    - name: SERVER-DEVCOM:NRF
+      type: NRF
+      pages: 1
+      bytes: 1999
+      userName: FLOPPY-USER
+      dateCreated: 2227769351
+      lastDateRead: 2236807160
+      lastDateWritten: 2232982685
+      dateCreatedStr: 1983-03-04 17:00:07
+      lastDateReadStr: 1983-05-09 15:31:56
+      lastDateWrittenStr: 1983-04-12 09:50:29
+      bpunValid: null
+    - name: ND500-SIB2A:BRF
+      type: BRF
+      pages: 1
+      bytes: 394
+      userName: FLOPPY-USER
+      dateCreated: 2229202150
+      lastDateRead: 2241799720
+      lastDateWritten: 2241684538
+      dateCreatedStr: 1983-03-15 14:51:38
+      lastDateReadStr: 1983-06-15 18:24:40
+      lastDateWrittenStr: 1983-06-14 22:16:58
+      bpunValid: null
+    - name: ND500-SIB2B:BRF
+      type: BRF
+      pages: 1
+      bytes: 394
+      userName: FLOPPY-USER
+      dateCreated: 2229202155
+      lastDateRead: 2241799729
+      lastDateWritten: 2241684549
+      dateCreatedStr: 1983-03-15 14:51:43
+      lastDateReadStr: 1983-06-15 18:24:49
+      lastDateWrittenStr: 1983-06-14 22:17:05
+      bpunValid: null
+    - name: ND500-SIB2C:BRF
+      type: BRF
+      pages: 1
+      bytes: 394
+      userName: FLOPPY-USER
+      dateCreated: 2229202159
+      lastDateRead: 2241799735
+      lastDateWritten: 2241684554
+      dateCreatedStr: 1983-03-15 14:51:47
+      lastDateReadStr: 1983-06-15 18:24:55
+      lastDateWrittenStr: 1983-06-14 22:17:10
+      bpunValid: null
+    - name: ND500-SERV2A:BRF
+      type: BRF
+      pages: 1
+      bytes: 205
+      userName: FLOPPY-USER
+      dateCreated: 2229202196
+      lastDateRead: 2241799755
+      lastDateWritten: 2232979181
+      dateCreatedStr: 1983-03-15 14:52:20
+      lastDateReadStr: 1983-06-15 18:25:11
+      lastDateWrittenStr: 1983-04-12 08:59:45
+      bpunValid: null
+    - name: ND500-SERV2B:BRF
+      type: BRF
+      pages: 1
+      bytes: 205
+      userName: FLOPPY-USER
+      dateCreated: 2229202200
+      lastDateRead: 2241799763
+      lastDateWritten: 2232979186
+      dateCreatedStr: 1983-03-15 14:52:24
+      lastDateReadStr: 1983-06-15 18:25:19
+      lastDateWrittenStr: 1983-04-12 08:59:50
+      bpunValid: null
+    - name: ND500-SERV2C:BRF
+      type: BRF
+      pages: 1
+      bytes: 205
+      userName: FLOPPY-USER
+      dateCreated: 2229202206
+      lastDateRead: 2241799769
+      lastDateWritten: 2232979192
+      dateCreatedStr: 1983-03-15 14:52:30
+      lastDateReadStr: 1983-06-15 18:25:25
+      lastDateWrittenStr: 1983-04-12 08:59:56
+      bpunValid: null
+    - name: DUMMY-SEXMC:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 171
+      userName: FLOPPY-USER
+      dateCreated: 2227769398
+      lastDateRead: 2236807206
+      lastDateWritten: 2232982681
+      dateCreatedStr: 1983-03-04 17:00:54
+      lastDateReadStr: 1983-05-09 15:32:38
+      lastDateWrittenStr: 1983-04-12 09:50:25
+      bpunValid: null
+    - name: SI5-DML-BLOC:NRF
+      type: NRF
+      pages: 1
+      bytes: 1542
+      userName: FLOPPY-USER
+      dateCreated: 2227769409
+      lastDateRead: 2236807214
+      lastDateWritten: 2232982703
+      dateCreatedStr: 1983-03-04 17:01:01
+      lastDateReadStr: 1983-05-09 15:32:46
+      lastDateWrittenStr: 1983-04-12 09:50:47
+      bpunValid: null
+    - name: ND500-SIB2E:BRF
+      type: BRF
+      pages: 1
+      bytes: 394
+      userName: FLOPPY-USER
+      dateCreated: 2229202167
+      lastDateRead: 2241799777
+      lastDateWritten: 2241684565
+      dateCreatedStr: 1983-03-15 14:51:55
+      lastDateReadStr: 1983-06-15 18:25:33
+      lastDateWrittenStr: 1983-06-14 22:17:21
+      bpunValid: null
+    - name: ND500-SIB2F:BRF
+      type: BRF
+      pages: 1
+      bytes: 394
+      userName: FLOPPY-USER
+      dateCreated: 2229202176
+      lastDateRead: 2241799785
+      lastDateWritten: 2241684570
+      dateCreatedStr: 1983-03-15 14:52:00
+      lastDateReadStr: 1983-06-15 18:25:41
+      lastDateWrittenStr: 1983-06-14 22:17:26
+      bpunValid: null
+    - name: ND500-SERV2D:BRF
+      type: BRF
+      pages: 1
+      bytes: 205
+      userName: FLOPPY-USER
+      dateCreated: 2229202210
+      lastDateRead: 2241799799
+      lastDateWritten: 2232979458
+      dateCreatedStr: 1983-03-15 14:52:34
+      lastDateReadStr: 1983-06-15 18:25:55
+      lastDateWrittenStr: 1983-04-12 09:00:02
+      bpunValid: null
+    - name: SIB2A-500:LOAD
+      type: LOAD
+      pages: 1
+      bytes: 1709
+      userName: FLOPPY-USER
+      dateCreated: 2227769436
+      lastDateRead: 2236807250
+      lastDateWritten: 2229579295
+      dateCreatedStr: 1983-03-04 17:01:28
+      lastDateReadStr: 1983-05-09 15:33:18
+      lastDateWrittenStr: 1983-03-18 10:56:31
+      bpunValid: null
+    - name: SIB2B-500:LOAD
+      type: LOAD
+      pages: 1
+      bytes: 1855
+      userName: FLOPPY-USER
+      dateCreated: 2227769443
+      lastDateRead: 2236807256
+      lastDateWritten: 2229578962
+      dateCreatedStr: 1983-03-04 17:01:35
+      lastDateReadStr: 1983-05-09 15:33:24
+      lastDateWrittenStr: 1983-03-18 10:51:18
+      bpunValid: null
+    - name: SIB2C-500:LOAD
+      type: LOAD
+      pages: 1
+      bytes: 1852
+      userName: FLOPPY-USER
+      dateCreated: 2227769450
+      lastDateRead: 2236807263
+      lastDateWritten: 2229578989
+      dateCreatedStr: 1983-03-04 17:01:42
+      lastDateReadStr: 1983-05-09 15:33:31
+      lastDateWrittenStr: 1983-03-18 10:51:45
+      bpunValid: null
+    - name: ND500-RTLOAD:MODE
+      type: MODE
+      pages: 2
+      bytes: 3847
+      userName: FLOPPY-USER
+      dateCreated: 2227769457
+      lastDateRead: 2236807272
+      lastDateWritten: 2234305685
+      dateCreatedStr: 1983-03-04 17:01:49
+      lastDateReadStr: 1983-05-09 15:33:40
+      lastDateWrittenStr: 1983-04-22 12:50:21
+      bpunValid: null
+    - name: INSTALL-SIB-500:MODE
+      type: MODE
+      pages: 5
+      bytes: 8776
+      userName: FLOPPY-USER
+      dateCreated: 2227769464
+      lastDateRead: 2243349348
+      lastDateWritten: 2243349644
+      dateCreatedStr: 1983-03-04 17:01:56
+      lastDateReadStr: 1983-06-27 12:45:36
+      lastDateWrittenStr: 1983-06-27 12:50:12
+      bpunValid: null
+    - name: DUMMY-SEXMC:NRF
+      type: NRF
+      pages: 1
+      bytes: 226
+      userName: FLOPPY-USER
+      dateCreated: 2227769483
+      lastDateRead: 2236807286
+      lastDateWritten: 2232982682
+      dateCreatedStr: 1983-03-04 17:02:11
+      lastDateReadStr: 1983-05-09 15:33:54
+      lastDateWrittenStr: 1983-04-12 09:50:26
+      bpunValid: null
+    - name: N500-MONITOR:BRF
+      type: BRF
+      pages: 14
+      bytes: 27233
+      userName: FLOPPY-USER
+      dateCreated: 2227769489
+      lastDateRead: 2236807297
+      lastDateWritten: 2227769490
+      dateCreatedStr: 1983-03-04 17:02:17
+      lastDateReadStr: 1983-05-09 15:34:01
+      lastDateWrittenStr: 1983-03-04 17:02:18
+      bpunValid: null
+    - name: SERVER-MONCOM:NRF
+      type: NRF
+      pages: 1
+      bytes: 1254
+      userName: FLOPPY-USER
+      dateCreated: 2227769500
+      lastDateRead: 2236807308
+      lastDateWritten: 2232982687
+      dateCreatedStr: 1983-03-04 17:02:28
+      lastDateReadStr: 1983-05-09 15:34:12
+      lastDateWrittenStr: 1983-04-12 09:50:31
+      bpunValid: null
+    - name: SIB2D-500:LOAD
+      type: LOAD
+      pages: 1
+      bytes: 1852
+      userName: FLOPPY-USER
+      dateCreated: 2227769506
+      lastDateRead: 2236807315
+      lastDateWritten: 2229579030
+      dateCreatedStr: 1983-03-04 17:02:34
+      lastDateReadStr: 1983-05-09 15:34:19
+      lastDateWrittenStr: 1983-03-18 10:52:22
+      bpunValid: null
+    - name: SIB2E-500:LOAD
+      type: LOAD
+      pages: 1
+      bytes: 1853
+      userName: FLOPPY-USER
+      dateCreated: 2227769513
+      lastDateRead: 2236807322
+      lastDateWritten: 2229579050
+      dateCreatedStr: 1983-03-04 17:02:41
+      lastDateReadStr: 1983-05-09 15:34:26
+      lastDateWrittenStr: 1983-03-18 10:52:42
+      bpunValid: null
+    - name: SIB2F-500:LOAD
+      type: LOAD
+      pages: 1
+      bytes: 1853
+      userName: FLOPPY-USER
+      dateCreated: 2227769520
+      lastDateRead: 2236807333
+      lastDateWritten: 2229579073
+      dateCreatedStr: 1983-03-04 17:02:48
+      lastDateReadStr: 1983-05-09 15:34:37
+      lastDateWrittenStr: 1983-03-18 10:53:01
+      bpunValid: null
+    - name: ND500-SERV2E:BRF
+      type: BRF
+      pages: 1
+      bytes: 205
+      userName: FLOPPY-USER
+      dateCreated: 2229202214
+      lastDateRead: 2241799822
+      lastDateWritten: 2232979463
+      dateCreatedStr: 1983-03-15 14:52:38
+      lastDateReadStr: 1983-06-15 18:26:14
+      lastDateWrittenStr: 1983-04-12 09:00:07
+      bpunValid: null
+    - name: ND500-SERV2F:BRF
+      type: BRF
+      pages: 1
+      bytes: 205
+      userName: FLOPPY-USER
+      dateCreated: 2229202220
+      lastDateRead: 2241799833
+      lastDateWritten: 2232979469
+      dateCreatedStr: 1983-03-15 14:52:44
+      lastDateReadStr: 1983-06-15 18:26:25
+      lastDateWrittenStr: 1983-04-12 09:00:13
+      bpunValid: null
+provenance:
+  contributor: ndwiki
+  originalPath: tingo/8_nd_f0b_nd-10340d-part2.img
+  dateImaged: 2026-08-10
+  importedAt: 2026-08-11T12:29:23.136Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10340-d-d2-f57e0215
+  syncStatus: pending

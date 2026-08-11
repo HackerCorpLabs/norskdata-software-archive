@@ -1,0 +1,62 @@
+id: nd-210079-n08-d2-381c04cb
+volumeName: 210079N08-NO-02D
+md5: 381c04cb707278dc16f7eedbbb4dfa34
+product:
+  id: ND-210079
+  version: N08
+  diskNumber: 2
+  language: NO
+image:
+  sizeBytes: 1261568
+  format: raw
+  controller: floppy
+  totalPages: 616
+  pageSize: 2048
+  bootFormat: none
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 172
+  files:
+    - name: UE-ERMSG-NO-C06:ERR
+      type: ERR
+      pages: 121
+      bytes: 247808
+      userName: FLOPPY-USER
+      dateCreated: 2521238991
+      lastDateRead: 2523045009
+      lastDateWritten: 2521238995
+      dateCreatedStr: 1987-09-03 16:55:15
+      lastDateReadStr: 1987-09-17 09:50:17
+      lastDateWrittenStr: 1987-09-03 16:55:19
+      bpunValid: null
+    - name: UE-INST-C07:PROG
+      type: PROG
+      pages: 48
+      bytes: 157656
+      userName: FLOPPY-USER
+      dateCreated: 2527535619
+      lastDateRead: 2527659834
+      lastDateWritten: 2534446422
+      dateCreatedStr: 1987-10-19 18:08:03
+      lastDateReadStr: 1987-10-20 16:28:58
+      lastDateWrittenStr: 1987-12-08 09:21:22
+      bpunValid: null
+provenance:
+  contributor: ndwiki
+  originalPath: tingo/8_nd_f17b_210079n08-no-02d.img
+  dateImaged: 2026-08-10
+  importedAt: 2026-08-11T12:29:23.969Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-210079-n08-d2-381c04cb
+  syncStatus: pending

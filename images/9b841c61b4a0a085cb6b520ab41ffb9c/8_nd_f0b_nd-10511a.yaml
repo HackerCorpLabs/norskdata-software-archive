@@ -1,0 +1,60 @@
+id: nd-10511-a-d1-9b841c61
+volumeName: ND-10511A
+md5: 9b841c61b4a0a085cb6b520ab41ffb9c
+product:
+  id: ND-10511
+  version: A
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 25
+  files:
+    - name: EXCEPTION-LIB-A:NRF
+      type: NRF
+      pages: 11
+      bytes: 21432
+      userName: FLOPPY-USER
+      dateCreated: 2236043301
+      lastDateRead: 2296159397
+      lastDateWritten: 2242047719
+      dateCreatedStr: 1983-05-03 21:00:37
+      lastDateReadStr: 1984-03-14 09:50:37
+      lastDateWrittenStr: 1983-06-17 14:59:39
+      bpunValid: null
+    - name: EXCEPTION-TPS-A:NRF
+      type: NRF
+      pages: 11
+      bytes: 21513
+      userName: FLOPPY-USER
+      dateCreated: 2236043375
+      lastDateRead: 2236044335
+      lastDateWritten: 2242048020
+      dateCreatedStr: 1983-05-03 21:01:47
+      lastDateReadStr: 1983-05-03 21:16:47
+      lastDateWrittenStr: 1983-06-17 15:00:20
+      bpunValid: null
+provenance:
+  contributor: ndwiki
+  originalPath: tingo/8_nd_f0b_nd-10511a.img
+  dateImaged: 2026-08-10
+  importedAt: 2026-08-11T12:29:23.258Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10511-a-d1-9b841c61
+  syncStatus: pending

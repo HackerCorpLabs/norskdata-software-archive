@@ -1,0 +1,61 @@
+id: nd-10073-g-d1-164310e5
+volumeName: ND-10073G-PART1
+md5: 164310e58ef40748adb806601511da82
+product:
+  id: ND-10073
+  version: G
+  diskNumber: 1
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 65
+  files:
+    - name: ISAM-1BANK-G:BRF
+      type: BRF
+      pages: 31
+      bytes: 61891
+      userName: FLOPPY-USER
+      dateCreated: 2240845708
+      lastDateRead: 2261188664
+      lastDateWritten: 2240846737
+      dateCreatedStr: 1983-06-08 09:30:12
+      lastDateReadStr: 1983-11-03 16:00:56
+      lastDateWrittenStr: 1983-06-08 09:46:17
+      bpunValid: null
+    - name: ISAM-2BANK-G:BRF
+      type: BRF
+      pages: 31
+      bytes: 63263
+      userName: FLOPPY-USER
+      dateCreated: 2240845708
+      lastDateRead: 2386094605
+      lastDateWritten: 2240846757
+      dateCreatedStr: 1983-06-08 09:30:12
+      lastDateReadStr: 1985-08-28 14:40:13
+      lastDateWrittenStr: 1983-06-08 09:46:37
+      bpunValid: null
+provenance:
+  contributor: ndwiki
+  originalPath: tingo/8_nd_f0b_nd-10073g-part1.img
+  dateImaged: 2026-08-10
+  importedAt: 2026-08-11T12:29:23.055Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10073-g-d1-164310e5
+  syncStatus: pending

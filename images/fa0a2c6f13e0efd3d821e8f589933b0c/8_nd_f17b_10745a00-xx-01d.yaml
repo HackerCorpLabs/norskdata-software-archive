@@ -1,0 +1,218 @@
+id: nd-10745-a00-d1-fa0a2c6f
+volumeName: 10745A00-XX-01D
+md5: fa0a2c6f13e0efd3d821e8f589933b0c
+product:
+  id: ND-10745
+  version: A00
+  diskNumber: 1
+  language: XX
+image:
+  sizeBytes: 1261568
+  format: raw
+  controller: floppy
+  totalPages: 616
+  pageSize: 2048
+  bootFormat: none
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 516
+  files:
+    - name: INSTALL-ADA-A00:PROG
+      type: PROG
+      pages: 67
+      bytes: 214788
+      userName: FLOPPY-USER
+      dateCreated: 2373907663
+      lastDateRead: 2375608562
+      lastDateWritten: 2375328769
+      dateCreatedStr: 1985-05-31 15:19:15
+      lastDateReadStr: 1985-06-12 14:35:50
+      lastDateWrittenStr: 1985-06-10 10:16:01
+      bpunValid: null
+    - name: ADA-INST-DD-A00:PROG
+      type: PROG
+      pages: 70
+      bytes: 219856
+      userName: FLOPPY-USER
+      dateCreated: 2373907706
+      lastDateRead: 2375608616
+      lastDateWritten: 2375328731
+      dateCreatedStr: 1985-05-31 15:19:58
+      lastDateReadStr: 1985-06-12 14:36:40
+      lastDateWrittenStr: 1985-06-10 10:15:27
+      bpunValid: null
+    - name: DESCRIPTION-FILE:DESC
+      type: DESC
+      pages: 11
+      bytes: 22528
+      userName: FLOPPY-USER
+      dateCreated: 2373907767
+      lastDateRead: 2375608874
+      lastDateWritten: 2373907768
+      dateCreatedStr: 1985-05-31 15:20:55
+      lastDateReadStr: 1985-06-12 14:40:42
+      lastDateWrittenStr: 1985-05-31 15:20:56
+      bpunValid: null
+    - name: ADA-COMPILER-A00:PSEG
+      type: PSEG
+      pages: 183
+      bytes: 372882
+      userName: FLOPPY-USER
+      dateCreated: 2373907788
+      lastDateRead: 2375608752
+      lastDateWritten: 2373907789
+      dateCreatedStr: 1985-05-31 15:21:12
+      lastDateReadStr: 1985-06-12 14:38:48
+      lastDateWrittenStr: 1985-05-31 15:21:13
+      bpunValid: null
+    - name: ADA-COMPILER-A00:DSEG
+      type: DSEG
+      pages: 133
+      bytes: 271951
+      userName: FLOPPY-USER
+      dateCreated: 2373907986
+      lastDateRead: 2375608752
+      lastDateWritten: 2373907988
+      dateCreatedStr: 1985-05-31 15:24:18
+      lastDateReadStr: 1985-06-12 14:38:48
+      lastDateWrittenStr: 1985-05-31 15:24:20
+      bpunValid: null
+    - name: ADA-COMPILER-A00:LINK
+      type: LINK
+      pages: 19
+      bytes: 38593
+      userName: FLOPPY-USER
+      dateCreated: 2373908197
+      lastDateRead: 2375608752
+      lastDateWritten: 2373908198
+      dateCreatedStr: 1985-05-31 15:27:37
+      lastDateReadStr: 1985-06-12 14:38:48
+      lastDateWrittenStr: 1985-05-31 15:27:38
+      bpunValid: null
+    - name: ADA-BLD-ENV-A00:MODE
+      type: MODE
+      pages: 1
+      bytes: 1744
+      userName: FLOPPY-USER
+      dateCreated: 2373908237
+      lastDateRead: 2375608930
+      lastDateWritten: 2373908238
+      dateCreatedStr: 1985-05-31 15:28:13
+      lastDateReadStr: 1985-06-12 14:41:34
+      lastDateWrittenStr: 1985-05-31 15:28:14
+      bpunValid: null
+    - name: ADA-SYS:ADA
+      type: ADA
+      pages: 1
+      bytes: 1284
+      userName: FLOPPY-USER
+      dateCreated: 2373908244
+      lastDateRead: 2375608908
+      lastDateWritten: 2373908245
+      dateCreatedStr: 1985-05-31 15:28:20
+      lastDateReadStr: 1985-06-12 14:41:12
+      lastDateWrittenStr: 1985-05-31 15:28:21
+      bpunValid: null
+    - name: ADA-IOX-SPEC:ADA
+      type: ADA
+      pages: 1
+      bytes: 628
+      userName: FLOPPY-USER
+      dateCreated: 2373908251
+      lastDateRead: 2375608912
+      lastDateWritten: 2373908252
+      dateCreatedStr: 1985-05-31 15:28:27
+      lastDateReadStr: 1985-06-12 14:41:16
+      lastDateWrittenStr: 1985-05-31 15:28:28
+      bpunValid: null
+    - name: ADA-TIO-SPEC:ADA
+      type: ADA
+      pages: 11
+      bytes: 21837
+      userName: FLOPPY-USER
+      dateCreated: 2373908258
+      lastDateRead: 2375608915
+      lastDateWritten: 2373908259
+      dateCreatedStr: 1985-05-31 15:28:34
+      lastDateReadStr: 1985-06-12 14:41:19
+      lastDateWrittenStr: 1985-05-31 15:28:35
+      bpunValid: null
+    - name: ADA-TIO-BODY:ADA
+      type: ADA
+      pages: 2
+      bytes: 3276
+      userName: FLOPPY-USER
+      dateCreated: 2373908290
+      lastDateRead: 2375608921
+      lastDateWritten: 2373908291
+      dateCreatedStr: 1985-05-31 15:29:02
+      lastDateReadStr: 1985-06-12 14:41:25
+      lastDateWrittenStr: 1985-05-31 15:29:03
+      bpunValid: null
+    - name: ADA-CAL-SPEC:ADA
+      type: ADA
+      pages: 4
+      bytes: 6530
+      userName: FLOPPY-USER
+      dateCreated: 2373908296
+      lastDateRead: 2375608924
+      lastDateWritten: 2373908297
+      dateCreatedStr: 1985-05-31 15:29:08
+      lastDateReadStr: 1985-06-12 14:41:28
+      lastDateWrittenStr: 1985-05-31 15:29:09
+      bpunValid: null
+    - name: ADA-LILO-A00:PSEG
+      type: PSEG
+      pages: 0
+      bytes: 4294967296
+      userName: FLOPPY-USER
+      dateCreated: 2373908304
+      lastDateRead: 2375608882
+      lastDateWritten: null
+      dateCreatedStr: 1985-05-31 15:29:16
+      lastDateReadStr: 1985-06-12 14:40:50
+      lastDateWrittenStr: null
+      bpunValid: null
+    - name: ADA-LILO-A00:DSEG
+      type: DSEG
+      pages: 0
+      bytes: 4294967296
+      userName: FLOPPY-USER
+      dateCreated: 2373908305
+      lastDateRead: 2375608883
+      lastDateWritten: null
+      dateCreatedStr: 1985-05-31 15:29:17
+      lastDateReadStr: 1985-06-12 14:40:51
+      lastDateWrittenStr: null
+      bpunValid: null
+    - name: ADA-LILO-A00:LINK
+      type: LINK
+      pages: 0
+      bytes: 4294967296
+      userName: FLOPPY-USER
+      dateCreated: 2373908306
+      lastDateRead: 2375608883
+      lastDateWritten: null
+      dateCreatedStr: 1985-05-31 15:29:18
+      lastDateReadStr: 1985-06-12 14:40:51
+      lastDateWrittenStr: null
+      bpunValid: null
+provenance:
+  contributor: ndwiki
+  originalPath: tingo/8_nd_f17b_10745a00-xx-01d.img
+  dateImaged: 2026-08-10
+  importedAt: 2026-08-11T12:29:23.674Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10745-a00-d1-fa0a2c6f
+  syncStatus: pending

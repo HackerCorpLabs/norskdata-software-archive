@@ -1,0 +1,62 @@
+id: nd-210412-f01-d1-00ece56d
+volumeName: 210412F01-XX-01S
+md5: 00ece56daf4e67b77dbfd8ed1077aede
+product:
+  id: ND-210412
+  version: F01
+  diskNumber: 1
+  language: XX
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: flomon
+ndfs:
+  users:
+    - name: SYSTEM
+      pagesUsed: 84
+  files:
+    - name: CONT-STORE-10611:DATA
+      type: DATA
+      pages: 72
+      bytes: 147456
+      userName: SYSTEM
+      dateCreated: 2450317961
+      lastDateRead: null
+      lastDateWritten: 2450317965
+      dateCreatedStr: 1986-08-06 14:10:09
+      lastDateReadStr: null
+      lastDateWrittenStr: 1986-08-06 14:10:13
+      bpunValid: null
+    - name: ND-500-APF-LIB-E:NRF
+      type: NRF
+      pages: 9
+      bytes: 18173
+      userName: SYSTEM
+      dateCreated: 2450318086
+      lastDateRead: null
+      lastDateWritten: 2450318087
+      dateCreatedStr: 1986-08-06 14:12:06
+      lastDateReadStr: null
+      lastDateWrittenStr: 1986-08-06 14:12:07
+      bpunValid: null
+provenance:
+  contributor: ndwiki
+  originalPath: tingo/8_nd_f0b_210412f01-xx-01s.img
+  dateImaged: 2026-08-10
+  importedAt: 2026-08-11T12:29:22.972Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-210412-f01-d1-00ece56d
+  syncStatus: pending

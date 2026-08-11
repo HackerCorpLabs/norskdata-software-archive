@@ -1,0 +1,50 @@
+id: nd-210166-f02-d6-95b74afd
+volumeName: 210166F02-XX-06S
+md5: 95b74afddcd5681ddbc3079aa0aacfaf
+product:
+  id: ND-210166
+  version: F02
+  diskNumber: 6
+  language: XX
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 114
+  files:
+    - name: SIB2-DBM-100-F02:PROG
+      type: PROG
+      pages: 112
+      bytes: 264192
+      userName: FLOPPY-USER
+      dateCreated: 2446385256
+      lastDateRead: 2464860996
+      lastDateWritten: 2465256882
+      dateCreatedStr: 1986-07-08 14:01:40
+      lastDateReadStr: 1986-11-21 12:45:04
+      lastDateWrittenStr: 1986-11-24 13:22:50
+      bpunValid: null
+provenance:
+  contributor: ndwiki
+  originalPath: tingo/8_nd_f0b_210166f02-xx-06s.img
+  dateImaged: 2026-08-10
+  importedAt: 2026-08-11T12:29:22.808Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-210166-f02-d6-95b74afd
+  syncStatus: pending

@@ -1,0 +1,278 @@
+id: nd-210523-i01-d2-67e9dc8e
+volumeName: 210523I01-XX-02D
+md5: 67e9dc8ee3852a3ad6ab94a39c4ff8cc
+product:
+  id: ND-210523
+  version: I01
+  diskNumber: 2
+  language: XX
+image:
+  sizeBytes: 1261568
+  format: raw
+  controller: floppy
+  totalPages: 616
+  pageSize: 2048
+  bootFormat: flomon
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 309
+  files:
+    - name: TPE-MON-100-B01:BPUN
+      type: BPUN
+      pages: 28
+      bytes: 56182
+      userName: FLOPPY-USER
+      dateCreated: 2595280709
+      lastDateRead: 2711018416
+      lastDateWritten: 2598563279
+      dateCreatedStr: 1988-10-24 13:29:05
+      lastDateReadStr: 1990-06-11 13:46:48
+      lastDateWrittenStr: 1988-11-17 14:55:15
+      bpunValid: true
+    - name: DISK-MM-C03:TEST
+      type: TEST
+      pages: 38
+      bytes: 77824
+      userName: FLOPPY-USER
+      dateCreated: 2711006472
+      lastDateRead: 2711018424
+      lastDateWritten: 2711006472
+      dateCreatedStr: 1990-06-11 10:52:08
+      lastDateReadStr: 1990-06-11 13:46:56
+      lastDateWrittenStr: 1990-06-11 10:52:08
+      bpunValid: null
+    - name: DISK-MM-E0-C03:NEXT
+      type: NEXT
+      pages: 11
+      bytes: 22528
+      userName: FLOPPY-USER
+      dateCreated: 2711006480
+      lastDateRead: 2711006480
+      lastDateWritten: 2711006480
+      dateCreatedStr: 1990-06-11 10:52:16
+      lastDateReadStr: 1990-06-11 10:52:16
+      lastDateWrittenStr: 1990-06-11 10:52:16
+      bpunValid: null
+    - name: DISK-MM-E1-C03:NEXT
+      type: NEXT
+      pages: 11
+      bytes: 22528
+      userName: FLOPPY-USER
+      dateCreated: 2711006483
+      lastDateRead: 2711018434
+      lastDateWritten: 2711006483
+      dateCreatedStr: 1990-06-11 10:52:19
+      lastDateReadStr: 1990-06-11 13:47:02
+      lastDateWrittenStr: 1990-06-11 10:52:19
+      bpunValid: null
+    - name: DISK-MM-E2-C03:NEXT
+      type: NEXT
+      pages: 11
+      bytes: 22528
+      userName: FLOPPY-USER
+      dateCreated: 2711006487
+      lastDateRead: 2711006487
+      lastDateWritten: 2711006487
+      dateCreatedStr: 1990-06-11 10:52:23
+      lastDateReadStr: 1990-06-11 10:52:23
+      lastDateWrittenStr: 1990-06-11 10:52:23
+      bpunValid: null
+    - name: DISK-MM-C1-C03:NEXT
+      type: NEXT
+      pages: 6
+      bytes: 12288
+      userName: FLOPPY-USER
+      dateCreated: 2711006490
+      lastDateRead: 2711006490
+      lastDateWritten: 2711006490
+      dateCreatedStr: 1990-06-11 10:52:26
+      lastDateReadStr: 1990-06-11 10:52:26
+      lastDateWrittenStr: 1990-06-11 10:52:26
+      bpunValid: null
+    - name: DISK-MM-C2-C03:NEXT
+      type: NEXT
+      pages: 6
+      bytes: 12288
+      userName: FLOPPY-USER
+      dateCreated: 2711006492
+      lastDateRead: 2711018443
+      lastDateWritten: 2711006492
+      dateCreatedStr: 1990-06-11 10:52:28
+      lastDateReadStr: 1990-06-11 13:47:11
+      lastDateWrittenStr: 1990-06-11 10:52:28
+      bpunValid: null
+    - name: DISK-MM-C3-C03:NEXT
+      type: NEXT
+      pages: 6
+      bytes: 12288
+      userName: FLOPPY-USER
+      dateCreated: 2711006494
+      lastDateRead: 2711006494
+      lastDateWritten: 2711006494
+      dateCreatedStr: 1990-06-11 10:52:30
+      lastDateReadStr: 1990-06-11 10:52:30
+      lastDateWrittenStr: 1990-06-11 10:52:30
+      bpunValid: null
+    - name: DISK-MM-C4-C03:NEXT
+      type: NEXT
+      pages: 6
+      bytes: 12288
+      userName: FLOPPY-USER
+      dateCreated: 2711006495
+      lastDateRead: 2711018440
+      lastDateWritten: 2711006495
+      dateCreatedStr: 1990-06-11 10:52:31
+      lastDateReadStr: 1990-06-11 13:47:08
+      lastDateWrittenStr: 1990-06-11 10:52:31
+      bpunValid: null
+    - name: SCSI-TV-C04:TEST
+      type: TEST
+      pages: 37
+      bytes: 75776
+      userName: FLOPPY-USER
+      dateCreated: 2711006427
+      lastDateRead: 2711006427
+      lastDateWritten: 2711006427
+      dateCreatedStr: 1990-06-11 10:51:27
+      lastDateReadStr: 1990-06-11 10:51:27
+      lastDateWrittenStr: 1990-06-11 10:51:27
+      bpunValid: null
+    - name: SCSI-TV-E0-C04:NEXT
+      type: NEXT
+      pages: 11
+      bytes: 22528
+      userName: FLOPPY-USER
+      dateCreated: 2711006434
+      lastDateRead: 2711006435
+      lastDateWritten: 2711006435
+      dateCreatedStr: 1990-06-11 10:51:34
+      lastDateReadStr: 1990-06-11 10:51:35
+      lastDateWrittenStr: 1990-06-11 10:51:35
+      bpunValid: null
+    - name: SCSI-TV-E1-C04:NEXT
+      type: NEXT
+      pages: 6
+      bytes: 12288
+      userName: FLOPPY-USER
+      dateCreated: 2711006438
+      lastDateRead: 2711006438
+      lastDateWritten: 2711006438
+      dateCreatedStr: 1990-06-11 10:51:38
+      lastDateReadStr: 1990-06-11 10:51:38
+      lastDateWrittenStr: 1990-06-11 10:51:38
+      bpunValid: null
+    - name: SCSI-TV-E2-C04:NEXT
+      type: NEXT
+      pages: 6
+      bytes: 12288
+      userName: FLOPPY-USER
+      dateCreated: 2711006439
+      lastDateRead: 2711006439
+      lastDateWritten: 2711006439
+      dateCreatedStr: 1990-06-11 10:51:39
+      lastDateReadStr: 1990-06-11 10:51:39
+      lastDateWrittenStr: 1990-06-11 10:51:39
+      bpunValid: null
+    - name: SCSI-TV-E3-C04:NEXT
+      type: NEXT
+      pages: 11
+      bytes: 22528
+      userName: FLOPPY-USER
+      dateCreated: 2711006441
+      lastDateRead: 2711006441
+      lastDateWritten: 2711006441
+      dateCreatedStr: 1990-06-11 10:51:41
+      lastDateReadStr: 1990-06-11 10:51:41
+      lastDateWrittenStr: 1990-06-11 10:51:41
+      bpunValid: null
+    - name: SCSI-TV-C1-C04:NEXT
+      type: NEXT
+      pages: 14
+      bytes: 28672
+      userName: FLOPPY-USER
+      dateCreated: 2711006444
+      lastDateRead: 2711006444
+      lastDateWritten: 2711006444
+      dateCreatedStr: 1990-06-11 10:51:44
+      lastDateReadStr: 1990-06-11 10:51:44
+      lastDateWrittenStr: 1990-06-11 10:51:44
+      bpunValid: null
+    - name: SCSI-TV-A0-C04:NEXT
+      type: NEXT
+      pages: 24
+      bytes: 49152
+      userName: FLOPPY-USER
+      dateCreated: 2711006448
+      lastDateRead: 2711006448
+      lastDateWritten: 2711006448
+      dateCreatedStr: 1990-06-11 10:51:48
+      lastDateReadStr: 1990-06-11 10:51:48
+      lastDateWrittenStr: 1990-06-11 10:51:48
+      bpunValid: null
+    - name: SCSI-TV-D0-C04:NEXT
+      type: NEXT
+      pages: 14
+      bytes: 28672
+      userName: FLOPPY-USER
+      dateCreated: 2711006453
+      lastDateRead: 2711006453
+      lastDateWritten: 2711006453
+      dateCreatedStr: 1990-06-11 10:51:53
+      lastDateReadStr: 1990-06-11 10:51:53
+      lastDateWrittenStr: 1990-06-11 10:51:53
+      bpunValid: null
+    - name: SCSI-TV-D1-C04:NEXT
+      type: NEXT
+      pages: 14
+      bytes: 28672
+      userName: FLOPPY-USER
+      dateCreated: 2711006457
+      lastDateRead: 2711006457
+      lastDateWritten: 2711006457
+      dateCreatedStr: 1990-06-11 10:51:57
+      lastDateReadStr: 1990-06-11 10:51:57
+      lastDateWrittenStr: 1990-06-11 10:51:57
+      bpunValid: null
+    - name: SCSI-TV-D2-C04:NEXT
+      type: NEXT
+      pages: 14
+      bytes: 28672
+      userName: FLOPPY-USER
+      dateCreated: 2711006465
+      lastDateRead: 2711006465
+      lastDateWritten: 2711006465
+      dateCreatedStr: 1990-06-11 10:52:01
+      lastDateReadStr: 1990-06-11 10:52:01
+      lastDateWrittenStr: 1990-06-11 10:52:01
+      bpunValid: null
+    - name: SCSI-TV-D3-C04:NEXT
+      type: NEXT
+      pages: 14
+      bytes: 28672
+      userName: FLOPPY-USER
+      dateCreated: 2711006468
+      lastDateRead: 2711006469
+      lastDateWritten: 2711006469
+      dateCreatedStr: 1990-06-11 10:52:04
+      lastDateReadStr: 1990-06-11 10:52:05
+      lastDateWrittenStr: 1990-06-11 10:52:05
+      bpunValid: null
+provenance:
+  contributor: ndwiki
+  originalPath: tingo/Nd-210523I01-XX-02D.img
+  dateImaged: 2026-08-10
+  importedAt: 2026-08-11T12:29:24.940Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-210523-i01-d2-67e9dc8e
+  syncStatus: pending

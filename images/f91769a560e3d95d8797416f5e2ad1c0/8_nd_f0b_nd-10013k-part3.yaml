@@ -1,0 +1,85 @@
+id: nd-10013-k-d3-f91769a5
+volumeName: ND-10013K-PART3
+md5: f91769a560e3d95d8797416f5e2ad1c0
+product:
+  id: ND-10013
+  version: K
+  diskNumber: 3
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 32
+  files:
+    - name: SCREEN-COPY-K:BPUN
+      type: BPUN
+      pages: 17
+      bytes: 33185
+      userName: FLOPPY-USER
+      dateCreated: 2226049713
+      lastDateRead: 2380188916
+      lastDateWritten: 2226049719
+      dateCreatedStr: 1983-02-23 13:10:49
+      lastDateReadStr: 1985-07-15 12:51:52
+      lastDateWrittenStr: 1983-02-23 13:10:55
+      bpunValid: true
+    - name: SCREEN-DEMO-K:SYMB
+      type: SYMB
+      pages: 6
+      bytes: 11133
+      userName: FLOPPY-USER
+      dateCreated: 2226049740
+      lastDateRead: 2380186084
+      lastDateWritten: 2226049741
+      dateCreatedStr: 1983-02-23 13:11:12
+      lastDateReadStr: 1985-07-15 12:07:36
+      lastDateWrittenStr: 1983-02-23 13:11:13
+      bpunValid: null
+    - name: SCREEN-UCONT-K:SYMB
+      type: SYMB
+      pages: 3
+      bytes: 4903
+      userName: FLOPPY-USER
+      dateCreated: 2226049751
+      lastDateRead: 2380186149
+      lastDateWritten: 2226049752
+      dateCreatedStr: 1983-02-23 13:11:23
+      lastDateReadStr: 1985-07-15 12:08:37
+      lastDateWrittenStr: 1983-02-23 13:11:24
+      bpunValid: null
+    - name: SCREEN-SYMB-K:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1317
+      userName: FLOPPY-USER
+      dateCreated: 2226049760
+      lastDateRead: 2380186227
+      lastDateWritten: 2226049762
+      dateCreatedStr: 1983-02-23 13:11:32
+      lastDateReadStr: 1985-07-15 12:09:51
+      lastDateWrittenStr: 1983-02-23 13:11:34
+      bpunValid: null
+provenance:
+  contributor: ndwiki
+  originalPath: tingo/8_nd_f0b_nd-10013k-part3.img
+  dateImaged: 2026-08-10
+  importedAt: 2026-08-11T12:29:23.044Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10013-k-d3-f91769a5
+  syncStatus: pending

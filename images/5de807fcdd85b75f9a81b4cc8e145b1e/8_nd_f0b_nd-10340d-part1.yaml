@@ -1,0 +1,193 @@
+id: nd-10340-d-d1-5de807fc
+volumeName: ND-10340D-PART1
+md5: 5de807fcdd85b75f9a81b4cc8e145b1e
+product:
+  id: ND-10340
+  version: D
+  diskNumber: 1
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: flomon
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 126
+  files:
+    - name: DESCRIPTION-FILE:DESC
+      type: DESC
+      pages: 8
+      bytes: 22528
+      userName: FLOPPY-USER
+      dateCreated: 2232985897
+      lastDateRead: 2241765855
+      lastDateWritten: 2241764876
+      dateCreatedStr: 1983-04-12 10:36:41
+      lastDateReadStr: 1983-06-15 10:07:31
+      lastDateWrittenStr: 1983-06-15 09:56:12
+      bpunValid: null
+    - name: SCRATCH-SEG-01:LINK
+      type: LINK
+      pages: 0
+      bytes: 1
+      userName: FLOPPY-USER
+      dateCreated: 2232985913
+      lastDateRead: 2232985915
+      lastDateWritten: 2232985915
+      dateCreatedStr: 1983-04-12 10:36:57
+      lastDateReadStr: 1983-04-12 10:36:59
+      lastDateWrittenStr: 1983-04-12 10:36:59
+      bpunValid: null
+    - name: SCRATCH-SEG-01:DSEG
+      type: DSEG
+      pages: 1
+      bytes: 1029
+      userName: FLOPPY-USER
+      dateCreated: 2232985920
+      lastDateRead: 2232985934
+      lastDateWritten: 2232985921
+      dateCreatedStr: 1983-04-12 10:37:00
+      lastDateReadStr: 1983-04-12 10:37:14
+      lastDateWrittenStr: 1983-04-12 10:37:01
+      bpunValid: null
+    - name: SCRATCH-SEG-01:PSEG
+      type: PSEG
+      pages: 1
+      bytes: 5
+      userName: FLOPPY-USER
+      dateCreated: 2232985923
+      lastDateRead: 2232985924
+      lastDateWritten: 2232985924
+      dateCreatedStr: 1983-04-12 10:37:03
+      lastDateReadStr: 1983-04-12 10:37:04
+      lastDateWrittenStr: 1983-04-12 10:37:04
+      bpunValid: null
+    - name: SIBAS-MAIN-C2:LINK
+      type: LINK
+      pages: 1
+      bytes: 1921
+      userName: FLOPPY-USER
+      dateCreated: 2232985946
+      lastDateRead: 2241765971
+      lastDateWritten: 2241764700
+      dateCreatedStr: 1983-04-12 10:37:26
+      lastDateReadStr: 1983-06-15 10:09:19
+      lastDateWrittenStr: 1983-06-15 09:53:28
+      bpunValid: null
+    - name: SIBAS-MAIN-C2:DSEG
+      type: DSEG
+      pages: 0
+      bytes: 73591
+      userName: FLOPPY-USER
+      dateCreated: 2232985948
+      lastDateRead: 2241765971
+      lastDateWritten: 2241764700
+      dateCreatedStr: 1983-04-12 10:37:28
+      lastDateReadStr: 1983-06-15 10:09:19
+      lastDateWrittenStr: 1983-06-15 09:53:28
+      bpunValid: null
+    - name: SIBAS-MAIN-FIX:LINK
+      type: LINK
+      pages: 1
+      bytes: 353
+      userName: FLOPPY-USER
+      dateCreated: 2232985968
+      lastDateRead: 2241765959
+      lastDateWritten: 2241764707
+      dateCreatedStr: 1983-04-12 10:37:48
+      lastDateReadStr: 1983-06-15 10:09:07
+      lastDateWrittenStr: 1983-06-15 09:53:35
+      bpunValid: null
+    - name: SIBAS-MAIN-FIX:DSEG
+      type: DSEG
+      pages: 0
+      bytes: 66721
+      userName: FLOPPY-USER
+      dateCreated: 2232985971
+      lastDateRead: 2241765958
+      lastDateWritten: 2241764708
+      dateCreatedStr: 1983-04-12 10:37:51
+      lastDateReadStr: 1983-06-15 10:09:06
+      lastDateWrittenStr: 1983-06-15 09:53:36
+      bpunValid: null
+    - name: SIBAS-MAIN-C1:LINK
+      type: LINK
+      pages: 1
+      bytes: 321
+      userName: FLOPPY-USER
+      dateCreated: 2232985993
+      lastDateRead: 2241765943
+      lastDateWritten: 2241764715
+      dateCreatedStr: 1983-04-12 10:38:09
+      lastDateReadStr: 1983-06-15 10:08:55
+      lastDateWrittenStr: 1983-06-15 09:53:43
+      bpunValid: null
+    - name: SIBAS-MAIN-C1:DSEG
+      type: DSEG
+      pages: 0
+      bytes: 367
+      userName: FLOPPY-USER
+      dateCreated: 2232985996
+      lastDateRead: 2241765942
+      lastDateWritten: 2241764716
+      dateCreatedStr: 1983-04-12 10:38:12
+      lastDateReadStr: 1983-06-15 10:08:54
+      lastDateWrittenStr: 1983-06-15 09:53:44
+      bpunValid: null
+    - name: SIBAS-MAIN-SEG:LINK
+      type: LINK
+      pages: 7
+      bytes: 12321
+      userName: FLOPPY-USER
+      dateCreated: 2232986013
+      lastDateRead: 2241765868
+      lastDateWritten: 2241764723
+      dateCreatedStr: 1983-04-12 10:38:29
+      lastDateReadStr: 1983-06-15 10:07:44
+      lastDateWrittenStr: 1983-06-15 09:53:51
+      bpunValid: null
+    - name: SIBAS-MAIN-SEG:DSEG
+      type: DSEG
+      pages: 32
+      bytes: 69633
+      userName: FLOPPY-USER
+      dateCreated: 2232986016
+      lastDateRead: 2241765868
+      lastDateWritten: 2241764723
+      dateCreatedStr: 1983-04-12 10:38:32
+      lastDateReadStr: 1983-06-15 10:07:44
+      lastDateWrittenStr: 1983-06-15 09:53:51
+      bpunValid: null
+    - name: SIBAS-MAIN-SEG:PSEG
+      type: PSEG
+      pages: 64
+      bytes: 130642
+      userName: FLOPPY-USER
+      dateCreated: 2232986019
+      lastDateRead: 2241765867
+      lastDateWritten: 2241764724
+      dateCreatedStr: 1983-04-12 10:38:35
+      lastDateReadStr: 1983-06-15 10:07:43
+      lastDateWrittenStr: 1983-06-15 09:53:52
+      bpunValid: null
+provenance:
+  contributor: ndwiki
+  originalPath: tingo/8_nd_f0b_nd-10340d-part1.img
+  dateImaged: 2026-08-10
+  importedAt: 2026-08-11T12:29:23.124Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10340-d-d1-5de807fc
+  syncStatus: pending

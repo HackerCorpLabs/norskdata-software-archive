@@ -1,0 +1,278 @@
+id: nd-10732-b01-d1-7f6ed9f0
+volumeName: 10732B01-EN-01D
+md5: 7f6ed9f07100a145cb92b31cddc7b31b
+product:
+  id: ND-10732
+  version: B01
+  diskNumber: 1
+  language: EN
+image:
+  sizeBytes: 1261568
+  format: raw
+  controller: floppy
+  totalPages: 616
+  pageSize: 2048
+  bootFormat: none
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 549
+  files:
+    - name: INSTALL-TLX-B01:PROG
+      type: PROG
+      pages: 62
+      bytes: 189086
+      userName: FLOPPY-USER
+      dateCreated: 2388965263
+      lastDateRead: 2427109105
+      lastDateWritten: 2427109105
+      dateCreatedStr: 1985-09-18 11:30:15
+      lastDateReadStr: 1986-02-21 11:59:49
+      lastDateWrittenStr: 1986-02-21 11:59:49
+      bpunValid: null
+    - name: TLX-INSTALL-B00:XCOM
+      type: XCOM
+      pages: 7
+      bytes: 12672
+      userName: FLOPPY-USER
+      dateCreated: 2391724206
+      lastDateRead: 2426079232
+      lastDateWritten: 2391724206
+      dateCreatedStr: 1985-10-07 13:02:46
+      lastDateReadStr: 1986-02-13 16:32:00
+      lastDateWrittenStr: 1985-10-07 13:02:46
+      bpunValid: null
+    - name: FTNLIBR-2091F:BRF
+      type: BRF
+      pages: 18
+      bytes: 35092
+      userName: FLOPPY-USER
+      dateCreated: 2387015524
+      lastDateRead: 2426079239
+      lastDateWritten: 2387015524
+      dateCreatedStr: 1985-09-03 15:29:36
+      lastDateReadStr: 1986-02-13 16:32:07
+      lastDateWrittenStr: 1985-09-03 15:29:36
+      bpunValid: null
+    - name: TLX-LIB-B01:BRF
+      type: BRF
+      pages: 45
+      bytes: 90330
+      userName: FLOPPY-USER
+      dateCreated: 2425966081
+      lastDateRead: 2426079252
+      lastDateWritten: 2425966249
+      dateCreatedStr: 1986-02-12 20:56:01
+      lastDateReadStr: 1986-02-13 16:32:20
+      lastDateWrittenStr: 1986-02-12 20:58:41
+      bpunValid: null
+    - name: TLX-MAIN-B01:BRF
+      type: BRF
+      pages: 10
+      bytes: 19360
+      userName: FLOPPY-USER
+      dateCreated: 2425966657
+      lastDateRead: 2426079308
+      lastDateWritten: 2425966686
+      dateCreatedStr: 1986-02-12 21:01:01
+      lastDateReadStr: 1986-02-13 16:33:12
+      lastDateWrittenStr: 1986-02-12 21:01:30
+      bpunValid: null
+    - name: TLX-UTIL-B01:BRF
+      type: BRF
+      pages: 19
+      bytes: 38105
+      userName: FLOPPY-USER
+      dateCreated: 2425966614
+      lastDateRead: 2426079319
+      lastDateWritten: 2425966646
+      dateCreatedStr: 1986-02-12 21:00:22
+      lastDateReadStr: 1986-02-13 16:33:23
+      lastDateWrittenStr: 1986-02-12 21:00:54
+      bpunValid: null
+    - name: TLX-MN177-B00:MODE
+      type: MODE
+      pages: 3
+      bytes: 4874
+      userName: FLOPPY-USER
+      dateCreated: 2368134580
+      lastDateRead: 2426079336
+      lastDateWritten: 2379545449
+      dateCreatedStr: 1985-04-19 13:54:52
+      lastDateReadStr: 1986-02-13 16:33:40
+      lastDateWrittenStr: 1985-07-10 15:45:41
+      bpunValid: null
+    - name: TLX-SERVICE-B01:PROG
+      type: PROG
+      pages: 66
+      bytes: 192512
+      userName: FLOPPY-USER
+      dateCreated: 2425967460
+      lastDateRead: 2426079342
+      lastDateWritten: 2425967461
+      dateCreatedStr: 1986-02-12 21:13:36
+      lastDateReadStr: 1986-02-13 16:33:46
+      lastDateWrittenStr: 1986-02-12 21:13:37
+      bpunValid: null
+    - name: TLX-SERVER-B01:BRF
+      type: BRF
+      pages: 17
+      bytes: 32842
+      userName: FLOPPY-USER
+      dateCreated: 2425966304
+      lastDateRead: 2426079408
+      lastDateWritten: 2425966602
+      dateCreatedStr: 1986-02-12 20:59:32
+      lastDateReadStr: 1986-02-13 16:34:48
+      lastDateWrittenStr: 1986-02-12 21:00:10
+      bpunValid: null
+    - name: DDBTABLES-E03:VTM
+      type: VTM
+      pages: 10
+      bytes: 18846
+      userName: FLOPPY-USER
+      dateCreated: 2392136389
+      lastDateRead: 2427108823
+      lastDateWritten: 2398284549
+      dateCreatedStr: 1985-10-10 17:43:05
+      lastDateReadStr: 1986-02-21 11:55:23
+      lastDateWrittenStr: 1985-11-25 14:44:05
+      bpunValid: null
+    - name: TLX-INFO-XX-B00:TEXT
+      type: TEXT
+      pages: 1
+      bytes: 1139
+      userName: FLOPPY-USER
+      dateCreated: 2389095058
+      lastDateRead: 2426079446
+      lastDateWritten: 2389103315
+      dateCreatedStr: 1985-09-19 11:10:18
+      lastDateReadStr: 1986-02-13 16:35:22
+      lastDateWrittenStr: 1985-09-19 13:11:19
+      bpunValid: null
+    - name: TLX-TEXTS-EN-B01:BRF
+      type: BRF
+      pages: 1
+      bytes: 1571
+      userName: FLOPPY-USER
+      dateCreated: 2425968153
+      lastDateRead: 2426078281
+      lastDateWritten: 2425968153
+      dateCreatedStr: 1986-02-12 21:24:25
+      lastDateReadStr: 1986-02-13 16:17:09
+      lastDateWrittenStr: 1986-02-12 21:24:25
+      bpunValid: null
+    - name: UE-ERMSG-EN-B01:ERR
+      type: ERR
+      pages: 42
+      bytes: 84224
+      userName: FLOPPY-USER
+      dateCreated: 2364984467
+      lastDateRead: 2427109042
+      lastDateWritten: 2364984467
+      dateCreatedStr: 1985-03-27 12:50:19
+      lastDateReadStr: 1986-02-21 11:58:50
+      lastDateWrittenStr: 1985-03-27 12:50:19
+      bpunValid: null
+    - name: TELEX-EN-LOC-B01:PROG
+      type: PROG
+      pages: 96
+      bytes: 206848
+      userName: FLOPPY-USER
+      dateCreated: 2425967795
+      lastDateRead: 2426078343
+      lastDateWritten: 2425967795
+      dateCreatedStr: 1986-02-12 21:18:51
+      lastDateReadStr: 1986-02-13 16:18:07
+      lastDateWrittenStr: 1986-02-12 21:18:51
+      bpunValid: null
+    - name: DUMP-RP-TLX-B00:MODE
+      type: MODE
+      pages: 1
+      bytes: 812
+      userName: FLOPPY-USER
+      dateCreated: 2387772717
+      lastDateRead: 2426079654
+      lastDateWritten: 2390147781
+      dateCreatedStr: 1985-09-09 08:20:45
+      lastDateReadStr: 1986-02-13 16:38:38
+      lastDateWrittenStr: 1985-09-27 12:11:05
+      bpunValid: null
+    - name: DELET-RP-TLX-B00:MODE
+      type: MODE
+      pages: 1
+      bytes: 494
+      userName: FLOPPY-USER
+      dateCreated: 2387772759
+      lastDateRead: 2426079660
+      lastDateWritten: 2390147735
+      dateCreatedStr: 1985-09-09 08:21:23
+      lastDateReadStr: 1986-02-13 16:38:44
+      lastDateWrittenStr: 1985-09-27 12:10:23
+      bpunValid: null
+    - name: TLX-RP0-B00:PROG
+      type: PROG
+      pages: 80
+      bytes: 399360
+      userName: FLOPPY-USER
+      dateCreated: 2388170142
+      lastDateRead: 2426079665
+      lastDateWritten: 2390145735
+      dateCreatedStr: 1985-09-12 09:22:30
+      lastDateReadStr: 1986-02-13 16:38:49
+      lastDateWrittenStr: 1985-09-27 11:43:07
+      bpunValid: null
+    - name: TLX-RP1-B00:PROG
+      type: PROG
+      pages: 42
+      bytes: 397312
+      userName: FLOPPY-USER
+      dateCreated: 2388170246
+      lastDateRead: 2426079800
+      lastDateWritten: 2390145794
+      dateCreatedStr: 1985-09-12 09:24:06
+      lastDateReadStr: 1986-02-13 16:40:56
+      lastDateWrittenStr: 1985-09-27 11:44:02
+      bpunValid: null
+    - name: TELEX-XX-B00:RPRT
+      type: RPRT
+      pages: 7
+      bytes: 14336
+      userName: FLOPPY-USER
+      dateCreated: 2380716329
+      lastDateRead: 2426727302
+      lastDateWritten: 2390022446
+      dateCreatedStr: 1985-07-19 13:36:41
+      lastDateReadStr: 1986-02-18 14:46:06
+      lastDateWrittenStr: 1985-09-26 13:36:46
+      bpunValid: null
+    - name: TLX-COST-XX-B00:TEXT
+      type: TEXT
+      pages: 2
+      bytes: 3309
+      userName: FLOPPY-USER
+      dateCreated: 2388170094
+      lastDateRead: 2426078736
+      lastDateWritten: 2388170096
+      dateCreatedStr: 1985-09-12 09:21:46
+      lastDateReadStr: 1986-02-13 16:24:16
+      lastDateWrittenStr: 1985-09-12 09:21:48
+      bpunValid: null
+provenance:
+  contributor: ndwiki
+  originalPath: tingo/8_nd_f17b_10732b01-en-01d.img
+  dateImaged: 2026-08-10
+  importedAt: 2026-08-11T12:29:23.596Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10732-b01-d1-7f6ed9f0
+  syncStatus: pending

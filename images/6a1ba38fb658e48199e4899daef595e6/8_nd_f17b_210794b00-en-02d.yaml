@@ -1,0 +1,38 @@
+id: nd-210794-b00-d2-6a1ba38f
+volumeName: 210794B00-EN-02D
+md5: 6a1ba38fb658e48199e4899daef595e6
+product:
+  id: ND-210794
+  version: B00
+  diskNumber: 2
+  language: EN
+image:
+  sizeBytes: 1261568
+  format: raw
+  controller: floppy
+  totalPages: 616
+  pageSize: 2048
+  bootFormat: none
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 498
+  files: []
+provenance:
+  contributor: ndwiki
+  originalPath: tingo/8_nd_f17b_210794b00-en-02d.img
+  dateImaged: 2026-08-10
+  importedAt: 2026-08-11T12:29:24.462Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-210794-b00-d2-6a1ba38f
+  syncStatus: pending

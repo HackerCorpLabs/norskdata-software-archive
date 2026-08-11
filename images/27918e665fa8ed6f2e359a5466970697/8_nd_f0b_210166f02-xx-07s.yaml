@@ -1,0 +1,50 @@
+id: nd-210166-f02-d7-27918e66
+volumeName: 210166F02-XX-07S
+md5: 27918e665fa8ed6f2e359a5466970697
+product:
+  id: ND-210166
+  version: F02
+  diskNumber: 7
+  language: XX
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: binary
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 117
+  files:
+    - name: SIBINTER-F00:PROG
+      type: PROG
+      pages: 115
+      bytes: 249856
+      userName: FLOPPY-USER
+      dateCreated: 2446385650
+      lastDateRead: 2464861065
+      lastDateWritten: 2446385655
+      dateCreatedStr: 1986-07-08 14:07:50
+      lastDateReadStr: 1986-11-21 12:46:09
+      lastDateWrittenStr: 1986-07-08 14:07:55
+      bpunValid: null
+provenance:
+  contributor: ndwiki
+  originalPath: tingo/8_nd_f0b_210166f02-xx-07s.img
+  dateImaged: 2026-08-10
+  importedAt: 2026-08-11T12:29:22.828Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-210166-f02-d7-27918e66
+  syncStatus: pending
