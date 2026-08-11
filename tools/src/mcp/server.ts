@@ -11,6 +11,7 @@ import { z } from 'zod';
 import { readFile } from 'fs/promises';
 import { join, resolve } from 'path';
 import type { CatalogEntry } from '../types.js';
+import { loadDocIndex, readDocMarkdown, DOC_KIND_LABELS, type DocIndex } from '../api/nd-docs.js';
 
 // --- Data loading ---
 
@@ -22,6 +23,10 @@ interface Product {
 let entries: CatalogEntry[] = [];
 let products: Product[] = [];
 let searchIndex: { entry: CatalogEntry; text: string }[] = [];
+/** ND documents (docs/nd/**) referenced by products/*.yaml */
+let docIndex: DocIndex = { docs: new Map(), byProduct: new Map() };
+/** document id -> lowercased markdown, for search_documents */
+let docText: Map<string, string> = new Map();
 
 /**
  * Resolve the archive root directory.
@@ -44,6 +49,14 @@ async function loadData(): Promise<void> {
 
   const productsRaw = await readFile(join(root, 'catalog/products.json'), 'utf-8');
   products = JSON.parse(productsRaw);
+
+  // ND documentation: resolved from the docs: block of each products/*.yaml
+  docIndex = await loadDocIndex(root);
+  docText = new Map();
+  for (const doc of docIndex.docs.values()) {
+    const md = await readDocMarkdown(root, doc);
+    if (md !== null) docText.set(doc.id, md.toLowerCase());
+  }
 
   // Build search index: concatenate searchable fields into a single lowercase string
   searchIndex = entries.map(entry => {
@@ -364,6 +377,122 @@ server.tool(
       content: [{
         type: 'text' as const,
         text: JSON.stringify(stats, null, 2),
+      }],
+    };
+  }
+);
+
+
+// --- ND documentation tools ---
+
+/** Shape returned for a document, without its body. */
+function summarizeDoc(id: string) {
+  const d = docIndex.docs.get(id);
+  if (!d) return null;
+  return {
+    documentId: d.id,
+    title: d.title,
+    kind: d.kind,
+    kindLabel: DOC_KIND_LABELS[d.kind],
+    path: d.path,
+    describesProducts: d.products,
+  };
+}
+
+// Tool: list_product_documents
+server.tool(
+  'list_product_documents',
+  'List the ND documents (Program/Installation Descriptions and Product Information sheets) that describe a given product',
+  {
+    productId: z.string().describe('Product article number, e.g. ND-10174'),
+  },
+  async ({ productId }) => {
+    const ids = docIndex.byProduct.get(productId) ?? [];
+    const product = products.find(p => p.Id === productId);
+    return {
+      content: [{
+        type: 'text' as const,
+        text: JSON.stringify({
+          productId,
+          productName: product?.Name ?? null,
+          count: ids.length,
+          documents: ids.map(summarizeDoc).filter(Boolean),
+        }, null, 2),
+      }],
+    };
+  }
+);
+
+// Tool: read_document
+server.tool(
+  'read_document',
+  'Read the full markdown text of an ND document by its document id (e.g. ND-10174-10-EN). Use list_product_documents or search_documents to find ids.',
+  {
+    documentId: z.string().describe('ND document id, e.g. ND-10174-10-EN'),
+    maxChars: z.number().default(40000).describe('Truncate the body to this many characters'),
+    offset: z.number().default(0).describe('Character offset to start reading from, for paging through a long document'),
+  },
+  async ({ documentId, maxChars, offset }) => {
+    const doc = docIndex.docs.get(documentId);
+    if (!doc) {
+      return {
+        content: [{ type: 'text' as const, text: JSON.stringify({ error: `No document "${documentId}"` }) }],
+        isError: true,
+      };
+    }
+    const md = await readDocMarkdown(getArchiveRoot(), doc);
+    if (md === null) {
+      return {
+        content: [{ type: 'text' as const, text: JSON.stringify({ error: `Document "${documentId}" is referenced but missing at ${doc.path}` }) }],
+        isError: true,
+      };
+    }
+    const body = md.slice(offset, offset + maxChars);
+    return {
+      content: [{
+        type: 'text' as const,
+        text: JSON.stringify({
+          ...summarizeDoc(documentId),
+          totalChars: md.length,
+          offset,
+          returnedChars: body.length,
+          truncated: offset + body.length < md.length,
+          markdown: body,
+        }, null, 2),
+      }],
+    };
+  }
+);
+
+// Tool: search_documents
+server.tool(
+  'search_documents',
+  'Full-text search across all ND product documentation, returning matching documents with a snippet around the first hit',
+  {
+    query: z.string().describe('Search query (substring match, case-insensitive)'),
+    limit: z.number().default(10).describe('Maximum documents to return'),
+  },
+  async ({ query, limit }) => {
+    const q = query.toLowerCase();
+    const results: unknown[] = [];
+    for (const [id, text] of docText) {
+      const at = text.indexOf(q);
+      if (at === -1) continue;
+      const root = getArchiveRoot();
+      const doc = docIndex.docs.get(id)!;
+      const md = await readDocMarkdown(root, doc);
+      const start = Math.max(0, at - 120);
+      results.push({
+        ...summarizeDoc(id),
+        matches: text.split(q).length - 1,
+        snippet: (md ?? '').slice(start, at + q.length + 200).replace(/\s+/g, ' ').trim(),
+      });
+      if (results.length >= limit) break;
+    }
+    return {
+      content: [{
+        type: 'text' as const,
+        text: JSON.stringify({ count: results.length, results }, null, 2),
       }],
     };
   }
