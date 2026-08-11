@@ -123,6 +123,12 @@ export interface CatalogEntry {
   volumeNameRaw?: string | null;
   productId: string | null;
   version: string | null;
+  /**
+   * ND "system number" from the OS distribution floppy naming N-<system no>-I..IV
+   * (documented in ND-10174-10-EN). Only the early SINTRAN III OS sets carry one;
+   * null for every other floppy.
+   */
+  systemNumber: string | null;
   diskNumber: number | null;
   diskTotal: number | null;
   mediaRole: string | null;

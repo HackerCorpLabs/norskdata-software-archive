@@ -135,6 +135,7 @@ function transformEntry(legacy: LegacyFloppyEntry): CatalogEntry {
     volumeNameRaw: volumeNameRaw,
     productId: productMatch?.productId ?? null,
     version: productMatch?.version ?? null,
+    systemNumber: null,
     diskNumber: productMatch?.diskNumber ?? null,
     diskTotal: null,
     mediaRole: null,

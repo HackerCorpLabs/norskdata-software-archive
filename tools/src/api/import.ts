@@ -454,6 +454,7 @@ export async function importImage(
       volumeName: null,
       productId: null,
       version: null,
+      systemNumber: null,
       diskNumber: null,
       diskTotal: null,
       mediaRole: null,
@@ -490,6 +491,7 @@ export async function importImage(
     // so we keep them as hints; only the product link awaits confirmation.
     productId: null,
     version: productMatch?.version ?? null,
+    systemNumber: null,
     diskNumber: productMatch?.diskNumber ?? null,
     diskTotal: null,
     mediaRole: null,

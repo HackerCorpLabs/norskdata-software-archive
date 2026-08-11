@@ -41,6 +41,10 @@
       "type": ["string", "null"],
       "description": "Product version letter or number"
     },
+    "systemNumber": {
+      "type": ["string", "null"],
+      "description": "ND system number from the SINTRAN III OS distribution floppy naming N-<system no>-I..IV (see ND-10174-10-EN). Only the early SINTRAN III OS sets carry one; null otherwise."
+    },
     "diskNumber": {
       "type": ["integer", "null"],
       "minimum": 1,

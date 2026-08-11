@@ -125,10 +125,13 @@ function entryToYamlDoc(entry: CatalogEntry, rootDir: string): Record<string, un
   };
 
   // Product info
-  if (entry.productId || entry.version || entry.diskNumber || entry.diskTotal) {
+  if (entry.productId || entry.version || entry.systemNumber || entry.diskNumber || entry.diskTotal) {
     const product: Record<string, unknown> = {};
     if (entry.productId) product.id = entry.productId;
     if (entry.version) product.version = entry.version;
+    // System number: only the early SINTRAN III OS distributions carry one
+    // (the "N-<system no>-I..IV" floppy naming of ND-10174-10-EN).
+    if (entry.systemNumber) product.systemNumber = entry.systemNumber;
     if (entry.diskNumber !== null) product.diskNumber = entry.diskNumber;
     if (entry.diskTotal !== null) product.diskTotal = entry.diskTotal;
     // Parse language from volume name if available
@@ -265,6 +268,7 @@ function yamlDocToEntry(doc: Record<string, unknown>, yamlRelPath: string, rootD
     volumeName: doc.volumeName as string | null ?? null,
     productId: product?.id as string | null ?? null,
     version: product?.version as string | null ?? null,
+    systemNumber: product?.systemNumber as string | null ?? null,
     diskNumber: product?.diskNumber as number | null ?? null,
     diskTotal: product?.diskTotal as number | null ?? null,
     mediaRole: doc.mediaRole as string | null ?? null,
