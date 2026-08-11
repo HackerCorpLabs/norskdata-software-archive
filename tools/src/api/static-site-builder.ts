@@ -4,6 +4,7 @@
  * embedded as inline JSON. No fetch() calls, works with file:// protocol.
  */
 
+import ts from 'typescript';
 import { readFile, writeFile, mkdir, stat } from 'fs/promises';
 import { marked } from 'marked';
 import { join } from 'path';
@@ -91,16 +92,25 @@ export async function buildStaticSite(rootDir: string): Promise<void> {
   }
 
   // The dosfs and ndbackup libraries are plain ES modules with no imports, so
-  // the compiled output can be inlined directly: strip the export keywords and
-  // publish the entry points as globals, the same shape the NDFS bundle uses.
+  // they can be inlined directly: strip the export keywords and publish the
+  // entry points as globals, the same shape the NDFS bundle uses.
+  //
+  // They are compiled here from the TypeScript source rather than read out of
+  // tools/dist. The Pages workflow runs this builder with tsx and never runs
+  // npm run build, so dist does not exist on the runner - reading it left the
+  // published site with no DOS or backup reader at all.
   let mediaLibsJS = '';
   for (const [rel, globals] of [
-    ['dist/lib/dosfs/index.js', ['DosVolume', 'NotFatError']],
-    ['dist/lib/ndbackup/index.js', ['isBackupVolume', 'readBackupVolume', 'readBackupFile', 'isWinchVolume', 'readWinchVolume', 'readWinchPage']],
+    ['src/lib/dosfs/index.ts', ['DosVolume', 'NotFatError']],
+    ['src/lib/ndbackup/index.ts', ['isBackupVolume', 'readBackupVolume', 'readBackupFile', 'isWinchVolume', 'readWinchVolume', 'readWinchPage']],
   ] as [string, string[]][]) {
     try {
-      const src = await readFile(join(rootDir, 'tools', rel), 'utf-8');
-      const plain = src
+      const tsSource = await readFile(join(rootDir, 'tools', rel), 'utf-8');
+      const compiled = ts.transpileModule(tsSource, {
+        compilerOptions: { target: ts.ScriptTarget.ES2019, module: ts.ModuleKind.ESNext, removeComments: false },
+        fileName: rel,
+      }).outputText;
+      const plain = compiled
         .replace(/^export\s+default\s+.*$/gm, '')
         .replace(/^export\s+/gm, '');
       mediaLibsJS += '\n(function(){\n' + plain + '\n' +
