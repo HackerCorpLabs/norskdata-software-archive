@@ -61,15 +61,62 @@ const upload = multer({ dest: '/tmp/ndarchive-uploads/' });
 let catalog: Catalog | null = null;
 let productsCache: Array<{ Id: string; Name: string }> | null = null;
 
+/** Newest mtime seen across the YAML sources when the cache was filled. */
+let catalogStamp = 0;
+
+/**
+ * Newest mtime across everything the catalog is built from: the per-floppy
+ * YAML, the product YAML, the categories file and the collections group files.
+ * A directory's own mtime changes when a file is added or removed, so scanning
+ * the image folders (not every file inside them) catches new and deleted
+ * floppies as well as edits.
+ */
+async function catalogSourceMtime(): Promise<number> {
+  let newest = 0;
+  const bump = async (p: string) => {
+    try { newest = Math.max(newest, (await stat(p)).mtimeMs); } catch { /* gone */ }
+  };
+  const scanDir = async (dir: string, eachEntry: (full: string) => Promise<void>) => {
+    try {
+      await bump(dir);
+      for (const name of await readdir(dir)) await eachEntry(join(dir, name));
+    } catch { /* directory may not exist */ }
+  };
+
+  await scanDir(join(ROOT_DIR, 'images'), async full => {
+    await bump(full);                                   // folder mtime = a file was added/removed
+    try {
+      for (const f of await readdir(full)) if (f.endsWith('.yaml')) await bump(join(full, f));
+    } catch { /* not a directory */ }
+  });
+  await scanDir(join(ROOT_DIR, 'products'), bump);
+  await scanDir(join(ROOT_DIR, 'collections'), async full => {
+    await bump(full);
+    await bump(join(full, 'group.yaml'));
+  });
+  await bump(join(ROOT_DIR, 'categories/product-categories.yaml'));
+  return newest;
+}
+
+/**
+ * The catalog is cached in memory, and the server's own write paths clear it.
+ * But the YAML is the source of truth and gets edited from outside too - by
+ * hand, by the import-* CLI, by a script, or by switching git branch - and
+ * none of that goes through this process. Without the mtime check the Matcher
+ * happily lists floppies that were assigned on disk minutes ago.
+ */
 async function getCatalog(): Promise<Catalog> {
-  if (!catalog) {
+  const stamp = await catalogSourceMtime();
+  if (!catalog || stamp > catalogStamp) {
     catalog = await loadCatalog(ROOT_DIR);
+    catalogStamp = stamp;
   }
   return catalog;
 }
 
 async function reloadCatalog(): Promise<Catalog> {
   catalog = await loadCatalog(ROOT_DIR);
+  catalogStamp = await catalogSourceMtime();
   return catalog;
 }
 
