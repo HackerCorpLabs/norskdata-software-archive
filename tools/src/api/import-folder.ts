@@ -132,6 +132,7 @@ export async function importFolder(
         targetDir,
         setArtifacts: setResult,
         diskPhotoFiles: myDiskPhotos,
+        diskLogFiles: artifacts.diskLogs.get(img.file) ?? [],
       };
 
       const importResult = await importImage(catalog, filePath, options.rootDir, importOpts);

@@ -1,0 +1,58 @@
+id: os-n-10-102-i-88bf6e6a
+volumeName: N-10-102-I
+md5: 88bf6e6a1c193b5fa300a3adf2eb7bc7
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: flomon
+filesystem: ndfs
+ndfs:
+  users:
+    - name: SYSTEM
+      pagesUsed: 148
+  files:
+    - name: MACM-1718K:BPUN
+      type: BPUN
+      pages: 20
+      bytes: 31916
+      userName: SYSTEM
+      dateCreated: 2328699343
+      lastDateRead: 2328699349
+      lastDateWritten: 2328699349
+      dateCreatedStr: 1984-11-06 18:07:15
+      lastDateReadStr: 1984-11-06 18:07:21
+      lastDateWrittenStr: 1984-11-06 18:07:21
+      bpunValid: true
+    - name: SINTRAN-I:DATA
+      type: DATA
+      pages: 127
+      bytes: 189817
+      userName: SYSTEM
+      dateCreated: 2328699347
+      lastDateRead: 2328699353
+      lastDateWritten: 2328699353
+      dateCreatedStr: 1984-11-06 18:07:19
+      lastDateReadStr: 1984-11-06 18:07:25
+      lastDateWrittenStr: 1984-11-06 18:07:25
+      bpunValid: null
+provenance:
+  contributor: www.datormuseum.se
+  originalPath: OK/DISK3.IMG
+  dateImaged: 2022-08-15
+  importedAt: 2026-08-11T17:07:03.916Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-os-n-10-102-i-88bf6e6a
+  syncStatus: pending

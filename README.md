@@ -11,6 +11,7 @@ A preservation project for software from [Norsk Data](https://en.wikipedia.org/w
 - A git repository containing compressed floppy disk images (`.img.gz`) with per-image YAML metadata
 - A searchable web catalog with NDFS filesystem browsing, BPUN checksum validation, and label photo viewing
 - Import tools for adding new disk images with automatic product matching
+- Readers for the other formats these disks turn out to hold: MS-DOS (FAT12/16), SINTRAN BACKUP-SYSTEM volumes, WINCH-TO-FLOPP directory backups and tar
 - An MCP server for LLM integration with the [nd100x emulator](https://github.com/HackerCorpLabs/nd100x)
 
 ## Architecture
@@ -202,6 +203,40 @@ The YAML file contains all classification (product, version, tags). The folder s
 
 ---
 
+## Not every image is an ND filesystem
+
+A real collection contains more than ND floppies. Every image records a `filesystem` field, detected from its bytes:
+
+| `filesystem` | What it is | What you get |
+|---|---|---|
+| `ndfs` | Norsk Data filesystem | volume name, users, file listing, BPUN validation |
+| `dos` | MS-DOS floppy, FAT12/16 (ND-OWS, NORTEXT PC material) | volume label, full directory tree, file extraction |
+| `backup` | SINTRAN III BACKUP-SYSTEM, an ANSI-labelled volume (`VOL1`) | file names, types, dates, sizes per volume |
+| `winch` | WINCH-TO-FLOPP, a page dump of a whole directory | directory name, "volume N of M", page map — **no file names exist on the media** |
+| `tar` | a tar archive written straight to the media | `tar -tf` lists it directly |
+| `none` | blank disk, failed read, or a format not recognised | raw bytes via the hex viewer |
+
+Detection runs during import and can be re-run at any time — per disk or in bulk — from the Matcher, or from the command line on files that were never imported:
+
+```bash
+make identify PATH_=/path/to/folder ARGS="--recursive"
+make identify PATH_=/path/to/disk.img
+cd tools && node dist/cli.js identify <file-or-folder> [--recursive] [--only dos] [--json]
+```
+
+```
+cob1.img      ndfs    1232 KB  ND    0 file(s), 1 user(s)
+sib1.img      tar     1155 KB        tar archive written to the media
+tools.img     dos     1155 KB        FAT12, OEM MSDOS3.3, 0 file(s), 0 dir(s), 1,167,872 B free
+ND-disk-00131.img  backup  1232 KB  BACK  owner AGNETA, 52 file(s), 8 stale label(s), 1989-06-30, SINTRAN III L
+```
+
+(`PATH_`, not `PATH` — `PATH` is reserved by make.)
+
+Note on BACKUP-SYSTEM volumes: the media is not erased before use, so labels from an **older** backup survive in areas the new run did not overwrite. Those are flagged as stale rather than mixed in with the current run.
+
+The catalog lists ND floppies by default; the other kinds are one click away (`#/catalog?filesystem=dos`, `backup`, `winch`, `none`, `all`).
+
 ## Web UI (localhost:3000)
 
 The local web UI provides:
@@ -213,6 +248,14 @@ The local web UI provides:
 - **Matcher** -- assign unmatched floppies to products
 - **Changes** -- review uncommitted changes, commit, and push
 - **Help** -- step-by-step workflow guide
+
+### Viewers
+
+Which viewer a disk offers depends on what it holds. All three share the same file actions — select a file, then **Extract**, **Extract (strip parity)**, **View as hex** or **View as text**.
+
+- **NDFS viewer** — ND floppies
+- **MS-DOS viewer** — FAT disks: browse into directories with breadcrumbs, extract files
+- **HEX viewer** — any image at all, including ones with no filesystem: 7-bit/parity-stripped ASCII column, go-to-offset
 
 ### NDFS Viewer
 
@@ -376,6 +419,7 @@ make serve          Alias for 'make import'
 make import-cli     Console import wizard (interactive prompts)
 
 make search Q=...   Search the catalog
+make identify PATH_=<file-or-folder> [ARGS=...]   Identify what disk images hold
 make check          Validate catalog integrity
 make check-deps     Check prerequisites (node, npm, git)
 
@@ -435,6 +479,12 @@ tools/                      Node.js/TypeScript tooling
       product-matcher.ts      ND product number matching
       catalog.ts              YAML/JSON catalog read/write (single persist path)
       static-site-builder.ts  GitHub Pages generator (main site)
+    api/
+      filesystem-detect.ts    what does this image hold?
+      identify.ts             summary behind the identify CLI
+    lib/
+      dosfs/                  FAT12/16 reader (browser-safe)
+      ndbackup/               BACKUP-SYSTEM + WINCH-TO-FLOPP readers
     mcp/
       server.ts               MCP server
     ui/

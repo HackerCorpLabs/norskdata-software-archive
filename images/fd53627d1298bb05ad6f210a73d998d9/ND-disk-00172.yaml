@@ -1,0 +1,199 @@
+id: nd-210814-l05-d1-fd53627d
+volumeName: 210814L05-XX-01D
+md5: fd53627d1298bb05ad6f210a73d998d9
+product:
+  id: ND-210814
+  version: L05
+  diskNumber: 1
+  language: XX
+image:
+  sizeBytes: 1310720
+  format: raw
+  controller: floppy
+  totalPages: 640
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 336
+    - name: MAINTENANCE-NTX
+      pagesUsed: 270
+  files:
+    - name: INSTALL-TABMA-L:XCOM
+      type: XCOM
+      pages: 1
+      bytes: 960
+      userName: FLOPPY-USER
+      dateCreated: 2370098434
+      lastDateRead: 2597255065
+      lastDateWritten: 2520999155
+      dateCreatedStr: 1985-05-02 13:20:02
+      lastDateReadStr: 1988-11-07 15:30:25
+      lastDateWrittenStr: 1987-09-01 22:19:51
+      bpunValid: null
+    - name: TABMA-INSTALL2-L:XCOM
+      type: XCOM
+      pages: 4
+      bytes: 7480
+      userName: FLOPPY-USER
+      dateCreated: 2367723085
+      lastDateRead: 2597255060
+      lastDateWritten: 2581899072
+      dateCreatedStr: 1985-04-16 09:25:13
+      lastDateReadStr: 1988-11-07 15:30:20
+      lastDateWrittenStr: 1988-07-18 10:29:00
+      bpunValid: null
+    - name: DESCRIPTION-FILE:DESC
+      type: DESC
+      pages: 8
+      bytes: 22528
+      userName: FLOPPY-USER
+      dateCreated: 2576541544
+      lastDateRead: 2581498734
+      lastDateWritten: 2576542083
+      dateCreatedStr: 1988-06-09 14:29:40
+      lastDateReadStr: 1988-07-15 08:45:46
+      lastDateWrittenStr: 1988-06-09 14:38:03
+      bpunValid: null
+    - name: SCRATCH-SEG-01:LINK
+      type: LINK
+      pages: 0
+      bytes: 4294967296
+      userName: FLOPPY-USER
+      dateCreated: 2576541555
+      lastDateRead: 2576541556
+      lastDateWritten: 2576541556
+      dateCreatedStr: 1988-06-09 14:29:51
+      lastDateReadStr: 1988-06-09 14:29:52
+      lastDateWrittenStr: 1988-06-09 14:29:52
+      bpunValid: null
+    - name: SCRATCH-SEG-01:DSEG
+      type: DSEG
+      pages: 1
+      bytes: 1029
+      userName: FLOPPY-USER
+      dateCreated: 2576541557
+      lastDateRead: 2576541576
+      lastDateWritten: 2576541558
+      dateCreatedStr: 1988-06-09 14:29:53
+      lastDateReadStr: 1988-06-09 14:30:08
+      lastDateWrittenStr: 1988-06-09 14:29:54
+      bpunValid: null
+    - name: SCRATCH-SEG-01:PSEG
+      type: PSEG
+      pages: 1
+      bytes: 5
+      userName: FLOPPY-USER
+      dateCreated: 2576541558
+      lastDateRead: 2576541559
+      lastDateWritten: 2576541559
+      dateCreatedStr: 1988-06-09 14:29:54
+      lastDateReadStr: 1988-06-09 14:29:55
+      lastDateWrittenStr: 1988-06-09 14:29:55
+      bpunValid: null
+    - name: HYPHEN-TEST-L03:LINK
+      type: LINK
+      pages: 15
+      bytes: 28737
+      userName: FLOPPY-USER
+      dateCreated: 2576541585
+      lastDateRead: 2581498739
+      lastDateWritten: 2576541586
+      dateCreatedStr: 1988-06-09 14:30:17
+      lastDateReadStr: 1988-07-15 08:45:51
+      lastDateWrittenStr: 1988-06-09 14:30:18
+      bpunValid: null
+    - name: HYPHEN-TEST-L03:DSEG
+      type: DSEG
+      pages: 222
+      bytes: 454545
+      userName: FLOPPY-USER
+      dateCreated: 2576541587
+      lastDateRead: 2581498739
+      lastDateWritten: 2576541588
+      dateCreatedStr: 1988-06-09 14:30:19
+      lastDateReadStr: 1988-07-15 08:45:51
+      lastDateWrittenStr: 1988-06-09 14:30:20
+      bpunValid: null
+    - name: HYPHEN-TEST-L03:PSEG
+      type: PSEG
+      pages: 75
+      bytes: 153595
+      userName: FLOPPY-USER
+      dateCreated: 2576541589
+      lastDateRead: 2581498738
+      lastDateWritten: 2576541589
+      dateCreatedStr: 1988-06-09 14:30:21
+      lastDateReadStr: 1988-07-15 08:45:50
+      lastDateWrittenStr: 1988-06-09 14:30:21
+      bpunValid: null
+    - name: MAINTENANCE-L00:PROG
+      type: PROG
+      pages: 68
+      bytes: 292864
+      userName: MAINTENANCE-NTX
+      dateCreated: 2498811713
+      lastDateRead: 2597255117
+      lastDateWritten: 2498811714
+      dateCreatedStr: 1987-03-24 13:29:01
+      lastDateReadStr: 1988-11-07 15:31:13
+      lastDateWrittenStr: 1987-03-24 13:29:02
+      bpunValid: null
+    - name: CONTRBLOCK-CB-K0:PROG
+      type: PROG
+      pages: 72
+      bytes: 305152
+      userName: MAINTENANCE-NTX
+      dateCreated: 2399851686
+      lastDateRead: 2597255135
+      lastDateWritten: 2399851686
+      dateCreatedStr: 1985-12-05 13:18:38
+      lastDateReadStr: 1988-11-07 15:31:31
+      lastDateWrittenStr: 1985-12-05 13:18:38
+      bpunValid: null
+    - name: TABSERVICE-TS-K6:PROG
+      type: PROG
+      pages: 24
+      bytes: 274432
+      userName: MAINTENANCE-NTX
+      dateCreated: 2503664826
+      lastDateRead: 2597255155
+      lastDateWritten: 2503664826
+      dateCreatedStr: 1987-04-29 14:18:58
+      lastDateReadStr: 1988-11-07 15:31:51
+      lastDateWrittenStr: 1987-04-29 14:18:58
+      bpunValid: null
+    - name: HYPHEN-TEST-L03:PROG
+      type: PROG
+      pages: 101
+      bytes: 206848
+      userName: MAINTENANCE-NTX
+      dateCreated: 2506955039
+      lastDateRead: 2597255085
+      lastDateWritten: 2506955039
+      dateCreatedStr: 1987-05-22 17:36:31
+      lastDateReadStr: 1988-11-07 15:30:45
+      lastDateWrittenStr: 1987-05-22 17:36:31
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 100/ND-disk-00172.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:26:01.787Z
+imagingLogs:
+  - ND-disk-00172.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-210814-l05-d1-fd53627d
+  syncStatus: pending

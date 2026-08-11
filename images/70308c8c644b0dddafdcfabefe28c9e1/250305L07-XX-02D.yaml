@@ -1,0 +1,53 @@
+id: nd-250305-l07-d2-70308c8c
+volumeName: 250305L07-XX-02D
+md5: 70308c8c644b0dddafdcfabefe28c9e1
+product:
+  id: ND-250305
+  version: L07
+  diskNumber: 2
+  language: XX
+image:
+  sizeBytes: 1261568
+  format: raw
+  controller: floppy
+  totalPages: 616
+  pageSize: 2048
+  bootFormat: flomon
+filesystem: ndfs
+ndfs:
+  users:
+    - name: SYSTEM
+      pagesUsed: 590
+  files:
+    - name: SINTRAN-L-2:DATA
+      type: DATA
+      pages: 589
+      bytes: 549938
+      userName: SYSTEM
+      dateCreated: 2580596455
+      lastDateRead: 2602615475
+      lastDateWritten: 2602615475
+      dateCreatedStr: 1988-07-08 12:27:39
+      lastDateReadStr: 1988-12-16 12:10:51
+      lastDateWrittenStr: 1988-12-16 12:10:51
+      bpunValid: null
+provenance:
+  contributor: tor
+  originalPath: SIII-L-250305L07/250305L07-XX-02D.IMG
+  dateImaged: 2009-08-27
+  importedAt: 2026-08-11T14:36:55.758Z
+imagingLogs:
+  - README.TXT
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-250305-l07-d2-70308c8c
+  syncStatus: pending

@@ -1,0 +1,62 @@
+id: nd-10166-e-d8-8a01e23a
+volumeName: ND-10166E-PART8
+md5: 8a01e23add630f45e0e1fba29d98957e
+product:
+  id: ND-10166
+  version: E
+  diskNumber: 8
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 115
+  files:
+    - name: SIBINTER-MX-E00:PROG
+      type: PROG
+      pages: 106
+      bytes: 249856
+      userName: FLOPPY-USER
+      dateCreated: 2323031694
+      lastDateRead: 2425292355
+      lastDateWritten: 2323031699
+      dateCreatedStr: 1984-09-27 10:26:14
+      lastDateReadStr: 1986-02-07 16:25:03
+      lastDateWrittenStr: 1984-09-27 10:26:19
+      bpunValid: null
+    - name: UE-SIBINTER-E00:ERR
+      type: ERR
+      pages: 6
+      bytes: 11520
+      userName: FLOPPY-USER
+      dateCreated: 2323031827
+      lastDateRead: 2425292390
+      lastDateWritten: 2323031828
+      dateCreatedStr: 1984-09-27 10:28:19
+      lastDateReadStr: 1986-02-07 16:25:38
+      lastDateWrittenStr: 1984-09-27 10:28:20
+      bpunValid: null
+provenance:
+  contributor: www.datormuseum.se
+  originalPath: OK/DISK60.IMG
+  dateImaged: 2022-08-15
+  importedAt: 2026-08-11T17:07:05.028Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10166-e-d8-8a01e23a
+  syncStatus: pending

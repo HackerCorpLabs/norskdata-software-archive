@@ -1,0 +1,124 @@
+id: nd-10190-d-d1-515f1453
+volumeName: ND-10190D-PART1
+md5: 515f14532e9e51483e7010cdd847cc88
+product:
+  id: ND-10190
+  version: D
+  diskNumber: 1
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 123
+  files:
+    - name: DESCRIPTION-FILE:DESC
+      type: DESC
+      pages: 8
+      bytes: 22528
+      userName: FLOPPY-USER
+      dateCreated: 2161304593
+      lastDateRead: 2167370540
+      lastDateWritten: 2161304920
+      dateCreatedStr: 1982-03-09 14:16:17
+      lastDateReadStr: 1982-04-23 23:12:44
+      lastDateWrittenStr: 1982-03-09 14:21:24
+      bpunValid: null
+    - name: SCRATCH-SEG-01:LINK
+      type: LINK
+      pages: 0
+      bytes: 1
+      userName: FLOPPY-USER
+      dateCreated: 2161304618
+      lastDateRead: 2161304620
+      lastDateWritten: 2161304620
+      dateCreatedStr: 1982-03-09 14:16:42
+      lastDateReadStr: 1982-03-09 14:16:44
+      lastDateWrittenStr: 1982-03-09 14:16:44
+      bpunValid: null
+    - name: SCRATCH-SEG-01:DSEG
+      type: DSEG
+      pages: 0
+      bytes: 5
+      userName: FLOPPY-USER
+      dateCreated: 2161304623
+      lastDateRead: 2161304646
+      lastDateWritten: 2161304624
+      dateCreatedStr: 1982-03-09 14:16:47
+      lastDateReadStr: 1982-03-09 14:17:06
+      lastDateWrittenStr: 1982-03-09 14:16:48
+      bpunValid: null
+    - name: SCRATCH-SEG-01:PSEG
+      type: PSEG
+      pages: 1
+      bytes: 5
+      userName: FLOPPY-USER
+      dateCreated: 2161304628
+      lastDateRead: 2161304630
+      lastDateWritten: 2161304630
+      dateCreatedStr: 1982-03-09 14:16:52
+      lastDateReadStr: 1982-03-09 14:16:54
+      lastDateWrittenStr: 1982-03-09 14:16:54
+      bpunValid: null
+    - name: FORTRAN-500:LINK
+      type: LINK
+      pages: 7
+      bytes: 12545
+      userName: FLOPPY-USER
+      dateCreated: 2161304720
+      lastDateRead: 2167370551
+      lastDateWritten: 2161304723
+      dateCreatedStr: 1982-03-09 14:18:16
+      lastDateReadStr: 1982-04-23 23:12:55
+      lastDateWrittenStr: 1982-03-09 14:18:19
+      bpunValid: null
+    - name: FORTRAN-500:DSEG
+      type: DSEG
+      pages: 26
+      bytes: 477085
+      userName: FLOPPY-USER
+      dateCreated: 2161304727
+      lastDateRead: 2167370549
+      lastDateWritten: 2161304729
+      dateCreatedStr: 1982-03-09 14:18:23
+      lastDateReadStr: 1982-04-23 23:12:53
+      lastDateWrittenStr: 1982-03-09 14:18:25
+      bpunValid: null
+    - name: FORTRAN-500:PSEG
+      type: PSEG
+      pages: 75
+      bytes: 152832
+      userName: FLOPPY-USER
+      dateCreated: 2161304732
+      lastDateRead: 2167370548
+      lastDateWritten: 2161304733
+      dateCreatedStr: 1982-03-09 14:18:28
+      lastDateReadStr: 1982-04-23 23:12:52
+      lastDateWrittenStr: 1982-03-09 14:18:29
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 400/ND-disk-00458.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:49:43.417Z
+imagingLogs:
+  - ND-disk-00458.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10190-d-d1-515f1453
+  syncStatus: pending

@@ -1,0 +1,149 @@
+id: nd-211066-d10-d2-b0a4f847
+volumeName: 211066D10-SW-02D
+md5: b0a4f847659c9ba510d44cf4ca29a6b8
+product:
+  id: ND-211066
+  version: D10
+  diskNumber: 2
+  language: SW
+image:
+  sizeBytes: 1310720
+  format: raw
+  controller: floppy
+  totalPages: 640
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 272
+  files:
+    - name: DDBTABLES-G03:VTM
+      type: VTM
+      pages: 38
+      bytes: 76024
+      userName: FLOPPY-USER
+      dateCreated: 2667108828
+      lastDateRead: null
+      lastDateWritten: 2667108832
+      dateCreatedStr: 1989-11-28 13:39:28
+      lastDateReadStr: null
+      lastDateWrittenStr: 1989-11-28 13:39:32
+      bpunValid: null
+    - name: DESCRIPTION-FILE:DESC
+      type: DESC
+      pages: 8
+      bytes: 22528
+      userName: FLOPPY-USER
+      dateCreated: 2667108869
+      lastDateRead: 2667109621
+      lastDateWritten: 2667108999
+      dateCreatedStr: 1989-11-28 13:40:05
+      lastDateReadStr: 1989-11-28 13:51:53
+      lastDateWrittenStr: 1989-11-28 13:42:07
+      bpunValid: null
+    - name: SCRATCH-SEG-01:LINK
+      type: LINK
+      pages: 0
+      bytes: 4294967296
+      userName: FLOPPY-USER
+      dateCreated: 2667108883
+      lastDateRead: 2667108885
+      lastDateWritten: 2667108885
+      dateCreatedStr: 1989-11-28 13:40:19
+      lastDateReadStr: 1989-11-28 13:40:21
+      lastDateWrittenStr: 1989-11-28 13:40:21
+      bpunValid: null
+    - name: SCRATCH-SEG-01:DSEG
+      type: DSEG
+      pages: 1
+      bytes: 1029
+      userName: FLOPPY-USER
+      dateCreated: 2667108886
+      lastDateRead: 2667108899
+      lastDateWritten: 2667108887
+      dateCreatedStr: 1989-11-28 13:40:22
+      lastDateReadStr: 1989-11-28 13:40:35
+      lastDateWrittenStr: 1989-11-28 13:40:23
+      bpunValid: null
+    - name: SCRATCH-SEG-01:PSEG
+      type: PSEG
+      pages: 1
+      bytes: 5
+      userName: FLOPPY-USER
+      dateCreated: 2667108887
+      lastDateRead: 2667108889
+      lastDateWritten: 2667108889
+      dateCreatedStr: 1989-11-28 13:40:23
+      lastDateReadStr: 1989-11-28 13:40:25
+      lastDateWrittenStr: 1989-11-28 13:40:25
+      bpunValid: null
+    - name: RG-SERVICE-D10:LINK
+      type: LINK
+      pages: 12
+      bytes: 24353
+      userName: FLOPPY-USER
+      dateCreated: 2667108907
+      lastDateRead: 2667108908
+      lastDateWritten: 2667108908
+      dateCreatedStr: 1989-11-28 13:40:43
+      lastDateReadStr: 1989-11-28 13:40:44
+      lastDateWrittenStr: 1989-11-28 13:40:44
+      bpunValid: null
+    - name: RG-SERVICE-D10:DSEG
+      type: DSEG
+      pages: 24
+      bytes: 77825
+      userName: FLOPPY-USER
+      dateCreated: 2667108909
+      lastDateRead: 2667109622
+      lastDateWritten: 2667109530
+      dateCreatedStr: 1989-11-28 13:40:45
+      lastDateReadStr: 1989-11-28 13:51:54
+      lastDateWrittenStr: 1989-11-28 13:50:26
+      bpunValid: null
+    - name: RG-SERVICE-D10:PSEG
+      type: PSEG
+      pages: 59
+      bytes: 120342
+      userName: FLOPPY-USER
+      dateCreated: 2667108911
+      lastDateRead: 2667109622
+      lastDateWritten: 2667108912
+      dateCreatedStr: 1989-11-28 13:40:47
+      lastDateReadStr: 1989-11-28 13:51:54
+      lastDateWrittenStr: 1989-11-28 13:40:48
+      bpunValid: null
+    - name: UE-ERMSG-SW-C05:ERR
+      type: ERR
+      pages: 120
+      bytes: 228864
+      userName: FLOPPY-USER
+      dateCreated: 2667109088
+      lastDateRead: null
+      lastDateWritten: 2667109090
+      dateCreatedStr: 1989-11-28 13:43:32
+      lastDateReadStr: null
+      lastDateWrittenStr: 1989-11-28 13:43:34
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 200/ND-disk-00215.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:41:44.335Z
+imagingLogs:
+  - ND-disk-00215.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-211066-d10-d2-b0a4f847
+  syncStatus: pending

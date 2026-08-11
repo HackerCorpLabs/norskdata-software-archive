@@ -1,0 +1,113 @@
+id: nd-211056-a03-d1-6c4c5e8b
+volumeName: 211056A03-SW-01D
+md5: 6c4c5e8b117e31f9787d99064515a3e1
+product:
+  id: ND-211056
+  version: A03
+  diskNumber: 1
+  language: SW
+image:
+  sizeBytes: 1310720
+  format: raw
+  controller: floppy
+  totalPages: 640
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 516
+  files:
+    - name: SSY-PICT-SW-A03:CONF
+      type: CONF
+      pages: 21
+      bytes: 171266
+      userName: FLOPPY-USER
+      dateCreated: 2580492612
+      lastDateRead: 2580494094
+      lastDateWritten: 2580492616
+      dateCreatedStr: 1988-07-07 19:05:04
+      lastDateReadStr: 1988-07-07 19:28:14
+      lastDateWrittenStr: 1988-07-07 19:05:08
+      bpunValid: null
+    - name: SSY-PICT-SW-A03:NDPF
+      type: NDPF
+      pages: 38
+      bytes: 77824
+      userName: FLOPPY-USER
+      dateCreated: 2580492628
+      lastDateRead: 2580494101
+      lastDateWritten: 2580492629
+      dateCreatedStr: 1988-07-07 19:05:20
+      lastDateReadStr: 1988-07-07 19:28:21
+      lastDateWrittenStr: 1988-07-07 19:05:21
+      bpunValid: null
+    - name: SSY-INST-A03:PROG
+      type: PROG
+      pages: 76
+      bytes: 197264
+      userName: FLOPPY-USER
+      dateCreated: 2580492651
+      lastDateRead: 2580493930
+      lastDateWritten: 2580492651
+      dateCreatedStr: 1988-07-07 19:05:43
+      lastDateReadStr: 1988-07-07 19:25:42
+      lastDateWrittenStr: 1988-07-07 19:05:43
+      bpunValid: null
+    - name: SSY-INST-SW-A03:COM
+      type: COM
+      pages: 27
+      bytes: 54935
+      userName: FLOPPY-USER
+      dateCreated: 2580492707
+      lastDateRead: 2580493944
+      lastDateWritten: 2580492708
+      dateCreatedStr: 1988-07-07 19:06:35
+      lastDateReadStr: 1988-07-07 19:25:56
+      lastDateWrittenStr: 1988-07-07 19:06:36
+      bpunValid: null
+    - name: UE-ERMSG-EN-C09:ERR
+      type: ERR
+      pages: 153
+      bytes: 311808
+      userName: FLOPPY-USER
+      dateCreated: 2580492730
+      lastDateRead: 2580494119
+      lastDateWritten: 2580492730
+      dateCreatedStr: 1988-07-07 19:06:58
+      lastDateReadStr: 1988-07-07 19:28:39
+      lastDateWrittenStr: 1988-07-07 19:06:58
+      bpunValid: null
+    - name: UE-ERMSG-SW-C09:ERR
+      type: ERR
+      pages: 194
+      bytes: 396800
+      userName: FLOPPY-USER
+      dateCreated: 2580492895
+      lastDateRead: 2580494149
+      lastDateWritten: 2580492896
+      dateCreatedStr: 1988-07-07 19:09:31
+      lastDateReadStr: 1988-07-07 19:29:05
+      lastDateWrittenStr: 1988-07-07 19:09:32
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 100/ND-disk-00187.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:26:03.998Z
+imagingLogs:
+  - ND-disk-00187.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-211056-a03-d1-6c4c5e8b
+  syncStatus: pending

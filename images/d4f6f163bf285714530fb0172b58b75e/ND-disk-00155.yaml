@@ -1,0 +1,137 @@
+id: nd-210166-f02-d2-d4f6f163
+volumeName: 210166F02-XX-02D
+md5: d4f6f163bf285714530fb0172b58b75e
+product:
+  id: ND-210166
+  version: F02
+  diskNumber: 2
+  language: XX
+image:
+  sizeBytes: 1310720
+  format: raw
+  controller: floppy
+  totalPages: 640
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 542
+  files:
+    - name: SIBAS-SERV-F02:PROG
+      type: PROG
+      pages: 105
+      bytes: 131072
+      userName: FLOPPY-USER
+      dateCreated: 2445867102
+      lastDateRead: 2464858177
+      lastDateWritten: 2463434520
+      dateCreatedStr: 1986-07-04 15:33:30
+      lastDateReadStr: 1986-11-21 12:01:01
+      lastDateWrittenStr: 1986-11-10 16:28:24
+      bpunValid: null
+    - name: SIBLIB-1BANK-F02:BRF
+      type: BRF
+      pages: 13
+      bytes: 25087
+      userName: FLOPPY-USER
+      dateCreated: 2445867177
+      lastDateRead: 2464858201
+      lastDateWritten: 2463434616
+      dateCreatedStr: 1986-07-04 15:34:41
+      lastDateReadStr: 1986-11-21 12:01:25
+      lastDateWrittenStr: 1986-11-10 16:29:56
+      bpunValid: null
+    - name: SIBLIB-2BANK-F02:BRF
+      type: BRF
+      pages: 13
+      bytes: 25828
+      userName: FLOPPY-USER
+      dateCreated: 2445867191
+      lastDateRead: 2464858210
+      lastDateWritten: 2463434638
+      dateCreatedStr: 1986-07-04 15:34:55
+      lastDateReadStr: 1986-11-21 12:01:34
+      lastDateWrittenStr: 1986-11-10 16:30:14
+      bpunValid: null
+    - name: SIBINTER-F00:PROG
+      type: PROG
+      pages: 115
+      bytes: 249856
+      userName: FLOPPY-USER
+      dateCreated: 2445867215
+      lastDateRead: 2464858220
+      lastDateWritten: 2445867217
+      dateCreatedStr: 1986-07-04 15:35:15
+      lastDateReadStr: 1986-11-21 12:01:44
+      lastDateWrittenStr: 1986-07-04 15:35:17
+      bpunValid: null
+    - name: UE-ERMSG-EN-B04:ERR
+      type: ERR
+      pages: 65
+      bytes: 131840
+      userName: FLOPPY-USER
+      dateCreated: 2445867334
+      lastDateRead: 2464858252
+      lastDateWritten: 2445867335
+      dateCreatedStr: 1986-07-04 15:37:06
+      lastDateReadStr: 1986-11-21 12:02:12
+      lastDateWrittenStr: 1986-07-04 15:37:07
+      bpunValid: null
+    - name: UE-ERMSG-NO-B04:ERR
+      type: ERR
+      pages: 68
+      bytes: 137472
+      userName: FLOPPY-USER
+      dateCreated: 2445867415
+      lastDateRead: 2464858270
+      lastDateWritten: 2445867416
+      dateCreatedStr: 1986-07-04 15:38:23
+      lastDateReadStr: 1986-11-21 12:02:30
+      lastDateWrittenStr: 1986-07-04 15:38:24
+      bpunValid: null
+    - name: SIB2-DPA-F00:PROG
+      type: PROG
+      pages: 81
+      bytes: 83968
+      userName: FLOPPY-USER
+      dateCreated: 2445867510
+      lastDateRead: 2463683916
+      lastDateWritten: 2445867512
+      dateCreatedStr: 1986-07-04 15:39:54
+      lastDateReadStr: 1986-11-12 13:21:12
+      lastDateWrittenStr: 1986-07-04 15:39:56
+      bpunValid: null
+    - name: SIB2-DBCONV-F02:PROG
+      type: PROG
+      pages: 73
+      bytes: 225280
+      userName: FLOPPY-USER
+      dateCreated: 2445867651
+      lastDateRead: 2464858289
+      lastDateWritten: 2463434551
+      dateCreatedStr: 1986-07-04 15:42:03
+      lastDateReadStr: 1986-11-21 12:02:49
+      lastDateWrittenStr: 1986-11-10 16:28:55
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 100/ND-disk-00155.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:25:59.112Z
+imagingLogs:
+  - ND-disk-00155.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-210166-f02-d2-d4f6f163
+  syncStatus: pending

@@ -1,0 +1,46 @@
+id: img-ba6f0a9aa946
+volumeName: ND
+md5: ba6f0a9aa94697b3ab6584f87f0322b8
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 117
+  files:
+    - name: FILE-MAN-EN-B00:PROG
+      type: PROG
+      pages: 115
+      bytes: 251904
+      userName: FLOPPY-USER
+      dateCreated: 2365264203
+      lastDateRead: 2281705519
+      lastDateWritten: 2365264207
+      dateCreatedStr: 1985-03-29 17:05:11
+      lastDateReadStr: null
+      lastDateWrittenStr: 1985-03-29 17:05:15
+      bpunValid: null
+provenance:
+  contributor: www.datormuseum.se
+  originalPath: OK/DISK44.IMG
+  dateImaged: 2022-08-15
+  importedAt: 2026-08-11T17:07:04.370Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-ba6f0a9aa946
+  syncStatus: pending

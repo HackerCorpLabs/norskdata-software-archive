@@ -1,0 +1,77 @@
+id: nd-211042-a01-d1-e2987d67
+volumeName: 211042A01-XX-01D
+md5: e2987d670521125a185e86cae8dd904f
+product:
+  id: ND-211042
+  version: A01
+  diskNumber: 1
+  language: XX
+image:
+  sizeBytes: 1310720
+  format: raw
+  controller: floppy
+  totalPages: 640
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 113
+  files:
+    - name: EN1-VERIFI-A01:PROG
+      type: PROG
+      pages: 45
+      bytes: 90624
+      userName: FLOPPY-USER
+      dateCreated: 2441667781
+      lastDateRead: 2441783893
+      lastDateWritten: 2442312032
+      dateCreatedStr: 1986-06-04 14:19:05
+      lastDateReadStr: 1986-06-05 10:41:21
+      lastDateWrittenStr: 1986-06-09 11:37:32
+      bpunValid: null
+    - name: EN1-VERIFI-A01:INST
+      type: INST
+      pages: 1
+      bytes: 506
+      userName: FLOPPY-USER
+      dateCreated: 2440871965
+      lastDateRead: 2445598035
+      lastDateWritten: 2442827745
+      dateCreatedStr: 1986-05-30 12:00:29
+      lastDateReadStr: 1986-07-02 13:53:19
+      lastDateWrittenStr: 1986-06-13 09:31:33
+      bpunValid: null
+    - name: EN1-VERIFI-A01:DSEG
+      type: DSEG
+      pages: 63
+      bytes: 128349
+      userName: FLOPPY-USER
+      dateCreated: 2441656773
+      lastDateRead: 2441783158
+      lastDateWritten: 2441656792
+      dateCreatedStr: 1986-06-04 11:39:05
+      lastDateReadStr: 1986-06-05 10:29:54
+      lastDateWrittenStr: 1986-06-04 11:39:24
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 100/ND-disk-00167.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:26:01.012Z
+imagingLogs:
+  - ND-disk-00167.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-211042-a01-d1-e2987d67
+  syncStatus: pending

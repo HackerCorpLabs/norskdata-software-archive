@@ -1,0 +1,204 @@
+id: img-ad6dff0b9bcc
+volumeName: OLA-1
+md5: ad6dff0b9bccd35a24797fca9cd5cd35
+image:
+  sizeBytes: 319488
+  format: raw
+  controller: floppy
+  totalPages: 156
+  pageSize: 2048
+  bootFormat: binary
+filesystem: ndfs
+ndfs:
+  users:
+    - name: SYSTEM
+      pagesUsed: 117
+  files:
+    - name: SUB-TOTAL:SYMB
+      type: SYMB
+      pages: 18
+      bytes: 35721
+      userName: SYSTEM
+      dateCreated: 2362488103
+      lastDateRead: 2427534709
+      lastDateWritten: 2427534709
+      dateCreatedStr: 1985-03-08 11:20:39
+      lastDateReadStr: 1986-02-24 19:53:53
+      lastDateWrittenStr: 1986-02-24 19:53:53
+      bpunValid: null
+    - name: HOCKEY:SYMB
+      type: SYMB
+      pages: 20
+      bytes: 37690
+      userName: SYSTEM
+      dateCreated: 2261585191
+      lastDateRead: 2632779187
+      lastDateWritten: 2532377930
+      dateCreatedStr: 1983-11-06 16:52:39
+      lastDateReadStr: 1989-03-22 16:22:51
+      lastDateWrittenStr: 1987-11-24 16:21:10
+      bpunValid: null
+    - name: ASSEMBLER-PASC:SYMB
+      type: SYMB
+      pages: 18
+      bytes: 34056
+      userName: SYSTEM
+      dateCreated: 2301697585
+      lastDateRead: 2391471542
+      lastDateWritten: 2388446898
+      dateCreatedStr: 1984-04-24 17:56:49
+      lastDateReadStr: 1985-10-05 15:22:54
+      lastDateWrittenStr: 1985-09-14 12:58:50
+      bpunValid: null
+    - name: WRITE-HOCKEY:SYMB
+      type: SYMB
+      pages: 10
+      bytes: 17528
+      userName: SYSTEM
+      dateCreated: 2261317860
+      lastDateRead: 2532378224
+      lastDateWritten: 2434315484
+      dateCreatedStr: 1983-11-04 15:35:36
+      lastDateReadStr: 1987-11-24 16:25:48
+      lastDateWrittenStr: 1986-04-12 11:19:28
+      bpunValid: null
+    - name: CASIO-602P:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 3661
+      userName: SYSTEM
+      dateCreated: 2369438422
+      lastDateRead: 2632779078
+      lastDateWritten: 2369438423
+      dateCreatedStr: 1985-04-29 12:11:22
+      lastDateReadStr: 1989-03-22 16:21:06
+      lastDateWrittenStr: 1985-04-29 12:11:23
+      bpunValid: null
+    - name: SPACE-INVADER:SYMB
+      type: SYMB
+      pages: 4
+      bytes: 7968
+      userName: SYSTEM
+      dateCreated: 2370129508
+      lastDateRead: 2663985923
+      lastDateWritten: 2385573841
+      dateCreatedStr: 1985-05-02 20:57:36
+      lastDateReadStr: 1989-11-04 19:12:03
+      lastDateWrittenStr: 1985-08-24 15:31:17
+      bpunValid: null
+    - name: MALTIPS:SYMB
+      type: SYMB
+      pages: 4
+      bytes: 6856
+      userName: SYSTEM
+      dateCreated: 2334578639
+      lastDateRead: 2385987264
+      lastDateWritten: 2334578641
+      dateCreatedStr: 1984-12-19 13:31:15
+      lastDateReadStr: 1985-08-27 20:27:00
+      lastDateWrittenStr: 1984-12-19 13:31:17
+      bpunValid: null
+    - name: 15-SPEL-OL:SYMB
+      type: SYMB
+      pages: 8
+      bytes: 12762
+      userName: SYSTEM
+      dateCreated: 2222144163
+      lastDateRead: 2632779847
+      lastDateWritten: 2291722652
+      dateCreatedStr: 1983-01-25 19:42:35
+      lastDateReadStr: 1989-03-22 16:33:07
+      lastDateWrittenStr: 1984-02-12 14:38:28
+      bpunValid: null
+    - name: INIT-H-FILER:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 2092
+      userName: SYSTEM
+      dateCreated: 2260405448
+      lastDateRead: 2532379146
+      lastDateWritten: 2387810981
+      dateCreatedStr: 1983-10-29 16:51:08
+      lastDateReadStr: 1987-11-24 16:40:10
+      lastDateWrittenStr: 1985-09-09 17:42:37
+      bpunValid: null
+    - name: MASTER-6502:SYMB
+      type: SYMB
+      pages: 3
+      bytes: 5415
+      userName: SYSTEM
+      dateCreated: 2300775262
+      lastDateRead: 2391473720
+      lastDateWritten: 2324081062
+      dateCreatedStr: 1984-04-17 16:45:30
+      lastDateReadStr: 1985-10-05 15:56:56
+      lastDateWrittenStr: 1984-10-03 10:38:38
+      bpunValid: null
+    - name: MM-HOC:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 119
+      userName: SYSTEM
+      dateCreated: 2385982513
+      lastDateRead: 2532378169
+      lastDateWritten: 2532378114
+      dateCreatedStr: 1985-08-27 19:16:49
+      lastDateReadStr: 1987-11-24 16:24:57
+      lastDateWrittenStr: 1987-11-24 16:24:02
+      bpunValid: null
+    - name: IMPERIUM:SYMB
+      type: SYMB
+      pages: 5
+      bytes: 10000
+      userName: SYSTEM
+      dateCreated: 2388450746
+      lastDateRead: 2532381056
+      lastDateWritten: 2388450752
+      dateCreatedStr: 1985-09-14 13:54:58
+      lastDateReadStr: 1987-11-24 17:06:00
+      lastDateWrittenStr: 1985-09-14 13:55:00
+      bpunValid: null
+    - name: TANKS:SYMB
+      type: SYMB
+      pages: 6
+      bytes: 10482
+      userName: SYSTEM
+      dateCreated: 2388450770
+      lastDateRead: 2663985962
+      lastDateWritten: 2388450771
+      dateCreatedStr: 1985-09-14 13:55:18
+      lastDateReadStr: 1989-11-04 19:12:42
+      lastDateWrittenStr: 1985-09-14 13:55:19
+      bpunValid: null
+    - name: INIT-15:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 676
+      userName: SYSTEM
+      dateCreated: 2261462566
+      lastDateRead: 2388445306
+      lastDateWritten: 2304985322
+      dateCreatedStr: 1983-11-05 18:56:38
+      lastDateReadStr: 1985-09-14 12:33:58
+      lastDateWrittenStr: 1984-05-17 20:35:42
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 300/ND-disk-00359.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:45:51.178Z
+imagingLogs:
+  - ND-disk-00359.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-ad6dff0b9bcc
+  syncStatus: pending

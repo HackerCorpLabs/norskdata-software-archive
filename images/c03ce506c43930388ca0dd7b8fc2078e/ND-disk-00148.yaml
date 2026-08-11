@@ -1,0 +1,99 @@
+id: nd-250006-g00-d1-c03ce506
+volumeName: 250006G00
+md5: c03ce506c43930388ca0dd7b8fc2078e
+product:
+  id: ND-250006
+  version: G00
+image:
+  sizeBytes: 1310720
+  format: raw
+  controller: floppy
+  totalPages: 640
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 104
+  files:
+    - name: PERFORM-G00:PROG
+      type: PROG
+      pages: 34
+      bytes: 270336
+      userName: FLOPPY-USER
+      dateCreated: 2367850780
+      lastDateRead: 2520212719
+      lastDateWritten: 2367852675
+      dateCreatedStr: 1985-04-17 08:36:28
+      lastDateReadStr: 1987-08-27 22:19:47
+      lastDateWrittenStr: 1985-04-17 09:02:03
+      bpunValid: null
+    - name: PERFORM-LIB-G00:MCRO
+      type: MCRO
+      pages: 3
+      bytes: 2987
+      userName: FLOPPY-USER
+      dateCreated: 2368902574
+      lastDateRead: 2520212730
+      lastDateWritten: 2368902574
+      dateCreatedStr: 1985-04-25 09:22:46
+      lastDateReadStr: 1987-08-27 22:19:58
+      lastDateWrittenStr: 1985-04-25 09:22:46
+      bpunValid: null
+    - name: PERF-500-LIB-G00:MCRO
+      type: MCRO
+      pages: 2
+      bytes: 1932
+      userName: FLOPPY-USER
+      dateCreated: 2368128778
+      lastDateRead: 2520212736
+      lastDateWritten: 2368901795
+      dateCreatedStr: 1985-04-19 12:28:10
+      lastDateReadStr: 1987-08-27 22:20:00
+      lastDateWrittenStr: 1985-04-25 09:10:35
+      bpunValid: null
+    - name: FILE-APPEND-G00:PROG
+      type: PROG
+      pages: 17
+      bytes: 34816
+      userName: FLOPPY-USER
+      dateCreated: 2368904716
+      lastDateRead: 2520212739
+      lastDateWritten: 2369025938
+      dateCreatedStr: 1985-04-25 09:56:12
+      lastDateReadStr: 1987-08-27 22:20:03
+      lastDateWrittenStr: 1985-04-26 07:30:18
+      bpunValid: null
+    - name: INST-PERFORM-G00:PROG
+      type: PROG
+      pages: 42
+      bytes: 157256
+      userName: FLOPPY-USER
+      dateCreated: 2368922197
+      lastDateRead: 2520212745
+      lastDateWritten: 2369047770
+      dateCreatedStr: 1985-04-25 14:09:21
+      lastDateReadStr: 1987-08-27 22:20:09
+      lastDateWrittenStr: 1985-04-26 12:51:26
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 100/ND-disk-00148.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:25:58.389Z
+imagingLogs:
+  - ND-disk-00148.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-250006-g00-d1-c03ce506
+  syncStatus: pending

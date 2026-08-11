@@ -1,0 +1,301 @@
+id: nd-210800-l05-d2-cb7fcb83
+volumeName: 210800L05-XX-02D
+md5: cb7fcb83ad8732da9bdb7b727a07e705
+product:
+  id: ND-210800
+  version: L05
+  diskNumber: 2
+  language: XX
+image:
+  sizeBytes: 1310720
+  format: raw
+  controller: floppy
+  totalPages: 640
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: RELEASE-NTX
+      pagesUsed: 197
+    - name: MAINTENANCE-NTX
+      pagesUsed: 206
+    - name: WORKFILES-NTX
+      pagesUsed: 76
+    - name: PARAMETERS-NTX
+      pagesUsed: 9
+    - name: USERFILES-NTX
+      pagesUsed: 28
+  files:
+    - name: NW-FILFUNC-L22:PROG
+      type: PROG
+      pages: 84
+      bytes: 411648
+      userName: RELEASE-NTX
+      dateCreated: 2584014098
+      lastDateRead: 2598159506
+      lastDateWritten: 2584016024
+      dateCreatedStr: 1988-08-02 14:52:18
+      lastDateReadStr: 1988-11-14 12:18:18
+      lastDateWrittenStr: 1988-08-02 15:18:24
+      bpunValid: null
+    - name: NW-FILFUNC-L22:ENTR
+      type: ENTR
+      pages: 4
+      bytes: 7808
+      userName: RELEASE-NTX
+      dateCreated: 2584014098
+      lastDateRead: 2584140161
+      lastDateWritten: 2584014413
+      dateCreatedStr: 1988-08-02 14:52:18
+      lastDateReadStr: 1988-08-03 13:38:01
+      lastDateWrittenStr: 1988-08-02 14:57:13
+      bpunValid: null
+    - name: NW-AD-L22:PROG
+      type: PROG
+      pages: 55
+      bytes: 401408
+      userName: RELEASE-NTX
+      dateCreated: 2584014558
+      lastDateRead: 2598159529
+      lastDateWritten: 2584016027
+      dateCreatedStr: 1988-08-02 14:59:30
+      lastDateReadStr: 1988-11-14 12:18:41
+      lastDateWrittenStr: 1988-08-02 15:18:27
+      bpunValid: null
+    - name: NW-AD-L22:ENTR
+      type: ENTR
+      pages: 3
+      bytes: 4978
+      userName: RELEASE-NTX
+      dateCreated: 2584014559
+      lastDateRead: 2584140182
+      lastDateWritten: 2584015013
+      dateCreatedStr: 1988-08-02 14:59:31
+      lastDateReadStr: 1988-08-03 13:38:22
+      lastDateWrittenStr: 1988-08-02 15:02:37
+      bpunValid: null
+    - name: NW-SORT-L22:PROG
+      type: PROG
+      pages: 23
+      bytes: 395264
+      userName: RELEASE-NTX
+      dateCreated: 2584015090
+      lastDateRead: 2598159546
+      lastDateWritten: 2584016027
+      dateCreatedStr: 1988-08-02 15:03:50
+      lastDateReadStr: 1988-11-14 12:18:58
+      lastDateWrittenStr: 1988-08-02 15:18:27
+      bpunValid: null
+    - name: NW-SORT-L22:ENTR
+      type: ENTR
+      pages: 1
+      bytes: 704
+      userName: RELEASE-NTX
+      dateCreated: 2584015091
+      lastDateRead: 2584140204
+      lastDateWritten: 2584015128
+      dateCreatedStr: 1988-08-02 15:03:51
+      lastDateReadStr: 1988-08-03 13:38:44
+      lastDateWrittenStr: 1988-08-02 15:04:24
+      bpunValid: null
+    - name: NW-DUMS-L22:PROG
+      type: PROG
+      pages: 14
+      bytes: 395264
+      userName: RELEASE-NTX
+      dateCreated: 2584015144
+      lastDateRead: 2598159559
+      lastDateWritten: 2584015987
+      dateCreatedStr: 1988-08-02 15:04:40
+      lastDateReadStr: 1988-11-14 12:19:07
+      lastDateWrittenStr: 1988-08-02 15:17:51
+      bpunValid: null
+    - name: NW-DUMS-L22:ENTR
+      type: ENTR
+      pages: 1
+      bytes: 354
+      userName: RELEASE-NTX
+      dateCreated: 2584015145
+      lastDateRead: null
+      lastDateWritten: 2584015173
+      dateCreatedStr: 1988-08-02 15:04:41
+      lastDateReadStr: null
+      lastDateWrittenStr: 1988-08-02 15:05:05
+      bpunValid: null
+    - name: DUMP-NTX-L02:XCOM
+      type: XCOM
+      pages: 2
+      bytes: 2841
+      userName: RELEASE-NTX
+      dateCreated: 2530525430
+      lastDateRead: 2598159566
+      lastDateWritten: 2530525430
+      dateCreatedStr: 1987-11-10 12:03:54
+      lastDateReadStr: 1988-11-14 12:19:14
+      lastDateWrittenStr: 1987-11-10 12:03:54
+      bpunValid: null
+    - name: SUPER-SS-L02:PROG
+      type: PROG
+      pages: 96
+      bytes: 301056
+      userName: MAINTENANCE-NTX
+      dateCreated: 2564987063
+      lastDateRead: 2598159646
+      lastDateWritten: 2564987063
+      dateCreatedStr: 1988-03-17 09:34:55
+      lastDateReadStr: 1988-11-14 12:20:30
+      lastDateWrittenStr: 1988-03-17 09:34:55
+      bpunValid: null
+    - name: LOAD-LAMU-LA-L08:PROG
+      type: PROG
+      pages: 101
+      bytes: 309248
+      userName: MAINTENANCE-NTX
+      dateCreated: 2579141231
+      lastDateRead: 2598159681
+      lastDateWritten: 2579141231
+      dateCreatedStr: 1988-06-29 09:09:47
+      lastDateReadStr: 1988-11-14 12:21:01
+      lastDateWrittenStr: 1988-06-29 09:09:47
+      bpunValid: null
+    - name: LAMU-CONSTANTS:MODE
+      type: MODE
+      pages: 1
+      bytes: 147
+      userName: MAINTENANCE-NTX
+      dateCreated: 2422151407
+      lastDateRead: 2580469088
+      lastDateWritten: 2429888658
+      dateCreatedStr: 1986-01-15 17:35:47
+      lastDateReadStr: 1988-07-07 13:21:32
+      lastDateWrittenStr: 1986-03-10 18:34:18
+      bpunValid: null
+    - name: LOAD-LAMU:MODE
+      type: MODE
+      pages: 1
+      bytes: 223
+      userName: MAINTENANCE-NTX
+      dateCreated: 2528545487
+      lastDateRead: 2580469093
+      lastDateWritten: 2528545487
+      dateCreatedStr: 1987-10-27 08:43:15
+      lastDateReadStr: 1988-07-07 13:21:37
+      lastDateWrittenStr: 1987-10-27 08:43:15
+      bpunValid: null
+    - name: DELETE-LAMU:XCOM
+      type: XCOM
+      pages: 1
+      bytes: 236
+      userName: MAINTENANCE-NTX
+      dateCreated: 2327503698
+      lastDateRead: 2598159712
+      lastDateWritten: 2330656852
+      dateCreatedStr: 1984-10-29 14:13:18
+      lastDateReadStr: 1988-11-14 12:21:32
+      lastDateWrittenStr: 1984-11-21 16:01:20
+      bpunValid: null
+    - name: TABFIL-EDITOR-K7:DATA
+      type: DATA
+      pages: 14
+      bytes: 27648
+      userName: WORKFILES-NTX
+      dateCreated: 2328453297
+      lastDateRead: 2597229411
+      lastDateWritten: 2577452754
+      dateCreatedStr: 1984-11-04 22:02:49
+      lastDateReadStr: 1988-11-07 09:13:35
+      lastDateWrittenStr: 1988-06-16 12:59:18
+      bpunValid: null
+    - name: NTXWP-FORM-NAMES:SYMB
+      type: SYMB
+      pages: 3
+      bytes: 4571
+      userName: WORKFILES-NTX
+      dateCreated: 2496204946
+      lastDateRead: 2597256465
+      lastDateWritten: 2532227566
+      dateCreatedStr: 1987-03-04 17:02:18
+      lastDateReadStr: 1988-11-07 15:52:17
+      lastDateWrittenStr: 1987-11-23 11:39:46
+      bpunValid: null
+    - name: FONTDEF-GR-J05:FONT
+      type: FONT
+      pages: 52
+      bytes: 106496
+      userName: WORKFILES-NTX
+      dateCreated: 2503518155
+      lastDateRead: 2597229424
+      lastDateWritten: 2504845645
+      dateCreatedStr: 1987-04-28 10:31:11
+      lastDateReadStr: 1988-11-07 09:13:48
+      lastDateWrittenStr: 1987-05-06 14:37:13
+      bpunValid: null
+    - name: LAMU-DIRECTORY:LAMU
+      type: LAMU
+      pages: 4
+      bytes: 8192
+      userName: WORKFILES-NTX
+      dateCreated: 2452824432
+      lastDateRead: 2598159748
+      lastDateWritten: 2584136496
+      dateCreatedStr: 1986-08-25 18:05:48
+      lastDateReadStr: 1988-11-14 12:22:04
+      lastDateWrittenStr: 1988-08-03 12:44:48
+      bpunValid: null
+    - name: NTXWP-PARAM-L01:NTXP
+      type: NTXP
+      pages: 4
+      bytes: 6240
+      userName: PARAMETERS-NTX
+      dateCreated: 2530532537
+      lastDateRead: 2597256480
+      lastDateWritten: 2581515879
+      dateCreatedStr: 1987-11-10 13:50:57
+      lastDateReadStr: 1988-11-07 15:52:32
+      lastDateWrittenStr: 1988-07-15 12:57:39
+      bpunValid: null
+    - name: ADS-PARAM-K04:NTXP
+      type: NTXP
+      pages: 2
+      bytes: 3260
+      userName: PARAMETERS-NTX
+      dateCreated: 2464772246
+      lastDateRead: 2597256483
+      lastDateWritten: 2464772247
+      dateCreatedStr: 1986-11-20 23:02:22
+      lastDateReadStr: 1988-11-07 15:52:35
+      lastDateWrittenStr: 1986-11-20 23:02:23
+      bpunValid: null
+    - name: TYPO-FORMATS:DATA
+      type: DATA
+      pages: 27
+      bytes: 55296
+      userName: USERFILES-NTX
+      dateCreated: 2422125273
+      lastDateRead: 2598159765
+      lastDateWritten: 2422125275
+      dateCreatedStr: 1986-01-15 11:11:25
+      lastDateReadStr: 1988-11-14 12:22:21
+      lastDateWrittenStr: 1986-01-15 11:11:27
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 100/ND-disk-00170.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:26:01.466Z
+imagingLogs:
+  - ND-disk-00170.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-210800-l05-d2-cb7fcb83
+  syncStatus: pending

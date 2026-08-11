@@ -1,0 +1,161 @@
+id: nd-211248-c13-d1-88f7c0df
+volumeName: 211248C13-XX-01D
+md5: 88f7c0df38c624bff682fac186fa18be
+product:
+  id: ND-211248
+  version: C13
+  diskNumber: 1
+  language: XX
+image:
+  sizeBytes: 1310720
+  format: raw
+  controller: floppy
+  totalPages: 640
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 454
+  files:
+    - name: XTRA-1-C13:NRF
+      type: NRF
+      pages: 161
+      bytes: 328151
+      userName: FLOPPY-USER
+      dateCreated: 2638654391
+      lastDateRead: 2659373510
+      lastDateWritten: 2638654643
+      dateCreatedStr: 1989-05-03 10:46:55
+      lastDateReadStr: 1989-10-01 13:07:06
+      lastDateWrittenStr: 1989-05-03 10:50:51
+      bpunValid: null
+    - name: XTRA-2-C13:NRF
+      type: NRF
+      pages: 77
+      bytes: 157018
+      userName: FLOPPY-USER
+      dateCreated: 2638654650
+      lastDateRead: 2659373540
+      lastDateWritten: 2638654731
+      dateCreatedStr: 1989-05-03 10:50:58
+      lastDateReadStr: 1989-10-01 13:07:36
+      lastDateWrittenStr: 1989-05-03 10:52:11
+      bpunValid: null
+    - name: XTRA-3-C13:NRF
+      type: NRF
+      pages: 14
+      bytes: 28645
+      userName: FLOPPY-USER
+      dateCreated: 2638654733
+      lastDateRead: 2659373558
+      lastDateWritten: 2638654749
+      dateCreatedStr: 1989-05-03 10:52:13
+      lastDateReadStr: 1989-10-01 13:07:54
+      lastDateWrittenStr: 1989-05-03 10:52:29
+      bpunValid: null
+    - name: XTRA-WP-N-C13:NRF
+      type: NRF
+      pages: 1
+      bytes: 287
+      userName: FLOPPY-USER
+      dateCreated: 2638654381
+      lastDateRead: 2659373562
+      lastDateWritten: 2638654381
+      dateCreatedStr: 1989-05-03 10:46:45
+      lastDateReadStr: 1989-10-01 13:07:58
+      lastDateWrittenStr: 1989-05-03 10:46:45
+      bpunValid: null
+    - name: XTRA-LINKER-C13:MODE
+      type: MODE
+      pages: 1
+      bytes: 1378
+      userName: FLOPPY-USER
+      dateCreated: 2622139091
+      lastDateRead: 2630789259
+      lastDateWritten: 2629359004
+      dateCreatedStr: 1989-01-05 10:43:19
+      lastDateReadStr: 1989-03-07 10:34:11
+      lastDateWrittenStr: 1989-02-28 13:22:28
+      bpunValid: null
+    - name: INSTALL-UNIQ:PROG
+      type: PROG
+      pages: 46
+      bytes: 156744
+      userName: FLOPPY-USER
+      dateCreated: 2505481812
+      lastDateRead: 2659371996
+      lastDateWritten: 2563282072
+      dateCreatedStr: 1987-05-11 09:57:20
+      lastDateReadStr: 1989-10-01 12:47:28
+      lastDateWrittenStr: 1988-03-04 09:18:24
+      bpunValid: null
+    - name: XTRA-IN-S5-C13:PROG
+      type: PROG
+      pages: 63
+      bytes: 191870
+      userName: FLOPPY-USER
+      dateCreated: 2578358312
+      lastDateRead: 2659372011
+      lastDateWritten: 2627674491
+      dateCreatedStr: 1988-06-23 10:00:40
+      lastDateReadStr: 1989-10-01 12:47:43
+      lastDateWrittenStr: 1989-02-15 18:05:59
+      bpunValid: null
+    - name: XTRA-MAIN-C13:NRF
+      type: NRF
+      pages: 2
+      bytes: 3297
+      userName: FLOPPY-USER
+      dateCreated: 2638654383
+      lastDateRead: 2659373506
+      lastDateWritten: 2638654387
+      dateCreatedStr: 1989-05-03 10:46:47
+      lastDateReadStr: 1989-10-01 13:07:02
+      lastDateWrittenStr: 1989-05-03 10:46:51
+      bpunValid: null
+    - name: XTRA-LOAD-S5-C13:MODE
+      type: MODE
+      pages: 2
+      bytes: 2053
+      userName: FLOPPY-USER
+      dateCreated: 2629233000
+      lastDateRead: 2630670768
+      lastDateWritten: 2630670768
+      dateCreatedStr: 1989-02-27 14:37:40
+      lastDateReadStr: 1989-03-06 13:38:48
+      lastDateWrittenStr: 1989-03-06 13:38:48
+      bpunValid: null
+    - name: XTRA-DUMP-S5-C13:MODE
+      type: MODE
+      pages: 1
+      bytes: 465
+      userName: FLOPPY-USER
+      dateCreated: 2629236620
+      lastDateRead: 2629358838
+      lastDateWritten: 2629236621
+      dateCreatedStr: 1989-02-27 15:30:12
+      lastDateReadStr: 1989-02-28 13:19:54
+      lastDateWrittenStr: 1989-02-27 15:30:13
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 000/ND-disk-00085.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T14:54:28.283Z
+imagingLogs:
+  - ND-disk-00085.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-211248-c13-d1-88f7c0df
+  syncStatus: pending

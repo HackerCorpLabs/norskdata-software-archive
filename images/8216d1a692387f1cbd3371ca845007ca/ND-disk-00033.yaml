@@ -1,0 +1,89 @@
+id: nd-211226-b02-d2-8216d1a6
+volumeName: 211226B02-EN-02D
+md5: 8216d1a692387f1cbd3371ca845007ca
+product:
+  id: ND-211226
+  version: B02
+  diskNumber: 2
+  language: EN
+image:
+  sizeBytes: 1310720
+  format: raw
+  controller: floppy
+  totalPages: 640
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 433
+  files:
+    - name: BM-FILERE-EN-B02:DATA
+      type: DATA
+      pages: 65
+      bytes: 131088
+      userName: FLOPPY-USER
+      dateCreated: 2647717342
+      lastDateRead: null
+      lastDateWritten: 2647717344
+      dateCreatedStr: 1989-07-08 15:23:30
+      lastDateReadStr: null
+      lastDateWrittenStr: 1989-07-08 15:23:32
+      bpunValid: null
+    - name: BM-OPERAT-EN-B02:DATA
+      type: DATA
+      pages: 153
+      bytes: 311312
+      userName: FLOPPY-USER
+      dateCreated: 2647717383
+      lastDateRead: null
+      lastDateWritten: 2647717384
+      dateCreatedStr: 1989-07-08 15:24:07
+      lastDateReadStr: null
+      lastDateWrittenStr: 1989-07-08 15:24:08
+      bpunValid: null
+    - name: BM-DEFINI-EN-B02:DATA
+      type: DATA
+      pages: 105
+      bytes: 213008
+      userName: FLOPPY-USER
+      dateCreated: 2647717507
+      lastDateRead: null
+      lastDateWritten: 2647717508
+      dateCreatedStr: 1989-07-08 15:26:03
+      lastDateReadStr: null
+      lastDateWrittenStr: 1989-07-08 15:26:04
+      bpunValid: null
+    - name: BM-SCHED-EN-B02:DATA
+      type: DATA
+      pages: 105
+      bytes: 213008
+      userName: FLOPPY-USER
+      dateCreated: 2647717624
+      lastDateRead: null
+      lastDateWritten: 2647717625
+      dateCreatedStr: 1989-07-08 15:27:56
+      lastDateReadStr: null
+      lastDateWrittenStr: 1989-07-08 15:27:57
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 000/ND-disk-00033.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T14:54:08.463Z
+imagingLogs:
+  - ND-disk-00033.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-211226-b02-d2-8216d1a6
+  syncStatus: pending

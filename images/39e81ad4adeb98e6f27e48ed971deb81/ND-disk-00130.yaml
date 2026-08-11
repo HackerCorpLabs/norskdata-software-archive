@@ -1,0 +1,132 @@
+id: img-39e81ad4adeb
+volumeName: ND
+md5: 39e81ad4adeb98e6f27e48ed971deb81
+image:
+  sizeBytes: 1310720
+  format: raw
+  controller: floppy
+  totalPages: 640
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 57
+  files:
+    - name: COB-APEX1:SYMB
+      type: SYMB
+      pages: 25
+      bytes: 25801
+      userName: FLOPPY-USER
+      dateCreated: 2511258802
+      lastDateRead: 2530913655
+      lastDateWritten: 2512561802
+      dateCreatedStr: 1987-06-23 12:18:50
+      lastDateReadStr: 1987-11-13 10:53:55
+      lastDateWrittenStr: 1987-07-01 10:26:10
+      bpunValid: null
+    - name: COB-APEX2:SYMB
+      type: SYMB
+      pages: 5
+      bytes: 7239
+      userName: FLOPPY-USER
+      dateCreated: 2511258990
+      lastDateRead: 2530913675
+      lastDateWritten: 2511667209
+      dateCreatedStr: 1987-06-23 12:21:46
+      lastDateReadStr: 1987-11-13 10:54:11
+      lastDateWrittenStr: 1987-06-26 16:00:09
+      bpunValid: null
+    - name: COB-APEX3:SYMB
+      type: SYMB
+      pages: 3
+      bytes: 3559
+      userName: FLOPPY-USER
+      dateCreated: 2511258923
+      lastDateRead: 2530913680
+      lastDateWritten: 2511668237
+      dateCreatedStr: 1987-06-23 12:20:43
+      lastDateReadStr: 1987-11-13 10:54:16
+      lastDateWrittenStr: 1987-06-26 16:16:13
+      bpunValid: null
+    - name: COB-APEX4:SYMB
+      type: SYMB
+      pages: 3
+      bytes: 3299
+      userName: FLOPPY-USER
+      dateCreated: 2511285542
+      lastDateRead: 2530913684
+      lastDateWritten: 2512563615
+      dateCreatedStr: 1987-06-23 18:52:38
+      lastDateReadStr: 1987-11-13 10:54:20
+      lastDateWrittenStr: 1987-07-01 10:54:31
+      bpunValid: null
+    - name: COB-APEX5:SYMB
+      type: SYMB
+      pages: 4
+      bytes: 7246
+      userName: FLOPPY-USER
+      dateCreated: 2511285605
+      lastDateRead: 2530913689
+      lastDateWritten: 2512563843
+      dateCreatedStr: 1987-06-23 18:53:37
+      lastDateReadStr: 1987-11-13 10:54:25
+      lastDateWrittenStr: 1987-07-01 10:58:03
+      bpunValid: null
+    - name: COB-APEX6:SYMB
+      type: SYMB
+      pages: 5
+      bytes: 10078
+      userName: FLOPPY-USER
+      dateCreated: 2511654573
+      lastDateRead: 2530913693
+      lastDateWritten: 2512564968
+      dateCreatedStr: 1987-06-26 12:58:45
+      lastDateReadStr: 1987-11-13 10:54:29
+      lastDateWrittenStr: 1987-07-01 11:11:40
+      bpunValid: null
+    - name: COB-APEX7:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 3652
+      userName: FLOPPY-USER
+      dateCreated: 2511669085
+      lastDateRead: 2530913699
+      lastDateWritten: 2512565470
+      dateCreatedStr: 1987-06-26 16:29:29
+      lastDateReadStr: 1987-11-13 10:54:35
+      lastDateWrittenStr: 1987-07-01 11:19:30
+      bpunValid: null
+    - name: COB-APEX-COMP:MODE
+      type: MODE
+      pages: 1
+      bytes: 652
+      userName: FLOPPY-USER
+      dateCreated: 2511260081
+      lastDateRead: 2530913839
+      lastDateWritten: 2512186833
+      dateCreatedStr: 1987-06-23 12:38:49
+      lastDateReadStr: 1987-11-13 10:56:47
+      lastDateWrittenStr: 1987-06-30 14:55:17
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 100/ND-disk-00130.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:25:54.087Z
+imagingLogs:
+  - ND-disk-00130.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-39e81ad4adeb
+  syncStatus: pending

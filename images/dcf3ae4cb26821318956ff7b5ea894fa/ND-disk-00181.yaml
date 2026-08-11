@@ -1,0 +1,93 @@
+id: nd-210884-k05-d1-dcf3ae4c
+volumeName: 210884K05-EN-01D
+md5: dcf3ae4cb26821318956ff7b5ea894fa
+product:
+  id: ND-210884
+  version: K05
+  diskNumber: 1
+  language: EN
+image:
+  sizeBytes: 1310720
+  format: raw
+  controller: floppy
+  totalPages: 640
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 5
+    - name: WORKFILES-NTX
+      pagesUsed: 13
+    - name: PARAMETERS-NTX
+      pagesUsed: 9
+  files:
+    - name: INSTALL-RTP-K00:XCOM
+      type: XCOM
+      pages: 3
+      bytes: 5219
+      userName: FLOPPY-USER
+      dateCreated: 2382274656
+      lastDateRead: 2585082017
+      lastDateWritten: 2567623782
+      dateCreatedStr: 1985-07-31 10:01:32
+      lastDateReadStr: 1988-08-10 19:34:33
+      lastDateWrittenStr: 1988-04-05 13:17:38
+      bpunValid: null
+    - name: REPORT-TRS80-K01:DATA
+      type: DATA
+      pages: 2
+      bytes: 4096
+      userName: WORKFILES-NTX
+      dateCreated: 2372707787
+      lastDateRead: 2591616111
+      lastDateWritten: 2564990795
+      dateCreatedStr: 1985-05-22 10:23:11
+      lastDateReadStr: 1988-09-28 14:49:47
+      lastDateWrittenStr: 1988-03-17 10:29:11
+      bpunValid: null
+    - name: REPORT-TRS80-K02:FORM
+      type: FORM
+      pages: 10
+      bytes: 20480
+      userName: WORKFILES-NTX
+      dateCreated: 2364068466
+      lastDateRead: 2585319382
+      lastDateWritten: 2585317956
+      dateCreatedStr: 1985-03-20 13:09:50
+      lastDateReadStr: 1988-08-12 13:31:22
+      lastDateWrittenStr: 1988-08-12 13:09:04
+      bpunValid: null
+    - name: TRS80-PARAM-K04:NTXP
+      type: NTXP
+      pages: 7
+      bytes: 12642
+      userName: PARAMETERS-NTX
+      dateCreated: 2401555833
+      lastDateRead: 2585308629
+      lastDateWritten: 2528675060
+      dateCreatedStr: 1985-12-18 13:21:57
+      lastDateReadStr: 1988-08-12 10:55:21
+      lastDateWrittenStr: 1987-10-28 08:19:52
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 100/ND-disk-00181.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:26:03.104Z
+imagingLogs:
+  - ND-disk-00181.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-210884-k05-d1-dcf3ae4c
+  syncStatus: pending

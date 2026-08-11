@@ -1,0 +1,216 @@
+id: img-b3e848b8b47f
+volumeName: ERIC
+md5: b3e848b8b47f9136dc9685108b57354a
+image:
+  sizeBytes: 319488
+  format: raw
+  controller: floppy
+  totalPages: 156
+  pageSize: 2048
+  bootFormat: bpun
+filesystem: ndfs
+ndfs:
+  users:
+    - name: SYSTEM
+      pagesUsed: 86
+  files:
+    - name: BATTLE:SYMB
+      type: SYMB
+      pages: 5
+      bytes: 10071
+      userName: SYSTEM
+      dateCreated: 1981606789
+      lastDateRead: 2394107200
+      lastDateWritten: 2026833424
+      dateCreatedStr: 1979-08-14 14:46:05
+      lastDateReadStr: 1985-10-25 18:53:00
+      lastDateWrittenStr: 1980-03-07 16:24:16
+      bpunValid: null
+    - name: TANK-BATTLE:SYMB
+      type: SYMB
+      pages: 4
+      bytes: 7230
+      userName: SYSTEM
+      dateCreated: 1952766198
+      lastDateRead: 2394107215
+      lastDateWritten: 1972424777
+      dateCreatedStr: 1979-01-18 13:35:54
+      lastDateReadStr: 1985-10-25 18:53:15
+      lastDateWrittenStr: 1979-06-08 13:01:09
+      bpunValid: null
+    - name: CB-LIBRARY:SYMB
+      type: SYMB
+      pages: 4
+      bytes: 6253
+      userName: SYSTEM
+      dateCreated: 1952767115
+      lastDateRead: 2394107224
+      lastDateWritten: 2027750057
+      dateCreatedStr: 1979-01-18 13:50:11
+      lastDateReadStr: 1985-10-25 18:53:24
+      lastDateWrittenStr: 1980-03-14 16:10:41
+      bpunValid: null
+    - name: STAR-TREKK:SYMB
+      type: SYMB
+      pages: 24
+      bytes: 47586
+      userName: SYSTEM
+      dateCreated: 1956180721
+      lastDateRead: 2394107233
+      lastDateWritten: 1956180815
+      dateCreatedStr: 1979-02-12 15:11:49
+      lastDateReadStr: 1985-10-25 18:53:33
+      lastDateWrittenStr: 1979-02-12 15:13:15
+      bpunValid: null
+    - name: CB-LIBRARY:BRF
+      type: BRF
+      pages: 5
+      bytes: 9615
+      userName: SYSTEM
+      dateCreated: 1952768513
+      lastDateRead: 2394107270
+      lastDateWritten: 2038390970
+      dateCreatedStr: 1979-01-18 14:08:01
+      lastDateReadStr: 1985-10-25 18:54:06
+      lastDateWrittenStr: 1980-05-31 22:02:58
+      bpunValid: null
+    - name: TRANSFER:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 969
+      userName: SYSTEM
+      dateCreated: 1952775616
+      lastDateRead: 2394107282
+      lastDateWritten: 2045579351
+      dateCreatedStr: 1979-01-18 15:55:00
+      lastDateReadStr: 1985-10-25 18:54:18
+      lastDateWrittenStr: 1980-07-22 17:01:23
+      bpunValid: null
+    - name: POKER:SYMB
+      type: SYMB
+      pages: 4
+      bytes: 8189
+      userName: SYSTEM
+      dateCreated: 1981601942
+      lastDateRead: 2394107289
+      lastDateWritten: 1981601944
+      dateCreatedStr: 1979-08-14 13:34:22
+      lastDateReadStr: 1985-10-25 18:54:25
+      lastDateWrittenStr: 1979-08-14 13:34:24
+      bpunValid: null
+    - name: PLOT:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 459
+      userName: SYSTEM
+      dateCreated: 1969938640
+      lastDateRead: 2394107300
+      lastDateWritten: 1969938642
+      dateCreatedStr: 1979-05-21 14:03:16
+      lastDateReadStr: 1985-10-25 18:54:36
+      lastDateWrittenStr: 1979-05-21 14:03:18
+      bpunValid: null
+    - name: COLT-45:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 2175
+      userName: SYSTEM
+      dateCreated: 1972290777
+      lastDateRead: 2394107315
+      lastDateWritten: 1972413530
+      dateCreatedStr: 1979-06-07 12:19:25
+      lastDateReadStr: 1985-10-25 18:54:51
+      lastDateWrittenStr: 1979-06-08 10:17:26
+      bpunValid: null
+    - name: DAM:SYMB
+      type: SYMB
+      pages: 4
+      bytes: 7140
+      userName: SYSTEM
+      dateCreated: 1981602077
+      lastDateRead: 2394107323
+      lastDateWritten: 1981602083
+      dateCreatedStr: 1979-08-14 13:36:29
+      lastDateReadStr: 1985-10-25 18:54:59
+      lastDateWrittenStr: 1979-08-14 13:36:35
+      bpunValid: null
+    - name: LUFFAR-SCHACK-2:SYMB
+      type: SYMB
+      pages: 6
+      bytes: 10353
+      userName: SYSTEM
+      dateCreated: 1989471204
+      lastDateRead: 2394107338
+      lastDateWritten: 2034963797
+      dateCreatedStr: 1979-10-10 14:47:36
+      lastDateReadStr: 1985-10-25 18:55:10
+      lastDateWrittenStr: 1980-05-05 17:21:21
+      bpunValid: null
+    - name: LUFFAR-SCHACK-1:SYMB
+      type: SYMB
+      pages: 3
+      bytes: 5756
+      userName: SYSTEM
+      dateCreated: 2030748244
+      lastDateRead: 2394107352
+      lastDateWritten: 2030748246
+      dateCreatedStr: 1980-04-05 12:09:20
+      lastDateReadStr: 1985-10-25 18:55:24
+      lastDateWrittenStr: 1980-04-05 12:09:22
+      bpunValid: null
+    - name: STAT-LUFF:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 662
+      userName: SYSTEM
+      dateCreated: 2031545055
+      lastDateRead: 2394107363
+      lastDateWritten: 2050951274
+      dateCreatedStr: 1980-04-11 14:43:31
+      lastDateReadStr: 1985-10-25 18:55:35
+      lastDateWrittenStr: 1980-08-31 16:33:42
+      bpunValid: null
+    - name: ERROR-PAGE:DATA
+      type: DATA
+      pages: 1
+      bytes: 4294967296
+      userName: SYSTEM
+      dateCreated: 2045961408
+      lastDateRead: 2394107370
+      lastDateWritten: null
+      dateCreatedStr: 1980-07-25 14:19:00
+      lastDateReadStr: 1985-10-25 18:55:42
+      lastDateWrittenStr: null
+      bpunValid: null
+    - name: LUFFAR-SCHACK-3:SYMB
+      type: SYMB
+      pages: 6
+      bytes: 11559
+      userName: SYSTEM
+      dateCreated: 2045845025
+      lastDateRead: 2394107373
+      lastDateWritten: 2095792197
+      dateCreatedStr: 1980-07-24 17:56:33
+      lastDateReadStr: 1985-10-25 18:55:45
+      lastDateWrittenStr: 1981-03-21 20:01:05
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 300/ND-disk-00351d.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:45:50.402Z
+imagingLogs:
+  - ND-disk-00351d.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-b3e848b8b47f
+  syncStatus: pending

@@ -1,0 +1,113 @@
+id: nd-211056-a04-d4-6d10524d
+volumeName: 211056A04-XX-04D
+md5: 6d10524d51a1cee55c49d66ce0c30157
+product:
+  id: ND-211056
+  version: A04
+  diskNumber: 4
+  language: XX
+image:
+  sizeBytes: 1310720
+  format: raw
+  controller: floppy
+  totalPages: 640
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 353
+  files:
+    - name: PRM-SERV-AB-A04:PFIL
+      type: PFIL
+      pages: 64
+      bytes: 123904
+      userName: FLOPPY-USER
+      dateCreated: 2597532552
+      lastDateRead: 2598440295
+      lastDateWritten: 2598437989
+      dateCreatedStr: 1988-11-09 19:14:08
+      lastDateReadStr: 1988-11-16 16:53:39
+      lastDateWrittenStr: 1988-11-16 16:17:37
+      bpunValid: null
+    - name: PRM-SERV-AB-A04:DFIL
+      type: DFIL
+      pages: 51
+      bytes: 103936
+      userName: FLOPPY-USER
+      dateCreated: 2597532591
+      lastDateRead: 2598440310
+      lastDateWritten: 2598437999
+      dateCreatedStr: 1988-11-09 19:14:47
+      lastDateReadStr: 1988-11-16 16:53:54
+      lastDateWrittenStr: 1988-11-16 16:17:47
+      bpunValid: null
+    - name: PRM-SERV-AE-A04:PFIL
+      type: PFIL
+      pages: 64
+      bytes: 125440
+      userName: FLOPPY-USER
+      dateCreated: 2597532639
+      lastDateRead: 2598440325
+      lastDateWritten: 2598438021
+      dateCreatedStr: 1988-11-09 19:15:31
+      lastDateReadStr: 1988-11-16 16:54:05
+      lastDateWrittenStr: 1988-11-16 16:18:05
+      bpunValid: null
+    - name: PRM-SERV-AE-A04:DFIL
+      type: DFIL
+      pages: 51
+      bytes: 103936
+      userName: FLOPPY-USER
+      dateCreated: 2597532693
+      lastDateRead: 2598440335
+      lastDateWritten: 2598438031
+      dateCreatedStr: 1988-11-09 19:16:21
+      lastDateReadStr: 1988-11-16 16:54:15
+      lastDateWrittenStr: 1988-11-16 16:18:15
+      bpunValid: null
+    - name: PRM-SERV-AH-A04:PFIL
+      type: PFIL
+      pages: 64
+      bytes: 124928
+      userName: FLOPPY-USER
+      dateCreated: 2597532754
+      lastDateRead: 2598440343
+      lastDateWritten: 2598438049
+      dateCreatedStr: 1988-11-09 19:17:18
+      lastDateReadStr: 1988-11-16 16:54:23
+      lastDateWrittenStr: 1988-11-16 16:18:33
+      bpunValid: null
+    - name: PRM-SERV-AH-A04:DFIL
+      type: DFIL
+      pages: 52
+      bytes: 104448
+      userName: FLOPPY-USER
+      dateCreated: 2597532824
+      lastDateRead: 2598440353
+      lastDateWritten: 2598438060
+      dateCreatedStr: 1988-11-09 19:18:24
+      lastDateReadStr: 1988-11-16 16:54:33
+      lastDateWrittenStr: 1988-11-16 16:18:44
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 000/ND-disk-00012.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T14:54:03.882Z
+imagingLogs:
+  - ND-disk-00012.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-211056-a04-d4-6d10524d
+  syncStatus: pending

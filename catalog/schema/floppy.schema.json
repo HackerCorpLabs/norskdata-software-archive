@@ -4,7 +4,13 @@
   "title": "Norsk Data Floppy Catalog Entry",
   "description": "Schema v1.0 for entries in catalog/floppies.json",
   "type": "object",
-  "required": ["schemaVersion", "id", "type", "md5", "imageFormat"],
+  "required": [
+    "schemaVersion",
+    "id",
+    "type",
+    "md5",
+    "imageFormat"
+  ],
   "properties": {
     "schemaVersion": {
       "type": "string",
@@ -17,7 +23,13 @@
     },
     "type": {
       "type": "string",
-      "enum": ["floppy", "hdd", "rom", "tape", "firmware"],
+      "enum": [
+        "floppy",
+        "hdd",
+        "rom",
+        "tape",
+        "firmware"
+      ],
       "description": "Media type"
     },
     "md5": {
@@ -26,86 +38,172 @@
       "description": "MD5 checksum of the image file"
     },
     "volumeName": {
-      "type": ["string", "null"],
+      "type": [
+        "string",
+        "null"
+      ],
       "description": "NDFS volume name as read from the image"
     },
     "volumeNameRaw": {
-      "type": ["string", "null"],
+      "type": [
+        "string",
+        "null"
+      ],
       "description": "Hex-encoded volume name when original contains non-printable characters"
     },
     "productId": {
-      "type": ["string", "null"],
+      "type": [
+        "string",
+        "null"
+      ],
       "description": "Matched product article number (e.g., ND-10325)"
     },
     "version": {
-      "type": ["string", "null"],
+      "type": [
+        "string",
+        "null"
+      ],
       "description": "Product version letter or number"
     },
     "systemNumber": {
-      "type": ["string", "null"],
+      "type": [
+        "string",
+        "null"
+      ],
       "description": "ND system number from the SINTRAN III OS distribution floppy naming N-<system no>-I..IV (see ND-10174-10-EN). Only the early SINTRAN III OS sets carry one; null otherwise."
     },
     "diskNumber": {
-      "type": ["integer", "null"],
+      "type": [
+        "integer",
+        "null"
+      ],
       "minimum": 1,
       "description": "Disk number in a multi-disk set"
     },
     "diskTotal": {
-      "type": ["integer", "null"],
+      "type": [
+        "integer",
+        "null"
+      ],
       "minimum": 1,
       "description": "Total number of disks in the set"
     },
     "mediaRole": {
-      "type": ["string", "null"],
-      "enum": ["os-boot-floppy", "os-image-cont", "tools-symbols", "patch-floppy", "application", "diagnostics", "tools", "unknown", null],
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "os-boot-floppy",
+        "os-image-cont",
+        "tools-symbols",
+        "patch-floppy",
+        "application",
+        "diagnostics",
+        "tools",
+        "unknown",
+        null
+      ],
       "description": "Semantic role from product-matcher"
     },
     "storageClass": {
       "type": "string",
-      "enum": ["floppy-in-git", "ia-only", "both"],
+      "enum": [
+        "floppy-in-git",
+        "ia-only",
+        "both"
+      ],
       "description": "Where the binary image is stored"
     },
     "imageSizeBytes": {
-      "type": ["integer", "null"],
+      "type": [
+        "integer",
+        "null"
+      ],
       "minimum": 0,
       "description": "Size of the image file in bytes"
     },
     "imageFormat": {
       "type": "string",
-      "enum": ["raw", "imd", "td0", "hfe", "scp"],
+      "enum": [
+        "raw",
+        "imd",
+        "td0",
+        "hfe",
+        "scp"
+      ],
       "description": "Image file format"
     },
     "controller": {
-      "type": ["string", "null"],
-      "enum": ["floppy", "SMD", "WD-ST506", "SCSI", null],
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "floppy",
+        "SMD",
+        "WD-ST506",
+        "SCSI",
+        null
+      ],
       "description": "Storage controller type (required for emulator mounting)"
     },
     "totalPages": {
-      "type": ["integer", "null"],
+      "type": [
+        "integer",
+        "null"
+      ],
       "minimum": 0,
       "description": "Total NDFS pages on the media"
     },
     "pageSize": {
-      "type": ["integer", "null"],
-      "enum": [1024, 2048, null],
+      "type": [
+        "integer",
+        "null"
+      ],
+      "enum": [
+        1024,
+        2048,
+        null
+      ],
       "description": "NDFS page size in bytes"
     },
     "bootFormat": {
-      "type": ["string", "null"],
-      "enum": ["none", "flomon", "binary", "bpun", null],
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "none",
+        "flomon",
+        "binary",
+        "bpun",
+        null
+      ],
       "description": "Boot format discriminator for product matching"
     },
     "cpuTarget": {
-      "type": ["array", "null"],
-      "items": { "type": "string" },
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string"
+      },
       "description": "Target CPU models (e.g., ND-100, NORD-10)"
     },
     "osRequirement": {
-      "type": ["string", "null"],
+      "type": [
+        "string",
+        "null"
+      ],
       "description": "Required operating system (e.g., SINTRAN III VS)"
     },
     "ndfs": {
-      "type": ["object", "null"],
+      "type": [
+        "object",
+        "null"
+      ],
       "description": "NDFS filesystem metadata extracted from the image",
       "properties": {
         "users": {
@@ -113,10 +211,17 @@
           "items": {
             "type": "object",
             "properties": {
-              "name": { "type": "string" },
-              "pagesUsed": { "type": "integer" }
+              "name": {
+                "type": "string"
+              },
+              "pagesUsed": {
+                "type": "integer"
+              }
             },
-            "required": ["name", "pagesUsed"]
+            "required": [
+              "name",
+              "pagesUsed"
+            ]
           }
         },
         "files": {
@@ -124,108 +229,299 @@
           "items": {
             "type": "object",
             "properties": {
-              "name": { "type": "string" },
-              "type": { "type": "string" },
-              "pages": { "type": "integer" },
-              "bytes": { "type": "integer" }
+              "name": {
+                "type": "string"
+              },
+              "type": {
+                "type": "string"
+              },
+              "pages": {
+                "type": "integer"
+              },
+              "bytes": {
+                "type": "integer"
+              }
             },
-            "required": ["name", "type", "pages"]
+            "required": [
+              "name",
+              "type",
+              "pages"
+            ]
           }
         }
       }
     },
     "directoryContentRaw": {
-      "type": ["string", "null"],
+      "type": [
+        "string",
+        "null"
+      ],
       "description": "Raw directory listing from legacy system"
     },
     "provenance": {
-      "type": ["object", "null"],
+      "type": [
+        "object",
+        "null"
+      ],
       "description": "Origin and imaging information",
       "properties": {
-        "contributor": { "type": "string" },
-        "method": { "type": "string" },
-        "dateImaged": { "type": ["string", "null"] },
-        "originalPath": { "type": ["string", "null"] },
-        "notes": { "type": ["string", "null"] }
+        "contributor": {
+          "type": "string"
+        },
+        "method": {
+          "type": "string"
+        },
+        "dateImaged": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "originalPath": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "notes": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
       }
     },
     "storage": {
-      "type": ["object", "null"],
+      "type": [
+        "object",
+        "null"
+      ],
       "description": "Storage locations for the binary artifact",
       "properties": {
         "git": {
-          "type": ["object", "null"],
+          "type": [
+            "object",
+            "null"
+          ],
           "description": "In-repo gzipped image storage",
           "properties": {
-            "imagePath": { "type": "string", "description": "Path to .img.gz relative to repo root" },
-            "labelPhotos": { "type": "array", "items": { "type": "string" }, "description": "Paths to label photo files relative to repo root" },
-            "labelTranscription": { "type": ["string", "null"], "description": "Path to labels.txt relative to repo root" }
+            "imagePath": {
+              "type": "string",
+              "description": "Path to .img.gz relative to repo root"
+            },
+            "labelPhotos": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Paths to label photo files relative to repo root"
+            },
+            "labelTranscription": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": "Path to labels.txt relative to repo root"
+            }
           }
         },
         "internetArchive": {
-          "type": ["object", "null"],
+          "type": [
+            "object",
+            "null"
+          ],
           "properties": {
-            "itemId": { "type": "string" },
+            "itemId": {
+              "type": "string"
+            },
             "files": {
               "type": "object",
-              "additionalProperties": { "type": "string" }
+              "additionalProperties": {
+                "type": "string"
+              }
             },
-            "uploaded": { "type": ["string", "null"] },
-            "verified": { "type": ["string", "null"] },
-            "syncStatus": { "type": "string", "enum": ["pending", "uploaded", "modified", "not-applicable"], "description": "Sync status with Internet Archive" }
+            "uploaded": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "verified": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "syncStatus": {
+              "type": "string",
+              "enum": [
+                "pending",
+                "uploaded",
+                "modified",
+                "not-applicable"
+              ],
+              "description": "Sync status with Internet Archive"
+            }
           }
         },
-        "legacyAzure": { "type": ["string", "null"] }
+        "legacyAzure": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
       }
     },
     "variants": {
-      "type": ["array", "null"],
+      "type": [
+        "array",
+        "null"
+      ],
       "description": "Alternative imaging or source variants of the same logical media",
       "items": {
         "type": "object",
         "properties": {
-          "md5": { "type": "string" },
-          "contributor": { "type": ["string", "null"] },
-          "method": { "type": ["string", "null"] },
-          "notes": { "type": ["string", "null"] },
-          "role": { "type": "string" },
-          "iaFile": { "type": ["string", "null"] }
+          "md5": {
+            "type": "string"
+          },
+          "contributor": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "method": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "notes": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "role": {
+            "type": "string"
+          },
+          "iaFile": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
         },
-        "required": ["md5", "role"]
+        "required": [
+          "md5",
+          "role"
+        ]
       }
     },
     "fluxPreservation": {
-      "type": ["object", "null"],
+      "type": [
+        "object",
+        "null"
+      ],
       "description": "Raw flux capture information",
       "properties": {
-        "hasRawFlux": { "type": "boolean" },
-        "fluxFormat": { "type": ["string", "null"] },
-        "fluxIaFile": { "type": ["string", "null"] }
+        "hasRawFlux": {
+          "type": "boolean"
+        },
+        "fluxFormat": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "fluxIaFile": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
       }
     },
     "legacyRefs": {
-      "type": ["object", "null"],
+      "type": [
+        "object",
+        "null"
+      ],
       "description": "Legacy references from the old ndfloppy system",
       "properties": {
-        "pisheetUrl": { "type": ["string", "null"] },
-        "articleUrl": { "type": ["string", "null"] },
-        "manualId": { "type": ["integer", "null"] },
-        "programDescriptionId": { "type": ["integer", "null"] }
+        "pisheetUrl": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "articleUrl": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "manualId": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "programDescriptionId": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        }
       }
     },
     "legacyId": {
-      "type": ["integer", "null"],
+      "type": [
+        "integer",
+        "null"
+      ],
       "description": "ID from the legacy ndfloppy application"
     },
     "importedAt": {
-      "type": ["string", "null"],
+      "type": [
+        "string",
+        "null"
+      ],
       "format": "date-time",
       "description": "ISO 8601 timestamp of import"
     },
     "tags": {
-      "type": ["array", "null"],
-      "items": { "type": "string" },
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string"
+      },
       "description": "Freeform tags for search and filtering"
+    },
+    "filesystem": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "ndfs",
+        "dos",
+        "tar",
+        "backup",
+        "winch",
+        "none",
+        null
+      ],
+      "description": "What the image holds: ndfs, dos, tar, backup (SINTRAN III BACKUP-SYSTEM ANSI-labelled volume), winch (WINCH-TO-FLOPP directory backup), or none."
+    },
+    "volumeLabel": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Volume label of a non-NDFS filesystem (the FAT label of an MS-DOS disk). These often carry an ND part number."
     }
   },
   "additionalProperties": false

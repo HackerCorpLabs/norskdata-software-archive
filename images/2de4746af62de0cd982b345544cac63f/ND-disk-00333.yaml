@@ -1,0 +1,240 @@
+id: img-2de4746af62d
+volumeName: NILSSON-5
+md5: 2de4746af62de0cd982b345544cac63f
+image:
+  sizeBytes: 319488
+  format: raw
+  controller: floppy
+  totalPages: 156
+  pageSize: 2048
+  bootFormat: binary
+filesystem: ndfs
+ndfs:
+  users:
+    - name: DNF
+      pagesUsed: 109
+  files:
+    - name: SIKPROGRAM-PA:SYMB
+      type: SYMB
+      pages: 3
+      bytes: 4316
+      userName: DNF
+      dateCreated: 2442315865
+      lastDateRead: 2442315866
+      lastDateWritten: 2442315866
+      dateCreatedStr: 1986-06-09 12:33:25
+      lastDateReadStr: 1986-06-09 12:33:26
+      lastDateWrittenStr: 1986-06-09 12:33:26
+      bpunValid: null
+    - name: WEM-PA:SYMB
+      type: SYMB
+      pages: 3
+      bytes: 5044
+      userName: DNF
+      dateCreated: 2442321490
+      lastDateRead: null
+      lastDateWritten: 2442321491
+      dateCreatedStr: 1986-06-09 13:57:18
+      lastDateReadStr: null
+      lastDateWrittenStr: 1986-06-09 13:57:19
+      bpunValid: null
+    - name: MEMFIL-MUD-PA:DATA
+      type: DATA
+      pages: 5
+      bytes: 10240
+      userName: DNF
+      dateCreated: 2440874859
+      lastDateRead: null
+      lastDateWritten: 2440874860
+      dateCreatedStr: 1986-05-30 12:45:43
+      lastDateReadStr: null
+      lastDateWrittenStr: 1986-05-30 12:45:44
+      bpunValid: null
+    - name: HELPLISTA-PA:SYMB
+      type: SYMB
+      pages: 4
+      bytes: 6156
+      userName: DNF
+      dateCreated: 2442322568
+      lastDateRead: null
+      lastDateWritten: 2442322569
+      dateCreatedStr: 1986-06-09 14:10:08
+      lastDateReadStr: null
+      lastDateWrittenStr: 1986-06-09 14:10:09
+      bpunValid: null
+    - name: 99-MUD-MODE-PA:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 174
+      userName: DNF
+      dateCreated: 2435781944
+      lastDateRead: null
+      lastDateWritten: 2442316230
+      dateCreatedStr: 1986-04-23 17:20:56
+      lastDateReadStr: null
+      lastDateWrittenStr: 1986-06-09 12:39:06
+      bpunValid: null
+    - name: TOLKIEN-PA:SYMB
+      type: SYMB
+      pages: 8
+      bytes: 14668
+      userName: DNF
+      dateCreated: 2435781957
+      lastDateRead: null
+      lastDateWritten: 2435781959
+      dateCreatedStr: 1986-04-23 17:21:05
+      lastDateReadStr: null
+      lastDateWrittenStr: 1986-04-23 17:21:07
+      bpunValid: null
+    - name: 90-TOLK-MODE-PA:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 85
+      userName: DNF
+      dateCreated: 2435781978
+      lastDateRead: null
+      lastDateWritten: 2435781980
+      dateCreatedStr: 1986-04-23 17:21:26
+      lastDateReadStr: null
+      lastDateWrittenStr: 1986-04-23 17:21:28
+      bpunValid: null
+    - name: SPELIDE-PA:SYMB
+      type: SYMB
+      pages: 3
+      bytes: 4909
+      userName: DNF
+      dateCreated: 2435781987
+      lastDateRead: null
+      lastDateWritten: 2435781989
+      dateCreatedStr: 1986-04-23 17:21:35
+      lastDateReadStr: null
+      lastDateWrittenStr: 1986-04-23 17:21:37
+      bpunValid: null
+    - name: CLEAR-MUD-PA:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 890
+      userName: DNF
+      dateCreated: 2435782001
+      lastDateRead: 2442316642
+      lastDateWritten: 2442316642
+      dateCreatedStr: 1986-04-23 17:21:49
+      lastDateReadStr: 1986-06-09 12:45:34
+      lastDateWrittenStr: 1986-06-09 12:45:34
+      bpunValid: null
+    - name: DESCARTES-PA:SYMB
+      type: SYMB
+      pages: 11
+      bytes: 22457
+      userName: DNF
+      dateCreated: 2435782033
+      lastDateRead: null
+      lastDateWritten: 2435782035
+      dateCreatedStr: 1986-04-23 17:22:17
+      lastDateReadStr: null
+      lastDateWrittenStr: 1986-04-23 17:22:19
+      bpunValid: null
+    - name: INFIL-DES-PA:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 537
+      userName: DNF
+      dateCreated: 2435782084
+      lastDateRead: 2442315062
+      lastDateWritten: 2435782086
+      dateCreatedStr: 1986-04-23 17:23:04
+      lastDateReadStr: 1986-06-09 12:20:54
+      lastDateWrittenStr: 1986-04-23 17:23:06
+      bpunValid: null
+    - name: DNF-ACC-PA:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 3113
+      userName: DNF
+      dateCreated: 2435782095
+      lastDateRead: 2440875102
+      lastDateWritten: 2435782097
+      dateCreatedStr: 1986-04-23 17:23:15
+      lastDateReadStr: 1986-05-30 12:49:30
+      lastDateWrittenStr: 1986-04-23 17:23:17
+      bpunValid: null
+    - name: BASMAIL-PA:SYMB
+      type: SYMB
+      pages: 4
+      bytes: 4409
+      userName: DNF
+      dateCreated: 2435782222
+      lastDateRead: null
+      lastDateWritten: 2435782224
+      dateCreatedStr: 1986-04-23 17:25:14
+      lastDateReadStr: null
+      lastDateWrittenStr: 1986-04-23 17:25:16
+      bpunValid: null
+    - name: V7-MUD-PA:SYMB
+      type: SYMB
+      pages: 44
+      bytes: 76893
+      userName: DNF
+      dateCreated: 2426096211
+      lastDateRead: 2435782412
+      lastDateWritten: 2442314782
+      dateCreatedStr: 1986-02-13 20:41:19
+      lastDateReadStr: 1986-04-23 17:28:12
+      lastDateWrittenStr: 1986-06-09 12:16:30
+      bpunValid: null
+    - name: PANIX-PA:SYMB
+      type: SYMB
+      pages: 5
+      bytes: 7110
+      userName: DNF
+      dateCreated: 2435782244
+      lastDateRead: null
+      lastDateWritten: 2435782245
+      dateCreatedStr: 1986-04-23 17:25:36
+      lastDateReadStr: null
+      lastDateWrittenStr: 1986-04-23 17:25:37
+      bpunValid: null
+    - name: SAKKARE-MUD-PA:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1748
+      userName: DNF
+      dateCreated: 2435782366
+      lastDateRead: null
+      lastDateWritten: 2442314853
+      dateCreatedStr: 1986-04-23 17:27:30
+      lastDateReadStr: null
+      lastDateWrittenStr: 1986-06-09 12:17:37
+      bpunValid: null
+    - name: RUMMARE-MUD-PA:SYMB
+      type: SYMB
+      pages: 6
+      bytes: 11329
+      userName: DNF
+      dateCreated: 2435781872
+      lastDateRead: null
+      lastDateWritten: 2442314819
+      dateCreatedStr: 1986-04-23 17:19:48
+      lastDateReadStr: null
+      lastDateWrittenStr: 1986-06-09 12:17:03
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 300/ND-disk-00333.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:45:47.320Z
+imagingLogs:
+  - ND-disk-00333.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-2de4746af62d
+  syncStatus: pending

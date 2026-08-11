@@ -1,0 +1,36 @@
+id: img-4a27597cca90
+volumeName: MIKAEL-14
+md5: 4a27597cca90f3ff02c2edee8f6fdd0c
+image:
+  sizeBytes: 319488
+  format: raw
+  controller: floppy
+  totalPages: 156
+  pageSize: 2048
+  bootFormat: binary
+filesystem: ndfs
+ndfs:
+  users:
+    - name: DNF
+      pagesUsed: 0
+  files: []
+provenance:
+  contributor: gandalf
+  originalPath: 200/ND-disk-00294.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:42:09.500Z
+imagingLogs:
+  - ND-disk-00294.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-4a27597cca90
+  syncStatus: pending

@@ -1,0 +1,84 @@
+id: img-96421a8eed0a
+volumeName: SNILLE
+md5: 96421a8eed0a7748a7dc0fe95aee1191
+image:
+  sizeBytes: 319488
+  format: raw
+  controller: floppy
+  totalPages: 156
+  pageSize: 2048
+  bootFormat: binary
+filesystem: ndfs
+ndfs:
+  users:
+    - name: SYSTEM
+      pagesUsed: 85
+  files:
+    - name: HAVSBRUS:SYMB
+      type: SYMB
+      pages: 29
+      bytes: 57701
+      userName: SYSTEM
+      dateCreated: 2431196425
+      lastDateRead: 2499197149
+      lastDateWritten: 2431196427
+      dateCreatedStr: 1986-03-20 17:52:09
+      lastDateReadStr: 1987-03-27 11:35:29
+      lastDateWrittenStr: 1986-03-20 17:52:11
+      bpunValid: null
+    - name: FORTH-SCREENS-MJ:SYMB
+      type: SYMB
+      pages: 8
+      bytes: 10114
+      userName: SYSTEM
+      dateCreated: 2431197401
+      lastDateRead: 3033489803
+      lastDateWritten: 2431197646
+      dateCreatedStr: 1986-03-20 18:03:25
+      lastDateReadStr: 1995-03-07 22:06:11
+      lastDateWrittenStr: 1986-03-20 18:07:14
+      bpunValid: null
+    - name: SANKA-GE:SYMB
+      type: SYMB
+      pages: 8
+      bytes: 14790
+      userName: SYSTEM
+      dateCreated: 2358444718
+      lastDateRead: 3033489808
+      lastDateWritten: 2358444720
+      dateCreatedStr: 1985-02-09 16:10:46
+      lastDateReadStr: 1995-03-07 22:06:16
+      lastDateWrittenStr: 1985-02-09 16:10:48
+      bpunValid: null
+    - name: DELFI-EAO:SYMB
+      type: SYMB
+      pages: 35
+      bytes: 71223
+      userName: SYSTEM
+      dateCreated: 2431193886
+      lastDateRead: 2499200487
+      lastDateWritten: 2431194249
+      dateCreatedStr: 1986-03-20 17:12:30
+      lastDateReadStr: 1987-03-27 12:23:39
+      lastDateWrittenStr: 1986-03-20 17:18:09
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 200/ND-disk-00285.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:42:06.314Z
+imagingLogs:
+  - ND-disk-00285.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-96421a8eed0a
+  syncStatus: pending

@@ -1,0 +1,120 @@
+id: img-d1ea899bbc17
+volumeName: HALL
+md5: d1ea899bbc17ea5dfed76b260b812e3b
+image:
+  sizeBytes: 1261568
+  format: raw
+  controller: floppy
+  totalPages: 616
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: AGNETA
+      pagesUsed: 18
+  files:
+    - name: STOPPA:TEXT
+      type: TEXT
+      pages: 2
+      bytes: 3580
+      userName: AGNETA
+      dateCreated: 2586247281
+      lastDateRead: 2587528455
+      lastDateWritten: 2586896092
+      dateCreatedStr: 1988-08-19 16:01:49
+      lastDateReadStr: 1988-08-29 08:52:07
+      lastDateWrittenStr: 1988-08-24 14:27:28
+      bpunValid: null
+    - name: TABELL:TEXT
+      type: TEXT
+      pages: 1
+      bytes: 1380
+      userName: AGNETA
+      dateCreated: 2586632441
+      lastDateRead: 2587528458
+      lastDateWritten: 2586632442
+      dateCreatedStr: 1988-08-22 14:03:57
+      lastDateReadStr: 1988-08-29 08:52:10
+      lastDateWrittenStr: 1988-08-22 14:03:58
+      bpunValid: null
+    - name: A11:TEXT
+      type: TEXT
+      pages: 1
+      bytes: 1148
+      userName: AGNETA
+      dateCreated: 2586764306
+      lastDateRead: 2587528458
+      lastDateWritten: 2586896296
+      dateCreatedStr: 1988-08-23 14:16:18
+      lastDateReadStr: 1988-08-29 08:52:10
+      lastDateWrittenStr: 1988-08-24 14:30:40
+      bpunValid: null
+    - name: A21:TEXT
+      type: TEXT
+      pages: 1
+      bytes: 753
+      userName: AGNETA
+      dateCreated: 2586765367
+      lastDateRead: 2587528459
+      lastDateWritten: 2586765367
+      dateCreatedStr: 1988-08-23 14:32:55
+      lastDateReadStr: 1988-08-29 08:52:11
+      lastDateWrittenStr: 1988-08-23 14:32:55
+      bpunValid: null
+    - name: VART:TEXT
+      type: TEXT
+      pages: 1
+      bytes: 1094
+      userName: AGNETA
+      dateCreated: 2586747272
+      lastDateRead: 2587528460
+      lastDateWritten: 2586747366
+      dateCreatedStr: 1988-08-23 10:06:08
+      lastDateReadStr: 1988-08-29 08:52:12
+      lastDateWrittenStr: 1988-08-23 10:07:38
+      bpunValid: null
+    - name: A81:TEXT
+      type: TEXT
+      pages: 1
+      bytes: 1168
+      userName: AGNETA
+      dateCreated: 2586766086
+      lastDateRead: 2587528461
+      lastDateWritten: 2586903060
+      dateCreatedStr: 1988-08-23 14:44:06
+      lastDateReadStr: 1988-08-29 08:52:13
+      lastDateWrittenStr: 1988-08-24 16:08:20
+      bpunValid: null
+    - name: STAND:STXT
+      type: STXT
+      pages: 3
+      bytes: 5120
+      userName: AGNETA
+      dateCreated: 2586895808
+      lastDateRead: 2587528462
+      lastDateWritten: 2586895960
+      dateCreatedStr: 1988-08-24 14:23:00
+      lastDateReadStr: 1988-08-29 08:52:14
+      lastDateWrittenStr: 1988-08-24 14:25:24
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 100/ND-disk-00136b.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:25:55.807Z
+imagingLogs:
+  - ND-disk-00136b.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-d1ea899bbc17
+  syncStatus: pending

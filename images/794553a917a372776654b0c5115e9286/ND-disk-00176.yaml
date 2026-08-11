@@ -1,0 +1,171 @@
+id: nd-210874-l05-d1-794553a9
+volumeName: 210874L05-XX-01D
+md5: 794553a917a372776654b0c5115e9286
+product:
+  id: ND-210874
+  version: L05
+  diskNumber: 1
+  language: XX
+image:
+  sizeBytes: 1310720
+  format: raw
+  controller: floppy
+  totalPages: 640
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 9
+    - name: RELEASE-NTX
+      pagesUsed: 13
+    - name: REALTIME-NTX
+      pagesUsed: 114
+    - name: USERFILES-NTX
+      pagesUsed: 112
+    - name: WORKFILES-NTX
+      pagesUsed: 41
+    - name: PARAMETERS-NTX
+      pagesUsed: 5
+  files:
+    - name: INSTALL-SL202:XCOM
+      type: XCOM
+      pages: 1
+      bytes: 967
+      userName: FLOPPY-USER
+      dateCreated: 2502621969
+      lastDateRead: 2597255895
+      lastDateWritten: 2582042598
+      dateCreatedStr: 1987-04-21 15:44:17
+      lastDateReadStr: 1988-11-07 15:43:23
+      lastDateWrittenStr: 1988-07-19 13:31:38
+      bpunValid: null
+    - name: FO-INSTALL-L02:XCOM
+      type: XCOM
+      pages: 5
+      bytes: 9610
+      userName: FLOPPY-USER
+      dateCreated: 2536175005
+      lastDateRead: 2597255891
+      lastDateWritten: 2582042629
+      dateCreatedStr: 1987-12-21 15:22:29
+      lastDateReadStr: 1988-11-07 15:43:19
+      lastDateWrittenStr: 1988-07-19 13:32:05
+      bpunValid: null
+    - name: TOFOTO-SL202:PROG
+      type: PROG
+      pages: 11
+      bytes: 266240
+      userName: RELEASE-NTX
+      dateCreated: 2561063108
+      lastDateRead: 2597255904
+      lastDateWritten: 2561063109
+      dateCreatedStr: 1988-02-19 11:35:04
+      lastDateReadStr: 1988-11-07 15:43:32
+      lastDateWrittenStr: 1988-02-19 11:35:05
+      bpunValid: null
+    - name: BUILD-FO-L04:XCOM
+      type: XCOM
+      pages: 3
+      bytes: 4870
+      userName: REALTIME-NTX
+      dateCreated: 2528426421
+      lastDateRead: 2597255947
+      lastDateWritten: 2582170160
+      dateCreatedStr: 1987-10-26 11:38:53
+      lastDateReadStr: 1988-11-07 15:44:11
+      lastDateWrittenStr: 1988-07-20 12:40:48
+      bpunValid: null
+    - name: SL202-FO-L27:SEGP
+      type: SEGP
+      pages: 65
+      bytes: 131584
+      userName: REALTIME-NTX
+      dateCreated: 2579301721
+      lastDateRead: 2597255949
+      lastDateWritten: 2579301721
+      dateCreatedStr: 1988-06-30 16:21:25
+      lastDateReadStr: 1988-11-07 15:44:13
+      lastDateWrittenStr: 1988-06-30 16:21:25
+      bpunValid: null
+    - name: SL202-FO-L27:SEGD
+      type: SEGD
+      pages: 33
+      bytes: 66048
+      userName: REALTIME-NTX
+      dateCreated: 2579301721
+      lastDateRead: 2597255971
+      lastDateWritten: 2579301722
+      dateCreatedStr: 1988-06-30 16:21:25
+      lastDateReadStr: 1988-11-07 15:44:35
+      lastDateWrittenStr: 1988-06-30 16:21:26
+      bpunValid: null
+    - name: SL202-FO-L27:ENTR
+      type: ENTR
+      pages: 8
+      bytes: 14506
+      userName: REALTIME-NTX
+      dateCreated: 2579301705
+      lastDateRead: 2597255982
+      lastDateWritten: 2579301705
+      dateCreatedStr: 1988-06-30 16:21:09
+      lastDateReadStr: 1988-11-07 15:44:46
+      lastDateWrittenStr: 1988-06-30 16:21:09
+      bpunValid: null
+    - name: SL202-100:DATA
+      type: DATA
+      pages: 111
+      bytes: 217600
+      userName: USERFILES-NTX
+      dateCreated: 2331560868
+      lastDateRead: 2597255766
+      lastDateWritten: 2574298010
+      dateCreatedStr: 1984-11-28 12:46:36
+      lastDateReadStr: 1988-11-07 15:41:22
+      lastDateWrittenStr: 1988-05-24 10:46:26
+      bpunValid: null
+    - name: SL202-100-L05:FORM
+      type: FORM
+      pages: 40
+      bytes: 81920
+      userName: WORKFILES-NTX
+      dateCreated: 2358676294
+      lastDateRead: 2597255928
+      lastDateWritten: 2568796137
+      dateCreatedStr: 1985-02-11 08:45:06
+      lastDateReadStr: 1988-11-07 15:43:56
+      lastDateWrittenStr: 1988-04-14 11:31:41
+      bpunValid: null
+    - name: FOTO01-PARAM-L06:NTXP
+      type: NTXP
+      pages: 3
+      bytes: 2351
+      userName: PARAMETERS-NTX
+      dateCreated: 2379535561
+      lastDateRead: 2597255938
+      lastDateWritten: 2578901614
+      dateCreatedStr: 1985-07-10 13:19:09
+      lastDateReadStr: 1988-11-07 15:44:02
+      lastDateWrittenStr: 1988-06-27 14:41:46
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 100/ND-disk-00176.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:26:02.336Z
+imagingLogs:
+  - ND-disk-00176.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-210874-l05-d1-794553a9
+  syncStatus: pending

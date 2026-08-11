@@ -1,0 +1,135 @@
+id: nd-10005-t-d1-3f79a035
+volumeName: ND-10005T
+md5: 3f79a035b25502e6c910e7c8efd83d39
+product:
+  id: ND-10005
+  version: T
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: flomon
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 90
+  files:
+    - name: NRL-1935I:BPUN
+      type: BPUN
+      pages: 11
+      bytes: 20790
+      userName: FLOPPY-USER
+      dateCreated: 2162340123
+      lastDateRead: 2166942906
+      lastDateWritten: 2162340124
+      dateCreatedStr: 1982-03-17 11:04:27
+      lastDateReadStr: 1982-04-20 14:50:58
+      lastDateWrittenStr: 1982-03-17 11:04:28
+      bpunValid: true
+    - name: GPM-2365B:BPUN
+      type: BPUN
+      pages: 2
+      bytes: 3852
+      userName: FLOPPY-USER
+      dateCreated: 2162340338
+      lastDateRead: 2162340387
+      lastDateWritten: 2162340339
+      dateCreatedStr: 1982-03-17 11:07:50
+      lastDateReadStr: 1982-03-17 11:08:35
+      lastDateWrittenStr: 1982-03-17 11:07:51
+      bpunValid: true
+    - name: GPM-LIBR-2366B:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 4067
+      userName: FLOPPY-USER
+      dateCreated: 2162340452
+      lastDateRead: 2162340495
+      lastDateWritten: 2162340453
+      dateCreatedStr: 1982-03-17 11:09:36
+      lastDateReadStr: 1982-03-17 11:10:15
+      lastDateWrittenStr: 1982-03-17 11:09:37
+      bpunValid: null
+    - name: PERFORM-LIBRARY:MCRO
+      type: MCRO
+      pages: 2
+      bytes: 2379
+      userName: FLOPPY-USER
+      dateCreated: 2162340594
+      lastDateRead: 2162340638
+      lastDateWritten: 2162340595
+      dateCreatedStr: 1982-03-17 11:11:50
+      lastDateReadStr: 1982-03-17 11:12:30
+      lastDateWrittenStr: 1982-03-17 11:11:51
+      bpunValid: null
+    - name: PERFORM-E:BPUN
+      type: BPUN
+      pages: 15
+      bytes: 30582
+      userName: FLOPPY-USER
+      dateCreated: 2162340700
+      lastDateRead: 2162340800
+      lastDateWritten: 2162340701
+      dateCreatedStr: 1982-03-17 11:13:28
+      lastDateReadStr: 1982-03-17 11:15:00
+      lastDateWrittenStr: 1982-03-17 11:13:29
+      bpunValid: true
+    - name: BRF-EDITOR-1858E:BPUN
+      type: BPUN
+      pages: 9
+      bytes: 16746
+      userName: FLOPPY-USER
+      dateCreated: 1907922131
+      lastDateRead: 2110191766
+      lastDateWritten: 2110191750
+      dateCreatedStr: 1978-06-28 09:19:19
+      lastDateReadStr: 1981-07-03 15:34:22
+      lastDateWrittenStr: 1981-07-03 15:34:06
+      bpunValid: true
+    - name: F32-EXTR-2232B:BPUN
+      type: BPUN
+      pages: 19
+      bytes: 38394
+      userName: FLOPPY-USER
+      dateCreated: 1919332580
+      lastDateRead: 1919335434
+      lastDateWritten: 1932189089
+      dateCreatedStr: 1978-09-19 11:03:36
+      lastDateReadStr: 1978-09-19 11:48:10
+      lastDateWrittenStr: 1978-12-21 13:54:33
+      bpunValid: true
+    - name: LOOK-FILE-2244D:BPUN
+      type: BPUN
+      pages: 21
+      bytes: 41377
+      userName: FLOPPY-USER
+      dateCreated: 1932193006
+      lastDateRead: 2281751211
+      lastDateWritten: 2053160626
+      dateCreatedStr: 1978-12-21 14:51:46
+      lastDateReadStr: null
+      lastDateWrittenStr: 1980-09-16 11:58:50
+      bpunValid: true
+provenance:
+  contributor: gandalf
+  originalPath: 400/ND-disk-00455c.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:49:41.219Z
+imagingLogs:
+  - ND-disk-00455c.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10005-t-d1-3f79a035
+  syncStatus: pending

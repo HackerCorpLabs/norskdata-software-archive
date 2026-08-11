@@ -1,0 +1,264 @@
+id: img-dce6c5cecdf3
+volumeName: BENTSEN
+md5: dce6c5cecdf3cbbc77efdf878c7c4944
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: PAX
+      pagesUsed: 120
+  files:
+    - name: PAXOUTER:SYMB
+      type: SYMB
+      pages: 4
+      bytes: 2442
+      userName: PAX
+      dateCreated: 2353570870
+      lastDateRead: 2353578763
+      lastDateWritten: 2353570875
+      dateCreatedStr: 1985-01-04 10:16:54
+      lastDateReadStr: 1985-01-04 12:12:11
+      lastDateWrittenStr: 1985-01-04 10:16:59
+      bpunValid: null
+    - name: PAXTALLOC:SYMB
+      type: SYMB
+      pages: 4
+      bytes: 7621
+      userName: PAX
+      dateCreated: 2353571057
+      lastDateRead: 2353578763
+      lastDateWritten: 2353571058
+      dateCreatedStr: 1985-01-04 10:19:49
+      lastDateReadStr: 1985-01-04 12:12:11
+      lastDateWrittenStr: 1985-01-04 10:19:50
+      bpunValid: null
+    - name: PAXLALLOC:SYMB
+      type: SYMB
+      pages: 4
+      bytes: 4735
+      userName: PAX
+      dateCreated: 2353571143
+      lastDateRead: 2353578764
+      lastDateWritten: 2353571144
+      dateCreatedStr: 1985-01-04 10:21:07
+      lastDateReadStr: 1985-01-04 12:12:12
+      lastDateWrittenStr: 1985-01-04 10:21:08
+      bpunValid: null
+    - name: PAXTRUNK:SYMB
+      type: SYMB
+      pages: 8
+      bytes: 11703
+      userName: PAX
+      dateCreated: 2353571203
+      lastDateRead: 2353578764
+      lastDateWritten: 2353571204
+      dateCreatedStr: 1985-01-04 10:22:03
+      lastDateReadStr: 1985-01-04 12:12:12
+      lastDateWrittenStr: 1985-01-04 10:22:04
+      bpunValid: null
+    - name: PAXSUBSCRIBER:SYMB
+      type: SYMB
+      pages: 8
+      bytes: 13060
+      userName: PAX
+      dateCreated: 2353571291
+      lastDateRead: 2353578764
+      lastDateWritten: 2353571292
+      dateCreatedStr: 1985-01-04 10:23:27
+      lastDateReadStr: 1985-01-04 12:12:12
+      lastDateWrittenStr: 1985-01-04 10:23:28
+      bpunValid: null
+    - name: PAXSVITSJ:SYMB
+      type: SYMB
+      pages: 4
+      bytes: 3181
+      userName: PAX
+      dateCreated: 2353571387
+      lastDateRead: 2353578765
+      lastDateWritten: 2353571392
+      dateCreatedStr: 1985-01-04 10:24:59
+      lastDateReadStr: 1985-01-04 12:12:13
+      lastDateWrittenStr: 1985-01-04 10:25:00
+      bpunValid: null
+    - name: PAXLINE:SYMB
+      type: SYMB
+      pages: 8
+      bytes: 13379
+      userName: PAX
+      dateCreated: 2353571447
+      lastDateRead: 2353578765
+      lastDateWritten: 2353571448
+      dateCreatedStr: 1985-01-04 10:25:55
+      lastDateReadStr: 1985-01-04 12:12:13
+      lastDateWrittenStr: 1985-01-04 10:25:56
+      bpunValid: null
+    - name: FILEMANAGER:SYMB
+      type: SYMB
+      pages: 4
+      bytes: 4019
+      userName: PAX
+      dateCreated: 2353571552
+      lastDateRead: 2353578766
+      lastDateWritten: 2353571553
+      dateCreatedStr: 1985-01-04 10:27:32
+      lastDateReadStr: 1985-01-04 12:12:14
+      lastDateWrittenStr: 1985-01-04 10:27:33
+      bpunValid: null
+    - name: FILEMANAGER:ENVI
+      type: ENVI
+      pages: 4
+      bytes: 841
+      userName: PAX
+      dateCreated: 2353571656
+      lastDateRead: 2353578766
+      lastDateWritten: 2353571657
+      dateCreatedStr: 1985-01-04 10:29:08
+      lastDateReadStr: 1985-01-04 12:12:14
+      lastDateWrittenStr: 1985-01-04 10:29:09
+      bpunValid: null
+    - name: VTHANDLER:SYMB
+      type: SYMB
+      pages: 8
+      bytes: 14992
+      userName: PAX
+      dateCreated: 2353571722
+      lastDateRead: 2353578766
+      lastDateWritten: 2353571723
+      dateCreatedStr: 1985-01-04 10:30:10
+      lastDateReadStr: 1985-01-04 12:12:14
+      lastDateWrittenStr: 1985-01-04 10:30:11
+      bpunValid: null
+    - name: VTHANDLER:ENVI
+      type: ENVI
+      pages: 4
+      bytes: 1861
+      userName: PAX
+      dateCreated: 2353571817
+      lastDateRead: 2353578767
+      lastDateWritten: 2353571818
+      dateCreatedStr: 1985-01-04 10:31:41
+      lastDateReadStr: 1985-01-04 12:12:15
+      lastDateWrittenStr: 1985-01-04 10:31:42
+      bpunValid: null
+    - name: IOSYS:SYMB
+      type: SYMB
+      pages: 8
+      bytes: 8351
+      userName: PAX
+      dateCreated: 2353571874
+      lastDateRead: 2353578767
+      lastDateWritten: 2353571875
+      dateCreatedStr: 1985-01-04 10:32:34
+      lastDateReadStr: 1985-01-04 12:12:15
+      lastDateWrittenStr: 1985-01-04 10:32:35
+      bpunValid: null
+    - name: IOSYS:ENVI
+      type: ENVI
+      pages: 4
+      bytes: 2461
+      userName: PAX
+      dateCreated: 2353571943
+      lastDateRead: 2353571944
+      lastDateWritten: 2353571944
+      dateCreatedStr: 1985-01-04 10:33:39
+      lastDateReadStr: 1985-01-04 10:33:40
+      lastDateWrittenStr: 1985-01-04 10:33:40
+      bpunValid: null
+    - name: KEYBOARD:SYMB
+      type: SYMB
+      pages: 4
+      bytes: 6565
+      userName: PAX
+      dateCreated: 2353572004
+      lastDateRead: 2353572005
+      lastDateWritten: 2353572005
+      dateCreatedStr: 1985-01-04 10:34:36
+      lastDateReadStr: 1985-01-04 10:34:37
+      lastDateWrittenStr: 1985-01-04 10:34:37
+      bpunValid: null
+    - name: KEYBOARD:ENVI
+      type: ENVI
+      pages: 4
+      bytes: 3185
+      userName: PAX
+      dateCreated: 2353572064
+      lastDateRead: 2353572065
+      lastDateWritten: 2353572065
+      dateCreatedStr: 1985-01-04 10:35:32
+      lastDateReadStr: 1985-01-04 10:35:33
+      lastDateWrittenStr: 1985-01-04 10:35:33
+      bpunValid: null
+    - name: SCREEN:SYMB
+      type: SYMB
+      pages: 8
+      bytes: 10532
+      userName: PAX
+      dateCreated: 2353572120
+      lastDateRead: 2353572121
+      lastDateWritten: 2353572121
+      dateCreatedStr: 1985-01-04 10:36:24
+      lastDateReadStr: 1985-01-04 10:36:25
+      lastDateWrittenStr: 1985-01-04 10:36:25
+      bpunValid: null
+    - name: SCREEN:ENVI
+      type: ENVI
+      pages: 4
+      bytes: 1381
+      userName: PAX
+      dateCreated: 2353572283
+      lastDateRead: 2353572288
+      lastDateWritten: 2353572288
+      dateCreatedStr: 1985-01-04 10:38:59
+      lastDateReadStr: 1985-01-04 10:39:00
+      lastDateWrittenStr: 1985-01-04 10:39:00
+      bpunValid: null
+    - name: SECC:SYMB
+      type: SYMB
+      pages: 4
+      bytes: 2280
+      userName: PAX
+      dateCreated: 2353572334
+      lastDateRead: 2353572335
+      lastDateWritten: 2353572335
+      dateCreatedStr: 1985-01-04 10:39:46
+      lastDateReadStr: 1985-01-04 10:39:47
+      lastDateWrittenStr: 1985-01-04 10:39:47
+      bpunValid: null
+    - name: SECC:ENVI
+      type: ENVI
+      pages: 4
+      bytes: 1741
+      userName: PAX
+      dateCreated: 2353572393
+      lastDateRead: 2353572395
+      lastDateWritten: 2353572395
+      dateCreatedStr: 1985-01-04 10:40:41
+      lastDateReadStr: 1985-01-04 10:40:43
+      lastDateWrittenStr: 1985-01-04 10:40:43
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 200/ND-disk-00270.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:42:00.996Z
+imagingLogs:
+  - ND-disk-00270.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-dce6c5cecdf3
+  syncStatus: pending

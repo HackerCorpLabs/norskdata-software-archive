@@ -1,0 +1,89 @@
+id: nd-211068-a00-d2-6bc6345a
+volumeName: 211068A00-EN-02D
+md5: 6bc6345a46bb991cf7d8cfdaf053b7bf
+product:
+  id: ND-211068
+  version: A00
+  diskNumber: 2
+  language: EN
+image:
+  sizeBytes: 1310720
+  format: raw
+  controller: floppy
+  totalPages: 640
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 262
+  files:
+    - name: FILE-MAN-EN-C00:PROG
+      type: PROG
+      pages: 117
+      bytes: 401408
+      userName: FLOPPY-USER
+      dateCreated: 2500245786
+      lastDateRead: 2579943894
+      lastDateWritten: 2501175504
+      dateCreatedStr: 1987-04-03 11:36:26
+      lastDateReadStr: 1988-07-03 13:07:22
+      lastDateWrittenStr: 1987-04-10 14:35:16
+      bpunValid: null
+    - name: FM-SIN-EN-C00:PROG
+      type: PROG
+      pages: 77
+      bytes: 403456
+      userName: FLOPPY-USER
+      dateCreated: 2500245690
+      lastDateRead: 2579943922
+      lastDateWritten: 2501175569
+      dateCreatedStr: 1987-04-03 11:34:58
+      lastDateReadStr: 1988-07-03 13:07:50
+      lastDateWrittenStr: 1987-04-10 14:36:17
+      bpunValid: null
+    - name: FM-PICS-EN-C00:NDPF
+      type: NDPF
+      pages: 62
+      bytes: 126976
+      userName: FLOPPY-USER
+      dateCreated: 2500119732
+      lastDateRead: 2579943946
+      lastDateWritten: 2501175609
+      dateCreatedStr: 1987-04-02 12:50:52
+      lastDateReadStr: 1988-07-03 13:08:10
+      lastDateWrittenStr: 1987-04-10 14:36:57
+      bpunValid: null
+    - name: FM-PATCH-EN:MODE
+      type: MODE
+      pages: 1
+      bytes: 499
+      userName: FLOPPY-USER
+      dateCreated: 2501175667
+      lastDateRead: 2501177986
+      lastDateWritten: 2501175668
+      dateCreatedStr: 1987-04-10 14:37:51
+      lastDateReadStr: 1987-04-10 15:10:02
+      lastDateWrittenStr: 1987-04-10 14:37:52
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 100/ND-disk-00160.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:25:59.884Z
+imagingLogs:
+  - ND-disk-00160.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-211068-a00-d2-6bc6345a
+  syncStatus: pending

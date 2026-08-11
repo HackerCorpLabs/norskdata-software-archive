@@ -1,0 +1,53 @@
+id: nd-211161-a00-d1-ed31164e
+volumeName: 211161A00-XX-01S
+md5: ed31164e879602571d947834f3ac144a
+product:
+  id: ND-211161
+  version: A00
+  diskNumber: 1
+  language: XX
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 56
+  files:
+    - name: PC-FT-A00:PROG
+      type: PROG
+      pages: 54
+      bytes: 172032
+      userName: FLOPPY-USER
+      dateCreated: 2497000309
+      lastDateRead: 2667790894
+      lastDateWritten: 2497000313
+      dateCreatedStr: 1987-03-10 19:13:53
+      lastDateReadStr: 1989-12-01 20:08:46
+      lastDateWrittenStr: 1987-03-10 19:13:57
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 400/ND-disk-00417.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:49:28.788Z
+imagingLogs:
+  - ND-disk-00417.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-211161-a00-d1-ed31164e
+  syncStatus: pending

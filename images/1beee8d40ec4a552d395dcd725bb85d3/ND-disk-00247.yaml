@@ -1,0 +1,173 @@
+id: nd-211093-a00-d1-1beee8d4
+volumeName: 211093A00-EN-01D
+md5: 1beee8d40ec4a552d395dcd725bb85d3
+product:
+  id: ND-211093
+  version: A00
+  diskNumber: 1
+  language: EN
+image:
+  sizeBytes: 1261568
+  format: raw
+  controller: floppy
+  totalPages: 616
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 609
+  files:
+    - name: IN-DS-ID-EN-A00:INIT
+      type: INIT
+      pages: 9
+      bytes: 17463
+      userName: FLOPPY-USER
+      dateCreated: 2492269132
+      lastDateRead: 2504849672
+      lastDateWritten: 2504720656
+      dateCreatedStr: 1987-02-06 16:09:12
+      lastDateReadStr: 1987-05-06 15:36:08
+      lastDateWrittenStr: 1987-05-05 16:04:16
+      bpunValid: null
+    - name: IN-DS-ID-EN-A00:XCOM
+      type: XCOM
+      pages: 41
+      bytes: 27050
+      userName: FLOPPY-USER
+      dateCreated: 2492269172
+      lastDateRead: 2504849639
+      lastDateWritten: 2504846916
+      dateCreatedStr: 1987-02-06 16:09:52
+      lastDateReadStr: 1987-05-06 15:35:39
+      lastDateWrittenStr: 1987-05-06 14:57:04
+      bpunValid: null
+    - name: IN-DS-ID-EN-A00:PROG
+      type: PROG
+      pages: 66
+      bytes: 193340
+      userName: FLOPPY-USER
+      dateCreated: 2496971343
+      lastDateRead: 2504849587
+      lastDateWritten: 2504849363
+      dateCreatedStr: 1987-03-10 12:09:15
+      lastDateReadStr: 1987-05-06 15:34:51
+      lastDateWrittenStr: 1987-05-06 15:31:19
+      bpunValid: null
+    - name: UE-RENAME-A01:PROG
+      type: PROG
+      pages: 19
+      bytes: 38912
+      userName: FLOPPY-USER
+      dateCreated: 2449010985
+      lastDateRead: 2498674363
+      lastDateWritten: 2449010986
+      dateCreatedStr: 1986-07-28 15:04:41
+      lastDateReadStr: 1987-03-23 11:58:59
+      lastDateWrittenStr: 1986-07-28 15:04:42
+      bpunValid: null
+    - name: DDBTABLES-E06:VTM
+      type: VTM
+      pages: 16
+      bytes: 29870
+      userName: FLOPPY-USER
+      dateCreated: 2494605059
+      lastDateRead: 2504850444
+      lastDateWritten: 2494613238
+      dateCreatedStr: 1987-02-24 10:28:03
+      lastDateReadStr: 1987-05-06 15:48:12
+      lastDateWrittenStr: 1987-02-24 12:27:54
+      bpunValid: null
+    - name: NOTIS-DS-EN-C01:PROG
+      type: PROG
+      pages: 130
+      bytes: 401408
+      userName: FLOPPY-USER
+      dateCreated: 2449011091
+      lastDateRead: 2504850555
+      lastDateWritten: 2449011092
+      dateCreatedStr: 1986-07-28 15:06:19
+      lastDateReadStr: 1987-05-06 15:49:59
+      lastDateWrittenStr: 1986-07-28 15:06:20
+      bpunValid: null
+    - name: DS-LIST-EN-C01:PROG
+      type: PROG
+      pages: 77
+      bytes: 411648
+      userName: FLOPPY-USER
+      dateCreated: 2449011277
+      lastDateRead: 2504850826
+      lastDateWritten: 2449011278
+      dateCreatedStr: 1986-07-28 15:09:13
+      lastDateReadStr: 1987-05-06 15:54:10
+      lastDateWrittenStr: 1986-07-28 15:09:14
+      bpunValid: null
+    - name: DS-UTIL-EN-C01:PROG
+      type: PROG
+      pages: 54
+      bytes: 399360
+      userName: FLOPPY-USER
+      dateCreated: 2449011395
+      lastDateRead: 2504850756
+      lastDateWritten: 2449011396
+      dateCreatedStr: 1986-07-28 15:11:03
+      lastDateReadStr: 1987-05-06 15:53:04
+      lastDateWrittenStr: 1986-07-28 15:11:04
+      bpunValid: null
+    - name: NOTIS-DS-EN-C01:NDPF
+      type: NDPF
+      pages: 24
+      bytes: 49152
+      userName: FLOPPY-USER
+      dateCreated: 2449011642
+      lastDateRead: 2504850504
+      lastDateWritten: 2449011648
+      dateCreatedStr: 1986-07-28 15:14:58
+      lastDateReadStr: 1987-05-06 15:49:08
+      lastDateWrittenStr: 1986-07-28 15:15:00
+      bpunValid: null
+    - name: UE-ERMSG-EN-C01:ERR
+      type: ERR
+      pages: 74
+      bytes: 150528
+      userName: FLOPPY-USER
+      dateCreated: 2496334281
+      lastDateRead: 2498674285
+      lastDateWritten: 2496334282
+      dateCreatedStr: 1987-03-05 16:39:09
+      lastDateReadStr: 1987-03-23 11:57:45
+      lastDateWrittenStr: 1987-03-05 16:39:10
+      bpunValid: null
+    - name: DS-BACKUP-EN-C01:PROG
+      type: PROG
+      pages: 87
+      bytes: 399360
+      userName: FLOPPY-USER
+      dateCreated: 2449012142
+      lastDateRead: 2504850666
+      lastDateWritten: 2449012143
+      dateCreatedStr: 1986-07-28 15:22:46
+      lastDateReadStr: 1987-05-06 15:51:42
+      lastDateWrittenStr: 1986-07-28 15:22:47
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 200/ND-disk-00247.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:41:54.256Z
+imagingLogs:
+  - ND-disk-00247.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-211093-a00-d1-1beee8d4
+  syncStatus: pending

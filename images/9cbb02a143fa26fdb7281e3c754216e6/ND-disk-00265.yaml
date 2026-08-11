@@ -1,0 +1,156 @@
+id: img-9cbb02a143fa
+volumeName: CHILL-IO
+md5: 9cbb02a143fa26fdb7281e3c754216e6
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: CHILL
+      pagesUsed: 133
+  files:
+    - name: STK286-LINK:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1188
+      userName: CHILL
+      dateCreated: 2328140576
+      lastDateRead: null
+      lastDateWritten: 2328140577
+      dateCreatedStr: 1984-11-02 09:44:32
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-11-02 09:44:33
+      bpunValid: null
+    - name: START-CPM:CBRF
+      type: CBRF
+      pages: 1
+      bytes: 896
+      userName: CHILL
+      dateCreated: 2328140581
+      lastDateRead: null
+      lastDateWritten: 2328140583
+      dateCreatedStr: 1984-11-02 09:44:37
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-11-02 09:44:39
+      bpunValid: null
+    - name: I86-INTRINSICS:CBRF
+      type: CBRF
+      pages: 1
+      bytes: 1024
+      userName: CHILL
+      dateCreated: 2328140587
+      lastDateRead: null
+      lastDateWritten: 2328140588
+      dateCreatedStr: 1984-11-02 09:44:43
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-11-02 09:44:44
+      bpunValid: null
+    - name: CRS-DEFAULT-INT:CBRF
+      type: CBRF
+      pages: 1
+      bytes: 1024
+      userName: CHILL
+      dateCreated: 2328140593
+      lastDateRead: null
+      lastDateWritten: 2328140594
+      dateCreatedStr: 1984-11-02 09:44:49
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-11-02 09:44:50
+      bpunValid: null
+    - name: CRS-TAD-DEF:CBRF
+      type: CBRF
+      pages: 2
+      bytes: 3072
+      userName: CHILL
+      dateCreated: 2328140599
+      lastDateRead: null
+      lastDateWritten: 2328140600
+      dateCreatedStr: 1984-11-02 09:44:55
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-11-02 09:44:56
+      bpunValid: null
+    - name: CRS-TAD:CBRF
+      type: CBRF
+      pages: 9
+      bytes: 16896
+      userName: CHILL
+      dateCreated: 2328140609
+      lastDateRead: null
+      lastDateWritten: 2328140610
+      dateCreatedStr: 1984-11-02 09:45:01
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-11-02 09:45:02
+      bpunValid: null
+    - name: STK286-CRS:CBRF
+      type: CBRF
+      pages: 34
+      bytes: 26744
+      userName: CHILL
+      dateCreated: 2328140624
+      lastDateRead: null
+      lastDateWritten: 2328140625
+      dateCreatedStr: 1984-11-02 09:45:16
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-11-02 09:45:17
+      bpunValid: null
+    - name: STK286-UDI:CBRF
+      type: CBRF
+      pages: 50
+      bytes: 35018
+      userName: CHILL
+      dateCreated: 2328140673
+      lastDateRead: null
+      lastDateWritten: 2328140675
+      dateCreatedStr: 1984-11-02 09:46:01
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-11-02 09:46:03
+      bpunValid: null
+    - name: STK286-CIO:CBRF
+      type: CBRF
+      pages: 22
+      bytes: 43042
+      userName: CHILL
+      dateCreated: 2328140762
+      lastDateRead: null
+      lastDateWritten: 2328141393
+      dateCreatedStr: 1984-11-02 09:47:26
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-11-02 09:57:17
+      bpunValid: null
+    - name: DEF-EXC-LOCATOR:CBRF
+      type: CBRF
+      pages: 1
+      bytes: 512
+      userName: CHILL
+      dateCreated: 2328140791
+      lastDateRead: null
+      lastDateWritten: 2328141469
+      dateCreatedStr: 1984-11-02 09:47:55
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-11-02 09:58:29
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 200/ND-disk-00265.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:41:59.832Z
+imagingLogs:
+  - ND-disk-00265.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-9cbb02a143fa
+  syncStatus: pending

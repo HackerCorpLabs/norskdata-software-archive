@@ -1,0 +1,228 @@
+id: img-6cb21967b850
+volumeName: CHILL-IO
+md5: 6cb21967b850297e331685a6da32b2eb
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: CRS
+      pagesUsed: 129
+  files:
+    - name: CRS-CMS-TEST:SYMB
+      type: SYMB
+      pages: 19
+      bytes: 37480
+      userName: CRS
+      dateCreated: 2328155104
+      lastDateRead: 2355411019
+      lastDateWritten: 2328155110
+      dateCreatedStr: 1984-11-02 13:15:32
+      lastDateReadStr: 1985-01-18 11:33:11
+      lastDateWrittenStr: 1984-11-02 13:15:38
+      bpunValid: null
+    - name: CRS-CMS-TEST:CBRF
+      type: CBRF
+      pages: 15
+      bytes: 30208
+      userName: CRS
+      dateCreated: 2328155127
+      lastDateRead: null
+      lastDateWritten: 2328155129
+      dateCreatedStr: 1984-11-02 13:15:55
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-11-02 13:15:57
+      bpunValid: null
+    - name: CRS-CMS-BI:SYMB
+      type: SYMB
+      pages: 3
+      bytes: 3766
+      userName: CRS
+      dateCreated: 2328155149
+      lastDateRead: null
+      lastDateWritten: 2328155150
+      dateCreatedStr: 1984-11-02 13:16:13
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-11-02 13:16:14
+      bpunValid: null
+    - name: STK286-CMS-LINK:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1920
+      userName: CRS
+      dateCreated: 2328155156
+      lastDateRead: null
+      lastDateWritten: 2328155158
+      dateCreatedStr: 1984-11-02 13:16:20
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-11-02 13:16:22
+      bpunValid: null
+    - name: STK286-CMS:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 3239
+      userName: CRS
+      dateCreated: 2328155163
+      lastDateRead: null
+      lastDateWritten: 2328155164
+      dateCreatedStr: 1984-11-02 13:16:27
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-11-02 13:16:28
+      bpunValid: null
+    - name: UDI-SYNC:SYMB
+      type: SYMB
+      pages: 11
+      bytes: 20877
+      userName: CRS
+      dateCreated: 2328155281
+      lastDateRead: null
+      lastDateWritten: 2328155282
+      dateCreatedStr: 1984-11-02 13:18:17
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-11-02 13:18:18
+      bpunValid: null
+    - name: UDI-SYNC:CBRF
+      type: CBRF
+      pages: 5
+      bytes: 8704
+      userName: CRS
+      dateCreated: 2328155298
+      lastDateRead: null
+      lastDateWritten: 2328155299
+      dateCreatedStr: 1984-11-02 13:18:34
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-11-02 13:18:35
+      bpunValid: null
+    - name: UDI-SEQ:SYMB
+      type: SYMB
+      pages: 9
+      bytes: 17660
+      userName: CRS
+      dateCreated: 2328155308
+      lastDateRead: null
+      lastDateWritten: 2328155309
+      dateCreatedStr: 1984-11-02 13:18:44
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-11-02 13:18:45
+      bpunValid: null
+    - name: UDI-SEQ:CBRF
+      type: CBRF
+      pages: 4
+      bytes: 6656
+      userName: CRS
+      dateCreated: 2328155323
+      lastDateRead: null
+      lastDateWritten: 2328155328
+      dateCreatedStr: 1984-11-02 13:18:59
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-11-02 13:19:00
+      bpunValid: null
+    - name: UDI-SEQ-DRIVERS:SYMB
+      type: SYMB
+      pages: 3
+      bytes: 5199
+      userName: CRS
+      dateCreated: 2328155337
+      lastDateRead: null
+      lastDateWritten: 2328155338
+      dateCreatedStr: 1984-11-02 13:19:09
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-11-02 13:19:10
+      bpunValid: null
+    - name: UDI-SEQ-DRIVERS:CBRF
+      type: CBRF
+      pages: 2
+      bytes: 2560
+      userName: CRS
+      dateCreated: 2328155345
+      lastDateRead: null
+      lastDateWritten: 2328155346
+      dateCreatedStr: 1984-11-02 13:19:17
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-11-02 13:19:18
+      bpunValid: null
+    - name: UDI-CPM:SYMB
+      type: SYMB
+      pages: 12
+      bytes: 23924
+      userName: CRS
+      dateCreated: 2328155352
+      lastDateRead: null
+      lastDateWritten: 2328155354
+      dateCreatedStr: 1984-11-02 13:19:24
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-11-02 13:19:26
+      bpunValid: null
+    - name: UDI-CPM:CBRF
+      type: CBRF
+      pages: 4
+      bytes: 7168
+      userName: CRS
+      dateCreated: 2328155374
+      lastDateRead: null
+      lastDateWritten: 2328155375
+      dateCreatedStr: 1984-11-02 13:19:46
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-11-02 13:19:47
+      bpunValid: null
+    - name: UDI-LETTER-BOX:SYMB
+      type: SYMB
+      pages: 8
+      bytes: 12349
+      userName: CRS
+      dateCreated: 2328155384
+      lastDateRead: null
+      lastDateWritten: 2328155386
+      dateCreatedStr: 1984-11-02 13:19:56
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-11-02 13:19:58
+      bpunValid: null
+    - name: UDI-LETTER-BOX:CBRF
+      type: CBRF
+      pages: 10
+      bytes: 19456
+      userName: CRS
+      dateCreated: 2328155406
+      lastDateRead: null
+      lastDateWritten: 2328155407
+      dateCreatedStr: 1984-11-02 13:20:14
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-11-02 13:20:15
+      bpunValid: null
+    - name: UDI-ENV-MODES:SYMB
+      type: SYMB
+      pages: 4
+      bytes: 4864
+      userName: CRS
+      dateCreated: 2328155427
+      lastDateRead: null
+      lastDateWritten: 2328155428
+      dateCreatedStr: 1984-11-02 13:20:35
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-11-02 13:20:36
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 200/ND-disk-00268.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:42:00.475Z
+imagingLogs:
+  - ND-disk-00268.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-6cb21967b850
+  syncStatus: pending

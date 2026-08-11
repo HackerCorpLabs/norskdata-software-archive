@@ -1,0 +1,120 @@
+id: img-9c4de292b9b5
+volumeName: BENTSEN
+md5: 9c4de292b9b5d9f30e56f2a9a717d9bc
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: flomon
+filesystem: ndfs
+ndfs:
+  users:
+    - name: PAX
+      pagesUsed: 86
+  files:
+    - name: WINDOWLAYOUT:SYMB
+      type: SYMB
+      pages: 4
+      bytes: 2169
+      userName: PAX
+      dateCreated: 2353572457
+      lastDateRead: 2353572459
+      lastDateWritten: 2353572459
+      dateCreatedStr: 1985-01-04 10:41:41
+      lastDateReadStr: 1985-01-04 10:41:43
+      lastDateWrittenStr: 1985-01-04 10:41:43
+      bpunValid: null
+    - name: WINDOWLAYOUT:ENVI
+      type: ENVI
+      pages: 4
+      bytes: 781
+      userName: PAX
+      dateCreated: 2353572522
+      lastDateRead: 2353572523
+      lastDateWritten: 2353572523
+      dateCreatedStr: 1985-01-04 10:42:42
+      lastDateReadStr: 1985-01-04 10:42:43
+      lastDateWrittenStr: 1985-01-04 10:42:43
+      bpunValid: null
+    - name: ASCII:SYMB
+      type: SYMB
+      pages: 4
+      bytes: 781
+      userName: PAX
+      dateCreated: 2353572570
+      lastDateRead: 2353572571
+      lastDateWritten: 2353572571
+      dateCreatedStr: 1985-01-04 10:43:26
+      lastDateReadStr: 1985-01-04 10:43:27
+      lastDateWrittenStr: 1985-01-04 10:43:27
+      bpunValid: null
+    - name: ASCII:ENVI
+      type: ENVI
+      pages: 4
+      bytes: 781
+      userName: PAX
+      dateCreated: 2353572614
+      lastDateRead: 2353572615
+      lastDateWritten: 2353572615
+      dateCreatedStr: 1985-01-04 10:44:06
+      lastDateReadStr: 1985-01-04 10:44:07
+      lastDateWrittenStr: 1985-01-04 10:44:07
+      bpunValid: null
+    - name: CPM-INTERFACE:SYMB
+      type: SYMB
+      pages: 16
+      bytes: 27337
+      userName: PAX
+      dateCreated: 2353572681
+      lastDateRead: 2353572682
+      lastDateWritten: 2353572682
+      dateCreatedStr: 1985-01-04 10:45:09
+      lastDateReadStr: 1985-01-04 10:45:10
+      lastDateWrittenStr: 1985-01-04 10:45:10
+      bpunValid: null
+    - name: CPM-INTERFACE:ENVI
+      type: ENVI
+      pages: 4
+      bytes: 5341
+      userName: PAX
+      dateCreated: 2353572813
+      lastDateRead: 2353572814
+      lastDateWritten: 2353572814
+      dateCreatedStr: 1985-01-04 10:47:13
+      lastDateReadStr: 1985-01-04 10:47:14
+      lastDateWrittenStr: 1985-01-04 10:47:14
+      bpunValid: null
+    - name: PAX:PROG
+      type: PROG
+      pages: 42
+      bytes: 85376
+      userName: PAX
+      dateCreated: 2353572897
+      lastDateRead: 2353572898
+      lastDateWritten: 2353572898
+      dateCreatedStr: 1985-01-04 10:48:33
+      lastDateReadStr: 1985-01-04 10:48:34
+      lastDateWrittenStr: 1985-01-04 10:48:34
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 200/ND-disk-00271.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:42:01.175Z
+imagingLogs:
+  - ND-disk-00271.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-9c4de292b9b5
+  syncStatus: pending

@@ -1,0 +1,72 @@
+id: img-e8b7fc6bfbb9
+volumeName: N-10-118
+md5: e8b7fc6bfbb9fc509759b34facb252a1
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: flomon
+filesystem: ndfs
+ndfs:
+  users:
+    - name: SYSTEM
+      pagesUsed: 148
+  files:
+    - name: SYMBOL-LIST:SYMB
+      type: SYMB
+      pages: 17
+      bytes: 20879
+      userName: SYSTEM
+      dateCreated: 2120404053
+      lastDateRead: null
+      lastDateWritten: 2120404123
+      dateCreatedStr: 1981-09-17 12:49:21
+      lastDateReadStr: null
+      lastDateWrittenStr: 1981-09-17 12:50:27
+      bpunValid: null
+    - name: SINTRAN-III-RT:BPUN
+      type: BPUN
+      pages: 65
+      bytes: 44332
+      userName: SYSTEM
+      dateCreated: 2120404068
+      lastDateRead: null
+      lastDateWritten: 2120404079
+      dateCreatedStr: 1981-09-17 12:49:36
+      lastDateReadStr: null
+      lastDateWrittenStr: 1981-09-17 12:49:47
+      bpunValid: true
+    - name: BACKUP-III-RT:BPUN
+      type: BPUN
+      pages: 65
+      bytes: 44332
+      userName: SYSTEM
+      dateCreated: 2120404074
+      lastDateRead: null
+      lastDateWritten: 2120404103
+      dateCreatedStr: 1981-09-17 12:49:42
+      lastDateReadStr: null
+      lastDateWrittenStr: 1981-09-17 12:50:07
+      bpunValid: true
+provenance:
+  contributor: gandalf
+  originalPath: 300/ND-disk-00330.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:45:46.179Z
+imagingLogs:
+  - ND-disk-00330.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-e8b7fc6bfbb9
+  syncStatus: pending

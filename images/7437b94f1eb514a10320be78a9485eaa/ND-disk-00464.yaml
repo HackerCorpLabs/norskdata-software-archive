@@ -1,0 +1,180 @@
+id: img-7437b94f1eb5
+volumeName: KBS
+md5: 7437b94f1eb514a10320be78a9485eaa
+image:
+  sizeBytes: 1310720
+  format: raw
+  controller: floppy
+  totalPages: 640
+  pageSize: 2048
+  bootFormat: flomon
+filesystem: ndfs
+ndfs:
+  users:
+    - name: SYSTEM
+      pagesUsed: 344
+  files:
+    - name: ENCOS-LOAD-0-B01:MODE
+      type: MODE
+      pages: 1
+      bytes: 1241
+      userName: SYSTEM
+      dateCreated: 2561579384
+      lastDateRead: 2604349514
+      lastDateWritten: 2561579384
+      dateCreatedStr: 1988-02-23 09:37:56
+      lastDateReadStr: 1988-12-29 19:33:10
+      lastDateWrittenStr: 1988-02-23 09:37:56
+      bpunValid: null
+    - name: ENCOS-MON-II-B01:PROG
+      type: PROG
+      pages: 20
+      bytes: 40960
+      userName: SYSTEM
+      dateCreated: 2561579257
+      lastDateRead: 2604349516
+      lastDateWritten: 2561579257
+      dateCreatedStr: 1988-02-23 09:35:57
+      lastDateReadStr: 1988-12-29 19:33:12
+      lastDateWrittenStr: 1988-02-23 09:35:57
+      bpunValid: null
+    - name: ENCOS-ERR-0-B01:BRF
+      type: BRF
+      pages: 30
+      bytes: 61005
+      userName: SYSTEM
+      dateCreated: 2561579267
+      lastDateRead: 2604349521
+      lastDateWritten: 2561579373
+      dateCreatedStr: 1988-02-23 09:36:03
+      lastDateReadStr: 1988-12-29 19:33:17
+      lastDateWrittenStr: 1988-02-23 09:37:45
+      bpunValid: null
+    - name: ENCOS-SER-B0-B01:BPUN
+      type: BPUN
+      pages: 65
+      bytes: 131205
+      userName: SYSTEM
+      dateCreated: 2561579278
+      lastDateRead: 2604349527
+      lastDateWritten: 2561579278
+      dateCreatedStr: 1988-02-23 09:36:14
+      lastDateReadStr: 1988-12-29 19:33:23
+      lastDateWrittenStr: 1988-02-23 09:36:14
+      bpunValid: null
+    - name: ENCOS-SER-B1-B01:BPUN
+      type: BPUN
+      pages: 65
+      bytes: 131205
+      userName: SYSTEM
+      dateCreated: 2561579295
+      lastDateRead: 2604349540
+      lastDateWritten: 2561579296
+      dateCreatedStr: 1988-02-23 09:36:31
+      lastDateReadStr: 1988-12-29 19:33:36
+      lastDateWrittenStr: 1988-02-23 09:36:32
+      bpunValid: null
+    - name: ENCOS-SER-B2-B01:BPUN
+      type: BPUN
+      pages: 65
+      bytes: 131205
+      userName: SYSTEM
+      dateCreated: 2561579315
+      lastDateRead: 2604349555
+      lastDateWritten: 2561579315
+      dateCreatedStr: 1988-02-23 09:36:51
+      lastDateReadStr: 1988-12-29 19:33:51
+      lastDateWrittenStr: 1988-02-23 09:36:51
+      bpunValid: null
+    - name: ENCOS-SER-B3-B01:BPUN
+      type: BPUN
+      pages: 65
+      bytes: 131205
+      userName: SYSTEM
+      dateCreated: 2561579336
+      lastDateRead: 2604349573
+      lastDateWritten: 2561579336
+      dateCreatedStr: 1988-02-23 09:37:08
+      lastDateReadStr: 1988-12-29 19:34:05
+      lastDateWrittenStr: 1988-02-23 09:37:08
+      bpunValid: null
+    - name: ENCOS-START:MODE
+      type: MODE
+      pages: 1
+      bytes: 334
+      userName: SYSTEM
+      dateCreated: 2522798842
+      lastDateRead: 2604349587
+      lastDateWritten: 2604337220
+      dateCreatedStr: 1987-09-15 13:43:58
+      lastDateReadStr: 1988-12-29 19:34:19
+      lastDateWrittenStr: 1988-12-29 16:33:04
+      bpunValid: null
+    - name: ENCOS-DUMP:DATA
+      type: DATA
+      pages: 1
+      bytes: 646
+      userName: SYSTEM
+      dateCreated: 2595546675
+      lastDateRead: 2604349594
+      lastDateWritten: 2595546675
+      dateCreatedStr: 1988-10-26 14:24:51
+      lastDateReadStr: 1988-12-29 19:34:26
+      lastDateWrittenStr: 1988-10-26 14:24:51
+      bpunValid: null
+    - name: PO-PWRFAIL-A00:PROG
+      type: PROG
+      pages: 15
+      bytes: 30720
+      userName: SYSTEM
+      dateCreated: 2561579355
+      lastDateRead: 2604349590
+      lastDateWritten: 2561579356
+      dateCreatedStr: 1988-02-23 09:37:27
+      lastDateReadStr: 1988-12-29 19:34:22
+      lastDateWrittenStr: 1988-02-23 09:37:28
+      bpunValid: null
+    - name: ET-INST:MODE
+      type: MODE
+      pages: 1
+      bytes: 593
+      userName: SYSTEM
+      dateCreated: 2596622522
+      lastDateRead: 2623580196
+      lastDateWritten: 2604326947
+      dateCreatedStr: 1988-11-02 21:02:58
+      lastDateReadStr: 1989-01-16 10:32:36
+      lastDateWrittenStr: 1988-12-29 14:00:35
+      bpunValid: null
+    - name: INFO-INST:TEXT
+      type: TEXT
+      pages: 2
+      bytes: 3306
+      userName: SYSTEM
+      dateCreated: 2623708535
+      lastDateRead: 2623711884
+      lastDateWritten: 2623711884
+      dateCreatedStr: 1989-01-17 09:53:55
+      lastDateReadStr: 1989-01-17 10:42:12
+      lastDateWrittenStr: 1989-01-17 10:42:12
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 400/ND-disk-00464.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:49:52.387Z
+imagingLogs:
+  - ND-disk-00464.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-7437b94f1eb5
+  syncStatus: pending

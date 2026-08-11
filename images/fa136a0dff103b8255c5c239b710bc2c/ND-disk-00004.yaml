@@ -1,0 +1,89 @@
+id: nd-210586-d07-d1-fa136a0d
+volumeName: 210586D07-SW-01D
+md5: fa136a0dff103b8255c5c239b710bc2c
+product:
+  id: ND-210586
+  version: D07
+  diskNumber: 1
+  language: SW
+image:
+  sizeBytes: 1310720
+  format: raw
+  controller: floppy
+  totalPages: 640
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 240
+  files:
+    - name: UEER-FILES:DATA
+      type: DATA
+      pages: 1
+      bytes: 672
+      userName: FLOPPY-USER
+      dateCreated: 2622676127
+      lastDateRead: 2591880312
+      lastDateWritten: 2622676344
+      dateCreatedStr: 1989-01-09 13:50:31
+      lastDateReadStr: 1988-09-30 15:17:56
+      lastDateWrittenStr: 1989-01-09 13:53:56
+      bpunValid: null
+    - name: UEER-INSTALL-D00:PROG
+      type: PROG
+      pages: 26
+      bytes: 53248
+      userName: FLOPPY-USER
+      dateCreated: 2622676136
+      lastDateRead: 2591880308
+      lastDateWritten: 2622676137
+      dateCreatedStr: 1989-01-09 13:50:40
+      lastDateReadStr: 1988-09-30 15:17:52
+      lastDateWrittenStr: 1989-01-09 13:50:41
+      bpunValid: null
+    - name: UEER-RENAME-D00:PROG
+      type: PROG
+      pages: 20
+      bytes: 40960
+      userName: FLOPPY-USER
+      dateCreated: 2622676155
+      lastDateRead: 2591880313
+      lastDateWritten: 2622676155
+      dateCreatedStr: 1989-01-09 13:50:59
+      lastDateReadStr: 1988-09-30 15:17:57
+      lastDateWrittenStr: 1989-01-09 13:50:59
+      bpunValid: null
+    - name: UE-ERMSG-SW-D07:ERR
+      type: ERR
+      pages: 188
+      bytes: 385024
+      userName: FLOPPY-USER
+      dateCreated: 2622676172
+      lastDateRead: 2591880322
+      lastDateWritten: 2622676173
+      dateCreatedStr: 1989-01-09 13:51:12
+      lastDateReadStr: 1988-09-30 15:18:02
+      lastDateWrittenStr: 1989-01-09 13:51:13
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 000/ND-disk-00004.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T14:54:02.278Z
+imagingLogs:
+  - ND-disk-00004.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-210586-d07-d1-fa136a0d
+  syncStatus: pending

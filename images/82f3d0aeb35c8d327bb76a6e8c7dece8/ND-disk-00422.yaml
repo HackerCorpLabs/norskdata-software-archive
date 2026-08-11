@@ -1,0 +1,300 @@
+id: img-82f3d0aeb35c
+volumeName: FL1-EL
+md5: 82f3d0aeb35c8d327bb76a6e8c7dece8
+image:
+  sizeBytes: 319488
+  format: raw
+  controller: floppy
+  totalPages: 156
+  pageSize: 2048
+  bootFormat: binary
+filesystem: ndfs
+ndfs:
+  users:
+    - name: EL
+      pagesUsed: 127
+  files:
+    - name: SUMMA:PROG
+      type: PROG
+      pages: 65
+      bytes: 131584
+      userName: EL
+      dateCreated: 2151871862
+      lastDateRead: 2152638648
+      lastDateWritten: 2151871872
+      dateCreatedStr: 1982-01-01 15:21:54
+      lastDateReadStr: 1982-01-07 10:34:56
+      lastDateWrittenStr: 1982-01-01 15:22:00
+      bpunValid: null
+    - name: PRIM1-LIT:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 2088
+      userName: EL
+      dateCreated: 2151871952
+      lastDateRead: 2152638408
+      lastDateWritten: 2151871953
+      dateCreatedStr: 1982-01-01 15:23:16
+      lastDateReadStr: 1982-01-07 10:31:08
+      lastDateWrittenStr: 1982-01-01 15:23:17
+      bpunValid: null
+    - name: LAB2-HO:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 995
+      userName: EL
+      dateCreated: 2151871959
+      lastDateRead: 2152638413
+      lastDateWritten: 2151871960
+      dateCreatedStr: 1982-01-01 15:23:23
+      lastDateReadStr: 1982-01-07 10:31:13
+      lastDateWrittenStr: 1982-01-01 15:23:24
+      bpunValid: null
+    - name: PRIM2-LIT:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 2102
+      userName: EL
+      dateCreated: 2151871965
+      lastDateRead: 2152638418
+      lastDateWritten: 2151871965
+      dateCreatedStr: 1982-01-01 15:23:29
+      lastDateReadStr: 1982-01-07 10:31:18
+      lastDateWrittenStr: 1982-01-01 15:23:29
+      bpunValid: null
+    - name: GEOREG-EK:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1030
+      userName: EL
+      dateCreated: 2151871972
+      lastDateRead: 2152638423
+      lastDateWritten: 2151871972
+      dateCreatedStr: 1982-01-01 15:23:36
+      lastDateReadStr: 1982-01-07 10:31:23
+      lastDateWrittenStr: 1982-01-01 15:23:36
+      bpunValid: null
+    - name: PRIM3-LIT:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 375
+      userName: EL
+      dateCreated: 2151871978
+      lastDateRead: 2152638428
+      lastDateWritten: 2151871978
+      dateCreatedStr: 1982-01-01 15:23:42
+      lastDateReadStr: 1982-01-07 10:31:28
+      lastDateWrittenStr: 1982-01-01 15:23:42
+      bpunValid: null
+    - name: DEMO1-LIT:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 116
+      userName: EL
+      dateCreated: 2151871983
+      lastDateRead: 2152638433
+      lastDateWritten: 2151871984
+      dateCreatedStr: 1982-01-01 15:23:47
+      lastDateReadStr: 1982-01-07 10:31:33
+      lastDateWrittenStr: 1982-01-01 15:23:48
+      bpunValid: null
+    - name: DEMO2-LIT:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 212
+      userName: EL
+      dateCreated: 2151871989
+      lastDateRead: 2152638437
+      lastDateWritten: 2151871989
+      dateCreatedStr: 1982-01-01 15:23:53
+      lastDateReadStr: 1982-01-07 10:31:37
+      lastDateWrittenStr: 1982-01-01 15:23:53
+      bpunValid: null
+    - name: ANALYS-NN:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 506
+      userName: EL
+      dateCreated: 2151871995
+      lastDateRead: 2152638442
+      lastDateWritten: 2151871995
+      dateCreatedStr: 1982-01-01 15:23:59
+      lastDateReadStr: 1982-01-07 10:31:42
+      lastDateWrittenStr: 1982-01-01 15:23:59
+      bpunValid: null
+    - name: HARNO-EL:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 3605
+      userName: EL
+      dateCreated: 2151872004
+      lastDateRead: 2152638450
+      lastDateWritten: 2151872005
+      dateCreatedStr: 1982-01-01 15:24:04
+      lastDateReadStr: 1982-01-07 10:31:50
+      lastDateWrittenStr: 1982-01-01 15:24:05
+      bpunValid: null
+    - name: DEMONAMN-LIT:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 236
+      userName: EL
+      dateCreated: 2151872012
+      lastDateRead: 2152638457
+      lastDateWritten: 2151872012
+      dateCreatedStr: 1982-01-01 15:24:12
+      lastDateReadStr: 1982-01-07 10:31:57
+      lastDateWrittenStr: 1982-01-01 15:24:12
+      bpunValid: null
+    - name: DATALAGEN-LIT:SYMB
+      type: SYMB
+      pages: 6
+      bytes: 10515
+      userName: EL
+      dateCreated: 2151872017
+      lastDateRead: 2152638467
+      lastDateWritten: 2151872018
+      dateCreatedStr: 1982-01-01 15:24:17
+      lastDateReadStr: 1982-01-07 10:32:03
+      lastDateWrittenStr: 1982-01-01 15:24:18
+      bpunValid: null
+    - name: LAB1-HO:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 259
+      userName: EL
+      dateCreated: 2151872030
+      lastDateRead: 2152638477
+      lastDateWritten: 2151872031
+      dateCreatedStr: 1982-01-01 15:24:30
+      lastDateReadStr: 1982-01-07 10:32:13
+      lastDateWrittenStr: 1982-01-01 15:24:31
+      bpunValid: null
+    - name: AVER-HO:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 311
+      userName: EL
+      dateCreated: 2151872036
+      lastDateRead: 2152638485
+      lastDateWritten: 2151872037
+      dateCreatedStr: 1982-01-01 15:24:36
+      lastDateReadStr: 1982-01-07 10:32:21
+      lastDateWrittenStr: 1982-01-01 15:24:37
+      bpunValid: null
+    - name: LAB6-HO:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 2778
+      userName: EL
+      dateCreated: 2151872043
+      lastDateRead: 2152638501
+      lastDateWritten: 2151872043
+      dateCreatedStr: 1982-01-01 15:24:43
+      lastDateReadStr: 1982-01-07 10:32:37
+      lastDateWrittenStr: 1982-01-01 15:24:43
+      bpunValid: null
+    - name: LISTLAB6:SYMB
+      type: SYMB
+      pages: 4
+      bytes: 7394
+      userName: EL
+      dateCreated: 2151872050
+      lastDateRead: 2152638530
+      lastDateWritten: 2151872050
+      dateCreatedStr: 1982-01-01 15:24:50
+      lastDateReadStr: 1982-01-07 10:33:02
+      lastDateWrittenStr: 1982-01-01 15:24:50
+      bpunValid: null
+    - name: LAB-B1-HO:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 515
+      userName: EL
+      dateCreated: 2151872065
+      lastDateRead: 2152638537
+      lastDateWritten: 2151872065
+      dateCreatedStr: 1982-01-01 15:25:01
+      lastDateReadStr: 1982-01-07 10:33:09
+      lastDateWrittenStr: 1982-01-01 15:25:01
+      bpunValid: null
+    - name: DIOFANT-HO:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 330
+      userName: EL
+      dateCreated: 2151872071
+      lastDateRead: 2152638542
+      lastDateWritten: 2151872071
+      dateCreatedStr: 1982-01-01 15:25:07
+      lastDateReadStr: 1982-01-07 10:33:14
+      lastDateWrittenStr: 1982-01-01 15:25:07
+      bpunValid: null
+    - name: LAB7-HO:SYMB
+      type: SYMB
+      pages: 4
+      bytes: 3385
+      userName: EL
+      dateCreated: 2151872077
+      lastDateRead: 2152638547
+      lastDateWritten: 2151872078
+      dateCreatedStr: 1982-01-01 15:25:13
+      lastDateReadStr: 1982-01-07 10:33:19
+      lastDateWrittenStr: 1982-01-01 15:25:14
+      bpunValid: null
+    - name: LAB3-HO:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1970
+      userName: EL
+      dateCreated: 2151872088
+      lastDateRead: 2152638554
+      lastDateWritten: 2151872089
+      dateCreatedStr: 1982-01-01 15:25:24
+      lastDateReadStr: 1982-01-07 10:33:26
+      lastDateWrittenStr: 1982-01-01 15:25:25
+      bpunValid: null
+    - name: LAB4-HO:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 2450
+      userName: EL
+      dateCreated: 2151872095
+      lastDateRead: 2152638560
+      lastDateWritten: 2151872095
+      dateCreatedStr: 1982-01-01 15:25:31
+      lastDateReadStr: 1982-01-07 10:33:32
+      lastDateWrittenStr: 1982-01-01 15:25:31
+      bpunValid: null
+    - name: PRIM4-LIT:SYMB
+      type: SYMB
+      pages: 3
+      bytes: 4568
+      userName: EL
+      dateCreated: 2151872103
+      lastDateRead: 2152638566
+      lastDateWritten: 2151872103
+      dateCreatedStr: 1982-01-01 15:25:39
+      lastDateReadStr: 1982-01-07 10:33:38
+      lastDateWrittenStr: 1982-01-01 15:25:39
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 400/ND-disk-00422.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:49:30.221Z
+imagingLogs:
+  - ND-disk-00422.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-82f3d0aeb35c
+  syncStatus: pending

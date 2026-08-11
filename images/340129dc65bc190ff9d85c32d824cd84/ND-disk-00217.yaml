@@ -1,0 +1,125 @@
+id: nd-210528-d10-d2-340129dc
+volumeName: 210528D10-SW-02D
+md5: 340129dc65bc190ff9d85c32d824cd84
+product:
+  id: ND-210528
+  version: D10
+  diskNumber: 2
+  language: SW
+image:
+  sizeBytes: 1310720
+  format: raw
+  controller: floppy
+  totalPages: 640
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 188
+  files:
+    - name: DESCRIPTION-FILE:DESC
+      type: DESC
+      pages: 8
+      bytes: 22528
+      userName: FLOPPY-USER
+      dateCreated: 2667243567
+      lastDateRead: 2668167561
+      lastDateWritten: 2667243741
+      dateCreatedStr: 1989-11-29 14:32:47
+      lastDateReadStr: 1989-12-04 16:06:09
+      lastDateWrittenStr: 1989-11-29 14:35:29
+      bpunValid: null
+    - name: SCRATCH-SEG-01:LINK
+      type: LINK
+      pages: 0
+      bytes: 4294967296
+      userName: FLOPPY-USER
+      dateCreated: 2667243577
+      lastDateRead: 2667243579
+      lastDateWritten: 2667243579
+      dateCreatedStr: 1989-11-29 14:32:57
+      lastDateReadStr: 1989-11-29 14:32:59
+      lastDateWrittenStr: 1989-11-29 14:32:59
+      bpunValid: null
+    - name: SCRATCH-SEG-01:DSEG
+      type: DSEG
+      pages: 1
+      bytes: 1029
+      userName: FLOPPY-USER
+      dateCreated: 2667243584
+      lastDateRead: 2667243596
+      lastDateWritten: 2667243585
+      dateCreatedStr: 1989-11-29 14:33:00
+      lastDateReadStr: 1989-11-29 14:33:12
+      lastDateWrittenStr: 1989-11-29 14:33:01
+      bpunValid: null
+    - name: SCRATCH-SEG-01:PSEG
+      type: PSEG
+      pages: 1
+      bytes: 5
+      userName: FLOPPY-USER
+      dateCreated: 2667243586
+      lastDateRead: 2667243587
+      lastDateWritten: 2667243587
+      dateCreatedStr: 1989-11-29 14:33:02
+      lastDateReadStr: 1989-11-29 14:33:03
+      lastDateWrittenStr: 1989-11-29 14:33:03
+      bpunValid: null
+    - name: RG-START-SW-D10:LINK
+      type: LINK
+      pages: 15
+      bytes: 30209
+      userName: FLOPPY-USER
+      dateCreated: 2667243603
+      lastDateRead: 2668167566
+      lastDateWritten: 2667243604
+      dateCreatedStr: 1989-11-29 14:33:19
+      lastDateReadStr: 1989-12-04 16:06:14
+      lastDateWrittenStr: 1989-11-29 14:33:20
+      bpunValid: null
+    - name: RG-START-SW-D10:DSEG
+      type: DSEG
+      pages: 42
+      bytes: 114689
+      userName: FLOPPY-USER
+      dateCreated: 2667243605
+      lastDateRead: 2668167566
+      lastDateWritten: 2667243606
+      dateCreatedStr: 1989-11-29 14:33:21
+      lastDateReadStr: 1989-12-04 16:06:14
+      lastDateWrittenStr: 1989-11-29 14:33:22
+      bpunValid: null
+    - name: RG-START-SW-D10:PSEG
+      type: PSEG
+      pages: 114
+      bytes: 231578
+      userName: FLOPPY-USER
+      dateCreated: 2667243606
+      lastDateRead: 2668167565
+      lastDateWritten: 2667243608
+      dateCreatedStr: 1989-11-29 14:33:22
+      lastDateReadStr: 1989-12-04 16:06:13
+      lastDateWrittenStr: 1989-11-29 14:33:24
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 200/ND-disk-00217.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:41:45.215Z
+imagingLogs:
+  - ND-disk-00217.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-210528-d10-d2-340129dc
+  syncStatus: pending

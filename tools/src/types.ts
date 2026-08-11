@@ -142,6 +142,18 @@ export interface CatalogEntry {
   cpuTarget: string[] | null;
   osRequirement: string | null;
   ndfs: { users: NdfsUser[]; files: NdfsFile[] } | null;
+  /**
+   * Which filesystem the image holds: 'ndfs', 'dos', 'tar', or 'none' for an
+   * empty disk or a failed read. Detected from the bytes at import and
+   * re-runnable afterwards; null means it has never been looked at.
+   */
+  filesystem?: 'ndfs' | 'dos' | 'tar' | 'backup' | 'winch' | 'none' | null;
+  /**
+   * Volume label of a non-NDFS filesystem - the FAT label on an MS-DOS disk.
+   * These carry ND part numbers (30002EN1A00, 30022XX2N06), so the Matcher can
+   * match on it exactly as it matches an NDFS volume name.
+   */
+  volumeLabel?: string | null;
   directoryContentRaw?: string | null;
   /** References to related documentation */
   docs: {

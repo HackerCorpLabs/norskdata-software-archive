@@ -1,0 +1,63 @@
+id: nd-10179-a-d1-c6272b53
+volumeName: ND-10179A
+md5: c6272b533324f15f4f90946bfce78aed
+product:
+  id: ND-10179
+  version: A
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 32
+  files:
+    - name: SORT-MERGE:BRF
+      type: BRF
+      pages: 14
+      bytes: 26997
+      userName: FLOPPY-USER
+      dateCreated: 2096032644
+      lastDateRead: 2281704263
+      lastDateWritten: 2096032652
+      dateCreatedStr: 1981-03-23 14:46:04
+      lastDateReadStr: null
+      lastDateWrittenStr: 1981-03-23 14:46:12
+      bpunValid: null
+    - name: SORT-MERGE:BPUN
+      type: BPUN
+      pages: 15
+      bytes: 30643
+      userName: FLOPPY-USER
+      dateCreated: 2096148681
+      lastDateRead: 2281704275
+      lastDateWritten: 2096148682
+      dateCreatedStr: 1981-03-24 11:03:09
+      lastDateReadStr: null
+      lastDateWrittenStr: 1981-03-24 11:03:10
+      bpunValid: true
+provenance:
+  contributor: gandalf
+  originalPath: 400/ND-disk-00410.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:49:27.550Z
+imagingLogs:
+  - ND-disk-00410.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10179-a-d1-c6272b53
+  syncStatus: pending

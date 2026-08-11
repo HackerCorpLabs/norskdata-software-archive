@@ -1,0 +1,144 @@
+id: img-d848f74f7ca4
+volumeName: LUNDIN-8
+md5: d848f74f7ca4941c050f1d34efb9e93d
+image:
+  sizeBytes: 319488
+  format: raw
+  controller: floppy
+  totalPages: 156
+  pageSize: 2048
+  bootFormat: bpun
+filesystem: ndfs
+ndfs:
+  users:
+    - name: SYSTEM
+      pagesUsed: 133
+  files:
+    - name: MEDLEMMAR-PBL:DATA
+      type: DATA
+      pages: 7
+      bytes: 13780
+      userName: SYSTEM
+      dateCreated: 2395547173
+      lastDateRead: 2495010137
+      lastDateWritten: 2455712714
+      dateCreatedStr: 1985-11-04 18:24:37
+      lastDateReadStr: 1987-02-27 13:21:25
+      lastDateWrittenStr: 1986-09-15 19:15:10
+      bpunValid: null
+    - name: DNF-EDITOR-PBL:PROG
+      type: PROG
+      pages: 3
+      bytes: 4498
+      userName: SYSTEM
+      dateCreated: 2395547206
+      lastDateRead: 2632780002
+      lastDateWritten: 2395547207
+      dateCreatedStr: 1985-11-04 18:25:06
+      lastDateReadStr: 1989-03-22 16:35:34
+      lastDateWrittenStr: 1985-11-04 18:25:07
+      bpunValid: null
+    - name: DISK-NYCKLAR-PBL:TEXT
+      type: TEXT
+      pages: 2
+      bytes: 3569
+      userName: SYSTEM
+      dateCreated: 2395547225
+      lastDateRead: 2531998072
+      lastDateWritten: 2398168898
+      dateCreatedStr: 1985-11-04 18:25:25
+      lastDateReadStr: 1987-11-21 19:37:56
+      lastDateWrittenStr: 1985-11-24 18:29:02
+      bpunValid: null
+    - name: BASIC:PROG
+      type: PROG
+      pages: 28
+      bytes: 56834
+      userName: SYSTEM
+      dateCreated: 2423331098
+      lastDateRead: 2281709607
+      lastDateWritten: 2423331100
+      dateCreatedStr: 1986-01-24 17:36:26
+      lastDateReadStr: null
+      lastDateWrittenStr: 1986-01-24 17:36:28
+      bpunValid: null
+    - name: MAC:BPUN
+      type: BPUN
+      pages: 14
+      bytes: 28389
+      userName: SYSTEM
+      dateCreated: 2423331145
+      lastDateRead: 2281712281
+      lastDateWritten: 2423331146
+      dateCreatedStr: 1986-01-24 17:37:09
+      lastDateReadStr: null
+      lastDateWrittenStr: 1986-01-24 17:37:10
+      bpunValid: true
+    - name: PED:BPUN
+      type: BPUN
+      pages: 17
+      bytes: 33286
+      userName: SYSTEM
+      dateCreated: 2423331178
+      lastDateRead: 2281702241
+      lastDateWritten: 2423331179
+      dateCreatedStr: 1986-01-24 17:37:42
+      lastDateReadStr: null
+      lastDateWrittenStr: 1986-01-24 17:37:43
+      bpunValid: true
+    - name: QED:BPUN
+      type: BPUN
+      pages: 9
+      bytes: 17520
+      userName: SYSTEM
+      dateCreated: 2423331207
+      lastDateRead: 2495010216
+      lastDateWritten: 2423331209
+      dateCreatedStr: 1986-01-24 17:38:07
+      lastDateReadStr: 1987-02-27 13:22:40
+      lastDateWrittenStr: 1986-01-24 17:38:09
+      bpunValid: true
+    - name: NRL:BPUN
+      type: BPUN
+      pages: 11
+      bytes: 21864
+      userName: SYSTEM
+      dateCreated: 2423331233
+      lastDateRead: 2281708918
+      lastDateWritten: 2423331234
+      dateCreatedStr: 1986-01-24 17:38:33
+      lastDateReadStr: null
+      lastDateWrittenStr: 1986-01-24 17:38:34
+      bpunValid: true
+    - name: FTN:BPUN
+      type: BPUN
+      pages: 32
+      bytes: 64550
+      userName: SYSTEM
+      dateCreated: 2423331268
+      lastDateRead: 2495010244
+      lastDateWritten: 2423331269
+      dateCreatedStr: 1986-01-24 17:39:04
+      lastDateReadStr: 1987-02-27 13:23:04
+      lastDateWrittenStr: 1986-01-24 17:39:05
+      bpunValid: true
+provenance:
+  contributor: gandalf
+  originalPath: 300/ND-disk-00345.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:45:49.497Z
+imagingLogs:
+  - ND-disk-00345.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-d848f74f7ca4
+  syncStatus: pending

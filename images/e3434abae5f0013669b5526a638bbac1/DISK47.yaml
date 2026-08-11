@@ -1,0 +1,229 @@
+id: nd-10112-b-d1-e3434aba
+volumeName: ND-10112B
+md5: e3434abae5f0013669b5526a638bbac1
+product:
+  id: ND-10112
+  version: B
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: flomon
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 84
+  files:
+    - name: N50-T-SYS-1892A:BPUN
+      type: BPUN
+      pages: 10
+      bytes: 20195
+      userName: FLOPPY-USER
+      dateCreated: 2281735313
+      lastDateRead: 2281709571
+      lastDateWritten: 2281735316
+      dateCreatedStr: null
+      lastDateReadStr: null
+      lastDateWrittenStr: null
+      bpunValid: true
+    - name: TINST-50-1840A:SYMB
+      type: SYMB
+      pages: 7
+      bytes: 13312
+      userName: FLOPPY-USER
+      dateCreated: 2281735328
+      lastDateRead: 2281709579
+      lastDateWritten: 2281735328
+      dateCreatedStr: null
+      lastDateReadStr: null
+      lastDateWrittenStr: null
+      bpunValid: null
+    - name: TMEM-50-1841A:SYMB
+      type: SYMB
+      pages: 5
+      bytes: 9539
+      userName: FLOPPY-USER
+      dateCreated: 2281735338
+      lastDateRead: 2281709586
+      lastDateWritten: 2281735339
+      dateCreatedStr: null
+      lastDateReadStr: null
+      lastDateWrittenStr: null
+      bpunValid: null
+    - name: TREG-50-1842A:SYMB
+      type: SYMB
+      pages: 3
+      bytes: 5789
+      userName: FLOPPY-USER
+      dateCreated: 2281735347
+      lastDateRead: 2281709592
+      lastDateWritten: 2281735347
+      dateCreatedStr: null
+      lastDateReadStr: null
+      lastDateWrittenStr: null
+      bpunValid: null
+    - name: SEKUND-2463A:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1279
+      userName: FLOPPY-USER
+      dateCreated: 2281735354
+      lastDateRead: 2281709598
+      lastDateWritten: 2281735355
+      dateCreatedStr: null
+      lastDateReadStr: null
+      lastDateWrittenStr: null
+      bpunValid: null
+    - name: JTID-2468A:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 67109888
+      userName: FLOPPY-USER
+      dateCreated: 2281735364
+      lastDateRead: 2281709602
+      lastDateWritten: 2281735364
+      dateCreatedStr: null
+      lastDateReadStr: null
+      lastDateWrittenStr: null
+      bpunValid: null
+    - name: ITEST-2467A:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 3525
+      userName: FLOPPY-USER
+      dateCreated: 2281735371
+      lastDateRead: 2281709607
+      lastDateWritten: 2281735371
+      dateCreatedStr: null
+      lastDateReadStr: null
+      lastDateWrittenStr: null
+      bpunValid: null
+    - name: IRMD-2469A:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 332
+      userName: FLOPPY-USER
+      dateCreated: 2281735377
+      lastDateRead: 2281709612
+      lastDateWritten: 2281735377
+      dateCreatedStr: null
+      lastDateReadStr: null
+      lastDateWrittenStr: null
+      bpunValid: null
+    - name: FTEST-2466A:SYMB
+      type: SYMB
+      pages: 3
+      bytes: 4607
+      userName: FLOPPY-USER
+      dateCreated: 2281735383
+      lastDateRead: 2281709616
+      lastDateWritten: 2281735383
+      dateCreatedStr: null
+      lastDateReadStr: null
+      lastDateWrittenStr: null
+      bpunValid: null
+    - name: DFTEST-2465A:SYMB
+      type: SYMB
+      pages: 3
+      bytes: 5044
+      userName: FLOPPY-USER
+      dateCreated: 2281735390
+      lastDateRead: 2281709621
+      lastDateWritten: 2281735391
+      dateCreatedStr: null
+      lastDateReadStr: null
+      lastDateWrittenStr: null
+      bpunValid: null
+    - name: HAMB-MET-2464A:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1520
+      userName: FLOPPY-USER
+      dateCreated: 2281735399
+      lastDateRead: 2281709627
+      lastDateWritten: 2281735399
+      dateCreatedStr: null
+      lastDateReadStr: null
+      lastDateWrittenStr: null
+      bpunValid: null
+    - name: TCOR-NGO-2462A:SYMB
+      type: SYMB
+      pages: 9
+      bytes: 16584
+      userName: FLOPPY-USER
+      dateCreated: 2281735405
+      lastDateRead: 2281709636
+      lastDateWritten: 2281735405
+      dateCreatedStr: null
+      lastDateReadStr: null
+      lastDateWrittenStr: null
+      bpunValid: null
+    - name: TCOR-DATA-2470A:DATA
+      type: DATA
+      pages: 16
+      bytes: 32768
+      userName: FLOPPY-USER
+      dateCreated: 2281735424
+      lastDateRead: 2281709796
+      lastDateWritten: 2281735424
+      dateCreatedStr: null
+      lastDateReadStr: null
+      lastDateWrittenStr: null
+      bpunValid: null
+    - name: N50INITIALIZE-A:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 2140
+      userName: FLOPPY-USER
+      dateCreated: 2281735448
+      lastDateRead: 2281709807
+      lastDateWritten: 1950622297
+      dateCreatedStr: null
+      lastDateReadStr: null
+      lastDateWrittenStr: 1979-01-02 02:09:25
+      bpunValid: null
+    - name: N50TEST-BATCH-A:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 601
+      userName: FLOPPY-USER
+      dateCreated: 2281735454
+      lastDateRead: 2281709813
+      lastDateWritten: 1950622319
+      dateCreatedStr: null
+      lastDateReadStr: null
+      lastDateWrittenStr: 1979-01-02 02:09:47
+      bpunValid: null
+    - name: N50TESTP-ASCOL-A:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1285
+      userName: FLOPPY-USER
+      dateCreated: 2281735460
+      lastDateRead: 2281709819
+      lastDateWritten: 1950622347
+      dateCreatedStr: null
+      lastDateReadStr: null
+      lastDateWrittenStr: 1979-01-02 02:10:11
+      bpunValid: null
+provenance:
+  contributor: www.datormuseum.se
+  originalPath: OK/DISK47.IMG
+  dateImaged: 2022-08-15
+  importedAt: 2026-08-11T17:07:04.480Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10112-b-d1-e3434aba
+  syncStatus: pending

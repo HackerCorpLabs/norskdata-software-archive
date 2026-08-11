@@ -1,0 +1,125 @@
+id: nd-211068-a00-d1-393f9eb3
+volumeName: 211068A00-XX-01D
+md5: 393f9eb3d45783cdafb2f517be263f59
+product:
+  id: ND-211068
+  version: A00
+  diskNumber: 1
+  language: XX
+image:
+  sizeBytes: 1310720
+  format: raw
+  controller: floppy
+  totalPages: 640
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 608
+  files:
+    - name: OE-REGIST-A00:PROG
+      type: PROG
+      pages: 31
+      bytes: 147456
+      userName: FLOPPY-USER
+      dateCreated: 2491214278
+      lastDateRead: 2579944122
+      lastDateWritten: 2491214278
+      dateCreatedStr: 1987-01-30 14:39:06
+      lastDateReadStr: 1988-07-03 13:10:58
+      lastDateWrittenStr: 1987-01-30 14:39:06
+      bpunValid: null
+    - name: OEA-AREAS-A00:PROG
+      type: PROG
+      pages: 124
+      bytes: 256000
+      userName: FLOPPY-USER
+      dateCreated: 2499995628
+      lastDateRead: 2579944003
+      lastDateWritten: 2499995827
+      dateCreatedStr: 1987-04-01 14:31:44
+      lastDateReadStr: 1988-07-03 13:09:03
+      lastDateWrittenStr: 1987-04-01 14:34:51
+      bpunValid: null
+    - name: OEB-BCKUP-MT-A00:PROG
+      type: PROG
+      pages: 112
+      bytes: 399360
+      userName: FLOPPY-USER
+      dateCreated: 2497355857
+      lastDateRead: 2499996638
+      lastDateWritten: 2497356042
+      dateCreatedStr: 1987-03-13 10:01:17
+      lastDateReadStr: 1987-04-01 14:47:30
+      lastDateWrittenStr: 1987-03-13 10:04:10
+      bpunValid: null
+    - name: OEB-BCKUP-UT-A00:PROG
+      type: PROG
+      pages: 109
+      bytes: 399360
+      userName: FLOPPY-USER
+      dateCreated: 2497355943
+      lastDateRead: 2579944031
+      lastDateWritten: 2497356051
+      dateCreatedStr: 1987-03-13 10:02:39
+      lastDateReadStr: 1988-07-03 13:09:31
+      lastDateWrittenStr: 1987-03-13 10:04:19
+      bpunValid: null
+    - name: OEC-EDIT-A00:PROG
+      type: PROG
+      pages: 52
+      bytes: 409600
+      userName: FLOPPY-USER
+      dateCreated: 2496183621
+      lastDateRead: 2579944086
+      lastDateWritten: 2496183698
+      dateCreatedStr: 1987-03-04 11:53:05
+      lastDateReadStr: 1988-07-03 13:10:22
+      lastDateWrittenStr: 1987-03-04 11:54:18
+      bpunValid: null
+    - name: OEC-MAIN-A00:PROG
+      type: PROG
+      pages: 102
+      bytes: 399360
+      userName: FLOPPY-USER
+      dateCreated: 2496183623
+      lastDateRead: 2579944057
+      lastDateWritten: 2496317855
+      dateCreatedStr: 1987-03-04 11:53:07
+      lastDateReadStr: 1988-07-03 13:09:57
+      lastDateWrittenStr: 1987-03-05 12:38:31
+      bpunValid: null
+    - name: OEC-SERVER-A00:PROG
+      type: PROG
+      pages: 70
+      bytes: 174080
+      userName: FLOPPY-USER
+      dateCreated: 2496320580
+      lastDateRead: 2579944103
+      lastDateWritten: 2496320581
+      dateCreatedStr: 1987-03-05 13:17:04
+      lastDateReadStr: 1988-07-03 13:10:39
+      lastDateWrittenStr: 1987-03-05 13:17:05
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 100/ND-disk-00157.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:25:59.426Z
+imagingLogs:
+  - ND-disk-00157.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-211068-a00-d1-393f9eb3
+  syncStatus: pending

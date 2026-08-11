@@ -1,0 +1,132 @@
+id: img-b2a8b7c52fbb
+volumeName: NILSSON-6
+md5: b2a8b7c52fbbbb197b8fe9032b28d04b
+image:
+  sizeBytes: 319488
+  format: raw
+  controller: floppy
+  totalPages: 156
+  pageSize: 2048
+  bootFormat: binary
+filesystem: ndfs
+ndfs:
+  users:
+    - name: SYSTEM
+      pagesUsed: 39
+  files:
+    - name: DESCARTES-PA:SYMB
+      type: SYMB
+      pages: 10
+      bytes: 20256
+      userName: SYSTEM
+      dateCreated: 2401448988
+      lastDateRead: 2401946313
+      lastDateWritten: 2401950096
+      dateCreatedStr: 1985-12-17 19:16:28
+      lastDateReadStr: 1985-12-21 12:43:09
+      lastDateWrittenStr: 1985-12-21 13:38:16
+      bpunValid: null
+    - name: 99-D-MODE-PA:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 164
+      userName: SYSTEM
+      dateCreated: 2401449046
+      lastDateRead: 2401946324
+      lastDateWritten: 2401939898
+      dateCreatedStr: 1985-12-17 19:17:22
+      lastDateReadStr: 1985-12-21 12:43:20
+      lastDateWrittenStr: 1985-12-21 11:06:58
+      bpunValid: null
+    - name: 91-D-MODE-PA:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 85
+      userName: SYSTEM
+      dateCreated: 2401449071
+      lastDateRead: 2401946349
+      lastDateWritten: 2401939931
+      dateCreatedStr: 1985-12-17 19:17:47
+      lastDateReadStr: 1985-12-21 12:43:45
+      lastDateWrittenStr: 1985-12-21 11:07:27
+      bpunValid: null
+    - name: LIB-DESCART-PA:DATA
+      type: DATA
+      pages: 2
+      bytes: 3177
+      userName: SYSTEM
+      dateCreated: 2401449113
+      lastDateRead: 2401946385
+      lastDateWritten: 2401939919
+      dateCreatedStr: 1985-12-17 19:18:25
+      lastDateReadStr: 1985-12-21 12:44:17
+      lastDateWrittenStr: 1985-12-21 11:07:15
+      bpunValid: null
+    - name: TOLK-PA:SYMB
+      type: SYMB
+      pages: 12
+      bytes: 22982
+      userName: SYSTEM
+      dateCreated: 2401449240
+      lastDateRead: null
+      lastDateWritten: 2401449242
+      dateCreatedStr: 1985-12-17 19:20:24
+      lastDateReadStr: null
+      lastDateWrittenStr: 1985-12-17 19:20:26
+      bpunValid: null
+    - name: TITTA-MINNET-PA:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 502
+      userName: SYSTEM
+      dateCreated: 2401450712
+      lastDateRead: 2560842016
+      lastDateWritten: 2401450714
+      dateCreatedStr: 1985-12-17 19:43:24
+      lastDateReadStr: 1988-02-17 21:36:32
+      lastDateWrittenStr: 1985-12-17 19:43:26
+      bpunValid: null
+    - name: 90-DEBUG-PA:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 95
+      userName: SYSTEM
+      dateCreated: 2401939957
+      lastDateRead: 2401946339
+      lastDateWritten: 2401939958
+      dateCreatedStr: 1985-12-21 11:07:53
+      lastDateReadStr: 1985-12-21 12:43:35
+      lastDateWrittenStr: 1985-12-21 11:07:54
+      bpunValid: null
+    - name: INSTR-DESCART-PA:TEXT
+      type: TEXT
+      pages: 2
+      bytes: 3689
+      userName: SYSTEM
+      dateCreated: 2401939994
+      lastDateRead: 48958025
+      lastDateWritten: 2401939995
+      dateCreatedStr: 1985-12-21 11:08:26
+      lastDateReadStr: 1950-11-21 16:41:09
+      lastDateWrittenStr: 1985-12-21 11:08:27
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 300/ND-disk-00334.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:45:47.401Z
+imagingLogs:
+  - ND-disk-00334.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-b2a8b7c52fbb
+  syncStatus: pending

@@ -1,0 +1,144 @@
+id: patch-patch-sintran-2f0b7205
+volumeName: PATCH-SINTRAN
+md5: 2f0b7205975e952e9481476f15f5a7b9
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: SYSTEM
+      pagesUsed: 127
+  files:
+    - name: NEW-TIMESLICER-G:MODE
+      type: MODE
+      pages: 3
+      bytes: 4970
+      userName: SYSTEM
+      dateCreated: 2290397546
+      lastDateRead: 2281702448
+      lastDateWritten: 2290397551
+      dateCreatedStr: 1984-02-02 11:05:42
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-02-02 11:05:47
+      bpunValid: null
+    - name: PATCH-FILE:PATC
+      type: PATC
+      pages: 72
+      bytes: 6905
+      userName: SYSTEM
+      dateCreated: 2290397554
+      lastDateRead: 2281702515
+      lastDateWritten: 2290397555
+      dateCreatedStr: 1984-02-02 11:05:50
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-02-02 11:05:51
+      bpunValid: null
+    - name: TIMESLICER-CODE:NMAC
+      type: NMAC
+      pages: 10
+      bytes: 19330
+      userName: SYSTEM
+      dateCreated: 2290397633
+      lastDateRead: 2281702531
+      lastDateWritten: 2290397633
+      dateCreatedStr: 1984-02-02 11:07:01
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-02-02 11:07:01
+      bpunValid: null
+    - name: TIMESLICER-CMND:NMAC
+      type: NMAC
+      pages: 12
+      bytes: 22909
+      userName: SYSTEM
+      dateCreated: 2290397651
+      lastDateRead: null
+      lastDateWritten: 2290397652
+      dateCreatedStr: 1984-02-02 11:07:19
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-02-02 11:07:20
+      bpunValid: null
+    - name: SYMBOLS:FADM
+      type: FADM
+      pages: 1
+      bytes: 29
+      userName: SYSTEM
+      dateCreated: 2290397675
+      lastDateRead: null
+      lastDateWritten: 2290397676
+      dateCreatedStr: 1984-02-02 11:07:43
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-02-02 11:07:44
+      bpunValid: null
+    - name: REFERENCE:FADM
+      type: FADM
+      pages: 2
+      bytes: 683
+      userName: SYSTEM
+      dateCreated: 2290397680
+      lastDateRead: null
+      lastDateWritten: 2290397681
+      dateCreatedStr: 1984-02-02 11:07:48
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-02-02 11:07:49
+      bpunValid: null
+    - name: DEFINE-SYMBOLS:PROG
+      type: PROG
+      pages: 6
+      bytes: 12288
+      userName: SYSTEM
+      dateCreated: 2290397687
+      lastDateRead: null
+      lastDateWritten: 2290397687
+      dateCreatedStr: 1984-02-02 11:07:55
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-02-02 11:07:55
+      bpunValid: null
+    - name: FILE-TEST-H:PROG
+      type: PROG
+      pages: 9
+      bytes: 18432
+      userName: SYSTEM
+      dateCreated: 2290397703
+      lastDateRead: null
+      lastDateWritten: 2290397703
+      dateCreatedStr: 1984-02-02 11:08:07
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-02-02 11:08:07
+      bpunValid: null
+    - name: CPU-TYPE:PROG
+      type: PROG
+      pages: 2
+      bytes: 133120
+      userName: SYSTEM
+      dateCreated: 2290397721
+      lastDateRead: null
+      lastDateWritten: 2290397721
+      dateCreatedStr: 1984-02-02 11:08:25
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-02-02 11:08:25
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 400/ND-disk-00416.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:49:28.637Z
+imagingLogs:
+  - ND-disk-00416.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-patch-patch-sintran-2f0b7205
+  syncStatus: pending

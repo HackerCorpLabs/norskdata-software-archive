@@ -1,0 +1,108 @@
+id: img-04e93155bee9
+volumeName: GODIS-2
+md5: 04e93155bee9a5ff45959693ae0a354f
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: binary
+filesystem: ndfs
+ndfs:
+  users:
+    - name: SYSTEM
+      pagesUsed: 148
+  files:
+    - name: RPG-II-RUN-2143I:BRF
+      type: BRF
+      pages: 38
+      bytes: 76984
+      userName: SYSTEM
+      dateCreated: 2595939204
+      lastDateRead: null
+      lastDateWritten: 2595939211
+      dateCreatedStr: 1988-10-29 14:14:04
+      lastDateReadStr: null
+      lastDateWrittenStr: 1988-10-29 14:14:11
+      bpunValid: null
+    - name: NOTIS-WP-SWE-I:HELP
+      type: HELP
+      pages: 92
+      bytes: 184323
+      userName: SYSTEM
+      dateCreated: 2595939352
+      lastDateRead: null
+      lastDateWritten: 2595939354
+      dateCreatedStr: 1988-10-29 14:16:24
+      lastDateReadStr: null
+      lastDateWrittenStr: 1988-10-29 14:16:26
+      bpunValid: null
+    - name: NOTIS-TF-SWE-I:LIB
+      type: LIB
+      pages: 14
+      bytes: 4294967296
+      userName: SYSTEM
+      dateCreated: 2595939622
+      lastDateRead: null
+      lastDateWritten: 2595939624
+      dateCreatedStr: 1988-10-29 14:20:38
+      lastDateReadStr: null
+      lastDateWrittenStr: 1988-10-29 14:20:40
+      bpunValid: null
+    - name: TEX-LIB-SWE-2A:TEXT
+      type: TEXT
+      pages: 0
+      bytes: 4294967296
+      userName: SYSTEM
+      dateCreated: 2595939678
+      lastDateRead: null
+      lastDateWritten: 2595939682
+      dateCreatedStr: 1988-10-29 14:21:30
+      lastDateReadStr: null
+      lastDateWrittenStr: 1988-10-29 14:21:34
+      bpunValid: null
+    - name: WP-PRINTERS:TEXT
+      type: TEXT
+      pages: 0
+      bytes: 4294967296
+      userName: SYSTEM
+      dateCreated: 2595939922
+      lastDateRead: 2595939922
+      lastDateWritten: 2595939922
+      dateCreatedStr: 1988-10-29 14:25:18
+      lastDateReadStr: 1988-10-29 14:25:18
+      lastDateWrittenStr: 1988-10-29 14:25:18
+      bpunValid: null
+    - name: WP-PRINTER:TEXT
+      type: TEXT
+      pages: 0
+      bytes: 4294967296
+      userName: SYSTEM
+      dateCreated: 2595940024
+      lastDateRead: null
+      lastDateWritten: 2595940025
+      dateCreatedStr: 1988-10-29 14:26:56
+      lastDateReadStr: null
+      lastDateWrittenStr: 1988-10-29 14:26:57
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 300/ND-disk-00320.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:45:44.832Z
+imagingLogs:
+  - ND-disk-00320.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-04e93155bee9
+  syncStatus: pending

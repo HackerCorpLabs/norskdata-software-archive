@@ -1,0 +1,168 @@
+id: img-5571c817188d
+volumeName: SOMEONE-ELSE-0
+md5: 5571c817188df8a7cbd45f47a317f8a4
+image:
+  sizeBytes: 319488
+  format: raw
+  controller: floppy
+  totalPages: 156
+  pageSize: 2048
+  bootFormat: flomon
+filesystem: ndfs
+ndfs:
+  users:
+    - name: HULTEN
+      pagesUsed: 51
+  files:
+    - name: OUT-LINE:SYMB
+      type: SYMB
+      pages: 3
+      bytes: 5636
+      userName: HULTEN
+      dateCreated: 2758866937
+      lastDateRead: 75669540
+      lastDateWritten: 2760578562
+      dateCreatedStr: 1991-01-24 15:31:57
+      lastDateReadStr: 1951-02-01 10:00:36
+      lastDateWrittenStr: 1991-02-05 17:24:02
+      bpunValid: null
+    - name: PLAYFIELD:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1554
+      userName: HULTEN
+      dateCreated: 2758618864
+      lastDateRead: 224079494
+      lastDateWritten: 2758864018
+      dateCreatedStr: 1991-01-22 18:59:48
+      lastDateReadStr: 1953-05-13 18:58:06
+      lastDateWrittenStr: 1991-01-24 14:50:18
+      bpunValid: null
+    - name: KOPIERA-100:PROG
+      type: PROG
+      pages: 1
+      bytes: 622
+      userName: HULTEN
+      dateCreated: 2626619663
+      lastDateRead: 75669545
+      lastDateWritten: 2626619664
+      dateCreatedStr: 1989-02-07 16:36:15
+      lastDateReadStr: 1951-02-01 10:00:41
+      lastDateWrittenStr: 1989-02-07 16:36:16
+      bpunValid: null
+    - name: SPACE-INVADERS:SYMB
+      type: SYMB
+      pages: 16
+      bytes: 31849
+      userName: HULTEN
+      dateCreated: 2648773642
+      lastDateRead: 2795587381
+      lastDateWritten: 2713410060
+      dateCreatedStr: 1989-07-16 17:16:10
+      lastDateReadStr: 1991-10-16 20:28:53
+      lastDateWrittenStr: 1990-06-29 21:40:12
+      bpunValid: null
+    - name: OUT-LINE:0000
+      type: "0000"
+      pages: 1
+      bytes: 1581
+      userName: HULTEN
+      dateCreated: 2762930018
+      lastDateRead: null
+      lastDateWritten: 2762930019
+      dateCreatedStr: 1991-02-23 15:29:34
+      lastDateReadStr: null
+      lastDateWrittenStr: 1991-02-23 15:29:35
+      bpunValid: null
+    - name: OUT-LINE:0001
+      type: "0001"
+      pages: 2
+      bytes: 2415
+      userName: HULTEN
+      dateCreated: 2763206178
+      lastDateRead: 224079447
+      lastDateWritten: 2763206180
+      dateCreatedStr: 1991-02-25 18:56:34
+      lastDateReadStr: 1953-05-13 18:57:23
+      lastDateWrittenStr: 1991-02-25 18:56:36
+      bpunValid: null
+    - name: OUT-LINE:0002
+      type: "0002"
+      pages: 2
+      bytes: 3196
+      userName: HULTEN
+      dateCreated: 2763220327
+      lastDateRead: null
+      lastDateWritten: 2763220328
+      dateCreatedStr: 1991-02-25 22:21:39
+      lastDateReadStr: null
+      lastDateWrittenStr: 1991-02-25 22:21:40
+      bpunValid: null
+    - name: OUT-LINE:0003
+      type: "0003"
+      pages: 2
+      bytes: 3322
+      userName: HULTEN
+      dateCreated: 2763336590
+      lastDateRead: null
+      lastDateWritten: 2763336592
+      dateCreatedStr: 1991-02-26 18:46:14
+      lastDateReadStr: null
+      lastDateWrittenStr: 1991-02-26 18:46:16
+      bpunValid: null
+    - name: OUT-LINE:0004
+      type: "0004"
+      pages: 4
+      bytes: 7756
+      userName: HULTEN
+      dateCreated: 2765709388
+      lastDateRead: null
+      lastDateWritten: 2765709390
+      dateCreatedStr: 1991-03-12 22:01:12
+      lastDateReadStr: null
+      lastDateWrittenStr: 1991-03-12 22:01:14
+      bpunValid: null
+    - name: SCORE:0000
+      type: "0000"
+      pages: 1
+      bytes: 1001
+      userName: HULTEN
+      dateCreated: 2765798239
+      lastDateRead: null
+      lastDateWritten: 2765798240
+      dateCreatedStr: 1991-03-13 11:45:31
+      lastDateReadStr: null
+      lastDateWrittenStr: 1991-03-13 11:45:32
+      bpunValid: null
+    - name: OUT-LINE:0005
+      type: "0005"
+      pages: 6
+      bytes: 12221
+      userName: HULTEN
+      dateCreated: 2767509222
+      lastDateRead: null
+      lastDateWritten: 2767509223
+      dateCreatedStr: 1991-03-26 13:27:38
+      lastDateReadStr: null
+      lastDateWrittenStr: 1991-03-26 13:27:39
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 200/ND-disk-00284b.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:42:05.547Z
+imagingLogs:
+  - ND-disk-00284b.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-5571c817188d
+  syncStatus: pending

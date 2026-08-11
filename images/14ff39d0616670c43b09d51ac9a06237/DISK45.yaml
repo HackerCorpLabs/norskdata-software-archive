@@ -1,0 +1,134 @@
+id: nd-10004-q-d1-14ff39d0
+volumeName: ND-10004Q-PART1
+md5: 14ff39d0616670c43b09d51ac9a06237
+product:
+  id: ND-10004
+  version: Q
+  diskNumber: 1
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: flomon
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 107
+  files:
+    - name: N50ASS-1703G:BPUN
+      type: BPUN
+      pages: 10
+      bytes: 19572
+      userName: FLOPPY-USER
+      dateCreated: 1922744823
+      lastDateRead: 2281708987
+      lastDateWritten: 2021173771
+      dateCreatedStr: 1978-10-13 12:07:55
+      lastDateReadStr: null
+      lastDateWrittenStr: 1980-01-28 10:40:11
+      bpunValid: true
+    - name: N50LDR-1704M:BPUN
+      type: BPUN
+      pages: 17
+      bytes: 34584
+      userName: FLOPPY-USER
+      dateCreated: 1922745101
+      lastDateRead: 2281708999
+      lastDateWritten: 1966795407
+      dateCreatedStr: 1978-10-13 12:12:13
+      lastDateReadStr: null
+      lastDateWrittenStr: 1979-04-29 14:42:15
+      bpunValid: true
+    - name: N50FTN-2159G:BPUN
+      type: BPUN
+      pages: 33
+      bytes: 67368
+      userName: FLOPPY-USER
+      dateCreated: 1908866531
+      lastDateRead: 2281709011
+      lastDateWritten: 2100340889
+      dateCreatedStr: 1978-07-03 15:55:35
+      lastDateReadStr: null
+      lastDateWrittenStr: 1981-04-24 10:34:25
+      bpunValid: true
+    - name: N50-FIO0-2161G:BRF5
+      type: BRF5
+      pages: 9
+      bytes: 16483
+      userName: FLOPPY-USER
+      dateCreated: 1860114821
+      lastDateRead: 2281709031
+      lastDateWritten: 2100228645
+      dateCreatedStr: 1977-11-15 17:38:05
+      lastDateReadStr: null
+      lastDateWrittenStr: 1981-04-23 15:08:37
+      bpunValid: null
+    - name: N50-LIB-2164E:BRF5
+      type: BRF5
+      pages: 12
+      bytes: 22410
+      userName: FLOPPY-USER
+      dateCreated: 1860114952
+      lastDateRead: 2281709039
+      lastDateWritten: 2100229223
+      dateCreatedStr: 1977-11-15 17:40:08
+      lastDateReadStr: null
+      lastDateWrittenStr: 1981-04-23 15:17:39
+      bpunValid: null
+    - name: N50-FIO8-2162G:BRF5
+      type: BRF5
+      pages: 9
+      bytes: 16483
+      userName: FLOPPY-USER
+      dateCreated: 1908971610
+      lastDateRead: 2281709050
+      lastDateWritten: 2100228884
+      dateCreatedStr: 1978-07-04 09:33:26
+      lastDateReadStr: null
+      lastDateWrittenStr: 1981-04-23 15:12:20
+      bpunValid: null
+    - name: N50BRF-EDI-2152B:BPUN
+      type: BPUN
+      pages: 6
+      bytes: 10610
+      userName: FLOPPY-USER
+      dateCreated: 1854855045
+      lastDateRead: 2281709063
+      lastDateWritten: 1993926606
+      dateCreatedStr: 1977-10-07 13:30:05
+      lastDateReadStr: null
+      lastDateWrittenStr: 1979-11-12 14:31:14
+      bpunValid: true
+    - name: N50-RUN-2160A:BRF5
+      type: BRF5
+      pages: 2
+      bytes: 2648
+      userName: FLOPPY-USER
+      dateCreated: 1860115333
+      lastDateRead: 2281709070
+      lastDateWritten: 1860115334
+      dateCreatedStr: 1977-11-15 17:46:05
+      lastDateReadStr: null
+      lastDateWrittenStr: 1977-11-15 17:46:06
+      bpunValid: null
+provenance:
+  contributor: www.datormuseum.se
+  originalPath: OK/DISK45.IMG
+  dateImaged: 2022-08-15
+  importedAt: 2026-08-11T17:07:04.408Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10004-q-d1-14ff39d0
+  syncStatus: pending

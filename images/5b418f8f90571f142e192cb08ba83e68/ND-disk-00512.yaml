@@ -1,0 +1,65 @@
+id: nd-10628-d00-d2-5b418f8f
+volumeName: 10628D00-XX-02S
+md5: 5b418f8f90571f142e192cb08ba83e68
+product:
+  id: ND-10628
+  version: D00
+  diskNumber: 2
+  language: XX
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: flomon
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 52
+  files:
+    - name: FLOPP-TO-WINCH-D:BPUN
+      type: BPUN
+      pages: 26
+      bytes: 51646
+      userName: FLOPPY-USER
+      dateCreated: 2389919985
+      lastDateRead: 2436701401
+      lastDateWritten: 2389920615
+      dateCreatedStr: 1985-09-25 20:35:49
+      lastDateReadStr: 1986-04-30 17:51:25
+      lastDateWrittenStr: 1985-09-25 20:45:39
+      bpunValid: true
+    - name: WINCH-TO-FLOPP-D:BPUN
+      type: BPUN
+      pages: 23
+      bytes: 45930
+      userName: FLOPPY-USER
+      dateCreated: 2389919985
+      lastDateRead: 2436701418
+      lastDateWritten: 2389920723
+      dateCreatedStr: 1985-09-25 20:35:49
+      lastDateReadStr: 1986-04-30 17:51:42
+      lastDateWrittenStr: 1985-09-25 20:47:19
+      bpunValid: true
+provenance:
+  contributor: gandalf
+  originalPath: 500/ND-disk-00512.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:50:41.263Z
+imagingLogs:
+  - ND-disk-00512.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10628-d00-d2-5b418f8f
+  syncStatus: pending

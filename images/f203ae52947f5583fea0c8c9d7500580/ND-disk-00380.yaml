@@ -1,0 +1,384 @@
+id: img-f203ae52947f
+volumeName: KALIFENS-SKIFA-1
+md5: f203ae52947f5583fea0c8c9d7500580
+image:
+  sizeBytes: 319488
+  format: raw
+  controller: floppy
+  totalPages: 156
+  pageSize: 2048
+  bootFormat: flomon
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 141
+  files:
+    - name: MASTERMIND-KALIF:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 3843
+      userName: FLOPPY-USER
+      dateCreated: 2087919653
+      lastDateRead: 2557281645
+      lastDateWritten: 2087919659
+      dateCreatedStr: 1981-01-25 18:00:37
+      lastDateReadStr: 1988-01-22 16:21:45
+      lastDateWrittenStr: 1981-01-25 18:00:43
+      bpunValid: null
+    - name: BOKSTAV-KALIF:SYMB
+      type: SYMB
+      pages: 3
+      bytes: 4146
+      userName: FLOPPY-USER
+      dateCreated: 2087919897
+      lastDateRead: 2281703821
+      lastDateWritten: 2116893866
+      dateCreatedStr: 1981-01-25 18:04:25
+      lastDateReadStr: null
+      lastDateWrittenStr: 1981-08-22 19:50:42
+      bpunValid: null
+    - name: MONOPOL-KALIF:SYMB
+      type: SYMB
+      pages: 17
+      bytes: 34350
+      userName: FLOPPY-USER
+      dateCreated: 2089898297
+      lastDateRead: 2557281650
+      lastDateWritten: 2103769682
+      dateCreatedStr: 1981-02-08 21:04:57
+      lastDateReadStr: 1988-01-22 16:21:50
+      lastDateWrittenStr: 1981-05-18 15:41:18
+      bpunValid: null
+    - name: BIBLIOTEK-KALIF:SYMB
+      type: SYMB
+      pages: 3
+      bytes: 3198
+      userName: FLOPPY-USER
+      dateCreated: 2087920342
+      lastDateRead: 2530157254
+      lastDateWritten: 2112039779
+      dateCreatedStr: 1981-01-25 18:11:22
+      lastDateReadStr: 1987-11-07 18:11:06
+      lastDateWrittenStr: 1981-07-17 18:45:35
+      bpunValid: null
+    - name: SIFF-KALIF:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1703
+      userName: FLOPPY-USER
+      dateCreated: 2113608212
+      lastDateRead: 2281703847
+      lastDateWritten: 2113608213
+      dateCreatedStr: 1981-07-29 17:40:20
+      lastDateReadStr: null
+      lastDateWrittenStr: 1981-07-29 17:40:21
+      bpunValid: null
+    - name: LOCK-TERM-KALIF:SYMB
+      type: SYMB
+      pages: 3
+      bytes: 4288
+      userName: FLOPPY-USER
+      dateCreated: 2095495472
+      lastDateRead: 2281703917
+      lastDateWritten: 2096056864
+      dateCreatedStr: 1981-03-19 11:36:48
+      lastDateReadStr: null
+      lastDateWrittenStr: 1981-03-23 20:40:32
+      bpunValid: null
+    - name: PROBLEM-KALIF:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 3270
+      userName: FLOPPY-USER
+      dateCreated: 2113098269
+      lastDateRead: 2281703937
+      lastDateWritten: 2130277803
+      dateCreatedStr: 1981-07-25 21:08:29
+      lastDateReadStr: null
+      lastDateWrittenStr: 1981-11-28 23:22:43
+      bpunValid: null
+    - name: ENERGI-KALIF:SYMB
+      type: SYMB
+      pages: 4
+      bytes: 7305
+      userName: FLOPPY-USER
+      dateCreated: 2100649285
+      lastDateRead: 2281703945
+      lastDateWritten: 2113616207
+      dateCreatedStr: 1981-04-26 21:53:05
+      lastDateReadStr: null
+      lastDateWrittenStr: 1981-07-29 19:37:15
+      bpunValid: null
+    - name: DIGITAL-KALIF:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1738
+      userName: FLOPPY-USER
+      dateCreated: 2113608251
+      lastDateRead: 2281703959
+      lastDateWritten: 2113608279
+      dateCreatedStr: 1981-07-29 17:40:59
+      lastDateReadStr: null
+      lastDateWrittenStr: 1981-07-29 17:41:23
+      bpunValid: null
+    - name: MONOPOL-KALIF:DATA
+      type: DATA
+      pages: 1
+      bytes: 1074
+      userName: FLOPPY-USER
+      dateCreated: 2103769800
+      lastDateRead: 2530157262
+      lastDateWritten: 2103769848
+      dateCreatedStr: 1981-05-18 15:43:08
+      lastDateReadStr: 1987-11-07 18:11:14
+      lastDateWrittenStr: 1981-05-18 15:43:56
+      bpunValid: null
+    - name: ENERGI-KALIF:DATA
+      type: DATA
+      pages: 1
+      bytes: 25
+      userName: FLOPPY-USER
+      dateCreated: 2101534308
+      lastDateRead: 2530157268
+      lastDateWritten: 2101534309
+      dateCreatedStr: 1981-05-01 13:57:36
+      lastDateReadStr: 1987-11-07 18:11:20
+      lastDateWrittenStr: 1981-05-01 13:57:37
+      bpunValid: null
+    - name: MOONLANDER-KALIF:SYMB
+      type: SYMB
+      pages: 3
+      bytes: 5786
+      userName: FLOPPY-USER
+      dateCreated: 2088026318
+      lastDateRead: 2530157272
+      lastDateWritten: 2088189234
+      dateCreatedStr: 1981-01-26 12:03:14
+      lastDateReadStr: 1987-11-07 18:11:24
+      lastDateWrittenStr: 1981-01-27 19:52:50
+      bpunValid: null
+    - name: ANALYS-KALIF:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1707
+      userName: FLOPPY-USER
+      dateCreated: 2088051509
+      lastDateRead: 2530157278
+      lastDateWritten: 2088199033
+      dateCreatedStr: 1981-01-26 18:12:53
+      lastDateReadStr: 1987-11-07 18:11:30
+      lastDateWrittenStr: 1981-01-27 22:13:57
+      bpunValid: null
+    - name: MOON-DATA-KALIF:DATA
+      type: DATA
+      pages: 1
+      bytes: 1144
+      userName: FLOPPY-USER
+      dateCreated: 2088189318
+      lastDateRead: 2281703988
+      lastDateWritten: 2088189320
+      dateCreatedStr: 1981-01-27 19:54:06
+      lastDateReadStr: null
+      lastDateWrittenStr: 1981-01-27 19:54:08
+      bpunValid: null
+    - name: DIGI-2-KALIF:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1888
+      userName: FLOPPY-USER
+      dateCreated: 2113608320
+      lastDateRead: 2433267118
+      lastDateWritten: 2113608343
+      dateCreatedStr: 1981-07-29 17:42:00
+      lastDateReadStr: 1986-04-04 11:22:46
+      lastDateWrittenStr: 1981-07-29 17:42:23
+      bpunValid: null
+    - name: DIGILOG-KALIF:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 3324
+      userName: FLOPPY-USER
+      dateCreated: 2113608388
+      lastDateRead: 2433267119
+      lastDateWritten: 2113608390
+      dateCreatedStr: 1981-07-29 17:43:04
+      lastDateReadStr: 1986-04-04 11:22:47
+      lastDateWrittenStr: 1981-07-29 17:43:06
+      bpunValid: null
+    - name: BRF-KALIF:BRF
+      type: BRF
+      pages: 7
+      bytes: 12476
+      userName: FLOPPY-USER
+      dateCreated: 2113608994
+      lastDateRead: 2433269293
+      lastDateWritten: 2113608995
+      dateCreatedStr: 1981-07-29 17:52:34
+      lastDateReadStr: 1986-04-04 11:56:45
+      lastDateWrittenStr: 1981-07-29 17:52:35
+      bpunValid: null
+    - name: AVSKUM-KALIF:PROG
+      type: PROG
+      pages: 2
+      bytes: 3828
+      userName: FLOPPY-USER
+      dateCreated: 2123061173
+      lastDateRead: 2530157425
+      lastDateWritten: 2130277928
+      dateCreatedStr: 1981-10-05 21:30:53
+      lastDateReadStr: 1987-11-07 18:13:49
+      lastDateWrittenStr: 1981-11-28 23:24:40
+      bpunValid: null
+    - name: COPY-LINE-KALIF:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 749
+      userName: FLOPPY-USER
+      dateCreated: 2101694894
+      lastDateRead: 2281704001
+      lastDateWritten: 2105101126
+      dateCreatedStr: 1981-05-02 21:06:46
+      lastDateReadStr: null
+      lastDateWrittenStr: 1981-05-28 20:45:06
+      bpunValid: null
+    - name: OLGA-SEX-1-KALIF:SEX
+      type: SEX
+      pages: 6
+      bytes: 11886
+      userName: FLOPPY-USER
+      dateCreated: 2090934351
+      lastDateRead: 2530157291
+      lastDateWritten: 2093405696
+      dateCreatedStr: 1981-02-16 18:01:15
+      lastDateReadStr: 1987-11-07 18:11:43
+      lastDateWrittenStr: 1981-03-03 13:24:00
+      bpunValid: null
+    - name: OLGA-SEX-2-KALIF:SEX
+      type: SEX
+      pages: 3
+      bytes: 5629
+      userName: FLOPPY-USER
+      dateCreated: 2090934384
+      lastDateRead: 2530157313
+      lastDateWritten: 2093405733
+      dateCreatedStr: 1981-02-16 18:01:48
+      lastDateReadStr: 1987-11-07 18:12:01
+      lastDateWrittenStr: 1981-03-03 13:24:37
+      bpunValid: null
+    - name: UPPTAGEN:PROG
+      type: PROG
+      pages: 1
+      bytes: 1728
+      userName: FLOPPY-USER
+      dateCreated: 2123063912
+      lastDateRead: 2557281690
+      lastDateWritten: 2123064020
+      dateCreatedStr: 1981-10-05 22:09:40
+      lastDateReadStr: 1988-01-22 16:22:26
+      lastDateWrittenStr: 1981-10-05 22:11:20
+      bpunValid: null
+    - name: BOKSTAV:DATA
+      type: DATA
+      pages: 4
+      bytes: 6577
+      userName: FLOPPY-USER
+      dateCreated: 2113611561
+      lastDateRead: 2433267148
+      lastDateWritten: 2113611562
+      dateCreatedStr: 1981-07-29 18:28:41
+      lastDateReadStr: 1986-04-04 11:23:12
+      lastDateWrittenStr: 1981-07-29 18:28:42
+      bpunValid: null
+    - name: SNABB-EDIT-KALIF:SYMB
+      type: SYMB
+      pages: 14
+      bytes: 27637
+      userName: FLOPPY-USER
+      dateCreated: 2116894060
+      lastDateRead: 2433267151
+      lastDateWritten: 2116894864
+      dateCreatedStr: 1981-08-22 19:53:44
+      lastDateReadStr: 1986-04-04 11:23:15
+      lastDateWrittenStr: 1981-08-22 20:02:16
+      bpunValid: null
+    - name: PL-MONOPOL-KALIF:SYMB
+      type: SYMB
+      pages: 16
+      bytes: 32311
+      userName: FLOPPY-USER
+      dateCreated: 2103768878
+      lastDateRead: 2433267156
+      lastDateWritten: 2113608717
+      dateCreatedStr: 1981-05-18 15:28:46
+      lastDateReadStr: 1986-04-04 11:23:20
+      lastDateWrittenStr: 1981-07-29 17:48:13
+      bpunValid: null
+    - name: PASSWORD-KALIF:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 832
+      userName: FLOPPY-USER
+      dateCreated: 2113753455
+      lastDateRead: 2530157584
+      lastDateWritten: 2113753457
+      dateCreatedStr: 1981-07-30 21:05:47
+      lastDateReadStr: 1987-11-07 18:16:16
+      lastDateWrittenStr: 1981-07-30 21:05:49
+      bpunValid: null
+    - name: SNABBIS-KALIF:SYMB
+      type: SYMB
+      pages: 3
+      bytes: 5512
+      userName: FLOPPY-USER
+      dateCreated: 2103770463
+      lastDateRead: 2530157540
+      lastDateWritten: 2111653574
+      dateCreatedStr: 1981-05-18 15:53:31
+      lastDateReadStr: 1987-11-07 18:15:36
+      lastDateWrittenStr: 1981-07-14 20:27:06
+      bpunValid: null
+    - name: MAC-BIB-KALIF:SYMB
+      type: SYMB
+      pages: 3
+      bytes: 4267
+      userName: FLOPPY-USER
+      dateCreated: 2103912523
+      lastDateRead: 2530157460
+      lastDateWritten: 2118954407
+      dateCreatedStr: 1981-05-19 18:33:11
+      lastDateReadStr: 1987-11-07 18:14:20
+      lastDateWrittenStr: 1981-09-06 10:54:39
+      bpunValid: null
+    - name: STOR-LITEN-KALIF:SYMB
+      type: SYMB
+      pages: 5
+      bytes: 1736
+      userName: FLOPPY-USER
+      dateCreated: 2103919847
+      lastDateRead: 2530157467
+      lastDateWritten: 2129602509
+      dateCreatedStr: 1981-05-19 20:19:39
+      lastDateReadStr: 1987-11-07 18:14:27
+      lastDateWrittenStr: 1981-11-23 18:31:13
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 300/ND-disk-00380.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:45:56.468Z
+imagingLogs:
+  - ND-disk-00380.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-f203ae52947f
+  syncStatus: pending

@@ -1,0 +1,161 @@
+id: nd-211070-a01-d1-c0285b50
+volumeName: 211070A01-XX-01D
+md5: c0285b50bad17b0493d537e54f2de40b
+product:
+  id: ND-211070
+  version: A01
+  diskNumber: 1
+  language: XX
+image:
+  sizeBytes: 1310720
+  format: raw
+  controller: floppy
+  totalPages: 640
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 514
+  files:
+    - name: OEA-AREAS-EN-A01:CONF
+      type: CONF
+      pages: 14
+      bytes: 155828
+      userName: FLOPPY-USER
+      dateCreated: 2558824566
+      lastDateRead: 2622950362
+      lastDateWritten: 2558824568
+      dateCreatedStr: 1988-02-02 09:01:54
+      lastDateReadStr: 1989-01-11 16:47:26
+      lastDateWrittenStr: 1988-02-02 09:01:56
+      bpunValid: null
+    - name: OEA-AREAS-NO-A01:CONF
+      type: CONF
+      pages: 14
+      bytes: 156264
+      userName: FLOPPY-USER
+      dateCreated: 2558824601
+      lastDateRead: 2622950366
+      lastDateWritten: 2558824603
+      dateCreatedStr: 1988-02-02 09:02:25
+      lastDateReadStr: 1989-01-11 16:47:30
+      lastDateWrittenStr: 1988-02-02 09:02:27
+      bpunValid: null
+    - name: OEA-AREAS-A01:PROG
+      type: PROG
+      pages: 124
+      bytes: 256000
+      userName: FLOPPY-USER
+      dateCreated: 2558727287
+      lastDateRead: 2622950371
+      lastDateWritten: 2558824623
+      dateCreatedStr: 1988-02-01 17:17:55
+      lastDateReadStr: 1989-01-11 16:47:35
+      lastDateWrittenStr: 1988-02-02 09:02:47
+      bpunValid: null
+    - name: IN-OEA-A01:PROG
+      type: PROG
+      pages: 79
+      bytes: 202854
+      userName: FLOPPY-USER
+      dateCreated: 2590824404
+      lastDateRead: 2622950177
+      lastDateWritten: 2621759619
+      dateCreatedStr: 1988-09-22 13:31:20
+      lastDateReadStr: 1989-01-11 16:44:33
+      lastDateWrittenStr: 1989-01-02 14:02:03
+      bpunValid: null
+    - name: IN-OEA-A01:INIT
+      type: INIT
+      pages: 3
+      bytes: 4720
+      userName: FLOPPY-USER
+      dateCreated: 2591488023
+      lastDateRead: 2622950176
+      lastDateWritten: 2622262869
+      dateCreatedStr: 1988-09-27 15:32:23
+      lastDateReadStr: 1989-01-11 16:44:32
+      lastDateWrittenStr: 1989-01-06 08:57:21
+      bpunValid: null
+    - name: IN-OEA-EN-A01:XCOM
+      type: XCOM
+      pages: 13
+      bytes: 25572
+      userName: FLOPPY-USER
+      dateCreated: 2590824496
+      lastDateRead: 2622950158
+      lastDateWritten: 2621759711
+      dateCreatedStr: 1988-09-22 13:32:48
+      lastDateReadStr: 1989-01-11 16:44:14
+      lastDateWrittenStr: 1989-01-02 14:03:31
+      bpunValid: null
+    - name: UE-ERMSG-EN-C06:ERR
+      type: ERR
+      pages: 118
+      bytes: 241664
+      userName: FLOPPY-USER
+      dateCreated: 2521882214
+      lastDateRead: 2601592280
+      lastDateWritten: 2521882214
+      dateCreatedStr: 1987-09-08 13:57:38
+      lastDateReadStr: 1988-12-08 18:23:24
+      lastDateWrittenStr: 1987-09-08 13:57:38
+      bpunValid: null
+    - name: UE-ERMSG-NO-C06:ERR
+      type: ERR
+      pages: 121
+      bytes: 247808
+      userName: FLOPPY-USER
+      dateCreated: 2521882263
+      lastDateRead: 2601592305
+      lastDateWritten: 2521882264
+      dateCreatedStr: 1987-09-08 13:58:23
+      lastDateReadStr: 1988-12-08 18:23:49
+      lastDateWrittenStr: 1987-09-08 13:58:24
+      bpunValid: null
+    - name: DDBTABLES-E08:VTM
+      type: VTM
+      pages: 16
+      bytes: 32514
+      userName: FLOPPY-USER
+      dateCreated: 2555180129
+      lastDateRead: 2601592337
+      lastDateWritten: 2555180129
+      dateCreatedStr: 1988-01-06 15:17:33
+      lastDateReadStr: 1988-12-08 18:24:17
+      lastDateWrittenStr: 1988-01-06 15:17:33
+      bpunValid: null
+    - name: IN-OEA-EN-A01:INST
+      type: INST
+      pages: 1
+      bytes: 385
+      userName: FLOPPY-USER
+      dateCreated: 2604049017
+      lastDateRead: 2622950465
+      lastDateWritten: 2622950468
+      dateCreatedStr: 1988-12-27 10:09:57
+      lastDateReadStr: 1989-01-11 16:49:01
+      lastDateWrittenStr: 1989-01-11 16:49:04
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 000/ND-disk-00016.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T14:54:04.743Z
+imagingLogs:
+  - ND-disk-00016.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-211070-a01-d1-c0285b50
+  syncStatus: pending

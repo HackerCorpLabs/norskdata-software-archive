@@ -1,0 +1,110 @@
+id: nd-10152-e04-d1-587d263e
+volumeName: 10152E04-1
+md5: 587d263e7dd41ce98c2d2d27fbdcd591
+product:
+  id: ND-10152
+  version: E04
+  diskNumber: 1
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 133
+  files:
+    - name: INSTALL-IR-100:PROG
+      type: PROG
+      pages: 3
+      bytes: 6144
+      userName: FLOPPY-USER
+      dateCreated: 2353975643
+      lastDateRead: 2425487626
+      lastDateWritten: 2364193222
+      dateCreatedStr: 1985-01-07 13:05:27
+      lastDateReadStr: 1986-02-09 00:04:10
+      lastDateWrittenStr: 1985-03-21 11:39:06
+      bpunValid: null
+    - name: XCOM-A00:PROG
+      type: PROG
+      pages: 39
+      bytes: 147456
+      userName: FLOPPY-USER
+      dateCreated: 2364192489
+      lastDateRead: 2425487628
+      lastDateWritten: 2364192490
+      dateCreatedStr: 1985-03-21 11:27:41
+      lastDateReadStr: 1986-02-09 00:04:12
+      lastDateWrittenStr: 1985-03-21 11:27:42
+      bpunValid: null
+    - name: INST-IR-100-E04:COM
+      type: COM
+      pages: 12
+      bytes: 23036
+      userName: FLOPPY-USER
+      dateCreated: 2353975685
+      lastDateRead: 2425487648
+      lastDateWritten: 2364204337
+      dateCreatedStr: 1985-01-07 13:06:05
+      lastDateReadStr: 1986-02-09 00:04:32
+      lastDateWrittenStr: 1985-03-21 14:20:49
+      bpunValid: null
+    - name: IR-SORTSEQ:DATA
+      type: DATA
+      pages: 1
+      bytes: 4
+      userName: FLOPPY-USER
+      dateCreated: 2353975699
+      lastDateRead: 2425487963
+      lastDateWritten: 2353975700
+      dateCreatedStr: 1985-01-07 13:06:19
+      lastDateReadStr: 1986-02-09 00:09:27
+      lastDateWrittenStr: 1985-01-07 13:06:20
+      bpunValid: null
+    - name: IR-MAIN-E02:BPUN
+      type: BPUN
+      pages: 65
+      bytes: 131636
+      userName: FLOPPY-USER
+      dateCreated: 2353975705
+      lastDateRead: 2425487924
+      lastDateWritten: 2356844173
+      dateCreatedStr: 1985-01-07 13:06:25
+      lastDateReadStr: 1986-02-09 00:08:52
+      lastDateWrittenStr: 1985-01-29 09:26:13
+      bpunValid: null
+    - name: DDBTABLES-D-C:VTM
+      type: VTM
+      pages: 6
+      bytes: 11180
+      userName: FLOPPY-USER
+      dateCreated: 2353975802
+      lastDateRead: null
+      lastDateWritten: 2353975803
+      dateCreatedStr: 1985-01-07 13:07:58
+      lastDateReadStr: null
+      lastDateWrittenStr: 1985-01-07 13:07:59
+      bpunValid: null
+provenance:
+  contributor: www.datormuseum.se
+  originalPath: OK/DISK40.IMG
+  dateImaged: 2022-08-15
+  importedAt: 2026-08-11T17:07:04.207Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10152-e04-d1-587d263e
+  syncStatus: pending

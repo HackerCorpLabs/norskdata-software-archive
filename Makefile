@@ -1,4 +1,4 @@
-.PHONY: all setup import serve import-cli import-folder import-file search check check-deps ia-sync ia-verify ia-upload site-serve static-site mcp cache-clean rebuild-catalog migrate-products extract-legacy help
+.PHONY: all setup identify import serve import-cli import-folder import-file search check check-deps ia-sync ia-verify ia-upload site-serve static-site mcp cache-clean rebuild-catalog migrate-products extract-legacy help
 
 # Default: build tools and start the web UI (the primary import tool)
 all: setup import
@@ -30,6 +30,12 @@ import-folder: setup
 import-file: setup
 	cd tools && node dist/cli.js import $(FILE) --contributor "$(CONTRIBUTOR)" --source "$(SOURCE)"
 
+# Identify what disk images hold - works on any file or folder, imported or not.
+#   make identify PATH=/mnt/f/Prog/Gandalf
+#   make identify PATH=/some/folder ARGS="--recursive --only dos"
+identify: setup
+	@cd tools && node dist/cli.js identify "$(PATH_)" $(ARGS)
+
 # Search the catalog
 search: setup
 	@cd tools && node dist/cli.js search "$(Q)"
@@ -57,7 +63,7 @@ static-site: setup
 	@cd tools && node dist/cli.js build-static-site
 
 site-serve: static-site
-	@cd tools && npx serve ../site -p 8000
+	@cd tools && node serve-site.mjs 8000
 
 # MCP server
 mcp: setup

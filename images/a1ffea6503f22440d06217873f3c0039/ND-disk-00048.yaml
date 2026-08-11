@@ -1,0 +1,65 @@
+id: nd-210511-d02-d1-a1ffea65
+volumeName: 210511D02-XX-01D
+md5: a1ffea6503f22440d06217873f3c0039
+product:
+  id: ND-210511
+  version: D02
+  diskNumber: 1
+  language: XX
+image:
+  sizeBytes: 1310720
+  format: raw
+  controller: floppy
+  totalPages: 640
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 23
+  files:
+    - name: EXCEPT-LIB-D02:NRF
+      type: NRF
+      pages: 10
+      bytes: 19013
+      userName: FLOPPY-USER
+      dateCreated: 2464604628
+      lastDateRead: 2464610589
+      lastDateWritten: 2464604631
+      dateCreatedStr: 1986-11-19 14:07:20
+      lastDateReadStr: 1986-11-19 15:36:29
+      lastDateWrittenStr: 1986-11-19 14:07:23
+      bpunValid: null
+    - name: EXCEPT-TPS-D02:NRF
+      type: NRF
+      pages: 10
+      bytes: 19150
+      userName: FLOPPY-USER
+      dateCreated: 2464604657
+      lastDateRead: null
+      lastDateWritten: 2464604658
+      dateCreatedStr: 1986-11-19 14:07:49
+      lastDateReadStr: null
+      lastDateWrittenStr: 1986-11-19 14:07:50
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 000/ND-disk-00048.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T14:54:12.025Z
+imagingLogs:
+  - ND-disk-00048.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-210511-d02-d1-a1ffea65
+  syncStatus: pending

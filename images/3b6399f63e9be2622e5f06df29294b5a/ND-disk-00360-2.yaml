@@ -1,0 +1,300 @@
+id: img-3b6399f63e9b
+volumeName: OLA-1
+md5: 3b6399f63e9be2622e5f06df29294b5a
+image:
+  sizeBytes: 319488
+  format: raw
+  controller: floppy
+  totalPages: 156
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: DNF
+      pagesUsed: 106
+  files:
+    - name: MATH-LIBRARY-OLA:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 2889
+      userName: DNF
+      dateCreated: 1245232256
+      lastDateRead: 2452142672
+      lastDateWritten: 2400129700
+      dateCreatedStr: 1968-08-28 11:50:00
+      lastDateReadStr: 1986-08-20 11:41:16
+      lastDateWrittenStr: 1985-12-07 17:10:36
+      bpunValid: null
+    - name: SUBSYSTEM-OLA:SYMB
+      type: SYMB
+      pages: 3
+      bytes: 4393
+      userName: DNF
+      dateCreated: 2396995725
+      lastDateRead: 2507587785
+      lastDateWritten: 2396996068
+      dateCreatedStr: 1985-11-15 20:02:13
+      lastDateReadStr: 1987-05-27 12:03:09
+      lastDateWrittenStr: 1985-11-15 20:07:36
+      bpunValid: null
+    - name: NAME-CRE-OLA:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 482
+      userName: DNF
+      dateCreated: 2396995823
+      lastDateRead: 2452142741
+      lastDateWritten: 2397740712
+      dateCreatedStr: 1985-11-15 20:03:47
+      lastDateReadStr: 1986-08-20 11:42:21
+      lastDateWrittenStr: 1985-11-21 09:58:40
+      bpunValid: null
+    - name: RPGTASFORM-OLA:TEXT
+      type: TEXT
+      pages: 1
+      bytes: 893
+      userName: DNF
+      dateCreated: 2396996583
+      lastDateRead: 2507587912
+      lastDateWritten: 2435107097
+      dateCreatedStr: 1985-11-15 20:15:39
+      lastDateReadStr: 1987-05-27 12:05:08
+      lastDateWrittenStr: 1986-04-18 12:36:25
+      bpunValid: null
+    - name: MATH-LIBRARY-OLA:TEXT
+      type: TEXT
+      pages: 1
+      bytes: 1773
+      userName: DNF
+      dateCreated: 2396996753
+      lastDateRead: 2452142816
+      lastDateWritten: 2435105887
+      dateCreatedStr: 1985-11-15 20:18:17
+      lastDateReadStr: 1986-08-20 11:43:32
+      lastDateWrittenStr: 1986-04-18 12:17:31
+      bpunValid: null
+    - name: TRAVELLER-OLA:SYMB
+      type: SYMB
+      pages: 6
+      bytes: 11550
+      userName: DNF
+      dateCreated: 2396996839
+      lastDateRead: 2507587984
+      lastDateWritten: 2438396913
+      dateCreatedStr: 1985-11-15 20:19:39
+      lastDateReadStr: 1987-05-27 12:06:16
+      lastDateWrittenStr: 1986-05-11 15:47:49
+      bpunValid: null
+    - name: KILLER-OLA:SYMB
+      type: SYMB
+      pages: 3
+      bytes: 6059
+      userName: DNF
+      dateCreated: 2396998505
+      lastDateRead: 2507588051
+      lastDateWritten: 2396998506
+      dateCreatedStr: 1985-11-15 20:45:41
+      lastDateReadStr: 1987-05-27 12:07:19
+      lastDateWrittenStr: 1985-11-15 20:45:42
+      bpunValid: null
+    - name: PILOT-II-OLA:SYMB
+      type: SYMB
+      pages: 3
+      bytes: 4076
+      userName: DNF
+      dateCreated: 2400130340
+      lastDateRead: 2455978840
+      lastDateWritten: 2435105350
+      dateCreatedStr: 1985-12-07 17:20:36
+      lastDateReadStr: 1986-09-17 20:13:24
+      lastDateWrittenStr: 1986-04-18 12:09:06
+      bpunValid: null
+    - name: INSTRUKTION-OLA:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 909
+      userName: DNF
+      dateCreated: 2400140298
+      lastDateRead: 2438808082
+      lastDateWritten: 2435105374
+      dateCreatedStr: 1985-12-07 19:48:10
+      lastDateReadStr: 1986-05-14 20:08:18
+      lastDateWrittenStr: 1986-04-18 12:09:30
+      bpunValid: null
+    - name: BUSHIDO-NO-OLA:TEXT
+      type: TEXT
+      pages: 8
+      bytes: 15081
+      userName: DNF
+      dateCreated: 2438805809
+      lastDateRead: 2507588065
+      lastDateWritten: 2439853828
+      dateCreatedStr: 1986-05-14 19:36:49
+      lastDateReadStr: 1987-05-27 12:07:33
+      lastDateWrittenStr: 1986-05-22 19:28:04
+      bpunValid: null
+    - name: E-10000-DEC-LJ:SYMB
+      type: SYMB
+      pages: 6
+      bytes: 10668
+      userName: DNF
+      dateCreated: 2430408529
+      lastDateRead: 2442314858
+      lastDateWritten: 2430408530
+      dateCreatedStr: 1986-03-14 17:29:17
+      lastDateReadStr: 1986-06-09 12:17:42
+      lastDateWrittenStr: 1986-03-14 17:29:18
+      bpunValid: null
+    - name: COD-6502-OLA:SYMB
+      type: SYMB
+      pages: 4
+      bytes: 6557
+      userName: DNF
+      dateCreated: 2433778280
+      lastDateRead: 2507588083
+      lastDateWritten: 2433778282
+      dateCreatedStr: 1986-04-08 08:09:40
+      lastDateReadStr: 1987-05-27 12:07:51
+      lastDateWrittenStr: 1986-04-08 08:09:42
+      bpunValid: null
+    - name: NEUE-FILEN-OLA:SYMB
+      type: SYMB
+      pages: 5
+      bytes: 7916
+      userName: DNF
+      dateCreated: 2433778371
+      lastDateRead: 2507588091
+      lastDateWritten: 2433778372
+      dateCreatedStr: 1986-04-08 08:11:03
+      lastDateReadStr: 1987-05-27 12:07:59
+      lastDateWrittenStr: 1986-04-08 08:11:04
+      bpunValid: null
+    - name: LOST-WORLDS-OLA:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1395
+      userName: DNF
+      dateCreated: 2435105427
+      lastDateRead: 2507588248
+      lastDateWritten: 2435105429
+      dateCreatedStr: 1986-04-18 12:10:19
+      lastDateReadStr: 1987-05-27 12:10:24
+      lastDateWrittenStr: 1986-04-18 12:10:21
+      bpunValid: null
+    - name: MON-330-OLA:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1136
+      userName: DNF
+      dateCreated: 2435105507
+      lastDateRead: 2452143534
+      lastDateWritten: 2435105508
+      dateCreatedStr: 1986-04-18 12:11:35
+      lastDateReadStr: 1986-08-20 11:54:46
+      lastDateWrittenStr: 1986-04-18 12:11:36
+      bpunValid: null
+    - name: PAS-SMALL-OLA:SYMB
+      type: SYMB
+      pages: 4
+      bytes: 6262
+      userName: DNF
+      dateCreated: 2435105594
+      lastDateRead: 2452143543
+      lastDateWritten: 2435105600
+      dateCreatedStr: 1986-04-18 12:12:58
+      lastDateReadStr: 1986-08-20 11:54:55
+      lastDateWrittenStr: 1986-04-18 12:13:00
+      bpunValid: null
+    - name: MAC-SMALL-OLA:SYMB
+      type: SYMB
+      pages: 3
+      bytes: 3881
+      userName: DNF
+      dateCreated: 2435105632
+      lastDateRead: 2519917543
+      lastDateWritten: 2439592440
+      dateCreatedStr: 1986-04-18 12:13:32
+      lastDateReadStr: 1987-08-25 14:15:39
+      lastDateWrittenStr: 1986-05-20 19:39:56
+      bpunValid: null
+    - name: GRAFIK-OLA:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1799
+      userName: DNF
+      dateCreated: 2435105780
+      lastDateRead: 2452143663
+      lastDateWritten: 2435105782
+      dateCreatedStr: 1986-04-18 12:15:52
+      lastDateReadStr: 1986-08-20 11:56:47
+      lastDateWrittenStr: 1986-04-18 12:15:54
+      bpunValid: null
+    - name: NEW-RPG-OLA:TEXT
+      type: TEXT
+      pages: 1
+      bytes: 832
+      userName: DNF
+      dateCreated: 2435107138
+      lastDateRead: 2507588306
+      lastDateWritten: 2435107279
+      dateCreatedStr: 1986-04-18 12:37:02
+      lastDateReadStr: 1987-05-27 12:11:18
+      lastDateWrittenStr: 1986-04-18 12:39:15
+      bpunValid: null
+    - name: RTAVELLER-OLA:SYMB
+      type: SYMB
+      pages: 7
+      bytes: 12869
+      userName: DNF
+      dateCreated: 2437892457
+      lastDateRead: 2507588371
+      lastDateWritten: 2438657116
+      dateCreatedStr: 1986-05-07 20:37:41
+      lastDateReadStr: 1987-05-27 12:12:19
+      lastDateWrittenStr: 1986-05-13 15:17:28
+      bpunValid: null
+    - name: INTE-PILOT-OLA:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 2238
+      userName: DNF
+      dateCreated: 2438400999
+      lastDateRead: 2438808329
+      lastDateWritten: 2438401000
+      dateCreatedStr: 1986-05-11 16:47:39
+      lastDateReadStr: 1986-05-14 20:12:09
+      lastDateWrittenStr: 1986-05-11 16:47:40
+      bpunValid: null
+    - name: E-35660-LJ:SYMB
+      type: SYMB
+      pages: 19
+      bytes: 38245
+      userName: DNF
+      dateCreated: 2438763780
+      lastDateRead: 2442315054
+      lastDateWritten: 2438763781
+      dateCreatedStr: 1986-05-14 09:20:04
+      lastDateReadStr: 1986-06-09 12:20:46
+      lastDateWrittenStr: 1986-05-14 09:20:05
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 300/ND-disk-00360-2.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:45:51.294Z
+imagingLogs:
+  - ND-disk-00360-2.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-3b6399f63e9b
+  syncStatus: pending

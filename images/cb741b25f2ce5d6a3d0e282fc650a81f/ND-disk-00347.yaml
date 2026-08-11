@@ -1,0 +1,48 @@
+id: img-cb741b25f2ce
+volumeName: OLLE-OE-2
+md5: cb741b25f2ce5d6a3d0e282fc650a81f
+image:
+  sizeBytes: 319488
+  format: raw
+  controller: floppy
+  totalPages: 156
+  pageSize: 2048
+  bootFormat: bpun
+filesystem: ndfs
+ndfs:
+  users:
+    - name: DNF
+      pagesUsed: 1
+  files:
+    - name: FEL-SIDA:BYT
+      type: BYT
+      pages: 0
+      bytes: 4294967296
+      userName: DNF
+      dateCreated: 2386754907
+      lastDateRead: 2623074036
+      lastDateWritten: null
+      dateCreatedStr: 1985-09-01 15:53:27
+      lastDateReadStr: 1989-01-12 14:59:52
+      lastDateWrittenStr: null
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 300/ND-disk-00347.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:45:49.686Z
+imagingLogs:
+  - ND-disk-00347.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-cb741b25f2ce
+  syncStatus: pending

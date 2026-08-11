@@ -1,0 +1,125 @@
+id: nd-210814-l05-d2-032ea4c4
+volumeName: 210814L05-XX-02D
+md5: 032ea4c49500b93e0148958b2e9f123e
+product:
+  id: ND-210814
+  version: L05
+  diskNumber: 2
+  language: XX
+image:
+  sizeBytes: 1310720
+  format: raw
+  controller: floppy
+  totalPages: 640
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: MAINTENANCE-NTX
+      pagesUsed: 605
+  files:
+    - name: FORMATLIST-FL-K7:PROG
+      type: PROG
+      pages: 58
+      bytes: 272384
+      userName: MAINTENANCE-NTX
+      dateCreated: 2501032171
+      lastDateRead: 2597255227
+      lastDateWritten: 2501032171
+      dateCreatedStr: 1987-04-09 11:35:43
+      lastDateReadStr: 1988-11-07 15:32:59
+      lastDateWrittenStr: 1987-04-09 11:35:43
+      bpunValid: null
+    - name: FORMATINIT-FO-K1:PROG
+      type: PROG
+      pages: 49
+      bytes: 167936
+      userName: MAINTENANCE-NTX
+      dateCreated: 2489897372
+      lastDateRead: 2597255248
+      lastDateWritten: 2489897372
+      dateCreatedStr: 1987-01-20 13:06:28
+      lastDateReadStr: 1988-11-07 15:33:16
+      lastDateWrittenStr: 1987-01-20 13:06:28
+      bpunValid: null
+    - name: FONTINFO-FI-L00:PROG
+      type: PROG
+      pages: 102
+      bytes: 325632
+      userName: MAINTENANCE-NTX
+      dateCreated: 2522795223
+      lastDateRead: 2597255262
+      lastDateWritten: 2522795224
+      dateCreatedStr: 1987-09-15 12:51:23
+      lastDateReadStr: 1988-11-07 15:33:30
+      lastDateWrittenStr: 1987-09-15 12:51:24
+      bpunValid: null
+    - name: CONVTAB-CT-K01:PROG
+      type: PROG
+      pages: 101
+      bytes: 327680
+      userName: MAINTENANCE-NTX
+      dateCreated: 2503664456
+      lastDateRead: 2597255290
+      lastDateWritten: 2503664457
+      dateCreatedStr: 1987-04-29 14:13:08
+      lastDateReadStr: 1988-11-07 15:33:58
+      lastDateWrittenStr: 1987-04-29 14:13:09
+      bpunValid: null
+    - name: PHOTOINFO-PI-L00:PROG
+      type: PROG
+      pages: 99
+      bytes: 325632
+      userName: MAINTENANCE-NTX
+      dateCreated: 2567866114
+      lastDateRead: 2597255321
+      lastDateWritten: 2567866114
+      dateCreatedStr: 1988-04-07 08:28:02
+      lastDateReadStr: 1988-11-07 15:34:25
+      lastDateWrittenStr: 1988-04-07 08:28:02
+      bpunValid: null
+    - name: KERNTAB-KT-K02:PROG
+      type: PROG
+      pages: 98
+      bytes: 325632
+      userName: MAINTENANCE-NTX
+      dateCreated: 2535253338
+      lastDateRead: 2597255349
+      lastDateWritten: 2535253338
+      dateCreatedStr: 1987-12-14 14:21:26
+      lastDateReadStr: 1988-11-07 15:34:53
+      lastDateWrittenStr: 1987-12-14 14:21:26
+      bpunValid: null
+    - name: PICHAR-PC-K00:PROG
+      type: PROG
+      pages: 90
+      bytes: 307200
+      userName: MAINTENANCE-NTX
+      dateCreated: 2399853534
+      lastDateRead: 2597255384
+      lastDateWritten: 2399853534
+      dateCreatedStr: 1985-12-05 13:47:30
+      lastDateReadStr: 1988-11-07 15:35:24
+      lastDateWrittenStr: 1985-12-05 13:47:30
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 100/ND-disk-00173.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:26:01.933Z
+imagingLogs:
+  - ND-disk-00173.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-210814-l05-d2-032ea4c4
+  syncStatus: pending

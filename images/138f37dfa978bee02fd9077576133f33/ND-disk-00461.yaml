@@ -1,0 +1,51 @@
+id: nd-10335-b-d1-138f37df
+volumeName: ND-10335B
+md5: 138f37dfa978bee02fd9077576133f33
+product:
+  id: ND-10335
+  version: B
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: bpun
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 68
+  files:
+    - name: DEBUGGER-B:NRF
+      type: NRF
+      pages: 66
+      bytes: 134280
+      userName: FLOPPY-USER
+      dateCreated: 2157783877
+      lastDateRead: 2158419676
+      lastDateWritten: 2158419555
+      dateCreatedStr: 1982-02-14 18:45:05
+      lastDateReadStr: 1982-02-19 13:59:28
+      lastDateWrittenStr: 1982-02-19 13:57:35
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 400/ND-disk-00461.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:49:50.341Z
+imagingLogs:
+  - ND-disk-00461.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10335-b-d1-138f37df
+  syncStatus: pending

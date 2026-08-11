@@ -1,0 +1,64 @@
+id: nd-10176-a-d3-ccf869f5
+volumeName: ND-10176A-PART3
+md5: ccf869f53796b1a2ce06e4b5e9653202
+product:
+  id: ND-10176
+  version: A
+  diskNumber: 3
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 148
+  files:
+    - name: COBLIB:BRF
+      type: BRF
+      pages: 82
+      bytes: 166984
+      userName: FLOPPY-USER
+      dateCreated: 2095486170
+      lastDateRead: 2281704994
+      lastDateWritten: 2095486180
+      dateCreatedStr: 1981-03-19 09:19:26
+      lastDateReadStr: null
+      lastDateWrittenStr: 1981-03-19 09:19:36
+      bpunValid: null
+    - name: SEPARATE-COBLIB:BRF
+      type: BRF
+      pages: 63
+      bytes: 127395
+      userName: FLOPPY-USER
+      dateCreated: 2095486295
+      lastDateRead: 2281705049
+      lastDateWritten: 2095486296
+      dateCreatedStr: 1981-03-19 09:21:23
+      lastDateReadStr: null
+      lastDateWrittenStr: 1981-03-19 09:21:24
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 400/ND-disk-00404.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:49:26.122Z
+imagingLogs:
+  - ND-disk-00404.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10176-a-d3-ccf869f5
+  syncStatus: pending

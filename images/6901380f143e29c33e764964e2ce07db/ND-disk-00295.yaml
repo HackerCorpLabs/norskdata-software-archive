@@ -1,0 +1,156 @@
+id: img-6901380f143e
+volumeName: MIKAEL-1
+md5: 6901380f143e29c33e764964e2ce07db
+image:
+  sizeBytes: 319488
+  format: raw
+  controller: floppy
+  totalPages: 156
+  pageSize: 2048
+  bootFormat: flomon
+filesystem: ndfs
+ndfs:
+  users:
+    - name: DNF
+      pagesUsed: 126
+  files:
+    - name: ADV-INTER-CB-MJ:SYMB
+      type: SYMB
+      pages: 7
+      bytes: 13211
+      userName: DNF
+      dateCreated: 2191344656
+      lastDateRead: 2499197878
+      lastDateWritten: 2191344661
+      dateCreatedStr: 1982-10-14 20:16:16
+      lastDateReadStr: 1987-03-27 11:46:54
+      lastDateWrittenStr: 1982-10-14 20:16:21
+      bpunValid: null
+    - name: MAC-LIBRARY-MJ:SYMB
+      type: SYMB
+      pages: 26
+      bytes: 52876
+      userName: DNF
+      dateCreated: 2191338688
+      lastDateRead: 2499197883
+      lastDateWritten: 2434879058
+      dateCreatedStr: 1982-10-14 18:51:00
+      lastDateReadStr: 1987-03-27 11:46:59
+      lastDateWrittenStr: 1986-04-16 20:57:18
+      bpunValid: null
+    - name: CB-LIBRARY-MJ:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 2711
+      userName: DNF
+      dateCreated: 2191344578
+      lastDateRead: 2499197897
+      lastDateWritten: 2191344584
+      dateCreatedStr: 1982-10-14 20:15:02
+      lastDateReadStr: 1987-03-27 11:47:09
+      lastDateWrittenStr: 1982-10-14 20:15:08
+      bpunValid: null
+    - name: ADV-EDIT-CB-MJ:SYMB
+      type: SYMB
+      pages: 8
+      bytes: 15446
+      userName: DNF
+      dateCreated: 2191344762
+      lastDateRead: 2499197899
+      lastDateWritten: 2191344772
+      dateCreatedStr: 1982-10-14 20:17:58
+      lastDateReadStr: 1987-03-27 11:47:11
+      lastDateWrittenStr: 1982-10-14 20:18:04
+      bpunValid: null
+    - name: CAVE-FUN-MJ:ADV
+      type: ADV
+      pages: 14
+      bytes: 27428
+      userName: DNF
+      dateCreated: 2092336165
+      lastDateRead: 2499197902
+      lastDateWritten: 2092336167
+      dateCreatedStr: 1981-02-27 08:16:37
+      lastDateReadStr: 1987-03-27 11:47:14
+      lastDateWrittenStr: 1981-02-27 08:16:39
+      bpunValid: null
+    - name: FORTH-SCREENS-MJ:SYMB
+      type: SYMB
+      pages: 8
+      bytes: 10714
+      userName: DNF
+      dateCreated: 2221862553
+      lastDateRead: 2499197908
+      lastDateWritten: 2222792393
+      dateCreatedStr: 1983-01-23 14:58:25
+      lastDateReadStr: 1987-03-27 11:47:20
+      lastDateWrittenStr: 1983-01-30 17:59:09
+      bpunValid: null
+    - name: ADV-INTER-PL-MJ:SYMB
+      type: SYMB
+      pages: 14
+      bytes: 26939
+      userName: DNF
+      dateCreated: 2191348481
+      lastDateRead: 2499197913
+      lastDateWritten: 2191348486
+      dateCreatedStr: 1982-10-14 21:12:01
+      lastDateReadStr: 1987-03-27 11:47:25
+      lastDateWrittenStr: 1982-10-14 21:12:06
+      bpunValid: null
+    - name: ADV-EDIT-PL-MJ:SYMB
+      type: SYMB
+      pages: 20
+      bytes: 39116
+      userName: DNF
+      dateCreated: 2191339103
+      lastDateRead: 2499197920
+      lastDateWritten: 2191339120
+      dateCreatedStr: 1982-10-14 18:57:31
+      lastDateReadStr: 1987-03-27 11:47:32
+      lastDateWrittenStr: 1982-10-14 18:57:48
+      bpunValid: null
+    - name: DOCUMENTATION-MJ:TEXT
+      type: TEXT
+      pages: 19
+      bytes: 37508
+      userName: DNF
+      dateCreated: 2222791361
+      lastDateRead: 2499197928
+      lastDateWritten: 2357650003
+      dateCreatedStr: 1983-01-30 17:43:01
+      lastDateReadStr: 1987-03-27 11:47:40
+      lastDateWrittenStr: 1985-02-03 14:09:19
+      bpunValid: null
+    - name: COMPR-LIB-MJ:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 193
+      userName: DNF
+      dateCreated: 2428038723
+      lastDateRead: 2499197936
+      lastDateWritten: 2428038724
+      dateCreatedStr: 1986-02-28 14:57:03
+      lastDateReadStr: 1987-03-27 11:47:48
+      lastDateWrittenStr: 1986-02-28 14:57:04
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 200/ND-disk-00295.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:42:09.718Z
+imagingLogs:
+  - ND-disk-00295.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-6901380f143e
+  syncStatus: pending

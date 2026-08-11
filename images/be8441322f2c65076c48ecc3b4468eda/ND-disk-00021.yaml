@@ -1,0 +1,173 @@
+id: nd-211075-c03-d1-be844132
+volumeName: 211075C03-EN-01D
+md5: be8441322f2c65076c48ecc3b4468eda
+product:
+  id: ND-211075
+  version: C03
+  diskNumber: 1
+  language: EN
+image:
+  sizeBytes: 1310720
+  format: raw
+  controller: floppy
+  totalPages: 640
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 592
+  files:
+    - name: UE-ERMSG-EN-D05:ERR
+      type: ERR
+      pages: 176
+      bytes: 359168
+      userName: FLOPPY-USER
+      dateCreated: 2589649304
+      lastDateRead: 2624508323
+      lastDateWritten: 2589649305
+      dateCreatedStr: 1988-09-13 14:38:24
+      lastDateReadStr: 1989-01-23 13:06:35
+      lastDateWrittenStr: 1988-09-13 14:38:25
+      bpunValid: null
+    - name: DDBTABLES-G05:VTM
+      type: VTM
+      pages: 40
+      bytes: 74120
+      userName: FLOPPY-USER
+      dateCreated: 2604320963
+      lastDateRead: 2624508382
+      lastDateWritten: 2604320963
+      dateCreatedStr: 1988-12-29 12:35:03
+      lastDateReadStr: 1989-01-23 13:07:30
+      lastDateWrittenStr: 1988-12-29 12:35:03
+      bpunValid: null
+    - name: FILE-MAN-EN-C03:PROG
+      type: PROG
+      pages: 118
+      bytes: 401408
+      userName: FLOPPY-USER
+      dateCreated: 2603014671
+      lastDateRead: 2624508410
+      lastDateWritten: 2623580356
+      dateCreatedStr: 1988-12-19 13:40:15
+      lastDateReadStr: 1989-01-23 13:07:58
+      lastDateWrittenStr: 1989-01-16 10:35:04
+      bpunValid: null
+    - name: FM-SIN-EN-C03:PROG
+      type: PROG
+      pages: 86
+      bytes: 405504
+      userName: FLOPPY-USER
+      dateCreated: 2603015085
+      lastDateRead: 2624508436
+      lastDateWritten: 2621749171
+      dateCreatedStr: 1988-12-19 13:46:45
+      lastDateReadStr: 1989-01-23 13:08:20
+      lastDateWrittenStr: 1989-01-02 11:30:51
+      bpunValid: null
+    - name: FM-PICS-EN-C03:NDPF
+      type: NDPF
+      pages: 62
+      bytes: 126976
+      userName: FLOPPY-USER
+      dateCreated: 2604323255
+      lastDateRead: 2624508461
+      lastDateWritten: 2621749236
+      dateCreatedStr: 1988-12-29 13:06:55
+      lastDateReadStr: 1989-01-23 13:08:45
+      lastDateWrittenStr: 1989-01-02 11:31:52
+      bpunValid: null
+    - name: BETA-TEST-INFO:TEXT
+      type: TEXT
+      pages: 1
+      bytes: 1532
+      userName: FLOPPY-USER
+      dateCreated: 2621748054
+      lastDateRead: 2621754820
+      lastDateWritten: 2621751003
+      dateCreatedStr: 1989-01-02 11:13:22
+      lastDateReadStr: 1989-01-02 12:55:04
+      lastDateWrittenStr: 1989-01-02 11:59:27
+      bpunValid: null
+    - name: FM-LOAD-EN:MODE
+      type: MODE
+      pages: 1
+      bytes: 416
+      userName: FLOPPY-USER
+      dateCreated: 2603014896
+      lastDateRead: 2624508474
+      lastDateWritten: 2623580792
+      dateCreatedStr: 1988-12-19 13:43:48
+      lastDateReadStr: 1989-01-23 13:08:58
+      lastDateWrittenStr: 1989-01-16 10:41:56
+      bpunValid: null
+    - name: IN-FM-EN-C03:PROG
+      type: PROG
+      pages: 79
+      bytes: 202854
+      userName: FLOPPY-USER
+      dateCreated: 2623205024
+      lastDateRead: 2624508123
+      lastDateWritten: 2623205036
+      dateCreatedStr: 1989-01-13 14:58:32
+      lastDateReadStr: 1989-01-23 13:03:27
+      lastDateWrittenStr: 1989-01-13 14:58:44
+      bpunValid: null
+    - name: IN-FM-EN-C03:XCOM
+      type: XCOM
+      pages: 13
+      bytes: 25791
+      userName: FLOPPY-USER
+      dateCreated: 2623581450
+      lastDateRead: 2624508109
+      lastDateWritten: 2623725778
+      dateCreatedStr: 1989-01-16 10:52:10
+      lastDateReadStr: 1989-01-23 13:03:13
+      lastDateWrittenStr: 1989-01-17 14:03:18
+      bpunValid: null
+    - name: IN-FM-EN-C03:INIT
+      type: INIT
+      pages: 3
+      bytes: 5356
+      userName: FLOPPY-USER
+      dateCreated: 2623581484
+      lastDateRead: 2624508122
+      lastDateWritten: 2623839450
+      dateCreatedStr: 1989-01-16 10:52:44
+      lastDateReadStr: 1989-01-23 13:03:26
+      lastDateWrittenStr: 1989-01-18 09:51:26
+      bpunValid: null
+    - name: IN-FM-EN-C03:INST
+      type: INST
+      pages: 1
+      bytes: 385
+      userName: FLOPPY-USER
+      dateCreated: 2623583028
+      lastDateRead: 2624508561
+      lastDateWritten: 2624508562
+      dateCreatedStr: 1989-01-16 11:12:52
+      lastDateReadStr: 1989-01-23 13:10:17
+      lastDateWrittenStr: 1989-01-23 13:10:18
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 000/ND-disk-00021.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T14:54:05.829Z
+imagingLogs:
+  - ND-disk-00021.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-211075-c03-d1-be844132
+  syncStatus: pending

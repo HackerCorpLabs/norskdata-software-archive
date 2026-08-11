@@ -1,0 +1,86 @@
+id: nd-10166-e-d1-521ae2e2
+volumeName: ND-10166E-PART1
+md5: 521ae2e26ab5019727f05c5b735f4264
+product:
+  id: ND-10166
+  version: E
+  diskNumber: 1
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 80
+  files:
+    - name: SIB2-PROG-E10:MODE
+      type: MODE
+      pages: 1
+      bytes: 791
+      userName: FLOPPY-USER
+      dateCreated: 2323029230
+      lastDateRead: 2425291914
+      lastDateWritten: 2375871142
+      dateCreatedStr: 1984-09-27 09:51:46
+      lastDateReadStr: 1986-02-07 16:18:10
+      lastDateWrittenStr: 1985-06-14 14:42:38
+      bpunValid: null
+    - name: SIB2-DATA-E10:MODE
+      type: MODE
+      pages: 7
+      bytes: 12241
+      userName: FLOPPY-USER
+      dateCreated: 2323029238
+      lastDateRead: 2425291918
+      lastDateWritten: 2375871158
+      dateCreatedStr: 1984-09-27 09:51:54
+      lastDateReadStr: 1986-02-07 16:18:14
+      lastDateWrittenStr: 1985-06-14 14:42:54
+      bpunValid: null
+    - name: SIB2-RTLST-E10:SYMB
+      type: SYMB
+      pages: 11
+      bytes: 7312
+      userName: FLOPPY-USER
+      dateCreated: 2326044775
+      lastDateRead: 2425291922
+      lastDateWritten: 2370095877
+      dateCreatedStr: 1984-10-18 10:01:39
+      lastDateReadStr: 1986-02-07 16:18:18
+      lastDateWrittenStr: 1985-05-02 12:44:05
+      bpunValid: null
+    - name: SIB2-INSTALL-E10:PROG
+      type: PROG
+      pages: 56
+      bytes: 182178
+      userName: FLOPPY-USER
+      dateCreated: 2323029262
+      lastDateRead: 2522543973
+      lastDateWritten: 2364868259
+      dateCreatedStr: 1984-09-27 09:52:14
+      lastDateReadStr: 1987-09-13 15:29:37
+      lastDateWrittenStr: 1985-03-26 16:26:35
+      bpunValid: null
+provenance:
+  contributor: www.datormuseum.se
+  originalPath: OK/DISK53.IMG
+  dateImaged: 2022-08-15
+  importedAt: 2026-08-11T17:07:04.701Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10166-e-d1-521ae2e2
+  syncStatus: pending

@@ -1,0 +1,324 @@
+id: img-bbc5a12d5625
+volumeName: GLORFINDEL
+md5: bbc5a12d562521738de7cf42d4393211
+image:
+  sizeBytes: 319488
+  format: raw
+  controller: floppy
+  totalPages: 156
+  pageSize: 2048
+  bootFormat: bpun
+filesystem: ndfs
+ndfs:
+  users:
+    - name: SYSTEM
+      pagesUsed: 89
+  files:
+    - name: PLAN--GP:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 2385
+      userName: SYSTEM
+      dateCreated: 2171765304
+      lastDateRead: 2557281399
+      lastDateWritten: 2171765305
+      dateCreatedStr: 1982-05-25 08:08:56
+      lastDateReadStr: 1988-01-22 16:17:55
+      lastDateWrittenStr: 1982-05-25 08:08:57
+      bpunValid: null
+    - name: FORMATERARE-GP:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 2265
+      userName: SYSTEM
+      dateCreated: 2170338194
+      lastDateRead: 3033492033
+      lastDateWritten: 2170338244
+      dateCreatedStr: 1982-05-14 11:46:18
+      lastDateReadStr: 1995-03-07 22:41:01
+      lastDateWrittenStr: 1982-05-14 11:47:04
+      bpunValid: null
+    - name: MAC:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 407
+      userName: SYSTEM
+      dateCreated: 2195937694
+      lastDateRead: 2557281421
+      lastDateWritten: 2195937732
+      dateCreatedStr: 1982-11-17 21:38:30
+      lastDateReadStr: 1988-01-22 16:18:13
+      lastDateWrittenStr: 1982-11-17 21:39:04
+      bpunValid: null
+    - name: GEPELIB--GP:SYMB
+      type: SYMB
+      pages: 3
+      bytes: 4601
+      userName: SYSTEM
+      dateCreated: 2170346991
+      lastDateRead: 2557281429
+      lastDateWritten: 2254902935
+      dateCreatedStr: 1982-05-14 13:55:47
+      lastDateReadStr: 1988-01-22 16:18:21
+      lastDateWrittenStr: 1983-09-19 17:26:23
+      bpunValid: null
+    - name: TEXT-HUBBA-GP:PROG
+      type: PROG
+      pages: 13
+      bytes: 25088
+      userName: SYSTEM
+      dateCreated: 2170860608
+      lastDateRead: 2515221231
+      lastDateWritten: 2171651079
+      dateCreatedStr: 1982-05-18 11:17:00
+      lastDateReadStr: 1987-07-21 19:43:47
+      lastDateWrittenStr: 1982-05-24 12:16:07
+      bpunValid: null
+    - name: G-LIB-GP:SYMB
+      type: SYMB
+      pages: 3
+      bytes: 4332
+      userName: SYSTEM
+      dateCreated: 2170348731
+      lastDateRead: 2557281434
+      lastDateWritten: 2228037725
+      dateCreatedStr: 1982-05-14 14:18:59
+      lastDateReadStr: 1988-01-22 16:18:26
+      lastDateWrittenStr: 1983-03-06 18:33:29
+      bpunValid: null
+    - name: TEXTARE-GP:SYMB
+      type: SYMB
+      pages: 4
+      bytes: 7421
+      userName: SYSTEM
+      dateCreated: 2170865785
+      lastDateRead: 2360146800
+      lastDateWritten: 2173244214
+      dateCreatedStr: 1982-05-18 12:33:57
+      lastDateReadStr: 1985-02-22 15:45:48
+      lastDateWrittenStr: 1982-06-04 17:12:54
+      bpunValid: null
+    - name: ADD-IT-GP:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 623
+      userName: SYSTEM
+      dateCreated: 2195938031
+      lastDateRead: 2557281440
+      lastDateWritten: 2195938055
+      dateCreatedStr: 1982-11-17 21:43:47
+      lastDateReadStr: 1988-01-22 16:18:32
+      lastDateWrittenStr: 1982-11-17 21:44:07
+      bpunValid: null
+    - name: FILHANTERING-GP:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 2163
+      userName: SYSTEM
+      dateCreated: 2196963718
+      lastDateRead: 2360146804
+      lastDateWritten: 2196963754
+      dateCreatedStr: 1982-11-25 16:06:06
+      lastDateReadStr: 1985-02-22 15:45:52
+      lastDateWrittenStr: 1982-11-25 16:06:42
+      bpunValid: null
+    - name: ALL-ASCII:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 528
+      userName: SYSTEM
+      dateCreated: 2224371766
+      lastDateRead: 2360146522
+      lastDateWritten: 2224371768
+      dateCreatedStr: 1983-02-10 19:32:54
+      lastDateReadStr: 1985-02-22 15:41:26
+      lastDateWrittenStr: 1983-02-10 19:32:56
+      bpunValid: null
+    - name: FILI:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1197
+      userName: SYSTEM
+      dateCreated: 2228037837
+      lastDateRead: 3033492162
+      lastDateWritten: 2228278208
+      dateCreatedStr: 1983-03-06 18:35:13
+      lastDateReadStr: 1995-03-07 22:43:02
+      lastDateWrittenStr: 1983-03-08 13:15:00
+      bpunValid: null
+    - name: U:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 2119
+      userName: SYSTEM
+      dateCreated: 2224371883
+      lastDateRead: 2360146853
+      lastDateWritten: 2224371885
+      dateCreatedStr: 1983-02-10 19:34:43
+      lastDateReadStr: 1985-02-22 15:46:37
+      lastDateWrittenStr: 1983-02-10 19:34:45
+      bpunValid: null
+    - name: MICRO-ADV-1-GP:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1553
+      userName: SYSTEM
+      dateCreated: 2188204833
+      lastDateRead: 2255436458
+      lastDateWritten: 2188204834
+      dateCreatedStr: 1982-09-22 21:44:33
+      lastDateReadStr: 1983-09-23 19:42:42
+      lastDateWrittenStr: 1982-09-22 21:44:34
+      bpunValid: null
+    - name: YATZY-BASIC-GP:SYMB
+      type: SYMB
+      pages: 4
+      bytes: 6803
+      userName: SYSTEM
+      dateCreated: 2188205057
+      lastDateRead: 2255436467
+      lastDateWritten: 2188205324
+      dateCreatedStr: 1982-09-22 21:48:01
+      lastDateReadStr: 1983-09-23 19:42:51
+      lastDateWrittenStr: 1982-09-22 21:52:12
+      bpunValid: null
+    - name: MICRO-ADV-2-GP:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 2522
+      userName: SYSTEM
+      dateCreated: 2188205387
+      lastDateRead: 2255436494
+      lastDateWritten: 2188205388
+      dateCreatedStr: 1982-09-22 21:53:11
+      lastDateReadStr: 1983-09-23 19:43:14
+      lastDateWrittenStr: 1982-09-22 21:53:12
+      bpunValid: null
+    - name: MATRECEPT-GP:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 2999
+      userName: SYSTEM
+      dateCreated: 2189251713
+      lastDateRead: 2360146571
+      lastDateWritten: 2189251715
+      dateCreatedStr: 1982-09-30 21:18:01
+      lastDateReadStr: 1985-02-22 15:42:11
+      lastDateWrittenStr: 1982-09-30 21:18:03
+      bpunValid: null
+    - name: DATAFIL-GP:MAT
+      type: MAT
+      pages: 1
+      bytes: 773
+      userName: SYSTEM
+      dateCreated: 2189251782
+      lastDateRead: 2360146579
+      lastDateWritten: 2189251783
+      dateCreatedStr: 1982-09-30 21:19:06
+      lastDateReadStr: 1985-02-22 15:42:19
+      lastDateWrittenStr: 1982-09-30 21:19:07
+      bpunValid: null
+    - name: STOR-ALFA:DATA
+      type: DATA
+      pages: 6
+      bytes: 10412
+      userName: SYSTEM
+      dateCreated: 2224371988
+      lastDateRead: 2360146590
+      lastDateWritten: 2224371990
+      dateCreatedStr: 1983-02-10 19:36:20
+      lastDateReadStr: 1985-02-22 15:42:30
+      lastDateWrittenStr: 1983-02-10 19:36:22
+      bpunValid: null
+    - name: M:M
+      type: M
+      pages: 2
+      bytes: 3657
+      userName: SYSTEM
+      dateCreated: 2194703042
+      lastDateRead: 2360146864
+      lastDateWritten: 2194703141
+      dateCreatedStr: 1982-11-08 08:11:02
+      lastDateReadStr: 1985-02-22 15:46:48
+      lastDateWrittenStr: 1982-11-08 08:12:37
+      bpunValid: null
+    - name: YATZY-MAC-GP:SYMB
+      type: SYMB
+      pages: 5
+      bytes: 9529
+      userName: SYSTEM
+      dateCreated: 2194703279
+      lastDateRead: 2255436570
+      lastDateWritten: 2194703280
+      dateCreatedStr: 1982-11-08 08:14:47
+      lastDateReadStr: 1983-09-23 19:44:26
+      lastDateWrittenStr: 1982-11-08 08:14:48
+      bpunValid: null
+    - name: MAGGOT-SUPER-GP:SYMB
+      type: SYMB
+      pages: 3
+      bytes: 5342
+      userName: SYSTEM
+      dateCreated: 2194755706
+      lastDateRead: 2360146911
+      lastDateWritten: 2228311312
+      dateCreatedStr: 1982-11-08 21:01:58
+      lastDateReadStr: 1985-02-22 15:47:31
+      lastDateWrittenStr: 1983-03-08 21:20:16
+      bpunValid: null
+    - name: HUBBAHUBBA:HUBB
+      type: HUBB
+      pages: 2
+      bytes: 632
+      userName: SYSTEM
+      dateCreated: 2230246216
+      lastDateRead: 2360146938
+      lastDateWritten: 2230252140
+      dateCreatedStr: 1983-03-23 13:45:08
+      lastDateReadStr: 1985-02-22 15:47:58
+      lastDateWrittenStr: 1983-03-23 15:09:44
+      bpunValid: null
+    - name: FONTAINEBLEAU-GP:TEXT
+      type: TEXT
+      pages: 1
+      bytes: 378
+      userName: SYSTEM
+      dateCreated: 2230269381
+      lastDateRead: 2360146661
+      lastDateWritten: 2230269386
+      dateCreatedStr: 1983-03-23 19:23:05
+      lastDateReadStr: 1985-02-22 15:43:37
+      lastDateWrittenStr: 1983-03-23 19:23:10
+      bpunValid: null
+    - name: FACIT-TER-PRI-GP:TEXT
+      type: TEXT
+      pages: 4
+      bytes: 6452
+      userName: SYSTEM
+      dateCreated: 2230514450
+      lastDateRead: 2255436633
+      lastDateWritten: 2230514653
+      dateCreatedStr: 1983-03-25 15:12:18
+      lastDateReadStr: 1983-09-23 19:45:25
+      lastDateWrittenStr: 1983-03-25 15:15:29
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 300/ND-disk-00308d.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:45:43.680Z
+imagingLogs:
+  - ND-disk-00308d.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-bbc5a12d5625
+  syncStatus: pending

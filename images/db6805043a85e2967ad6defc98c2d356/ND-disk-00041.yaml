@@ -1,0 +1,101 @@
+id: nd-210315-f00-d1-db680504
+volumeName: 210315F00-XX-01D
+md5: db6805043a85e2967ad6defc98c2d356
+product:
+  id: ND-210315
+  version: F00
+  diskNumber: 1
+  language: XX
+image:
+  sizeBytes: 1310720
+  format: raw
+  controller: floppy
+  totalPages: 640
+  pageSize: 2048
+  bootFormat: bpun
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 247
+  files:
+    - name: ACC-S-48-F00:PROG
+      type: PROG
+      pages: 117
+      bytes: 481280
+      userName: FLOPPY-USER
+      dateCreated: 2313329000
+      lastDateRead: 2506810122
+      lastDateWritten: 2313329005
+      dateCreatedStr: 1984-07-17 09:37:40
+      lastDateReadStr: 1987-05-21 14:12:10
+      lastDateWrittenStr: 1984-07-17 09:37:45
+      bpunValid: null
+    - name: ACC-S-32-F00:PROG
+      type: PROG
+      pages: 117
+      bytes: 481280
+      userName: FLOPPY-USER
+      dateCreated: 2461994485
+      lastDateRead: 2506810568
+      lastDateWritten: 2461994619
+      dateCreatedStr: 1986-10-31 16:55:53
+      lastDateReadStr: 1987-05-21 14:19:08
+      lastDateWrittenStr: 1986-10-31 16:57:59
+      bpunValid: null
+    - name: ACC-COPY-48-F00:MODE
+      type: MODE
+      pages: 1
+      bytes: 352
+      userName: FLOPPY-USER
+      dateCreated: 2313329171
+      lastDateRead: 2506810305
+      lastDateWritten: 2461994176
+      dateCreatedStr: 1984-07-17 09:40:19
+      lastDateReadStr: 1987-05-21 14:15:01
+      lastDateWrittenStr: 1986-10-31 16:51:00
+      bpunValid: null
+    - name: ACC-COPY-32-F00:MODE
+      type: MODE
+      pages: 1
+      bytes: 352
+      userName: FLOPPY-USER
+      dateCreated: 2461993898
+      lastDateRead: 2506810754
+      lastDateWritten: 2461993899
+      dateCreatedStr: 1986-10-31 16:46:42
+      lastDateReadStr: 1987-05-21 14:22:02
+      lastDateWrittenStr: 1986-10-31 16:46:43
+      bpunValid: null
+    - name: ACCRT-F00:BPUN
+      type: BPUN
+      pages: 5
+      bytes: 8756
+      userName: FLOPPY-USER
+      dateCreated: 2461995041
+      lastDateRead: 2506810760
+      lastDateWritten: 2461995042
+      dateCreatedStr: 1986-10-31 17:00:33
+      lastDateReadStr: 1987-05-21 14:22:08
+      lastDateWrittenStr: 1986-10-31 17:00:34
+      bpunValid: true
+provenance:
+  contributor: gandalf
+  originalPath: 000/ND-disk-00041.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T14:54:10.558Z
+imagingLogs:
+  - ND-disk-00041.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-210315-f00-d1-db680504
+  syncStatus: pending

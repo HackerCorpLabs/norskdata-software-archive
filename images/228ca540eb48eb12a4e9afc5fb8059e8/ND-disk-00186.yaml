@@ -1,0 +1,65 @@
+id: nd-210079-n08-d2-228ca540
+volumeName: 210079N08-SW-02D
+md5: 228ca540eb48eb12a4e9afc5fb8059e8
+product:
+  id: ND-210079
+  version: N08
+  diskNumber: 2
+  language: SW
+image:
+  sizeBytes: 1310720
+  format: raw
+  controller: floppy
+  totalPages: 640
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 181
+  files:
+    - name: UE-INST-C07:PROG
+      type: PROG
+      pages: 48
+      bytes: 157656
+      userName: FLOPPY-USER
+      dateCreated: 2534751913
+      lastDateRead: null
+      lastDateWritten: 2534751916
+      dateCreatedStr: 1987-12-10 19:58:41
+      lastDateReadStr: null
+      lastDateWrittenStr: 1987-12-10 19:58:44
+      bpunValid: null
+    - name: UE-ERMSG-SW-C06:ERR
+      type: ERR
+      pages: 130
+      bytes: 264448
+      userName: FLOPPY-USER
+      dateCreated: 2571429379
+      lastDateRead: 2571429381
+      lastDateWritten: 2571429381
+      dateCreatedStr: 1988-05-02 14:24:03
+      lastDateReadStr: 1988-05-02 14:24:05
+      lastDateWrittenStr: 1988-05-02 14:24:05
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 100/ND-disk-00186.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:26:03.785Z
+imagingLogs:
+  - ND-disk-00186.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-210079-n08-d2-228ca540
+  syncStatus: pending

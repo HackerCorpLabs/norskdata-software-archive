@@ -1,0 +1,50 @@
+id: nd-10166-e-d5-c63df8a5
+volumeName: ND-10166E-PART5
+md5: c63df8a5e8bcf9de76e8b96746063eab
+product:
+  id: ND-10166
+  version: E
+  diskNumber: 5
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 93
+  files:
+    - name: SIB2-DRL-2-E10:PROG
+      type: PROG
+      pages: 91
+      bytes: 722944
+      userName: FLOPPY-USER
+      dateCreated: 2323030699
+      lastDateRead: 2425292068
+      lastDateWritten: 2425292068
+      dateCreatedStr: 1984-09-27 10:10:43
+      lastDateReadStr: 1986-02-07 16:20:36
+      lastDateWrittenStr: 1986-02-07 16:20:36
+      bpunValid: null
+provenance:
+  contributor: www.datormuseum.se
+  originalPath: OK/DISK57.IMG
+  dateImaged: 2022-08-15
+  importedAt: 2026-08-11T17:07:04.869Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10166-e-d5-c63df8a5
+  syncStatus: pending

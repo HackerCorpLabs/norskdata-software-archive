@@ -13,6 +13,7 @@ image:
   totalPages: 640
   pageSize: 2048
   bootFormat: none
+filesystem: ndfs
 ndfs:
   users:
     - name: FLOPPY-USER

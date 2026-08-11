@@ -1,0 +1,173 @@
+id: nd-211067-a02-d1-10788b96
+volumeName: 211067A02-XX-01D
+md5: 10788b966668aec27d35ff8430074bd1
+product:
+  id: ND-211067
+  version: A02
+  diskNumber: 1
+  language: XX
+image:
+  sizeBytes: 1310720
+  format: raw
+  controller: floppy
+  totalPages: 640
+  pageSize: 2048
+  bootFormat: flomon
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 66
+  files:
+    - name: TPE-MON-100-A01:BPUN
+      type: BPUN
+      pages: 28
+      bytes: 56182
+      userName: FLOPPY-USER
+      dateCreated: 2458871602
+      lastDateRead: 2463549450
+      lastDateWritten: 2458871602
+      dateCreatedStr: 1986-10-07 22:28:50
+      lastDateReadStr: 1986-11-11 12:32:10
+      lastDateWrittenStr: 1986-10-07 22:28:50
+      bpunValid: false
+    - name: DISC-TEMA-I11:TEST
+      type: TEST
+      pages: 35
+      bytes: 71680
+      userName: FLOPPY-USER
+      dateCreated: 2463542441
+      lastDateRead: 2463549470
+      lastDateWritten: 2463542441
+      dateCreatedStr: 1986-11-11 10:50:41
+      lastDateReadStr: 1986-11-11 12:32:30
+      lastDateWrittenStr: 1986-11-11 10:50:41
+      bpunValid: null
+    - name: ÿÿð?ÿÿÿÿÿÿÿÿÿÿÿÿ:ÿÿÿÿ
+      type: ÿÿÿÿ
+      pages: 4294967295
+      bytes: 4294967296
+      userName: ""
+      dateCreated: 4294967295
+      lastDateRead: 4294967295
+      lastDateWritten: 4294967295
+      dateCreatedStr: 2013-15-31 31:63:63
+      lastDateReadStr: 2013-15-31 31:63:63
+      lastDateWrittenStr: 2013-15-31 31:63:63
+      bpunValid: null
+    - name: ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ:ÿÿÿÿ
+      type: ÿÿÿÿ
+      pages: 4294967295
+      bytes: 4294967296
+      userName: ""
+      dateCreated: 4294967295
+      lastDateRead: 4294967295
+      lastDateWritten: 4294967295
+      dateCreatedStr: 2013-15-31 31:63:63
+      lastDateReadStr: 2013-15-31 31:63:63
+      lastDateWrittenStr: 2013-15-31 31:63:63
+      bpunValid: null
+    - name: ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ:ÿÿÿÿ
+      type: ÿÿÿÿ
+      pages: 4294967295
+      bytes: 4294967296
+      userName: ""
+      dateCreated: 4294967295
+      lastDateRead: 4294967295
+      lastDateWritten: 4294967295
+      dateCreatedStr: 2013-15-31 31:63:63
+      lastDateReadStr: 2013-15-31 31:63:63
+      lastDateWrittenStr: 2013-15-31 31:63:63
+      bpunValid: null
+    - name: ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ:ÿÿÿÿ
+      type: ÿÿÿÿ
+      pages: 4294967295
+      bytes: 4294967296
+      userName: ""
+      dateCreated: 4294967295
+      lastDateRead: 4294967295
+      lastDateWritten: 4294967295
+      dateCreatedStr: 2013-15-31 31:63:63
+      lastDateReadStr: 2013-15-31 31:63:63
+      lastDateWrittenStr: 2013-15-31 31:63:63
+      bpunValid: null
+    - name: ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ:ÿÿÿÿ
+      type: ÿÿÿÿ
+      pages: 4294967295
+      bytes: 4294967296
+      userName: ""
+      dateCreated: 4294967295
+      lastDateRead: 4294967295
+      lastDateWritten: 4294967295
+      dateCreatedStr: 2013-15-31 31:63:63
+      lastDateReadStr: 2013-15-31 31:63:63
+      lastDateWrittenStr: 2013-15-31 31:63:63
+      bpunValid: null
+    - name: ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ:ÿÿÿÿ
+      type: ÿÿÿÿ
+      pages: 4294967295
+      bytes: 4294967296
+      userName: ""
+      dateCreated: 4294967295
+      lastDateRead: 4294967295
+      lastDateWritten: 4294967295
+      dateCreatedStr: 2013-15-31 31:63:63
+      lastDateReadStr: 2013-15-31 31:63:63
+      lastDateWrittenStr: 2013-15-31 31:63:63
+      bpunValid: null
+    - name: ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ:ÿÿÿÿ
+      type: ÿÿÿÿ
+      pages: 4294967295
+      bytes: 4294967296
+      userName: ""
+      dateCreated: 4294967295
+      lastDateRead: 4294967295
+      lastDateWritten: 4294967295
+      dateCreatedStr: 2013-15-31 31:63:63
+      lastDateReadStr: 2013-15-31 31:63:63
+      lastDateWrittenStr: 2013-15-31 31:63:63
+      bpunValid: null
+    - name: ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ:ÿÿÿÿ
+      type: ÿÿÿÿ
+      pages: 4294967295
+      bytes: 4294967296
+      userName: ""
+      dateCreated: 4294967295
+      lastDateRead: 4294967295
+      lastDateWritten: 4294967295
+      dateCreatedStr: 2013-15-31 31:63:63
+      lastDateReadStr: 2013-15-31 31:63:63
+      lastDateWrittenStr: 2013-15-31 31:63:63
+      bpunValid: null
+    - name: ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ:ÿÿÿÿ
+      type: ÿÿÿÿ
+      pages: 4294967295
+      bytes: 4294967296
+      userName: ""
+      dateCreated: 4294967295
+      lastDateRead: 4294967295
+      lastDateWritten: 4294967295
+      dateCreatedStr: 2013-15-31 31:63:63
+      lastDateReadStr: 2013-15-31 31:63:63
+      lastDateWrittenStr: 2013-15-31 31:63:63
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 100/ND-disk-00192d.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:26:05.169Z
+imagingLogs:
+  - ND-disk-00192d.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-211067-a02-d1-10788b96
+  syncStatus: pending

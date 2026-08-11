@@ -1,0 +1,161 @@
+id: nd-211091-a01-d1-7726d314
+volumeName: 211091A01-EN-1D
+md5: 7726d314d0f7eaec4908e46e0c217317
+product:
+  id: ND-211091
+  version: A01
+  diskNumber: 1
+  language: EN
+image:
+  sizeBytes: 1310720
+  format: raw
+  controller: floppy
+  totalPages: 640
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 606
+  files:
+    - name: DO-COMM-PUB-A01:DOSC
+      type: DOSC
+      pages: 193
+      bytes: 50397184
+      userName: FLOPPY-USER
+      dateCreated: 2503415403
+      lastDateRead: 2522914212
+      lastDateWritten: 2522799779
+      dateCreatedStr: 1987-04-27 17:25:43
+      lastDateReadStr: 1987-09-16 09:54:36
+      lastDateWrittenStr: 1987-09-15 13:58:35
+      bpunValid: null
+    - name: DO-TEXTS-EN-A00:DOSC
+      type: DOSC
+      pages: 30
+      bytes: 62924800
+      userName: FLOPPY-USER
+      dateCreated: 2503415690
+      lastDateRead: 2522801073
+      lastDateWritten: 2503415692
+      dateCreatedStr: 1987-04-27 17:30:10
+      lastDateReadStr: 1987-09-15 14:14:49
+      lastDateWrittenStr: 1987-04-27 17:30:12
+      bpunValid: null
+    - name: DO-SERVICE-A00:PROG
+      type: PROG
+      pages: 19
+      bytes: 38912
+      userName: FLOPPY-USER
+      dateCreated: 2503415771
+      lastDateRead: 2522800609
+      lastDateWritten: 2503416612
+      dateCreatedStr: 1987-04-27 17:31:27
+      lastDateReadStr: 1987-09-15 14:07:33
+      lastDateWrittenStr: 1987-04-27 17:44:36
+      bpunValid: null
+    - name: DO-INSTALL-A00:PROG
+      type: PROG
+      pages: 6
+      bytes: 12288
+      userName: FLOPPY-USER
+      dateCreated: 2503416210
+      lastDateRead: 2522800592
+      lastDateWritten: 2503416659
+      dateCreatedStr: 1987-04-27 17:38:18
+      lastDateReadStr: 1987-09-15 14:07:16
+      lastDateWrittenStr: 1987-04-27 17:45:19
+      bpunValid: null
+    - name: DO-COMPILED:PROG
+      type: PROG
+      pages: 31
+      bytes: 63488
+      userName: FLOPPY-USER
+      dateCreated: 2503416537
+      lastDateRead: 2522800623
+      lastDateWritten: 2503427869
+      dateCreatedStr: 1987-04-27 17:43:25
+      lastDateReadStr: 1987-09-15 14:07:47
+      lastDateWrittenStr: 1987-04-27 20:28:29
+      bpunValid: null
+    - name: DO-COMM-PUB-A00:TDES
+      type: TDES
+      pages: 3
+      bytes: 4219
+      userName: FLOPPY-USER
+      dateCreated: 2503416849
+      lastDateRead: 2522801055
+      lastDateWritten: 2503428636
+      dateCreatedStr: 1987-04-27 17:48:17
+      lastDateReadStr: 1987-09-15 14:14:31
+      lastDateWrittenStr: 1987-04-27 20:40:28
+      bpunValid: null
+    - name: DO-COMM-SYS-A00:TDES
+      type: TDES
+      pages: 4
+      bytes: 5873
+      userName: FLOPPY-USER
+      dateCreated: 2461332058
+      lastDateRead: 2522801061
+      lastDateWritten: 2503383658
+      dateCreatedStr: 1986-10-26 15:09:26
+      lastDateReadStr: 1987-09-15 14:14:37
+      lastDateWrittenStr: 1987-04-27 09:41:42
+      bpunValid: null
+    - name: DO-INSTALL-A01:MODE
+      type: MODE
+      pages: 2
+      bytes: 2598
+      userName: FLOPPY-USER
+      dateCreated: 2456728146
+      lastDateRead: 2522800599
+      lastDateWritten: 2522799391
+      dateCreatedStr: 1986-09-23 11:09:18
+      lastDateReadStr: 1987-09-15 14:07:23
+      lastDateWrittenStr: 1987-09-15 13:52:31
+      bpunValid: null
+    - name: DDBTABLES-D-C:VTM
+      type: VTM
+      pages: 6
+      bytes: 10968
+      userName: FLOPPY-USER
+      dateCreated: 2466552360
+      lastDateRead: 2522800601
+      lastDateWritten: 2503386578
+      dateCreatedStr: 1986-12-02 09:40:40
+      lastDateReadStr: 1987-09-15 14:07:25
+      lastDateWrittenStr: 1987-04-27 10:23:18
+      bpunValid: null
+    - name: DO-COMM-SYS-A01:DOSC
+      type: DOSC
+      pages: 259
+      bytes: 50393088
+      userName: FLOPPY-USER
+      dateCreated: 2503427990
+      lastDateRead: 2522914372
+      lastDateWritten: 2522799598
+      dateCreatedStr: 1987-04-27 20:30:22
+      lastDateReadStr: 1987-09-16 09:57:04
+      lastDateWrittenStr: 1987-09-15 13:55:46
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 100/ND-disk-00111.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:25:51.681Z
+imagingLogs:
+  - ND-disk-00111.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-211091-a01-d1-7726d314
+  syncStatus: pending

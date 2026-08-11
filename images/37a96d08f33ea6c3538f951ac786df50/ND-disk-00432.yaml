@@ -1,0 +1,360 @@
+id: img-37a96d08f33e
+volumeName: FL1-MA
+md5: 37a96d08f33ea6c3538f951ac786df50
+image:
+  sizeBytes: 319488
+  format: raw
+  controller: floppy
+  totalPages: 156
+  pageSize: 2048
+  bootFormat: binary
+filesystem: ndfs
+ndfs:
+  users:
+    - name: MAFY
+      pagesUsed: 78
+  files:
+    - name: MASTERMIND-LU:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1819
+      userName: MAFY
+      dateCreated: 2151869772
+      lastDateRead: 2152634460
+      lastDateWritten: 2151869778
+      dateCreatedStr: 1982-01-01 14:53:12
+      lastDateReadStr: 1982-01-07 09:33:28
+      lastDateWrittenStr: 1982-01-01 14:53:18
+      bpunValid: null
+    - name: EKVSYSTEM-LU:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 361
+      userName: MAFY
+      dateCreated: 2151869783
+      lastDateRead: 2152634464
+      lastDateWritten: 2151869783
+      dateCreatedStr: 1982-01-01 14:53:23
+      lastDateReadStr: 1982-01-07 09:33:32
+      lastDateWrittenStr: 1982-01-01 14:53:23
+      bpunValid: null
+    - name: FAKULTET-LU:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 847
+      userName: MAFY
+      dateCreated: 2151869789
+      lastDateRead: 2152634468
+      lastDateWritten: 2151869789
+      dateCreatedStr: 1982-01-01 14:53:29
+      lastDateReadStr: 1982-01-07 09:33:36
+      lastDateWrittenStr: 1982-01-01 14:53:29
+      bpunValid: null
+    - name: P-M4-LU:BRF
+      type: BRF
+      pages: 7
+      bytes: 14170
+      userName: MAFY
+      dateCreated: 2151869794
+      lastDateRead: 2152634473
+      lastDateWritten: 2151869795
+      dateCreatedStr: 1982-01-01 14:53:34
+      lastDateReadStr: 1982-01-07 09:33:41
+      lastDateWrittenStr: 1982-01-01 14:53:35
+      bpunValid: null
+    - name: RESONANS-SA:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 830
+      userName: MAFY
+      dateCreated: 2151869804
+      lastDateRead: 2152634479
+      lastDateWritten: 2151869805
+      dateCreatedStr: 1982-01-01 14:53:44
+      lastDateReadStr: 1982-01-07 09:33:47
+      lastDateWrittenStr: 1982-01-01 14:53:45
+      bpunValid: null
+    - name: FEM-LU:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 2890
+      userName: MAFY
+      dateCreated: 2151869810
+      lastDateRead: 2152634484
+      lastDateWritten: 2151869810
+      dateCreatedStr: 1982-01-01 14:53:50
+      lastDateReadStr: 1982-01-07 09:33:52
+      lastDateWrittenStr: 1982-01-01 14:53:50
+      bpunValid: null
+    - name: STIP-LU:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 2394
+      userName: MAFY
+      dateCreated: 2151869816
+      lastDateRead: 2152634488
+      lastDateWritten: 2151869817
+      dateCreatedStr: 1982-01-01 14:53:56
+      lastDateReadStr: 1982-01-07 09:33:56
+      lastDateWrittenStr: 1982-01-01 14:53:57
+      bpunValid: null
+    - name: KASTPARABEL-LU:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1471
+      userName: MAFY
+      dateCreated: 2151869827
+      lastDateRead: 2152634497
+      lastDateWritten: 2151869827
+      dateCreatedStr: 1982-01-01 14:54:03
+      lastDateReadStr: 1982-01-07 09:34:01
+      lastDateWrittenStr: 1982-01-01 14:54:03
+      bpunValid: null
+    - name: SKOLL-LU:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1201
+      userName: MAFY
+      dateCreated: 2151869832
+      lastDateRead: 2152634501
+      lastDateWritten: 2151869833
+      dateCreatedStr: 1982-01-01 14:54:08
+      lastDateReadStr: 1982-01-07 09:34:05
+      lastDateWrittenStr: 1982-01-01 14:54:09
+      bpunValid: null
+    - name: EX2-LU:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 428
+      userName: MAFY
+      dateCreated: 2151869838
+      lastDateRead: 2152634505
+      lastDateWritten: 2151869838
+      dateCreatedStr: 1982-01-01 14:54:14
+      lastDateReadStr: 1982-01-07 09:34:09
+      lastDateWrittenStr: 1982-01-01 14:54:14
+      bpunValid: null
+    - name: P-EQSYSTEM-LU:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1181
+      userName: MAFY
+      dateCreated: 2151869844
+      lastDateRead: 2152634510
+      lastDateWritten: 2151869844
+      dateCreatedStr: 1982-01-01 14:54:20
+      lastDateReadStr: 1982-01-07 09:34:14
+      lastDateWrittenStr: 1982-01-01 14:54:20
+      bpunValid: null
+    - name: P-MIND:SYMB
+      type: SYMB
+      pages: 4
+      bytes: 8057
+      userName: MAFY
+      dateCreated: 2151869849
+      lastDateRead: 2152634514
+      lastDateWritten: 2151869850
+      dateCreatedStr: 1982-01-01 14:54:25
+      lastDateReadStr: 1982-01-07 09:34:18
+      lastDateWrittenStr: 1982-01-01 14:54:26
+      bpunValid: null
+    - name: P-HELMHOLTZ-LU:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 2089
+      userName: MAFY
+      dateCreated: 2151869858
+      lastDateRead: 2152634520
+      lastDateWritten: 2151869858
+      dateCreatedStr: 1982-01-01 14:54:34
+      lastDateReadStr: 1982-01-07 09:34:24
+      lastDateWrittenStr: 1982-01-01 14:54:34
+      bpunValid: null
+    - name: ACC-LU:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1178
+      userName: MAFY
+      dateCreated: 2151869865
+      lastDateRead: 2152634525
+      lastDateWritten: 2151869865
+      dateCreatedStr: 1982-01-01 14:54:41
+      lastDateReadStr: 1982-01-07 09:34:29
+      lastDateWrittenStr: 1982-01-01 14:54:41
+      bpunValid: null
+    - name: P-INSTRING-LU:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 733
+      userName: MAFY
+      dateCreated: 2151869871
+      lastDateRead: 2152634529
+      lastDateWritten: 2151869871
+      dateCreatedStr: 1982-01-01 14:54:47
+      lastDateReadStr: 1982-01-07 09:34:33
+      lastDateWrittenStr: 1982-01-01 14:54:47
+      bpunValid: null
+    - name: P-READSTRING-LU:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1665
+      userName: MAFY
+      dateCreated: 2151869876
+      lastDateRead: 2152634534
+      lastDateWritten: 2151869877
+      dateCreatedStr: 1982-01-01 14:54:52
+      lastDateReadStr: 1982-01-07 09:34:38
+      lastDateWrittenStr: 1982-01-01 14:54:53
+      bpunValid: null
+    - name: P-KON-LU:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 519
+      userName: MAFY
+      dateCreated: 2151869882
+      lastDateRead: 2152634539
+      lastDateWritten: 2151869883
+      dateCreatedStr: 1982-01-01 14:54:58
+      lastDateReadStr: 1982-01-07 09:34:43
+      lastDateWrittenStr: 1982-01-01 14:54:59
+      bpunValid: null
+    - name: P-SORTSTRING-LU:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 2027
+      userName: MAFY
+      dateCreated: 2151869892
+      lastDateRead: 2152634543
+      lastDateWritten: 2151869893
+      dateCreatedStr: 1982-01-01 14:55:04
+      lastDateReadStr: 1982-01-07 09:34:47
+      lastDateWrittenStr: 1982-01-01 14:55:05
+      bpunValid: null
+    - name: FEMB-LU:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1102
+      userName: MAFY
+      dateCreated: 2151869899
+      lastDateRead: 2152634548
+      lastDateWritten: 2151869900
+      dateCreatedStr: 1982-01-01 14:55:11
+      lastDateReadStr: 1982-01-07 09:34:52
+      lastDateWrittenStr: 1982-01-01 14:55:12
+      bpunValid: null
+    - name: P-MATVEK-LU:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 3625
+      userName: MAFY
+      dateCreated: 2151869905
+      lastDateRead: 2152634553
+      lastDateWritten: 2151869906
+      dateCreatedStr: 1982-01-01 14:55:17
+      lastDateReadStr: 1982-01-07 09:34:57
+      lastDateWrittenStr: 1982-01-01 14:55:18
+      bpunValid: null
+    - name: P-KORT-LU:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 779
+      userName: MAFY
+      dateCreated: 2151869912
+      lastDateRead: 2152634562
+      lastDateWritten: 2151869913
+      dateCreatedStr: 1982-01-01 14:55:24
+      lastDateReadStr: 1982-01-07 09:35:02
+      lastDateWrittenStr: 1982-01-01 14:55:25
+      bpunValid: null
+    - name: P-FINDSTRING-LU:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 903
+      userName: MAFY
+      dateCreated: 2151869918
+      lastDateRead: 2152634567
+      lastDateWritten: 2151869919
+      dateCreatedStr: 1982-01-01 14:55:30
+      lastDateReadStr: 1982-01-07 09:35:07
+      lastDateWrittenStr: 1982-01-01 14:55:31
+      bpunValid: null
+    - name: LASIN-LU:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1319
+      userName: MAFY
+      dateCreated: 2151869924
+      lastDateRead: 2152634572
+      lastDateWritten: 2151869925
+      dateCreatedStr: 1982-01-01 14:55:36
+      lastDateReadStr: 1982-01-07 09:35:12
+      lastDateWrittenStr: 1982-01-01 14:55:37
+      bpunValid: null
+    - name: BLANKIN-LU:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 645
+      userName: MAFY
+      dateCreated: 2151869930
+      lastDateRead: 2152634576
+      lastDateWritten: 2151869931
+      dateCreatedStr: 1982-01-01 14:55:42
+      lastDateReadStr: 1982-01-07 09:35:16
+      lastDateWrittenStr: 1982-01-01 14:55:43
+      bpunValid: null
+    - name: P-M4-LU:SYMB
+      type: SYMB
+      pages: 9
+      bytes: 16203
+      userName: MAFY
+      dateCreated: 2151869936
+      lastDateRead: 2152634581
+      lastDateWritten: 2151869937
+      dateCreatedStr: 1982-01-01 14:55:48
+      lastDateReadStr: 1982-01-07 09:35:21
+      lastDateWrittenStr: 1982-01-01 14:55:49
+      bpunValid: null
+    - name: SIMPSON-LU:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 570
+      userName: MAFY
+      dateCreated: 2151869956
+      lastDateRead: 2152634589
+      lastDateWritten: 2151869956
+      dateCreatedStr: 1982-01-01 14:56:04
+      lastDateReadStr: 1982-01-07 09:35:29
+      lastDateWrittenStr: 1982-01-01 14:56:04
+      bpunValid: null
+    - name: EKVATION-LU:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 2331
+      userName: MAFY
+      dateCreated: 2151869962
+      lastDateRead: 2152634594
+      lastDateWritten: 2151869962
+      dateCreatedStr: 1982-01-01 14:56:10
+      lastDateReadStr: 1982-01-07 09:35:34
+      lastDateWrittenStr: 1982-01-01 14:56:10
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 400/ND-disk-00432.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:49:32.513Z
+imagingLogs:
+  - ND-disk-00432.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-37a96d08f33e
+  syncStatus: pending

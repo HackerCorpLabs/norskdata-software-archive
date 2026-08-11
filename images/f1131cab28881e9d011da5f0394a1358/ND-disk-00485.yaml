@@ -1,0 +1,72 @@
+id: os-n-100-1001-i-f1131cab
+volumeName: N-100-1001-IV
+md5: f1131cab28881e9d011da5f0394a1358
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: SYSTEM
+      pagesUsed: 46
+  files:
+    - name: SYMBOL-2-LIST:SYMB
+      type: SYMB
+      pages: 16
+      bytes: 29799
+      userName: SYSTEM
+      dateCreated: 2423846331
+      lastDateRead: 4269933905
+      lastDateWritten: 2423846353
+      dateCreatedStr: 1986-01-28 15:22:59
+      lastDateReadStr: 2013-10-01 00:21:17
+      lastDateWrittenStr: 1986-01-28 15:23:17
+      bpunValid: null
+    - name: SYMBOL-1-LIST:SYMB
+      type: SYMB
+      pages: 26
+      bytes: 53149
+      userName: SYSTEM
+      dateCreated: 2423846340
+      lastDateRead: 4269933896
+      lastDateWritten: 2423846342
+      dateCreatedStr: 1986-01-28 15:23:04
+      lastDateReadStr: 2013-10-01 00:21:08
+      lastDateWrittenStr: 1986-01-28 15:23:06
+      bpunValid: null
+    - name: LIBRARY-MARKS:SYMB
+      type: SYMB
+      pages: 3
+      bytes: 4802
+      userName: SYSTEM
+      dateCreated: 2423846341
+      lastDateRead: 4269933910
+      lastDateWritten: 2423846360
+      dateCreatedStr: 1986-01-28 15:23:05
+      lastDateReadStr: 2013-10-01 00:21:22
+      lastDateWrittenStr: 1986-01-28 15:23:24
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 400/ND-disk-00485.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:49:58.026Z
+imagingLogs:
+  - ND-disk-00485.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-os-n-100-1001-i-f1131cab
+  syncStatus: pending

@@ -1,0 +1,36 @@
+id: img-e6c5526779d8
+volumeName: CLAS-5
+md5: e6c5526779d8a2cda88254dacd511a64
+image:
+  sizeBytes: 319488
+  format: raw
+  controller: floppy
+  totalPages: 156
+  pageSize: 2048
+  bootFormat: binary
+filesystem: ndfs
+ndfs:
+  users:
+    - name: SYSTEM
+      pagesUsed: 0
+  files: []
+provenance:
+  contributor: gandalf
+  originalPath: 300/ND-disk-00374.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:45:55.342Z
+imagingLogs:
+  - ND-disk-00374.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-e6c5526779d8
+  syncStatus: pending

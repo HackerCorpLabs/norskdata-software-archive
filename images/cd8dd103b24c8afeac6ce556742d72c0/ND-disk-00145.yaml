@@ -1,0 +1,77 @@
+id: nd-211024-d00-d1-cd8dd103
+volumeName: 211024D00-XX-01D
+md5: cd8dd103b24c8afeac6ce556742d72c0
+product:
+  id: ND-211024
+  version: D00
+  diskNumber: 1
+  language: XX
+image:
+  sizeBytes: 1310720
+  format: raw
+  controller: floppy
+  totalPages: 640
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 150
+  files:
+    - name: S3-CONFIG-D00:PROG
+      type: PROG
+      pages: 80
+      bytes: 186368
+      userName: FLOPPY-USER
+      dateCreated: 2568790373
+      lastDateRead: 2580061489
+      lastDateWritten: 2568811873
+      dateCreatedStr: 1988-04-14 10:05:37
+      lastDateReadStr: 1988-07-04 09:52:49
+      lastDateWrittenStr: 1988-04-14 15:21:33
+      bpunValid: null
+    - name: DDBTABLES-E-E04:VTM
+      type: VTM
+      pages: 15
+      bytes: 29870
+      userName: FLOPPY-USER
+      dateCreated: 2568790377
+      lastDateRead: null
+      lastDateWritten: 2568790427
+      dateCreatedStr: 1988-04-14 10:05:41
+      lastDateReadStr: null
+      lastDateWrittenStr: 1988-04-14 10:06:27
+      bpunValid: null
+    - name: NOTS-SERVICE-B00:PROG
+      type: PROG
+      pages: 51
+      bytes: 86016
+      userName: FLOPPY-USER
+      dateCreated: 2568790377
+      lastDateRead: null
+      lastDateWritten: 2568790441
+      dateCreatedStr: 1988-04-14 10:05:41
+      lastDateReadStr: null
+      lastDateWrittenStr: 1988-04-14 10:06:41
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 100/ND-disk-00145.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:25:57.775Z
+imagingLogs:
+  - ND-disk-00145.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-211024-d00-d1-cd8dd103
+  syncStatus: pending

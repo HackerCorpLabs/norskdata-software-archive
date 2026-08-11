@@ -1,0 +1,396 @@
+id: img-e5fcbd5ea3be
+volumeName: LUNDIN-2
+md5: e5fcbd5ea3be246f2d8ca454cc732941
+image:
+  sizeBytes: 319488
+  format: raw
+  controller: floppy
+  totalPages: 156
+  pageSize: 2048
+  bootFormat: binary
+filesystem: ndfs
+ndfs:
+  users:
+    - name: LEGEND
+      pagesUsed: 99
+  files:
+    - name: LEGEND-LU:SYMB
+      type: SYMB
+      pages: 27
+      bytes: 51726
+      userName: LEGEND
+      dateCreated: 2452954789
+      lastDateRead: 2502752836
+      lastDateWritten: 2453867859
+      dateCreatedStr: 1986-08-26 17:58:37
+      lastDateReadStr: 1987-04-22 15:41:04
+      lastDateWrittenStr: 1986-09-01 16:53:19
+      bpunValid: null
+    - name: SPELARE-1-LU:DATA
+      type: DATA
+      pages: 4
+      bytes: 2423
+      userName: LEGEND
+      dateCreated: 2452955220
+      lastDateRead: 2502753998
+      lastDateWritten: 2453867868
+      dateCreatedStr: 1986-08-26 18:01:20
+      lastDateReadStr: 1987-04-22 15:59:14
+      lastDateWrittenStr: 1986-09-01 16:53:28
+      bpunValid: null
+    - name: SPELARE-2-LU:DATA
+      type: DATA
+      pages: 2
+      bytes: 4096
+      userName: LEGEND
+      dateCreated: 2452955230
+      lastDateRead: 2502753761
+      lastDateWritten: 2453867870
+      dateCreatedStr: 1986-08-26 18:01:30
+      lastDateReadStr: 1987-04-22 15:55:33
+      lastDateWrittenStr: 1986-09-01 16:53:30
+      bpunValid: null
+    - name: SPELARE-3-LU:DATA
+      type: DATA
+      pages: 3
+      bytes: 4112
+      userName: LEGEND
+      dateCreated: 2452955238
+      lastDateRead: 2502753764
+      lastDateWritten: 2453867872
+      dateCreatedStr: 1986-08-26 18:01:38
+      lastDateReadStr: 1987-04-22 15:55:36
+      lastDateWrittenStr: 1986-09-01 16:53:32
+      bpunValid: null
+    - name: SPELARE-4-LU:DATA
+      type: DATA
+      pages: 2
+      bytes: 2049
+      userName: LEGEND
+      dateCreated: 2452955246
+      lastDateRead: 2502753768
+      lastDateWritten: 2453867877
+      dateCreatedStr: 1986-08-26 18:01:46
+      lastDateReadStr: 1987-04-22 15:55:40
+      lastDateWrittenStr: 1986-09-01 16:53:37
+      bpunValid: null
+    - name: SPELARE-5-LU:DATA
+      type: DATA
+      pages: 2
+      bytes: 4097
+      userName: LEGEND
+      dateCreated: 2452955252
+      lastDateRead: 2502753771
+      lastDateWritten: 2453867881
+      dateCreatedStr: 1986-08-26 18:01:52
+      lastDateReadStr: 1987-04-22 15:55:43
+      lastDateWrittenStr: 1986-09-01 16:53:41
+      bpunValid: null
+    - name: SPELARE-6-LU:DATA
+      type: DATA
+      pages: 1
+      bytes: 2049
+      userName: LEGEND
+      dateCreated: 2452955259
+      lastDateRead: 2502753777
+      lastDateWritten: 2453867883
+      dateCreatedStr: 1986-08-26 18:01:59
+      lastDateReadStr: 1987-04-22 15:55:49
+      lastDateWrittenStr: 1986-09-01 16:53:43
+      bpunValid: null
+    - name: SPELARE-7-LU:DATA
+      type: DATA
+      pages: 1
+      bytes: 2049
+      userName: LEGEND
+      dateCreated: 2452955270
+      lastDateRead: 2502753779
+      lastDateWritten: 2453867884
+      dateCreatedStr: 1986-08-26 18:02:06
+      lastDateReadStr: 1987-04-22 15:55:51
+      lastDateWrittenStr: 1986-09-01 16:53:44
+      bpunValid: null
+    - name: SPELARE-8-LU:DATA
+      type: DATA
+      pages: 1
+      bytes: 2049
+      userName: LEGEND
+      dateCreated: 2452955277
+      lastDateRead: 2502753782
+      lastDateWritten: 2453867886
+      dateCreatedStr: 1986-08-26 18:02:13
+      lastDateReadStr: 1987-04-22 15:55:54
+      lastDateWrittenStr: 1986-09-01 16:53:46
+      bpunValid: null
+    - name: SPELARE-9-LU:DATA
+      type: DATA
+      pages: 1
+      bytes: 2049
+      userName: LEGEND
+      dateCreated: 2452955283
+      lastDateRead: 2502753785
+      lastDateWritten: 2453867888
+      dateCreatedStr: 1986-08-26 18:02:19
+      lastDateReadStr: 1987-04-22 15:55:57
+      lastDateWrittenStr: 1986-09-01 16:53:48
+      bpunValid: null
+    - name: SPELARE-10-LU:DATA
+      type: DATA
+      pages: 1
+      bytes: 2049
+      userName: LEGEND
+      dateCreated: 2452955290
+      lastDateRead: 2502753792
+      lastDateWritten: 2453867889
+      dateCreatedStr: 1986-08-26 18:02:26
+      lastDateReadStr: 1987-04-22 15:56:00
+      lastDateWrittenStr: 1986-09-01 16:53:49
+      bpunValid: null
+    - name: SPELARE-11-LU:DATA
+      type: DATA
+      pages: 1
+      bytes: 2049
+      userName: LEGEND
+      dateCreated: 2452955296
+      lastDateRead: 2502753795
+      lastDateWritten: 2453867891
+      dateCreatedStr: 1986-08-26 18:02:32
+      lastDateReadStr: 1987-04-22 15:56:03
+      lastDateWrittenStr: 1986-09-01 16:53:51
+      bpunValid: null
+    - name: SPELARE-12-LU:DATA
+      type: DATA
+      pages: 1
+      bytes: 2049
+      userName: LEGEND
+      dateCreated: 2452955303
+      lastDateRead: 2502753798
+      lastDateWritten: 2453867893
+      dateCreatedStr: 1986-08-26 18:02:39
+      lastDateReadStr: 1987-04-22 15:56:06
+      lastDateWrittenStr: 1986-09-01 16:53:53
+      bpunValid: null
+    - name: BASIC-ERR-LU:DATA
+      type: DATA
+      pages: 2
+      bytes: 2624
+      userName: LEGEND
+      dateCreated: 2452955872
+      lastDateRead: 2502753848
+      lastDateWritten: 2452955873
+      dateCreatedStr: 1986-08-26 18:11:32
+      lastDateReadStr: 1987-04-22 15:56:56
+      lastDateWrittenStr: 1986-08-26 18:11:33
+      bpunValid: null
+    - name: NY-VARIABEL-LU:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1244
+      userName: LEGEND
+      dateCreated: 2452955722
+      lastDateRead: 2502753825
+      lastDateWritten: 2452955723
+      dateCreatedStr: 1986-08-26 18:09:10
+      lastDateReadStr: 1987-04-22 15:56:33
+      lastDateWrittenStr: 1986-08-26 18:09:11
+      bpunValid: null
+    - name: INSTR-LEGEND-LU:DATA
+      type: DATA
+      pages: 1
+      bytes: 1770
+      userName: LEGEND
+      dateCreated: 2452955742
+      lastDateRead: 2502753829
+      lastDateWritten: 2452955744
+      dateCreatedStr: 1986-08-26 18:09:30
+      lastDateReadStr: 1987-04-22 15:56:37
+      lastDateWrittenStr: 1986-08-26 18:09:32
+      bpunValid: null
+    - name: HELPFIL-LU:DATA
+      type: DATA
+      pages: 2
+      bytes: 1795
+      userName: LEGEND
+      dateCreated: 2452955770
+      lastDateRead: 2502753832
+      lastDateWritten: 2452955771
+      dateCreatedStr: 1986-08-26 18:09:58
+      lastDateReadStr: 1987-04-22 15:56:40
+      lastDateWrittenStr: 1986-08-26 18:09:59
+      bpunValid: null
+    - name: 2LEGEND-LU:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 300
+      userName: LEGEND
+      dateCreated: 2452955881
+      lastDateRead: 2502757232
+      lastDateWritten: 2452955882
+      dateCreatedStr: 1986-08-26 18:11:41
+      lastDateReadStr: 1987-04-22 16:45:48
+      lastDateWrittenStr: 1986-08-26 18:11:42
+      bpunValid: null
+    - name: 2VILKA-LU:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 370
+      userName: LEGEND
+      dateCreated: 2452955892
+      lastDateRead: 2502753840
+      lastDateWritten: 2452955894
+      dateCreatedStr: 1986-08-26 18:11:52
+      lastDateReadStr: 1987-04-22 15:56:48
+      lastDateWrittenStr: 1986-08-26 18:11:54
+      bpunValid: null
+    - name: 2RENSA-SCEN-LU:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 351
+      userName: LEGEND
+      dateCreated: 2452955906
+      lastDateRead: 2502753844
+      lastDateWritten: 2452955907
+      dateCreatedStr: 1986-08-26 18:12:02
+      lastDateReadStr: 1987-04-22 15:56:52
+      lastDateWrittenStr: 1986-08-26 18:12:03
+      bpunValid: null
+    - name: CHK-LEGEND-LU:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 971
+      userName: LEGEND
+      dateCreated: 2452955977
+      lastDateRead: 2502753858
+      lastDateWritten: 2452955978
+      dateCreatedStr: 1986-08-26 18:13:09
+      lastDateReadStr: 1987-04-22 15:57:02
+      lastDateWrittenStr: 1986-08-26 18:13:10
+      bpunValid: null
+    - name: AVLUS-LEGEND-LU:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 350
+      userName: LEGEND
+      dateCreated: 2452955987
+      lastDateRead: 2502753862
+      lastDateWritten: 2452955989
+      dateCreatedStr: 1986-08-26 18:13:19
+      lastDateReadStr: 1987-04-22 15:57:06
+      lastDateWrittenStr: 1986-08-26 18:13:21
+      bpunValid: null
+    - name: SET-UNAVAILBL-LU:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 152
+      userName: LEGEND
+      dateCreated: 2452956041
+      lastDateRead: 2502753875
+      lastDateWritten: 2452956042
+      dateCreatedStr: 1986-08-26 18:14:09
+      lastDateReadStr: 1987-04-22 15:57:19
+      lastDateWrittenStr: 1986-08-26 18:14:10
+      bpunValid: null
+    - name: MESS-LEGEND-LU:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 83
+      userName: LEGEND
+      dateCreated: 2452956053
+      lastDateRead: 2502753881
+      lastDateWritten: 2452956055
+      dateCreatedStr: 1986-08-26 18:14:21
+      lastDateReadStr: 1987-04-22 15:57:25
+      lastDateWrittenStr: 1986-08-26 18:14:23
+      bpunValid: null
+    - name: BROAD-LEGEND-LU:DATA
+      type: DATA
+      pages: 1
+      bytes: 126
+      userName: LEGEND
+      dateCreated: 2452956108
+      lastDateRead: 2502753869
+      lastDateWritten: 2452956109
+      dateCreatedStr: 1986-08-26 18:15:12
+      lastDateReadStr: 1987-04-22 15:57:13
+      lastDateWrittenStr: 1986-08-26 18:15:13
+      bpunValid: null
+    - name: BORT-LU:DATA
+      type: DATA
+      pages: 1
+      bytes: 5
+      userName: LEGEND
+      dateCreated: 2452956126
+      lastDateRead: 2502753871
+      lastDateWritten: 2452956127
+      dateCreatedStr: 1986-08-26 18:15:30
+      lastDateReadStr: 1987-04-22 15:57:15
+      lastDateWrittenStr: 1986-08-26 18:15:31
+      bpunValid: null
+    - name: VEMFIL-LU:DATA
+      type: DATA
+      pages: 1
+      bytes: 5
+      userName: LEGEND
+      dateCreated: 2452956135
+      lastDateRead: 2502753870
+      lastDateWritten: 2452956136
+      dateCreatedStr: 1986-08-26 18:15:39
+      lastDateReadStr: 1987-04-22 15:57:14
+      lastDateWrittenStr: 1986-08-26 18:15:40
+      bpunValid: null
+    - name: 20-IN-LEGEND-LU:SYMB
+      type: SYMB
+      pages: 3
+      bytes: 5526
+      userName: LEGEND
+      dateCreated: 2452957015
+      lastDateRead: 2502753756
+      lastDateWritten: 2452959492
+      dateCreatedStr: 1986-08-26 18:29:23
+      lastDateReadStr: 1987-04-22 15:55:28
+      lastDateWrittenStr: 1986-08-26 19:04:04
+      bpunValid: null
+    - name: 21-DEL-LEGEND-LU:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1715
+      userName: LEGEND
+      dateCreated: 2452957920
+      lastDateRead: 2456634143
+      lastDateWritten: 2452959753
+      dateCreatedStr: 1986-08-26 18:43:32
+      lastDateReadStr: 1986-09-22 20:12:31
+      lastDateWrittenStr: 1986-08-26 19:08:09
+      bpunValid: null
+    - name: 22-BAK-LEGEND-LU:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1849
+      userName: LEGEND
+      dateCreated: 2452958361
+      lastDateRead: 2453867857
+      lastDateWritten: 2452958417
+      dateCreatedStr: 1986-08-26 18:50:25
+      lastDateReadStr: 1986-09-01 16:53:17
+      lastDateWrittenStr: 1986-08-26 18:51:17
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 300/ND-disk-00310.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:45:43.866Z
+imagingLogs:
+  - ND-disk-00310.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-e5fcbd5ea3be
+  syncStatus: pending

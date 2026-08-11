@@ -1,0 +1,50 @@
+id: nd-10152-e02-d5-0960b927
+volumeName: 10152E02-5
+md5: 0960b9276ffa5c1815743f859df655fb
+product:
+  id: ND-10152
+  version: E02
+  diskNumber: 5
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 118
+  files:
+    - name: IR-SERVICE-E02:PROG
+      type: PROG
+      pages: 116
+      bytes: 236032
+      userName: FLOPPY-USER
+      dateCreated: 2328006777
+      lastDateRead: 2425488169
+      lastDateWritten: 2328006787
+      dateCreatedStr: 1984-11-01 09:01:57
+      lastDateReadStr: 1986-02-09 00:12:41
+      lastDateWrittenStr: 1984-11-01 09:02:03
+      bpunValid: null
+provenance:
+  contributor: www.datormuseum.se
+  originalPath: OK/DISK38.IMG
+  dateImaged: 2022-08-15
+  importedAt: 2026-08-11T17:07:04.115Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10152-e02-d5-0960b927
+  syncStatus: pending

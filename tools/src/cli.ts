@@ -6,6 +6,7 @@
  */
 
 import { Command } from 'commander';
+import { basename } from 'path';
 import { resolve } from 'path';
 import { printDepCheck } from './api/check-deps.js';
 import { loadCatalog, findByMd5, findByVolumeName, generateCatalogJson, loadProducts, saveProductYaml, saveFloppyYaml, consolidateGroupPhotos } from './api/catalog.js';
@@ -407,6 +408,80 @@ program
       console.error('Rebuild failed:', err);
       process.exit(1);
     }
+  });
+
+// --- identify ---
+program
+  .command('identify <path>')
+  .alias('detect')
+  .description('Identify what a disk image holds (NDFS, MS-DOS, BACKUP-SYSTEM, WINCH-TO-FLOPP, tar) - a file or a folder of images')
+  .option('-r, --recursive', 'descend into sub-folders')
+  .option('--json', 'machine-readable output')
+  .option('--only <kind>', 'list only images of this kind (ndfs, dos, backup, winch, tar, none)')
+  .action(async (target: string, opts: { recursive?: boolean; json?: boolean; only?: string }) => {
+    const { stat, readdir } = await import('fs/promises');
+    const { join } = await import('path');
+    const { identifyImage, looksLikeImageFile } = await import('./api/identify.js');
+
+    async function collect(p: string, depth: number): Promise<string[]> {
+      const st = await stat(p);
+      if (st.isFile()) return [p];
+      if (!st.isDirectory()) return [];
+      const out: string[] = [];
+      for (const name of (await readdir(p)).sort()) {
+        const full = join(p, name);
+        let s;
+        try { s = await stat(full); } catch { continue; }
+        if (s.isDirectory()) {
+          if (opts.recursive && depth < 8) out.push(...await collect(full, depth + 1));
+        } else if (looksLikeImageFile(name)) {
+          out.push(full);
+        }
+      }
+      return out;
+    }
+
+    let files: string[];
+    try {
+      files = await collect(target, 0);
+    } catch (err) {
+      console.error(`Cannot read ${target}: ${err}`);
+      process.exit(1);
+    }
+    if (!files.length) {
+      console.error(`No disk images found in ${target}` + (opts.recursive ? '' : ' (try --recursive)'));
+      process.exit(1);
+    }
+
+    const results = [];
+    for (const f of files) {
+      const r = await identifyImage(f);
+      if (opts.only && r.kind !== opts.only) continue;
+      results.push(r);
+    }
+
+    if (opts.json) {
+      console.log(JSON.stringify(results, null, 2));
+      return;
+    }
+
+    const nameW = Math.min(30, Math.max(4, ...results.map(r => (r.name ?? '').length)));
+    const fileW = Math.min(42, Math.max(4, ...results.map(r => basename(r.path).length)));
+    for (const r of results) {
+      const size = (r.bytes / 1024).toFixed(0).padStart(7) + ' KB';
+      console.log(
+        basename(r.path).padEnd(fileW) + '  ' +
+        r.kind.padEnd(7) + ' ' +
+        size + '  ' +
+        (r.name ?? '').padEnd(nameW) + '  ' +
+        (r.error ? 'ERROR: ' + r.error : r.detail)
+      );
+    }
+
+    const counts: Record<string, number> = {};
+    for (const r of results) counts[r.kind] = (counts[r.kind] ?? 0) + 1;
+    console.log('\n' + results.length + ' image(s): ' +
+      Object.entries(counts).sort((a, b) => b[1] - a[1]).map(([k, n]) => `${k} ${n}`).join(', '));
   });
 
 program.parse();

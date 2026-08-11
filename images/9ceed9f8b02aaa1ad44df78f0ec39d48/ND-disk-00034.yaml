@@ -1,0 +1,101 @@
+id: nd-211226-b02-d1-9ceed9f8
+volumeName: 211226B02-EN-01D
+md5: 9ceed9f8b02aaa1ad44df78f0ec39d48
+product:
+  id: ND-211226
+  version: B02
+  diskNumber: 1
+  language: EN
+image:
+  sizeBytes: 1310720
+  format: raw
+  controller: floppy
+  totalPages: 640
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 447
+  files:
+    - name: BM-FILERE-EN-B02:SEG
+      type: SEG
+      pages: 68
+      bytes: 139276
+      userName: FLOPPY-USER
+      dateCreated: 2647716357
+      lastDateRead: 2647976921
+      lastDateWritten: 2647716359
+      dateCreatedStr: 1989-07-08 15:08:05
+      lastDateReadStr: 1989-07-10 14:47:25
+      lastDateWrittenStr: 1989-07-08 15:08:07
+      bpunValid: null
+    - name: BM-OPERAT-EN-B02:SEG
+      type: SEG
+      pages: 156
+      bytes: 319500
+      userName: FLOPPY-USER
+      dateCreated: 2647716396
+      lastDateRead: 2647976936
+      lastDateWritten: 2647716397
+      dateCreatedStr: 1989-07-08 15:08:44
+      lastDateReadStr: 1989-07-10 14:47:40
+      lastDateWrittenStr: 1989-07-08 15:08:45
+      bpunValid: null
+    - name: BM-DEFINI-EN-B02:SEG
+      type: SEG
+      pages: 108
+      bytes: 221196
+      userName: FLOPPY-USER
+      dateCreated: 2647716527
+      lastDateRead: 2647976973
+      lastDateWritten: 2647716528
+      dateCreatedStr: 1989-07-08 15:10:47
+      lastDateReadStr: 1989-07-10 14:48:13
+      lastDateWrittenStr: 1989-07-08 15:10:48
+      bpunValid: null
+    - name: BM-SCHED-EN-B02:SEG
+      type: SEG
+      pages: 108
+      bytes: 221196
+      userName: FLOPPY-USER
+      dateCreated: 2647716651
+      lastDateRead: 2647976996
+      lastDateWritten: 2647716652
+      dateCreatedStr: 1989-07-08 15:12:43
+      lastDateReadStr: 1989-07-10 14:48:36
+      lastDateWrittenStr: 1989-07-08 15:12:44
+      bpunValid: null
+    - name: BM-LANG-EN-B02:MODE
+      type: MODE
+      pages: 1
+      bytes: 730
+      userName: FLOPPY-USER
+      dateCreated: 2647716810
+      lastDateRead: 2647977019
+      lastDateWritten: 2647716811
+      dateCreatedStr: 1989-07-08 15:15:10
+      lastDateReadStr: 1989-07-10 14:48:59
+      lastDateWrittenStr: 1989-07-08 15:15:11
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 000/ND-disk-00034.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T14:54:08.879Z
+imagingLogs:
+  - ND-disk-00034.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-211226-b02-d1-9ceed9f8
+  syncStatus: pending

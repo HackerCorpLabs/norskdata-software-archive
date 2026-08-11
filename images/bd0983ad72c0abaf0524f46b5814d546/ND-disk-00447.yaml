@@ -1,0 +1,88 @@
+id: nd-10374-a-d2-bd0983ad
+volumeName: ND-10374A-PART2
+md5: bd0983ad72c0abaf0524f46b5814d546
+product:
+  id: ND-10374
+  version: A
+  diskNumber: 2
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: SYSTEM
+      pagesUsed: 77
+  files:
+    - name: COS-DATA-DEF:SYMB
+      type: SYMB
+      pages: 48
+      bytes: 89824
+      userName: SYSTEM
+      dateCreated: 2227759415
+      lastDateRead: 2295521939
+      lastDateWritten: 2227759439
+      dateCreatedStr: 1983-03-04 14:36:55
+      lastDateReadStr: 1984-03-09 14:10:19
+      lastDateWrittenStr: 1983-03-04 14:37:15
+      bpunValid: null
+    - name: COS-TAD-DATA-DEF:SYMB
+      type: SYMB
+      pages: 5
+      bytes: 9997
+      userName: SYSTEM
+      dateCreated: 2227759429
+      lastDateRead: 2295521962
+      lastDateWritten: 2227759456
+      dateCreatedStr: 1983-03-04 14:37:05
+      lastDateReadStr: 1984-03-09 14:10:42
+      lastDateWrittenStr: 1983-03-04 14:37:32
+      bpunValid: null
+    - name: COS-OBJ-TADADM:SYMB
+      type: SYMB
+      pages: 22
+      bytes: 43498
+      userName: SYSTEM
+      dateCreated: 2227759432
+      lastDateRead: 2295521966
+      lastDateWritten: 2227759459
+      dateCreatedStr: 1983-03-04 14:37:08
+      lastDateReadStr: 1984-03-09 14:10:46
+      lastDateWrittenStr: 1983-03-04 14:37:35
+      bpunValid: null
+    - name: COS-CRE-TADADM:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1148
+      userName: SYSTEM
+      dateCreated: 2227759436
+      lastDateRead: 2295521935
+      lastDateWritten: 2227759467
+      dateCreatedStr: 1983-03-04 14:37:12
+      lastDateReadStr: 1984-03-09 14:10:15
+      lastDateWrittenStr: 1983-03-04 14:37:43
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 400/ND-disk-00447.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:49:38.759Z
+imagingLogs:
+  - ND-disk-00447.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10374-a-d2-bd0983ad
+  syncStatus: pending

@@ -1,0 +1,424 @@
+id: img-1762515adf86
+volumeName: MIKAEL-5
+md5: 1762515adf86d648344777714b2f7671
+image:
+  sizeBytes: 319488
+  format: raw
+  controller: floppy
+  totalPages: 156
+  pageSize: 2048
+  bootFormat: bpun
+filesystem: ndfs
+ndfs:
+  users:
+    - name: DNF
+      pagesUsed: 146
+  files:
+    - name: USERS-GUIDE-MJ:TEXT
+      type: TEXT
+      pages: 10
+      bytes: 18578
+      userName: DNF
+      dateCreated: 2231557206
+      lastDateRead: 2647330824
+      lastDateWritten: 2231557230
+      dateCreatedStr: 1983-04-01 13:49:22
+      lastDateReadStr: 1989-07-05 17:00:08
+      lastDateWrittenStr: 1983-04-01 13:49:46
+      bpunValid: null
+    - name: STAR-TREKK-ND:SYMB
+      type: SYMB
+      pages: 24
+      bytes: 48077
+      userName: DNF
+      dateCreated: 2191347373
+      lastDateRead: 2397760516
+      lastDateWritten: 2393590765
+      dateCreatedStr: 1982-10-14 20:58:45
+      lastDateReadStr: 1985-11-21 14:48:04
+      lastDateWrittenStr: 1985-10-21 20:47:45
+      bpunValid: null
+    - name: REAKTOR-CC:SYMB
+      type: SYMB
+      pages: 9
+      bytes: 17458
+      userName: DNF
+      dateCreated: 2173868119
+      lastDateRead: 2647330866
+      lastDateWritten: 2252295015
+      dateCreatedStr: 1982-06-09 09:33:23
+      lastDateReadStr: 1989-07-05 17:00:50
+      lastDateWrittenStr: 1983-08-31 20:45:39
+      bpunValid: null
+    - name: LOST-DUTCHMAN-CC:SYMB
+      type: SYMB
+      pages: 10
+      bytes: 19025
+      userName: DNF
+      dateCreated: 2173868191
+      lastDateRead: 2393591226
+      lastDateWritten: 2173868196
+      dateCreatedStr: 1982-06-09 09:34:31
+      lastDateReadStr: 1985-10-21 20:54:58
+      lastDateWrittenStr: 1982-06-09 09:34:36
+      bpunValid: null
+    - name: DUKEDOM-CC:SYMB
+      type: SYMB
+      pages: 6
+      bytes: 11536
+      userName: DNF
+      dateCreated: 2173868253
+      lastDateRead: 2391102060
+      lastDateWritten: 2296714449
+      dateCreatedStr: 1982-06-09 09:35:29
+      lastDateReadStr: 1985-10-02 21:09:44
+      lastDateWrittenStr: 1984-03-18 17:19:17
+      bpunValid: null
+    - name: DUKEDOM-CC:DATA
+      type: DATA
+      pages: 7
+      bytes: 13636
+      userName: DNF
+      dateCreated: 2173868313
+      lastDateRead: 2397391829
+      lastDateWritten: 2173868324
+      dateCreatedStr: 1982-06-09 09:36:25
+      lastDateReadStr: 1985-11-18 20:47:21
+      lastDateWrittenStr: 1982-06-09 09:36:36
+      bpunValid: null
+    - name: NODAL-ND:PROG
+      type: PROG
+      pages: 12
+      bytes: 23254
+      userName: DNF
+      dateCreated: 2173876410
+      lastDateRead: 2532248055
+      lastDateWritten: 2173876417
+      dateCreatedStr: 1982-06-09 11:34:58
+      lastDateReadStr: 1987-11-23 16:39:55
+      lastDateWrittenStr: 1982-06-09 11:35:01
+      bpunValid: null
+    - name: STREETS-OF-CC:SYMB
+      type: SYMB
+      pages: 15
+      bytes: 30085
+      userName: DNF
+      dateCreated: 2173867987
+      lastDateRead: 2389384102
+      lastDateWritten: 2173867999
+      dateCreatedStr: 1982-06-09 09:31:19
+      lastDateReadStr: 1985-09-21 17:46:38
+      lastDateWrittenStr: 1982-06-09 09:31:31
+      bpunValid: null
+    - name: STAR-LANES-CC:SYMB
+      type: SYMB
+      pages: 4
+      bytes: 6947
+      userName: DNF
+      dateCreated: 2231557051
+      lastDateRead: 2532248592
+      lastDateWritten: 2325148301
+      dateCreatedStr: 1983-04-01 13:46:59
+      lastDateReadStr: 1987-11-23 16:48:16
+      lastDateWrittenStr: 1984-10-11 15:10:13
+      bpunValid: null
+    - name: DELFI-3-EAO:SYMB
+      type: SYMB
+      pages: 35
+      bytes: 71223
+      userName: DNF
+      dateCreated: 2231557215
+      lastDateRead: 2647330525
+      lastDateWritten: 2263410608
+      dateCreatedStr: 1983-04-01 13:49:31
+      lastDateReadStr: 1989-07-05 16:59:29
+      lastDateWrittenStr: 1983-11-20 14:30:48
+      bpunValid: null
+    - name: TANK-BATTLE-ERIC:SYMB
+      type: SYMB
+      pages: 6
+      bytes: 10482
+      userName: DNF
+      dateCreated: 2173876662
+      lastDateRead: 2663985163
+      lastDateWritten: 2227766227
+      dateCreatedStr: 1982-06-09 11:38:54
+      lastDateReadStr: 1989-11-04 19:00:11
+      lastDateWrittenStr: 1983-03-04 16:15:19
+      bpunValid: null
+    - name: CUBE-MD:SYMB
+      type: SYMB
+      pages: 3
+      bytes: 5973
+      userName: DNF
+      dateCreated: 2173883333
+      lastDateRead: 2647330551
+      lastDateWritten: 2173883339
+      dateCreatedStr: 1982-06-09 13:15:05
+      lastDateReadStr: 1989-07-05 16:59:55
+      lastDateWrittenStr: 1982-06-09 13:15:11
+      bpunValid: null
+    - name: DÏUBÌÅ ÉNÔÅGÅÒ Ì:ÏÃAÔ
+      type: ÏÃAÔ
+      pages: 3433845701
+      bytes: 3285504728
+      userName: ""
+      dateCreated: 3512025412
+      lastDateRead: 3537349841
+      lastDateWritten: 1430340803
+      dateCreatedStr: 2002-05-10 20:05:04
+      lastDateReadStr: 2002-11-11 26:51:17
+      lastDateWrittenStr: null
+      bpunValid: null
+    - name: Ì¬ÅNÅÒGY¬SÔÅNÅG¬:ÔÏÒP
+      type: ÔÏÒP
+      pages: 2899400001
+      bytes: 1154667693
+      userName: ""
+      dateCreated: 3318140099
+      lastDateRead: 3568063304
+      lastDateWritten: 3477983044
+      dateCreatedStr: 1999-07-03 12:51:03
+      lastDateReadStr: 2003-02-22 05:13:08
+      lastDateWrittenStr: 2001-13-06 28:61:04
+      bpunValid: null
+    - name: "BAS¬ÔÏÔÅNÅ¬BASÅS:¬\n "
+      type: "¬\n "
+      pages: 1403802565
+      bytes: 1321620437
+      userName: ""
+      dateCreated: 1096171844
+      lastDateRead: 1104456784
+      lastDateWritten: 3536798405
+      dateCreatedStr: 1966-05-11 04:05:04
+      lastDateReadStr: 1966-07-10 10:49:16
+      lastDateWrittenStr: 2002-11-07 20:11:05
+      bpunValid: null
+    - name: "G¬ÔÒNÆÌG¬ÃÏMÆÌG¬:\n  "
+      type: "\n  "
+      pages: 2899822926
+      bytes: 1403834797
+      userName: ""
+      dateCreated: 1356093891
+      lastDateRead: 3486297159
+      lastDateWritten: 1095615827
+      dateCreatedStr: 1970-03-10 05:39:03
+      lastDateReadStr: 2001-15-06 10:49:07
+      lastDateWrittenStr: 1966-05-06 28:21:19
+      bpunValid: null
+    - name: |-
+        
+             $KÌÉNG±(9¬:²©¬K
+      type: ²©¬K
+      pages: 608947401
+      bytes: 1313321513
+      userName: ""
+      dateCreated: 3098327209
+      lastDateRead: 2894924448
+      lastDateWritten: 2694881440
+      dateCreatedStr: 1996-02-22 11:34:41
+      lastDateReadStr: 1993-02-06 16:42:32
+      lastDateWrittenStr: 1990-02-16 10:02:32
+      bpunValid: null
+    - name: AÔÅ(¸¬±0¬±0©¬HÉÔ:VAÌ(
+      type: VAÌ(
+      pages: 1120260648
+      bytes: 2997464275
+      userName: ""
+      dateCreated: 2846657802
+      lastDateRead: 2694881440
+      lastDateWritten: 2686730573
+      dateCreatedStr: 1992-06-22 08:52:10
+      lastDateReadStr: 1990-02-16 10:02:32
+      lastDateWrittenStr: null
+      bpunValid: null
+    - name: "DÏÃKÅD(²©\n     :  ÅØ"
+      type:   ÅØ
+      pages: 1094889411
+      bytes: 1154469037
+      userName: ""
+      dateCreated: 2697187149
+      lastDateRead: 1305431727
+      lastDateWritten: 1447154377
+      dateCreatedStr: 1990-03-01 28:61:13
+      lastDateReadStr: 1969-07-07 20:58:47
+      lastDateWrittenStr: null
+      bpunValid: null
+    - name: ADÒ×¬ÑUADÃÌ¬SÅÃÔ:Ò×¬S
+      type: Ò×¬S
+      pages: 2282112286
+      bytes: 1655006119
+      userName: ""
+      dateCreated: 2694849619
+      lastDateRead: 3605177659
+      lastDateWritten: 1307805217
+      dateCreatedStr: 1990-02-16 02:17:19
+      lastDateReadStr: 2003-11-17 10:20:59
+      lastDateWrittenStr: 1969-07-25 24:24:33
+      bpunValid: null
+    - name: ä­Vfg§&ç¢V(ij,Ö!:g é"
+      type: g é"
+      pages: 631728107
+      bytes: 2807441899
+      userName: ""
+      dateCreated: 572582486
+      lastDateRead: 1183141968
+      lastDateWritten: 1347440658
+      dateCreatedStr: 1958-08-16 14:41:22
+      lastDateReadStr: 1967-10-02 21:01:16
+      lastDateWrittenStr: 1970-01-08 05:00:18
+      bpunValid: null
+    - name: ÉÉÌ½MAØ0(SÅÃÔÒ×-:±¬±©
+      type: ±¬±©
+      pages: 178299040
+      bytes: 2694881441
+      userName: ""
+      dateCreated: 1405469652
+      lastDateRead: 3537316785
+      lastDateWritten: 2897783181
+      dateCreatedStr: 1970-15-02 28:15:20
+      lastDateReadStr: 2002-11-11 18:46:49
+      lastDateWrittenStr: 1993-02-28 10:38:13
+      bpunValid: null
+    - name: "¬ÉÉH\n       DÏ :±·9 "
+      type: ±·9 
+      pages: 2898962734
+      bytes: 1321545268
+      userName: ""
+      dateCreated: 3385237544
+      lastDateRead: 3512025412
+      lastDateWritten: 3537119433
+      dateCreatedStr: 2000-07-03 10:00:40
+      lastDateReadStr: 2002-05-10 20:05:04
+      lastDateWrittenStr: 2002-11-10 02:35:09
+      bpunValid: null
+    - name: " ±·9\n       ÃDÏ:Ì(±©"
+      type: Ì(±©
+      pages: 1271219240
+      bytes: 2997456139
+      userName: ""
+      dateCreated: 2697151695
+      lastDateRead: 3425219241
+      lastDateWritten: 3175403459
+      dateCreatedStr: 1990-03-01 20:19:15
+      lastDateReadStr: null
+      lastDateWrittenStr: 1997-05-02 12:63:03
+      bpunValid: null
+    - name: " ÅNÅÒGY½SÔÅNÅG\n:    "
+      type:     
+      pages: 3426830126
+      bytes: 3318820401
+      userName: ""
+      dateCreated: 2694881440
+      lastDateRead: 2694891974
+      lastDateWritten: 2687027654
+      dateCreatedStr: 1990-02-16 10:02:32
+      lastDateReadStr: 1990-02-16 12:39:06
+      lastDateWrittenStr: null
+      bpunValid: null
+    - name: " ±¸·\n       DÏ :±·5 "
+      type: ±·5 
+      pages: 3559796782
+      bytes: 2845852738
+      userName: ""
+      dateCreated: 675561805
+      lastDateRead: 1095222568
+      lastDateWritten: 1269378764
+      dateCreatedStr: 1960-01-02 04:05:13
+      lastDateReadStr: 1966-05-03 28:20:40
+      lastDateWrittenStr: 1968-14-20 18:59:12
+      bpunValid: null
+    - name: "DÏÌ(²©½GÒÅÅN(²©:\n   "
+      type: |-
+        
+           
+      pages: 3309578417
+      bytes: 2844592801
+      userName: ""
+      dateCreated: 2694881475
+      lastDateRead: 1154468904
+      lastDateWritten: 2980691410
+      dateCreatedStr: 1990-02-16 10:03:03
+      lastDateReadStr: 1967-03-07 28:48:40
+      lastDateWrittenStr: 1994-06-20 27:55:18
+      bpunValid: null
+    - name: "ÃDÏÌ(²©½ÒÅD(²©\n:    "
+      type:     
+      pages: 1120260648
+      bytes: 2980678923
+      userName: ""
+      dateCreated: 2694890308
+      lastDateRead: 3486263473
+      lastDateWritten: 2847752525
+      dateCreatedStr: 1990-02-16 12:13:04
+      lastDateReadStr: 2001-15-06 02:34:49
+      lastDateWrittenStr: 1992-06-30 20:05:13
+      bpunValid: null
+    - name: " ÃDÏÌ(²©½AMBÅÒ(²:©\n±"
+      type: "©\n±"
+      pages: 3327479491
+      bytes: 3569995599
+      userName: ""
+      dateCreated: 2694881477
+      lastDateRead: 1313115402
+      lastDateWritten: 3272384672
+      dateCreatedStr: 1990-02-16 10:03:05
+      lastDateReadStr: 1969-09-02 08:52:10
+      lastDateWrittenStr: 1998-12-06 10:02:32
+      bpunValid: null
+    - name: "½0\n       ÉÆ (Ø:.ÌÔ."
+      type: .ÌÔ.
+      pages: 2694881477
+      bytes: 1313115403
+      userName: ""
+      dateCreated: 3536180309
+      lastDateRead: 3528363274
+      lastDateWritten: 2694881440
+      dateCreatedStr: 2002-11-02 29:17:21
+      lastDateReadStr: 2002-09-07 08:52:10
+      lastDateWrittenStr: 1990-02-16 10:02:32
+      bpunValid: null
+    - name: ÆÉGUÒÅ MAØÉMUM A:ÃÃÅP
+      type: ÃÃÅP
+      pages: 2694861653
+      bytes: 1121111894
+      userName: ""
+      dateCreated: 3317945551
+      lastDateRead: 3532458656
+      lastDateWritten: 2694881440
+      dateCreatedStr: 1999-07-01 29:19:15
+      lastDateReadStr: 2002-10-06 16:42:32
+      lastDateWrittenStr: 1990-02-16 10:02:32
+      bpunValid: null
+    - name: ÉDÔH(DÅÌÔAØ¬DÅÌÔ:AY¬A
+      type: AY¬A
+      pages: 1095649101
+      bytes: 3377376322
+      userName: ""
+      dateCreated: 2694881440
+      lastDateRead: 3377386693
+      lastDateWritten: 1204146848
+      dateCreatedStr: 1990-02-16 10:02:32
+      lastDateReadStr: 2000-05-07 13:19:05
+      lastDateWrittenStr: 1967-15-02 29:10:32
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 300/ND-disk-00303d.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:45:42.404Z
+imagingLogs:
+  - ND-disk-00303d.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-1762515adf86
+  syncStatus: pending

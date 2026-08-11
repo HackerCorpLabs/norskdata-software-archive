@@ -1,0 +1,50 @@
+id: img-a370df9be369
+volumeName: UNIQUE
+md5: a370df9be369353498a62944ce38c15b
+product:
+  id: UNIQUE-KEY
+image:
+  sizeBytes: 1310720
+  format: raw
+  controller: floppy
+  totalPages: 640
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 3
+  files:
+    - name: UQ-KEY-19204:NRF
+      type: NRF
+      pages: 1
+      bytes: 113
+      userName: FLOPPY-USER
+      dateCreated: 2629216738
+      lastDateRead: 2659361812
+      lastDateWritten: 2629216753
+      dateCreatedStr: 1989-02-27 10:39:34
+      lastDateReadStr: 1989-10-01 10:16:20
+      lastDateWrittenStr: 1989-02-27 10:39:49
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 000/ND-disk-00084.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T14:54:28.078Z
+imagingLogs:
+  - ND-disk-00084.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-a370df9be369
+  syncStatus: pending

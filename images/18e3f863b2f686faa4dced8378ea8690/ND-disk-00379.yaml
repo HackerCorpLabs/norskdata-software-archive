@@ -1,0 +1,180 @@
+id: img-18e3f863b2f6
+volumeName: ERIK-2
+md5: 18e3f863b2f686faa4dced8378ea8690
+image:
+  sizeBytes: 319488
+  format: raw
+  controller: floppy
+  totalPages: 156
+  pageSize: 2048
+  bootFormat: binary
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 106
+  files:
+    - name: BRF-3-EAO:SYMB
+      type: SYMB
+      pages: 29
+      bytes: 58292
+      userName: FLOPPY-USER
+      dateCreated: 2061046115
+      lastDateRead: null
+      lastDateWritten: 2125797987
+      dateCreatedStr: 1980-11-12 17:05:35
+      lastDateReadStr: null
+      lastDateWrittenStr: 1981-10-26 17:41:35
+      bpunValid: null
+    - name: PERSONER-EAO:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 2571
+      userName: FLOPPY-USER
+      dateCreated: 2087539181
+      lastDateRead: 2190276454
+      lastDateWritten: 2087539182
+      dateCreatedStr: 1981-01-22 21:07:45
+      lastDateReadStr: 1982-10-06 15:29:38
+      lastDateWrittenStr: 1981-01-22 21:07:46
+      bpunValid: null
+    - name: PERSONER-EAO:DATA
+      type: DATA
+      pages: 5
+      bytes: 9989
+      userName: FLOPPY-USER
+      dateCreated: 2087539240
+      lastDateRead: 2124871838
+      lastDateWritten: 2102350770
+      dateCreatedStr: 1981-01-22 21:08:40
+      lastDateReadStr: 1981-10-19 15:34:30
+      lastDateWrittenStr: 1981-05-07 21:14:50
+      bpunValid: null
+    - name: DELFI-EAO:SYMB
+      type: SYMB
+      pages: 9
+      bytes: 17694
+      userName: FLOPPY-USER
+      dateCreated: 2102350828
+      lastDateRead: null
+      lastDateWritten: 2102350829
+      dateCreatedStr: 1981-05-07 21:15:44
+      lastDateReadStr: null
+      lastDateWrittenStr: 1981-05-07 21:15:45
+      bpunValid: null
+    - name: SVAR-EAO:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1425
+      userName: FLOPPY-USER
+      dateCreated: 2106143798
+      lastDateRead: null
+      lastDateWritten: 2106143799
+      dateCreatedStr: 1981-06-04 19:16:54
+      lastDateReadStr: null
+      lastDateWrittenStr: 1981-06-04 19:16:55
+      bpunValid: null
+    - name: SCAN-MD:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 2296
+      userName: FLOPPY-USER
+      dateCreated: 2106143849
+      lastDateRead: null
+      lastDateWritten: 2106143850
+      dateCreatedStr: 1981-06-04 19:17:41
+      lastDateReadStr: null
+      lastDateWrittenStr: 1981-06-04 19:17:42
+      bpunValid: null
+    - name: INFO-SCAN-MD:DATA
+      type: DATA
+      pages: 1
+      bytes: 1194
+      userName: FLOPPY-USER
+      dateCreated: 2106143877
+      lastDateRead: null
+      lastDateWritten: 2106143879
+      dateCreatedStr: 1981-06-04 19:18:05
+      lastDateReadStr: null
+      lastDateWrittenStr: 1981-06-04 19:18:07
+      bpunValid: null
+    - name: OPTIMAZER-GDD:PROG
+      type: PROG
+      pages: 1
+      bytes: 1422
+      userName: FLOPPY-USER
+      dateCreated: 2118588483
+      lastDateRead: 2153177750
+      lastDateWritten: 2118588485
+      dateCreatedStr: 1981-09-03 17:33:03
+      lastDateReadStr: 1982-01-11 14:10:22
+      lastDateWrittenStr: 1981-09-03 17:33:05
+      bpunValid: null
+    - name: PL-PER-EAO:SYMB
+      type: SYMB
+      pages: 3
+      bytes: 5151
+      userName: FLOPPY-USER
+      dateCreated: 2125797899
+      lastDateRead: 2190276548
+      lastDateWritten: 2125797901
+      dateCreatedStr: 1981-10-26 17:40:11
+      lastDateReadStr: 1982-10-06 15:31:04
+      lastDateWrittenStr: 1981-10-26 17:40:13
+      bpunValid: null
+    - name: PL-PER-EAO:DATA
+      type: DATA
+      pages: 5
+      bytes: 9965
+      userName: FLOPPY-USER
+      dateCreated: 2125797934
+      lastDateRead: null
+      lastDateWritten: 2125797936
+      dateCreatedStr: 1981-10-26 17:40:46
+      lastDateReadStr: null
+      lastDateWrittenStr: 1981-10-26 17:40:48
+      bpunValid: null
+    - name: DELFI-3-EAO:SYMB
+      type: SYMB
+      pages: 30
+      bytes: 60286
+      userName: FLOPPY-USER
+      dateCreated: 2169976193
+      lastDateRead: 2190276520
+      lastDateWritten: 2169976579
+      dateCreatedStr: 1982-05-11 19:22:01
+      lastDateReadStr: 1982-10-06 15:30:40
+      lastDateWrittenStr: 1982-05-11 19:28:03
+      bpunValid: null
+    - name: LONG-HELP-EAO:DATA
+      type: DATA
+      pages: 5
+      bytes: 9060
+      userName: FLOPPY-USER
+      dateCreated: 2169976791
+      lastDateRead: 2190276531
+      lastDateWritten: 2169976793
+      dateCreatedStr: 1982-05-11 19:31:23
+      lastDateReadStr: 1982-10-06 15:30:51
+      lastDateWrittenStr: 1982-05-11 19:31:25
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 300/ND-disk-00379.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:45:56.376Z
+imagingLogs:
+  - ND-disk-00379.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-18e3f863b2f6
+  syncStatus: pending

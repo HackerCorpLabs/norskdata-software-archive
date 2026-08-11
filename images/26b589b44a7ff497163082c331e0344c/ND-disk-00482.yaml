@@ -1,0 +1,60 @@
+id: os-n-100-1001-i-26b589b4
+volumeName: N-100-1001-I
+md5: 26b589b44a7ff497163082c331e0344c
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: flomon
+filesystem: ndfs
+ndfs:
+  users:
+    - name: SYSTEM
+      pagesUsed: 148
+  files:
+    - name: MACM-1718L:BPUN
+      type: BPUN
+      pages: 20
+      bytes: 35350
+      userName: SYSTEM
+      dateCreated: 2423845388
+      lastDateRead: 2423845393
+      lastDateWritten: 2423845393
+      dateCreatedStr: 1986-01-28 15:08:12
+      lastDateReadStr: 1986-01-28 15:08:17
+      lastDateWrittenStr: 1986-01-28 15:08:17
+      bpunValid: true
+    - name: SINTRAN-I:DATA
+      type: DATA
+      pages: 127
+      bytes: 200305
+      userName: SYSTEM
+      dateCreated: 2423845392
+      lastDateRead: 2423845399
+      lastDateWritten: 2423845399
+      dateCreatedStr: 1986-01-28 15:08:16
+      lastDateReadStr: 1986-01-28 15:08:23
+      lastDateWrittenStr: 1986-01-28 15:08:23
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 400/ND-disk-00482.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:49:57.568Z
+imagingLogs:
+  - ND-disk-00482.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-os-n-100-1001-i-26b589b4
+  syncStatus: pending

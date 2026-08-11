@@ -1,0 +1,684 @@
+id: img-0a66de52877c
+volumeName: FREDRIK-1
+md5: 0a66de52877cdeebd5c7abde3dcf8279
+image:
+  sizeBytes: 319488
+  format: raw
+  controller: floppy
+  totalPages: 156
+  pageSize: 2048
+  bootFormat: binary
+filesystem: ndfs
+ndfs:
+  users:
+    - name: LAW
+      pagesUsed: 123
+  files:
+    - name: B36-FL:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 619
+      userName: LAW
+      dateCreated: 2240581169
+      lastDateRead: 2526991709
+      lastDateWritten: 2240581175
+      dateCreatedStr: 1983-06-06 08:56:49
+      lastDateReadStr: 1987-10-15 13:21:29
+      lastDateWrittenStr: 1983-06-06 08:56:55
+      bpunValid: null
+    - name: B41-FL:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 737
+      userName: LAW
+      dateCreated: 2240581719
+      lastDateRead: 2526991732
+      lastDateWritten: 2240581721
+      dateCreatedStr: 1983-06-06 09:01:23
+      lastDateReadStr: 1987-10-15 13:21:52
+      lastDateWrittenStr: 1983-06-06 09:01:25
+      bpunValid: null
+    - name: B50-FL:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 293
+      userName: LAW
+      dateCreated: 2240581783
+      lastDateRead: 2526991739
+      lastDateWritten: 2240581785
+      dateCreatedStr: 1983-06-06 09:02:23
+      lastDateReadStr: 1987-10-15 13:21:59
+      lastDateWrittenStr: 1983-06-06 09:02:25
+      bpunValid: null
+    - name: B60-FL:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 405
+      userName: LAW
+      dateCreated: 2240581841
+      lastDateRead: 2526991756
+      lastDateWritten: 2240581848
+      dateCreatedStr: 1983-06-06 09:03:17
+      lastDateReadStr: 1987-10-15 13:22:12
+      lastDateWrittenStr: 1983-06-06 09:03:24
+      bpunValid: null
+    - name: N03-FL:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 319
+      userName: LAW
+      dateCreated: 2240581934
+      lastDateRead: 2526991761
+      lastDateWritten: 2240581936
+      dateCreatedStr: 1983-06-06 09:04:46
+      lastDateReadStr: 1987-10-15 13:22:17
+      lastDateWrittenStr: 1983-06-06 09:04:48
+      bpunValid: null
+    - name: N05-FL:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 275
+      userName: LAW
+      dateCreated: 2240581975
+      lastDateRead: 2526991767
+      lastDateWritten: 2240582051
+      dateCreatedStr: 1983-06-06 09:05:23
+      lastDateReadStr: 1987-10-15 13:22:23
+      lastDateWrittenStr: 1983-06-06 09:06:35
+      bpunValid: null
+    - name: N07-FL:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 235
+      userName: LAW
+      dateCreated: 2240582110
+      lastDateRead: 2240586935
+      lastDateWritten: 2240582111
+      dateCreatedStr: 1983-06-06 09:07:30
+      lastDateReadStr: 1983-06-06 10:18:55
+      lastDateWrittenStr: 1983-06-06 09:07:31
+      bpunValid: null
+    - name: N09-FL:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 491
+      userName: LAW
+      dateCreated: 2240582139
+      lastDateRead: null
+      lastDateWritten: 2240582144
+      dateCreatedStr: 1983-06-06 09:07:59
+      lastDateReadStr: null
+      lastDateWrittenStr: 1983-06-06 09:08:00
+      bpunValid: null
+    - name: N11-FL:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 423
+      userName: LAW
+      dateCreated: 2240582199
+      lastDateRead: null
+      lastDateWritten: 2240582209
+      dateCreatedStr: 1983-06-06 09:08:55
+      lastDateReadStr: null
+      lastDateWrittenStr: 1983-06-06 09:09:01
+      bpunValid: null
+    - name: N13-FL:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 300
+      userName: LAW
+      dateCreated: 2240582247
+      lastDateRead: null
+      lastDateWritten: 2240582248
+      dateCreatedStr: 1983-06-06 09:09:39
+      lastDateReadStr: null
+      lastDateWrittenStr: 1983-06-06 09:09:40
+      bpunValid: null
+    - name: N20-FL:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1917
+      userName: LAW
+      dateCreated: 2240582301
+      lastDateRead: 2240586966
+      lastDateWritten: 2240582303
+      dateCreatedStr: 1983-06-06 09:10:29
+      lastDateReadStr: 1983-06-06 10:19:22
+      lastDateWrittenStr: 1983-06-06 09:10:31
+      bpunValid: null
+    - name: KODE-FL:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 295
+      userName: LAW
+      dateCreated: 2240582425
+      lastDateRead: 2240586970
+      lastDateWritten: 2240582428
+      dateCreatedStr: 1983-06-06 09:12:25
+      lastDateReadStr: 1983-06-06 10:19:26
+      lastDateWrittenStr: 1983-06-06 09:12:28
+      bpunValid: null
+    - name: MALL-FL:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 719
+      userName: LAW
+      dateCreated: 2240582445
+      lastDateRead: 2240586950
+      lastDateWritten: 2240582446
+      dateCreatedStr: 1983-06-06 09:12:45
+      lastDateReadStr: 1983-06-06 10:19:06
+      lastDateWrittenStr: 1983-06-06 09:12:46
+      bpunValid: null
+    - name: TECKEN-FL:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1195
+      userName: LAW
+      dateCreated: 2240582532
+      lastDateRead: 2246763328
+      lastDateWritten: 2246765155
+      dateCreatedStr: 1983-06-06 09:14:04
+      lastDateReadStr: 1983-07-21 14:13:00
+      lastDateWrittenStr: 1983-07-21 14:41:35
+      bpunValid: null
+    - name: BIOPROG-FL:SYMB
+      type: SYMB
+      pages: 5
+      bytes: 8442
+      userName: LAW
+      dateCreated: 2240582681
+      lastDateRead: 2320156055
+      lastDateWritten: 2246763225
+      dateCreatedStr: 1983-06-06 09:16:25
+      lastDateReadStr: 1984-09-05 12:22:23
+      lastDateWrittenStr: 1983-07-21 14:11:25
+      bpunValid: null
+    - name: TESTFIL-FL:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 445
+      userName: LAW
+      dateCreated: 2240582774
+      lastDateRead: 2246763552
+      lastDateWritten: 2246763552
+      dateCreatedStr: 1983-06-06 09:17:54
+      lastDateReadStr: 1983-07-21 14:16:32
+      lastDateWrittenStr: 1983-07-21 14:16:32
+      bpunValid: null
+    - name: FG-MODE-FL:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 77
+      userName: LAW
+      dateCreated: 2240583639
+      lastDateRead: 2240586863
+      lastDateWritten: 2240583641
+      dateCreatedStr: 1983-06-06 09:31:23
+      lastDateReadStr: 1983-06-06 10:17:47
+      lastDateWrittenStr: 1983-06-06 09:31:25
+      bpunValid: null
+    - name: PROVPROG-FL:SYMB
+      type: SYMB
+      pages: 5
+      bytes: 8442
+      userName: LAW
+      dateCreated: 2240583989
+      lastDateRead: 2246765224
+      lastDateWritten: 2246763699
+      dateCreatedStr: 1983-06-06 09:36:53
+      lastDateReadStr: 1983-07-21 14:42:40
+      lastDateWrittenStr: 1983-07-21 14:18:51
+      bpunValid: null
+    - name: GAMREG-FL:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 498
+      userName: LAW
+      dateCreated: 2326072039
+      lastDateRead: null
+      lastDateWritten: 2326072040
+      dateCreatedStr: 1984-10-18 16:43:39
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-10-18 16:43:40
+      bpunValid: null
+    - name: SLASK-FL:DATA
+      type: DATA
+      pages: 1
+      bytes: 743
+      userName: LAW
+      dateCreated: 2326072076
+      lastDateRead: null
+      lastDateWritten: 2326072156
+      dateCreatedStr: 1984-10-18 16:44:12
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-10-18 16:45:28
+      bpunValid: null
+    - name: REGTILL-FL:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 2189
+      userName: LAW
+      dateCreated: 2326072240
+      lastDateRead: null
+      lastDateWritten: 2326072242
+      dateCreatedStr: 1984-10-18 16:46:48
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-10-18 16:46:50
+      bpunValid: null
+    - name: SLUMP-FL:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 285
+      userName: LAW
+      dateCreated: 2326072344
+      lastDateRead: null
+      lastDateWritten: 2326072345
+      dateCreatedStr: 1984-10-18 16:48:24
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-10-18 16:48:25
+      bpunValid: null
+    - name: SLUMP-FL:DATA
+      type: DATA
+      pages: 1
+      bytes: 458
+      userName: LAW
+      dateCreated: 2326072378
+      lastDateRead: null
+      lastDateWritten: 2326072379
+      dateCreatedStr: 1984-10-18 16:48:58
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-10-18 16:48:59
+      bpunValid: null
+    - name: OB1-ERROR-FL:DATA
+      type: DATA
+      pages: 1
+      bytes: 414
+      userName: LAW
+      dateCreated: 2326072417
+      lastDateRead: null
+      lastDateWritten: 2326072419
+      dateCreatedStr: 1984-10-18 16:49:33
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-10-18 16:49:35
+      bpunValid: null
+    - name: OB1-F-FL:SYMB
+      type: SYMB
+      pages: 4
+      bytes: 6482
+      userName: LAW
+      dateCreated: 2326072481
+      lastDateRead: null
+      lastDateWritten: 2326072483
+      dateCreatedStr: 1984-10-18 16:50:33
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-10-18 16:50:35
+      bpunValid: null
+    - name: OB1-SLASK-FL:DATA
+      type: DATA
+      pages: 0
+      bytes: 4294967296
+      userName: LAW
+      dateCreated: 2326072542
+      lastDateRead: null
+      lastDateWritten: 2326072571
+      dateCreatedStr: 1984-10-18 16:51:30
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-10-18 16:51:59
+      bpunValid: null
+    - name: P0-PASCAL-FL:DATA
+      type: DATA
+      pages: 1
+      bytes: 283
+      userName: LAW
+      dateCreated: 2326073608
+      lastDateRead: null
+      lastDateWritten: 2326073610
+      dateCreatedStr: 1984-10-18 17:04:08
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-10-18 17:04:10
+      bpunValid: null
+    - name: P1-ITFAK-FL:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 279
+      userName: LAW
+      dateCreated: 2326073626
+      lastDateRead: 2326073743
+      lastDateWritten: 2326073628
+      dateCreatedStr: 1984-10-18 17:04:26
+      lastDateReadStr: 1984-10-18 17:06:15
+      lastDateWrittenStr: 1984-10-18 17:04:28
+      bpunValid: null
+    - name: P2-REFAK-FL:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 390
+      userName: LAW
+      dateCreated: 2326073770
+      lastDateRead: null
+      lastDateWritten: 2326073772
+      dateCreatedStr: 1984-10-18 17:06:42
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-10-18 17:06:44
+      bpunValid: null
+    - name: P3-ASC-FL:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 636
+      userName: LAW
+      dateCreated: 2326073801
+      lastDateRead: null
+      lastDateWritten: 2326073802
+      dateCreatedStr: 1984-10-18 17:07:09
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-10-18 17:07:10
+      bpunValid: null
+    - name: P4-CASEOF-FL:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 824
+      userName: LAW
+      dateCreated: 2333807238
+      lastDateRead: null
+      lastDateWritten: 2333807240
+      dateCreatedStr: 1984-12-13 17:10:06
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-12-13 17:10:08
+      bpunValid: null
+    - name: P5-PRIMTAL-FL:SYMB
+      type: SYMB
+      pages: 3
+      bytes: 4122
+      userName: LAW
+      dateCreated: 2333807333
+      lastDateRead: null
+      lastDateWritten: 2333807334
+      dateCreatedStr: 1984-12-13 17:11:37
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-12-13 17:11:38
+      bpunValid: null
+    - name: P6-CHAR-FL:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 84
+      userName: LAW
+      dateCreated: 2333807355
+      lastDateRead: null
+      lastDateWritten: 2333807363
+      dateCreatedStr: 1984-12-13 17:11:59
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-12-13 17:12:03
+      bpunValid: null
+    - name: PU12-FL:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 261
+      userName: LAW
+      dateCreated: 2333807439
+      lastDateRead: null
+      lastDateWritten: 2333807440
+      dateCreatedStr: 1984-12-13 17:13:15
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-12-13 17:13:16
+      bpunValid: null
+    - name: PU13-FL:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 403
+      userName: LAW
+      dateCreated: 2333807459
+      lastDateRead: null
+      lastDateWritten: 2333807460
+      dateCreatedStr: 1984-12-13 17:13:35
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-12-13 17:13:36
+      bpunValid: null
+    - name: PU14-FL:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 262
+      userName: LAW
+      dateCreated: 2333807470
+      lastDateRead: null
+      lastDateWritten: 2333807471
+      dateCreatedStr: 1984-12-13 17:13:46
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-12-13 17:13:47
+      bpunValid: null
+    - name: PU15-FL:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 483
+      userName: LAW
+      dateCreated: 2333807481
+      lastDateRead: null
+      lastDateWritten: 2333807482
+      dateCreatedStr: 1984-12-13 17:13:57
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-12-13 17:13:58
+      bpunValid: null
+    - name: PU17-FL:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 619
+      userName: LAW
+      dateCreated: 2333807535
+      lastDateRead: null
+      lastDateWritten: 2333807536
+      dateCreatedStr: 1984-12-13 17:14:47
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-12-13 17:14:48
+      bpunValid: null
+    - name: PU18-FL:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 602
+      userName: LAW
+      dateCreated: 2333807546
+      lastDateRead: null
+      lastDateWritten: 2333807547
+      dateCreatedStr: 1984-12-13 17:14:58
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-12-13 17:14:59
+      bpunValid: null
+    - name: PU19-FL:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 945
+      userName: LAW
+      dateCreated: 2333807559
+      lastDateRead: null
+      lastDateWritten: 2333807560
+      dateCreatedStr: 1984-12-13 17:15:07
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-12-13 17:15:08
+      bpunValid: null
+    - name: PU20-FL:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 894
+      userName: LAW
+      dateCreated: 2333807571
+      lastDateRead: null
+      lastDateWritten: 2333807572
+      dateCreatedStr: 1984-12-13 17:15:19
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-12-13 17:15:20
+      bpunValid: null
+    - name: PU21-FL:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 658
+      userName: LAW
+      dateCreated: 2333807587
+      lastDateRead: null
+      lastDateWritten: 2333807588
+      dateCreatedStr: 1984-12-13 17:15:35
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-12-13 17:15:36
+      bpunValid: null
+    - name: PU22-FL:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 333
+      userName: LAW
+      dateCreated: 2333807597
+      lastDateRead: null
+      lastDateWritten: 2333807598
+      dateCreatedStr: 1984-12-13 17:15:45
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-12-13 17:15:46
+      bpunValid: null
+    - name: PU23-FL:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1100
+      userName: LAW
+      dateCreated: 2333807607
+      lastDateRead: null
+      lastDateWritten: 2333807608
+      dateCreatedStr: 1984-12-13 17:15:55
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-12-13 17:15:56
+      bpunValid: null
+    - name: PU24-FL:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 732
+      userName: LAW
+      dateCreated: 2333807629
+      lastDateRead: null
+      lastDateWritten: 2333807631
+      dateCreatedStr: 1984-12-13 17:16:13
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-12-13 17:16:15
+      bpunValid: null
+    - name: PU25-FL:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 490
+      userName: LAW
+      dateCreated: 2333807667
+      lastDateRead: null
+      lastDateWritten: 2333807668
+      dateCreatedStr: 1984-12-13 17:16:51
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-12-13 17:16:52
+      bpunValid: null
+    - name: PU26-FL:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 225
+      userName: LAW
+      dateCreated: 2356983110
+      lastDateRead: null
+      lastDateWritten: 2356983111
+      dateCreatedStr: 1985-01-30 11:21:06
+      lastDateReadStr: null
+      lastDateWrittenStr: 1985-01-30 11:21:07
+      bpunValid: null
+    - name: PU27-FL:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 590
+      userName: LAW
+      dateCreated: 2356983129
+      lastDateRead: null
+      lastDateWritten: 2356983130
+      dateCreatedStr: 1985-01-30 11:21:25
+      lastDateReadStr: null
+      lastDateWrittenStr: 1985-01-30 11:21:26
+      bpunValid: null
+    - name: PU28-FL:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 424
+      userName: LAW
+      dateCreated: 2356983136
+      lastDateRead: null
+      lastDateWritten: 2356983137
+      dateCreatedStr: 1985-01-30 11:21:32
+      lastDateReadStr: null
+      lastDateWrittenStr: 1985-01-30 11:21:33
+      bpunValid: null
+    - name: PU29-FL:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 880
+      userName: LAW
+      dateCreated: 2356983145
+      lastDateRead: null
+      lastDateWritten: 2356983146
+      dateCreatedStr: 1985-01-30 11:21:41
+      lastDateReadStr: null
+      lastDateWrittenStr: 1985-01-30 11:21:42
+      bpunValid: null
+    - name: PU30-FL:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1280
+      userName: LAW
+      dateCreated: 2356983160
+      lastDateRead: null
+      lastDateWritten: 2356983161
+      dateCreatedStr: 1985-01-30 11:21:56
+      lastDateReadStr: null
+      lastDateWrittenStr: 1985-01-30 11:21:57
+      bpunValid: null
+    - name: PU34-FL:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1755
+      userName: LAW
+      dateCreated: 2356983219
+      lastDateRead: null
+      lastDateWritten: 2356983220
+      dateCreatedStr: 1985-01-30 11:22:51
+      lastDateReadStr: null
+      lastDateWrittenStr: 1985-01-30 11:22:52
+      bpunValid: null
+    - name: PU35-FL:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 477
+      userName: LAW
+      dateCreated: 2356983285
+      lastDateRead: null
+      lastDateWritten: 2356983286
+      dateCreatedStr: 1985-01-30 11:23:53
+      lastDateReadStr: null
+      lastDateWrittenStr: 1985-01-30 11:23:54
+      bpunValid: null
+    - name: PU36-FL:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 2921
+      userName: LAW
+      dateCreated: 2356983301
+      lastDateRead: null
+      lastDateWritten: 2356983303
+      dateCreatedStr: 1985-01-30 11:24:05
+      lastDateReadStr: null
+      lastDateWrittenStr: 1985-01-30 11:24:07
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 300/ND-disk-00376.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:45:55.835Z
+imagingLogs:
+  - ND-disk-00376.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-0a66de52877c
+  syncStatus: pending

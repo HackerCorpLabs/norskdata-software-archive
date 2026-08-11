@@ -1,0 +1,77 @@
+id: nd-211161-b00-d1-5910d0a7
+volumeName: 211161B00-XX-01D
+md5: 5910d0a71199a9c58fb03b595af78cbf
+product:
+  id: ND-211161
+  version: B00
+  diskNumber: 1
+  language: XX
+image:
+  sizeBytes: 1310720
+  format: raw
+  controller: floppy
+  totalPages: 640
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 84
+  files:
+    - name: PC-FT-B00:PROG
+      type: PROG
+      pages: 78
+      bytes: 264192
+      userName: FLOPPY-USER
+      dateCreated: 2534324443
+      lastDateRead: 2585051875
+      lastDateWritten: 2534324443
+      dateCreatedStr: 1987-12-07 11:35:27
+      lastDateReadStr: 1988-08-10 12:11:35
+      lastDateWrittenStr: 1987-12-07 11:35:27
+      bpunValid: null
+    - name: TABFIL-NTXPC-B00:DATA
+      type: DATA
+      pages: 2
+      bytes: 3072
+      userName: FLOPPY-USER
+      dateCreated: 2532478065
+      lastDateRead: 2585051906
+      lastDateWritten: 2532478146
+      dateCreatedStr: 1987-11-25 08:49:49
+      lastDateReadStr: 1988-08-10 12:12:02
+      lastDateWrittenStr: 1987-11-25 08:51:02
+      bpunValid: null
+    - name: PC-PARAM-B00:NTXP
+      type: NTXP
+      pages: 1
+      bytes: 444
+      userName: FLOPPY-USER
+      dateCreated: 2521355446
+      lastDateRead: 2585051909
+      lastDateWritten: 2527509744
+      dateCreatedStr: 1987-09-04 13:18:54
+      lastDateReadStr: 1988-08-10 12:12:05
+      lastDateWrittenStr: 1987-10-19 11:51:48
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 100/ND-disk-00168.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:26:01.134Z
+imagingLogs:
+  - ND-disk-00168.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-211161-b00-d1-5910d0a7
+  syncStatus: pending

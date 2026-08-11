@@ -1,0 +1,252 @@
+id: img-229970d89239
+volumeName: FL1-TKO
+md5: 229970d8923948e1f150e8eaa470ef99
+image:
+  sizeBytes: 319488
+  format: raw
+  controller: floppy
+  totalPages: 156
+  pageSize: 2048
+  bootFormat: binary
+filesystem: ndfs
+ndfs:
+  users:
+    - name: EL
+      pagesUsed: 40
+  files:
+    - name: BWVAL-TKO:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 928
+      userName: EL
+      dateCreated: 2151871327
+      lastDateRead: 2152638233
+      lastDateWritten: 2151871332
+      dateCreatedStr: 1982-01-01 15:13:31
+      lastDateReadStr: 1982-01-07 10:28:25
+      lastDateWrittenStr: 1982-01-01 15:13:36
+      bpunValid: null
+    - name: TCHVAL-TKO:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1271
+      userName: EL
+      dateCreated: 2151871337
+      lastDateRead: 2152638237
+      lastDateWritten: 2151871338
+      dateCreatedStr: 1982-01-01 15:13:41
+      lastDateReadStr: 1982-01-07 10:28:29
+      lastDateWrittenStr: 1982-01-01 15:13:42
+      bpunValid: null
+    - name: BWLIS-TKO:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1173
+      userName: EL
+      dateCreated: 2151871343
+      lastDateRead: 2152638241
+      lastDateWritten: 2151871343
+      dateCreatedStr: 1982-01-01 15:13:47
+      lastDateReadStr: 1982-01-07 10:28:33
+      lastDateWrittenStr: 1982-01-01 15:13:47
+      bpunValid: null
+    - name: TCHLIS-TKO:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1435
+      userName: EL
+      dateCreated: 2151871349
+      lastDateRead: 2152638246
+      lastDateWritten: 2151871349
+      dateCreatedStr: 1982-01-01 15:13:53
+      lastDateReadStr: 1982-01-07 10:28:38
+      lastDateWrittenStr: 1982-01-01 15:13:53
+      bpunValid: null
+    - name: PNBW-TKO:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1254
+      userName: EL
+      dateCreated: 2151871354
+      lastDateRead: 2152638250
+      lastDateWritten: 2151871355
+      dateCreatedStr: 1982-01-01 15:13:58
+      lastDateReadStr: 1982-01-07 10:28:42
+      lastDateWrittenStr: 1982-01-01 15:13:59
+      bpunValid: null
+    - name: PNTCH-TKO:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1580
+      userName: EL
+      dateCreated: 2151871364
+      lastDateRead: 2152638254
+      lastDateWritten: 2151871364
+      dateCreatedStr: 1982-01-01 15:14:04
+      lastDateReadStr: 1982-01-07 10:28:46
+      lastDateWrittenStr: 1982-01-01 15:14:04
+      bpunValid: null
+    - name: COLLINS-TKO:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 2302
+      userName: EL
+      dateCreated: 2151871370
+      lastDateRead: 2152638258
+      lastDateWritten: 2151871370
+      dateCreatedStr: 1982-01-01 15:14:10
+      lastDateReadStr: 1982-01-07 10:28:50
+      lastDateWrittenStr: 1982-01-01 15:14:10
+      bpunValid: null
+    - name: SOLLN-TKO:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 694
+      userName: EL
+      dateCreated: 2151871376
+      lastDateRead: 2152638263
+      lastDateWritten: 2151871377
+      dateCreatedStr: 1982-01-01 15:14:16
+      lastDateReadStr: 1982-01-07 10:28:55
+      lastDateWrittenStr: 1982-01-01 15:14:17
+      bpunValid: null
+    - name: QBTL-TKO:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1093
+      userName: EL
+      dateCreated: 2151871382
+      lastDateRead: 2152638267
+      lastDateWritten: 2151871382
+      dateCreatedStr: 1982-01-01 15:14:22
+      lastDateReadStr: 1982-01-07 10:28:59
+      lastDateWrittenStr: 1982-01-01 15:14:22
+      bpunValid: null
+    - name: QBPTB-TKO:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1342
+      userName: EL
+      dateCreated: 2151871388
+      lastDateRead: 2152638276
+      lastDateWritten: 2151871388
+      dateCreatedStr: 1982-01-01 15:14:28
+      lastDateReadStr: 1982-01-07 10:29:04
+      lastDateWrittenStr: 1982-01-01 15:14:28
+      bpunValid: null
+    - name: A2LPHP-TKO:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1045
+      userName: EL
+      dateCreated: 2151871394
+      lastDateRead: 2152638280
+      lastDateWritten: 2151871394
+      dateCreatedStr: 1982-01-01 15:14:34
+      lastDateReadStr: 1982-01-07 10:29:08
+      lastDateWrittenStr: 1982-01-01 15:14:34
+      bpunValid: null
+    - name: BRBN-TKO:SYMB
+      type: SYMB
+      pages: 3
+      bytes: 4772
+      userName: EL
+      dateCreated: 2151871399
+      lastDateRead: 2152638285
+      lastDateWritten: 2151871400
+      dateCreatedStr: 1982-01-01 15:14:39
+      lastDateReadStr: 1982-01-07 10:29:13
+      lastDateWrittenStr: 1982-01-01 15:14:40
+      bpunValid: null
+    - name: BPKQA-TKO:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 438
+      userName: EL
+      dateCreated: 2151871407
+      lastDateRead: 2152638290
+      lastDateWritten: 2151871407
+      dateCreatedStr: 1982-01-01 15:14:47
+      lastDateReadStr: 1982-01-07 10:29:18
+      lastDateWrittenStr: 1982-01-01 15:14:47
+      bpunValid: null
+    - name: BPKQB-TKO:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 425
+      userName: EL
+      dateCreated: 2151871413
+      lastDateRead: 2152638294
+      lastDateWritten: 2151871413
+      dateCreatedStr: 1982-01-01 15:14:53
+      lastDateReadStr: 1982-01-07 10:29:22
+      lastDateWrittenStr: 1982-01-01 15:14:53
+      bpunValid: null
+    - name: NOTCH-TKO:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 408
+      userName: EL
+      dateCreated: 2151871419
+      lastDateRead: 2152638298
+      lastDateWritten: 2151871419
+      dateCreatedStr: 1982-01-01 15:14:59
+      lastDateReadStr: 1982-01-07 10:29:26
+      lastDateWrittenStr: 1982-01-01 15:14:59
+      bpunValid: null
+    - name: WIEN-TKO:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 375
+      userName: EL
+      dateCreated: 2151871429
+      lastDateRead: 2152638303
+      lastDateWritten: 2151871429
+      dateCreatedStr: 1982-01-01 15:15:05
+      lastDateReadStr: 1982-01-07 10:29:31
+      lastDateWrittenStr: 1982-01-01 15:15:05
+      bpunValid: null
+    - name: RPAR-TKO:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1082
+      userName: EL
+      dateCreated: 2151871435
+      lastDateRead: 2152638307
+      lastDateWritten: 2151871435
+      dateCreatedStr: 1982-01-01 15:15:11
+      lastDateReadStr: 1982-01-07 10:29:35
+      lastDateWrittenStr: 1982-01-01 15:15:11
+      bpunValid: null
+    - name: BPVARF-TKO:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1374
+      userName: EL
+      dateCreated: 2151871441
+      lastDateRead: 2152638312
+      lastDateWritten: 2151871441
+      dateCreatedStr: 1982-01-01 15:15:17
+      lastDateReadStr: 1982-01-07 10:29:40
+      lastDateWrittenStr: 1982-01-01 15:15:17
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 400/ND-disk-00421.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:49:29.833Z
+imagingLogs:
+  - ND-disk-00421.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-229970d89239
+  syncStatus: pending

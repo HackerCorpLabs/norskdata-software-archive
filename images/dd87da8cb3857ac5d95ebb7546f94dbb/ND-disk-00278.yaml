@@ -1,0 +1,112 @@
+id: nd-10523-c-d1-dd87da8c
+volumeName: ND-10523C-PART1
+md5: dd87da8cb3857ac5d95ebb7546f94dbb
+product:
+  id: ND-10523
+  version: C
+  diskNumber: 1
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: flomon
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 95
+  files:
+    - name: 100-ERRCOR-2339B:BPUN
+      type: BPUN
+      pages: 10
+      bytes: 18574
+      userName: FLOPPY-USER
+      dateCreated: 2174156218
+      lastDateRead: 2305108059
+      lastDateWritten: 2224860252
+      dateCreatedStr: 1982-06-11 15:54:58
+      lastDateReadStr: 1984-05-18 18:33:27
+      lastDateWrittenStr: 1983-02-14 10:49:28
+      bpunValid: true
+    - name: FLOPPY-STREAM-A:BPUN
+      type: BPUN
+      pages: 22
+      bytes: 43104
+      userName: FLOPPY-USER
+      dateCreated: 2304736466
+      lastDateRead: 2305108214
+      lastDateWritten: 2304736494
+      dateCreatedStr: 1984-05-15 23:51:18
+      lastDateReadStr: 1984-05-18 18:35:54
+      lastDateWrittenStr: 1984-05-15 23:51:46
+      bpunValid: true
+    - name: INSTRUCTION-B:BPUN
+      type: BPUN
+      pages: 23
+      bytes: 46566
+      userName: FLOPPY-USER
+      dateCreated: 2260920404
+      lastDateRead: 2305108260
+      lastDateWritten: 2290017580
+      dateCreatedStr: 1983-11-01 14:33:20
+      lastDateReadStr: 1984-05-18 18:36:36
+      lastDateWrittenStr: 1984-01-31 14:20:44
+      bpunValid: true
+    - name: STC-RUNNER-2410B:BPUN
+      type: BPUN
+      pages: 13
+      bytes: 24794
+      userName: FLOPPY-USER
+      dateCreated: 2174151976
+      lastDateRead: 2305108439
+      lastDateWritten: 2224483235
+      dateCreatedStr: 1982-06-11 14:52:40
+      lastDateReadStr: 1984-05-18 18:39:23
+      lastDateWrittenStr: 1983-02-11 14:46:35
+      bpunValid: true
+    - name: STC-TEST-2411E:BPUN
+      type: BPUN
+      pages: 15
+      bytes: 30356
+      userName: FLOPPY-USER
+      dateCreated: 2174152078
+      lastDateRead: 2305108461
+      lastDateWritten: 2224483372
+      dateCreatedStr: 1982-06-11 14:54:14
+      lastDateReadStr: 1984-05-18 18:39:45
+      lastDateWrittenStr: 1983-02-11 14:48:44
+      bpunValid: true
+    - name: WINCH-RAND-A:BPUN
+      type: BPUN
+      pages: 5
+      bytes: 8910
+      userName: FLOPPY-USER
+      dateCreated: 2261071570
+      lastDateRead: 2304989066
+      lastDateWritten: 2261447341
+      dateCreatedStr: 1983-11-02 19:27:18
+      lastDateReadStr: 1984-05-17 21:30:10
+      lastDateWrittenStr: 1983-11-05 15:10:45
+      bpunValid: true
+provenance:
+  contributor: gandalf
+  originalPath: 200/ND-disk-00278.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:42:02.852Z
+imagingLogs:
+  - ND-disk-00278.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10523-c-d1-dd87da8c
+  syncStatus: pending

@@ -1,0 +1,271 @@
+id: nd-210800-l05-d3-7d49345c
+volumeName: 210800L05-EN-03D
+md5: 7d49345caa0e05825ec24c42d65fd5c7
+product:
+  id: ND-210800
+  version: L05
+  diskNumber: 3
+  language: EN
+image:
+  sizeBytes: 1310720
+  format: raw
+  controller: floppy
+  totalPages: 640
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: RELEASE-NTX
+      pagesUsed: 357
+    - name: WORKFILES-NTX
+      pagesUsed: 136
+  files:
+    - name: NTX-EN-L00:HELP
+      type: HELP
+      pages: 134
+      bytes: 274432
+      userName: RELEASE-NTX
+      dateCreated: 2507571976
+      lastDateRead: 2598159802
+      lastDateWritten: 2507572072
+      dateCreatedStr: 1987-05-27 08:12:08
+      lastDateReadStr: 1988-11-14 12:22:58
+      lastDateWrittenStr: 1987-05-27 08:13:40
+      bpunValid: null
+    - name: NTX-EN-L00:TAB
+      type: TAB
+      pages: 1
+      bytes: 2046
+      userName: RELEASE-NTX
+      dateCreated: 2355143780
+      lastDateRead: 2598159842
+      lastDateWritten: 2501044301
+      dateCreatedStr: 1985-01-16 10:17:36
+      lastDateReadStr: 1988-11-14 12:23:34
+      lastDateWrittenStr: 1987-04-09 14:33:13
+      bpunValid: null
+    - name: DATA-SEM-EN-L05:DATA
+      type: DATA
+      pages: 17
+      bytes: 34816
+      userName: RELEASE-NTX
+      dateCreated: 2525177390
+      lastDateRead: 2598159845
+      lastDateWritten: 2525177390
+      dateCreatedStr: 1987-10-01 18:24:46
+      lastDateReadStr: 1988-11-14 12:23:37
+      lastDateWrittenStr: 1987-10-01 18:24:46
+      bpunValid: null
+    - name: DATA-SEM-NO-L05:DATA
+      type: DATA
+      pages: 18
+      bytes: 36864
+      userName: RELEASE-NTX
+      dateCreated: 2525179527
+      lastDateRead: 2577438897
+      lastDateWritten: 2525179527
+      dateCreatedStr: 1987-10-01 18:58:07
+      lastDateReadStr: 1988-06-16 09:34:49
+      lastDateWrittenStr: 1987-10-01 18:58:07
+      bpunValid: null
+    - name: DATA-SEM-SW-L05:DATA
+      type: DATA
+      pages: 17
+      bytes: 34816
+      userName: RELEASE-NTX
+      dateCreated: 2525181911
+      lastDateRead: 2597257986
+      lastDateWritten: 2525181911
+      dateCreatedStr: 1987-10-01 19:31:23
+      lastDateReadStr: 1988-11-07 16:12:02
+      lastDateWrittenStr: 1987-10-01 19:31:23
+      bpunValid: null
+    - name: DATA-SEM-FI-L05:DATA
+      type: DATA
+      pages: 18
+      bytes: 36864
+      userName: RELEASE-NTX
+      dateCreated: 2525184030
+      lastDateRead: 2577438952
+      lastDateWritten: 2525184030
+      dateCreatedStr: 1987-10-01 20:00:30
+      lastDateReadStr: 1988-06-16 09:35:40
+      lastDateWrittenStr: 1987-10-01 20:00:30
+      bpunValid: null
+    - name: DATA-SEM-DA-L05:DATA
+      type: DATA
+      pages: 17
+      bytes: 34816
+      userName: RELEASE-NTX
+      dateCreated: 2525185756
+      lastDateRead: 2577438983
+      lastDateWritten: 2525185756
+      dateCreatedStr: 1987-10-01 20:27:28
+      lastDateReadStr: 1988-06-16 09:36:07
+      lastDateWrittenStr: 1987-10-01 20:27:28
+      bpunValid: null
+    - name: DATA-SEM-GE-L05:DATA
+      type: DATA
+      pages: 18
+      bytes: 36864
+      userName: RELEASE-NTX
+      dateCreated: 2525187486
+      lastDateRead: 2577439009
+      lastDateWritten: 2525187486
+      dateCreatedStr: 1987-10-01 20:54:30
+      lastDateReadStr: 1988-06-16 09:36:33
+      lastDateWrittenStr: 1987-10-01 20:54:30
+      bpunValid: null
+    - name: DATA-SEM-IC-L05:DATA
+      type: DATA
+      pages: 17
+      bytes: 34816
+      userName: RELEASE-NTX
+      dateCreated: 2525189470
+      lastDateRead: 2577439043
+      lastDateWritten: 2525189470
+      dateCreatedStr: 1987-10-01 21:21:30
+      lastDateReadStr: 1988-06-16 09:37:03
+      lastDateWrittenStr: 1987-10-01 21:21:30
+      bpunValid: null
+    - name: NORTX-SEM-EN-L07:DATA
+      type: DATA
+      pages: 12
+      bytes: 24576
+      userName: RELEASE-NTX
+      dateCreated: 2576544947
+      lastDateRead: 2598159852
+      lastDateWritten: 2576544948
+      dateCreatedStr: 1988-06-09 15:18:51
+      lastDateReadStr: 1988-11-14 12:23:44
+      lastDateWrittenStr: 1988-06-09 15:18:52
+      bpunValid: null
+    - name: NORTX-SEM-NO-L07:DATA
+      type: DATA
+      pages: 12
+      bytes: 24576
+      userName: RELEASE-NTX
+      dateCreated: 2576545734
+      lastDateRead: 2577439096
+      lastDateWritten: 2576545734
+      dateCreatedStr: 1988-06-09 15:31:06
+      lastDateReadStr: 1988-06-16 09:37:56
+      lastDateWrittenStr: 1988-06-09 15:31:06
+      bpunValid: null
+    - name: NORTX-SEM-SW-L07:DATA
+      type: DATA
+      pages: 11
+      bytes: 22528
+      userName: RELEASE-NTX
+      dateCreated: 2576546509
+      lastDateRead: 2597257994
+      lastDateWritten: 2576546510
+      dateCreatedStr: 1988-06-09 15:43:13
+      lastDateReadStr: 1988-11-07 16:12:10
+      lastDateWrittenStr: 1988-06-09 15:43:14
+      bpunValid: null
+    - name: NORTX-SEM-FI-L07:DATA
+      type: DATA
+      pages: 12
+      bytes: 24576
+      userName: RELEASE-NTX
+      dateCreated: 2576547238
+      lastDateRead: 2577439144
+      lastDateWritten: 2576547238
+      dateCreatedStr: 1988-06-09 15:54:38
+      lastDateReadStr: 1988-06-16 09:38:40
+      lastDateWrittenStr: 1988-06-09 15:54:38
+      bpunValid: null
+    - name: NORTX-SEM-DA-L07:DATA
+      type: DATA
+      pages: 12
+      bytes: 24576
+      userName: RELEASE-NTX
+      dateCreated: 2576548319
+      lastDateRead: 2577439171
+      lastDateWritten: 2576548319
+      dateCreatedStr: 1988-06-09 16:07:31
+      lastDateReadStr: 1988-06-16 09:39:03
+      lastDateWrittenStr: 1988-06-09 16:07:31
+      bpunValid: null
+    - name: NORTX-SEM-GE-L07:DATA
+      type: DATA
+      pages: 12
+      bytes: 24576
+      userName: RELEASE-NTX
+      dateCreated: 2576549153
+      lastDateRead: 2577439194
+      lastDateWritten: 2576549153
+      dateCreatedStr: 1988-06-09 16:20:33
+      lastDateReadStr: 1988-06-16 09:39:26
+      lastDateWrittenStr: 1988-06-09 16:20:33
+      bpunValid: null
+    - name: NORTX-SEM-IC-L07:DATA
+      type: DATA
+      pages: 12
+      bytes: 24576
+      userName: RELEASE-NTX
+      dateCreated: 2576550003
+      lastDateRead: 2577439218
+      lastDateWritten: 2576550003
+      dateCreatedStr: 1988-06-09 16:33:51
+      lastDateReadStr: 1988-06-16 09:39:50
+      lastDateWrittenStr: 1988-06-09 16:33:51
+      bpunValid: null
+    - name: COMMANDS-NTX-J6:FORM
+      type: FORM
+      pages: 70
+      bytes: 143360
+      userName: WORKFILES-NTX
+      dateCreated: 2359862377
+      lastDateRead: 2578883209
+      lastDateWritten: 2369986210
+      dateCreatedStr: 1985-02-20 10:17:41
+      lastDateReadStr: 1988-06-27 10:10:09
+      lastDateWrittenStr: 1985-05-01 17:58:34
+      bpunValid: null
+    - name: ARTICLES-NTX-K05:FORM
+      type: FORM
+      pages: 40
+      bytes: 81920
+      userName: WORKFILES-NTX
+      dateCreated: 2490551696
+      lastDateRead: 2579672370
+      lastDateWritten: 2571949325
+      dateCreatedStr: 1987-01-25 12:54:16
+      lastDateReadStr: 1988-07-01 10:52:50
+      lastDateWrittenStr: 1988-05-06 13:20:13
+      bpunValid: null
+    - name: SUPER-SS-K01:FORM
+      type: FORM
+      pages: 25
+      bytes: 51200
+      userName: WORKFILES-NTX
+      dateCreated: 2421898227
+      lastDateRead: 2597257411
+      lastDateWritten: 2430127733
+      dateCreatedStr: 1986-01-13 19:47:51
+      lastDateReadStr: 1988-11-07 16:03:03
+      lastDateWrittenStr: 1986-03-12 12:57:53
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 100/ND-disk-00171.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:26:01.634Z
+imagingLogs:
+  - ND-disk-00171.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-210800-l05-d3-7d49345c
+  syncStatus: pending

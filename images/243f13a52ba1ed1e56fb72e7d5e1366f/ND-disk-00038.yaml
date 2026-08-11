@@ -1,0 +1,149 @@
+id: nd-211305-b02-d1-243f13a5
+volumeName: 211305B02-XX-01D
+md5: 243f13a52ba1ed1e56fb72e7d5e1366f
+product:
+  id: ND-211305
+  version: B02
+  diskNumber: 1
+  language: XX
+image:
+  sizeBytes: 1310720
+  format: raw
+  controller: floppy
+  totalPages: 640
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 314
+  files:
+    - name: ND-500-MON-J04:PROG
+      type: PROG
+      pages: 124
+      bytes: 253356
+      userName: FLOPPY-USER
+      dateCreated: 2577460228
+      lastDateRead: 2591881056
+      lastDateWritten: 2577460228
+      dateCreatedStr: 1988-06-16 14:48:04
+      lastDateReadStr: 1988-09-30 15:29:32
+      lastDateWrittenStr: 1988-06-16 14:48:04
+      bpunValid: null
+    - name: SWAPPER-K01:DSEG
+      type: DSEG
+      pages: 107
+      bytes: 218117
+      userName: FLOPPY-USER
+      dateCreated: 2589533185
+      lastDateRead: 2591881173
+      lastDateWritten: 2589533185
+      dateCreatedStr: 1988-09-12 18:16:01
+      lastDateReadStr: 1988-09-30 15:31:21
+      lastDateWrittenStr: 1988-09-12 18:16:01
+      bpunValid: null
+    - name: SWAPPER-K01:PSEG
+      type: PSEG
+      pages: 19
+      bytes: 38161
+      userName: FLOPPY-USER
+      dateCreated: 2589533185
+      lastDateRead: 2591881202
+      lastDateWritten: 2589533185
+      dateCreatedStr: 1988-09-12 18:16:01
+      lastDateReadStr: 1988-09-30 15:31:50
+      lastDateWrittenStr: 1988-09-12 18:16:01
+      bpunValid: null
+    - name: PLACE-1BANK-C01:BRF
+      type: BRF
+      pages: 5
+      bytes: 10127
+      userName: FLOPPY-USER
+      dateCreated: 2523972678
+      lastDateRead: 2588295209
+      lastDateWritten: 2523972729
+      dateCreatedStr: 1987-09-24 12:17:06
+      lastDateReadStr: 1988-09-03 04:00:41
+      lastDateWrittenStr: 1987-09-24 12:17:57
+      bpunValid: null
+    - name: PLACE-2BANK-C01:BRF
+      type: BRF
+      pages: 6
+      bytes: 10281
+      userName: FLOPPY-USER
+      dateCreated: 2523972872
+      lastDateRead: 2588295209
+      lastDateWritten: 2523972920
+      dateCreatedStr: 1987-09-24 12:20:08
+      lastDateReadStr: 1988-09-03 04:00:41
+      lastDateWrittenStr: 1987-09-24 12:20:56
+      bpunValid: null
+    - name: PLACE-BIG-1B-C01:BRF
+      type: BRF
+      pages: 17
+      bytes: 34745
+      userName: FLOPPY-USER
+      dateCreated: 2522408453
+      lastDateRead: 2588295209
+      lastDateWritten: 2523734820
+      dateCreatedStr: 1987-09-12 14:24:05
+      lastDateReadStr: 1988-09-03 04:00:41
+      lastDateWrittenStr: 1987-09-22 18:12:36
+      bpunValid: null
+    - name: PLACE-BIG-2B-C01:BRF
+      type: BRF
+      pages: 18
+      bytes: 36236
+      userName: FLOPPY-USER
+      dateCreated: 2522408482
+      lastDateRead: 2588295210
+      lastDateWritten: 2523734823
+      dateCreatedStr: 1987-09-12 14:24:34
+      lastDateReadStr: 1988-09-03 04:00:42
+      lastDateWrittenStr: 1987-09-22 18:12:39
+      bpunValid: null
+    - name: PLACE-SML-1B-C01:BRF
+      type: BRF
+      pages: 4
+      bytes: 7136
+      userName: FLOPPY-USER
+      dateCreated: 2522408518
+      lastDateRead: 2588295210
+      lastDateWritten: 2523734827
+      dateCreatedStr: 1987-09-12 14:25:06
+      lastDateReadStr: 1988-09-03 04:00:42
+      lastDateWrittenStr: 1987-09-22 18:12:43
+      bpunValid: null
+    - name: PLACE-SML-2B-C01:BRF
+      type: BRF
+      pages: 4
+      bytes: 7928
+      userName: FLOPPY-USER
+      dateCreated: 2522408530
+      lastDateRead: 2588295210
+      lastDateWritten: 2523734828
+      dateCreatedStr: 1987-09-12 14:25:18
+      lastDateReadStr: 1988-09-03 04:00:42
+      lastDateWrittenStr: 1987-09-22 18:12:44
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 000/ND-disk-00038.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T14:54:09.895Z
+imagingLogs:
+  - ND-disk-00038.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-211305-b02-d1-243f13a5
+  syncStatus: pending

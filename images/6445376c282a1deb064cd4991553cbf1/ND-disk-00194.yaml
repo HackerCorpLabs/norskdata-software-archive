@@ -1,0 +1,185 @@
+id: nd-210152-g03-d1-6445376c
+volumeName: 210152G03-SW-01D
+md5: 6445376c282a1deb064cd4991553cbf1
+product:
+  id: ND-210152
+  version: G03
+  diskNumber: 1
+  language: SW
+image:
+  sizeBytes: 1310720
+  format: raw
+  controller: floppy
+  totalPages: 640
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 551
+  files:
+    - name: INST-IR-100-G03:PROG
+      type: PROG
+      pages: 65
+      bytes: 194560
+      userName: FLOPPY-USER
+      dateCreated: 2530643467
+      lastDateRead: 2576401472
+      lastDateWritten: 2530643472
+      dateCreatedStr: 1987-11-11 08:56:11
+      lastDateReadStr: 1988-06-08 12:17:00
+      lastDateWrittenStr: 1987-11-11 08:56:16
+      bpunValid: null
+    - name: IR-SETUP-G03:XCOM
+      type: XCOM
+      pages: 7
+      bytes: 13490
+      userName: FLOPPY-USER
+      dateCreated: 2530643514
+      lastDateRead: 2576401489
+      lastDateWritten: 2530643515
+      dateCreatedStr: 1987-11-11 08:56:58
+      lastDateReadStr: 1988-06-08 12:17:17
+      lastDateWrittenStr: 1987-11-11 08:56:59
+      bpunValid: null
+    - name: IR-SORT-SW-F00:DATA
+      type: DATA
+      pages: 1
+      bytes: 2048
+      userName: FLOPPY-USER
+      dateCreated: 2530643526
+      lastDateRead: null
+      lastDateWritten: 2530643528
+      dateCreatedStr: 1987-11-11 08:57:06
+      lastDateReadStr: null
+      lastDateWrittenStr: 1987-11-11 08:57:08
+      bpunValid: null
+    - name: IR-SEARCH-SW-F00:DATA
+      type: DATA
+      pages: 1
+      bytes: 2048
+      userName: FLOPPY-USER
+      dateCreated: 2530643531
+      lastDateRead: null
+      lastDateWritten: 2530643532
+      dateCreatedStr: 1987-11-11 08:57:11
+      lastDateReadStr: null
+      lastDateWrittenStr: 1987-11-11 08:57:12
+      bpunValid: null
+    - name: DDBTABLES-E04:VTM
+      type: VTM
+      pages: 11
+      bytes: 20756
+      userName: FLOPPY-USER
+      dateCreated: 2530643535
+      lastDateRead: 2576401657
+      lastDateWritten: 2530643536
+      dateCreatedStr: 1987-11-11 08:57:15
+      lastDateReadStr: 1988-06-08 12:19:57
+      lastDateWrittenStr: 1987-11-11 08:57:16
+      bpunValid: null
+    - name: WP-PRINTERS-L02:SYMB
+      type: SYMB
+      pages: 3
+      bytes: 5217
+      userName: FLOPPY-USER
+      dateCreated: 2530643546
+      lastDateRead: 2576401668
+      lastDateWritten: 2530643548
+      dateCreatedStr: 1987-11-11 08:57:26
+      lastDateReadStr: 1988-06-08 12:20:04
+      lastDateWrittenStr: 1987-11-11 08:57:28
+      bpunValid: null
+    - name: IR-MAIN-SW-G03:PROG
+      type: PROG
+      pages: 102
+      bytes: 401408
+      userName: FLOPPY-USER
+      dateCreated: 2530643556
+      lastDateRead: 2576401679
+      lastDateWritten: 2530643557
+      dateCreatedStr: 1987-11-11 08:57:36
+      lastDateReadStr: 1988-06-08 12:20:15
+      lastDateWrittenStr: 1987-11-11 08:57:37
+      bpunValid: null
+    - name: IR-SERO-SW-G03:PROG
+      type: PROG
+      pages: 68
+      bytes: 403456
+      userName: FLOPPY-USER
+      dateCreated: 2530643654
+      lastDateRead: 2576401704
+      lastDateWritten: 2530643656
+      dateCreatedStr: 1987-11-11 08:59:06
+      lastDateReadStr: 1988-06-08 12:20:40
+      lastDateWrittenStr: 1987-11-11 08:59:08
+      bpunValid: null
+    - name: IR-START-SW-G03:PROG
+      type: PROG
+      pages: 68
+      bytes: 405504
+      userName: FLOPPY-USER
+      dateCreated: 2530643991
+      lastDateRead: 2576401723
+      lastDateWritten: 2530643993
+      dateCreatedStr: 1987-11-11 09:00:23
+      lastDateReadStr: 1988-06-08 12:20:59
+      lastDateWrittenStr: 1987-11-11 09:00:25
+      bpunValid: null
+    - name: IR-DB-SW-G03:PROG
+      type: PROG
+      pages: 60
+      bytes: 403456
+      userName: FLOPPY-USER
+      dateCreated: 2530644086
+      lastDateRead: 2576401747
+      lastDateWritten: 2530644087
+      dateCreatedStr: 1987-11-11 09:01:54
+      lastDateReadStr: 1988-06-08 12:21:19
+      lastDateWrittenStr: 1987-11-11 09:01:55
+      bpunValid: null
+    - name: IR-EDIT-SW-G03:PROG
+      type: PROG
+      pages: 76
+      bytes: 417792
+      userName: FLOPPY-USER
+      dateCreated: 2530644188
+      lastDateRead: 2576401766
+      lastDateWritten: 2530644189
+      dateCreatedStr: 1987-11-11 09:03:28
+      lastDateReadStr: 1988-06-08 12:21:38
+      lastDateWrittenStr: 1987-11-11 09:03:29
+      bpunValid: null
+    - name: UE-ERMSG-SW-C02:ERR
+      type: ERR
+      pages: 76
+      bytes: 154368
+      userName: FLOPPY-USER
+      dateCreated: 2493966260
+      lastDateRead: 2576401671
+      lastDateWritten: 2493966260
+      dateCreatedStr: 1987-02-19 14:30:52
+      lastDateReadStr: 1988-06-08 12:20:07
+      lastDateWrittenStr: 1987-02-19 14:30:52
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 100/ND-disk-00194.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:26:05.451Z
+imagingLogs:
+  - ND-disk-00194.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-210152-g03-d1-6445376c
+  syncStatus: pending

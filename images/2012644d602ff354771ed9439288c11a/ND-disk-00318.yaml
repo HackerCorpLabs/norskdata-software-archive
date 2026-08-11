@@ -1,0 +1,96 @@
+id: img-2012644d602f
+volumeName: ERIK-2
+md5: 2012644d602ff354771ed9439288c11a
+image:
+  sizeBytes: 319488
+  format: raw
+  controller: floppy
+  totalPages: 156
+  pageSize: 2048
+  bootFormat: bpun
+filesystem: ndfs
+ndfs:
+  users:
+    - name: SYSTEM
+      pagesUsed: 116
+  files:
+    - name: SLASKFIL:SYMB
+      type: SYMB
+      pages: 60
+      bytes: 120752
+      userName: SYSTEM
+      dateCreated: 2465395997
+      lastDateRead: 2465530704
+      lastDateWritten: 2465502041
+      dateCreatedStr: 1986-11-25 15:20:29
+      lastDateReadStr: 1986-11-26 16:13:16
+      lastDateWrittenStr: 1986-11-26 09:13:25
+      bpunValid: null
+    - name: RAPPORT:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1229
+      userName: SYSTEM
+      dateCreated: 2465541661
+      lastDateRead: null
+      lastDateWritten: 2465541667
+      dateCreatedStr: 1986-11-26 18:56:29
+      lastDateReadStr: null
+      lastDateWrittenStr: 1986-11-26 18:56:35
+      bpunValid: null
+    - name: DELFI-EAO:SYMB
+      type: SYMB
+      pages: 36
+      bytes: 73058
+      userName: SYSTEM
+      dateCreated: 2389384677
+      lastDateRead: 2465779314
+      lastDateWritten: 2465778993
+      dateCreatedStr: 1985-09-21 17:55:37
+      lastDateReadStr: 1986-11-28 12:57:50
+      lastDateWrittenStr: 1986-11-28 12:52:49
+      bpunValid: null
+    - name: RTLO-SYMBOLS:SYMB
+      type: SYMB
+      pages: 8
+      bytes: 15306
+      userName: SYSTEM
+      dateCreated: 2465763863
+      lastDateRead: 2465764376
+      lastDateWritten: 2465763896
+      dateCreatedStr: 1986-11-28 09:08:23
+      lastDateReadStr: 1986-11-28 09:16:24
+      lastDateWrittenStr: 1986-11-28 09:08:56
+      bpunValid: null
+    - name: DELFI-MANUAL:SYMB
+      type: SYMB
+      pages: 5
+      bytes: 8328
+      userName: SYSTEM
+      dateCreated: 2465792555
+      lastDateRead: 2465792858
+      lastDateWritten: 2465792732
+      dateCreatedStr: 1986-11-28 16:08:43
+      lastDateReadStr: 1986-11-28 16:13:26
+      lastDateWrittenStr: 1986-11-28 16:11:28
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 300/ND-disk-00318.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:45:44.661Z
+imagingLogs:
+  - ND-disk-00318.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-2012644d602f
+  syncStatus: pending

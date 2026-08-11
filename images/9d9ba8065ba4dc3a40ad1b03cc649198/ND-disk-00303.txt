@@ -1,0 +1,1414 @@
+Reading from: :d=0:s=0:t=1-80
+Writing a copy of the flux to ND-disk-00303.flux
+  1.0: 197 ms in 131072 bytes
+       20 records, 10 sectors; 1.96us clock (510kHz); 
+       Failed to read sector 0 (bad checksum); 
+       Failed to read sector 1 (bad checksum); 
+       Failed to read sector 2 (bad checksum); 
+       Failed to read sector 3 (bad checksum); 
+       Failed to read sector 4 (bad checksum); 
+       Failed to read sector 5 (bad checksum); 
+       Failed to read sector 6 (present but no data found); 
+       Failed to read sector 7 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 0 0 0 0 0 0 0 0
+
+       5 retries remaining
+  1.0: 197 ms in 131072 bytes
+       40 records, 20 sectors; 1.96us clock (510kHz); 
+       Failed to read sector 0 (bad checksum); 
+       Failed to read sector 1 (bad checksum); 
+       Failed to read sector 2 (bad checksum); 
+       Failed to read sector 3 (bad checksum); 
+       Failed to read sector 4 (bad checksum); 
+       Failed to read sector 5 (bad checksum); 
+       Failed to read sector 7 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 0 0 0 0 0 0 1 0
+
+       4 retries remaining
+  1.0: 197 ms in 131071 bytes
+       60 records, 30 sectors; 1.96us clock (510kHz); 
+       Failed to read sector 0 (bad checksum); 
+       Failed to read sector 1 (bad checksum); 
+       Failed to read sector 2 (bad checksum); 
+       Failed to read sector 3 (bad checksum); 
+       Failed to read sector 4 (bad checksum); 
+       Failed to read sector 5 (bad checksum); 
+       Failed to read sector 7 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 0 0 0 0 0 0 1 0
+
+       3 retries remaining
+  1.0: 197 ms in 131111 bytes
+       78 records, 39 sectors; 1.96us clock (510kHz); 
+       Failed to read sector 0 (bad checksum); 
+       Failed to read sector 1 (bad checksum); 
+       Failed to read sector 2 (bad checksum); 
+       Failed to read sector 3 (bad checksum); 
+       Failed to read sector 4 (bad checksum); 
+       Failed to read sector 5 (bad checksum); 
+       Failed to read sector 7 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 0 0 0 0 0 0 1 0
+
+       2 retries remaining
+  1.0: 197 ms in 131043 bytes
+       98 records, 49 sectors; 1.96us clock (510kHz); 
+       Failed to read sector 0 (bad checksum); 
+       Failed to read sector 1 (bad checksum); 
+       Failed to read sector 2 (bad checksum); 
+       Failed to read sector 3 (bad checksum); 
+       Failed to read sector 4 (bad checksum); 
+       Failed to read sector 5 (bad checksum); 
+       Failed to read sector 7 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 0 0 0 0 0 0 1 0
+
+       1 retries remaining
+  1.0: 197 ms in 130855 bytes
+       116 records, 58 sectors; 1.96us clock (510kHz); 
+       Failed to read sector 0 (bad checksum); 
+       Failed to read sector 1 (bad checksum); 
+       Failed to read sector 2 (bad checksum); 
+       Failed to read sector 3 (bad checksum); 
+       Failed to read sector 4 (bad checksum); 
+       Failed to read sector 5 (bad checksum); 
+       Failed to read sector 7 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 0 0 0 0 0 0 1 0
+
+       giving up
+       logical track 0.0; 4096 bytes decoded.
+  2.0: 196 ms in 153124 bytes
+       20 records, 10 sectors; 1.98us clock (504kHz); 
+       Failed to read sector 0 (bad checksum); 
+       Failed to read sector 1 (bad checksum); 
+       Failed to read sector 2 (bad checksum); 
+       Failed to read sector 3 (bad checksum); 
+       Failed to read sector 5 (bad checksum); 
+       Failed to read sector 6 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 0 0 0 0 1 0 0 1
+
+       5 retries remaining
+  2.0: 196 ms in 153060 bytes
+       40 records, 20 sectors; 1.98us clock (504kHz); 
+       Failed to read sector 0 (bad checksum); 
+       Failed to read sector 1 (bad checksum); 
+       Failed to read sector 2 (bad checksum); 
+       Failed to read sector 5 (bad checksum); 
+       Failed to read sector 6 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 0 0 0 1 1 0 0 1
+
+       4 retries remaining
+  2.0: 196 ms in 153062 bytes
+       57 records, 28 sectors; 1.98us clock (504kHz); 
+       Failed to read sector 0 (bad checksum); 
+       Failed to read sector 1 (bad checksum); 
+       Failed to read sector 2 (bad checksum); 
+       Failed to read sector 5 (bad checksum); 
+       Failed to read sector 6 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 0 0 0 1 1 0 0 1
+
+       3 retries remaining
+  2.0: 196 ms in 152999 bytes
+       75 records, 37 sectors; 1.98us clock (504kHz); 
+       Failed to read sector 0 (bad checksum); 
+       Failed to read sector 1 (bad checksum); 
+       Failed to read sector 2 (bad checksum); 
+       Failed to read sector 6 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 0 0 0 1 1 1 0 1
+
+       2 retries remaining
+  2.0: 196 ms in 152999 bytes
+       95 records, 47 sectors; 1.98us clock (504kHz); 
+       Failed to read sector 1 (bad checksum); 
+       Failed to read sector 6 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 1 0 1 1 1 1 0 1
+
+       1 retries remaining
+  2.0: 196 ms in 153063 bytes
+       115 records, 57 sectors; 1.98us clock (504kHz); 
+       Failed to read sector 1 (bad checksum); 
+       Failed to read sector 6 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 1 0 1 1 1 1 0 1
+
+       giving up
+       logical track 2.0; 4096 bytes decoded.
+  3.0: 196 ms in 150055 bytes
+       20 records, 10 sectors; 1.97us clock (509kHz); 
+       Failed to read sector 4 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 1 1 1 1 0 1 1 1
+
+       5 retries remaining
+  3.0: 196 ms in 150183 bytes
+       40 records, 20 sectors; 1.97us clock (509kHz); 
+       Failed to read sector 4 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 1 1 1 1 0 1 1 1
+
+       4 retries remaining
+  3.0: 196 ms in 150311 bytes
+       60 records, 30 sectors; 1.97us clock (509kHz); 
+       logical track 3.0; 4096 bytes decoded.
+  4.0: 197 ms in 150759 bytes
+       20 records, 10 sectors; 2.00us clock (500kHz); 
+       Failed to read sector 0 (bad checksum); 
+       Failed to read sector 2 (bad checksum); 
+       Failed to read sector 3 (bad checksum); 
+       Failed to read sector 5 (bad checksum); 
+       Failed to read sector 6 (bad checksum); 
+       Failed to read sector 7 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 0 1 0 0 1 0 0 0
+
+       5 retries remaining
+  4.0: 196 ms in 150181 bytes
+       40 records, 20 sectors; 2.00us clock (500kHz); 
+       Failed to read sector 2 (bad checksum); 
+       Failed to read sector 3 (bad checksum); 
+       Failed to read sector 6 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 1 1 0 0 1 1 0 1
+
+       4 retries remaining
+  4.0: 196 ms in 150311 bytes
+       60 records, 30 sectors; 2.00us clock (500kHz); 
+       Failed to read sector 2 (bad checksum); 
+       Failed to read sector 3 (bad checksum); 
+       Failed to read sector 6 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 1 1 0 0 1 1 0 1
+
+       3 retries remaining
+  4.0: 196 ms in 150439 bytes
+       80 records, 40 sectors; 2.00us clock (500kHz); 
+       Failed to read sector 2 (bad checksum); 
+       Failed to read sector 3 (bad checksum); 
+       Failed to read sector 6 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 1 1 0 0 1 1 0 1
+
+       2 retries remaining
+  4.0: 196 ms in 150528 bytes
+       100 records, 50 sectors; 2.00us clock (500kHz); 
+       Failed to read sector 2 (bad checksum); 
+       Failed to read sector 3 (bad checksum); 
+       Failed to read sector 6 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 1 1 0 0 1 1 0 1
+
+       1 retries remaining
+  4.0: 197 ms in 150759 bytes
+       120 records, 60 sectors; 2.00us clock (500kHz); 
+       Failed to read sector 2 (bad checksum); 
+       Failed to read sector 3 (bad checksum); 
+       Failed to read sector 6 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 1 1 0 0 1 1 0 1
+
+       giving up
+       logical track 4.0; 4096 bytes decoded.
+  5.0: 196 ms in 136359 bytes
+       20 records, 10 sectors; 1.96us clock (510kHz); 
+       logical track 5.0; 4096 bytes decoded.
+  6.0: 196 ms in 137727 bytes
+       20 records, 10 sectors; 1.99us clock (503kHz); 
+       Failed to read sector 7 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 1 1 1 1 1 1 1 0
+
+       5 retries remaining
+  6.0: 197 ms in 137956 bytes
+       40 records, 20 sectors; 1.99us clock (503kHz); 
+       Failed to read sector 7 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 1 1 1 1 1 1 1 0
+
+       4 retries remaining
+  6.0: 197 ms in 138087 bytes
+       60 records, 30 sectors; 1.99us clock (503kHz); 
+       logical track 6.0; 4096 bytes decoded.
+  7.0: 196 ms in 154624 bytes
+       20 records, 10 sectors; 1.94us clock (514kHz); 
+       logical track 7.0; 4096 bytes decoded.
+  8.0: 196 ms in 155111 bytes
+       20 records, 10 sectors; 1.99us clock (503kHz); 
+       logical track 8.0; 4096 bytes decoded.
+  9.0: 196 ms in 153764 bytes
+       20 records, 10 sectors; 1.99us clock (502kHz); 
+       logical track 9.0; 4096 bytes decoded.
+ 10.0: 196 ms in 150759 bytes
+       20 records, 10 sectors; 1.96us clock (512kHz); 
+       logical track 10.0; 4096 bytes decoded.
+ 11.0: 196 ms in 151078 bytes
+       20 records, 10 sectors; 1.93us clock (517kHz); 
+       logical track 11.0; 4096 bytes decoded.
+ 12.0: 197 ms in 151847 bytes
+       20 records, 10 sectors; 1.97us clock (507kHz); 
+       logical track 12.0; 4096 bytes decoded.
+ 13.0: 196 ms in 151271 bytes
+       19 records, 9 sectors; 1.99us clock (503kHz);  Only seen some sectors, retrying...
+  Sector map : 1 1 1 1 1 1 0 1
+
+       5 retries remaining
+ 13.0: 196 ms in 151399 bytes
+       38 records, 18 sectors; 1.99us clock (503kHz);  Only seen some sectors, retrying...
+  Sector map : 1 1 1 1 1 1 0 1
+
+       4 retries remaining
+ 13.0: 197 ms in 151591 bytes
+       57 records, 27 sectors; 1.99us clock (503kHz);  Only seen some sectors, retrying...
+  Sector map : 1 1 1 1 1 1 0 1
+
+       3 retries remaining
+ 13.0: 196 ms in 151207 bytes
+       76 records, 36 sectors; 1.99us clock (503kHz);  Only seen some sectors, retrying...
+  Sector map : 1 1 1 1 1 1 0 1
+
+       2 retries remaining
+ 13.0: 196 ms in 151399 bytes
+       95 records, 45 sectors; 1.99us clock (503kHz);  Only seen some sectors, retrying...
+  Sector map : 1 1 1 1 1 1 0 1
+
+       1 retries remaining
+ 13.0: 197 ms in 151591 bytes
+       114 records, 54 sectors; 1.99us clock (503kHz);  Only seen some sectors, retrying...
+  Sector map : 1 1 1 1 1 1 0 1
+
+       giving up
+       logical track 13.0; 3584 bytes decoded.
+ 14.0: 196 ms in 152615 bytes
+       20 records, 10 sectors; 1.96us clock (510kHz); 
+       Failed to read sector 5 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 1 1 1 1 1 0 1 1
+
+       5 retries remaining
+ 14.0: 196 ms in 152807 bytes
+       40 records, 20 sectors; 1.96us clock (510kHz); 
+       Failed to read sector 5 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 1 1 1 1 1 0 1 1
+
+       4 retries remaining
+ 14.0: 196 ms in 152995 bytes
+       60 records, 30 sectors; 1.96us clock (510kHz); 
+       Failed to read sector 5 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 1 1 1 1 1 0 1 1
+
+       3 retries remaining
+ 14.0: 196 ms in 152548 bytes
+       80 records, 40 sectors; 1.96us clock (510kHz); 
+       Failed to read sector 5 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 1 1 1 1 1 0 1 1
+
+       2 retries remaining
+ 14.0: 196 ms in 152740 bytes
+       100 records, 50 sectors; 1.96us clock (510kHz); 
+       Failed to read sector 5 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 1 1 1 1 1 0 1 1
+
+       1 retries remaining
+ 14.0: 196 ms in 152935 bytes
+       120 records, 60 sectors; 1.96us clock (510kHz); 
+       Failed to read sector 5 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 1 1 1 1 1 0 1 1
+
+       giving up
+       logical track 14.0; 4096 bytes decoded.
+ 15.0: 197 ms in 152551 bytes
+       20 records, 10 sectors; 2.00us clock (500kHz); 
+       Failed to read sector 4 (bad checksum); 
+       Failed to read sector 5 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 1 1 1 1 0 0 1 1
+
+       5 retries remaining
+ 15.0: 196 ms in 152035 bytes
+       40 records, 20 sectors; 2.00us clock (500kHz); 
+       Failed to read sector 4 (bad checksum); 
+       Failed to read sector 5 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 1 1 1 1 0 0 1 1
+
+       4 retries remaining
+ 15.0: 196 ms in 152231 bytes
+       60 records, 30 sectors; 2.00us clock (500kHz); 
+       Failed to read sector 4 (bad checksum); 
+       Failed to read sector 5 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 1 1 1 1 0 0 1 1
+
+       3 retries remaining
+ 15.0: 197 ms in 152487 bytes
+       80 records, 40 sectors; 2.00us clock (500kHz); 
+       Failed to read sector 4 (bad checksum); 
+       Failed to read sector 5 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 1 1 1 1 0 0 1 1
+
+       2 retries remaining
+ 15.0: 196 ms in 151911 bytes
+       100 records, 50 sectors; 2.00us clock (500kHz); 
+       Failed to read sector 4 (bad checksum); 
+       Failed to read sector 5 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 1 1 1 1 0 0 1 1
+
+       1 retries remaining
+ 15.0: 196 ms in 152164 bytes
+       120 records, 60 sectors; 2.00us clock (500kHz); 
+       Failed to read sector 4 (bad checksum); 
+       Failed to read sector 5 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 1 1 1 1 0 0 1 1
+
+       giving up
+       logical track 15.0; 4096 bytes decoded.
+ 16.0: 196 ms in 152063 bytes
+       20 records, 10 sectors; 1.96us clock (512kHz); 
+       Failed to read sector 0 (bad checksum); 
+       Failed to read sector 5 (bad checksum); 
+       Failed to read sector 7 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 0 1 1 1 1 0 1 0
+
+       5 retries remaining
+ 16.0: 196 ms in 151552 bytes
+       40 records, 20 sectors; 1.96us clock (512kHz); 
+       Failed to read sector 0 (bad checksum); 
+       Failed to read sector 5 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 0 1 1 1 1 0 1 1
+
+       4 retries remaining
+ 16.0: 196 ms in 151846 bytes
+       60 records, 30 sectors; 1.96us clock (512kHz); 
+       Failed to read sector 0 (bad checksum); 
+       Failed to read sector 5 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 0 1 1 1 1 0 1 1
+
+       3 retries remaining
+ 16.0: 196 ms in 152039 bytes
+       80 records, 40 sectors; 1.96us clock (512kHz); 
+       Failed to read sector 0 (bad checksum); 
+       Failed to read sector 5 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 0 1 1 1 1 0 1 1
+
+       2 retries remaining
+ 16.0: 196 ms in 152064 bytes
+       100 records, 50 sectors; 1.96us clock (512kHz); 
+       Failed to read sector 0 (bad checksum); 
+       Failed to read sector 5 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 0 1 1 1 1 0 1 1
+
+       1 retries remaining
+ 16.0: 197 ms in 152356 bytes
+       120 records, 60 sectors; 1.96us clock (512kHz); 
+       Failed to read sector 0 (bad checksum); 
+       Failed to read sector 5 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 0 1 1 1 1 0 1 1
+
+       giving up
+       logical track 16.0; 4096 bytes decoded.
+ 17.0: 196 ms in 151399 bytes
+       20 records, 10 sectors; 2.01us clock (497kHz); 
+       logical track 17.0; 4096 bytes decoded.
+ 18.0: 197 ms in 133031 bytes
+       20 records, 10 sectors; 1.98us clock (504kHz); 
+       logical track 18.0; 4096 bytes decoded.
+ 19.0: 197 ms in 152743 bytes
+       20 records, 10 sectors; 1.98us clock (504kHz); 
+       logical track 19.0; 4096 bytes decoded.
+ 20.0: 196 ms in 152103 bytes
+       20 records, 10 sectors; 1.96us clock (512kHz); 
+       logical track 20.0; 4096 bytes decoded.
+ 21.0: 196 ms in 153764 bytes
+       20 records, 10 sectors; 1.98us clock (506kHz); 
+       logical track 21.0; 4096 bytes decoded.
+ 22.0: 197 ms in 154023 bytes
+       20 records, 10 sectors; 1.99us clock (502kHz); 
+       logical track 22.0; 4096 bytes decoded.
+ 23.0: 196 ms in 153088 bytes
+       20 records, 10 sectors; 1.97us clock (509kHz); 
+       logical track 23.0; 4096 bytes decoded.
+ 24.0: 196 ms in 153063 bytes
+       20 records, 10 sectors; 1.94us clock (514kHz); 
+       logical track 24.0; 4096 bytes decoded.
+ 25.0: 196 ms in 153447 bytes
+       20 records, 10 sectors; 1.97us clock (509kHz); 
+       logical track 25.0; 4096 bytes decoded.
+ 26.0: 197 ms in 154112 bytes
+       20 records, 10 sectors; 1.98us clock (506kHz); 
+       logical track 26.0; 4096 bytes decoded.
+ 27.0: 196 ms in 152614 bytes
+       20 records, 10 sectors; 1.96us clock (510kHz); 
+       logical track 27.0; 4096 bytes decoded.
+ 28.0: 196 ms in 151591 bytes
+       20 records, 10 sectors; 1.96us clock (512kHz); 
+       logical track 28.0; 4096 bytes decoded.
+ 29.0: 196 ms in 151591 bytes
+       20 records, 10 sectors; 1.98us clock (506kHz); 
+       logical track 29.0; 4096 bytes decoded.
+ 30.0: 197 ms in 150951 bytes
+       20 records, 10 sectors; 2.00us clock (500kHz); 
+       logical track 30.0; 4096 bytes decoded.
+ 31.0: 196 ms in 151015 bytes
+       20 records, 10 sectors; 1.99us clock (502kHz); 
+       logical track 31.0; 4096 bytes decoded.
+ 32.0: 196 ms in 141798 bytes
+       20 records, 10 sectors; 1.96us clock (512kHz); 
+       logical track 32.0; 4096 bytes decoded.
+ 33.0: 196 ms in 150950 bytes
+       20 records, 10 sectors; 1.97us clock (509kHz); 
+       logical track 33.0; 4096 bytes decoded.
+ 34.0: 197 ms in 132775 bytes
+       20 records, 10 sectors; 1.96us clock (510kHz); 
+       logical track 34.0; 4096 bytes decoded.
+ 35.0: 196 ms in 158695 bytes
+       20 records, 10 sectors; 2.00us clock (500kHz); 
+       logical track 35.0; 4096 bytes decoded.
+ 36.0: 196 ms in 159524 bytes
+       20 records, 10 sectors; 1.96us clock (510kHz); 
+       logical track 36.0; 4096 bytes decoded.
+ 37.0: 196 ms in 159399 bytes
+       20 records, 10 sectors; 1.93us clock (519kHz); 
+       logical track 37.0; 4096 bytes decoded.
+ 38.0: 197 ms in 153124 bytes
+       20 records, 10 sectors; 1.98us clock (506kHz); 
+       logical track 38.0; 4096 bytes decoded.
+ 39.0: 196 ms in 151268 bytes
+       20 records, 10 sectors; 1.99us clock (502kHz); 
+       logical track 39.0; 4096 bytes decoded.
+ 40.0: 196 ms in 150503 bytes
+       20 records, 10 sectors; 1.97us clock (507kHz); 
+       logical track 40.0; 4096 bytes decoded.
+ 41.0: 196 ms in 152231 bytes
+       20 records, 10 sectors; 1.94us clock (514kHz); 
+       logical track 41.0; 4096 bytes decoded.
+ 42.0: 197 ms in 153767 bytes
+       20 records, 10 sectors; 1.99us clock (503kHz); 
+       logical track 42.0; 4096 bytes decoded.
+ 43.0: 196 ms in 154151 bytes
+       20 records, 10 sectors; 1.98us clock (504kHz); 
+       logical track 43.0; 4096 bytes decoded.
+ 44.0: 196 ms in 153319 bytes
+       20 records, 10 sectors; 1.98us clock (506kHz); 
+       logical track 44.0; 4096 bytes decoded.
+ 45.0: 196 ms in 151270 bytes
+       20 records, 10 sectors; 1.95us clock (513kHz); 
+       logical track 45.0; 4096 bytes decoded.
+ 46.0: 197 ms in 152231 bytes
+       20 records, 10 sectors; 1.98us clock (506kHz); 
+       logical track 46.0; 4096 bytes decoded.
+ 47.0: 196 ms in 151271 bytes
+       20 records, 10 sectors; 2.01us clock (497kHz); 
+       Failed to read sector 3 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 1 1 1 0 1 1 1 1
+
+       5 retries remaining
+ 47.0: 196 ms in 151399 bytes
+       40 records, 20 sectors; 2.01us clock (497kHz); 
+       logical track 47.0; 4096 bytes decoded.
+ 48.0: 196 ms in 153639 bytes
+       20 records, 10 sectors; 1.93us clock (517kHz); 
+       logical track 48.0; 4096 bytes decoded.
+ 49.0: 196 ms in 154406 bytes
+       20 records, 10 sectors; 1.99us clock (503kHz); 
+       logical track 49.0; 4096 bytes decoded.
+ 50.0: 196 ms in 154087 bytes
+       20 records, 10 sectors; 2.01us clock (497kHz); 
+       logical track 50.0; 4096 bytes decoded.
+ 51.0: 196 ms in 152998 bytes
+       20 records, 10 sectors; 1.98us clock (504kHz); 
+       Failed to read sector 4 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 1 1 1 1 0 1 1 1
+
+       5 retries remaining
+ 51.0: 196 ms in 153254 bytes
+       40 records, 20 sectors; 1.98us clock (504kHz); 
+       logical track 51.0; 4096 bytes decoded.
+ 52.0: 196 ms in 151527 bytes
+       20 records, 10 sectors; 1.95us clock (513kHz); 
+       Failed to read sector 3 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 1 1 1 0 1 1 1 1
+
+       5 retries remaining
+ 52.0: 196 ms in 151719 bytes
+       40 records, 20 sectors; 1.95us clock (513kHz); 
+       Failed to read sector 3 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 1 1 1 0 1 1 1 1
+
+       4 retries remaining
+ 52.0: 196 ms in 151975 bytes
+       60 records, 30 sectors; 1.95us clock (513kHz); 
+       Failed to read sector 3 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 1 1 1 0 1 1 1 1
+
+       3 retries remaining
+ 52.0: 196 ms in 151462 bytes
+       80 records, 40 sectors; 1.95us clock (513kHz); 
+       logical track 52.0; 4096 bytes decoded.
+ 53.0: 196 ms in 152423 bytes
+       20 records, 10 sectors; 1.97us clock (507kHz); 
+       logical track 53.0; 4096 bytes decoded.
+ 54.0: 196 ms in 152359 bytes
+       20 records, 10 sectors; 1.97us clock (509kHz); 
+       Failed to read sector 3 (present but no data found);  Only seen some sectors, retrying...
+  Sector map : 1 1 1 0 1 1 1 1
+
+       5 retries remaining
+ 54.0: 197 ms in 152550 bytes
+       40 records, 20 sectors; 1.97us clock (509kHz); 
+       logical track 54.0; 4096 bytes decoded.
+ 55.0: 196 ms in 151719 bytes
+       20 records, 10 sectors; 2.02us clock (496kHz); 
+       logical track 55.0; 4096 bytes decoded.
+ 56.0: 196 ms in 152484 bytes
+       20 records, 10 sectors; 1.96us clock (510kHz); 
+       logical track 56.0; 4096 bytes decoded.
+ 57.0: 196 ms in 150951 bytes
+       20 records, 10 sectors; 2.00us clock (499kHz); 
+       logical track 57.0; 4096 bytes decoded.
+ 58.0: 196 ms in 151847 bytes
+       20 records, 10 sectors; 1.99us clock (503kHz); 
+       Failed to read sector 4 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 1 1 1 1 0 1 1 1
+
+       5 retries remaining
+ 58.0: 197 ms in 152039 bytes
+       40 records, 20 sectors; 1.99us clock (503kHz); 
+       logical track 58.0; 4096 bytes decoded.
+ 59.0: 196 ms in 151551 bytes
+       20 records, 10 sectors; 1.99us clock (503kHz); 
+       logical track 59.0; 4096 bytes decoded.
+ 60.0: 196 ms in 150694 bytes
+       20 records, 10 sectors; 2.01us clock (497kHz); 
+       logical track 60.0; 4096 bytes decoded.
+ 61.0: 197 ms in 138148 bytes
+       20 records, 10 sectors; 1.99us clock (503kHz); 
+       logical track 61.0; 4096 bytes decoded.
+ 62.0: 197 ms in 150375 bytes
+       20 records, 10 sectors; 2.00us clock (500kHz); 
+       logical track 62.0; 4096 bytes decoded.
+ 63.0: 196 ms in 150374 bytes
+       20 records, 10 sectors; 1.96us clock (510kHz); 
+       Failed to read sector 2 (present but no data found);  Only seen some sectors, retrying...
+  Sector map : 1 1 0 1 1 1 1 1
+
+       5 retries remaining
+ 63.0: 196 ms in 150503 bytes
+       40 records, 20 sectors; 1.96us clock (510kHz); 
+       logical track 63.0; 4096 bytes decoded.
+ 64.0: 196 ms in 151463 bytes
+       20 records, 10 sectors; 2.01us clock (497kHz); 
+       Failed to read sector 0 (bad checksum); 
+       Failed to read sector 2 (bad checksum); 
+       Failed to read sector 3 (present but no data found); 
+       Failed to read sector 4 (bad checksum); 
+       Failed to read sector 5 (bad checksum); 
+       Failed to read sector 6 (bad checksum); 
+       Failed to read sector 7 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 0 1 0 0 0 0 0 0
+
+       5 retries remaining
+ 64.0: 196 ms in 151552 bytes
+       40 records, 20 sectors; 2.01us clock (497kHz); 
+       Failed to read sector 3 (present but no data found); 
+       Failed to read sector 4 (bad checksum); 
+       Failed to read sector 5 (bad checksum); 
+       Failed to read sector 7 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 1 1 1 0 0 0 1 0
+
+       4 retries remaining
+ 64.0: 197 ms in 151783 bytes
+       60 records, 30 sectors; 2.01us clock (497kHz); 
+       Failed to read sector 3 (present but no data found); 
+       Failed to read sector 5 (bad checksum); 
+       Failed to read sector 7 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 1 1 1 0 1 0 1 0
+
+       3 retries remaining
+ 64.0: 196 ms in 151207 bytes
+       80 records, 40 sectors; 2.01us clock (497kHz); 
+       Failed to read sector 3 (present but no data found); 
+       Failed to read sector 5 (bad checksum); 
+       Failed to read sector 7 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 1 1 1 0 1 0 1 0
+
+       2 retries remaining
+ 64.0: 196 ms in 151463 bytes
+       100 records, 50 sectors; 2.01us clock (497kHz); 
+       Failed to read sector 3 (present but no data found); 
+       Failed to read sector 7 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 1 1 1 0 1 1 1 0
+
+       1 retries remaining
+ 64.0: 196 ms in 151524 bytes
+       120 records, 60 sectors; 2.01us clock (497kHz); 
+       Failed to read sector 3 (present but no data found); 
+       Failed to read sector 7 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 1 1 1 0 1 1 1 0
+
+       giving up
+       logical track 64.0; 3584 bytes decoded.
+ 65.0: 197 ms in 151652 bytes
+       20 records, 10 sectors; 1.98us clock (506kHz); 
+       logical track 65.0; 4096 bytes decoded.
+ 66.0: 196 ms in 150528 bytes
+       20 records, 10 sectors; 1.98us clock (506kHz); 
+       Failed to read sector 0 (present but no data found);  Only seen some sectors, retrying...
+  Sector map : 0 1 1 1 1 1 1 1
+
+       5 retries remaining
+ 66.0: 196 ms in 150823 bytes
+       40 records, 20 sectors; 1.98us clock (506kHz); 
+       logical track 66.0; 4096 bytes decoded.
+ 67.0: 196 ms in 151079 bytes
+       20 records, 10 sectors; 1.97us clock (507kHz); 
+       Failed to read sector 1 (bad checksum); 
+       Failed to read sector 2 (bad checksum); 
+       Failed to read sector 3 (bad checksum); 
+       Failed to read sector 4 (bad checksum); 
+       Failed to read sector 5 (bad checksum); 
+       Failed to read sector 6 (bad checksum); 
+       Failed to read sector 7 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 1 0 0 0 0 0 0 0
+
+       5 retries remaining
+ 67.0: 197 ms in 151271 bytes
+       40 records, 20 sectors; 1.97us clock (507kHz); 
+       Failed to read sector 1 (bad checksum); 
+       Failed to read sector 2 (bad checksum); 
+       Failed to read sector 4 (bad checksum); 
+       Failed to read sector 6 (bad checksum); 
+       Failed to read sector 7 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 1 0 0 1 0 1 0 0
+
+       4 retries remaining
+ 67.0: 196 ms in 150951 bytes
+       60 records, 30 sectors; 1.97us clock (507kHz); 
+       Failed to read sector 4 (bad checksum); 
+       Failed to read sector 6 (bad checksum); 
+       Failed to read sector 7 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 1 1 1 1 0 1 0 0
+
+       3 retries remaining
+ 67.0: 196 ms in 151040 bytes
+       80 records, 40 sectors; 1.97us clock (507kHz); 
+       Failed to read sector 4 (bad checksum); 
+       Failed to read sector 6 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 1 1 1 1 0 1 0 1
+
+       2 retries remaining
+ 67.0: 196 ms in 150527 bytes
+       100 records, 50 sectors; 1.97us clock (507kHz); 
+       Failed to read sector 4 (bad checksum); 
+       Failed to read sector 6 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 1 1 1 1 0 1 0 1
+
+       1 retries remaining
+ 67.0: 196 ms in 150951 bytes
+       120 records, 60 sectors; 1.97us clock (507kHz); 
+       Failed to read sector 4 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 1 1 1 1 0 1 1 1
+
+       giving up
+       logical track 67.0; 4096 bytes decoded.
+ 68.0: 197 ms in 150951 bytes
+       20 records, 10 sectors; 1.98us clock (505kHz); 
+       Failed to read sector 0 (present but no data found); 
+       Failed to read sector 1 (bad checksum); 
+       Failed to read sector 2 (bad checksum); 
+       Failed to read sector 3 (bad checksum); 
+       Failed to read sector 5 (present but no data found); 
+       Failed to read sector 6 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 0 0 0 0 1 0 0 1
+
+       5 retries remaining
+ 68.0: 196 ms in 150566 bytes
+       40 records, 20 sectors; 1.98us clock (505kHz); 
+       Failed to read sector 0 (present but no data found); 
+       Failed to read sector 1 (bad checksum); 
+       Failed to read sector 3 (bad checksum); 
+       Failed to read sector 5 (present but no data found);  Only seen some sectors, retrying...
+  Sector map : 0 0 1 0 1 0 1 1
+
+       4 retries remaining
+ 68.0: 196 ms in 150823 bytes
+       60 records, 30 sectors; 1.98us clock (505kHz); 
+       Failed to read sector 0 (present but no data found); 
+       Failed to read sector 1 (bad checksum); 
+       Failed to read sector 3 (bad checksum); 
+       Failed to read sector 5 (present but no data found);  Only seen some sectors, retrying...
+  Sector map : 0 0 1 0 1 0 1 1
+
+       3 retries remaining
+ 68.0: 197 ms in 151079 bytes
+       80 records, 40 sectors; 1.98us clock (505kHz); 
+       Failed to read sector 0 (present but no data found); 
+       Failed to read sector 3 (bad checksum); 
+       Failed to read sector 5 (present but no data found);  Only seen some sectors, retrying...
+  Sector map : 0 1 1 0 1 0 1 1
+
+       2 retries remaining
+ 68.0: 196 ms in 150528 bytes
+       100 records, 50 sectors; 1.98us clock (505kHz); 
+       Failed to read sector 0 (present but no data found); 
+       Failed to read sector 3 (bad checksum); 
+       Failed to read sector 5 (present but no data found);  Only seen some sectors, retrying...
+  Sector map : 0 1 1 0 1 0 1 1
+
+       1 retries remaining
+ 68.0: 196 ms in 150759 bytes
+       120 records, 60 sectors; 1.98us clock (505kHz); 
+       Failed to read sector 0 (present but no data found); 
+       Failed to read sector 3 (bad checksum); 
+       Failed to read sector 5 (present but no data found);  Only seen some sectors, retrying...
+  Sector map : 0 1 1 0 1 0 1 1
+
+       giving up
+       logical track 68.0; 3072 bytes decoded.
+ 69.0: 196 ms in 154471 bytes
+       21 records, 10 sectors; 2.02us clock (495kHz); 
+       Failed to read sector 0 (bad checksum); 
+       Failed to read sector 1 (bad checksum); 
+       Failed to read sector 2 (present but no data found); 
+       Failed to read sector 3 (present but no data found); 
+       Failed to read sector 4 (bad checksum); 
+       Failed to read sector 5 (present but no data found); 
+       Failed to read sector 6 (present but no data found); 
+       Failed to read sector 7 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 0 0 0 0 0 0 0 0
+
+       5 retries remaining
+ 69.0: 196 ms in 153958 bytes
+       41 records, 20 sectors; 2.02us clock (495kHz); 
+       Failed to read sector 0 (bad checksum); 
+       Failed to read sector 1 (bad checksum); 
+       Failed to read sector 2 (present but no data found); 
+       Failed to read sector 3 (present but no data found); 
+       Failed to read sector 4 (bad checksum); 
+       Failed to read sector 5 (present but no data found); 
+       Failed to read sector 6 (present but no data found); 
+       Failed to read sector 7 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 0 0 0 0 0 0 0 0
+
+       4 retries remaining
+ 69.0: 196 ms in 154112 bytes
+       61 records, 30 sectors; 2.02us clock (495kHz); 
+       Failed to read sector 0 (bad checksum); 
+       Failed to read sector 2 (present but no data found); 
+       Failed to read sector 3 (present but no data found); 
+       Failed to read sector 4 (bad checksum); 
+       Failed to read sector 5 (present but no data found); 
+       Failed to read sector 6 (present but no data found); 
+       Failed to read sector 7 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 0 1 0 0 0 0 0 0
+
+       3 retries remaining
+ 69.0: 197 ms in 154471 bytes
+       82 records, 40 sectors; 2.02us clock (495kHz); 
+       Failed to read sector 0 (bad checksum); 
+       Failed to read sector 2 (present but no data found); 
+       Failed to read sector 3 (present but no data found); 
+       Failed to read sector 4 (bad checksum); 
+       Failed to read sector 5 (present but no data found); 
+       Failed to read sector 6 (present but no data found); 
+       Failed to read sector 7 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 0 1 0 0 0 0 0 0
+
+       2 retries remaining
+ 69.0: 196 ms in 153955 bytes
+       102 records, 50 sectors; 2.02us clock (495kHz); 
+       Failed to read sector 0 (bad checksum); 
+       Failed to read sector 2 (present but no data found); 
+       Failed to read sector 4 (bad checksum); 
+       Failed to read sector 5 (present but no data found); 
+       Failed to read sector 6 (present but no data found);  Only seen some sectors, retrying...
+  Sector map : 0 1 0 1 0 0 0 1
+
+       1 retries remaining
+ 69.0: 196 ms in 154215 bytes
+       122 records, 60 sectors; 2.02us clock (495kHz); 
+       Failed to read sector 0 (bad checksum); 
+       Failed to read sector 2 (present but no data found); 
+       Failed to read sector 4 (bad checksum); 
+       Failed to read sector 5 (present but no data found); 
+       Failed to read sector 6 (present but no data found);  Only seen some sectors, retrying...
+  Sector map : 0 1 0 1 0 0 0 1
+
+       giving up
+       logical track 69.0; 2560 bytes decoded.
+ 70.0: 196 ms in 158115 bytes
+       20 records, 10 sectors; 1.92us clock (520kHz); 
+       Failed to read sector 2 (bad checksum); 
+       Failed to read sector 3 (bad checksum); 
+       Failed to read sector 5 (present but no data found); 
+       Failed to read sector 6 (present but no data found); 
+       Failed to read sector 7 (present but no data found);  Only seen some sectors, retrying...
+  Sector map : 1 1 0 0 1 0 0 0
+
+       5 retries remaining
+ 70.0: 196 ms in 157607 bytes
+       40 records, 20 sectors; 1.92us clock (520kHz); 
+       logical track 70.0; 4096 bytes decoded.
+ 71.0: 196 ms in 157351 bytes
+       18 records, 8 sectors; 1.71us clock (585kHz); 
+       Failed to read sector 0 (bad checksum); 
+       Failed to read sector 1 (bad checksum); 
+       Failed to read sector 2 (bad checksum); 
+       Failed to read sector 3 (present but no data found); 
+       Failed to read sector 4 (present but no data found); 
+       Failed to read sector 5 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 0 0 0 0 0 0 0 0
+
+       5 retries remaining
+ 71.0: 196 ms in 157479 bytes
+       34 records, 16 sectors; 1.71us clock (585kHz); 
+       Failed to read sector 0 (bad checksum); 
+       Failed to read sector 1 (bad checksum); 
+       Failed to read sector 2 (bad checksum); 
+       Failed to read sector 3 (present but no data found); 
+       Failed to read sector 4 (present but no data found); 
+       Failed to read sector 5 (bad checksum); 
+       Failed to read sector 6 (bad checksum); 
+       Failed to read sector 7 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 0 0 0 0 0 0 0 0
+
+       4 retries remaining
+ 71.0: 196 ms in 156839 bytes
+       50 records, 24 sectors; 1.71us clock (585kHz); 
+       Failed to read sector 0 (bad checksum); 
+       Failed to read sector 1 (bad checksum); 
+       Failed to read sector 2 (bad checksum); 
+       Failed to read sector 3 (present but no data found); 
+       Failed to read sector 4 (present but no data found); 
+       Failed to read sector 5 (bad checksum); 
+       Failed to read sector 6 (bad checksum); 
+       Failed to read sector 7 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 0 0 0 0 0 0 0 0
+
+       3 retries remaining
+ 71.0: 196 ms in 157095 bytes
+       67 records, 32 sectors; 1.71us clock (585kHz); 
+       Failed to read sector 0 (bad checksum); 
+       Failed to read sector 1 (bad checksum); 
+       Failed to read sector 2 (bad checksum); 
+       Failed to read sector 3 (present but no data found); 
+       Failed to read sector 4 (present but no data found); 
+       Failed to read sector 5 (bad checksum); 
+       Failed to read sector 6 (bad checksum); 
+       Failed to read sector 7 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 0 0 0 0 0 0 0 0
+
+       2 retries remaining
+ 71.0: 196 ms in 157159 bytes
+       81 records, 38 sectors; 1.71us clock (585kHz); 
+       Failed to read sector 0 (bad checksum); 
+       Failed to read sector 1 (bad checksum); 
+       Failed to read sector 2 (bad checksum); 
+       Failed to read sector 3 (present but no data found); 
+       Failed to read sector 4 (present but no data found); 
+       Failed to read sector 5 (bad checksum); 
+       Failed to read sector 6 (bad checksum); 
+       Failed to read sector 7 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 0 0 0 0 0 0 0 0
+
+       1 retries remaining
+ 71.0: 196 ms in 157543 bytes
+       99 records, 46 sectors; 1.71us clock (585kHz); 
+       Failed to read sector 0 (bad checksum); 
+       Failed to read sector 1 (bad checksum); 
+       Failed to read sector 2 (bad checksum); 
+       Failed to read sector 3 (present but no data found); 
+       Failed to read sector 4 (present but no data found); 
+       Failed to read sector 5 (bad checksum); 
+       Failed to read sector 6 (bad checksum); 
+       Failed to read sector 7 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 0 0 0 0 0 0 0 0
+
+       giving up
+       logical track 71.0; 3072 bytes decoded.
+ 72.0: 196 ms in 157158 bytes
+       15 records, 7 sectors; 1.71us clock (584kHz); 
+       Failed to read sector 0 (bad checksum); 
+       Failed to read sector 1 (bad checksum); 
+       Failed to read sector 2 (bad checksum); 
+       Failed to read sector 3 (present but no data found); 
+       Failed to read sector 4 (present but no data found); 
+       Failed to read sector 5 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 0 0 0 0 0 0 0 0
+
+       5 retries remaining
+ 72.0: 196 ms in 157414 bytes
+       33 records, 15 sectors; 1.71us clock (584kHz); 
+       Failed to read sector 0 (bad checksum); 
+       Failed to read sector 1 (bad checksum); 
+       Failed to read sector 2 (bad checksum); 
+       Failed to read sector 3 (present but no data found); 
+       Failed to read sector 4 (present but no data found); 
+       Failed to read sector 5 (bad checksum); 
+       Failed to read sector 6 (present but no data found); 
+       Failed to read sector 7 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 0 0 0 0 0 0 0 0
+
+       4 retries remaining
+ 72.0: 196 ms in 157478 bytes
+       51 records, 24 sectors; 1.71us clock (584kHz); 
+       Failed to read sector 0 (bad checksum); 
+       Failed to read sector 1 (bad checksum); 
+       Failed to read sector 2 (bad checksum); 
+       Failed to read sector 3 (present but no data found); 
+       Failed to read sector 4 (present but no data found); 
+       Failed to read sector 5 (bad checksum); 
+       Failed to read sector 6 (present but no data found); 
+       Failed to read sector 7 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 0 0 0 0 0 0 0 0
+
+       3 retries remaining
+ 72.0: 196 ms in 157696 bytes
+       64 records, 30 sectors; 1.71us clock (584kHz); 
+       Failed to read sector 0 (bad checksum); 
+       Failed to read sector 1 (bad checksum); 
+       Failed to read sector 2 (bad checksum); 
+       Failed to read sector 3 (present but no data found); 
+       Failed to read sector 4 (present but no data found); 
+       Failed to read sector 5 (bad checksum); 
+       Failed to read sector 6 (present but no data found); 
+       Failed to read sector 7 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 0 0 0 0 0 0 0 0
+
+       2 retries remaining
+ 72.0: 196 ms in 157223 bytes
+       77 records, 36 sectors; 1.71us clock (584kHz); 
+       Failed to read sector 0 (bad checksum); 
+       Failed to read sector 1 (bad checksum); 
+       Failed to read sector 2 (bad checksum); 
+       Failed to read sector 3 (present but no data found); 
+       Failed to read sector 4 (present but no data found); 
+       Failed to read sector 5 (bad checksum); 
+       Failed to read sector 6 (present but no data found); 
+       Failed to read sector 7 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 0 0 0 0 0 0 0 0
+
+       1 retries remaining
+ 72.0: 196 ms in 156454 bytes
+       88 records, 39 sectors; 1.71us clock (584kHz); 
+       Failed to read sector 0 (bad checksum); 
+       Failed to read sector 1 (bad checksum); 
+       Failed to read sector 2 (bad checksum); 
+       Failed to read sector 3 (present but no data found); 
+       Failed to read sector 4 (present but no data found); 
+       Failed to read sector 5 (bad checksum); 
+       Failed to read sector 6 (present but no data found); 
+       Failed to read sector 7 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 0 0 0 0 0 0 0 0
+
+       giving up
+       logical track 72.0; 2560 bytes decoded.
+ 73.0: 196 ms in 157543 bytes
+       18 records, 9 sectors; 1.97us clock (507kHz); 
+       Failed to read sector 0 (bad checksum); 
+       Failed to read sector 1 (bad checksum); 
+       Failed to read sector 2 (bad checksum); 
+       Failed to read sector 4 (bad checksum); 
+       Failed to read sector 5 (present but no data found); 
+       Failed to read sector 6 (bad checksum); 
+       Failed to read sector 7 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 0 0 0 0 0 0 0 0
+
+       5 retries remaining
+ 73.0: 196 ms in 158183 bytes
+       37 records, 18 sectors; 1.97us clock (507kHz); 
+       Failed to read sector 0 (bad checksum); 
+       Failed to read sector 1 (bad checksum); 
+       Failed to read sector 2 (bad checksum); 
+       Failed to read sector 3 (present but no data found); 
+       Failed to read sector 4 (bad checksum); 
+       Failed to read sector 5 (present but no data found); 
+       Failed to read sector 6 (bad checksum); 
+       Failed to read sector 7 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 0 0 0 0 0 0 0 0
+
+       4 retries remaining
+ 73.0: 196 ms in 158243 bytes
+       55 records, 27 sectors; 1.97us clock (507kHz); 
+       Failed to read sector 0 (bad checksum); 
+       Failed to read sector 1 (bad checksum); 
+       Failed to read sector 2 (bad checksum); 
+       Failed to read sector 3 (present but no data found); 
+       Failed to read sector 4 (bad checksum); 
+       Failed to read sector 5 (present but no data found); 
+       Failed to read sector 6 (bad checksum); 
+       Failed to read sector 7 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 0 0 0 0 0 0 0 0
+
+       3 retries remaining
+ 73.0: 196 ms in 157735 bytes
+       74 records, 36 sectors; 1.97us clock (507kHz); 
+       Failed to read sector 0 (bad checksum); 
+       Failed to read sector 1 (bad checksum); 
+       Failed to read sector 2 (bad checksum); 
+       Failed to read sector 3 (present but no data found); 
+       Failed to read sector 4 (bad checksum); 
+       Failed to read sector 5 (present but no data found); 
+       Failed to read sector 6 (bad checksum); 
+       Failed to read sector 7 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 0 0 0 0 0 0 0 0
+
+       2 retries remaining
+ 73.0: 196 ms in 157991 bytes
+       91 records, 44 sectors; 1.97us clock (507kHz); 
+       Failed to read sector 0 (bad checksum); 
+       Failed to read sector 1 (bad checksum); 
+       Failed to read sector 2 (bad checksum); 
+       Failed to read sector 3 (present but no data found); 
+       Failed to read sector 4 (bad checksum); 
+       Failed to read sector 5 (present but no data found); 
+       Failed to read sector 6 (bad checksum); 
+       Failed to read sector 7 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 0 0 0 0 0 0 0 0
+
+       1 retries remaining
+ 73.0: 196 ms in 158118 bytes
+       111 records, 54 sectors; 1.97us clock (507kHz); 
+       Failed to read sector 0 (bad checksum); 
+       Failed to read sector 1 (bad checksum); 
+       Failed to read sector 2 (bad checksum); 
+       Failed to read sector 3 (present but no data found); 
+       Failed to read sector 4 (bad checksum); 
+       Failed to read sector 5 (present but no data found); 
+       Failed to read sector 6 (bad checksum); 
+       Failed to read sector 7 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 0 0 0 0 0 0 0 0
+
+       giving up
+       logical track 73.0; 3072 bytes decoded.
+ 74.0: 196 ms in 155648 bytes
+       17 records, 8 sectors; 1.99us clock (503kHz); 
+       Failed to read sector 0 (bad checksum); 
+       Failed to read sector 1 (bad checksum); 
+       Failed to read sector 2 (bad checksum); 
+       Failed to read sector 4 (bad checksum); 
+       Failed to read sector 5 (bad checksum); 
+       Failed to read sector 6 (bad checksum); 
+       Failed to read sector 7 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 0 0 0 0 0 0 0 0
+
+       5 retries remaining
+ 74.0: 196 ms in 155239 bytes
+       34 records, 16 sectors; 1.99us clock (503kHz); 
+       Failed to read sector 0 (bad checksum); 
+       Failed to read sector 1 (bad checksum); 
+       Failed to read sector 2 (bad checksum); 
+       Failed to read sector 4 (bad checksum); 
+       Failed to read sector 5 (bad checksum); 
+       Failed to read sector 6 (bad checksum); 
+       Failed to read sector 7 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 0 0 0 0 0 0 0 0
+
+       4 retries remaining
+ 74.0: 196 ms in 155623 bytes
+       49 records, 23 sectors; 1.99us clock (503kHz); 
+       Failed to read sector 0 (bad checksum); 
+       Failed to read sector 1 (bad checksum); 
+       Failed to read sector 2 (bad checksum); 
+       Failed to read sector 4 (bad checksum); 
+       Failed to read sector 5 (bad checksum); 
+       Failed to read sector 6 (bad checksum); 
+       Failed to read sector 7 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 0 0 0 0 0 0 0 0
+
+       3 retries remaining
+ 74.0: 196 ms in 155495 bytes
+       63 records, 30 sectors; 1.99us clock (503kHz); 
+       Failed to read sector 0 (bad checksum); 
+       Failed to read sector 1 (bad checksum); 
+       Failed to read sector 2 (bad checksum); 
+       Failed to read sector 4 (bad checksum); 
+       Failed to read sector 5 (bad checksum); 
+       Failed to read sector 6 (bad checksum); 
+       Failed to read sector 7 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 0 0 0 0 0 0 0 0
+
+       2 retries remaining
+ 74.0: 197 ms in 155814 bytes
+       81 records, 39 sectors; 1.99us clock (503kHz); 
+       Failed to read sector 0 (bad checksum); 
+       Failed to read sector 1 (bad checksum); 
+       Failed to read sector 2 (bad checksum); 
+       Failed to read sector 4 (bad checksum); 
+       Failed to read sector 5 (bad checksum); 
+       Failed to read sector 6 (bad checksum); 
+       Failed to read sector 7 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 0 0 0 0 0 0 0 0
+
+       1 retries remaining
+ 74.0: 196 ms in 155136 bytes
+       93 records, 44 sectors; 1.99us clock (503kHz); 
+       Failed to read sector 0 (bad checksum); 
+       Failed to read sector 1 (bad checksum); 
+       Failed to read sector 2 (bad checksum); 
+       Failed to read sector 4 (bad checksum); 
+       Failed to read sector 5 (bad checksum); 
+       Failed to read sector 6 (bad checksum); 
+       Failed to read sector 7 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 0 0 0 0 0 0 0 0
+
+       giving up
+       logical track 74.0; 3584 bytes decoded.
+ 75.0: 197 ms in 121856 bytes
+       20 records, 10 sectors; 1.98us clock (506kHz); 
+       Failed to read sector 0 (present but no data found); 
+       Failed to read sector 1 (bad checksum); 
+       Failed to read sector 2 (bad checksum); 
+       Failed to read sector 3 (present but no data found); 
+       Failed to read sector 4 (bad checksum); 
+       Failed to read sector 6 (bad checksum); 
+       Failed to read sector 7 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 0 0 0 0 0 1 0 0
+
+       5 retries remaining
+ 75.0: 197 ms in 122023 bytes
+       38 records, 19 sectors; 1.98us clock (506kHz); 
+       Failed to read sector 0 (present but no data found); 
+       Failed to read sector 1 (bad checksum); 
+       Failed to read sector 2 (bad checksum); 
+       Failed to read sector 3 (present but no data found); 
+       Failed to read sector 4 (bad checksum); 
+       Failed to read sector 6 (bad checksum); 
+       Failed to read sector 7 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 0 0 0 0 0 1 0 0
+
+       4 retries remaining
+ 75.0: 197 ms in 122151 bytes
+       55 records, 27 sectors; 1.98us clock (506kHz); 
+       Failed to read sector 0 (present but no data found); 
+       Failed to read sector 1 (bad checksum); 
+       Failed to read sector 2 (bad checksum); 
+       Failed to read sector 3 (present but no data found); 
+       Failed to read sector 4 (bad checksum); 
+       Failed to read sector 6 (bad checksum); 
+       Failed to read sector 7 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 0 0 0 0 0 1 0 0
+
+       3 retries remaining
+ 75.0: 197 ms in 121766 bytes
+       73 records, 35 sectors; 1.98us clock (506kHz); 
+       Failed to read sector 0 (present but no data found); 
+       Failed to read sector 1 (bad checksum); 
+       Failed to read sector 2 (bad checksum); 
+       Failed to read sector 3 (present but no data found); 
+       Failed to read sector 4 (bad checksum); 
+       Failed to read sector 6 (bad checksum); 
+       Failed to read sector 7 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 0 0 0 0 0 1 0 0
+
+       2 retries remaining
+ 75.0: 197 ms in 121895 bytes
+       89 records, 42 sectors; 1.98us clock (506kHz); 
+       Failed to read sector 0 (present but no data found); 
+       Failed to read sector 1 (bad checksum); 
+       Failed to read sector 2 (bad checksum); 
+       Failed to read sector 3 (present but no data found); 
+       Failed to read sector 4 (bad checksum); 
+       Failed to read sector 6 (bad checksum); 
+       Failed to read sector 7 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 0 0 0 0 0 1 0 0
+
+       1 retries remaining
+ 75.0: 197 ms in 121959 bytes
+       108 records, 51 sectors; 1.98us clock (506kHz); 
+       Failed to read sector 0 (present but no data found); 
+       Failed to read sector 1 (bad checksum); 
+       Failed to read sector 2 (bad checksum); 
+       Failed to read sector 3 (present but no data found); 
+       Failed to read sector 4 (bad checksum); 
+       Failed to read sector 6 (bad checksum); 
+       Failed to read sector 7 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 0 0 0 0 0 1 0 0
+
+       giving up
+       logical track 75.0; 3072 bytes decoded.
+ 76.0: 197 ms in 118272 bytes
+       19 records, 9 sectors; 2.00us clock (499kHz); 
+       Failed to read sector 0 (present but no data found); 
+       Failed to read sector 1 (bad checksum); 
+       Failed to read sector 2 (present but no data found); 
+       Failed to read sector 3 (present but no data found); 
+       Failed to read sector 5 (bad checksum); 
+       Failed to read sector 7 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 0 0 0 0 0 0 1 0
+
+       5 retries remaining
+ 76.0: 197 ms in 117991 bytes
+       36 records, 16 sectors; 2.00us clock (499kHz); 
+       Failed to read sector 0 (present but no data found); 
+       Failed to read sector 1 (bad checksum); 
+       Failed to read sector 2 (present but no data found); 
+       Failed to read sector 3 (present but no data found); 
+       Failed to read sector 5 (bad checksum); 
+       Failed to read sector 7 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 0 0 0 0 1 0 1 0
+
+       4 retries remaining
+ 76.0: 197 ms in 118119 bytes
+       49 records, 22 sectors; 2.00us clock (499kHz); 
+       Failed to read sector 0 (present but no data found); 
+       Failed to read sector 1 (bad checksum); 
+       Failed to read sector 2 (present but no data found); 
+       Failed to read sector 3 (present but no data found); 
+       Failed to read sector 5 (bad checksum); 
+       Failed to read sector 7 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 0 0 0 0 1 0 1 0
+
+       3 retries remaining
+ 76.0: 197 ms in 118183 bytes
+       61 records, 27 sectors; 2.00us clock (499kHz); 
+       Failed to read sector 0 (present but no data found); 
+       Failed to read sector 1 (bad checksum); 
+       Failed to read sector 2 (present but no data found); 
+       Failed to read sector 3 (present but no data found); 
+       Failed to read sector 5 (bad checksum); 
+       Failed to read sector 7 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 0 0 0 0 1 0 1 0
+
+       2 retries remaining
+ 76.0: 197 ms in 117927 bytes
+       81 records, 37 sectors; 2.00us clock (499kHz); 
+       Failed to read sector 0 (present but no data found); 
+       Failed to read sector 1 (bad checksum); 
+       Failed to read sector 2 (present but no data found); 
+       Failed to read sector 3 (present but no data found); 
+       Failed to read sector 5 (bad checksum); 
+       Failed to read sector 7 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 0 0 0 0 1 0 1 0
+
+       1 retries remaining
+ 76.0: 197 ms in 118119 bytes
+       96 records, 44 sectors; 2.00us clock (499kHz); 
+       Failed to read sector 0 (present but no data found); 
+       Failed to read sector 1 (bad checksum); 
+       Failed to read sector 2 (present but no data found); 
+       Failed to read sector 3 (present but no data found); 
+       Failed to read sector 5 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 0 0 0 0 1 0 1 1
+
+       giving up
+       logical track 76.0; 2560 bytes decoded.
+ 77.0: 197 ms in 139748 bytes
+       17 records, 8 sectors; 1.92us clock (520kHz); 
+       Failed to read sector 0 (bad checksum); 
+       Failed to read sector 1 (bad checksum); 
+       Failed to read sector 2 (present but no data found); 
+       Failed to read sector 4 (present but no data found); 
+       Failed to read sector 6 (bad checksum); 
+       Failed to read sector 7 (present but no data found);  Only seen some sectors, retrying...
+  Sector map : 0 0 0 0 0 0 0 0
+
+       5 retries remaining
+ 77.0: 197 ms in 139748 bytes
+       35 records, 16 sectors; 1.92us clock (520kHz); 
+       Failed to read sector 0 (bad checksum); 
+       Failed to read sector 1 (bad checksum); 
+       Failed to read sector 2 (present but no data found); 
+       Failed to read sector 3 (present but no data found); 
+       Failed to read sector 4 (present but no data found); 
+       Failed to read sector 5 (bad checksum); 
+       Failed to read sector 6 (bad checksum); 
+       Failed to read sector 7 (present but no data found);  Only seen some sectors, retrying...
+  Sector map : 0 0 0 0 0 0 0 0
+
+       4 retries remaining
+ 77.0: 197 ms in 139879 bytes
+       51 records, 24 sectors; 1.92us clock (520kHz); 
+       Failed to read sector 0 (bad checksum); 
+       Failed to read sector 1 (bad checksum); 
+       Failed to read sector 2 (present but no data found); 
+       Failed to read sector 3 (present but no data found); 
+       Failed to read sector 4 (present but no data found); 
+       Failed to read sector 5 (bad checksum); 
+       Failed to read sector 6 (bad checksum); 
+       Failed to read sector 7 (present but no data found);  Only seen some sectors, retrying...
+  Sector map : 0 0 0 0 0 0 0 0
+
+       3 retries remaining
+ 77.0: 196 ms in 139300 bytes
+       69 records, 33 sectors; 1.92us clock (520kHz); 
+       Failed to read sector 0 (bad checksum); 
+       Failed to read sector 1 (bad checksum); 
+       Failed to read sector 2 (present but no data found); 
+       Failed to read sector 3 (present but no data found); 
+       Failed to read sector 4 (present but no data found); 
+       Failed to read sector 5 (bad checksum); 
+       Failed to read sector 6 (bad checksum); 
+       Failed to read sector 7 (present but no data found);  Only seen some sectors, retrying...
+  Sector map : 0 0 0 0 0 0 0 0
+
+       2 retries remaining
+ 77.0: 196 ms in 139623 bytes
+       86 records, 39 sectors; 1.92us clock (520kHz); 
+       Failed to read sector 0 (bad checksum); 
+       Failed to read sector 1 (bad checksum); 
+       Failed to read sector 2 (present but no data found); 
+       Failed to read sector 3 (present but no data found); 
+       Failed to read sector 4 (present but no data found); 
+       Failed to read sector 5 (bad checksum); 
+       Failed to read sector 6 (bad checksum); 
+       Failed to read sector 7 (present but no data found);  Only seen some sectors, retrying...
+  Sector map : 0 0 0 0 0 0 0 0
+
+       1 retries remaining
+ 77.0: 197 ms in 139751 bytes
+       102 records, 47 sectors; 1.92us clock (520kHz); 
+       Failed to read sector 0 (bad checksum); 
+       Failed to read sector 1 (bad checksum); 
+       Failed to read sector 2 (present but no data found); 
+       Failed to read sector 3 (present but no data found); 
+       Failed to read sector 4 (present but no data found); 
+       Failed to read sector 5 (bad checksum); 
+       Failed to read sector 6 (bad checksum); 
+       Failed to read sector 7 (present but no data found);  Only seen some sectors, retrying...
+  Sector map : 0 0 0 0 0 0 0 0
+
+       giving up
+       logical track 77.0; 2048 bytes decoded.
+ 78.0: 196 ms in 153441 bytes
+       5 retries remaining
+ 78.0: 196 ms in 154009 bytes
+       4 retries remaining
+ 78.0: 196 ms in 152995 bytes
+       3 retries remaining
+ 78.0: 196 ms in 152927 bytes
+       2 retries remaining
+ 78.0: 196 ms in 152931 bytes
+       1 retries remaining
+ 78.0: 196 ms in 152162 bytes
+       giving up
+       0 bytes decoded.
+ 79.0: 196 ms in 152484 bytes
+       5 retries remaining
+ 79.0: 197 ms in 151835 bytes
+       4 retries remaining
+ 79.0: 196 ms in 151648 bytes
+       3 retries remaining
+ 79.0: 196 ms in 151007 bytes
+       2 retries remaining
+ 79.0: 196 ms in 152354 bytes
+       1 retries remaining
+ 79.0: 196 ms in 150941 bytes
+       giving up
+       0 bytes decoded.
+ 80.0:  --- >> reading track 1 again << ---
+196 ms in 150566 bytes
+       20 records, 10 sectors; 1.99us clock (502kHz); 
+       Failed to read sector 3 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 1 1 1 0 1 1 1 1
+
+       5 retries remaining
+  1.0: 196 ms in 150503 bytes
+       40 records, 20 sectors; 1.99us clock (502kHz); 
+       Failed to read sector 3 (bad checksum);  Only seen some sectors, retrying...
+  Sector map : 1 1 1 0 1 1 1 1
+
+       4 retries remaining
+  1.0: 196 ms in 150502 bytes
+       60 records, 30 sectors; 1.99us clock (502kHz); 
+       logical track 1.0; 4096 bytes decoded.
+writing visualisation
+Autodetecting output geometry
+H.SS Tracks --->
+0. 0 B...............B...................................................?B.BBBB??B
+0. 1 B.B....................................................................BBBBBBB
+0. 2 B...B................................................................?.BBBBB??
+0. 3 B...B...........................................................?...B..???X???
+0. 4 B..............B...................................................B.B.??BBB.?
+0. 5 B.............BBB...................................................??.BB?B.BB
+0. 6 ..B.B........X.......................................................?.B?BBB.B
+0. 7 B...............................................................B......BBBBB.?
+Good sectors: 565/624 (90%)
+Missing sectors: 2/624 (0%)
+Bad sectors: 57/624 (9%)
+writing 78 tracks, 1 heads, 8 sectors, 512 bytes per sector, 312 kB total
+Directory name            : 
+Object file index pointer : 1073741823 SI: 0x3 (reserved for future extension)
+User file index pointer   : 1073741823 SI: 0x3 (reserved for future extension)
+Bit file pointer          : 1073741823 SI: 0x3 (reserved for future extension)
+No. of unreserved pages   : 4294967295

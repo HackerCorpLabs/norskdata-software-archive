@@ -1,0 +1,61 @@
+id: img-5cc82ad6a9a9
+volumeName: ND
+md5: 5cc82ad6a9a9b9e79ba90b82bb49aaea
+product:
+  id: ND-211157
+  version: B03
+image:
+  sizeBytes: 1261568
+  format: raw
+  controller: floppy
+  totalPages: 616
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 374
+  files:
+    - name: LED-DEBUGGER-B03:PSEG
+      type: PSEG
+      pages: 172
+      bytes: 351588
+      userName: FLOPPY-USER
+      dateCreated: 2768941411
+      lastDateRead: 2932385748
+      lastDateWritten: 2768941412
+      dateCreatedStr: 1991-04-05 11:05:35
+      lastDateReadStr: 1993-11-04 10:31:20
+      lastDateWrittenStr: 1991-04-05 11:05:36
+      bpunValid: null
+    - name: LED-DEBUGGER-B03:DSEG
+      type: DSEG
+      pages: 199
+      bytes: 502097
+      userName: FLOPPY-USER
+      dateCreated: 2768941451
+      lastDateRead: 2932385772
+      lastDateWritten: 2768941451
+      dateCreatedStr: 1991-04-05 11:06:11
+      lastDateReadStr: 1993-11-04 10:31:44
+      lastDateWrittenStr: 1991-04-05 11:06:11
+      bpunValid: null
+provenance:
+  contributor: paal
+  originalPath: paal/led.img
+  dateImaged: 2024-09-17
+  importedAt: 2026-08-11T13:40:36.440Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-5cc82ad6a9a9
+  syncStatus: pending

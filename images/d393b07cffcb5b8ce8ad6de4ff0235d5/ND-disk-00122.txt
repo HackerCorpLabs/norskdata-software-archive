@@ -1,0 +1,1326 @@
+Script started on 2020-02-03 13:48:28+01:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="91" LINES="40"]
+root@vPro-Linux:/home/share/Fluxengine/fluxengine-master/temp# exit../ndfs -t ND-disk-121b.imgfluxengine read ibm -s :t=0-79:s=0-1 --sector-id-base=1 --retries=5 --revolutions=2 --write-svg=ND-disk-121b.svg --write-flux=ND-disk-121b.flux -o ND-disk-121b.img[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C.svg --wri[3Pte-flux=ND-disk-121.flux -o ND-disk-121.img[1P.img2.img[1P[1@2[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C.svg --writ[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C2.svg --wri[1@t[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+Reading from: :d=0:s=0-1:t=0-79
+Writing a copy of the flux to ND-disk-122.flux
+Measuring rotational speed... 166ms
+  0.0: 327 ms in 169703 bytes
+       36 records, 18 sectors; 1.65us clock (607kHz); 
+       logical track 0.0; 4608 bytes decoded.
+  0.1: 327 ms in 159719 bytes
+       36 records, 18 sectors; 1.66us clock (604kHz); 
+       logical track 0.1; 4608 bytes decoded.
+  1.0: 327 ms in 173788 bytes
+       5 retries remaining
+  1.0: 327 ms in 174110 bytes
+       4 retries remaining
+  1.0: 327 ms in 174366 bytes
+       3 retries remaining
+  1.0: 327 ms in 174236 bytes
+       2 retries remaining
+  1.0: 327 ms in 175064 bytes
+       1 retries remaining
+  1.0: 327 ms in 174494 bytes
+       giving up
+       0 bytes decoded.
+  1.1: 326 ms in 195618 bytes
+       5 retries remaining
+  1.1: 326 ms in 195622 bytes
+       4 retries remaining
+  1.1: 326 ms in 195298 bytes
+       3 retries remaining
+  1.1: 326 ms in 195300 bytes
+       2 retries remaining
+  1.1: 326 ms in 195172 bytes
+       1 retries remaining
+  1.1: 326 ms in 195684 bytes
+       giving up
+       0 bytes decoded.
+  2.0: 327 ms in 162662 bytes
+       36 records, 18 sectors; 1.65us clock (605kHz); 
+       logical track 1.0; 4608 bytes decoded.
+  2.1: 327 ms in 166823 bytes
+       36 records, 18 sectors; 1.66us clock (601kHz); 
+       logical track 1.1; 4608 bytes decoded.
+  3.0: 327 ms in 175456 bytes
+       5 retries remaining
+  3.0: 327 ms in 175139 bytes
+       4 retries remaining
+  3.0: 327 ms in 175456 bytes
+       3 retries remaining
+  3.0: 327 ms in 175455 bytes
+       2 retries remaining
+  3.0: 327 ms in 175714 bytes
+       1 retries remaining
+  3.0: 327 ms in 175460 bytes
+       giving up
+       0 bytes decoded.
+  3.1: 326 ms in 214693 bytes
+       5 retries remaining
+  3.1: 326 ms in 215074 bytes
+       4 retries remaining
+  3.1: 326 ms in 215012 bytes
+       3 retries remaining
+  3.1: 326 ms in 214627 bytes
+       2 retries remaining
+  3.1: 326 ms in 213989 bytes
+       1 retries remaining
+  3.1: 326 ms in 214497 bytes
+       giving up
+       0 bytes decoded.
+  4.0: 327 ms in 167399 bytes
+       38 records, 18 sectors; 1.64us clock (609kHz); 
+       logical track 2.0; 4608 bytes decoded.
+  4.1: 327 ms in 155559 bytes
+       36 records, 17 sectors; 1.65us clock (605kHz); 
+       logical track 2.1; 4608 bytes decoded.
+  5.0: 327 ms in 176287 bytes
+       5 retries remaining
+  5.0: 327 ms in 176285 bytes
+       4 retries remaining
+  5.0: 327 ms in 176157 bytes
+       3 retries remaining
+  5.0: 327 ms in 176738 bytes
+       2 retries remaining
+  5.0: 327 ms in 176734 bytes
+       1 retries remaining
+  5.0: 327 ms in 176732 bytes
+       giving up
+       0 bytes decoded.
+  5.1: 326 ms in 189280 bytes
+       5 retries remaining
+  5.1: 326 ms in 189536 bytes
+       4 retries remaining
+  5.1: 326 ms in 189157 bytes
+       3 retries remaining
+  5.1: 326 ms in 189093 bytes
+       2 retries remaining
+  5.1: 326 ms in 189285 bytes
+       1 retries remaining
+  5.1: 326 ms in 189283 bytes
+       giving up
+       0 bytes decoded.
+  6.0: 327 ms in 155815 bytes
+       36 records, 18 sectors; 1.65us clock (606kHz); 
+       logical track 3.0; 4608 bytes decoded.
+  6.1: 327 ms in 154919 bytes
+       36 records, 18 sectors; 1.66us clock (601kHz); 
+       logical track 3.1; 4608 bytes decoded.
+  7.0: 326 ms in 170399 bytes
+       5 retries remaining
+  7.0: 326 ms in 170619 bytes
+       4 retries remaining
+  7.0: 326 ms in 170591 bytes
+       3 retries remaining
+  7.0: 327 ms in 170526 bytes
+       2 retries remaining
+  7.0: 326 ms in 170337 bytes
+       1 retries remaining
+  7.0: 327 ms in 171038 bytes
+       giving up
+       0 bytes decoded.
+  7.1: 326 ms in 193565 bytes
+       5 retries remaining
+  7.1: 326 ms in 193120 bytes
+       4 retries remaining
+  7.1: 326 ms in 193957 bytes
+       3 retries remaining
+  7.1: 326 ms in 193700 bytes
+       2 retries remaining
+  7.1: 326 ms in 194084 bytes
+       1 retries remaining
+  7.1: 326 ms in 193888 bytes
+       giving up
+       0 bytes decoded.
+  8.0: 327 ms in 155943 bytes
+       34 records, 17 sectors; 1.65us clock (608kHz); 
+       logical track 4.0; 4608 bytes decoded.
+  8.1: 327 ms in 156133 bytes
+       36 records, 18 sectors; 1.64us clock (608kHz); 
+       logical track 4.1; 4608 bytes decoded.
+  9.0: 327 ms in 173663 bytes
+       5 retries remaining
+  9.0: 327 ms in 173980 bytes
+       4 retries remaining
+  9.0: 327 ms in 174436 bytes
+       3 retries remaining
+  9.0: 327 ms in 174242 bytes
+       2 retries remaining
+  9.0: 327 ms in 174621 bytes
+       1 retries remaining
+  9.0: 327 ms in 174428 bytes
+       giving up
+       0 bytes decoded.
+  9.1: 326 ms in 201949 bytes
+       5 retries remaining
+  9.1: 326 ms in 202081 bytes
+       4 retries remaining
+  9.1: 326 ms in 202014 bytes
+       3 retries remaining
+  9.1: 326 ms in 202169 bytes
+       2 retries remaining
+  9.1: 326 ms in 201955 bytes
+       1 retries remaining
+  9.1: 326 ms in 202277 bytes
+       giving up
+       0 bytes decoded.
+ 10.0: 327 ms in 163175 bytes
+       36 records, 18 sectors; 1.66us clock (602kHz); 
+       logical track 5.0; 4608 bytes decoded.
+ 10.1: 327 ms in 159974 bytes
+       37 records, 18 sectors; 1.65us clock (606kHz); 
+       logical track 5.1; 4608 bytes decoded.
+ 11.0: 327 ms in 178647 bytes
+       5 retries remaining
+ 11.0: 327 ms in 179228 bytes
+       4 retries remaining
+ 11.0: 327 ms in 178976 bytes
+       3 retries remaining
+ 11.0: 327 ms in 179037 bytes
+       2 retries remaining
+ 11.0: 327 ms in 179104 bytes
+       1 retries remaining
+ 11.0: 327 ms in 179102 bytes
+       giving up
+       0 bytes decoded.
+ 11.1: 326 ms in 203618 bytes
+       5 retries remaining
+ 11.1: 326 ms in 204258 bytes
+       4 retries remaining
+ 11.1: 326 ms in 204027 bytes
+       3 retries remaining
+ 11.1: 326 ms in 204257 bytes
+       2 retries remaining
+ 11.1: 326 ms in 204454 bytes
+       1 retries remaining
+ 11.1: 326 ms in 203619 bytes
+       giving up
+       0 bytes decoded.
+ 12.0: 327 ms in 157696 bytes
+       36 records, 18 sectors; 1.66us clock (604kHz); 
+       logical track 6.0; 4608 bytes decoded.
+ 12.1: 328 ms in 156519 bytes
+       36 records, 18 sectors; 1.64us clock (608kHz); 
+       logical track 6.1; 4608 bytes decoded.
+ 13.0: 326 ms in 185953 bytes
+       5 retries remaining
+ 13.0: 326 ms in 185889 bytes
+       4 retries remaining
+ 13.0: 326 ms in 186267 bytes
+       3 retries remaining
+ 13.0: 326 ms in 186400 bytes
+       2 retries remaining
+ 13.0: 326 ms in 186335 bytes
+       1 retries remaining
+ 13.0: 326 ms in 186972 bytes
+       giving up
+       0 bytes decoded.
+ 13.1: 326 ms in 191264 bytes
+       5 retries remaining
+ 13.1: 326 ms in 191334 bytes
+       4 retries remaining
+ 13.1: 326 ms in 191523 bytes
+       3 retries remaining
+ 13.1: 326 ms in 191395 bytes
+       2 retries remaining
+ 13.1: 326 ms in 191140 bytes
+       1 retries remaining
+ 13.1: 326 ms in 191140 bytes
+       giving up
+       0 bytes decoded.
+ 14.0: 327 ms in 170919 bytes
+       36 records, 18 sectors; 1.67us clock (600kHz); 
+       logical track 7.0; 4608 bytes decoded.
+ 14.1: 327 ms in 159716 bytes
+       36 records, 18 sectors; 1.65us clock (605kHz); 
+       logical track 7.1; 4608 bytes decoded.
+ 15.0: 326 ms in 189468 bytes
+       5 retries remaining
+ 15.0: 326 ms in 189984 bytes
+       4 retries remaining
+ 15.0: 326 ms in 189348 bytes
+       3 retries remaining
+ 15.0: 326 ms in 189534 bytes
+       2 retries remaining
+ 15.0: 326 ms in 189789 bytes
+       1 retries remaining
+ 15.0: 326 ms in 189408 bytes
+       giving up
+       0 bytes decoded.
+ 15.1: 326 ms in 199460 bytes
+       5 retries remaining
+ 15.1: 326 ms in 198949 bytes
+       4 retries remaining
+ 15.1: 326 ms in 198910 bytes
+       3 retries remaining
+ 15.1: 326 ms in 198947 bytes
+       2 retries remaining
+ 15.1: 326 ms in 198948 bytes
+       1 retries remaining
+ 15.1: 326 ms in 199264 bytes
+       giving up
+       0 bytes decoded.
+ 16.0: 327 ms in 161831 bytes
+       36 records, 18 sectors; 1.65us clock (607kHz); 
+       logical track 8.0; 4608 bytes decoded.
+ 16.1: 327 ms in 161319 bytes
+       36 records, 18 sectors; 1.66us clock (601kHz); 
+       logical track 8.1; 4608 bytes decoded.
+ 17.0: 327 ms in 185696 bytes
+       5 retries remaining
+ 17.0: 327 ms in 186080 bytes
+       4 retries remaining
+ 17.0: 327 ms in 185950 bytes
+       3 retries remaining
+ 17.0: 327 ms in 185889 bytes
+       2 retries remaining
+ 17.0: 327 ms in 185956 bytes
+       1 retries remaining
+ 17.0: 327 ms in 185567 bytes
+       giving up
+       0 bytes decoded.
+ 17.1: 326 ms in 196961 bytes
+       5 retries remaining
+ 17.1: 326 ms in 196896 bytes
+       4 retries remaining
+ 17.1: 326 ms in 197283 bytes
+       3 retries remaining
+ 17.1: 327 ms in 197220 bytes
+       2 retries remaining
+ 17.1: 327 ms in 197412 bytes
+       1 retries remaining
+ 17.1: 326 ms in 196766 bytes
+       giving up
+       0 bytes decoded.
+ 18.0: 328 ms in 161575 bytes
+       35 records, 17 sectors; 1.65us clock (606kHz); 
+       logical track 9.0; 4608 bytes decoded.
+ 18.1: 327 ms in 155431 bytes
+       36 records, 18 sectors; 1.65us clock (605kHz); 
+       logical track 9.1; 4608 bytes decoded.
+ 19.0: 326 ms in 184030 bytes
+       5 retries remaining
+ 19.0: 326 ms in 184285 bytes
+       4 retries remaining
+ 19.0: 326 ms in 184863 bytes
+       3 retries remaining
+ 19.0: 326 ms in 184282 bytes
+       2 retries remaining
+ 19.0: 326 ms in 184803 bytes
+       1 retries remaining
+ 19.0: 326 ms in 184159 bytes
+       giving up
+       0 bytes decoded.
+ 19.1: 326 ms in 198624 bytes
+       5 retries remaining
+ 19.1: 326 ms in 198944 bytes
+       4 retries remaining
+ 19.1: 326 ms in 198816 bytes
+       3 retries remaining
+ 19.1: 326 ms in 199010 bytes
+       2 retries remaining
+ 19.1: 326 ms in 198884 bytes
+       1 retries remaining
+ 19.1: 326 ms in 198690 bytes
+       giving up
+       0 bytes decoded.
+ 20.0: 327 ms in 154918 bytes
+       36 records, 18 sectors; 1.65us clock (605kHz); 
+       logical track 10.0; 4608 bytes decoded.
+ 20.1: 327 ms in 154407 bytes
+       36 records, 18 sectors; 1.66us clock (603kHz); 
+       logical track 10.1; 4608 bytes decoded.
+ 21.0: 326 ms in 193180 bytes
+       5 retries remaining
+ 21.0: 326 ms in 193243 bytes
+       4 retries remaining
+ 21.0: 326 ms in 193057 bytes
+       3 retries remaining
+ 21.0: 326 ms in 194075 bytes
+       2 retries remaining
+ 21.0: 326 ms in 192927 bytes
+       1 retries remaining
+ 21.0: 326 ms in 193183 bytes
+       giving up
+       0 bytes decoded.
+ 21.1: 326 ms in 189858 bytes
+       5 retries remaining
+ 21.1: 326 ms in 189787 bytes
+       4 retries remaining
+ 21.1: 326 ms in 189732 bytes
+       3 retries remaining
+ 21.1: 326 ms in 190115 bytes
+       2 retries remaining
+ 21.1: 326 ms in 189349 bytes
+       1 retries remaining
+ 21.1: 326 ms in 189884 bytes
+       giving up
+       0 bytes decoded.
+ 22.0: 327 ms in 184998 bytes
+       36 records, 18 sectors; 1.64us clock (609kHz); 
+       logical track 11.0; 4608 bytes decoded.
+ 22.1: 327 ms in 157863 bytes
+       36 records, 18 sectors; 1.64us clock (608kHz); 
+       logical track 11.1; 4608 bytes decoded.
+ 23.0: 326 ms in 200350 bytes
+       5 retries remaining
+ 23.0: 326 ms in 200732 bytes
+       4 retries remaining
+ 23.0: 326 ms in 200476 bytes
+       3 retries remaining
+ 23.0: 326 ms in 200794 bytes
+       2 retries remaining
+ 23.0: 326 ms in 200598 bytes
+       1 retries remaining
+ 23.0: 326 ms in 200411 bytes
+       giving up
+       0 bytes decoded.
+ 23.1: 327 ms in 196635 bytes
+       5 retries remaining
+ 23.1: 327 ms in 196774 bytes
+       4 retries remaining
+ 23.1: 326 ms in 195809 bytes
+       3 retries remaining
+ 23.1: 326 ms in 196316 bytes
+       2 retries remaining
+ 23.1: 326 ms in 195870 bytes
+       1 retries remaining
+ 23.1: 326 ms in 196004 bytes
+       giving up
+       0 bytes decoded.
+ 24.0: 327 ms in 156007 bytes
+       37 records, 18 sectors; 1.66us clock (603kHz); 
+       logical track 12.0; 4608 bytes decoded.
+ 24.1: 327 ms in 156519 bytes
+       36 records, 18 sectors; 1.66us clock (604kHz); 
+       logical track 12.1; 4608 bytes decoded.
+ 25.0: 326 ms in 189082 bytes
+       5 retries remaining
+ 25.0: 326 ms in 189086 bytes
+       4 retries remaining
+ 25.0: 326 ms in 189150 bytes
+       3 retries remaining
+ 25.0: 326 ms in 189022 bytes
+       2 retries remaining
+ 25.0: 326 ms in 188895 bytes
+       1 retries remaining
+ 25.0: 326 ms in 188573 bytes
+       giving up
+       0 bytes decoded.
+ 25.1: 326 ms in 191906 bytes
+       5 retries remaining
+ 25.1: 326 ms in 191585 bytes
+       4 retries remaining
+ 25.1: 326 ms in 191902 bytes
+       3 retries remaining
+ 25.1: 326 ms in 191268 bytes
+       2 retries remaining
+ 25.1: 326 ms in 192037 bytes
+       1 retries remaining
+ 25.1: 326 ms in 191710 bytes
+       giving up
+       0 bytes decoded.
+ 26.0: 327 ms in 160679 bytes
+       36 records, 18 sectors; 1.65us clock (607kHz); 
+       logical track 13.0; 4608 bytes decoded.
+ 26.1: 327 ms in 157415 bytes
+       36 records, 18 sectors; 1.67us clock (600kHz); 
+       logical track 13.1; 4608 bytes decoded.
+ 27.0: 326 ms in 187102 bytes
+       5 retries remaining
+ 27.0: 326 ms in 186909 bytes
+       4 retries remaining
+ 27.0: 326 ms in 187424 bytes
+       3 retries remaining
+ 27.0: 326 ms in 187105 bytes
+       2 retries remaining
+ 27.0: 326 ms in 187099 bytes
+       1 retries remaining
+ 27.0: 326 ms in 187480 bytes
+       giving up
+       0 bytes decoded.
+ 27.1: 326 ms in 199648 bytes
+       5 retries remaining
+ 27.1: 326 ms in 199462 bytes
+       4 retries remaining
+ 27.1: 326 ms in 199649 bytes
+       3 retries remaining
+ 27.1: 326 ms in 199330 bytes
+       2 retries remaining
+ 27.1: 326 ms in 199708 bytes
+       1 retries remaining
+ 27.1: 326 ms in 199329 bytes
+       giving up
+       0 bytes decoded.
+ 28.0: 327 ms in 159591 bytes
+       34 records, 17 sectors; 1.66us clock (601kHz); 
+       logical track 14.0; 4608 bytes decoded.
+ 28.1: 327 ms in 166055 bytes
+       37 records, 18 sectors; 1.66us clock (601kHz); 
+       logical track 14.1; 4608 bytes decoded.
+ 29.0: 326 ms in 202140 bytes
+       5 retries remaining
+ 29.0: 326 ms in 202390 bytes
+       4 retries remaining
+ 29.0: 326 ms in 202395 bytes
+       3 retries remaining
+ 29.0: 326 ms in 202013 bytes
+       2 retries remaining
+ 29.0: 326 ms in 202077 bytes
+       1 retries remaining
+ 29.0: 326 ms in 202009 bytes
+       giving up
+       0 bytes decoded.
+ 29.1: 326 ms in 194405 bytes
+       5 retries remaining
+ 29.1: 326 ms in 194915 bytes
+       4 retries remaining
+ 29.1: 327 ms in 194529 bytes
+       3 retries remaining
+ 29.1: 327 ms in 195041 bytes
+       2 retries remaining
+ 29.1: 327 ms in 194915 bytes
+       1 retries remaining
+ 29.1: 327 ms in 194847 bytes
+       giving up
+       0 bytes decoded.
+ 30.0: 327 ms in 174631 bytes
+       36 records, 18 sectors; 1.64us clock (608kHz); 
+       logical track 15.0; 4608 bytes decoded.
+ 30.1: 326 ms in 173415 bytes
+       36 records, 18 sectors; 1.64us clock (608kHz); 
+       logical track 15.1; 4608 bytes decoded.
+ 31.0: 325 ms in 202913 bytes
+       5 retries remaining
+ 31.0: 325 ms in 202649 bytes
+       4 retries remaining
+ 31.0: 326 ms in 201633 bytes
+       3 retries remaining
+ 31.0: 326 ms in 202269 bytes
+       2 retries remaining
+ 31.0: 326 ms in 202142 bytes
+       1 retries remaining
+ 31.0: 326 ms in 202267 bytes
+       giving up
+       0 bytes decoded.
+ 31.1: 326 ms in 194149 bytes
+       5 retries remaining
+ 31.1: 326 ms in 193885 bytes
+       4 retries remaining
+ 31.1: 326 ms in 194209 bytes
+       3 retries remaining
+ 31.1: 326 ms in 194462 bytes
+       2 retries remaining
+ 31.1: 326 ms in 194587 bytes
+       1 retries remaining
+ 31.1: 326 ms in 194980 bytes
+       giving up
+       0 bytes decoded.
+ 32.0: 327 ms in 163047 bytes
+       36 records, 18 sectors; 1.66us clock (603kHz); 
+       logical track 16.0; 4608 bytes decoded.
+ 32.1: 327 ms in 156967 bytes
+       38 records, 18 sectors; 1.65us clock (605kHz); 
+       logical track 16.1; 4608 bytes decoded.
+ 33.0: 326 ms in 200314 bytes
+       5 retries remaining
+ 33.0: 326 ms in 200475 bytes
+       4 retries remaining
+ 33.0: 326 ms in 200608 bytes
+       3 retries remaining
+ 33.0: 326 ms in 200799 bytes
+       2 retries remaining
+ 33.0: 326 ms in 200476 bytes
+       1 retries remaining
+ 33.0: 326 ms in 200285 bytes
+       giving up
+       0 bytes decoded.
+ 33.1: 326 ms in 191460 bytes
+       5 retries remaining
+ 33.1: 326 ms in 190946 bytes
+       4 retries remaining
+ 33.1: 326 ms in 191202 bytes
+       3 retries remaining
+ 33.1: 326 ms in 190755 bytes
+       2 retries remaining
+ 33.1: 326 ms in 190880 bytes
+       1 retries remaining
+ 33.1: 326 ms in 191398 bytes
+       giving up
+       0 bytes decoded.
+ 34.0: 327 ms in 171559 bytes
+       36 records, 18 sectors; 1.64us clock (610kHz); 
+       logical track 17.0; 4608 bytes decoded.
+ 34.1: 327 ms in 171878 bytes
+       34 records, 17 sectors; 1.66us clock (604kHz); 
+       logical track 17.1; 4608 bytes decoded.
+ 35.0: 326 ms in 206875 bytes
+       5 retries remaining
+ 35.0: 326 ms in 206817 bytes
+       4 retries remaining
+ 35.0: 326 ms in 206945 bytes
+       3 retries remaining
+ 35.0: 326 ms in 206813 bytes
+       2 retries remaining
+ 35.0: 326 ms in 207132 bytes
+       1 retries remaining
+ 35.0: 326 ms in 207135 bytes
+       giving up
+       0 bytes decoded.
+ 35.1: 326 ms in 193506 bytes
+       5 retries remaining
+ 35.1: 326 ms in 193700 bytes
+       4 retries remaining
+ 35.1: 326 ms in 193505 bytes
+       3 retries remaining
+ 35.1: 326 ms in 193444 bytes
+       2 retries remaining
+ 35.1: 326 ms in 193567 bytes
+       1 retries remaining
+ 35.1: 326 ms in 193439 bytes
+       giving up
+       0 bytes decoded.
+ 36.0: 327 ms in 164583 bytes
+       36 records, 18 sectors; 1.66us clock (604kHz); 
+       logical track 18.0; 4608 bytes decoded.
+ 36.1: 327 ms in 160935 bytes
+       40 records, 18 sectors; 1.67us clock (600kHz); 
+       logical track 18.1; 4608 bytes decoded.
+ 37.0: 326 ms in 201372 bytes
+       5 retries remaining
+ 37.0: 326 ms in 201627 bytes
+       4 retries remaining
+ 37.0: 326 ms in 201168 bytes
+       3 retries remaining
+ 37.0: 326 ms in 201046 bytes
+       2 retries remaining
+ 37.0: 326 ms in 201692 bytes
+       1 retries remaining
+ 37.0: 326 ms in 201685 bytes
+       giving up
+       0 bytes decoded.
+ 37.1: 327 ms in 186016 bytes
+       5 retries remaining
+ 37.1: 327 ms in 186595 bytes
+       4 retries remaining
+ 37.1: 327 ms in 187105 bytes
+       3 retries remaining
+ 37.1: 327 ms in 186525 bytes
+       2 retries remaining
+ 37.1: 327 ms in 186978 bytes
+       1 retries remaining
+ 37.1: 327 ms in 186981 bytes
+       giving up
+       0 bytes decoded.
+ 38.0: 328 ms in 157671 bytes
+       34 records, 17 sectors; 1.65us clock (607kHz); 
+       logical track 19.0; 4608 bytes decoded.
+ 38.1: 328 ms in 156519 bytes
+       36 records, 18 sectors; 1.65us clock (605kHz); 
+       logical track 19.1; 4608 bytes decoded.
+ 39.0: 327 ms in 196958 bytes
+       5 retries remaining
+ 39.0: 327 ms in 196700 bytes
+       4 retries remaining
+ 39.0: 327 ms in 196951 bytes
+       3 retries remaining
+ 39.0: 326 ms in 196760 bytes
+       2 retries remaining
+ 39.0: 327 ms in 197137 bytes
+       1 retries remaining
+ 39.0: 327 ms in 197206 bytes
+       giving up
+       0 bytes decoded.
+ 39.1: 327 ms in 187233 bytes
+       5 retries remaining
+ 39.1: 327 ms in 187046 bytes
+       4 retries remaining
+ 39.1: 327 ms in 187170 bytes
+       3 retries remaining
+ 39.1: 327 ms in 186788 bytes
+       2 retries remaining
+ 39.1: 326 ms in 186657 bytes
+       1 retries remaining
+ 39.1: 326 ms in 186593 bytes
+       giving up
+       0 bytes decoded.
+ 40.0: 327 ms in 164647 bytes
+       36 records, 18 sectors; 1.64us clock (609kHz); 
+       logical track 20.0; 4608 bytes decoded.
+ 40.1: 327 ms in 157159 bytes
+       37 records, 17 sectors; 1.65us clock (607kHz); 
+       logical track 20.1; 4608 bytes decoded.
+ 41.0: 326 ms in 199569 bytes
+       5 retries remaining
+ 41.0: 326 ms in 199704 bytes
+       4 retries remaining
+ 41.0: 326 ms in 199455 bytes
+       3 retries remaining
+ 41.0: 326 ms in 199701 bytes
+       2 retries remaining
+ 41.0: 326 ms in 199510 bytes
+       1 retries remaining
+ 41.0: 326 ms in 199004 bytes
+       giving up
+       0 bytes decoded.
+ 41.1: 326 ms in 187998 bytes
+       5 retries remaining
+ 41.1: 326 ms in 187806 bytes
+       4 retries remaining
+ 41.1: 326 ms in 188258 bytes
+       3 retries remaining
+ 41.1: 326 ms in 188515 bytes
+       2 retries remaining
+ 41.1: 326 ms in 187808 bytes
+       1 retries remaining
+ 41.1: 326 ms in 187680 bytes
+       giving up
+       0 bytes decoded.
+ 42.0: 327 ms in 158247 bytes
+       36 records, 18 sectors; 1.66us clock (603kHz); 
+       logical track 21.0; 4608 bytes decoded.
+ 42.1: 327 ms in 157927 bytes
+       36 records, 17 sectors; 1.66us clock (601kHz); 
+       logical track 21.1; 4608 bytes decoded.
+ 43.0: 326 ms in 198234 bytes
+       5 retries remaining
+ 43.0: 326 ms in 198548 bytes
+       4 retries remaining
+ 43.0: 326 ms in 198170 bytes
+       3 retries remaining
+ 43.0: 326 ms in 198677 bytes
+       2 retries remaining
+ 43.0: 326 ms in 198614 bytes
+       1 retries remaining
+ 43.0: 326 ms in 198227 bytes
+       giving up
+       0 bytes decoded.
+ 43.1: 326 ms in 187298 bytes
+       5 retries remaining
+ 43.1: 326 ms in 188196 bytes
+       4 retries remaining
+ 43.1: 326 ms in 187170 bytes
+       3 retries remaining
+ 43.1: 327 ms in 187616 bytes
+       2 retries remaining
+ 43.1: 326 ms in 185952 bytes
+       1 retries remaining
+ 43.1: 326 ms in 186522 bytes
+       giving up
+       0 bytes decoded.
+ 44.0: 327 ms in 158244 bytes
+       36 records, 18 sectors; 1.66us clock (604kHz); 
+       logical track 22.0; 4608 bytes decoded.
+ 44.1: 327 ms in 157415 bytes
+       36 records, 18 sectors; 1.66us clock (603kHz); 
+       logical track 22.1; 4608 bytes decoded.
+ 45.0: 326 ms in 213845 bytes
+       5 retries remaining
+ 45.0: 326 ms in 213851 bytes
+       4 retries remaining
+ 45.0: 326 ms in 213205 bytes
+       3 retries remaining
+ 45.0: 326 ms in 213402 bytes
+       2 retries remaining
+ 45.0: 326 ms in 213333 bytes
+       1 retries remaining
+ 45.0: 326 ms in 213210 bytes
+       giving up
+       0 bytes decoded.
+ 45.1: 326 ms in 191140 bytes
+       5 retries remaining
+ 45.1: 326 ms in 190689 bytes
+       4 retries remaining
+ 45.1: 326 ms in 191136 bytes
+       3 retries remaining
+ 45.1: 326 ms in 190755 bytes
+       2 retries remaining
+ 45.1: 326 ms in 191263 bytes
+       1 retries remaining
+ 45.1: 326 ms in 190562 bytes
+       giving up
+       0 bytes decoded.
+ 46.0: 327 ms in 159207 bytes
+       36 records, 18 sectors; 1.65us clock (605kHz); 
+       logical track 23.0; 4608 bytes decoded.
+ 46.1: 327 ms in 156519 bytes
+       37 records, 18 sectors; 1.66us clock (602kHz); 
+       logical track 23.1; 4608 bytes decoded.
+ 47.0: 326 ms in 212695 bytes
+       5 retries remaining
+ 47.0: 326 ms in 211606 bytes
+       4 retries remaining
+ 47.0: 326 ms in 212444 bytes
+       3 retries remaining
+ 47.0: 325 ms in 212174 bytes
+       2 retries remaining
+ 47.0: 325 ms in 212119 bytes
+       1 retries remaining
+ 47.0: 325 ms in 212372 bytes
+       giving up
+       0 bytes decoded.
+ 47.1: 326 ms in 190046 bytes
+       5 retries remaining
+ 47.1: 326 ms in 189986 bytes
+       4 retries remaining
+ 47.1: 326 ms in 189796 bytes
+       3 retries remaining
+ 47.1: 326 ms in 190050 bytes
+       2 retries remaining
+ 47.1: 326 ms in 189792 bytes
+       1 retries remaining
+ 47.1: 326 ms in 189920 bytes
+       giving up
+       0 bytes decoded.
+ 48.0: 327 ms in 164263 bytes
+       36 records, 18 sectors; 1.66us clock (602kHz); 
+       logical track 24.0; 4608 bytes decoded.
+ 48.1: 327 ms in 158182 bytes
+       37 records, 17 sectors; 1.66us clock (604kHz); 
+       logical track 24.1; 4608 bytes decoded.
+ 49.0: 325 ms in 215637 bytes
+       5 retries remaining
+ 49.0: 325 ms in 214748 bytes
+       4 retries remaining
+ 49.0: 325 ms in 214234 bytes
+       3 retries remaining
+ 49.0: 325 ms in 214745 bytes
+       2 retries remaining
+ 49.0: 325 ms in 214686 bytes
+       1 retries remaining
+ 49.0: 326 ms in 214423 bytes
+       giving up
+       0 bytes decoded.
+ 49.1: 326 ms in 190879 bytes
+       5 retries remaining
+ 49.1: 326 ms in 191005 bytes
+       4 retries remaining
+ 49.1: 326 ms in 190816 bytes
+       3 retries remaining
+ 49.1: 326 ms in 190885 bytes
+       2 retries remaining
+ 49.1: 326 ms in 190302 bytes
+       1 retries remaining
+ 49.1: 326 ms in 191330 bytes
+       giving up
+       0 bytes decoded.
+ 50.0: 327 ms in 164647 bytes
+       36 records, 18 sectors; 1.65us clock (608kHz); 
+       logical track 25.0; 4608 bytes decoded.
+ 50.1: 327 ms in 161063 bytes
+       36 records, 18 sectors; 1.64us clock (608kHz); 
+       logical track 25.1; 4608 bytes decoded.
+ 51.0: 326 ms in 216728 bytes
+       5 retries remaining
+ 51.0: 325 ms in 216030 bytes
+       4 retries remaining
+ 51.0: 325 ms in 216472 bytes
+       3 retries remaining
+ 51.0: 325 ms in 216222 bytes
+       2 retries remaining
+ 51.0: 325 ms in 216215 bytes
+       1 retries remaining
+ 51.0: 325 ms in 216670 bytes
+       giving up
+       0 bytes decoded.
+ 51.1: 326 ms in 191394 bytes
+       5 retries remaining
+ 51.1: 326 ms in 191328 bytes
+       4 retries remaining
+ 51.1: 326 ms in 191393 bytes
+       3 retries remaining
+ 51.1: 326 ms in 191260 bytes
+       2 retries remaining
+ 51.1: 326 ms in 191715 bytes
+       1 retries remaining
+ 51.1: 326 ms in 192097 bytes
+       giving up
+       0 bytes decoded.
+ 52.0: 326 ms in 177959 bytes
+       36 records, 18 sectors; 1.67us clock (600kHz); 
+       logical track 26.0; 4608 bytes decoded.
+ 52.1: 327 ms in 167204 bytes
+       36 records, 18 sectors; 1.66us clock (603kHz); 
+       logical track 26.1; 4608 bytes decoded.
+ 53.0: 325 ms in 213532 bytes
+       5 retries remaining
+ 53.0: 325 ms in 213664 bytes
+       4 retries remaining
+ 53.0: 325 ms in 212888 bytes
+       3 retries remaining
+ 53.0: 325 ms in 213402 bytes
+       2 retries remaining
+ 53.0: 325 ms in 214040 bytes
+       1 retries remaining
+ 53.0: 325 ms in 214425 bytes
+       giving up
+       0 bytes decoded.
+ 53.1: 326 ms in 195489 bytes
+       5 retries remaining
+ 53.1: 326 ms in 195806 bytes
+       4 retries remaining
+ 53.1: 326 ms in 195357 bytes
+       3 retries remaining
+ 53.1: 326 ms in 195745 bytes
+       2 retries remaining
+ 53.1: 326 ms in 195428 bytes
+       1 retries remaining
+ 53.1: 326 ms in 195359 bytes
+       giving up
+       0 bytes decoded.
+ 54.0: 327 ms in 156134 bytes
+       36 records, 18 sectors; 1.64us clock (608kHz); 
+       logical track 27.0; 4608 bytes decoded.
+ 54.1: 327 ms in 157093 bytes
+       37 records, 18 sectors; 1.65us clock (608kHz); 
+       logical track 27.1; 4608 bytes decoded.
+ 55.0: 326 ms in 214292 bytes
+       5 retries remaining
+ 55.0: 325 ms in 214610 bytes
+       4 retries remaining
+ 55.0: 325 ms in 214745 bytes
+       3 retries remaining
+ 55.0: 325 ms in 213650 bytes
+       2 retries remaining
+ 55.0: 325 ms in 214357 bytes
+       1 retries remaining
+ 55.0: 325 ms in 214928 bytes
+       giving up
+       0 bytes decoded.
+ 55.1: 327 ms in 192869 bytes
+       5 retries remaining
+ 55.1: 326 ms in 192923 bytes
+       4 retries remaining
+ 55.1: 326 ms in 193313 bytes
+       3 retries remaining
+ 55.1: 327 ms in 192739 bytes
+       2 retries remaining
+ 55.1: 326 ms in 193183 bytes
+       1 retries remaining
+ 55.1: 326 ms in 192866 bytes
+       giving up
+       0 bytes decoded.
+ 56.0: 327 ms in 158439 bytes
+       36 records, 18 sectors; 1.66us clock (603kHz); 
+       logical track 28.0; 4608 bytes decoded.
+ 56.1: 327 ms in 165351 bytes
+       36 records, 18 sectors; 1.66us clock (604kHz); 
+       logical track 28.1; 4608 bytes decoded.
+ 57.0: 326 ms in 214746 bytes
+       5 retries remaining
+ 57.0: 326 ms in 214810 bytes
+       4 retries remaining
+ 57.0: 326 ms in 215056 bytes
+       3 retries remaining
+ 57.0: 326 ms in 214679 bytes
+       2 retries remaining
+ 57.0: 326 ms in 214866 bytes
+       1 retries remaining
+ 57.0: 326 ms in 215196 bytes
+       giving up
+       0 bytes decoded.
+ 57.1: 327 ms in 194523 bytes
+       5 retries remaining
+ 57.1: 327 ms in 194080 bytes
+       4 retries remaining
+ 57.1: 327 ms in 194589 bytes
+       3 retries remaining
+ 57.1: 327 ms in 194721 bytes
+       2 retries remaining
+ 57.1: 327 ms in 195037 bytes
+       1 retries remaining
+ 57.1: 326 ms in 194872 bytes
+       giving up
+       0 bytes decoded.
+ 58.0: 328 ms in 156672 bytes
+       36 records, 18 sectors; 1.65us clock (605kHz); 
+       logical track 29.0; 4608 bytes decoded.
+ 58.1: 327 ms in 156903 bytes
+       37 records, 18 sectors; 1.65us clock (608kHz); 
+       logical track 29.1; 4608 bytes decoded.
+ 59.0: 325 ms in 210715 bytes
+       5 retries remaining
+ 59.0: 325 ms in 211414 bytes
+       4 retries remaining
+ 59.0: 325 ms in 211229 bytes
+       3 retries remaining
+ 59.0: 325 ms in 211484 bytes
+       2 retries remaining
+ 59.0: 325 ms in 211105 bytes
+       1 retries remaining
+ 59.0: 325 ms in 211802 bytes
+       giving up
+       0 bytes decoded.
+ 59.1: 326 ms in 193253 bytes
+       5 retries remaining
+ 59.1: 326 ms in 193892 bytes
+       4 retries remaining
+ 59.1: 326 ms in 193757 bytes
+       3 retries remaining
+ 59.1: 326 ms in 193568 bytes
+       2 retries remaining
+ 59.1: 326 ms in 192797 bytes
+       1 retries remaining
+ 59.1: 326 ms in 193758 bytes
+       giving up
+       0 bytes decoded.
+ 60.0: 327 ms in 160295 bytes
+       37 records, 18 sectors; 1.66us clock (601kHz); 
+       logical track 30.0; 4608 bytes decoded.
+ 60.1: 327 ms in 164839 bytes
+       36 records, 18 sectors; 1.68us clock (596kHz); 
+       logical track 30.1; 4608 bytes decoded.
+ 61.0: 325 ms in 211545 bytes
+       5 retries remaining
+ 61.0: 325 ms in 212380 bytes
+       4 retries remaining
+ 61.0: 325 ms in 210964 bytes
+       3 retries remaining
+ 61.0: 325 ms in 211676 bytes
+       2 retries remaining
+ 61.0: 325 ms in 212377 bytes
+       1 retries remaining
+ 61.0: 326 ms in 211612 bytes
+       giving up
+       0 bytes decoded.
+ 61.1: 326 ms in 200160 bytes
+       5 retries remaining
+ 61.1: 326 ms in 201313 bytes
+       4 retries remaining
+ 61.1: 326 ms in 200353 bytes
+       3 retries remaining
+ 61.1: 326 ms in 201248 bytes
+       2 retries remaining
+ 61.1: 326 ms in 200673 bytes
+       1 retries remaining
+ 61.1: 326 ms in 200473 bytes
+       giving up
+       0 bytes decoded.
+ 62.0: 327 ms in 162215 bytes
+       36 records, 18 sectors; 1.66us clock (604kHz); 
+       logical track 31.0; 4608 bytes decoded.
+ 62.1: 327 ms in 165159 bytes
+       36 records, 18 sectors; 1.65us clock (607kHz); 
+       logical track 31.1; 4608 bytes decoded.
+ 63.0: 326 ms in 211613 bytes
+       5 retries remaining
+ 63.0: 326 ms in 212575 bytes
+       4 retries remaining
+ 63.0: 326 ms in 211737 bytes
+       3 retries remaining
+ 63.0: 326 ms in 212316 bytes
+       2 retries remaining
+ 63.0: 326 ms in 211798 bytes
+       1 retries remaining
+ 63.0: 326 ms in 211986 bytes
+       giving up
+       0 bytes decoded.
+ 63.1: 326 ms in 200480 bytes
+       5 retries remaining
+ 63.1: 326 ms in 200931 bytes
+       4 retries remaining
+ 63.1: 326 ms in 200800 bytes
+       3 retries remaining
+ 63.1: 326 ms in 201183 bytes
+       2 retries remaining
+ 63.1: 326 ms in 201955 bytes
+       1 retries remaining
+ 63.1: 326 ms in 200987 bytes
+       giving up
+       0 bytes decoded.
+ 64.0: 328 ms in 157607 bytes
+       34 records, 17 sectors; 1.68us clock (596kHz); 
+       logical track 32.0; 4608 bytes decoded.
+ 64.1: 327 ms in 157695 bytes
+       36 records, 18 sectors; 1.67us clock (598kHz); 
+       logical track 32.1; 4608 bytes decoded.
+ 65.0: 326 ms in 209623 bytes
+       5 retries remaining
+ 65.0: 326 ms in 210587 bytes
+       4 retries remaining
+ 65.0: 326 ms in 210203 bytes
+       3 retries remaining
+ 65.0: 326 ms in 210391 bytes
+       2 retries remaining
+ 65.0: 326 ms in 210906 bytes
+       1 retries remaining
+ 65.0: 325 ms in 210335 bytes
+       giving up
+       0 bytes decoded.
+ 65.1: 325 ms in 199904 bytes
+       5 retries remaining
+ 65.1: 326 ms in 200538 bytes
+       4 retries remaining
+ 65.1: 326 ms in 200668 bytes
+       3 retries remaining
+ 65.1: 327 ms in 200673 bytes
+       2 retries remaining
+ 65.1: 326 ms in 199781 bytes
+       1 retries remaining
+ 65.1: 326 ms in 200606 bytes
+       giving up
+       0 bytes decoded.
+ 66.0: 327 ms in 157184 bytes
+       39 records, 18 sectors; 1.65us clock (606kHz); 
+       logical track 33.0; 4608 bytes decoded.
+ 66.1: 328 ms in 156519 bytes
+       39 records, 18 sectors; 1.66us clock (604kHz); 
+       logical track 33.1; 4608 bytes decoded.
+ 67.0: 326 ms in 207130 bytes
+       5 retries remaining
+ 67.0: 326 ms in 207453 bytes
+       4 retries remaining
+ 67.0: 326 ms in 207329 bytes
+       3 retries remaining
+ 67.0: 326 ms in 206941 bytes
+       2 retries remaining
+ 67.0: 326 ms in 206745 bytes
+       1 retries remaining
+ 67.0: 326 ms in 206936 bytes
+       giving up
+       0 bytes decoded.
+ 67.1: 326 ms in 197856 bytes
+       5 retries remaining
+ 67.1: 326 ms in 198561 bytes
+       4 retries remaining
+ 67.1: 326 ms in 198110 bytes
+       3 retries remaining
+ 67.1: 326 ms in 198497 bytes
+       2 retries remaining
+ 67.1: 326 ms in 198371 bytes
+       1 retries remaining
+ 67.1: 326 ms in 198556 bytes
+       giving up
+       0 bytes decoded.
+ 68.0: 327 ms in 156071 bytes
+       37 records, 18 sectors; 1.67us clock (598kHz); 
+       logical track 34.0; 4608 bytes decoded.
+ 68.1: 327 ms in 155175 bytes
+       37 records, 18 sectors; 1.65us clock (606kHz); 
+       logical track 34.1; 4608 bytes decoded.
+ 69.0: 326 ms in 203359 bytes
+       5 retries remaining
+ 69.0: 326 ms in 203224 bytes
+       4 retries remaining
+ 69.0: 326 ms in 203351 bytes
+       3 retries remaining
+ 69.0: 326 ms in 202205 bytes
+       2 retries remaining
+ 69.0: 326 ms in 203164 bytes
+       1 retries remaining
+ 69.0: 326 ms in 203612 bytes
+       giving up
+       0 bytes decoded.
+ 69.1: 325 ms in 206365 bytes
+       5 retries remaining
+ 69.1: 325 ms in 206494 bytes
+       4 retries remaining
+ 69.1: 325 ms in 206115 bytes
+       3 retries remaining
+ 69.1: 325 ms in 206175 bytes
+       2 retries remaining
+ 69.1: 326 ms in 206617 bytes
+       1 retries remaining
+ 69.1: 326 ms in 207514 bytes
+       giving up
+       0 bytes decoded.
+ 70.0: 327 ms in 158375 bytes
+       36 records, 18 sectors; 1.65us clock (606kHz); 
+       logical track 35.0; 4608 bytes decoded.
+ 70.1: 327 ms in 154599 bytes
+       36 records, 18 sectors; 1.65us clock (606kHz); 
+       logical track 35.1; 4608 bytes decoded.
+ 71.0: 325 ms in 205918 bytes
+       5 retries remaining
+ 71.0: 325 ms in 205340 bytes
+       4 retries remaining
+ 71.0: 326 ms in 206176 bytes
+       3 retries remaining
+ 71.0: 326 ms in 205917 bytes
+       2 retries remaining
+ 71.0: 326 ms in 206939 bytes
+       1 retries remaining
+ 71.0: 326 ms in 205975 bytes
+       giving up
+       0 bytes decoded.
+ 71.1: 326 ms in 203424 bytes
+       5 retries remaining
+ 71.1: 326 ms in 203045 bytes
+       4 retries remaining
+ 71.1: 326 ms in 203553 bytes
+       3 retries remaining
+ 71.1: 326 ms in 203099 bytes
+       2 retries remaining
+ 71.1: 326 ms in 203231 bytes
+       1 retries remaining
+ 71.1: 326 ms in 203359 bytes
+       giving up
+       0 bytes decoded.
+ 72.0: 327 ms in 150758 bytes
+       34 records, 17 sectors; 1.65us clock (606kHz); 
+       logical track 36.0; 4608 bytes decoded.
+ 72.1: 327 ms in 150054 bytes
+       36 records, 18 sectors; 1.68us clock (596kHz); 
+       logical track 36.1; 4608 bytes decoded.
+ 73.0: 326 ms in 194205 bytes
+       5 retries remaining
+ 73.0: 326 ms in 193375 bytes
+       4 retries remaining
+ 73.0: 326 ms in 193826 bytes
+       3 retries remaining
+ 73.0: 326 ms in 193949 bytes
+       2 retries remaining
+ 73.0: 326 ms in 193889 bytes
+       1 retries remaining
+ 73.0: 326 ms in 193692 bytes
+       giving up
+       0 bytes decoded.
+ 73.1: 325 ms in 205275 bytes
+       5 retries remaining
+ 73.1: 326 ms in 205727 bytes
+       4 retries remaining
+ 73.1: 326 ms in 205602 bytes
+       3 retries remaining
+ 73.1: 326 ms in 205411 bytes
+       2 retries remaining
+ 73.1: 326 ms in 205603 bytes
+       1 retries remaining
+ 73.1: 326 ms in 205658 bytes
+       giving up
+       0 bytes decoded.
+ 74.0: 328 ms in 151719 bytes
+       36 records, 18 sectors; 1.66us clock (604kHz); 
+       logical track 37.0; 4608 bytes decoded.
+ 74.1: 328 ms in 150567 bytes
+       36 records, 18 sectors; 1.67us clock (600kHz); 
+       logical track 37.1; 4608 bytes decoded.
+ 75.0: 326 ms in 189413 bytes
+       5 retries remaining
+ 75.0: 326 ms in 189731 bytes
+       4 retries remaining
+ 75.0: 326 ms in 189730 bytes
+       3 retries remaining
+ 75.0: 326 ms in 189411 bytes
+       2 retries remaining
+ 75.0: 326 ms in 189919 bytes
+       1 retries remaining
+ 75.0: 326 ms in 189368 bytes
+       giving up
+       0 bytes decoded.
+ 75.1: 326 ms in 209315 bytes
+       5 retries remaining
+ 75.1: 326 ms in 209568 bytes
+       4 retries remaining
+ 75.1: 326 ms in 210590 bytes
+       3 retries remaining
+ 75.1: 326 ms in 209954 bytes
+       2 retries remaining
+ 75.1: 326 ms in 209762 bytes
+       1 retries remaining
+ 75.1: 326 ms in 210148 bytes
+       giving up
+       0 bytes decoded.
+ 76.0: 327 ms in 151268 bytes
+       38 records, 18 sectors; 1.65us clock (605kHz); 
+       logical track 38.0; 4608 bytes decoded.
+ 76.1: 327 ms in 151040 bytes
+       36 records, 18 sectors; 1.64us clock (609kHz); 
+       logical track 38.1; 4608 bytes decoded.
+ 77.0: 327 ms in 167015 bytes
+       5 retries remaining
+ 77.0: 327 ms in 167527 bytes
+       4 retries remaining
+ 77.0: 327 ms in 167201 bytes
+       3 retries remaining
+ 77.0: 327 ms in 167141 bytes
+       2 retries remaining
+ 77.0: 327 ms in 167398 bytes
+       1 retries remaining
+ 77.0: 327 ms in 167397 bytes
+       giving up
+       0 bytes decoded.
+ 77.1: 326 ms in 214877 bytes
+       5 retries remaining
+ 77.1: 325 ms in 214522 bytes
+       4 retries remaining
+ 77.1: 325 ms in 214943 bytes
+       3 retries remaining
+ 77.1: 325 ms in 214309 bytes
+       2 retries remaining
+ 77.1: 325 ms in 214049 bytes
+       1 retries remaining
+ 77.1: 325 ms in 214945 bytes
+       giving up
+       0 bytes decoded.
+ 78.0: 327 ms in 150528 bytes
+       36 records, 18 sectors; 1.67us clock (600kHz); 
+       logical track 39.0; 4608 bytes decoded.
+ 78.1: 327 ms in 150567 bytes
+       36 records, 18 sectors; 1.66us clock (603kHz); 
+       logical track 39.1; 4608 bytes decoded.
+ 79.0: 325 ms in 220901 bytes
+       5 retries remaining
+ 79.0: 325 ms in 221537 bytes
+       4 retries remaining
+ 79.0: 325 ms in 219997 bytes
+       3 retries remaining
+ 79.0: 326 ms in 221472 bytes
+       2 retries remaining
+ 79.0: 326 ms in 221410 bytes
+       1 retries remaining
+ 79.0: 326 ms in 221155 bytes
+       giving up
+       0 bytes decoded.
+ 79.1: 326 ms in 221537 bytes
+       5 retries remaining
+ 79.1: 326 ms in 221283 bytes
+       4 retries remaining
+ 79.1: 326 ms in 221282 bytes
+       3 retries remaining
+ 79.1: 326 ms in 220452 bytes
+       2 retries remaining
+ 79.1: 325 ms in 221278 bytes
+       1 retries remaining
+ 79.1: 325 ms in 221280 bytes
+       giving up
+       0 bytes decoded.
+writing visualisation
+Autodetecting output geometry
+H.SS Tracks --->
+0. 0 ........................................
+0. 1 ........................................
+0. 2 ........................................
+0. 3 ........................................
+0. 4 ........................................
+0. 5 ........................................
+0. 6 ........................................
+0. 7 ........................................
+0. 8 ........................................
+1. 0 ........................................
+1. 1 ........................................
+1. 2 ........................................
+1. 3 ........................................
+1. 4 ........................................
+1. 5 ........................................
+1. 6 ........................................
+1. 7 ........................................
+1. 8 ........................................
+Good sectors: 720/720 (100%)
+Missing sectors: 0/720 (0%)
+Bad sectors: 0/720 (0%)
+writing 40 tracks, 2 heads, 9 sectors, 512 bytes per sector, 360 kB total
+root@vPro-Linux:/home/share/Fluxengine/fluxengine-master/temp# ../fluxengine read ibm -s :t=0-79:s=0-1 --sector-id-base=1 --retries=5 --revolutions=2 --write-svg=ND-disk-122.svg --write-flux=ND-disk-122.flux -o ND-disk-122.img[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cexit[K
+[K
+[K[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C../ndfs -t ND-disk-121b.img[1P.img[1P.img2.img
+Directory name            : AqCqEqGqIqK
+Object file index pointer : 838815217 SI: 0x3 (reserved for future extension)
+User file index pointer   : 1062203903 SI: 0x3 (reserved for future extension)
+Bit file pointer          : 1073741823 SI: 0x3 (reserved for future extension)
+No. of unreserved pages   : 4294967295
+Error reading page 1062203903: Success
+root@vPro-Linux:/home/share/Fluxengine/fluxengine-master/temp# ../ndfs -t ND-disk-122.imgfluxengine read ibm -s :t=0-79:s=0-1 --sector-id-base=1 --retries=5 --revolutions=2 --write-svg=ND-disk-122.svg --write-flux=ND-disk-122.flux -o ND-disk-122.img[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cexit[K
+[K
+[K[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+exit
+
+Script done on 2020-02-03 13:55:19+01:00 [COMMAND_EXIT_CODE="1"]

@@ -1,0 +1,101 @@
+id: nd-211130-a00-d1-91a3de01
+volumeName: 211130A00-XX-01D
+md5: 91a3de0149bf233ff8507429f72d0c51
+product:
+  id: ND-211130
+  version: A00
+  diskNumber: 1
+  language: XX
+image:
+  sizeBytes: 1310720
+  format: raw
+  controller: floppy
+  totalPages: 640
+  pageSize: 2048
+  bootFormat: flomon
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 105
+  files:
+    - name: TPE-MON-100-A03:BPUN
+      type: BPUN
+      pages: 28
+      bytes: 56182
+      userName: FLOPPY-USER
+      dateCreated: 2504837828
+      lastDateRead: 2505638097
+      lastDateWritten: 2504837828
+      dateCreatedStr: 1987-05-06 12:43:04
+      lastDateReadStr: 1987-05-12 16:03:17
+      lastDateWrittenStr: 1987-05-06 12:43:04
+      bpunValid: true
+    - name: CONFIGURATIO-D01:TEST
+      type: TEST
+      pages: 22
+      bytes: 265728
+      userName: FLOPPY-USER
+      dateCreated: 2504837911
+      lastDateRead: 2505638110
+      lastDateWritten: 2504837911
+      dateCreatedStr: 1987-05-06 12:44:23
+      lastDateReadStr: 1987-05-12 16:03:30
+      lastDateWrittenStr: 1987-05-06 12:44:23
+      bpunValid: null
+    - name: INSTRUCTION-C01:TEST
+      type: TEST
+      pages: 17
+      bytes: 33792
+      userName: FLOPPY-USER
+      dateCreated: 2504845332
+      lastDateRead: 2505638121
+      lastDateWritten: 2504845332
+      dateCreatedStr: 1987-05-06 14:32:20
+      lastDateReadStr: 1987-05-12 16:03:41
+      lastDateWrittenStr: 1987-05-06 14:32:20
+      bpunValid: null
+    - name: MEMORY-D01:TEST
+      type: TEST
+      pages: 15
+      bytes: 30208
+      userName: FLOPPY-USER
+      dateCreated: 2504845354
+      lastDateRead: 2505638130
+      lastDateWritten: 2504845354
+      dateCreatedStr: 1987-05-06 14:32:42
+      lastDateReadStr: 1987-05-12 16:03:50
+      lastDateWrittenStr: 1987-05-06 14:32:42
+      bpunValid: null
+    - name: PAGING-C01:TEST
+      type: TEST
+      pages: 17
+      bytes: 34304
+      userName: FLOPPY-USER
+      dateCreated: 2504845383
+      lastDateRead: 2505638139
+      lastDateWritten: 2504845383
+      dateCreatedStr: 1987-05-06 14:33:07
+      lastDateReadStr: 1987-05-12 16:03:59
+      lastDateWrittenStr: 1987-05-06 14:33:07
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 100/ND-disk-00114.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:25:51.888Z
+imagingLogs:
+  - ND-disk-00114.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-211130-a00-d1-91a3de01
+  syncStatus: pending

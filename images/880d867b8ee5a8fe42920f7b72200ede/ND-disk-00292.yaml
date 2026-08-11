@@ -1,0 +1,36 @@
+id: img-880d867b8ee5
+volumeName: MIKAEL-11
+md5: 880d867b8ee5a8fe42920f7b72200ede
+image:
+  sizeBytes: 319488
+  format: raw
+  controller: floppy
+  totalPages: 156
+  pageSize: 2048
+  bootFormat: bpun
+filesystem: ndfs
+ndfs:
+  users:
+    - name: DNF
+      pagesUsed: 0
+  files: []
+provenance:
+  contributor: gandalf
+  originalPath: 200/ND-disk-00292.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:42:08.636Z
+imagingLogs:
+  - ND-disk-00292.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-880d867b8ee5
+  syncStatus: pending

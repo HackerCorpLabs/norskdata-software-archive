@@ -1,0 +1,144 @@
+id: img-cfa6e016dc5d
+volumeName: XMSG
+md5: cfa6e016dc5db3f6bd681dce186a0620
+image:
+  sizeBytes: 319488
+  format: raw
+  controller: floppy
+  totalPages: 156
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 141
+  files:
+    - name: XMSG-IN-K01:PROG
+      type: PROG
+      pages: 53
+      bytes: 171866
+      userName: FLOPPY-USER
+      dateCreated: 2438809873
+      lastDateRead: 2397766816
+      lastDateWritten: 2438809877
+      dateCreatedStr: 1986-05-14 20:36:17
+      lastDateReadStr: 1985-11-21 16:18:32
+      lastDateWrittenStr: 1986-05-14 20:36:21
+      bpunValid: null
+    - name: XMSG-01-K01:XCOM
+      type: XCOM
+      pages: 30
+      bytes: 59882
+      userName: FLOPPY-USER
+      dateCreated: 2438809905
+      lastDateRead: 2397766835
+      lastDateWritten: 2438809906
+      dateCreatedStr: 1986-05-14 20:36:49
+      lastDateReadStr: 1985-11-21 16:18:51
+      lastDateWrittenStr: 1986-05-14 20:36:50
+      bpunValid: null
+    - name: XMSG-STARTEX-K00:MODE
+      type: MODE
+      pages: 3
+      bytes: 4283
+      userName: FLOPPY-USER
+      dateCreated: 2438809929
+      lastDateRead: 2397766851
+      lastDateWritten: 2438809930
+      dateCreatedStr: 1986-05-14 20:37:09
+      lastDateReadStr: 1985-11-21 16:19:03
+      lastDateWrittenStr: 1986-05-14 20:37:10
+      bpunValid: null
+    - name: XMSG-STARTEX-K00:BATC
+      type: BATC
+      pages: 1
+      bytes: 886
+      userName: FLOPPY-USER
+      dateCreated: 2438809935
+      lastDateRead: 2397766856
+      lastDateWritten: 2438809936
+      dateCreatedStr: 1986-05-14 20:37:15
+      lastDateReadStr: 1985-11-21 16:19:08
+      lastDateWrittenStr: 1986-05-14 20:37:16
+      bpunValid: null
+    - name: XMSG-SYSTABS-K00:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 3147
+      userName: FLOPPY-USER
+      dateCreated: 2438809939
+      lastDateRead: 2397766859
+      lastDateWritten: 2438809940
+      dateCreatedStr: 1986-05-14 20:37:19
+      lastDateReadStr: 1985-11-21 16:19:11
+      lastDateWrittenStr: 1986-05-14 20:37:20
+      bpunValid: null
+    - name: XMSG-POFTABS-K00:SYMB
+      type: SYMB
+      pages: 16
+      bytes: 31096
+      userName: FLOPPY-USER
+      dateCreated: 2438809945
+      lastDateRead: 2397766864
+      lastDateWritten: 2438809946
+      dateCreatedStr: 1986-05-14 20:37:25
+      lastDateReadStr: 1985-11-21 16:19:16
+      lastDateWrittenStr: 1986-05-14 20:37:26
+      bpunValid: null
+    - name: XMSG-VALUES-K:SYMB
+      type: SYMB
+      pages: 9
+      bytes: 18415
+      userName: FLOPPY-USER
+      dateCreated: 2438809958
+      lastDateRead: 2397766872
+      lastDateWritten: 2438809959
+      dateCreatedStr: 1986-05-14 20:37:38
+      lastDateReadStr: 1985-11-21 16:19:24
+      lastDateWrittenStr: 1986-05-14 20:37:39
+      bpunValid: null
+    - name: XMSG-PL-VALUES-K:INCL
+      type: INCL
+      pages: 10
+      bytes: 18870
+      userName: FLOPPY-USER
+      dateCreated: 2438809968
+      lastDateRead: 2397766879
+      lastDateWritten: 2438809969
+      dateCreatedStr: 1986-05-14 20:37:48
+      lastDateReadStr: 1985-11-21 16:19:31
+      lastDateWrittenStr: 1986-05-14 20:37:49
+      bpunValid: null
+    - name: XMSG-HDLC-TEST-K:PROG
+      type: PROG
+      pages: 7
+      bytes: 13312
+      userName: FLOPPY-USER
+      dateCreated: 2438809979
+      lastDateRead: 2397766886
+      lastDateWritten: 2438809984
+      dateCreatedStr: 1986-05-14 20:37:59
+      lastDateReadStr: 1985-11-21 16:19:38
+      lastDateWrittenStr: 1986-05-14 20:38:00
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 300/ND-disk-00350.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:45:50.039Z
+imagingLogs:
+  - ND-disk-00350.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-cfa6e016dc5d
+  syncStatus: pending

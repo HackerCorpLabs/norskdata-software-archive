@@ -1,0 +1,77 @@
+id: nd-211226-b02-d4-4e2d509b
+volumeName: 211226B02-XX-04D
+md5: 4e2d509bf12ca1fdcebe24acfc3f5679
+product:
+  id: ND-211226
+  version: B02
+  diskNumber: 4
+  language: XX
+image:
+  sizeBytes: 1310720
+  format: raw
+  controller: floppy
+  totalPages: 640
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 559
+  files:
+    - name: BM-DEFINI-B02:DOM
+      type: DOM
+      pages: 335
+      bytes: 686080
+      userName: FLOPPY-USER
+      dateCreated: 2647714503
+      lastDateRead: 2647976758
+      lastDateWritten: 2647714506
+      dateCreatedStr: 1989-07-08 14:43:07
+      lastDateReadStr: 1989-07-10 14:44:54
+      lastDateWrittenStr: 1989-07-08 14:43:10
+      bpunValid: null
+    - name: BM-SCHED-B02:DOM
+      type: DOM
+      pages: 168
+      bytes: 344064
+      userName: FLOPPY-USER
+      dateCreated: 2647714797
+      lastDateRead: 2647976833
+      lastDateWritten: 2647714798
+      dateCreatedStr: 1989-07-08 14:47:45
+      lastDateReadStr: 1989-07-10 14:46:01
+      lastDateWrittenStr: 1989-07-08 14:47:46
+      bpunValid: null
+    - name: BM-OPERATOR-B02:DO02
+      type: DO02
+      pages: 52
+      bytes: 276480
+      userName: FLOPPY-USER
+      dateCreated: 2647954037
+      lastDateRead: 2647987744
+      lastDateWritten: 2647954038
+      dateCreatedStr: 1989-07-10 09:09:53
+      lastDateReadStr: 1989-07-10 17:24:32
+      lastDateWrittenStr: 1989-07-10 09:09:54
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 000/ND-disk-00035.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T14:54:09.151Z
+imagingLogs:
+  - ND-disk-00035.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-211226-b02-d4-4e2d509b
+  syncStatus: pending

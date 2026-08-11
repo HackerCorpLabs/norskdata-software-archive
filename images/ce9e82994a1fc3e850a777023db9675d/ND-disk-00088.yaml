@@ -1,0 +1,185 @@
+id: nd-210730-c13-d1-ce9e8299
+volumeName: 210730C13-XX-01D
+md5: ce9e82994a1fc3e850a777023db9675d
+product:
+  id: ND-210730
+  version: C13
+  diskNumber: 1
+  language: XX
+image:
+  sizeBytes: 1310720
+  format: raw
+  controller: floppy
+  totalPages: 640
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 526
+  files:
+    - name: INSTALL-UNIQ:PROG
+      type: PROG
+      pages: 46
+      bytes: 156744
+      userName: FLOPPY-USER
+      dateCreated: 2505481812
+      lastDateRead: 2649152103
+      lastDateWritten: 2563282072
+      dateCreatedStr: 1987-05-11 09:57:20
+      lastDateReadStr: 1989-07-19 13:41:39
+      lastDateWrittenStr: 1988-03-04 09:18:24
+      bpunValid: null
+    - name: UNIQ-IN-S5-C13:PROG
+      type: PROG
+      pages: 64
+      bytes: 192932
+      userName: FLOPPY-USER
+      dateCreated: 2581244182
+      lastDateRead: 2649152154
+      lastDateWritten: 2629226745
+      dateCreatedStr: 1988-07-13 10:36:22
+      lastDateReadStr: 1989-07-19 13:42:26
+      lastDateWrittenStr: 1989-02-27 13:03:57
+      bpunValid: null
+    - name: UNIQ-CONV-C13:PROG
+      type: PROG
+      pages: 105
+      bytes: 231424
+      userName: FLOPPY-USER
+      dateCreated: 2584925506
+      lastDateRead: 2646124219
+      lastDateWritten: 2584925509
+      dateCreatedStr: 1988-08-09 13:21:02
+      lastDateReadStr: 1989-06-28 10:26:59
+      lastDateWrittenStr: 1988-08-09 13:21:05
+      bpunValid: null
+    - name: UNIQ-S-MAIN-C13:NRF
+      type: NRF
+      pages: 87
+      bytes: 177631
+      userName: FLOPPY-USER
+      dateCreated: 2558193333
+      lastDateRead: 2646124154
+      lastDateWritten: 2638551309
+      dateCreatedStr: 1988-01-29 14:58:53
+      lastDateReadStr: 1989-06-28 10:25:58
+      lastDateWrittenStr: 1989-05-02 17:36:13
+      bpunValid: null
+    - name: UNIQ-S-LIB-C13:NRF
+      type: NRF
+      pages: 81
+      bytes: 165184
+      userName: FLOPPY-USER
+      dateCreated: 2558193333
+      lastDateRead: 2646124188
+      lastDateWritten: 2638546974
+      dateCreatedStr: 1988-01-29 14:58:53
+      lastDateReadStr: 1989-06-28 10:26:28
+      lastDateWrittenStr: 1989-05-02 16:32:30
+      bpunValid: null
+    - name: UNIQ-S-COMP-C13:NRF
+      type: NRF
+      pages: 43
+      bytes: 86388
+      userName: FLOPPY-USER
+      dateCreated: 2558193333
+      lastDateRead: 2646124177
+      lastDateWritten: 2638546975
+      dateCreatedStr: 1988-01-29 14:58:53
+      lastDateReadStr: 1989-06-28 10:26:17
+      lastDateWrittenStr: 1989-05-02 16:32:31
+      bpunValid: null
+    - name: UNIQ-S-WP-N-C13:NRF
+      type: NRF
+      pages: 1
+      bytes: 320
+      userName: FLOPPY-USER
+      dateCreated: 2558193334
+      lastDateRead: 2646124215
+      lastDateWritten: 2638546975
+      dateCreatedStr: 1988-01-29 14:58:54
+      lastDateReadStr: 1989-06-28 10:26:55
+      lastDateWrittenStr: 1989-05-02 16:32:31
+      bpunValid: null
+    - name: UNIQ-S-TRUE-C13:NRF
+      type: NRF
+      pages: 2
+      bytes: 2170
+      userName: FLOPPY-USER
+      dateCreated: 2558193335
+      lastDateRead: 2646124207
+      lastDateWritten: 2638546976
+      dateCreatedStr: 1988-01-29 14:58:55
+      lastDateReadStr: 1989-06-28 10:26:47
+      lastDateWrittenStr: 1989-05-02 16:32:32
+      bpunValid: null
+    - name: UNIQ-S-DUMMY-C13:NRF
+      type: NRF
+      pages: 2
+      bytes: 2253
+      userName: FLOPPY-USER
+      dateCreated: 2558193334
+      lastDateRead: 2646124210
+      lastDateWritten: 2638546975
+      dateCreatedStr: 1988-01-29 14:58:54
+      lastDateReadStr: 1989-06-28 10:26:50
+      lastDateWrittenStr: 1989-05-02 16:32:31
+      bpunValid: null
+    - name: UNIQ-LOAD-S5-C13:MODE
+      type: MODE
+      pages: 1
+      bytes: 1623
+      userName: FLOPPY-USER
+      dateCreated: 2595685002
+      lastDateRead: 2638643856
+      lastDateWritten: 2638643856
+      dateCreatedStr: 1988-10-27 16:10:10
+      lastDateReadStr: 1989-05-03 08:10:16
+      lastDateWrittenStr: 1989-05-03 08:10:16
+      bpunValid: null
+    - name: UNIQ-DUMP-S5-C13:MODE
+      type: MODE
+      pages: 1
+      bytes: 456
+      userName: FLOPPY-USER
+      dateCreated: 2595783603
+      lastDateRead: 2638643938
+      lastDateWritten: 2630670328
+      dateCreatedStr: 1988-10-28 08:14:51
+      lastDateReadStr: 1989-05-03 08:11:34
+      lastDateWrittenStr: 1989-03-06 13:31:56
+      bpunValid: null
+    - name: UNIQ-LINK-S5-C13:MODE
+      type: MODE
+      pages: 1
+      bytes: 729
+      userName: FLOPPY-USER
+      dateCreated: 2621758272
+      lastDateRead: 2638643897
+      lastDateWritten: 2630670385
+      dateCreatedStr: 1989-01-02 13:45:00
+      lastDateReadStr: 1989-05-03 08:10:57
+      lastDateWrittenStr: 1989-03-06 13:32:49
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 000/ND-disk-00088.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T14:54:28.946Z
+imagingLogs:
+  - ND-disk-00088.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-210730-c13-d1-ce9e8299
+  syncStatus: pending

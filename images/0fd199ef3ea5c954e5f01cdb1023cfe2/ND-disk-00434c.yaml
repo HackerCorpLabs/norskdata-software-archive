@@ -1,0 +1,384 @@
+id: img-0fd199ef3ea5
+volumeName: FL1-BALDER
+md5: 0fd199ef3ea5c954e5f01cdb1023cfe2
+image:
+  sizeBytes: 319488
+  format: raw
+  controller: floppy
+  totalPages: 156
+  pageSize: 2048
+  bootFormat: bpun
+filesystem: ndfs
+ndfs:
+  users:
+    - name: BALDER
+      pagesUsed: 130
+  files:
+    - name: KJG:SYMB
+      type: SYMB
+      pages: 0
+      bytes: 4294967296
+      userName: BALDER
+      dateCreated: 2151985759
+      lastDateRead: 2151985764
+      lastDateWritten: 2151985764
+      dateCreatedStr: 1982-01-02 11:09:31
+      lastDateReadStr: 1982-01-02 11:09:36
+      lastDateWrittenStr: 1982-01-02 11:09:36
+      bpunValid: null
+    - name: BW1:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 560
+      userName: BALDER
+      dateCreated: 2151985766
+      lastDateRead: 2151985766
+      lastDateWritten: 2151985766
+      dateCreatedStr: 1982-01-02 11:09:38
+      lastDateReadStr: 1982-01-02 11:09:38
+      lastDateWrittenStr: 1982-01-02 11:09:38
+      bpunValid: null
+    - name: STEPPE-T1A:SYMB
+      type: SYMB
+      pages: 0
+      bytes: 4294967296
+      userName: BALDER
+      dateCreated: 2151985772
+      lastDateRead: 2151985772
+      lastDateWritten: 2151985772
+      dateCreatedStr: 1982-01-02 11:09:44
+      lastDateReadStr: 1982-01-02 11:09:44
+      lastDateWrittenStr: 1982-01-02 11:09:44
+      bpunValid: null
+    - name: DECOMP-UAK-E3B:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 661
+      userName: BALDER
+      dateCreated: 2151985774
+      lastDateRead: 2152638907
+      lastDateWritten: 2151985775
+      dateCreatedStr: 1982-01-02 11:09:46
+      lastDateReadStr: 1982-01-07 10:38:59
+      lastDateWrittenStr: 1982-01-02 11:09:47
+      bpunValid: null
+    - name: TJOG-OMP-T2B:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 929
+      userName: BALDER
+      dateCreated: 2151985780
+      lastDateRead: 2151985780
+      lastDateWritten: 2151985780
+      dateCreatedStr: 1982-01-02 11:09:52
+      lastDateReadStr: 1982-01-02 11:09:52
+      lastDateWrittenStr: 1982-01-02 11:09:52
+      bpunValid: null
+    - name: OMPLIB-OMP-T2B:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1650
+      userName: BALDER
+      dateCreated: 2151985786
+      lastDateRead: 2152638929
+      lastDateWritten: 2151985786
+      dateCreatedStr: 1982-01-02 11:09:58
+      lastDateReadStr: 1982-01-07 10:39:17
+      lastDateWrittenStr: 1982-01-02 11:09:58
+      bpunValid: null
+    - name: MRL-EL1:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 2238
+      userName: BALDER
+      dateCreated: 2151985796
+      lastDateRead: 2152638942
+      lastDateWritten: 2151985796
+      dateCreatedStr: 1982-01-02 11:10:04
+      lastDateReadStr: 1982-01-07 10:39:30
+      lastDateWrittenStr: 1982-01-02 11:10:04
+      bpunValid: null
+    - name: BERIT-OMP-T2B:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 593
+      userName: BALDER
+      dateCreated: 2151985802
+      lastDateRead: 2151985802
+      lastDateWritten: 2151985802
+      dateCreatedStr: 1982-01-02 11:10:10
+      lastDateReadStr: 1982-01-02 11:10:10
+      lastDateWrittenStr: 1982-01-02 11:10:10
+      bpunValid: null
+    - name: DIFFEKV-HAE-E3A:SYMB
+      type: SYMB
+      pages: 9
+      bytes: 17284
+      userName: BALDER
+      dateCreated: 2151985808
+      lastDateRead: 2152638961
+      lastDateWritten: 2151985808
+      dateCreatedStr: 1982-01-02 11:10:16
+      lastDateReadStr: 1982-01-07 10:39:49
+      lastDateWrittenStr: 1982-01-02 11:10:16
+      bpunValid: null
+    - name: DIFFEKV-HAE-E3A:BRF
+      type: BRF
+      pages: 24
+      bytes: 48170
+      userName: BALDER
+      dateCreated: 2151985820
+      lastDateRead: 2152638985
+      lastDateWritten: 2151985820
+      dateCreatedStr: 1982-01-02 11:10:28
+      lastDateReadStr: 1982-01-07 10:40:09
+      lastDateWrittenStr: 1982-01-02 11:10:28
+      bpunValid: null
+    - name: TIPS-EW-N2B:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 3505
+      userName: BALDER
+      dateCreated: 2151985848
+      lastDateRead: 2152639004
+      lastDateWritten: 2151985849
+      dateCreatedStr: 1982-01-02 11:10:56
+      lastDateReadStr: 1982-01-07 10:40:28
+      lastDateWrittenStr: 1982-01-02 11:10:57
+      bpunValid: null
+    - name: ANDERS1-T1A:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 153
+      userName: BALDER
+      dateCreated: 2151985859
+      lastDateRead: 2152639019
+      lastDateWritten: 2151985859
+      dateCreatedStr: 1982-01-02 11:11:03
+      lastDateReadStr: 1982-01-07 10:40:43
+      lastDateWrittenStr: 1982-01-02 11:11:03
+      bpunValid: null
+    - name: BAND-TB-T1C:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 2850
+      userName: BALDER
+      dateCreated: 2151985865
+      lastDateRead: 2152639027
+      lastDateWritten: 2151985866
+      dateCreatedStr: 1982-01-02 11:11:09
+      lastDateReadStr: 1982-01-07 10:40:51
+      lastDateWrittenStr: 1982-01-02 11:11:10
+      bpunValid: null
+    - name: HAZ-TB-T1C:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 2850
+      userName: BALDER
+      dateCreated: 2151985872
+      lastDateRead: 2151985873
+      lastDateWritten: 2151985873
+      dateCreatedStr: 1982-01-02 11:11:16
+      lastDateReadStr: 1982-01-02 11:11:17
+      lastDateWrittenStr: 1982-01-02 11:11:17
+      bpunValid: null
+    - name: UBAT-TB-T1C:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 3200
+      userName: BALDER
+      dateCreated: 2151985879
+      lastDateRead: 2152639054
+      lastDateWritten: 2151985880
+      dateCreatedStr: 1982-01-02 11:11:23
+      lastDateReadStr: 1982-01-07 10:41:14
+      lastDateWrittenStr: 1982-01-02 11:11:24
+      bpunValid: null
+    - name: WSXC-ROGER-E3A:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 2731
+      userName: BALDER
+      dateCreated: 2151985886
+      lastDateRead: 2151985887
+      lastDateWritten: 2151985887
+      dateCreatedStr: 1982-01-02 11:11:30
+      lastDateReadStr: 1982-01-02 11:11:31
+      lastDateWrittenStr: 1982-01-02 11:11:31
+      bpunValid: null
+    - name: MARCUS7-EM-T1A:SYMB
+      type: SYMB
+      pages: 25
+      bytes: 1
+      userName: BALDER
+      dateCreated: 2151985894
+      lastDateRead: 2151985894
+      lastDateWritten: 2151985894
+      dateCreatedStr: 1982-01-02 11:11:38
+      lastDateReadStr: 1982-01-02 11:11:38
+      lastDateWrittenStr: 1982-01-02 11:11:38
+      bpunValid: null
+    - name: PFTES-T1C:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 172
+      userName: BALDER
+      dateCreated: 2151985936
+      lastDateRead: 2151985936
+      lastDateWritten: 2151985936
+      dateCreatedStr: 1982-01-02 11:12:16
+      lastDateReadStr: 1982-01-02 11:12:16
+      lastDateWrittenStr: 1982-01-02 11:12:16
+      bpunValid: null
+    - name: ASA-MN-T1A:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 999
+      userName: BALDER
+      dateCreated: 2151985942
+      lastDateRead: 2152639085
+      lastDateWritten: 2151985942
+      dateCreatedStr: 1982-01-02 11:12:22
+      lastDateReadStr: 1982-01-07 10:41:45
+      lastDateWrittenStr: 1982-01-02 11:12:22
+      bpunValid: null
+    - name: SUB-TB-T1C:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 25
+      userName: BALDER
+      dateCreated: 2151985948
+      lastDateRead: 2152639094
+      lastDateWritten: 2151985949
+      dateCreatedStr: 1982-01-02 11:12:28
+      lastDateReadStr: 1982-01-07 10:41:54
+      lastDateWrittenStr: 1982-01-02 11:12:29
+      bpunValid: null
+    - name: OMPPROG-OMP-T2B:SYMB
+      type: SYMB
+      pages: 4
+      bytes: 6809
+      userName: BALDER
+      dateCreated: 2151985956
+      lastDateRead: 2152639107
+      lastDateWritten: 2151985956
+      dateCreatedStr: 1982-01-02 11:12:36
+      lastDateReadStr: 1982-01-07 10:42:03
+      lastDateWrittenStr: 1982-01-02 11:12:36
+      bpunValid: null
+    - name: AMMAG-MRC-T1A:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1981
+      userName: BALDER
+      dateCreated: 2151985966
+      lastDateRead: 2151985967
+      lastDateWritten: 2151985967
+      dateCreatedStr: 1982-01-02 11:12:46
+      lastDateReadStr: 1982-01-02 11:12:47
+      lastDateWrittenStr: 1982-01-02 11:12:47
+      bpunValid: null
+    - name: ESSOM-MRC-T1A:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 36
+      userName: BALDER
+      dateCreated: 2151985972
+      lastDateRead: 2151985973
+      lastDateWritten: 2151985973
+      dateCreatedStr: 1982-01-02 11:12:52
+      lastDateReadStr: 1982-01-02 11:12:53
+      lastDateWrittenStr: 1982-01-02 11:12:53
+      bpunValid: null
+    - name: FLOWAES-MRC-T1A:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 994
+      userName: BALDER
+      dateCreated: 2151985979
+      lastDateRead: 2151985979
+      lastDateWritten: 2151985979
+      dateCreatedStr: 1982-01-02 11:12:59
+      lastDateReadStr: 1982-01-02 11:12:59
+      lastDateWrittenStr: 1982-01-02 11:12:59
+      bpunValid: null
+    - name: IQ-PJ-T1D:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1598
+      userName: BALDER
+      dateCreated: 2151985989
+      lastDateRead: 2152639139
+      lastDateWritten: 2151985989
+      dateCreatedStr: 1982-01-02 11:13:05
+      lastDateReadStr: 1982-01-07 10:42:35
+      lastDateWrittenStr: 1982-01-02 11:13:05
+      bpunValid: null
+    - name: KLASSLISTOR-LQ:D
+      type: D
+      pages: 1
+      bytes: 1366
+      userName: BALDER
+      dateCreated: 2151985995
+      lastDateRead: 2151985996
+      lastDateWritten: 2151985996
+      dateCreatedStr: 1982-01-02 11:13:11
+      lastDateReadStr: 1982-01-02 11:13:12
+      lastDateWrittenStr: 1982-01-02 11:13:12
+      bpunValid: null
+    - name: PLACERING-LQ:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1837
+      userName: BALDER
+      dateCreated: 2151986001
+      lastDateRead: 2151986002
+      lastDateWritten: 2151986002
+      dateCreatedStr: 1982-01-02 11:13:17
+      lastDateReadStr: 1982-01-02 11:13:18
+      lastDateWrittenStr: 1982-01-02 11:13:18
+      bpunValid: null
+    - name: CAVALET-23-T1D:SYMB
+      type: SYMB
+      pages: 7
+      bytes: 12608
+      userName: BALDER
+      dateCreated: 2221607224
+      lastDateRead: 2229056355
+      lastDateWritten: 2229056309
+      dateCreatedStr: 1983-01-21 16:36:56
+      lastDateReadStr: 1983-03-14 11:13:35
+      lastDateWrittenStr: 1983-03-14 11:12:53
+      bpunValid: null
+    - name: SWAMP-23-T1D:SYMB
+      type: SYMB
+      pages: 5
+      bytes: 8456
+      userName: BALDER
+      dateCreated: 2226082763
+      lastDateRead: 2229056980
+      lastDateWritten: 2228287263
+      dateCreatedStr: 1983-02-23 21:15:11
+      lastDateReadStr: 1983-03-14 11:23:20
+      lastDateWrittenStr: 1983-03-08 15:28:31
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 400/ND-disk-00434c.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:49:33.481Z
+imagingLogs:
+  - ND-disk-00434c.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-0fd199ef3ea5
+  syncStatus: pending

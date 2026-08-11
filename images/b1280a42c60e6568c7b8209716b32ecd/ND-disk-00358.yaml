@@ -1,0 +1,96 @@
+id: img-b1280a42c60e
+volumeName: DNF02
+md5: b1280a42c60e6568c7b8209716b32ecd
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: DEMO
+      pagesUsed: 86
+  files:
+    - name: JSP-EDITOR:SYMB
+      type: SYMB
+      pages: 35
+      bytes: 71680
+      userName: DEMO
+      dateCreated: 2587659155
+      lastDateRead: 2397763968
+      lastDateWritten: 2587659159
+      dateCreatedStr: 1988-08-30 08:46:19
+      lastDateReadStr: 1985-11-21 15:38:00
+      lastDateWrittenStr: 1988-08-30 08:46:23
+      bpunValid: null
+    - name: DRAGON-FIRE-MJ:SYMB
+      type: SYMB
+      pages: 8
+      bytes: 16143
+      userName: DEMO
+      dateCreated: 2587659498
+      lastDateRead: 2397765056
+      lastDateWritten: 2587659498
+      dateCreatedStr: 1988-08-30 08:51:42
+      lastDateReadStr: 1985-11-21 15:55:00
+      lastDateWrittenStr: 1988-08-30 08:51:42
+      bpunValid: null
+    - name: MORDOR-MJ:SYMB
+      type: SYMB
+      pages: 30
+      bytes: 59849
+      userName: DEMO
+      dateCreated: 2587659560
+      lastDateRead: 2397763988
+      lastDateWritten: 2587659560
+      dateCreatedStr: 1988-08-30 08:52:40
+      lastDateReadStr: 1985-11-21 15:38:20
+      lastDateWrittenStr: 1988-08-30 08:52:40
+      bpunValid: null
+    - name: DRAGON-RULES-MJ:DATA
+      type: DATA
+      pages: 2
+      bytes: 2994
+      userName: DEMO
+      dateCreated: 2587659540
+      lastDateRead: 2587659540
+      lastDateWritten: 2587659540
+      dateCreatedStr: 1988-08-30 08:52:20
+      lastDateReadStr: 1988-08-30 08:52:20
+      lastDateWrittenStr: 1988-08-30 08:52:20
+      bpunValid: null
+    - name: MORDOR-RULES-MJ:DATA
+      type: DATA
+      pages: 5
+      bytes: 9653
+      userName: DEMO
+      dateCreated: 2587659574
+      lastDateRead: 2587659575
+      lastDateWritten: 2587659575
+      dateCreatedStr: 1988-08-30 08:52:54
+      lastDateReadStr: 1988-08-30 08:52:55
+      lastDateWrittenStr: 1988-08-30 08:52:55
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 300/ND-disk-00358.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:45:51.069Z
+imagingLogs:
+  - ND-disk-00358.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-b1280a42c60e
+  syncStatus: pending

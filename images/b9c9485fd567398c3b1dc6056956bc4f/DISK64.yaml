@@ -1,0 +1,109 @@
+id: nd-10465-a-d1-b9c9485f
+volumeName: ND-10465A
+md5: b9c9485fd567398c3b1dc6056956bc4f
+product:
+  id: ND-10465
+  version: A
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 24
+  files:
+    - name: DDB999-029-A-A:VTM
+      type: VTM
+      pages: 1
+      bytes: 320
+      userName: FLOPPY-USER
+      dateCreated: 2226319875
+      lastDateRead: null
+      lastDateWritten: 2226319876
+      dateCreatedStr: 1983-02-25 15:08:03
+      lastDateReadStr: null
+      lastDateWrittenStr: 1983-02-25 15:08:04
+      bpunValid: null
+    - name: DDBARRAYS029-B-A:VTM
+      type: VTM
+      pages: 4
+      bytes: 6504
+      userName: FLOPPY-USER
+      dateCreated: 2226319882
+      lastDateRead: null
+      lastDateWritten: 2226319883
+      dateCreatedStr: 1983-02-25 15:08:10
+      lastDateReadStr: null
+      lastDateWrittenStr: 1983-02-25 15:08:11
+      bpunValid: null
+    - name: VTM-1B-029-B-A:BRF
+      type: BRF
+      pages: 4
+      bytes: 6595
+      userName: FLOPPY-USER
+      dateCreated: 2226319891
+      lastDateRead: null
+      lastDateWritten: 2226319892
+      dateCreatedStr: 1983-02-25 15:08:19
+      lastDateReadStr: null
+      lastDateWrittenStr: 1983-02-25 15:08:20
+      bpunValid: null
+    - name: VTM-2B-029-B-A:BRF
+      type: BRF
+      pages: 4
+      bytes: 6597
+      userName: FLOPPY-USER
+      dateCreated: 2226319900
+      lastDateRead: null
+      lastDateWritten: 2226319902
+      dateCreatedStr: 1983-02-25 15:08:28
+      lastDateReadStr: null
+      lastDateWrittenStr: 1983-02-25 15:08:30
+      bpunValid: null
+    - name: VTM-500-029-B-A:NRF
+      type: NRF
+      pages: 4
+      bytes: 8144
+      userName: FLOPPY-USER
+      dateCreated: 2226699569
+      lastDateRead: null
+      lastDateWritten: 2226699570
+      dateCreatedStr: 1983-02-28 11:52:49
+      lastDateReadStr: null
+      lastDateWrittenStr: 1983-02-28 11:52:50
+      bpunValid: null
+    - name: DDB029-A-A:VTM
+      type: VTM
+      pages: 1
+      bytes: 452
+      userName: FLOPPY-USER
+      dateCreated: 2223410165
+      lastDateRead: 2587184641
+      lastDateWritten: 2223410169
+      dateCreatedStr: 1983-02-03 08:47:53
+      lastDateReadStr: 1988-08-26 20:56:01
+      lastDateWrittenStr: 1983-02-03 08:47:57
+      bpunValid: null
+provenance:
+  contributor: www.datormuseum.se
+  originalPath: OK/DISK64.IMG
+  dateImaged: 2022-08-15
+  importedAt: 2026-08-11T17:07:05.067Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10465-a-d1-b9c9485f
+  syncStatus: pending

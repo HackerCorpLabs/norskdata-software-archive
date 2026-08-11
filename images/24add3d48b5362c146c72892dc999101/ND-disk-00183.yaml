@@ -1,0 +1,149 @@
+id: nd-210079-n08-d1-24add3d4
+volumeName: 210079N08-XX-01D
+md5: 24add3d48b5362c146c72892dc999101
+product:
+  id: ND-210079
+  version: N08
+  diskNumber: 1
+  language: XX
+image:
+  sizeBytes: 1310720
+  format: raw
+  controller: floppy
+  totalPages: 640
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 510
+  files:
+    - name: WP-EDITOR-N08:PROG
+      type: PROG
+      pages: 57
+      bytes: 116736
+      userName: FLOPPY-USER
+      dateCreated: 2558836266
+      lastDateRead: null
+      lastDateWritten: 2558836271
+      dateCreatedStr: 1988-02-02 11:56:42
+      lastDateReadStr: null
+      lastDateWrittenStr: 1988-02-02 11:56:47
+      bpunValid: null
+    - name: WP-CMD-N08:PROG
+      type: PROG
+      pages: 63
+      bytes: 129024
+      userName: FLOPPY-USER
+      dateCreated: 2558836306
+      lastDateRead: null
+      lastDateWritten: 2558836307
+      dateCreatedStr: 1988-02-02 11:57:18
+      lastDateReadStr: null
+      lastDateWrittenStr: 1988-02-02 11:57:19
+      bpunValid: null
+    - name: WP-RES-N08:PROG
+      type: PROG
+      pages: 50
+      bytes: 102400
+      userName: FLOPPY-USER
+      dateCreated: 2558836354
+      lastDateRead: null
+      lastDateWritten: 2558836355
+      dateCreatedStr: 1988-02-02 11:58:02
+      lastDateReadStr: null
+      lastDateWrittenStr: 1988-02-02 11:58:03
+      bpunValid: null
+    - name: WP-IO-N08:PROG
+      type: PROG
+      pages: 62
+      bytes: 126976
+      userName: FLOPPY-USER
+      dateCreated: 2558836397
+      lastDateRead: null
+      lastDateWritten: 2558836399
+      dateCreatedStr: 1988-02-02 11:58:45
+      lastDateReadStr: null
+      lastDateWrittenStr: 1988-02-02 11:58:47
+      bpunValid: null
+    - name: WP-SPOL-N08:PROG
+      type: PROG
+      pages: 48
+      bytes: 98304
+      userName: FLOPPY-USER
+      dateCreated: 2558836463
+      lastDateRead: null
+      lastDateWritten: 2558836465
+      dateCreatedStr: 1988-02-02 11:59:47
+      lastDateReadStr: null
+      lastDateWrittenStr: 1988-02-02 11:59:49
+      bpunValid: null
+    - name: WP-MAIN-N08:PROG
+      type: PROG
+      pages: 102
+      bytes: 210944
+      userName: FLOPPY-USER
+      dateCreated: 2558836776
+      lastDateRead: null
+      lastDateWritten: 2558836777
+      dateCreatedStr: 1988-02-02 12:00:40
+      lastDateReadStr: null
+      lastDateWrittenStr: 1988-02-02 12:00:41
+      bpunValid: null
+    - name: WP-PRINT-N08:PROG
+      type: PROG
+      pages: 3
+      bytes: 133120
+      userName: FLOPPY-USER
+      dateCreated: 2558836911
+      lastDateRead: null
+      lastDateWritten: 2558836912
+      dateCreatedStr: 1988-02-02 12:02:47
+      lastDateReadStr: null
+      lastDateWrittenStr: 1988-02-02 12:02:48
+      bpunValid: null
+    - name: TF-MAIN-N08:PROG
+      type: PROG
+      pages: 94
+      bytes: 200704
+      userName: FLOPPY-USER
+      dateCreated: 2558836919
+      lastDateRead: null
+      lastDateWritten: 2558836921
+      dateCreatedStr: 1988-02-02 12:02:55
+      lastDateReadStr: null
+      lastDateWrittenStr: 1988-02-02 12:02:57
+      bpunValid: null
+    - name: TF-UTIL-N08:PROG
+      type: PROG
+      pages: 21
+      bytes: 43008
+      userName: FLOPPY-USER
+      dateCreated: 2558837073
+      lastDateRead: null
+      lastDateWritten: 2558837074
+      dateCreatedStr: 1988-02-02 12:05:17
+      lastDateReadStr: null
+      lastDateWrittenStr: 1988-02-02 12:05:18
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 100/ND-disk-00183.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:26:03.365Z
+imagingLogs:
+  - ND-disk-00183.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-210079-n08-d1-24add3d4
+  syncStatus: pending

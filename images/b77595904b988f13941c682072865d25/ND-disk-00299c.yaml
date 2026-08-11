@@ -1,0 +1,204 @@
+id: img-b77595904b98
+volumeName: MIKAEL-6
+md5: b77595904b988f13941c682072865d25
+image:
+  sizeBytes: 319488
+  format: raw
+  controller: floppy
+  totalPages: 156
+  pageSize: 2048
+  bootFormat: bpun
+filesystem: ndfs
+ndfs:
+  users:
+    - name: DNF
+      pagesUsed: 148
+  files:
+    - name: FORTH-SCREENS-MJ:SYMB
+      type: SYMB
+      pages: 6
+      bytes: 10114
+      userName: DNF
+      dateCreated: 2357397749
+      lastDateRead: 2531720286
+      lastDateWritten: 2392247877
+      dateCreatedStr: 1985-02-01 16:35:53
+      lastDateReadStr: 1987-11-19 15:49:30
+      lastDateWrittenStr: 1985-10-11 12:57:05
+      bpunValid: null
+    - name: ADVENTURE-MJ:SYMB
+      type: SYMB
+      pages: 15
+      bytes: 29241
+      userName: DNF
+      dateCreated: 2253086118
+      lastDateRead: 2663983019
+      lastDateWritten: 2253086119
+      dateCreatedStr: 1983-09-05 21:54:38
+      lastDateReadStr: 1989-11-04 18:30:43
+      lastDateWrittenStr: 1983-09-05 21:54:39
+      bpunValid: null
+    - name: FORTH-SOURCE-MJ:SYMB
+      type: SYMB
+      pages: 50
+      bytes: 101133
+      userName: DNF
+      dateCreated: 2222262478
+      lastDateRead: 2663983543
+      lastDateWritten: 2400406670
+      dateCreatedStr: 1983-01-26 16:35:14
+      lastDateReadStr: 1989-11-04 18:38:55
+      lastDateWrittenStr: 1985-12-09 20:50:14
+      bpunValid: null
+    - name: BOMBS-AWAY-MJ:SYMB
+      type: SYMB
+      pages: 8
+      bytes: 15857
+      userName: DNF
+      dateCreated: 2239047268
+      lastDateRead: 2647330154
+      lastDateWritten: 2356235726
+      dateCreatedStr: 1983-05-26 18:25:36
+      lastDateReadStr: 1989-07-05 16:53:42
+      lastDateWrittenStr: 1985-01-24 20:55:14
+      bpunValid: null
+    - name: COSMIC-MJ:SYMB
+      type: SYMB
+      pages: 7
+      bytes: 12865
+      userName: DNF
+      dateCreated: 2239046075
+      lastDateRead: 2663983086
+      lastDateWritten: 2239046084
+      dateCreatedStr: 1983-05-26 18:06:59
+      lastDateReadStr: 1989-11-04 18:31:46
+      lastDateWrittenStr: 1983-05-26 18:07:04
+      bpunValid: null
+    - name: TANK-GAME-MJ:SYMB
+      type: SYMB
+      pages: 15
+      bytes: 29966
+      userName: DNF
+      dateCreated: 2239047432
+      lastDateRead: 2397759524
+      lastDateWritten: 2421248749
+      dateCreatedStr: 1983-05-26 18:28:08
+      lastDateReadStr: 1985-11-21 14:32:36
+      lastDateWrittenStr: 1986-01-08 21:11:45
+      bpunValid: null
+    - name: BREAKOUT-MJ:SYMB
+      type: SYMB
+      pages: 3
+      bytes: 3958
+      userName: DNF
+      dateCreated: 2239046978
+      lastDateRead: 2663983728
+      lastDateWritten: 2356232261
+      dateCreatedStr: 1983-05-26 18:21:02
+      lastDateReadStr: 1989-11-04 18:41:48
+      lastDateWrittenStr: 1985-01-24 20:01:05
+      bpunValid: null
+    - name: REVERSE-MJ:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1588
+      userName: DNF
+      dateCreated: 2239047029
+      lastDateRead: 2663983941
+      lastDateWritten: 2239047034
+      dateCreatedStr: 1983-05-26 18:21:53
+      lastDateReadStr: 1989-11-04 18:45:05
+      lastDateWrittenStr: 1983-05-26 18:21:58
+      bpunValid: null
+    - name: HVOLT-MJ:SYMB
+      type: SYMB
+      pages: 4
+      bytes: 6026
+      userName: DNF
+      dateCreated: 2357397795
+      lastDateRead: 2531720404
+      lastDateWritten: 2357397797
+      dateCreatedStr: 1985-02-01 16:36:35
+      lastDateReadStr: 1987-11-19 15:51:20
+      lastDateWrittenStr: 1985-02-01 16:36:37
+      bpunValid: null
+    - name: CONVERT-MJ:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1834
+      userName: DNF
+      dateCreated: 2288563600
+      lastDateRead: 2397759534
+      lastDateWritten: 2288564212
+      dateCreatedStr: 1984-01-20 11:22:16
+      lastDateReadStr: 1985-11-21 14:32:46
+      lastDateWrittenStr: 1984-01-20 11:31:52
+      bpunValid: null
+    - name: BOMBS-AWAY-MJ:DATA
+      type: DATA
+      pages: 2
+      bytes: 2586
+      userName: DNF
+      dateCreated: 2231556344
+      lastDateRead: 2531720417
+      lastDateWritten: 2234732738
+      dateCreatedStr: 1983-04-01 13:35:56
+      lastDateReadStr: 1987-11-19 15:51:33
+      lastDateWrittenStr: 1983-04-25 21:03:02
+      bpunValid: null
+    - name: FORTH-DOC-MJ:TEXT
+      type: TEXT
+      pages: 21
+      bytes: 42524
+      userName: DNF
+      dateCreated: 2357397828
+      lastDateRead: 2663983641
+      lastDateWritten: 2372709824
+      dateCreatedStr: 1985-02-01 16:37:04
+      lastDateReadStr: 1989-11-04 18:40:25
+      lastDateWrittenStr: 1985-05-22 10:55:00
+      bpunValid: null
+    - name: TANK-RULES-MJ:DATA
+      type: DATA
+      pages: 2
+      bytes: 4097
+      userName: DNF
+      dateCreated: 2421248393
+      lastDateRead: 2531720450
+      lastDateWritten: 2421248394
+      dateCreatedStr: 1986-01-08 21:06:09
+      lastDateReadStr: 1987-11-19 15:52:02
+      lastDateWrittenStr: 1986-01-08 21:06:10
+      bpunValid: null
+    - name: ADVENTURE-MJ:DATA
+      type: DATA
+      pages: 6
+      bytes: 10391
+      userName: DNF
+      dateCreated: 2234728961
+      lastDateRead: 2531720462
+      lastDateWritten: 2234728963
+      dateCreatedStr: 1983-04-25 20:08:01
+      lastDateReadStr: 1987-11-19 15:52:14
+      lastDateWrittenStr: 1983-04-25 20:08:03
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 200/ND-disk-00299c.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:42:11.401Z
+imagingLogs:
+  - ND-disk-00299c.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-b77595904b98
+  syncStatus: pending

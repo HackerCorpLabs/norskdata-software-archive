@@ -1,0 +1,53 @@
+id: nd-250305-m05-d2-9a0c1587
+volumeName: 250305M05-XX-02D
+md5: 9a0c1587560bc9102dc9e5688ec7a704
+product:
+  id: ND-250305
+  version: M05
+  diskNumber: 2
+  language: XX
+image:
+  sizeBytes: 1261568
+  format: raw
+  controller: floppy
+  totalPages: 616
+  pageSize: 2048
+  bootFormat: flomon
+filesystem: ndfs
+ndfs:
+  users:
+    - name: SYSTEM
+      pagesUsed: 590
+  files:
+    - name: SINTRAN-M-2:DATA
+      type: DATA
+      pages: 589
+      bytes: 690015
+      userName: SYSTEM
+      dateCreated: 2691729039
+      lastDateRead: 2691729042
+      lastDateWritten: 2691729042
+      dateCreatedStr: 1990-01-24 08:26:15
+      lastDateReadStr: 1990-01-24 08:26:18
+      lastDateWrittenStr: 1990-01-24 08:26:18
+      bpunValid: null
+provenance:
+  contributor: tor
+  originalPath: SIII-M-250305M05/250305M05-XX-02D.IMG
+  dateImaged: 1990-03-19
+  importedAt: 2026-08-11T14:43:16.659Z
+imagingLogs:
+  - README.TXT
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-250305-m05-d2-9a0c1587
+  syncStatus: pending

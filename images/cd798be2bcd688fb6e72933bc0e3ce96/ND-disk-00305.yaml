@@ -1,0 +1,252 @@
+id: img-cd798be2bcd6
+volumeName: NILSSON-3
+md5: cd798be2bcd688fb6e72933bc0e3ce96
+image:
+  sizeBytes: 319488
+  format: raw
+  controller: floppy
+  totalPages: 156
+  pageSize: 2048
+  bootFormat: bpun
+filesystem: ndfs
+ndfs:
+  users:
+    - name: SYSTEM
+      pagesUsed: 147
+  files:
+    - name: TURING-MJ:SYMB
+      type: SYMB
+      pages: 7
+      bytes: 12400
+      userName: SYSTEM
+      dateCreated: 2393309920
+      lastDateRead: 3033144430
+      lastDateWritten: 2393309921
+      dateCreatedStr: 1985-10-19 16:11:32
+      lastDateReadStr: 1995-03-05 01:49:46
+      lastDateWrittenStr: 1985-10-19 16:11:33
+      bpunValid: null
+    - name: 6502-CROSS-OL:SYMB
+      type: SYMB
+      pages: 17
+      bytes: 34056
+      userName: SYSTEM
+      dateCreated: 2393309377
+      lastDateRead: 3033144434
+      lastDateWritten: 2393309378
+      dateCreatedStr: 1985-10-19 16:03:01
+      lastDateReadStr: 1995-03-05 01:49:50
+      lastDateWrittenStr: 1985-10-19 16:03:02
+      bpunValid: null
+    - name: Q-KODER-RA:SYMB
+      type: SYMB
+      pages: 3
+      bytes: 5287
+      userName: SYSTEM
+      dateCreated: 2393310096
+      lastDateRead: 3033144442
+      lastDateWritten: 2393310098
+      dateCreatedStr: 1985-10-19 16:14:16
+      lastDateReadStr: 1995-03-05 01:49:58
+      lastDateWrittenStr: 1985-10-19 16:14:18
+      bpunValid: null
+    - name: TEXT-GE:PROG
+      type: PROG
+      pages: 1
+      bytes: 1538
+      userName: SYSTEM
+      dateCreated: 2393310145
+      lastDateRead: 3033144448
+      lastDateWritten: 2393310147
+      dateCreatedStr: 1985-10-19 16:15:01
+      lastDateReadStr: 1995-03-05 01:50:00
+      lastDateWrittenStr: 1985-10-19 16:15:03
+      bpunValid: null
+    - name: HOPP-LISP-RA:LISP
+      type: LISP
+      pages: 1
+      bytes: 619
+      userName: SYSTEM
+      dateCreated: 2393310337
+      lastDateRead: 3033144450
+      lastDateWritten: 2393310339
+      dateCreatedStr: 1985-10-19 16:18:01
+      lastDateReadStr: 1995-03-05 01:50:02
+      lastDateWrittenStr: 1985-10-19 16:18:03
+      bpunValid: null
+    - name: LIBRARY-MJ:BRF
+      type: BRF
+      pages: 4
+      bytes: 8117
+      userName: SYSTEM
+      dateCreated: 2393310449
+      lastDateRead: 3033144452
+      lastDateWritten: 2393310450
+      dateCreatedStr: 1985-10-19 16:19:49
+      lastDateReadStr: 1995-03-05 01:50:04
+      lastDateWrittenStr: 1985-10-19 16:19:50
+      bpunValid: null
+    - name: FACIT-CODES-PBL:TEXT
+      type: TEXT
+      pages: 4
+      bytes: 6452
+      userName: SYSTEM
+      dateCreated: 2391585990
+      lastDateRead: 3033144457
+      lastDateWritten: 2391585992
+      dateCreatedStr: 1985-10-06 11:19:06
+      lastDateReadStr: 1995-03-05 01:50:09
+      lastDateWrittenStr: 1985-10-06 11:19:08
+      bpunValid: null
+    - name: FILI-GE:SYMB
+      type: SYMB
+      pages: 8
+      bytes: 14681
+      userName: SYSTEM
+      dateCreated: 2393309480
+      lastDateRead: 3033144460
+      lastDateWritten: 2393309481
+      dateCreatedStr: 1985-10-19 16:04:40
+      lastDateReadStr: 1995-03-05 01:50:12
+      lastDateWrittenStr: 1985-10-19 16:04:41
+      bpunValid: null
+    - name: EXTRA-PAS-LIB:BRF
+      type: BRF
+      pages: 3
+      bytes: 5867
+      userName: SYSTEM
+      dateCreated: 2400780944
+      lastDateRead: 3033144465
+      lastDateWritten: 2400780946
+      dateCreatedStr: 1985-12-12 16:10:16
+      lastDateReadStr: 1995-03-05 01:50:17
+      lastDateWrittenStr: 1985-12-12 16:10:18
+      bpunValid: null
+    - name: LETA-FILER-MJ:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 3643
+      userName: SYSTEM
+      dateCreated: 2391585583
+      lastDateRead: 3033144469
+      lastDateWritten: 2393308833
+      dateCreatedStr: 1985-10-06 11:12:47
+      lastDateReadStr: 1995-03-05 01:50:21
+      lastDateWrittenStr: 1985-10-19 15:58:33
+      bpunValid: null
+    - name: FORTH-SOURCE-MJ:SYMB
+      type: SYMB
+      pages: 50
+      bytes: 101134
+      userName: SYSTEM
+      dateCreated: 2391739702
+      lastDateRead: 3033144470
+      lastDateWritten: 2391739703
+      dateCreatedStr: 1985-10-07 16:52:54
+      lastDateReadStr: 1995-03-05 01:50:22
+      lastDateWrittenStr: 1985-10-07 16:52:55
+      bpunValid: null
+    - name: SCREENS-FORTH-MJ:DATA
+      type: DATA
+      pages: 9
+      bytes: 17536
+      userName: SYSTEM
+      dateCreated: 2391585699
+      lastDateRead: 3033144487
+      lastDateWritten: 2391585700
+      dateCreatedStr: 1985-10-06 11:14:35
+      lastDateReadStr: 1995-03-05 01:50:39
+      lastDateWrittenStr: 1985-10-06 11:14:36
+      bpunValid: null
+    - name: HOW-MANY-MJ:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 2968
+      userName: SYSTEM
+      dateCreated: 2391586029
+      lastDateRead: 3033144492
+      lastDateWritten: 2393309189
+      dateCreatedStr: 1985-10-06 11:19:45
+      lastDateReadStr: 1995-03-05 01:50:44
+      lastDateWrittenStr: 1985-10-19 16:00:05
+      bpunValid: null
+    - name: FORMAT-FLOPPY-MJ:PROG
+      type: PROG
+      pages: 1
+      bytes: 1530
+      userName: SYSTEM
+      dateCreated: 2391586018
+      lastDateRead: 3033144494
+      lastDateWritten: 2391586020
+      dateCreatedStr: 1985-10-06 11:19:34
+      lastDateReadStr: 1995-03-05 01:50:46
+      lastDateWrittenStr: 1985-10-06 11:19:36
+      bpunValid: null
+    - name: ARCTAN-MJ:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 1424
+      userName: SYSTEM
+      dateCreated: 2391585974
+      lastDateRead: 3033144496
+      lastDateWritten: 2393309227
+      dateCreatedStr: 1985-10-06 11:18:54
+      lastDateReadStr: 1995-03-05 01:50:48
+      lastDateWrittenStr: 1985-10-19 16:00:43
+      bpunValid: null
+    - name: FIND-PASSWORD-GE:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1340
+      userName: SYSTEM
+      dateCreated: 2391586005
+      lastDateRead: 3033144498
+      lastDateWritten: 2391586008
+      dateCreatedStr: 1985-10-06 11:19:21
+      lastDateReadStr: 1995-03-05 01:50:50
+      lastDateWrittenStr: 1985-10-06 11:19:24
+      bpunValid: null
+    - name: ALFABET-GE:DATA
+      type: DATA
+      pages: 6
+      bytes: 8432
+      userName: SYSTEM
+      dateCreated: 2391585955
+      lastDateRead: 3033144500
+      lastDateWritten: 2391585957
+      dateCreatedStr: 1985-10-06 11:18:35
+      lastDateReadStr: 1995-03-05 01:50:52
+      lastDateWrittenStr: 1985-10-06 11:18:37
+      bpunValid: null
+    - name: SCRAMBLE-ML:SYMB
+      type: SYMB
+      pages: 16
+      bytes: 31360
+      userName: SYSTEM
+      dateCreated: 2393308511
+      lastDateRead: 3033144503
+      lastDateWritten: 2393308512
+      dateCreatedStr: 1985-10-19 15:53:31
+      lastDateReadStr: 1995-03-05 01:50:55
+      lastDateWrittenStr: 1985-10-19 15:53:32
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 300/ND-disk-00305.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:45:42.839Z
+imagingLogs:
+  - ND-disk-00305.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-cd798be2bcd6
+  syncStatus: pending

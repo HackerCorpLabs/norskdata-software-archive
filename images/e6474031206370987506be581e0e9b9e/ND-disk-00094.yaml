@@ -1,0 +1,65 @@
+id: nd-211157-a01-d1-e6474031
+volumeName: 211157A01-XX-01D
+md5: e6474031206370987506be581e0e9b9e
+product:
+  id: ND-211157
+  version: A01
+  diskNumber: 1
+  language: XX
+image:
+  sizeBytes: 1310720
+  format: raw
+  controller: floppy
+  totalPages: 640
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 298
+  files:
+    - name: DEBUGGER-LED-A01:PSEG
+      type: PSEG
+      pages: 143
+      bytes: 292519
+      userName: FLOPPY-USER
+      dateCreated: 2507469676
+      lastDateRead: 2572460892
+      lastDateWritten: 2507469681
+      dateCreatedStr: 1987-05-26 15:13:44
+      lastDateReadStr: 1988-05-10 10:13:28
+      lastDateWrittenStr: 1987-05-26 15:13:49
+      bpunValid: null
+    - name: DEBUGGER-LED-A01:DSEG
+      type: DSEG
+      pages: 152
+      bytes: 310505
+      userName: FLOPPY-USER
+      dateCreated: 2507469779
+      lastDateRead: 2572460913
+      lastDateWritten: 2507469781
+      dateCreatedStr: 1987-05-26 15:15:19
+      lastDateReadStr: 1988-05-10 10:13:49
+      lastDateWrittenStr: 1987-05-26 15:15:21
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 000/ND-disk-00094.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T14:54:30.336Z
+imagingLogs:
+  - ND-disk-00094.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-211157-a01-d1-e6474031
+  syncStatus: pending

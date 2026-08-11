@@ -1,0 +1,48 @@
+id: patch-nd-patch-357-199fc22e
+volumeName: ND-PATCH-357
+md5: 199fc22e27e28ed0393e57d9ba147869
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: SYSTEM
+      pagesUsed: 3
+  files:
+    - name: PATCH-357:MODE
+      type: MODE
+      pages: 1
+      bytes: 581
+      userName: SYSTEM
+      dateCreated: 2464455526
+      lastDateRead: 2696328279
+      lastDateWritten: 2464455531
+      dateCreatedStr: 1986-11-18 09:45:38
+      lastDateReadStr: 1990-02-27 11:17:23
+      lastDateWrittenStr: 1986-11-18 09:45:43
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 400/ND-disk-00476.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:49:56.586Z
+imagingLogs:
+  - ND-disk-00476.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-patch-nd-patch-357-199fc22e
+  syncStatus: pending

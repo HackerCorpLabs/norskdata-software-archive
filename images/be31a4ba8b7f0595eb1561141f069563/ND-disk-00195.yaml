@@ -1,0 +1,77 @@
+id: nd-210152-g03-d2-be31a4ba
+volumeName: 210152G03-SW-02D
+md5: be31a4ba8b7f0595eb1561141f069563
+product:
+  id: ND-210152
+  version: G03
+  diskNumber: 2
+  language: SW
+image:
+  sizeBytes: 1310720
+  format: raw
+  controller: floppy
+  totalPages: 640
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 310
+  files:
+    - name: IR-SERVICE-SW-G3:PROG
+      type: PROG
+      pages: 106
+      bytes: 221184
+      userName: FLOPPY-USER
+      dateCreated: 2530645739
+      lastDateRead: 2576401971
+      lastDateWritten: 2530645743
+      dateCreatedStr: 1987-11-11 09:27:43
+      lastDateReadStr: 1988-06-08 12:24:51
+      lastDateWrittenStr: 1987-11-11 09:27:47
+      bpunValid: null
+    - name: IR-UPDATE-SW-G03:PROG
+      type: PROG
+      pages: 104
+      bytes: 258048
+      userName: FLOPPY-USER
+      dateCreated: 2530645834
+      lastDateRead: 2576402001
+      lastDateWritten: 2530645835
+      dateCreatedStr: 1987-11-11 09:29:10
+      lastDateReadStr: 1988-06-08 12:25:17
+      lastDateWrittenStr: 1987-11-11 09:29:11
+      bpunValid: null
+    - name: IR-SPADOK-SW-G03:PROG
+      type: PROG
+      pages: 96
+      bytes: 202752
+      userName: FLOPPY-USER
+      dateCreated: 2530645937
+      lastDateRead: 2576402027
+      lastDateWritten: 2530645938
+      dateCreatedStr: 1987-11-11 09:30:49
+      lastDateReadStr: 1988-06-08 12:25:43
+      lastDateWrittenStr: 1987-11-11 09:30:50
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 100/ND-disk-00195.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:26:05.601Z
+imagingLogs:
+  - ND-disk-00195.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-210152-g03-d2-be31a4ba
+  syncStatus: pending

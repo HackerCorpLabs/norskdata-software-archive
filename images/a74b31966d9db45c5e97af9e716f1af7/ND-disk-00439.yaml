@@ -1,0 +1,192 @@
+id: img-a74b31966d9d
+volumeName: REE-1
+md5: a74b31966d9db45c5e97af9e716f1af7
+image:
+  sizeBytes: 319488
+  format: raw
+  controller: floppy
+  totalPages: 156
+  pageSize: 2048
+  bootFormat: bpun
+filesystem: ndfs
+ndfs:
+  users:
+    - name: SYSTEM
+      pagesUsed: 147
+  files:
+    - name: FTN-2090H:BPUN
+      type: BPUN
+      pages: 32
+      bytes: 64403
+      userName: SYSTEM
+      dateCreated: 2193109943
+      lastDateRead: 2397763630
+      lastDateWritten: 2238769843
+      dateCreatedStr: 1982-10-28 03:14:55
+      lastDateReadStr: 1985-11-21 15:32:46
+      lastDateWrittenStr: 1983-05-24 14:42:51
+      bpunValid: true
+    - name: FTNLIBR-2091F:BRF
+      type: BRF
+      pages: 18
+      bytes: 36864
+      userName: SYSTEM
+      dateCreated: 2193109972
+      lastDateRead: 2397763550
+      lastDateWritten: 2193109972
+      dateCreatedStr: 1982-10-28 03:15:20
+      lastDateReadStr: 1985-11-21 15:31:30
+      lastDateWrittenStr: 1982-10-28 03:15:20
+      bpunValid: null
+    - name: FTNRTLIBR-2092F:BRF
+      type: BRF
+      pages: 14
+      bytes: 28672
+      userName: SYSTEM
+      dateCreated: 2193109978
+      lastDateRead: 2397763560
+      lastDateWritten: 2193109978
+      dateCreatedStr: 1982-10-28 03:15:26
+      lastDateReadStr: 1985-11-21 15:31:40
+      lastDateWrittenStr: 1982-10-28 03:15:26
+      bpunValid: null
+    - name: BRF-EDITOR-1858C:BPUN
+      type: BPUN
+      pages: 7
+      bytes: 14317
+      userName: SYSTEM
+      dateCreated: 2128795760
+      lastDateRead: 2701875300
+      lastDateWritten: 2128795761
+      dateCreatedStr: 1981-11-17 13:33:48
+      lastDateReadStr: 1990-04-05 21:33:36
+      lastDateWrittenStr: 1981-11-17 13:33:49
+      bpunValid: true
+    - name: MAC-1415C:BPUN
+      type: BPUN
+      pages: 14
+      bytes: 28389
+      userName: SYSTEM
+      dateCreated: 2096145458
+      lastDateRead: 2281702826
+      lastDateWritten: 2281708719
+      dateCreatedStr: 1981-03-24 10:16:50
+      lastDateReadStr: null
+      lastDateWrittenStr: null
+      bpunValid: true
+    - name: QED-1644H:BPUN
+      type: BPUN
+      pages: 10
+      bytes: 18865
+      userName: SYSTEM
+      dateCreated: 2096153904
+      lastDateRead: 2281702838
+      lastDateWritten: 2238769262
+      dateCreatedStr: 1981-03-24 12:20:48
+      lastDateReadStr: null
+      lastDateWrittenStr: 1983-05-24 14:33:46
+      bpunValid: true
+    - name: NRL-1935H:BPUN
+      type: BPUN
+      pages: 11
+      bytes: 21864
+      userName: SYSTEM
+      dateCreated: 2096154501
+      lastDateRead: 2281702853
+      lastDateWritten: 2281708914
+      dateCreatedStr: 1981-03-24 12:30:05
+      lastDateReadStr: null
+      lastDateWrittenStr: null
+      bpunValid: true
+    - name: LOOK-FILE:BPUN
+      type: BPUN
+      pages: 21
+      bytes: 41377
+      userName: SYSTEM
+      dateCreated: 2229993589
+      lastDateRead: 2281702865
+      lastDateWritten: 2229993589
+      dateCreatedStr: 1983-03-21 16:01:53
+      lastDateReadStr: null
+      lastDateWrittenStr: 1983-03-21 16:01:53
+      bpunValid: true
+    - name: DUMP-REENTRANT:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 940
+      userName: SYSTEM
+      dateCreated: 2527248664
+      lastDateRead: null
+      lastDateWritten: 2527248666
+      dateCreatedStr: 1987-10-17 12:04:24
+      lastDateReadStr: null
+      lastDateWrittenStr: 1987-10-17 12:04:26
+      bpunValid: null
+    - name: LOGIN-PH:BPUN
+      type: BPUN
+      pages: 1
+      bytes: 1790
+      userName: SYSTEM
+      dateCreated: 2526747253
+      lastDateRead: 2526873988
+      lastDateWritten: 2526873923
+      dateCreatedStr: 1987-10-13 17:41:53
+      lastDateReadStr: 1987-10-14 16:38:04
+      lastDateWrittenStr: 1987-10-14 16:37:03
+      bpunValid: true
+    - name: DITAP-1880D:BPUN
+      type: BPUN
+      pages: 1
+      bytes: 1974
+      userName: SYSTEM
+      dateCreated: 2526497572
+      lastDateRead: 2526735303
+      lastDateWritten: 2526497572
+      dateCreatedStr: 1987-10-11 20:44:36
+      lastDateReadStr: 1987-10-13 14:47:07
+      lastDateWrittenStr: 1987-10-11 20:44:36
+      bpunValid: true
+    - name: FLOPPY-MON-2010F:BPUN
+      type: BPUN
+      pages: 3
+      bytes: 4306
+      userName: SYSTEM
+      dateCreated: 2527248699
+      lastDateRead: null
+      lastDateWritten: 2527248705
+      dateCreatedStr: 1987-10-17 12:04:59
+      lastDateReadStr: null
+      lastDateWrittenStr: 1987-10-17 12:05:01
+      bpunValid: true
+    - name: SETUSER:PROG
+      type: PROG
+      pages: 0
+      bytes: 4294967296
+      userName: SYSTEM
+      dateCreated: 2527248738
+      lastDateRead: 2838763411
+      lastDateWritten: 2397763599
+      dateCreatedStr: 1987-10-17 12:05:34
+      lastDateReadStr: 1992-04-26 01:30:19
+      lastDateWrittenStr: 1985-11-21 15:32:15
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 400/ND-disk-00439.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:49:36.225Z
+imagingLogs:
+  - ND-disk-00439.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-a74b31966d9d
+  syncStatus: pending

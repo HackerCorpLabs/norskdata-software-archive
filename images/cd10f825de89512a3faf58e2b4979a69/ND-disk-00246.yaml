@@ -1,0 +1,299 @@
+id: nd-211092-a01-d1-cd10f825
+volumeName: 211092A01-EN-01D
+md5: cd10f825de89512a3faf58e2b4979a69
+product:
+  id: ND-211092
+  version: A01
+  diskNumber: 1
+  language: EN
+image:
+  sizeBytes: 1261568
+  format: raw
+  controller: floppy
+  totalPages: 616
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 119
+    - name: SYSTEM
+      pagesUsed: 26
+    - name: RT
+      pagesUsed: 0
+    - name: SCRATCH
+      pagesUsed: 0
+    - name: BPUN-FILES
+      pagesUsed: 0
+    - name: UTILITY
+      pagesUsed: 0
+    - name: USER-ENVIRONMENT
+      pagesUsed: 0
+    - name: NOTIS
+      pagesUsed: 0
+    - name: GUEST
+      pagesUsed: 0
+    - name: PC-USER
+      pagesUsed: 0
+  files:
+    - name: BFLY-INSTALL-A01:MODE
+      type: MODE
+      pages: 3
+      bytes: 4063
+      userName: FLOPPY-USER
+      dateCreated: 2489364561
+      lastDateRead: 2505634345
+      lastDateWritten: 2505574304
+      dateCreatedStr: 1987-01-16 11:01:17
+      lastDateReadStr: 1987-05-12 15:08:41
+      lastDateWrittenStr: 1987-05-12 00:30:32
+      bpunValid: null
+    - name: HENT-MODE-EN-A01:MODE
+      type: MODE
+      pages: 5
+      bytes: 9254
+      userName: FLOPPY-USER
+      dateCreated: 2489389686
+      lastDateRead: 2504712875
+      lastDateWritten: 2504205360
+      dateCreatedStr: 1987-01-16 17:09:54
+      lastDateReadStr: 1987-05-05 14:10:43
+      lastDateWrittenStr: 1987-05-01 18:16:48
+      bpunValid: null
+    - name: LOAD-MODE-EN-A01:MODE
+      type: MODE
+      pages: 4
+      bytes: 6219
+      userName: FLOPPY-USER
+      dateCreated: 2489389716
+      lastDateRead: 2504712882
+      lastDateWritten: 2503797257
+      dateCreatedStr: 1987-01-16 17:10:20
+      lastDateReadStr: 1987-05-05 14:10:50
+      lastDateWrittenStr: 1987-04-30 14:40:09
+      bpunValid: null
+    - name: USER-HENT-MODE:MODE
+      type: MODE
+      pages: 1
+      bytes: 1338
+      userName: FLOPPY-USER
+      dateCreated: 2491214987
+      lastDateRead: 2504712886
+      lastDateWritten: 2498934627
+      dateCreatedStr: 1987-01-30 14:50:11
+      lastDateReadStr: 1987-05-05 14:10:54
+      lastDateWrittenStr: 1987-03-25 11:29:35
+      bpunValid: null
+    - name: USER-LOAD-MODE:MODE
+      type: MODE
+      pages: 1
+      bytes: 85
+      userName: FLOPPY-USER
+      dateCreated: 2491215015
+      lastDateRead: 2504712889
+      lastDateWritten: 2496057425
+      dateCreatedStr: 1987-01-30 14:50:39
+      lastDateReadStr: 1987-05-05 14:10:57
+      lastDateWrittenStr: 1987-03-03 13:01:17
+      bpunValid: null
+    - name: BFLY-SRVLOAD-A01:MODE
+      type: MODE
+      pages: 1
+      bytes: 775
+      userName: FLOPPY-USER
+      dateCreated: 2489367635
+      lastDateRead: 2504712898
+      lastDateWritten: 2503652277
+      dateCreatedStr: 1987-01-16 11:49:19
+      lastDateReadStr: 1987-05-05 14:11:02
+      lastDateWrittenStr: 1987-04-29 11:14:53
+      bpunValid: null
+    - name: BFLY-SERVER-A01:BPUN
+      type: BPUN
+      pages: 35
+      bytes: 70572
+      userName: FLOPPY-USER
+      dateCreated: 2502869883
+      lastDateRead: 2504712945
+      lastDateWritten: 2502869883
+      dateCreatedStr: 1987-04-23 12:13:59
+      lastDateReadStr: 1987-05-05 14:11:49
+      lastDateWrittenStr: 1987-04-23 12:13:59
+      bpunValid: true
+    - name: ALTER:PROG
+      type: PROG
+      pages: 1
+      bytes: 1536
+      userName: FLOPPY-USER
+      dateCreated: 2491217356
+      lastDateRead: 2505522927
+      lastDateWritten: 2491217356
+      dateCreatedStr: 1987-01-30 15:23:12
+      lastDateReadStr: 1987-05-11 19:59:47
+      lastDateWrittenStr: 1987-01-30 15:23:12
+      bpunValid: null
+    - name: DDBTABLES-C-B:VTM
+      type: VTM
+      pages: 5
+      bytes: 9384
+      userName: FLOPPY-USER
+      dateCreated: 2488188430
+      lastDateRead: 2504712905
+      lastDateWritten: 2491230773
+      dateCreatedStr: 1987-01-07 11:56:14
+      lastDateReadStr: 1987-05-05 14:11:09
+      lastDateWrittenStr: 1987-01-30 18:40:53
+      bpunValid: null
+    - name: DDBTABLES-D-C:VTM
+      type: VTM
+      pages: 6
+      bytes: 10968
+      userName: FLOPPY-USER
+      dateCreated: 2502869424
+      lastDateRead: 2504712911
+      lastDateWritten: 2502869424
+      dateCreatedStr: 1987-04-23 12:06:48
+      lastDateReadStr: 1987-05-05 14:11:15
+      lastDateWrittenStr: 1987-04-23 12:06:48
+      bpunValid: null
+    - name: DDBTABLES-E04:VTM
+      type: VTM
+      pages: 11
+      bytes: 22272
+      userName: FLOPPY-USER
+      dateCreated: 2488188486
+      lastDateRead: 2504712917
+      lastDateWritten: 2491230773
+      dateCreatedStr: 1987-01-07 11:57:06
+      lastDateReadStr: 1987-05-05 14:11:21
+      lastDateWrittenStr: 1987-01-30 18:40:53
+      bpunValid: null
+    - name: BUAS-CONFIG:MODE
+      type: MODE
+      pages: 0
+      bytes: 4294967296
+      userName: FLOPPY-USER
+      dateCreated: 2498956352
+      lastDateRead: 2505522864
+      lastDateWritten: null
+      dateCreatedStr: 1987-03-25 16:49:00
+      lastDateReadStr: 1987-05-11 19:58:48
+      lastDateWrittenStr: null
+      bpunValid: null
+    - name: QED-1644L:PROG
+      type: PROG
+      pages: 9
+      bytes: 17468
+      userName: FLOPPY-USER
+      dateCreated: 2492896347
+      lastDateRead: 2504712924
+      lastDateWritten: 2492896347
+      dateCreatedStr: 1987-02-11 09:17:27
+      lastDateReadStr: 1987-05-05 14:11:28
+      lastDateWrittenStr: 1987-02-11 09:17:27
+      bpunValid: null
+    - name: PED-2399D:PROG
+      type: PROG
+      pages: 17
+      bytes: 32968
+      userName: FLOPPY-USER
+      dateCreated: 2496067578
+      lastDateRead: 2504712931
+      lastDateWritten: 2496067578
+      dateCreatedStr: 1987-03-03 15:31:58
+      lastDateReadStr: 1987-05-05 14:11:35
+      lastDateWrittenStr: 1987-03-03 15:31:58
+      bpunValid: null
+    - name: DUMMY-FILE:MODE
+      type: MODE
+      pages: 1
+      bytes: 82
+      userName: FLOPPY-USER
+      dateCreated: 2497102007
+      lastDateRead: 2505522919
+      lastDateWritten: 2497102007
+      dateCreatedStr: 1987-03-11 12:02:55
+      lastDateReadStr: 1987-05-11 19:59:39
+      lastDateWrittenStr: 1987-03-11 12:02:55
+      bpunValid: null
+    - name: WP-PRINTERS-L02:SYMB
+      type: SYMB
+      pages: 3
+      bytes: 5443
+      userName: FLOPPY-USER
+      dateCreated: 2505574366
+      lastDateRead: 2505634250
+      lastDateWritten: 2505634049
+      dateCreatedStr: 1987-05-12 00:31:30
+      lastDateReadStr: 1987-05-12 15:07:10
+      lastDateWrittenStr: 1987-05-12 15:04:01
+      bpunValid: null
+    - name: VIRGIN-DISC-A01:MODE
+      type: MODE
+      pages: 2
+      bytes: 1924
+      userName: SYSTEM
+      dateCreated: 2496432364
+      lastDateRead: 2505522723
+      lastDateWritten: 2505521752
+      dateCreatedStr: 1987-03-06 08:35:44
+      lastDateReadStr: 1987-05-11 19:56:35
+      lastDateWrittenStr: 1987-05-11 19:41:24
+      bpunValid: null
+    - name: FRIENDS-A01:MODE
+      type: MODE
+      pages: 2
+      bytes: 3216
+      userName: SYSTEM
+      dateCreated: 2496337292
+      lastDateRead: 2505522811
+      lastDateWritten: 2505521747
+      dateCreatedStr: 1987-03-05 17:22:12
+      lastDateReadStr: 1987-05-11 19:57:59
+      lastDateWrittenStr: 1987-05-11 19:41:19
+      bpunValid: null
+    - name: COPY-DUMMY-FILES:MODE
+      type: MODE
+      pages: 2
+      bytes: 2765
+      userName: SYSTEM
+      dateCreated: 2499195882
+      lastDateRead: 2505522860
+      lastDateWritten: 2504205175
+      dateCreatedStr: 1987-03-27 11:15:42
+      lastDateReadStr: 1987-05-11 19:58:44
+      lastDateWrittenStr: 1987-05-01 18:13:55
+      bpunValid: null
+    - name: SET-DATE-WRITTEN:PROG
+      type: PROG
+      pages: 15
+      bytes: 30720
+      userName: SYSTEM
+      dateCreated: 2500664399
+      lastDateRead: 2505522922
+      lastDateWritten: 2500664399
+      dateCreatedStr: 1987-04-06 17:49:15
+      lastDateReadStr: 1987-05-11 19:59:42
+      lastDateWrittenStr: 1987-04-06 17:49:15
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 200/ND-disk-00246.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:41:53.973Z
+imagingLogs:
+  - ND-disk-00246.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-211092-a01-d1-cd10f825
+  syncStatus: pending

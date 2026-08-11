@@ -1,0 +1,89 @@
+id: nd-210523-g02-d5-1fa18eb8
+volumeName: 210523G02-XX-05S
+md5: 1fa18eb8c9d477fdd028e11738f61c63
+product:
+  id: ND-210523
+  version: G02
+  diskNumber: 5
+  language: XX
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: flomon
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 99
+  files:
+    - name: TPE-MON-100-B00:BPUN
+      type: BPUN
+      pages: 28
+      bytes: 56182
+      userName: FLOPPY-USER
+      dateCreated: 2563326833
+      lastDateRead: 2577317367
+      lastDateWritten: 2563326833
+      dateCreatedStr: 1988-03-04 20:13:49
+      lastDateReadStr: 1988-06-15 11:55:55
+      lastDateWrittenStr: 1988-03-04 20:13:49
+      bpunValid: true
+    - name: DISK-MM-B00:TEST
+      type: TEST
+      pages: 36
+      bytes: 72192
+      userName: FLOPPY-USER
+      dateCreated: 2576407026
+      lastDateRead: 2577070131
+      lastDateWritten: 2576528494
+      dateCreatedStr: 1988-06-08 13:39:50
+      lastDateReadStr: 1988-06-13 15:32:51
+      lastDateWrittenStr: 1988-06-09 11:17:46
+      bpunValid: null
+    - name: FLOPPY-STREA-C02:TEST
+      type: TEST
+      pages: 23
+      bytes: 47104
+      userName: FLOPPY-USER
+      dateCreated: 2574561868
+      lastDateRead: 2576123765
+      lastDateWritten: 2574561868
+      dateCreatedStr: 1988-05-26 11:09:12
+      lastDateReadStr: 1988-06-06 08:29:53
+      lastDateWrittenStr: 1988-05-26 11:09:12
+      bpunValid: null
+    - name: MAGTAPE-B00:TEST
+      type: TEST
+      pages: 7
+      bytes: 13824
+      userName: FLOPPY-USER
+      dateCreated: 2461976092
+      lastDateRead: 2564770448
+      lastDateWritten: 2461976092
+      dateCreatedStr: 1986-10-31 12:24:28
+      lastDateReadStr: 1988-03-15 20:42:16
+      lastDateWrittenStr: 1986-10-31 12:24:28
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 500/ND-disk-00516.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:50:42.183Z
+imagingLogs:
+  - ND-disk-00516.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-210523-g02-d5-1fa18eb8
+  syncStatus: pending

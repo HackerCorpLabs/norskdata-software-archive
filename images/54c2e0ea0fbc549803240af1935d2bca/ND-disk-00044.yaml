@@ -1,0 +1,89 @@
+id: nd-210373-m00-d1-54c2e0ea
+volumeName: 210373M00-XX-01D
+md5: 54c2e0ea0fbc549803240af1935d2bca
+product:
+  id: ND-210373
+  version: M00
+  diskNumber: 1
+  language: XX
+image:
+  sizeBytes: 1310720
+  format: raw
+  controller: floppy
+  totalPages: 640
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 50
+  files:
+    - name: XMSG-LIBRARY-M:BRF
+      type: BRF
+      pages: 16
+      bytes: 31710
+      userName: FLOPPY-USER
+      dateCreated: 2587792481
+      lastDateRead: 2912369880
+      lastDateWritten: 2587792481
+      dateCreatedStr: 1988-08-31 09:17:33
+      lastDateReadStr: 1993-06-11 19:51:24
+      lastDateWrittenStr: 1988-08-31 09:17:33
+      bpunValid: null
+    - name: XMSG-VALUES-M:SYMB
+      type: SYMB
+      pages: 11
+      bytes: 21265
+      userName: FLOPPY-USER
+      dateCreated: 2587792710
+      lastDateRead: 2912369885
+      lastDateWritten: 2587792710
+      dateCreatedStr: 1988-08-31 09:21:06
+      lastDateReadStr: 1993-06-11 19:51:29
+      lastDateWrittenStr: 1988-08-31 09:21:06
+      bpunValid: null
+    - name: XMSG-HDLC-TEST-M:PROG
+      type: PROG
+      pages: 7
+      bytes: 13312
+      userName: FLOPPY-USER
+      dateCreated: 2587797860
+      lastDateRead: 2912369888
+      lastDateWritten: 2587797860
+      dateCreatedStr: 1988-08-31 10:37:36
+      lastDateReadStr: 1993-06-11 19:51:32
+      lastDateWrittenStr: 1988-08-31 10:37:36
+      bpunValid: null
+    - name: XMSG-PL-VALUES-M:INCL
+      type: INCL
+      pages: 11
+      bytes: 21422
+      userName: FLOPPY-USER
+      dateCreated: 2587807216
+      lastDateRead: 2912369891
+      lastDateWritten: 2587807427
+      dateCreatedStr: 1988-08-31 12:55:48
+      lastDateReadStr: 1993-06-11 19:51:35
+      lastDateWrittenStr: 1988-08-31 12:59:03
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 000/ND-disk-00044.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T14:54:11.198Z
+imagingLogs:
+  - ND-disk-00044.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-210373-m00-d1-54c2e0ea
+  syncStatus: pending

@@ -1,0 +1,125 @@
+id: nd-210628-f01-d1-3302ca23
+volumeName: 210628F01-XX-01D
+md5: 3302ca232fbda83461d41dc00ec979b8
+product:
+  id: ND-210628
+  version: F01
+  diskNumber: 1
+  language: XX
+image:
+  sizeBytes: 1310720
+  format: raw
+  controller: floppy
+  totalPages: 640
+  pageSize: 2048
+  bootFormat: flomon
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 179
+  files:
+    - name: COP-VERIFY-J01:BPUN
+      type: BPUN
+      pages: 13
+      bytes: 25590
+      userName: FLOPPY-USER
+      dateCreated: 2506680072
+      lastDateRead: 2526605868
+      lastDateWritten: 2506685456
+      dateCreatedStr: 1987-05-20 14:28:08
+      lastDateReadStr: 1987-10-12 15:08:44
+      lastDateWrittenStr: 1987-05-20 15:48:16
+      bpunValid: true
+    - name: DIR-BACKUP-D01:BPUN
+      type: BPUN
+      pages: 58
+      bytes: 117168
+      userName: FLOPPY-USER
+      dateCreated: 2453196495
+      lastDateRead: 2526605892
+      lastDateWritten: 2453197387
+      dateCreatedStr: 1986-08-28 12:59:15
+      lastDateReadStr: 1987-10-12 15:09:04
+      lastDateWrittenStr: 1986-08-28 13:09:11
+      bpunValid: true
+    - name: FILSYS-INV-Q04:BPUN
+      type: BPUN
+      pages: 25
+      bytes: 50870
+      userName: FLOPPY-USER
+      dateCreated: 2526602570
+      lastDateRead: 2526605961
+      lastDateWritten: 2526602570
+      dateCreatedStr: 1987-10-12 14:21:10
+      lastDateReadStr: 1987-10-12 15:10:09
+      lastDateWrittenStr: 1987-10-12 14:21:10
+      bpunValid: true
+    - name: FLOPPY-MON-H01:BPUN
+      type: BPUN
+      pages: 3
+      bytes: 4332
+      userName: FLOPPY-USER
+      dateCreated: 2458311482
+      lastDateRead: 2526605992
+      lastDateWritten: 2458311532
+      dateCreatedStr: 1986-10-03 13:44:58
+      lastDateReadStr: 1987-10-12 15:10:40
+      lastDateWrittenStr: 1986-10-03 13:45:44
+      bpunValid: true
+    - name: FLOPP-TO-WIN-E00:BPUN
+      type: BPUN
+      pages: 26
+      bytes: 51796
+      userName: FLOPPY-USER
+      dateCreated: 2506673144
+      lastDateRead: 2515224994
+      lastDateWritten: 2506673326
+      dateCreatedStr: 1987-05-20 12:47:56
+      lastDateReadStr: 1987-07-21 20:38:34
+      lastDateWrittenStr: 1987-05-20 12:50:46
+      bpunValid: true
+    - name: MCOPY-TANB-P03:BPUN
+      type: BPUN
+      pages: 23
+      bytes: 36678
+      userName: FLOPPY-USER
+      dateCreated: 2506660397
+      lastDateRead: 2515225063
+      lastDateWritten: 2506660397
+      dateCreatedStr: 1987-05-20 09:40:45
+      lastDateReadStr: 1987-07-21 20:39:39
+      lastDateWrittenStr: 1987-05-20 09:40:45
+      bpunValid: true
+    - name: WINCH-TO-FLO-E00:BPUN
+      type: BPUN
+      pages: 23
+      bytes: 46082
+      userName: FLOPPY-USER
+      dateCreated: 2506673412
+      lastDateRead: 2515225006
+      lastDateWritten: 2506673426
+      dateCreatedStr: 1987-05-20 12:52:04
+      lastDateReadStr: 1987-07-21 20:38:46
+      lastDateWrittenStr: 1987-05-20 12:52:18
+      bpunValid: true
+provenance:
+  contributor: gandalf
+  originalPath: 100/ND-disk-00193.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:26:05.299Z
+imagingLogs:
+  - ND-disk-00193.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-210628-f01-d1-3302ca23
+  syncStatus: pending

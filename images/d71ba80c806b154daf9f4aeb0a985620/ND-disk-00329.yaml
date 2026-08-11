@@ -1,0 +1,144 @@
+id: img-d71ba80c806b
+volumeName: DNF
+md5: d71ba80c806b154daf9f4aeb0a985620
+image:
+  sizeBytes: 319488
+  format: raw
+  controller: floppy
+  totalPages: 156
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: SYSTEM
+      pagesUsed: 69
+  files:
+    - name: PELARE:PROG
+      type: PROG
+      pages: 45
+      bytes: 161792
+      userName: SYSTEM
+      dateCreated: 2692689395
+      lastDateRead: 2697257653
+      lastDateWritten: 2692689400
+      dateCreatedStr: 1990-01-31 18:55:51
+      lastDateReadStr: 1990-03-02 14:10:53
+      lastDateWrittenStr: 1990-01-31 18:55:56
+      bpunValid: null
+    - name: MATSEDEL:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 3646
+      userName: SYSTEM
+      dateCreated: 2692694087
+      lastDateRead: 2697257672
+      lastDateWritten: 2692694089
+      dateCreatedStr: 1990-01-31 20:01:07
+      lastDateReadStr: 1990-03-02 14:11:08
+      lastDateWrittenStr: 1990-01-31 20:01:09
+      bpunValid: null
+    - name: VEG-MAT:SYMB
+      type: SYMB
+      pages: 3
+      bytes: 4117
+      userName: SYSTEM
+      dateCreated: 2692694122
+      lastDateRead: 2697257675
+      lastDateWritten: 2692694124
+      dateCreatedStr: 1990-01-31 20:01:42
+      lastDateReadStr: 1990-03-02 14:11:11
+      lastDateWrittenStr: 1990-01-31 20:01:44
+      bpunValid: null
+    - name: ANNONS:DATA
+      type: DATA
+      pages: 3
+      bytes: 2014
+      userName: SYSTEM
+      dateCreated: 2692695854
+      lastDateRead: 2697257678
+      lastDateWritten: 2692695855
+      dateCreatedStr: 1990-01-31 20:28:46
+      lastDateReadStr: 1990-03-02 14:11:14
+      lastDateWrittenStr: 1990-01-31 20:28:47
+      bpunValid: null
+    - name: SCR-PAD:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 642
+      userName: SYSTEM
+      dateCreated: 2692697841
+      lastDateRead: 2697257681
+      lastDateWritten: 2692698870
+      dateCreatedStr: 1990-01-31 20:59:49
+      lastDateReadStr: 1990-03-02 14:11:17
+      lastDateWrittenStr: 1990-01-31 21:11:54
+      bpunValid: null
+    - name: VECKODAG:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 72
+      userName: SYSTEM
+      dateCreated: 2692698112
+      lastDateRead: 2697257683
+      lastDateWritten: 2692698114
+      dateCreatedStr: 1990-01-31 21:00:00
+      lastDateReadStr: 1990-03-02 14:11:19
+      lastDateWrittenStr: 1990-01-31 21:00:02
+      bpunValid: null
+    - name: TILL-SALU:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1996
+      userName: SYSTEM
+      dateCreated: 2692698710
+      lastDateRead: 2697257686
+      lastDateWritten: 2692698711
+      dateCreatedStr: 1990-01-31 21:09:22
+      lastDateReadStr: 1990-03-02 14:11:22
+      lastDateWrittenStr: 1990-01-31 21:09:23
+      bpunValid: null
+    - name: TERMCAP:DATA
+      type: DATA
+      pages: 2
+      bytes: 3726
+      userName: SYSTEM
+      dateCreated: 2692698894
+      lastDateRead: 2697257688
+      lastDateWritten: 2692698895
+      dateCreatedStr: 1990-01-31 21:12:14
+      lastDateReadStr: 1990-03-02 14:11:24
+      lastDateWrittenStr: 1990-01-31 21:12:15
+      bpunValid: null
+    - name: TERM-INFO:DATA
+      type: DATA
+      pages: 1
+      bytes: 219
+      userName: SYSTEM
+      dateCreated: 2692698905
+      lastDateRead: 2697257691
+      lastDateWritten: 2692698906
+      dateCreatedStr: 1990-01-31 21:12:25
+      lastDateReadStr: 1990-03-02 14:11:27
+      lastDateWrittenStr: 1990-01-31 21:12:26
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 300/ND-disk-00329.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:45:45.867Z
+imagingLogs:
+  - ND-disk-00329.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-d71ba80c806b
+  syncStatus: pending

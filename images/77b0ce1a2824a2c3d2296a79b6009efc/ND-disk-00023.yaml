@@ -1,0 +1,185 @@
+id: nd-211078-a01-d1-77b0ce1a
+volumeName: 211078A01-EN-01D
+md5: 77b0ce1a2824a2c3d2296a79b6009efc
+product:
+  id: ND-211078
+  version: A01
+  diskNumber: 1
+  language: EN
+image:
+  sizeBytes: 1310720
+  format: raw
+  controller: floppy
+  totalPages: 640
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 592
+  files:
+    - name: IN-OEM-EN-A01:PROG
+      type: PROG
+      pages: 79
+      bytes: 202776
+      userName: FLOPPY-USER
+      dateCreated: 2580993996
+      lastDateRead: 3191039126
+      lastDateWritten: 2581022935
+      dateCreatedStr: 1988-07-11 13:31:12
+      lastDateReadStr: 1997-08-25 22:18:22
+      lastDateWrittenStr: 1988-07-11 20:35:23
+      bpunValid: null
+    - name: IN-OEM-EN-A01:INIT
+      type: INIT
+      pages: 3
+      bytes: 6059
+      userName: FLOPPY-USER
+      dateCreated: 2580994014
+      lastDateRead: 3191039125
+      lastDateWritten: 2581022949
+      dateCreatedStr: 1988-07-11 13:31:30
+      lastDateReadStr: 1997-08-25 22:18:21
+      lastDateWrittenStr: 1988-07-11 20:35:37
+      bpunValid: null
+    - name: IN-OEM-EN-A01:XCOM
+      type: XCOM
+      pages: 12
+      bytes: 24021
+      userName: FLOPPY-USER
+      dateCreated: 2580994031
+      lastDateRead: 3191039112
+      lastDateWritten: 2581022950
+      dateCreatedStr: 1988-07-11 13:31:47
+      lastDateReadStr: 1997-08-25 22:18:08
+      lastDateWrittenStr: 1988-07-11 20:35:38
+      bpunValid: null
+    - name: UE-ERMSG-EN-D02:ERR
+      type: ERR
+      pages: 162
+      bytes: 331520
+      userName: FLOPPY-USER
+      dateCreated: 2570778719
+      lastDateRead: 2580484784
+      lastDateWritten: 2570778719
+      dateCreatedStr: 1988-04-29 15:33:31
+      lastDateReadStr: 1988-07-07 17:10:48
+      lastDateWrittenStr: 1988-04-29 15:33:31
+      bpunValid: null
+    - name: OEM-OETAD-A01:PROG
+      type: PROG
+      pages: 68
+      bytes: 208896
+      userName: FLOPPY-USER
+      dateCreated: 2580880849
+      lastDateRead: 3191039499
+      lastDateWritten: 2580880924
+      dateCreatedStr: 1988-07-10 17:55:17
+      lastDateReadStr: 1997-08-25 22:24:11
+      lastDateWrittenStr: 1988-07-10 17:56:28
+      bpunValid: null
+    - name: OEM-OETAD-R-A01:MODE
+      type: MODE
+      pages: 1
+      bytes: 218
+      userName: FLOPPY-USER
+      dateCreated: 2556079545
+      lastDateRead: 3191039513
+      lastDateWritten: 2580464533
+      dateCreatedStr: 1988-01-13 10:54:57
+      lastDateReadStr: 1997-08-25 22:24:25
+      lastDateWrittenStr: 1988-07-07 12:14:21
+      bpunValid: null
+    - name: OEM-SERVICE-A01:PROG
+      type: PROG
+      pages: 48
+      bytes: 167936
+      userName: FLOPPY-USER
+      dateCreated: 2580618144
+      lastDateRead: 3191039515
+      lastDateWritten: 2580618144
+      dateCreatedStr: 1988-07-08 17:46:32
+      lastDateReadStr: 1997-08-25 22:24:27
+      lastDateWrittenStr: 1988-07-08 17:46:32
+      bpunValid: null
+    - name: OEM-MASTER-A01:PROG
+      type: PROG
+      pages: 91
+      bytes: 260096
+      userName: FLOPPY-USER
+      dateCreated: 2580608346
+      lastDateRead: 3191039525
+      lastDateWritten: 2580608346
+      dateCreatedStr: 1988-07-08 15:21:26
+      lastDateReadStr: 1997-08-25 22:24:37
+      lastDateWrittenStr: 1988-07-08 15:21:26
+      bpunValid: null
+    - name: OEM-SERVE-A01:PROG
+      type: PROG
+      pages: 99
+      bytes: 260096
+      userName: FLOPPY-USER
+      dateCreated: 2580608608
+      lastDateRead: 3191039544
+      lastDateWritten: 2580608608
+      dateCreatedStr: 1988-07-08 15:25:32
+      lastDateReadStr: 1997-08-25 22:24:56
+      lastDateWrittenStr: 1988-07-08 15:25:32
+      bpunValid: null
+    - name: OEM-SW-CONFIG:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1101
+      userName: FLOPPY-USER
+      dateCreated: 2568532080
+      lastDateRead: 3191039567
+      lastDateWritten: 2580602029
+      dateCreatedStr: 1988-04-12 11:01:48
+      lastDateReadStr: 1997-08-25 22:25:15
+      lastDateWrittenStr: 1988-07-08 13:50:45
+      bpunValid: null
+    - name: OE-STATUS-SUBST:MODE
+      type: MODE
+      pages: 1
+      bytes: 383
+      userName: FLOPPY-USER
+      dateCreated: 2568680261
+      lastDateRead: 3191039570
+      lastDateWritten: 2580468710
+      dateCreatedStr: 1988-04-13 15:13:05
+      lastDateReadStr: 1997-08-25 22:25:18
+      lastDateWrittenStr: 1988-07-07 13:15:38
+      bpunValid: null
+    - name: SUBSTITUTE:PROG
+      type: PROG
+      pages: 14
+      bytes: 28672
+      userName: FLOPPY-USER
+      dateCreated: 2568678036
+      lastDateRead: 3191039573
+      lastDateWritten: 2568678037
+      dateCreatedStr: 1988-04-13 14:42:20
+      lastDateReadStr: 1997-08-25 22:25:21
+      lastDateWrittenStr: 1988-04-13 14:42:21
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 000/ND-disk-00023.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T14:54:06.240Z
+imagingLogs:
+  - ND-disk-00023.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-211078-a01-d1-77b0ce1a
+  syncStatus: pending

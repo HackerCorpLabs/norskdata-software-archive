@@ -1,0 +1,540 @@
+id: img-4f16ebf12569
+volumeName: FL1-BYGG
+md5: 4f16ebf12569edc65726f63c39add0c1
+image:
+  sizeBytes: 319488
+  format: raw
+  controller: floppy
+  totalPages: 156
+  pageSize: 2048
+  bootFormat: bpun
+filesystem: ndfs
+ndfs:
+  users:
+    - name: BYGG
+      pagesUsed: 130
+  files:
+    - name: KARMULT-HD:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1823
+      userName: BYGG
+      dateCreated: 2151983620
+      lastDateRead: 2152637215
+      lastDateWritten: 2151983626
+      dateCreatedStr: 1982-01-02 10:40:04
+      lastDateReadStr: 1982-01-07 10:12:31
+      lastDateWrittenStr: 1982-01-02 10:40:10
+      bpunValid: null
+    - name: KARMULT-HD:BRF
+      type: BRF
+      pages: 1
+      bytes: 1266
+      userName: BYGG
+      dateCreated: 2151983632
+      lastDateRead: 2152637219
+      lastDateWritten: 2151983633
+      dateCreatedStr: 1982-01-02 10:40:16
+      lastDateReadStr: 1982-01-07 10:12:35
+      lastDateWrittenStr: 1982-01-02 10:40:17
+      bpunValid: null
+    - name: MOMSBER-HD:BRF
+      type: BRF
+      pages: 0
+      bytes: 4294967296
+      userName: BYGG
+      dateCreated: 2151983639
+      lastDateRead: 2152637224
+      lastDateWritten: 2151983639
+      dateCreatedStr: 1982-01-02 10:40:23
+      lastDateReadStr: 1982-01-07 10:12:40
+      lastDateWrittenStr: 1982-01-02 10:40:23
+      bpunValid: null
+    - name: MASTERMIND:SYMB
+      type: SYMB
+      pages: 4
+      bytes: 7818
+      userName: BYGG
+      dateCreated: 2151983642
+      lastDateRead: 2152637227
+      lastDateWritten: 2151983642
+      dateCreatedStr: 1982-01-02 10:40:26
+      lastDateReadStr: 1982-01-07 10:12:43
+      lastDateWrittenStr: 1982-01-02 10:40:26
+      bpunValid: null
+    - name: MASTERMIND-HD:BRF
+      type: BRF
+      pages: 5
+      bytes: 8760
+      userName: BYGG
+      dateCreated: 2151983649
+      lastDateRead: 2152637232
+      lastDateWritten: 2151983650
+      dateCreatedStr: 1982-01-02 10:40:33
+      lastDateReadStr: 1982-01-07 10:12:48
+      lastDateWrittenStr: 1982-01-02 10:40:34
+      bpunValid: null
+    - name: COMPIL-LY:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 904
+      userName: BYGG
+      dateCreated: 2151983658
+      lastDateRead: 2152637238
+      lastDateWritten: 2151983659
+      dateCreatedStr: 1982-01-02 10:40:42
+      lastDateReadStr: 1982-01-07 10:12:54
+      lastDateWrittenStr: 1982-01-02 10:40:43
+      bpunValid: null
+    - name: BALKDIM-HD:SYMB
+      type: SYMB
+      pages: 5
+      bytes: 9589
+      userName: BYGG
+      dateCreated: 2151983664
+      lastDateRead: 2152637249
+      lastDateWritten: 2151983664
+      dateCreatedStr: 1982-01-02 10:40:48
+      lastDateReadStr: 1982-01-07 10:13:01
+      lastDateWrittenStr: 1982-01-02 10:40:48
+      bpunValid: null
+    - name: LY:BRF
+      type: BRF
+      pages: 1
+      bytes: 501
+      userName: BYGG
+      dateCreated: 2151983673
+      lastDateRead: 2152637256
+      lastDateWritten: 2151983674
+      dateCreatedStr: 1982-01-02 10:40:57
+      lastDateReadStr: 1982-01-07 10:13:08
+      lastDateWrittenStr: 1982-01-02 10:40:58
+      bpunValid: null
+    - name: LAB1-HD:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1499
+      userName: BYGG
+      dateCreated: 2151983683
+      lastDateRead: 2152637262
+      lastDateWritten: 2151983683
+      dateCreatedStr: 1982-01-02 10:41:03
+      lastDateReadStr: 1982-01-07 10:13:14
+      lastDateWrittenStr: 1982-01-02 10:41:03
+      bpunValid: null
+    - name: MOMSDEL:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 452
+      userName: BYGG
+      dateCreated: 2151983689
+      lastDateRead: 2152637266
+      lastDateWritten: 2151983689
+      dateCreatedStr: 1982-01-02 10:41:09
+      lastDateReadStr: 1982-01-07 10:13:18
+      lastDateWrittenStr: 1982-01-02 10:41:09
+      bpunValid: null
+    - name: LAB1-HD:BRF
+      type: BRF
+      pages: 1
+      bytes: 1401
+      userName: BYGG
+      dateCreated: 2151983695
+      lastDateRead: 2152637270
+      lastDateWritten: 2151983695
+      dateCreatedStr: 1982-01-02 10:41:15
+      lastDateReadStr: 1982-01-07 10:13:22
+      lastDateWrittenStr: 1982-01-02 10:41:15
+      bpunValid: null
+    - name: TEST:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 196
+      userName: BYGG
+      dateCreated: 2151983701
+      lastDateRead: 2152637275
+      lastDateWritten: 2151983701
+      dateCreatedStr: 1982-01-02 10:41:21
+      lastDateReadStr: 1982-01-07 10:13:27
+      lastDateWrittenStr: 1982-01-02 10:41:21
+      bpunValid: null
+    - name: LAB3-HD:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 2793
+      userName: BYGG
+      dateCreated: 2151983706
+      lastDateRead: 2152637279
+      lastDateWritten: 2151983707
+      dateCreatedStr: 1982-01-02 10:41:26
+      lastDateReadStr: 1982-01-07 10:13:31
+      lastDateWrittenStr: 1982-01-02 10:41:27
+      bpunValid: null
+    - name: LISTA-HD:SYMB
+      type: SYMB
+      pages: 8
+      bytes: 5596
+      userName: BYGG
+      dateCreated: 2151983713
+      lastDateRead: 2152637284
+      lastDateWritten: 2151983714
+      dateCreatedStr: 1982-01-02 10:41:33
+      lastDateReadStr: 1982-01-07 10:13:36
+      lastDateWrittenStr: 1982-01-02 10:41:34
+      bpunValid: null
+    - name: LAB3-HD:BRF
+      type: BRF
+      pages: 2
+      bytes: 2615
+      userName: BYGG
+      dateCreated: 2151983726
+      lastDateRead: 2152637292
+      lastDateWritten: 2151983726
+      dateCreatedStr: 1982-01-02 10:41:46
+      lastDateReadStr: 1982-01-07 10:13:44
+      lastDateWrittenStr: 1982-01-02 10:41:46
+      bpunValid: null
+    - name: TEST-LY:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 124
+      userName: BYGG
+      dateCreated: 2151983733
+      lastDateRead: 2152637299
+      lastDateWritten: 2151983733
+      dateCreatedStr: 1982-01-02 10:41:53
+      lastDateReadStr: 1982-01-07 10:13:51
+      lastDateWrittenStr: 1982-01-02 10:41:53
+      bpunValid: null
+    - name: MOMS:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 261
+      userName: BYGG
+      dateCreated: 2151983739
+      lastDateRead: 2152637305
+      lastDateWritten: 2151983739
+      dateCreatedStr: 1982-01-02 10:41:59
+      lastDateReadStr: 1982-01-07 10:13:57
+      lastDateWrittenStr: 1982-01-02 10:41:59
+      bpunValid: null
+    - name: LIST-LY:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 134
+      userName: BYGG
+      dateCreated: 2151983749
+      lastDateRead: 2152637313
+      lastDateWritten: 2151983749
+      dateCreatedStr: 1982-01-02 10:42:05
+      lastDateReadStr: 1982-01-07 10:14:01
+      lastDateWrittenStr: 1982-01-02 10:42:05
+      bpunValid: null
+    - name: MOMS:BRF
+      type: BRF
+      pages: 1
+      bytes: 580
+      userName: BYGG
+      dateCreated: 2151983755
+      lastDateRead: 2152637318
+      lastDateWritten: 2151983755
+      dateCreatedStr: 1982-01-02 10:42:11
+      lastDateReadStr: 1982-01-07 10:14:06
+      lastDateWrittenStr: 1982-01-02 10:42:11
+      bpunValid: null
+    - name: SAP-ML:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 99
+      userName: BYGG
+      dateCreated: 2151983761
+      lastDateRead: 2152637323
+      lastDateWritten: 2151983761
+      dateCreatedStr: 1982-01-02 10:42:17
+      lastDateReadStr: 1982-01-07 10:14:11
+      lastDateWrittenStr: 1982-01-02 10:42:17
+      bpunValid: null
+    - name: LAB2-HD:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 3973
+      userName: BYGG
+      dateCreated: 2151983767
+      lastDateRead: 2152637327
+      lastDateWritten: 2151983767
+      dateCreatedStr: 1982-01-02 10:42:23
+      lastDateReadStr: 1982-01-07 10:14:15
+      lastDateWrittenStr: 1982-01-02 10:42:23
+      bpunValid: null
+    - name: CIRKEL:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 194
+      userName: BYGG
+      dateCreated: 2151983774
+      lastDateRead: 2152637333
+      lastDateWritten: 2151983775
+      dateCreatedStr: 1982-01-02 10:42:30
+      lastDateReadStr: 1982-01-07 10:14:21
+      lastDateWrittenStr: 1982-01-02 10:42:31
+      bpunValid: null
+    - name: CIRKEL:BRF
+      type: BRF
+      pages: 1
+      bytes: 566
+      userName: BYGG
+      dateCreated: 2151983780
+      lastDateRead: 2152637341
+      lastDateWritten: 2151983781
+      dateCreatedStr: 1982-01-02 10:42:36
+      lastDateReadStr: 1982-01-07 10:14:29
+      lastDateWrittenStr: 1982-01-02 10:42:37
+      bpunValid: null
+    - name: SOUNDEX-HD:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 2917
+      userName: BYGG
+      dateCreated: 2151983786
+      lastDateRead: 2152637348
+      lastDateWritten: 2151983787
+      dateCreatedStr: 1982-01-02 10:42:42
+      lastDateReadStr: 1982-01-07 10:14:36
+      lastDateWrittenStr: 1982-01-02 10:42:43
+      bpunValid: null
+    - name: SOUNDEX-HD:BRF
+      type: BRF
+      pages: 1
+      bytes: 1653
+      userName: BYGG
+      dateCreated: 2151983793
+      lastDateRead: 2152637353
+      lastDateWritten: 2151983794
+      dateCreatedStr: 1982-01-02 10:42:49
+      lastDateReadStr: 1982-01-07 10:14:41
+      lastDateWrittenStr: 1982-01-02 10:42:50
+      bpunValid: null
+    - name: MULTTAB-LY:SYMB
+      type: SYMB
+      pages: 0
+      bytes: 4294967296
+      userName: BYGG
+      dateCreated: 2151983799
+      lastDateRead: 2152637358
+      lastDateWritten: 2151983800
+      dateCreatedStr: 1982-01-02 10:42:55
+      lastDateReadStr: 1982-01-07 10:14:46
+      lastDateWrittenStr: 1982-01-02 10:42:56
+      bpunValid: null
+    - name: MULTTAB:BRF
+      type: BRF
+      pages: 0
+      bytes: 4294967296
+      userName: BYGG
+      dateCreated: 2151983802
+      lastDateRead: 2152637362
+      lastDateWritten: 2151983803
+      dateCreatedStr: 1982-01-02 10:42:58
+      lastDateReadStr: 1982-01-07 10:14:50
+      lastDateWrittenStr: 1982-01-02 10:42:59
+      bpunValid: null
+    - name: ORDKOLL-HD:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 2077
+      userName: BYGG
+      dateCreated: 2151983809
+      lastDateRead: 2152637365
+      lastDateWritten: 2151983810
+      dateCreatedStr: 1982-01-02 10:43:01
+      lastDateReadStr: 1982-01-07 10:14:53
+      lastDateWrittenStr: 1982-01-02 10:43:02
+      bpunValid: null
+    - name: LAB2-HD:BRF
+      type: BRF
+      pages: 2
+      bytes: 3489
+      userName: BYGG
+      dateCreated: 2151983817
+      lastDateRead: 2152637371
+      lastDateWritten: 2151983817
+      dateCreatedStr: 1982-01-02 10:43:09
+      lastDateReadStr: 1982-01-07 10:14:59
+      lastDateWrittenStr: 1982-01-02 10:43:09
+      bpunValid: null
+    - name: BIL-HD:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 2085
+      userName: BYGG
+      dateCreated: 2151983824
+      lastDateRead: 2152637380
+      lastDateWritten: 2151983824
+      dateCreatedStr: 1982-01-02 10:43:16
+      lastDateReadStr: 1982-01-07 10:15:04
+      lastDateWrittenStr: 1982-01-02 10:43:16
+      bpunValid: null
+    - name: BIL-HD:BRF
+      type: BRF
+      pages: 1
+      bytes: 154
+      userName: BYGG
+      dateCreated: 2151983831
+      lastDateRead: 2152637386
+      lastDateWritten: 2151983832
+      dateCreatedStr: 1982-01-02 10:43:23
+      lastDateReadStr: 1982-01-07 10:15:10
+      lastDateWrittenStr: 1982-01-02 10:43:24
+      bpunValid: null
+    - name: PD-FACK-1:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 3420
+      userName: BYGG
+      dateCreated: 2151983838
+      lastDateRead: 2152637391
+      lastDateWritten: 2151983838
+      dateCreatedStr: 1982-01-02 10:43:30
+      lastDateReadStr: 1982-01-07 10:15:15
+      lastDateWrittenStr: 1982-01-02 10:43:30
+      bpunValid: null
+    - name: PD-RAM-2:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 2954
+      userName: BYGG
+      dateCreated: 2151983845
+      lastDateRead: 2152637398
+      lastDateWritten: 2151983848
+      dateCreatedStr: 1982-01-02 10:43:37
+      lastDateReadStr: 1982-01-07 10:15:22
+      lastDateWrittenStr: 1982-01-02 10:43:40
+      bpunValid: null
+    - name: PD-FEM:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 1999
+      userName: BYGG
+      dateCreated: 2151983857
+      lastDateRead: 2152637405
+      lastDateWritten: 2151983858
+      dateCreatedStr: 1982-01-02 10:43:49
+      lastDateReadStr: 1982-01-07 10:15:29
+      lastDateWrittenStr: 1982-01-02 10:43:50
+      bpunValid: null
+    - name: PD-PROFILH:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 2230
+      userName: BYGG
+      dateCreated: 2151983867
+      lastDateRead: 2152637413
+      lastDateWritten: 2151983867
+      dateCreatedStr: 1982-01-02 10:43:59
+      lastDateReadStr: 1982-01-07 10:15:37
+      lastDateWrittenStr: 1982-01-02 10:43:59
+      bpunValid: null
+    - name: ORDKOLL-HD:BRF
+      type: BRF
+      pages: 1
+      bytes: 1343
+      userName: BYGG
+      dateCreated: 2151983881
+      lastDateRead: 2152637420
+      lastDateWritten: 2151983882
+      dateCreatedStr: 1982-01-02 10:44:09
+      lastDateReadStr: 1982-01-07 10:15:44
+      lastDateWrittenStr: 1982-01-02 10:44:10
+      bpunValid: null
+    - name: PD-DAGVA:SYMB
+      type: SYMB
+      pages: 4
+      bytes: 6720
+      userName: BYGG
+      dateCreated: 2151983890
+      lastDateRead: 2152637427
+      lastDateWritten: 2151983890
+      dateCreatedStr: 1982-01-02 10:44:18
+      lastDateReadStr: 1982-01-07 10:15:51
+      lastDateWrittenStr: 1982-01-02 10:44:18
+      bpunValid: null
+    - name: PD-POLUT:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 2717
+      userName: BYGG
+      dateCreated: 2151983902
+      lastDateRead: 2152637435
+      lastDateWritten: 2151983903
+      dateCreatedStr: 1982-01-02 10:44:30
+      lastDateReadStr: 1982-01-07 10:15:59
+      lastDateWrittenStr: 1982-01-02 10:44:31
+      bpunValid: null
+    - name: PD-SEKTION:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 3346
+      userName: BYGG
+      dateCreated: 2151983912
+      lastDateRead: 2152637447
+      lastDateWritten: 2151983913
+      dateCreatedStr: 1982-01-02 10:44:40
+      lastDateReadStr: 1982-01-07 10:16:07
+      lastDateWrittenStr: 1982-01-02 10:44:41
+      bpunValid: null
+    - name: PD-BTG-BALK:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 3299
+      userName: BYGG
+      dateCreated: 2151983923
+      lastDateRead: 2152637454
+      lastDateWritten: 2151983923
+      dateCreatedStr: 1982-01-02 10:44:51
+      lastDateReadStr: 1982-01-07 10:16:14
+      lastDateWrittenStr: 1982-01-02 10:44:51
+      bpunValid: null
+    - name: PD-TAKSTOL:SYMB
+      type: SYMB
+      pages: 3
+      bytes: 5119
+      userName: BYGG
+      dateCreated: 2151983937
+      lastDateRead: 2152637461
+      lastDateWritten: 2151983937
+      dateCreatedStr: 1982-01-02 10:45:01
+      lastDateReadStr: 1982-01-07 10:16:21
+      lastDateWrittenStr: 1982-01-02 10:45:01
+      bpunValid: null
+    - name: BOEGDJAEVEL:PROG
+      type: PROG
+      pages: 14
+      bytes: 30720
+      userName: BYGG
+      dateCreated: 2151983949
+      lastDateRead: 2152637469
+      lastDateWritten: 2151983949
+      dateCreatedStr: 1982-01-02 10:45:13
+      lastDateReadStr: 1982-01-07 10:16:29
+      lastDateWrittenStr: 1982-01-02 10:45:13
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 400/ND-disk-00438.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:49:35.401Z
+imagingLogs:
+  - ND-disk-00438.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-4f16ebf12569
+  syncStatus: pending

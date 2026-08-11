@@ -1,0 +1,101 @@
+id: nd-10628-d02-d1-9957d1fd
+volumeName: 10628D02-XX-01S
+md5: 9957d1fd099ce5484589b504f65edb92
+product:
+  id: ND-10628
+  version: D02
+  diskNumber: 1
+  language: XX
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: flomon
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 124
+  files:
+    - name: COP-VERIFY-H00:BPUN
+      type: BPUN
+      pages: 12
+      bytes: 22726
+      userName: FLOPPY-USER
+      dateCreated: 2389919986
+      lastDateRead: 2436701805
+      lastDateWritten: 2389923027
+      dateCreatedStr: 1985-09-25 20:35:50
+      lastDateReadStr: 1986-04-30 17:57:45
+      lastDateWrittenStr: 1985-09-25 21:19:19
+      bpunValid: true
+    - name: FLOPPY-MON-G01:BPUN
+      type: BPUN
+      pages: 3
+      bytes: 4454
+      userName: FLOPPY-USER
+      dateCreated: 2433152990
+      lastDateRead: 2436702233
+      lastDateWritten: 2433152990
+      dateCreatedStr: 1986-04-03 15:31:30
+      lastDateReadStr: 1986-04-30 18:00:25
+      lastDateWrittenStr: 1986-04-03 15:31:30
+      bpunValid: true
+    - name: FILSYS-INV-O01:BPUN
+      type: BPUN
+      pages: 22
+      bytes: 43226
+      userName: FLOPPY-USER
+      dateCreated: 2257359671
+      lastDateRead: 2436701830
+      lastDateWritten: 2434992968
+      dateCreatedStr: 1983-10-06 09:12:55
+      lastDateReadStr: 1986-04-30 17:58:06
+      lastDateWrittenStr: 1986-04-17 16:45:08
+      bpunValid: true
+    - name: DIR-BACKUP-D00:BPUN
+      type: BPUN
+      pages: 58
+      bytes: 117170
+      userName: FLOPPY-USER
+      dateCreated: 2434847279
+      lastDateRead: 2436701851
+      lastDateWritten: 2434847279
+      dateCreatedStr: 1986-04-16 13:08:47
+      lastDateReadStr: 1986-04-30 17:58:27
+      lastDateWrittenStr: 1986-04-16 13:08:47
+      bpunValid: true
+    - name: MCOPY-TANB-O01:BPUN
+      type: BPUN
+      pages: 23
+      bytes: 33704
+      userName: FLOPPY-USER
+      dateCreated: 2163917538
+      lastDateRead: 2436701930
+      lastDateWritten: 2434994261
+      dateCreatedStr: 1982-03-29 12:11:34
+      lastDateReadStr: 1986-04-30 17:59:42
+      lastDateWrittenStr: 1986-04-17 17:01:21
+      bpunValid: true
+provenance:
+  contributor: gandalf
+  originalPath: 500/ND-disk-00511.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:50:40.978Z
+imagingLogs:
+  - ND-disk-00511.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10628-d02-d1-9957d1fd
+  syncStatus: pending

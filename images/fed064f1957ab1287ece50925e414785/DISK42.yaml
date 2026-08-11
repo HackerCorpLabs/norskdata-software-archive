@@ -1,0 +1,62 @@
+id: nd-10152-e02-d3-fed064f1
+volumeName: 10152E02-3
+md5: fed064f1957ab1287ece50925e414785
+product:
+  id: ND-10152
+  version: E02
+  diskNumber: 3
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 131
+  files:
+    - name: IR-VTM-NOR-E02:BPUN
+      type: BPUN
+      pages: 64
+      bytes: 130026
+      userName: FLOPPY-USER
+      dateCreated: 2354086296
+      lastDateRead: 2354090910
+      lastDateWritten: 2354086301
+      dateCreatedStr: 1985-01-08 08:06:24
+      lastDateReadStr: 1985-01-08 09:14:30
+      lastDateWrittenStr: 1985-01-08 08:06:29
+      bpunValid: true
+    - name: IR-VTM-ENG-E02:BPUN
+      type: BPUN
+      pages: 64
+      bytes: 130026
+      userName: FLOPPY-USER
+      dateCreated: 2354086364
+      lastDateRead: 2354088506
+      lastDateWritten: 2354086365
+      dateCreatedStr: 1985-01-08 08:07:28
+      lastDateReadStr: 1985-01-08 08:40:58
+      lastDateWrittenStr: 1985-01-08 08:07:29
+      bpunValid: true
+provenance:
+  contributor: www.datormuseum.se
+  originalPath: OK/DISK42.IMG
+  dateImaged: 2022-08-15
+  importedAt: 2026-08-11T17:07:04.285Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10152-e02-d3-fed064f1
+  syncStatus: pending

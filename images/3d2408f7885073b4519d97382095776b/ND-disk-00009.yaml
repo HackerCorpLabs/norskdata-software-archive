@@ -1,0 +1,113 @@
+id: nd-211056-a04-d1-3d2408f7
+volumeName: 211056A04-XX-01D
+md5: 3d2408f7885073b4519d97382095776b
+product:
+  id: ND-211056
+  version: A04
+  diskNumber: 1
+  language: XX
+image:
+  sizeBytes: 1310720
+  format: raw
+  controller: floppy
+  totalPages: 640
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 506
+  files:
+    - name: SSY-MAIN-A04:PROG
+      type: PROG
+      pages: 124
+      bytes: 401408
+      userName: FLOPPY-USER
+      dateCreated: 2597903496
+      lastDateRead: 2598454675
+      lastDateWritten: 2598156744
+      dateCreatedStr: 1988-11-12 13:50:08
+      lastDateReadStr: 1988-11-16 20:22:19
+      lastDateWrittenStr: 1988-11-14 11:39:08
+      bpunValid: null
+    - name: SSY-SECO-A04:PROG
+      type: PROG
+      pages: 57
+      bytes: 401408
+      userName: FLOPPY-USER
+      dateCreated: 2597903574
+      lastDateRead: 2598454701
+      lastDateWritten: 2598156762
+      dateCreatedStr: 1988-11-12 13:51:22
+      lastDateReadStr: 1988-11-16 20:22:45
+      lastDateWrittenStr: 1988-11-14 11:39:26
+      bpunValid: null
+    - name: SSY-SERVER-A04:PROG
+      type: PROG
+      pages: 142
+      bytes: 335872
+      userName: FLOPPY-USER
+      dateCreated: 2597903625
+      lastDateRead: 2598454720
+      lastDateWritten: 2598156773
+      dateCreatedStr: 1988-11-12 13:52:09
+      lastDateReadStr: 1988-11-16 20:23:00
+      lastDateWrittenStr: 1988-11-14 11:39:37
+      bpunValid: null
+    - name: SSY-PSHA-A04:PROG
+      type: PROG
+      pages: 36
+      bytes: 397312
+      userName: FLOPPY-USER
+      dateCreated: 2597903774
+      lastDateRead: 2598454750
+      lastDateWritten: 2598156794
+      dateCreatedStr: 1988-11-12 13:54:30
+      lastDateReadStr: 1988-11-16 20:23:30
+      lastDateWrittenStr: 1988-11-14 11:39:58
+      bpunValid: null
+    - name: VISI-SERVER-A04:PROG
+      type: PROG
+      pages: 120
+      bytes: 350208
+      userName: FLOPPY-USER
+      dateCreated: 2597903824
+      lastDateRead: 2598454760
+      lastDateWritten: 2598156804
+      dateCreatedStr: 1988-11-12 13:55:16
+      lastDateReadStr: 1988-11-16 20:23:40
+      lastDateWrittenStr: 1988-11-14 11:40:04
+      bpunValid: null
+    - name: UEER-RENAME-D00:PROG
+      type: PROG
+      pages: 20
+      bytes: 40960
+      userName: FLOPPY-USER
+      dateCreated: 2597904007
+      lastDateRead: null
+      lastDateWritten: 2598156823
+      dateCreatedStr: 1988-11-12 13:58:07
+      lastDateReadStr: null
+      lastDateWrittenStr: 1988-11-14 11:40:23
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 000/ND-disk-00009.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T14:54:03.242Z
+imagingLogs:
+  - ND-disk-00009.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-211056-a04-d1-3d2408f7
+  syncStatus: pending

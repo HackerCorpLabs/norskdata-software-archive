@@ -1,0 +1,137 @@
+id: nd-211274-a01-d1-b7c8083f
+volumeName: 211274A01-XX-01D
+md5: b7c8083f1b20478025cb12ba1cc5eda8
+product:
+  id: ND-211274
+  version: A01
+  diskNumber: 1
+  language: XX
+image:
+  sizeBytes: 1310720
+  format: raw
+  controller: floppy
+  totalPages: 640
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: SYSTEM
+      pagesUsed: 378
+  files:
+    - name: MICRO-5500-M27:DATA
+      type: DATA
+      pages: 129
+      bytes: 262144
+      userName: SYSTEM
+      dateCreated: 2578361286
+      lastDateRead: 2580073024
+      lastDateWritten: 2578361287
+      dateCreatedStr: 1988-06-23 10:47:06
+      lastDateReadStr: 1988-07-04 12:41:00
+      lastDateWrittenStr: 1988-06-23 10:47:07
+      bpunValid: null
+    - name: MICRO-5500-A27:LABE
+      type: LABE
+      pages: 38
+      bytes: 76272
+      userName: SYSTEM
+      dateCreated: 2570784889
+      lastDateRead: 2570786544
+      lastDateWritten: 2570785242
+      dateCreatedStr: 1988-04-29 17:01:57
+      lastDateReadStr: 1988-04-29 17:27:48
+      lastDateWrittenStr: 1988-04-29 17:07:26
+      bpunValid: null
+    - name: MIC-5500-90-500:DATA
+      type: DATA
+      pages: 128
+      bytes: 262144
+      userName: SYSTEM
+      dateCreated: 2586639900
+      lastDateRead: 2592800184
+      lastDateWritten: 2586639901
+      dateCreatedStr: 1988-08-22 15:56:28
+      lastDateReadStr: 1988-10-05 15:54:56
+      lastDateWrittenStr: 1988-08-22 15:56:29
+      bpunValid: null
+    - name: MICRO-5500-B27:LABE
+      type: LABE
+      pages: 41
+      bytes: 82272
+      userName: SYSTEM
+      dateCreated: 2570784891
+      lastDateRead: 2570786587
+      lastDateWritten: 2570785301
+      dateCreatedStr: 1988-04-29 17:01:59
+      lastDateReadStr: 1988-04-29 17:28:27
+      lastDateWrittenStr: 1988-04-29 17:08:21
+      bpunValid: null
+    - name: ND-5000-AF-SIM-A:NRF
+      type: NRF
+      pages: 22
+      bytes: 44588
+      userName: SYSTEM
+      dateCreated: 2570784896
+      lastDateRead: 2592800251
+      lastDateWritten: 2570784897
+      dateCreatedStr: 1988-04-29 17:02:00
+      lastDateReadStr: 1988-10-05 15:55:59
+      lastDateWrittenStr: 1988-04-29 17:02:01
+      bpunValid: null
+    - name: ND-5000-AD-SIM-A:NRF
+      type: NRF
+      pages: 6
+      bytes: 12096
+      userName: SYSTEM
+      dateCreated: 2570784896
+      lastDateRead: 2592800274
+      lastDateWritten: 2570784915
+      dateCreatedStr: 1988-04-29 17:02:00
+      lastDateReadStr: 1988-10-05 15:56:18
+      lastDateWrittenStr: 1988-04-29 17:02:19
+      bpunValid: null
+    - name: ND-500-RTC-LIB-A:NRF
+      type: NRF
+      pages: 1
+      bytes: 180
+      userName: SYSTEM
+      dateCreated: 2570784922
+      lastDateRead: 2592800344
+      lastDateWritten: 2570785377
+      dateCreatedStr: 1988-04-29 17:02:26
+      lastDateReadStr: 1988-10-05 15:57:24
+      lastDateWrittenStr: 1988-04-29 17:09:33
+      bpunValid: null
+    - name: MICRO-11274A01-P:TEXT
+      type: TEXT
+      pages: 4
+      bytes: 7632
+      userName: SYSTEM
+      dateCreated: 2572500568
+      lastDateRead: 2586871239
+      lastDateWritten: 2575092388
+      dateCreatedStr: 1988-05-10 19:57:24
+      lastDateReadStr: 1988-08-24 08:23:07
+      lastDateWrittenStr: 1988-05-30 12:42:36
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 200/ND-disk-00260.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:41:57.300Z
+imagingLogs:
+  - ND-disk-00260.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-211274-a01-d1-b7c8083f
+  syncStatus: pending

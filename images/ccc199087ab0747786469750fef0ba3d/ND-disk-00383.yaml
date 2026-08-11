@@ -1,0 +1,51 @@
+id: nd-10337-f-d1-ccc19908
+volumeName: ND-10337F
+md5: ccc199087ab0747786469750fef0ba3d
+product:
+  id: ND-10337
+  version: F
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 72
+  files:
+    - name: BACKUP-F00:PROG
+      type: PROG
+      pages: 70
+      bytes: 184132
+      userName: FLOPPY-USER
+      dateCreated: 2328552866
+      lastDateRead: 2389619139
+      lastDateWritten: 2330788531
+      dateCreatedStr: 1984-11-05 14:22:34
+      lastDateReadStr: 1985-09-23 11:07:03
+      lastDateWrittenStr: 1984-11-22 16:10:51
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 300/ND-disk-00383.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:45:56.822Z
+imagingLogs:
+  - ND-disk-00383.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10337-f-d1-ccc19908
+  syncStatus: pending

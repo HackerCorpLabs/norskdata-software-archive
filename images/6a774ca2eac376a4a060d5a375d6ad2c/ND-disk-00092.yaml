@@ -1,0 +1,185 @@
+id: nd-210177-k01-d1-6a774ca2
+volumeName: 210177K01-XX-01D
+md5: 6a774ca2eac376a4a060d5a375d6ad2c
+product:
+  id: ND-210177
+  version: K01
+  diskNumber: 1
+  language: XX
+image:
+  sizeBytes: 1310720
+  format: raw
+  controller: floppy
+  totalPages: 640
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 512
+  files:
+    - name: DESCRIPTION-FILE:DESC
+      type: DESC
+      pages: 8
+      bytes: 22528
+      userName: FLOPPY-USER
+      dateCreated: 2627907956
+      lastDateRead: 2650997083
+      lastDateWritten: 2627908153
+      dateCreatedStr: 1989-02-17 11:05:52
+      lastDateReadStr: 1989-08-01 16:05:27
+      lastDateWrittenStr: 1989-02-17 11:08:57
+      bpunValid: null
+    - name: COBOL-85-K01:LINK
+      type: LINK
+      pages: 9
+      bytes: 17089
+      userName: FLOPPY-USER
+      dateCreated: 2627907989
+      lastDateRead: 2650997087
+      lastDateWritten: 2627907991
+      dateCreatedStr: 1989-02-17 11:06:21
+      lastDateReadStr: 1989-08-01 16:05:31
+      lastDateWrittenStr: 1989-02-17 11:06:23
+      bpunValid: null
+    - name: COBOL-85-K01:DSEG
+      type: DSEG
+      pages: 64
+      bytes: 129253
+      userName: FLOPPY-USER
+      dateCreated: 2627907991
+      lastDateRead: 2650997087
+      lastDateWritten: 2627907992
+      dateCreatedStr: 1989-02-17 11:06:23
+      lastDateReadStr: 1989-08-01 16:05:31
+      lastDateWrittenStr: 1989-02-17 11:06:24
+      bpunValid: null
+    - name: COBOL-85-K01:PSEG
+      type: PSEG
+      pages: 130
+      bytes: 265213
+      userName: FLOPPY-USER
+      dateCreated: 2627907993
+      lastDateRead: 2650997086
+      lastDateWritten: 2627907994
+      dateCreatedStr: 1989-02-17 11:06:25
+      lastDateReadStr: 1989-08-01 16:05:30
+      lastDateWrittenStr: 1989-02-17 11:06:26
+      bpunValid: null
+    - name: COBOL-85-LIB-K01:NRF
+      type: NRF
+      pages: 142
+      bytes: 289308
+      userName: FLOPPY-USER
+      dateCreated: 2627795020
+      lastDateRead: 2650997213
+      lastDateWritten: 2627795038
+      dateCreatedStr: 1989-02-16 15:33:12
+      lastDateReadStr: 1989-08-01 16:07:29
+      lastDateWrittenStr: 1989-02-16 15:33:30
+      bpunValid: null
+    - name: COBOL-85-LIB-K01:NEW
+      type: NEW
+      pages: 1
+      bytes: 378
+      userName: FLOPPY-USER
+      dateCreated: 2626615461
+      lastDateRead: 2627660596
+      lastDateWritten: 2626615572
+      dateCreatedStr: 1989-02-07 15:34:37
+      lastDateReadStr: 1989-02-15 14:44:52
+      lastDateWrittenStr: 1989-02-07 15:36:20
+      bpunValid: null
+    - name: COBOL-85-LIB-K01:OLD
+      type: OLD
+      pages: 1
+      bytes: 880
+      userName: FLOPPY-USER
+      dateCreated: 2626615469
+      lastDateRead: 2627660603
+      lastDateWritten: 2626615531
+      dateCreatedStr: 1989-02-07 15:34:45
+      lastDateReadStr: 1989-02-15 14:44:59
+      lastDateWrittenStr: 1989-02-07 15:35:43
+      bpunValid: null
+    - name: IS-MULTI-K00:NRF
+      type: NRF
+      pages: 1
+      bytes: 131
+      userName: FLOPPY-USER
+      dateCreated: 2514057992
+      lastDateRead: 2650997368
+      lastDateWritten: 2514058360
+      dateCreatedStr: 1987-07-12 23:44:08
+      lastDateReadStr: 1989-08-01 16:09:56
+      lastDateWrittenStr: 1987-07-12 23:49:56
+      bpunValid: null
+    - name: IS-MULTI-K00:NEW
+      type: NEW
+      pages: 1
+      bytes: 258
+      userName: FLOPPY-USER
+      dateCreated: 2623196457
+      lastDateRead: 2627660616
+      lastDateWritten: 2623972622
+      dateCreatedStr: 1989-01-13 12:52:41
+      lastDateReadStr: 1989-02-15 14:45:08
+      lastDateWrittenStr: 1989-01-19 10:20:14
+      bpunValid: null
+    - name: IS-MULTI-K00:OLD
+      type: OLD
+      pages: 1
+      bytes: 358
+      userName: FLOPPY-USER
+      dateCreated: 2623196241
+      lastDateRead: 2627660620
+      lastDateWritten: 2623972757
+      dateCreatedStr: 1989-01-13 12:49:17
+      lastDateReadStr: 1989-02-15 14:45:12
+      lastDateWrittenStr: 1989-01-19 10:22:21
+      bpunValid: null
+    - name: ISAM-INTER-K01:PROG
+      type: PROG
+      pages: 58
+      bytes: 118784
+      userName: FLOPPY-USER
+      dateCreated: 2521105208
+      lastDateRead: 2627660898
+      lastDateWritten: 2521105352
+      dateCreatedStr: 1987-09-02 16:12:56
+      lastDateReadStr: 1989-02-15 14:49:34
+      lastDateWrittenStr: 1987-09-02 16:15:08
+      bpunValid: null
+    - name: ISAM-SERVICE-K02:PROG
+      type: PROG
+      pages: 83
+      bytes: 211456
+      userName: FLOPPY-USER
+      dateCreated: 2627398117
+      lastDateRead: 2650997394
+      lastDateWritten: 2627398220
+      dateCreatedStr: 1989-02-13 14:39:37
+      lastDateReadStr: 1989-08-01 16:10:18
+      lastDateWrittenStr: 1989-02-13 14:41:12
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 000/ND-disk-00092.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T14:54:29.864Z
+imagingLogs:
+  - ND-disk-00092.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-210177-k01-d1-6a774ca2
+  syncStatus: pending

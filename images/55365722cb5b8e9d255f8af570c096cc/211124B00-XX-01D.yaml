@@ -1,0 +1,294 @@
+id: nd-211124-b00-d1-55365722
+volumeName: 211124B00-XX-01D
+md5: 55365722cb5b8e9d255f8af570c096cc
+product:
+  id: ND-211124
+  version: B00
+  diskNumber: 1
+  language: XX
+image:
+  sizeBytes: 1261568
+  format: raw
+  controller: floppy
+  totalPages: 616
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 299
+  files:
+    - name: TPE-MON-100-B00:PROG
+      type: PROG
+      pages: 28
+      bytes: 56320
+      userName: FLOPPY-USER
+      dateCreated: 2563170951
+      lastDateRead: null
+      lastDateWritten: 2563170954
+      dateCreatedStr: 1988-03-03 14:10:07
+      lastDateReadStr: null
+      lastDateWrittenStr: 1988-03-03 14:10:10
+      bpunValid: null
+    - name: SEMICS-1-B00:TEST
+      type: TEST
+      pages: 38
+      bytes: 76288
+      userName: FLOPPY-USER
+      dateCreated: 2563170965
+      lastDateRead: null
+      lastDateWritten: 2563170965
+      dateCreatedStr: 1988-03-03 14:10:21
+      lastDateReadStr: null
+      lastDateWrittenStr: 1988-03-03 14:10:21
+      bpunValid: null
+    - name: SEMICS-2-B00:NEXT
+      type: NEXT
+      pages: 27
+      bytes: 54272
+      userName: FLOPPY-USER
+      dateCreated: 2563170982
+      lastDateRead: null
+      lastDateWritten: 2563170982
+      dateCreatedStr: 1988-03-03 14:10:38
+      lastDateReadStr: null
+      lastDateWrittenStr: 1988-03-03 14:10:38
+      bpunValid: null
+    - name: SEMICS-3-B00:NEXT
+      type: NEXT
+      pages: 27
+      bytes: 54272
+      userName: FLOPPY-USER
+      dateCreated: 2563170996
+      lastDateRead: null
+      lastDateWritten: 2563170996
+      dateCreatedStr: 1988-03-03 14:10:52
+      lastDateReadStr: null
+      lastDateWrittenStr: 1988-03-03 14:10:52
+      bpunValid: null
+    - name: INST-EXT-B00:MODE
+      type: MODE
+      pages: 1
+      bytes: 1669
+      userName: FLOPPY-USER
+      dateCreated: 2563171014
+      lastDateRead: null
+      lastDateWritten: 2563171015
+      dateCreatedStr: 1988-03-03 14:11:06
+      lastDateReadStr: null
+      lastDateWrittenStr: 1988-03-03 14:11:07
+      bpunValid: null
+    - name: INST-SEMICS-B00:MODE
+      type: MODE
+      pages: 3
+      bytes: 627
+      userName: FLOPPY-USER
+      dateCreated: 2563171018
+      lastDateRead: null
+      lastDateWritten: 2563171018
+      dateCreatedStr: 1988-03-03 14:11:10
+      lastDateReadStr: null
+      lastDateWrittenStr: 1988-03-03 14:11:10
+      bpunValid: null
+    - name: SEMICS-ABBRV-B00:DATA
+      type: DATA
+      pages: 25
+      bytes: 50641
+      userName: FLOPPY-USER
+      dateCreated: 2563171022
+      lastDateRead: null
+      lastDateWritten: 2563171023
+      dateCreatedStr: 1988-03-03 14:11:14
+      lastDateReadStr: null
+      lastDateWrittenStr: 1988-03-03 14:11:15
+      bpunValid: null
+    - name: ALU-VERIFY-B00:EXT
+      type: EXT
+      pages: 3
+      bytes: 6144
+      userName: FLOPPY-USER
+      dateCreated: 2563167617
+      lastDateRead: null
+      lastDateWritten: 2563167619
+      dateCreatedStr: 1988-03-03 13:22:01
+      lastDateReadStr: null
+      lastDateWrittenStr: 1988-03-03 13:22:03
+      bpunValid: null
+    - name: MIC-REGISTER-B00:EXT
+      type: EXT
+      pages: 4
+      bytes: 8192
+      userName: FLOPPY-USER
+      dateCreated: 2563167683
+      lastDateRead: null
+      lastDateWritten: 2563167685
+      dateCreatedStr: 1988-03-03 13:23:03
+      lastDateReadStr: null
+      lastDateWrittenStr: 1988-03-03 13:23:05
+      bpunValid: null
+    - name: MIC-SEQUENCE-B00:EXT
+      type: EXT
+      pages: 1
+      bytes: 2048
+      userName: FLOPPY-USER
+      dateCreated: 2563167701
+      lastDateRead: null
+      lastDateWritten: 2563167703
+      dateCreatedStr: 1988-03-03 13:23:21
+      lastDateReadStr: null
+      lastDateWrittenStr: 1988-03-03 13:23:23
+      bpunValid: null
+    - name: ALU-CARD-B00:EXT
+      type: EXT
+      pages: 21
+      bytes: 43008
+      userName: FLOPPY-USER
+      dateCreated: 2563167717
+      lastDateRead: null
+      lastDateWritten: 2563167722
+      dateCreatedStr: 1988-03-03 13:23:37
+      lastDateReadStr: null
+      lastDateWrittenStr: 1988-03-03 13:23:42
+      bpunValid: null
+    - name: CACHE-TEST-B00:EXT
+      type: EXT
+      pages: 38
+      bytes: 77824
+      userName: FLOPPY-USER
+      dateCreated: 2563167769
+      lastDateRead: null
+      lastDateWritten: 2563167776
+      dateCreatedStr: 1988-03-03 13:24:25
+      lastDateReadStr: null
+      lastDateWrittenStr: 1988-03-03 13:24:32
+      bpunValid: null
+    - name: IAC-TEST-B00:EXT
+      type: EXT
+      pages: 4
+      bytes: 8192
+      userName: FLOPPY-USER
+      dateCreated: 2563168078
+      lastDateRead: null
+      lastDateWritten: 2563168084
+      dateCreatedStr: 1988-03-03 13:29:14
+      lastDateReadStr: null
+      lastDateWrittenStr: 1988-03-03 13:29:20
+      bpunValid: null
+    - name: DAC-TEST-B00:EXT
+      type: EXT
+      pages: 8
+      bytes: 16384
+      userName: FLOPPY-USER
+      dateCreated: 2563168121
+      lastDateRead: null
+      lastDateWritten: 2563168132
+      dateCreatedStr: 1988-03-03 13:29:57
+      lastDateReadStr: null
+      lastDateWrittenStr: 1988-03-03 13:30:04
+      bpunValid: null
+    - name: IDU-REGISTER-B00:EXT
+      type: EXT
+      pages: 5
+      bytes: 10240
+      userName: FLOPPY-USER
+      dateCreated: 2563168171
+      lastDateRead: null
+      lastDateWritten: 2563168177
+      dateCreatedStr: 1988-03-03 13:30:43
+      lastDateReadStr: null
+      lastDateWrittenStr: 1988-03-03 13:30:49
+      bpunValid: null
+    - name: IDA-VERIFY-B00:EXT
+      type: EXT
+      pages: 4
+      bytes: 8192
+      userName: FLOPPY-USER
+      dateCreated: 2563168213
+      lastDateRead: null
+      lastDateWritten: 2563168215
+      dateCreatedStr: 1988-03-03 13:31:21
+      lastDateReadStr: null
+      lastDateWrittenStr: 1988-03-03 13:31:23
+      bpunValid: null
+    - name: DMM-REGISTER-B00:EXT
+      type: EXT
+      pages: 9
+      bytes: 18432
+      userName: FLOPPY-USER
+      dateCreated: 2563168294
+      lastDateRead: null
+      lastDateWritten: 2563168296
+      dateCreatedStr: 1988-03-03 13:32:38
+      lastDateReadStr: null
+      lastDateWrittenStr: 1988-03-03 13:32:40
+      bpunValid: null
+    - name: IMM-REGISTER-B00:EXT
+      type: EXT
+      pages: 9
+      bytes: 18432
+      userName: FLOPPY-USER
+      dateCreated: 2563168323
+      lastDateRead: null
+      lastDateWritten: 2563168326
+      dateCreatedStr: 1988-03-03 13:33:03
+      lastDateReadStr: null
+      lastDateWrittenStr: 1988-03-03 13:33:06
+      bpunValid: null
+    - name: MM-VERIFY-B00:EXT
+      type: EXT
+      pages: 7
+      bytes: 14336
+      userName: FLOPPY-USER
+      dateCreated: 2563168352
+      lastDateRead: null
+      lastDateWritten: 2563168355
+      dateCreatedStr: 1988-03-03 13:33:32
+      lastDateReadStr: null
+      lastDateWrittenStr: 1988-03-03 13:33:35
+      bpunValid: null
+    - name: AAP1-2-TEST-B00:EXT
+      type: EXT
+      pages: 12
+      bytes: 24576
+      userName: FLOPPY-USER
+      dateCreated: 2563168408
+      lastDateRead: null
+      lastDateWritten: 2563168415
+      dateCreatedStr: 1988-03-03 13:34:24
+      lastDateReadStr: null
+      lastDateWrittenStr: 1988-03-03 13:34:31
+      bpunValid: null
+    - name: AAP2-VERIFY-B00:EXT
+      type: EXT
+      pages: 3
+      bytes: 6144
+      userName: FLOPPY-USER
+      dateCreated: 2563168451
+      lastDateRead: null
+      lastDateWritten: 2563168452
+      dateCreatedStr: 1988-03-03 13:35:03
+      lastDateReadStr: null
+      lastDateWrittenStr: 1988-03-03 13:35:04
+      bpunValid: null
+provenance:
+  contributor: tor
+  originalPath: Test-microprogram/211124B00-XX-01D.img
+  dateImaged: 2011-05-17
+  importedAt: 2026-08-11T14:32:10.594Z
+imagingLogs:
+  - ND-211124-2-EN.pdf
+  - ND0015.PDF
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-211124-b00-d1-55365722
+  syncStatus: pending

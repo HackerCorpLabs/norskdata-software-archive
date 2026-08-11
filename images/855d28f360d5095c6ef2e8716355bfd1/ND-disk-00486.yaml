@@ -1,0 +1,108 @@
+id: patch-nd-patch-sin-j-855d28f3
+volumeName: ND-PATCH-SIN-J
+md5: 855d28f360d5095c6ef2e8716355bfd1
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: SYSTEM
+      pagesUsed: 139
+  files:
+    - name: MULTI-FUNCTION:PROG
+      type: PROG
+      pages: 18
+      bytes: 36864
+      userName: SYSTEM
+      dateCreated: 2438810845
+      lastDateRead: 4269935016
+      lastDateWritten: 2438810850
+      dateCreatedStr: 1986-05-14 20:51:29
+      lastDateReadStr: 2013-10-01 00:38:40
+      lastDateWrittenStr: 1986-05-14 20:51:34
+      bpunValid: null
+    - name: START-PATCH-FILE:MODE
+      type: MODE
+      pages: 3
+      bytes: 4193
+      userName: SYSTEM
+      dateCreated: 2438810880
+      lastDateRead: 4269933937
+      lastDateWritten: 2438810881
+      dateCreatedStr: 1986-05-14 20:52:00
+      lastDateReadStr: 2013-10-01 00:21:49
+      lastDateWrittenStr: 1986-05-14 20:52:01
+      bpunValid: null
+    - name: PATCH-FILE:MODE
+      type: MODE
+      pages: 2
+      bytes: 3677
+      userName: SYSTEM
+      dateCreated: 2438810896
+      lastDateRead: 4269934074
+      lastDateWritten: 2438810897
+      dateCreatedStr: 1986-05-14 20:52:16
+      lastDateReadStr: 2013-10-01 00:23:58
+      lastDateWrittenStr: 1986-05-14 20:52:17
+      bpunValid: null
+    - name: PATCHES:PATC
+      type: PATC
+      pages: 105
+      bytes: 214193
+      userName: SYSTEM
+      dateCreated: 2438810903
+      lastDateRead: 4269934179
+      lastDateWritten: 2438810904
+      dateCreatedStr: 1986-05-14 20:52:23
+      lastDateReadStr: 2013-10-01 00:25:35
+      lastDateWrittenStr: 1986-05-14 20:52:24
+      bpunValid: null
+    - name: REFERENCE:FADM
+      type: FADM
+      pages: 3
+      bytes: 4998
+      userName: SYSTEM
+      dateCreated: 2438811077
+      lastDateRead: 4269934118
+      lastDateWritten: 2438811079
+      dateCreatedStr: 1986-05-14 20:55:05
+      lastDateReadStr: 2013-10-01 00:24:38
+      lastDateWrittenStr: 1986-05-14 20:55:07
+      bpunValid: null
+    - name: SYMBOLS:FADM
+      type: FADM
+      pages: 1
+      bytes: 33
+      userName: SYSTEM
+      dateCreated: 2438811089
+      lastDateRead: 4269934122
+      lastDateWritten: 2438811090
+      dateCreatedStr: 1986-05-14 20:55:17
+      lastDateReadStr: 2013-10-01 00:24:42
+      lastDateWrittenStr: 1986-05-14 20:55:18
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 400/ND-disk-00486.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:49:58.181Z
+imagingLogs:
+  - ND-disk-00486.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-patch-nd-patch-sin-j-855d28f3
+  syncStatus: pending

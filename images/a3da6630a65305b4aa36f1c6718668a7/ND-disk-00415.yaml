@@ -1,0 +1,64 @@
+id: nd-10191-e00-d3-a3da6630
+volumeName: 10191E00-3S
+md5: a3da6630a65305b4aa36f1c6718668a7
+product:
+  id: ND-10191
+  version: E00
+  diskNumber: 3
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 113
+  files:
+    - name: FORT32-1BANK-E0:BRF
+      type: BRF
+      pages: 54
+      bytes: 109964
+      userName: FLOPPY-USER
+      dateCreated: 2362896671
+      lastDateRead: 2456221457
+      lastDateWritten: 2372966277
+      dateCreatedStr: 1985-03-11 15:04:31
+      lastDateReadStr: 1986-09-19 15:28:17
+      lastDateWrittenStr: 1985-05-24 09:30:05
+      bpunValid: null
+    - name: FORT32-2BANK-E0:BRF
+      type: BRF
+      pages: 56
+      bytes: 114098
+      userName: FLOPPY-USER
+      dateCreated: 2362896736
+      lastDateRead: 2456221782
+      lastDateWritten: 2372966174
+      dateCreatedStr: 1985-03-11 15:05:32
+      lastDateReadStr: 1986-09-19 15:33:22
+      lastDateWrittenStr: 1985-05-24 09:28:30
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 400/ND-disk-00415.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:49:28.468Z
+imagingLogs:
+  - ND-disk-00415.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10191-e00-d3-a3da6630
+  syncStatus: pending

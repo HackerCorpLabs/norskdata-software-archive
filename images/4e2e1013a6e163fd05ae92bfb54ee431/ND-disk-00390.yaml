@@ -1,0 +1,72 @@
+id: img-4e2e1013a6e1
+volumeName: ND-10013K-PATCH
+md5: 4e2e1013a6e163fd05ae92bfb54ee431
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 93
+  files:
+    - name: NSHS-BLOCK-DATA:FTN
+      type: FTN
+      pages: 2
+      bytes: 2117
+      userName: FLOPPY-USER
+      dateCreated: 2326977467
+      lastDateRead: 2281701971
+      lastDateWritten: 2372476650
+      dateCreatedStr: 1984-10-25 13:46:59
+      lastDateReadStr: null
+      lastDateWrittenStr: 1985-05-20 17:59:42
+      bpunValid: null
+    - name: SCREEN-DEF-KTOBE:PROG
+      type: PROG
+      pages: 42
+      bytes: 84480
+      userName: FLOPPY-USER
+      dateCreated: 2254259476
+      lastDateRead: 2281701976
+      lastDateWritten: 2255404504
+      dateCreatedStr: 1983-09-14 20:20:20
+      lastDateReadStr: null
+      lastDateWrittenStr: 1983-09-23 11:55:24
+      bpunValid: null
+    - name: SCREEN-RTL-K94:BRF
+      type: BRF
+      pages: 45
+      bytes: 92115
+      userName: FLOPPY-USER
+      dateCreated: 2320959716
+      lastDateRead: 2281702003
+      lastDateWritten: 2320959716
+      dateCreatedStr: 1984-09-11 16:35:36
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-09-11 16:35:36
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 300/ND-disk-00390.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:45:57.537Z
+imagingLogs:
+  - ND-disk-00390.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-4e2e1013a6e1
+  syncStatus: pending

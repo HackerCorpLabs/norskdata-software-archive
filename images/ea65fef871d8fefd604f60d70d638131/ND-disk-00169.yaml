@@ -1,0 +1,187 @@
+id: nd-210800-l05-d1-ea65fef8
+volumeName: 210800L05-XX-01D
+md5: ea65fef871d8fefd604f60d70d638131
+product:
+  id: ND-210800
+  version: L05
+  diskNumber: 1
+  language: XX
+image:
+  sizeBytes: 1310720
+  format: raw
+  controller: floppy
+  totalPages: 640
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 9
+    - name: RELEASE-NTX
+      pagesUsed: 515
+  files:
+    - name: INSTALL-ED100-L0:XCOM
+      type: XCOM
+      pages: 1
+      bytes: 887
+      userName: FLOPPY-USER
+      dateCreated: 2368765428
+      lastDateRead: 2598159326
+      lastDateWritten: 2502747568
+      dateCreatedStr: 1985-04-24 07:55:52
+      lastDateReadStr: 1988-11-14 12:15:30
+      lastDateWrittenStr: 1987-04-22 14:22:48
+      bpunValid: null
+    - name: ED100-INSTALL2-L:XCOM
+      type: XCOM
+      pages: 5
+      bytes: 7796
+      userName: FLOPPY-USER
+      dateCreated: 2368643877
+      lastDateRead: 2598159320
+      lastDateWritten: 2584137270
+      dateCreatedStr: 1985-04-23 10:12:37
+      lastDateReadStr: 1988-11-14 12:15:24
+      lastDateWrittenStr: 1988-08-03 12:56:54
+      bpunValid: null
+    - name: NW-MAIN-L22:PROG
+      type: PROG
+      pages: 124
+      bytes: 407552
+      userName: RELEASE-NTX
+      dateCreated: 2584011864
+      lastDateRead: 2598159340
+      lastDateWritten: 2584016027
+      dateCreatedStr: 1988-08-02 14:17:24
+      lastDateReadStr: 1988-11-14 12:15:44
+      lastDateWrittenStr: 1988-08-02 15:18:27
+      bpunValid: null
+    - name: NW-MAIN-L22:ENTR
+      type: ENTR
+      pages: 14
+      bytes: 26642
+      userName: RELEASE-NTX
+      dateCreated: 2584011865
+      lastDateRead: 2598159369
+      lastDateWritten: 2584012448
+      dateCreatedStr: 1988-08-02 14:17:25
+      lastDateReadStr: 1988-11-14 12:16:09
+      lastDateWrittenStr: 1988-08-02 14:26:32
+      bpunValid: null
+    - name: NW-EDIT-L22:PROG
+      type: PROG
+      pages: 81
+      bytes: 411648
+      userName: RELEASE-NTX
+      dateCreated: 2584012857
+      lastDateRead: 2598159372
+      lastDateWritten: 2584016022
+      dateCreatedStr: 1988-08-02 14:32:57
+      lastDateReadStr: 1988-11-14 12:16:12
+      lastDateWrittenStr: 1988-08-02 15:18:22
+      bpunValid: null
+    - name: NW-EDIT-L22:ENTR
+      type: ENTR
+      pages: 5
+      bytes: 9492
+      userName: RELEASE-NTX
+      dateCreated: 2584012858
+      lastDateRead: 2598159390
+      lastDateWritten: 2584013238
+      dateCreatedStr: 1988-08-02 14:32:58
+      lastDateReadStr: 1988-11-14 12:16:30
+      lastDateWrittenStr: 1988-08-02 14:38:54
+      bpunValid: null
+    - name: NW-CMD-L22:PROG
+      type: PROG
+      pages: 78
+      bytes: 411648
+      userName: RELEASE-NTX
+      dateCreated: 2584012468
+      lastDateRead: 2598159392
+      lastDateWritten: 2584016017
+      dateCreatedStr: 1988-08-02 14:26:52
+      lastDateReadStr: 1988-11-14 12:16:32
+      lastDateWrittenStr: 1988-08-02 15:18:17
+      bpunValid: null
+    - name: NW-CMD-L22:ENTR
+      type: ENTR
+      pages: 4
+      bytes: 6236
+      userName: RELEASE-NTX
+      dateCreated: 2584012469
+      lastDateRead: 2598159411
+      lastDateWritten: 2584012806
+      dateCreatedStr: 1988-08-02 14:26:53
+      lastDateReadStr: 1988-11-14 12:16:51
+      lastDateWrittenStr: 1988-08-02 14:32:06
+      bpunValid: null
+    - name: NW-DOC-L22:PROG
+      type: PROG
+      pages: 71
+      bytes: 405504
+      userName: RELEASE-NTX
+      dateCreated: 2584013306
+      lastDateRead: 2598159413
+      lastDateWritten: 2584016023
+      dateCreatedStr: 1988-08-02 14:39:58
+      lastDateReadStr: 1988-11-14 12:16:53
+      lastDateWrittenStr: 1988-08-02 15:18:23
+      bpunValid: null
+    - name: NW-DOC-L22:ENTR
+      type: ENTR
+      pages: 4
+      bytes: 7070
+      userName: RELEASE-NTX
+      dateCreated: 2584013307
+      lastDateRead: 2598159434
+      lastDateWritten: 2584013645
+      dateCreatedStr: 1988-08-02 14:39:59
+      lastDateReadStr: 1988-11-14 12:17:10
+      lastDateWrittenStr: 1988-08-02 14:45:13
+      bpunValid: null
+    - name: NW-JULIE-L22:PROG
+      type: PROG
+      pages: 117
+      bytes: 415744
+      userName: RELEASE-NTX
+      dateCreated: 2584013705
+      lastDateRead: 2598159437
+      lastDateWritten: 2584016023
+      dateCreatedStr: 1988-08-02 14:46:09
+      lastDateReadStr: 1988-11-14 12:17:13
+      lastDateWrittenStr: 1988-08-02 15:18:23
+      bpunValid: null
+    - name: NW-JULIE-L22:ENTR
+      type: ENTR
+      pages: 6
+      bytes: 10508
+      userName: RELEASE-NTX
+      dateCreated: 2584013706
+      lastDateRead: 2598159465
+      lastDateWritten: 2584013975
+      dateCreatedStr: 1988-08-02 14:46:10
+      lastDateReadStr: 1988-11-14 12:17:41
+      lastDateWrittenStr: 1988-08-02 14:50:23
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 100/ND-disk-00169.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:26:01.298Z
+imagingLogs:
+  - ND-disk-00169.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-210800-l05-d1-ea65fef8
+  syncStatus: pending

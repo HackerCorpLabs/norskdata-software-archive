@@ -1,0 +1,120 @@
+id: os-n-100-1001-i-11ae0dcc
+volumeName: N-100-1001-III
+md5: 11ae0dcc8beaf63354f451173cd4e197
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: SYSTEM
+      pagesUsed: 121
+  files:
+    - name: NEW-SYSTEM:PROG
+      type: PROG
+      pages: 30
+      bytes: 36865
+      userName: SYSTEM
+      dateCreated: 2423846019
+      lastDateRead: 4269933827
+      lastDateWritten: 2423846031
+      dateCreatedStr: 1986-01-28 15:18:03
+      lastDateReadStr: 2013-10-01 00:20:03
+      lastDateWrittenStr: 1986-01-28 15:18:15
+      bpunValid: null
+    - name: F32-FMAC-1920C:PROG
+      type: PROG
+      pages: 15
+      bytes: 28792
+      userName: SYSTEM
+      dateCreated: 2423846024
+      lastDateRead: 2423846038
+      lastDateWritten: 2423846038
+      dateCreatedStr: 1986-01-28 15:18:08
+      lastDateReadStr: 1986-01-28 15:18:22
+      lastDateWrittenStr: 1986-01-28 15:18:22
+      bpunValid: null
+    - name: F48-FMAC-1408D:PROG
+      type: PROG
+      pages: 15
+      bytes: 28792
+      userName: SYSTEM
+      dateCreated: 2423846025
+      lastDateRead: 4269933860
+      lastDateWritten: 2423846044
+      dateCreatedStr: 1986-01-28 15:18:09
+      lastDateReadStr: 2013-10-01 00:20:36
+      lastDateWrittenStr: 1986-01-28 15:18:28
+      bpunValid: null
+    - name: DMAC-1915F:BPUN
+      type: BPUN
+      pages: 20
+      bytes: 37001
+      userName: SYSTEM
+      dateCreated: 2423846026
+      lastDateRead: 4269933866
+      lastDateWritten: 2423846050
+      dateCreatedStr: 1986-01-28 15:18:10
+      lastDateReadStr: 2013-10-01 00:20:42
+      lastDateWrittenStr: 1986-01-28 15:18:34
+      bpunValid: true
+    - name: FILSYS-SYMBOLS:SYMB
+      type: SYMB
+      pages: 25
+      bytes: 39191
+      userName: SYSTEM
+      dateCreated: 2423846027
+      lastDateRead: 4269933849
+      lastDateWritten: 2423846056
+      dateCreatedStr: 1986-01-28 15:18:11
+      lastDateReadStr: 2013-10-01 00:20:25
+      lastDateWrittenStr: 1986-01-28 15:18:40
+      bpunValid: null
+    - name: RTLO-SYMBOLS:SYMB
+      type: SYMB
+      pages: 9
+      bytes: 16378
+      userName: SYSTEM
+      dateCreated: 2423846028
+      lastDateRead: 4269933856
+      lastDateWritten: 2423846063
+      dateCreatedStr: 1986-01-28 15:18:12
+      lastDateReadStr: 2013-10-01 00:20:32
+      lastDateWrittenStr: 1986-01-28 15:18:47
+      bpunValid: null
+    - name: COS-TADADM:BPUN
+      type: BPUN
+      pages: 6
+      bytes: 7184
+      userName: SYSTEM
+      dateCreated: 2423846030
+      lastDateRead: 4269933874
+      lastDateWritten: 2423846066
+      dateCreatedStr: 1986-01-28 15:18:14
+      lastDateReadStr: 2013-10-01 00:20:50
+      lastDateWrittenStr: 1986-01-28 15:18:50
+      bpunValid: true
+provenance:
+  contributor: gandalf
+  originalPath: 400/ND-disk-00484.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:49:57.871Z
+imagingLogs:
+  - ND-disk-00484.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-os-n-100-1001-i-11ae0dcc
+  syncStatus: pending

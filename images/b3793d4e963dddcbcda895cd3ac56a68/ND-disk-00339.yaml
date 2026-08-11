@@ -1,0 +1,288 @@
+id: img-b3793d4e963d
+volumeName: PATRIC-1
+md5: b3793d4e963dddcbcda895cd3ac56a68
+image:
+  sizeBytes: 319488
+  format: raw
+  controller: floppy
+  totalPages: 156
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: HULTEN
+      pagesUsed: 123
+  files:
+    - name: ASCII:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 565
+      userName: HULTEN
+      dateCreated: 2574418654
+      lastDateRead: 2626619714
+      lastDateWritten: 2574418869
+      dateCreatedStr: 1988-05-25 08:11:30
+      lastDateReadStr: 1989-02-07 16:37:02
+      lastDateWrittenStr: 1988-05-25 08:14:53
+      bpunValid: null
+    - name: MOSA:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1663
+      userName: HULTEN
+      dateCreated: 2574313757
+      lastDateRead: 2626619749
+      lastDateWritten: 2574418895
+      dateCreatedStr: 1988-05-24 14:36:29
+      lastDateReadStr: 1989-02-07 16:37:37
+      lastDateWrittenStr: 1988-05-25 08:15:15
+      bpunValid: null
+    - name: CRUNCHER:SYMB
+      type: SYMB
+      pages: 8
+      bytes: 13190
+      userName: HULTEN
+      dateCreated: 2574313772
+      lastDateRead: 2660963099
+      lastDateWritten: 2574313773
+      dateCreatedStr: 1988-05-24 14:36:44
+      lastDateReadStr: 1989-10-13 17:12:27
+      lastDateWrittenStr: 1988-05-24 14:36:45
+      bpunValid: null
+    - name: KOPIERA-100:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 665
+      userName: HULTEN
+      dateCreated: 2574313811
+      lastDateRead: 2626619631
+      lastDateWritten: 2574418931
+      dateCreatedStr: 1988-05-24 14:37:19
+      lastDateReadStr: 1989-02-07 16:35:47
+      lastDateWrittenStr: 1988-05-25 08:15:51
+      bpunValid: null
+    - name: RECRUNCHER:SYMB
+      type: SYMB
+      pages: 4
+      bytes: 7819
+      userName: HULTEN
+      dateCreated: 2574313824
+      lastDateRead: 2628596202
+      lastDateWritten: 2574313826
+      dateCreatedStr: 1988-05-24 14:37:32
+      lastDateReadStr: 1989-02-22 19:07:42
+      lastDateWrittenStr: 1988-05-24 14:37:34
+      bpunValid: null
+    - name: SPACE-INVADERS:C001
+      type: C001
+      pages: 2
+      bytes: 3741
+      userName: HULTEN
+      dateCreated: 2657436624
+      lastDateRead: null
+      lastDateWritten: 2657436625
+      dateCreatedStr: 1989-09-18 20:15:16
+      lastDateReadStr: null
+      lastDateWrittenStr: 1989-09-18 20:15:17
+      bpunValid: null
+    - name: LOGIN:SYMB
+      type: SYMB
+      pages: 4
+      bytes: 6725
+      userName: HULTEN
+      dateCreated: 2574558412
+      lastDateRead: 2625411683
+      lastDateWritten: 2588057250
+      dateCreatedStr: 1988-05-26 10:19:12
+      lastDateReadStr: 1989-01-30 09:41:35
+      lastDateWrittenStr: 1988-09-01 09:58:34
+      bpunValid: null
+    - name: PI:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 3987
+      userName: HULTEN
+      dateCreated: 2586378405
+      lastDateRead: 48957569
+      lastDateWritten: 2587825723
+      dateCreatedStr: 1988-08-20 16:02:37
+      lastDateReadStr: 1950-11-21 16:34:01
+      lastDateWrittenStr: 1988-08-31 17:24:59
+      bpunValid: null
+    - name: LAST-LOGIN:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 2353
+      userName: HULTEN
+      dateCreated: 2576137483
+      lastDateRead: 2587825792
+      lastDateWritten: 2576137485
+      dateCreatedStr: 1988-06-06 11:52:11
+      lastDateReadStr: 1988-08-31 17:26:00
+      lastDateWrittenStr: 1988-06-06 11:52:13
+      bpunValid: null
+    - name: LOGIN:BPUN
+      type: BPUN
+      pages: 1
+      bytes: 1820
+      userName: HULTEN
+      dateCreated: 2588056175
+      lastDateRead: 2588056858
+      lastDateWritten: 2588057285
+      dateCreatedStr: 1988-09-01 09:41:47
+      lastDateReadStr: 1988-09-01 09:52:26
+      lastDateWrittenStr: 1988-09-01 09:59:05
+      bpunValid: true
+    - name: SPACE-INVADERS:C002
+      type: C002
+      pages: 3
+      bytes: 4261
+      userName: HULTEN
+      dateCreated: 2657436666
+      lastDateRead: null
+      lastDateWritten: 2657436667
+      dateCreatedStr: 1989-09-18 20:15:58
+      lastDateReadStr: null
+      lastDateWrittenStr: 1989-09-18 20:15:59
+      bpunValid: null
+    - name: SPACE-INVADERS:C003
+      type: C003
+      pages: 3
+      bytes: 4613
+      userName: HULTEN
+      dateCreated: 2657436710
+      lastDateRead: null
+      lastDateWritten: 2657436711
+      dateCreatedStr: 1989-09-18 20:16:38
+      lastDateReadStr: null
+      lastDateWrittenStr: 1989-09-18 20:16:39
+      bpunValid: null
+    - name: SPACE-INVADERS:C004
+      type: C004
+      pages: 3
+      bytes: 4876
+      userName: HULTEN
+      dateCreated: 2657436761
+      lastDateRead: null
+      lastDateWritten: 2657436762
+      dateCreatedStr: 1989-09-18 20:17:25
+      lastDateReadStr: null
+      lastDateWrittenStr: 1989-09-18 20:17:26
+      bpunValid: null
+    - name: SPACE-INVADERS:C005
+      type: C005
+      pages: 3
+      bytes: 5802
+      userName: HULTEN
+      dateCreated: 2657436850
+      lastDateRead: null
+      lastDateWritten: 2657436851
+      dateCreatedStr: 1989-09-18 20:18:50
+      lastDateReadStr: null
+      lastDateWrittenStr: 1989-09-18 20:18:51
+      bpunValid: null
+    - name: SPACE-INVADERS:0006
+      type: "0006"
+      pages: 6
+      bytes: 12212
+      userName: HULTEN
+      dateCreated: 2652456361
+      lastDateRead: null
+      lastDateWritten: 2652456362
+      dateCreatedStr: 1989-08-12 20:22:41
+      lastDateReadStr: null
+      lastDateWrittenStr: 1989-08-12 20:22:42
+      bpunValid: null
+    - name: SPACE-INVADERS:0007
+      type: "0007"
+      pages: 8
+      bytes: 15437
+      userName: HULTEN
+      dateCreated: 2654680916
+      lastDateRead: null
+      lastDateWritten: 2654680917
+      dateCreatedStr: 1989-08-29 19:29:20
+      lastDateReadStr: null
+      lastDateWrittenStr: 1989-08-29 19:29:21
+      bpunValid: null
+    - name: SPACE-INVADERS:0008
+      type: "0008"
+      pages: 10
+      bytes: 18580
+      userName: HULTEN
+      dateCreated: 2656246137
+      lastDateRead: null
+      lastDateWritten: 2656246138
+      dateCreatedStr: 1989-09-09 17:37:57
+      lastDateReadStr: null
+      lastDateWrittenStr: 1989-09-09 17:37:58
+      bpunValid: null
+    - name: SPACE-INVADERS:0009
+      type: "0009"
+      pages: 11
+      bytes: 20490
+      userName: HULTEN
+      dateCreated: 2656514453
+      lastDateRead: null
+      lastDateWritten: 2656514455
+      dateCreatedStr: 1989-09-11 19:06:21
+      lastDateReadStr: null
+      lastDateWrittenStr: 1989-09-11 19:06:23
+      bpunValid: null
+    - name: SPACE-INVADERS:0010
+      type: "0010"
+      pages: 12
+      bytes: 23665
+      userName: HULTEN
+      dateCreated: 2656611962
+      lastDateRead: null
+      lastDateWritten: 2656611968
+      dateCreatedStr: 1989-09-12 10:57:58
+      lastDateReadStr: null
+      lastDateWrittenStr: 1989-09-12 10:58:00
+      bpunValid: null
+    - name: SPACE-INVADERS:0011
+      type: "0011"
+      pages: 14
+      bytes: 27887
+      userName: HULTEN
+      dateCreated: 2657053237
+      lastDateRead: 2465362762
+      lastDateWritten: 2657053239
+      dateCreatedStr: 1989-09-15 22:40:53
+      lastDateReadStr: 1986-11-25 07:13:10
+      lastDateWrittenStr: 1989-09-15 22:40:55
+      bpunValid: null
+    - name: SPACE-INVADERS:C000
+      type: C000
+      pages: 2
+      bytes: 3416
+      userName: HULTEN
+      dateCreated: 2657436558
+      lastDateRead: 2657436883
+      lastDateWritten: 2657436559
+      dateCreatedStr: 1989-09-18 20:14:14
+      lastDateReadStr: 1989-09-18 20:19:19
+      lastDateWrittenStr: 1989-09-18 20:14:15
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 300/ND-disk-00339.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:45:48.519Z
+imagingLogs:
+  - ND-disk-00339.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-b3793d4e963d
+  syncStatus: pending

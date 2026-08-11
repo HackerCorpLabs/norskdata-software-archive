@@ -1,0 +1,89 @@
+id: nd-210507-b03-d1-ed30b35c
+volumeName: 210507B03-XX-01D
+md5: ed30b35c9259bb9c7bd7822d99f8267e
+product:
+  id: ND-210507
+  version: B03
+  diskNumber: 1
+  language: XX
+image:
+  sizeBytes: 1310720
+  format: raw
+  controller: floppy
+  totalPages: 640
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: SYSTEM
+      pagesUsed: 209
+  files:
+    - name: INSERT-SOFTK-B02:PROG
+      type: PROG
+      pages: 23
+      bytes: 145408
+      userName: SYSTEM
+      dateCreated: 2567750769
+      lastDateRead: 2665132945
+      lastDateWritten: 2567750773
+      dateCreatedStr: 1988-04-06 12:17:49
+      lastDateReadStr: 1989-11-13 11:14:17
+      lastDateWrittenStr: 1988-04-06 12:17:53
+      bpunValid: null
+    - name: KEYS-B03:DATA
+      type: DATA
+      pages: 66
+      bytes: 133120
+      userName: SYSTEM
+      dateCreated: 2567750888
+      lastDateRead: 2665132949
+      lastDateWritten: 2663705950
+      dateCreatedStr: 1988-04-06 12:19:40
+      lastDateReadStr: 1989-11-13 11:14:21
+      lastDateWrittenStr: 1989-11-02 14:53:30
+      bpunValid: null
+    - name: LIST-LEGALNO-B02:PROG
+      type: PROG
+      pages: 16
+      bytes: 32768
+      userName: SYSTEM
+      dateCreated: 2567751116
+      lastDateRead: 2665132962
+      lastDateWritten: 2567751117
+      dateCreatedStr: 1988-04-06 12:23:12
+      lastDateReadStr: 1989-11-13 11:14:34
+      lastDateWrittenStr: 1988-04-06 12:23:13
+      bpunValid: null
+    - name: SOFT-KEYS-AUX:DATA
+      type: DATA
+      pages: 100
+      bytes: 256
+      userName: SYSTEM
+      dateCreated: 2555956416
+      lastDateRead: 2665132964
+      lastDateWritten: 2636702570
+      dateCreatedStr: 1988-01-12 12:51:00
+      lastDateReadStr: 1989-11-13 11:14:36
+      lastDateWrittenStr: 1989-04-20 14:13:42
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 200/ND-disk-00257.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:41:55.951Z
+imagingLogs:
+  - ND-disk-00257.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-210507-b03-d1-ed30b35c
+  syncStatus: pending

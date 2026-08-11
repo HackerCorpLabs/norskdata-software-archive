@@ -1,0 +1,137 @@
+id: nd-210319-h02-d1-016307c9
+volumeName: 210319H02-XX-01D
+md5: 016307c989e20c2997e68723f0298637
+product:
+  id: ND-210319
+  version: H02
+  diskNumber: 1
+  language: XX
+image:
+  sizeBytes: 1310720
+  format: raw
+  controller: floppy
+  totalPages: 640
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 212
+  files:
+    - name: IN-NLL-XX-H02:PROG
+      type: PROG
+      pages: 66
+      bytes: 194484
+      userName: FLOPPY-USER
+      dateCreated: 2563185762
+      lastDateRead: 2563305987
+      lastDateWritten: 2563185766
+      dateCreatedStr: 1988-03-03 17:49:34
+      lastDateReadStr: 1988-03-04 15:08:03
+      lastDateWrittenStr: 1988-03-03 17:49:38
+      bpunValid: null
+    - name: IN-NLL-XX-H02:XCOM
+      type: XCOM
+      pages: 13
+      bytes: 26030
+      userName: FLOPPY-USER
+      dateCreated: 2563185805
+      lastDateRead: 2563306007
+      lastDateWritten: 2563185806
+      dateCreatedStr: 1988-03-03 17:50:13
+      lastDateReadStr: 1988-03-04 15:08:23
+      lastDateWrittenStr: 1988-03-03 17:50:14
+      bpunValid: null
+    - name: IN-NLL-XX-H02:INIT
+      type: INIT
+      pages: 8
+      bytes: 15514
+      userName: FLOPPY-USER
+      dateCreated: 2563185816
+      lastDateRead: 2563306552
+      lastDateWritten: 2563306552
+      dateCreatedStr: 1988-03-03 17:50:24
+      lastDateReadStr: 1988-03-04 15:16:56
+      lastDateWrittenStr: 1988-03-04 15:16:56
+      bpunValid: null
+    - name: DESCRIPTION-FILE:DESC
+      type: DESC
+      pages: 8
+      bytes: 22528
+      userName: FLOPPY-USER
+      dateCreated: 2563185828
+      lastDateRead: 2563306166
+      lastDateWritten: 2563185829
+      dateCreatedStr: 1988-03-03 17:50:36
+      lastDateReadStr: 1988-03-04 15:10:54
+      lastDateWrittenStr: 1988-03-03 17:50:37
+      bpunValid: null
+    - name: LINKAGE-LOAD-H02:PSEG
+      type: PSEG
+      pages: 61
+      bytes: 123989
+      userName: FLOPPY-USER
+      dateCreated: 2563185836
+      lastDateRead: 2563306169
+      lastDateWritten: 2563185837
+      dateCreatedStr: 1988-03-03 17:50:44
+      lastDateReadStr: 1988-03-04 15:10:57
+      lastDateWrittenStr: 1988-03-03 17:50:45
+      bpunValid: null
+    - name: LINKAGE-LOAD-H02:DSEG
+      type: DSEG
+      pages: 44
+      bytes: 2184977
+      userName: FLOPPY-USER
+      dateCreated: 2563185886
+      lastDateRead: 2563306170
+      lastDateWritten: 2563185887
+      dateCreatedStr: 1988-03-03 17:51:30
+      lastDateReadStr: 1988-03-04 15:10:58
+      lastDateWrittenStr: 1988-03-03 17:51:31
+      bpunValid: null
+    - name: LINKAGE-LOAD-H02:LINK
+      type: LINK
+      pages: 0
+      bytes: 4294967296
+      userName: FLOPPY-USER
+      dateCreated: 2563185933
+      lastDateRead: 2563306170
+      lastDateWritten: 2563185934
+      dateCreatedStr: 1988-03-03 17:52:13
+      lastDateReadStr: 1988-03-04 15:10:58
+      lastDateWrittenStr: 1988-03-03 17:52:14
+      bpunValid: null
+    - name: LINKAGE-LOAD-H02:UTIL
+      type: UTIL
+      pages: 2
+      bytes: 2440
+      userName: FLOPPY-USER
+      dateCreated: 2563185935
+      lastDateRead: 2563306126
+      lastDateWritten: 2563185936
+      dateCreatedStr: 1988-03-03 17:52:15
+      lastDateReadStr: 1988-03-04 15:10:14
+      lastDateWrittenStr: 1988-03-03 17:52:16
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 000/ND-disk-00042.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T14:54:10.767Z
+imagingLogs:
+  - ND-disk-00042.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-210319-h02-d1-016307c9
+  syncStatus: pending

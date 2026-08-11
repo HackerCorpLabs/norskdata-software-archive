@@ -1,0 +1,65 @@
+id: nd-250305-l07-d1-857cc355
+volumeName: 250305L07-XX-01D
+md5: 857cc35533e0b24c9aef16ab76b01d4b
+product:
+  id: ND-250305
+  version: L07
+  diskNumber: 1
+  language: XX
+image:
+  sizeBytes: 1261568
+  format: raw
+  controller: floppy
+  totalPages: 616
+  pageSize: 2048
+  bootFormat: flomon
+filesystem: ndfs
+ndfs:
+  users:
+    - name: SYSTEM
+      pagesUsed: 610
+  files:
+    - name: MACM-1718L:BPUN
+      type: BPUN
+      pages: 20
+      bytes: 40039
+      userName: SYSTEM
+      dateCreated: 2580596113
+      lastDateRead: 2602615070
+      lastDateWritten: 2602615070
+      dateCreatedStr: 1988-07-08 12:22:17
+      lastDateReadStr: 1988-12-16 12:04:30
+      lastDateWrittenStr: 1988-12-16 12:04:30
+      bpunValid: true
+    - name: SINTRAN-L-1:DATA
+      type: DATA
+      pages: 589
+      bytes: 1095538
+      userName: SYSTEM
+      dateCreated: 2580596118
+      lastDateRead: 2602615078
+      lastDateWritten: 2602615078
+      dateCreatedStr: 1988-07-08 12:22:22
+      lastDateReadStr: 1988-12-16 12:04:38
+      lastDateWrittenStr: 1988-12-16 12:04:38
+      bpunValid: null
+provenance:
+  contributor: tor
+  originalPath: SIII-L-250305L07/250305L07-XX-01D.IMG
+  dateImaged: 2009-08-27
+  importedAt: 2026-08-11T14:36:55.706Z
+imagingLogs:
+  - README.TXT
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-250305-l07-d1-857cc355
+  syncStatus: pending

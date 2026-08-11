@@ -1,0 +1,173 @@
+id: nd-211073-a04-d1-ce21db94
+volumeName: 211073A04-XX-01D
+md5: ce21db94e3f75817f6aacd404a87b7ad
+product:
+  id: ND-211073
+  version: A04
+  diskNumber: 1
+  language: XX
+image:
+  sizeBytes: 1310720
+  format: raw
+  controller: floppy
+  totalPages: 640
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 510
+  files:
+    - name: OEV-VERIF-A04:PROG
+      type: PROG
+      pages: 116
+      bytes: 249856
+      userName: FLOPPY-USER
+      dateCreated: 2577585897
+      lastDateRead: 2622949676
+      lastDateWritten: 2577586000
+      dateCreatedStr: 1988-06-17 13:27:41
+      lastDateReadStr: 1989-01-11 16:36:44
+      lastDateWrittenStr: 1988-06-17 13:29:16
+      bpunValid: null
+    - name: OEV-VERIF-NO-A04:CONF
+      type: CONF
+      pages: 15
+      bytes: 159642
+      userName: FLOPPY-USER
+      dateCreated: 2573250883
+      lastDateRead: 2622949703
+      lastDateWritten: 2573250887
+      dateCreatedStr: 1988-05-16 11:05:03
+      lastDateReadStr: 1989-01-11 16:37:07
+      lastDateWrittenStr: 1988-05-16 11:05:07
+      bpunValid: null
+    - name: OEV-VERIF-EN-A04:CONF
+      type: CONF
+      pages: 15
+      bytes: 159242
+      userName: FLOPPY-USER
+      dateCreated: 2573250848
+      lastDateRead: 2622949708
+      lastDateWritten: 2573250852
+      dateCreatedStr: 1988-05-16 11:04:32
+      lastDateReadStr: 1989-01-11 16:37:12
+      lastDateWrittenStr: 1988-05-16 11:04:36
+      bpunValid: null
+    - name: OEV-PATCH-A04:MODE
+      type: MODE
+      pages: 1
+      bytes: 365
+      userName: FLOPPY-USER
+      dateCreated: 2572601737
+      lastDateRead: 2622949713
+      lastDateWritten: 2573260426
+      dateCreatedStr: 1988-05-11 12:38:09
+      lastDateReadStr: 1989-01-11 16:37:17
+      lastDateWrittenStr: 1988-05-16 13:26:10
+      bpunValid: null
+    - name: IN-OEV-A04:PROG
+      type: PROG
+      pages: 79
+      bytes: 202854
+      userName: FLOPPY-USER
+      dateCreated: 2590827919
+      lastDateRead: 2622949446
+      lastDateWritten: 2621763220
+      dateCreatedStr: 1988-09-22 14:22:15
+      lastDateReadStr: 1989-01-11 16:33:06
+      lastDateWrittenStr: 1989-01-02 14:58:20
+      bpunValid: null
+    - name: IN-OEV-A04:INIT
+      type: INIT
+      pages: 3
+      bytes: 5116
+      userName: FLOPPY-USER
+      dateCreated: 2591597022
+      lastDateRead: 2622949445
+      lastDateWritten: 2622263333
+      dateCreatedStr: 1988-09-28 10:07:30
+      lastDateReadStr: 1989-01-11 16:33:05
+      lastDateWrittenStr: 1989-01-06 09:00:37
+      bpunValid: null
+    - name: IN-OEV-EN-A04:XCOM
+      type: XCOM
+      pages: 13
+      bytes: 25572
+      userName: FLOPPY-USER
+      dateCreated: 2590827970
+      lastDateRead: 2622949425
+      lastDateWritten: 2621763280
+      dateCreatedStr: 1988-09-22 14:23:02
+      lastDateReadStr: 1989-01-11 16:32:49
+      lastDateWrittenStr: 1989-01-02 14:59:16
+      bpunValid: null
+    - name: UE-ERMSG-EN-C06:ERR
+      type: ERR
+      pages: 118
+      bytes: 241664
+      userName: FLOPPY-USER
+      dateCreated: 2521882214
+      lastDateRead: 2601593291
+      lastDateWritten: 2521882214
+      dateCreatedStr: 1987-09-08 13:57:38
+      lastDateReadStr: 1988-12-08 18:39:11
+      lastDateWrittenStr: 1987-09-08 13:57:38
+      bpunValid: null
+    - name: UE-ERMSG-NO-C06:ERR
+      type: ERR
+      pages: 121
+      bytes: 247808
+      userName: FLOPPY-USER
+      dateCreated: 2521882263
+      lastDateRead: 2601593313
+      lastDateWritten: 2521882264
+      dateCreatedStr: 1987-09-08 13:58:23
+      lastDateReadStr: 1988-12-08 18:39:33
+      lastDateWrittenStr: 1987-09-08 13:58:24
+      bpunValid: null
+    - name: DDBTABLES-E08:VTM
+      type: VTM
+      pages: 16
+      bytes: 32514
+      userName: FLOPPY-USER
+      dateCreated: 2555180129
+      lastDateRead: 2601593335
+      lastDateWritten: 2555180129
+      dateCreatedStr: 1988-01-06 15:17:33
+      lastDateReadStr: 1988-12-08 18:39:55
+      lastDateWrittenStr: 1988-01-06 15:17:33
+      bpunValid: null
+    - name: IN-OEV-A04:INST
+      type: INST
+      pages: 1
+      bytes: 268
+      userName: FLOPPY-USER
+      dateCreated: 2621763796
+      lastDateRead: 2622949814
+      lastDateWritten: 2622949816
+      dateCreatedStr: 1989-01-02 15:03:20
+      lastDateReadStr: 1989-01-11 16:38:54
+      lastDateWrittenStr: 1989-01-11 16:38:56
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 000/ND-disk-00020.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T14:54:05.638Z
+imagingLogs:
+  - ND-disk-00020.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-211073-a04-d1-ce21db94
+  syncStatus: pending

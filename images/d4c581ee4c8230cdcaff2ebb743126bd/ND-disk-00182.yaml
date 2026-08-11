@@ -1,0 +1,81 @@
+id: nd-210881-k05-d1-d4c581ee
+volumeName: 210881K05-XX-01D
+md5: d4c581ee4c8230cdcaff2ebb743126bd
+product:
+  id: ND-210881
+  version: K05
+  diskNumber: 1
+  language: XX
+image:
+  sizeBytes: 1310720
+  format: raw
+  controller: floppy
+  totalPages: 640
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 5
+    - name: WORKFILES-NTX
+      pagesUsed: 6
+    - name: RELEASE-NTX
+      pagesUsed: 134
+  files:
+    - name: INSTALL-RTP-K00:XCOM
+      type: XCOM
+      pages: 3
+      bytes: 5219
+      userName: FLOPPY-USER
+      dateCreated: 2382274656
+      lastDateRead: 2567623044
+      lastDateWritten: 2567623044
+      dateCreatedStr: 1985-07-31 10:01:32
+      lastDateReadStr: 1988-04-05 13:06:04
+      lastDateWrittenStr: 1988-04-05 13:06:04
+      bpunValid: null
+    - name: REPORTER-RTP-K01:CRIT
+      type: CRIT
+      pages: 5
+      bytes: 912
+      userName: WORKFILES-NTX
+      dateCreated: 2333923696
+      lastDateRead: 2566068179
+      lastDateWritten: 2565935982
+      dateCreatedStr: 1984-12-14 13:37:48
+      lastDateReadStr: 1988-03-25 17:31:19
+      lastDateWrittenStr: 1988-03-24 17:13:46
+      bpunValid: null
+    - name: REPORTER-RTP-K10:PROG
+      type: PROG
+      pages: 132
+      bytes: 321536
+      userName: RELEASE-NTX
+      dateCreated: 2566066371
+      lastDateRead: 2591615971
+      lastDateWritten: 2566066371
+      dateCreatedStr: 1988-03-25 17:03:03
+      lastDateReadStr: 1988-09-28 14:47:35
+      lastDateWrittenStr: 1988-03-25 17:03:03
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 100/ND-disk-00182.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:26:03.228Z
+imagingLogs:
+  - ND-disk-00182.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-210881-k05-d1-d4c581ee
+  syncStatus: pending

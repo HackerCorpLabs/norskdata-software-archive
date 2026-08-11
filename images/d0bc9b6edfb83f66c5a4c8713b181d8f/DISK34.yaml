@@ -1,0 +1,73 @@
+id: nd-10534-a-d1-d0bc9b6e
+volumeName: ND-10534A
+md5: d0bc9b6edfb83f66c5a4c8713b181d8f
+product:
+  id: ND-10534
+  version: A
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 27
+  files:
+    - name: JEC-A:PROG
+      type: PROG
+      pages: 13
+      bytes: 26624
+      userName: FLOPPY-USER
+      dateCreated: 2286329167
+      lastDateRead: 581697639
+      lastDateWritten: 2287266820
+      dateCreatedStr: 1984-01-03 09:53:15
+      lastDateReadStr: 1958-10-22 00:01:39
+      lastDateWrittenStr: 1984-01-10 14:48:04
+      bpunValid: null
+    - name: JEC-2BANK-A:BRF
+      type: BRF
+      pages: 4
+      bytes: 6389
+      userName: FLOPPY-USER
+      dateCreated: 2286329239
+      lastDateRead: 2266302068
+      lastDateWritten: 2286329240
+      dateCreatedStr: 1984-01-03 09:54:23
+      lastDateReadStr: 1983-12-10 16:25:52
+      lastDateWrittenStr: 1984-01-03 09:54:24
+      bpunValid: null
+    - name: JEC-1BANK-A:BRF
+      type: BRF
+      pages: 4
+      bytes: 6351
+      userName: FLOPPY-USER
+      dateCreated: 2286329283
+      lastDateRead: 2266302105
+      lastDateWritten: 2286329284
+      dateCreatedStr: 1984-01-03 09:55:03
+      lastDateReadStr: 1983-12-10 16:26:25
+      lastDateWrittenStr: 1984-01-03 09:55:04
+      bpunValid: null
+provenance:
+  contributor: www.datormuseum.se
+  originalPath: OK/DISK34.IMG
+  dateImaged: 2022-08-15
+  importedAt: 2026-08-11T17:07:03.983Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10534-a-d1-d0bc9b6e
+  syncStatus: pending

@@ -114,6 +114,50 @@ async function getCatalog(): Promise<Catalog> {
   return catalog;
 }
 
+/**
+ * Which Matcher queue an entry belongs to. The dashboard piles and the queue
+ * endpoint both use this - they used to carry separate copies of the rule and
+ * drifted apart, so the dashboard reported 349 "needs review" and 0 "bad reads"
+ * while the queue itself reported 179 and 171.
+ */
+/**
+ * The name a disk is identified by. NDFS floppies carry a volume name; MS-DOS
+ * disks carry a FAT volume label, and on the ND-OWS / NORTEXT PC media those
+ * labels are ND part numbers (30002EN1A00, 30022XX2N06), so they match exactly
+ * the same way.
+ */
+function identifyingName(e: CatalogEntry): string {
+  return e.volumeName ?? e.volumeLabel ?? '';
+}
+
+type QueueKind = 'linked' | 'reviewed' | 'auto' | 'new' | 'manual' | 'broken';
+
+function classifyForQueue(
+  e: CatalogEntry,
+  hasProduct: (productId: string) => boolean,
+): QueueKind {
+  if (e.productId) return 'linked';
+  if (e.tags?.includes('reviewed-unassigned')) return 'reviewed';
+
+  // A parseable name decides first, whatever filesystem the image holds. An
+  // MS-DOS disk labelled 30022XX2N06 is as identifiable as an NDFS floppy - it
+  // belongs in the matching queues, not among the unreadable ones.
+  const parsed = parseVolumeName(identifyingName(e));
+  if (parsed) return hasProduct(parsed.productId) ? 'auto' : 'new';
+
+  if (e.tags?.includes('hidden-in-legacy') ?? false) return 'broken';
+
+  // Nothing to match on. Where it goes depends on whether the image holds
+  // anything at all. Once detection has identified a filesystem - DOS, a backup
+  // volume, a tar - the disk has contents and belongs in the review queue, not
+  // among the unreadable ones, even though its name did not parse.
+  if (e.filesystem) return e.filesystem === 'none' ? 'broken' : 'manual';
+
+  // Not detected yet: fall back to what the import recorded.
+  const noFilesystem = !e.volumeName && !(e.ndfs?.files?.length) && !(e.ndfs?.users?.length);
+  return noFilesystem ? 'broken' : 'manual';
+}
+
 async function reloadCatalog(): Promise<Catalog> {
   catalog = await loadCatalog(ROOT_DIR);
   catalogStamp = await catalogSourceMtime();
@@ -384,7 +428,7 @@ app.get('/api/product-detail', async (req: express.Request, res: express.Respons
 
     for (const e of floppies) {
       const ver = e.version ?? '(unknown)';
-      const parsed = parseVolumeName(e.volumeName ?? '');
+      const parsed = parseVolumeName(identifyingName(e));
       const lang = parsed?.language ?? 'XX';
 
       if (!versionMap.has(ver)) versionMap.set(ver, { langMap: new Map(), setPhotos: new Map(), labelTranscription: null });
@@ -537,24 +581,17 @@ app.get('/api/stats', async (_req, res) => {
       }
 
       // Language from volume name parsing
-      const parsed = parseVolumeName(e.volumeName ?? '');
+      const parsed = parseVolumeName(identifyingName(e));
       const lang = parsed?.language ?? 'unknown';
       byLang[lang] = (byLang[lang] ?? 0) + 1;
 
-      // Match queue classification (skip already-linked and reviewed-skipped)
-      var needsWork = !e.productId && !e.tags?.includes('reviewed-unassigned');
-      if (e.tags?.includes('hidden-in-legacy')) {
-        queueBroken++;
-      } else if (needsWork) {
-        if (parsed) {
-          if (productMap.has(parsed.productId)) {
-            queueAuto++;
-          } else {
-            queueNew++;
-          }
-        } else {
-          queueManual++;
-        }
+      // Match queue classification - same rule the queue endpoint uses
+      switch (classifyForQueue(e, id => productMap.has(id))) {
+        case 'auto':   queueAuto++;   break;
+        case 'new':    queueNew++;    break;
+        case 'manual': queueManual++; break;
+        case 'broken': queueBroken++; break;
+        default: break;   // linked / reviewed are not queued
       }
     }
 
@@ -603,9 +640,20 @@ app.get('/api/floppies', async (req, res) => {
     const filterTag = req.query.tag ? String(req.query.tag) : null;
     const filterContributor = req.query.contributor ? String(req.query.contributor) : null;
     const filterQ = req.query.q ? String(req.query.q).trim().toLowerCase() : null;
+    // Images with no ND filesystem - empty disks, failed reads, MS-DOS floppies,
+    // tar archives - are hidden from the catalog by default. They have no volume
+    // name and no file list, so they only pad the listing; ?filesystem=all shows
+    // them, ?filesystem=dos|tar|none shows one kind.
+    const filterFs = req.query.filesystem ? String(req.query.filesystem) : 'ndfs';
 
     let results = cat.entries;
 
+    if (filterFs !== 'all') {
+      results = filterFs === 'ndfs'
+        // treat "not yet detected" as ND so nothing vanishes before a detect run
+        ? results.filter(e => !e.filesystem || e.filesystem === 'ndfs')
+        : results.filter(e => e.filesystem === filterFs);
+    }
     if (filterProductId) {
       results = results.filter(e => e.productId === filterProductId);
     }
@@ -632,6 +680,7 @@ app.get('/api/floppies', async (req, res) => {
       results = results.filter(e => {
         if (e.id.toLowerCase().includes(filterQ)) return true;
         if (e.volumeName?.toLowerCase().includes(filterQ)) return true;
+        if (e.volumeLabel?.toLowerCase().includes(filterQ)) return true;
         if (e.productId?.toLowerCase().includes(filterQ)) return true;
         if (e.md5.toLowerCase().includes(filterQ)) return true;
         if (e.version?.toLowerCase().includes(filterQ)) return true;
@@ -678,6 +727,9 @@ app.get('/api/floppies', async (req, res) => {
         id: e.id,
         md5: e.md5,
         volumeName: e.volumeName,
+        // A DOS floppy has no NDFS volume name; its FAT label is what names it.
+        volumeLabel: e.volumeLabel ?? null,
+        filesystem: e.filesystem ?? null,
         productId: e.productId,
         productName: resolveProdName(e.productId),
         version: e.version,
@@ -756,22 +808,8 @@ app.get('/api/match/queue', async (req, res) => {
       // Skip entries tagged as reviewed/skipped
       if (e.tags?.includes('reviewed-unassigned') && mode !== 'broken') continue;
 
-      const parsed = parseVolumeName(e.volumeName ?? '');
-      const isBroken = e.tags?.includes('hidden-in-legacy') ?? false;
-
-      let entryMode: string;
-      if (isBroken) {
-        entryMode = 'broken';
-      } else if (parsed) {
-        if (productMap.has(parsed.productId)) {
-          entryMode = 'auto';
-        } else {
-          entryMode = 'new';
-        }
-      } else {
-        entryMode = 'manual';
-      }
-
+      const parsed = parseVolumeName(identifyingName(e));
+      const entryMode = classifyForQueue(e, id => productMap.has(id));
       if (entryMode !== mode) continue;
 
       // Extract NDFS file names for display (from parsed ndfs or directoryContentRaw)
@@ -829,7 +867,7 @@ app.get('/api/match/queue', async (req, res) => {
         }
       }
 
-      const status = e.productId ? 'assigned' : (isBroken ? 'broken' : 'unassigned');
+      const status = e.productId ? 'assigned' : (entryMode === 'broken' ? 'broken' : 'unassigned');
 
       results.push({
         floppy: {
@@ -846,6 +884,19 @@ app.get('/api/match/queue', async (req, res) => {
       });
     }
 
+    // Sort before paging. Without this the queue came back in catalog order and
+    // was then sliced into pages, so the UI - which groups by source folder -
+    // showed one folder split across several pages, and the folders themselves
+    // in no order. Sort by folder (numerically, so 100 comes before 200 and not
+    // after 1000), then by file name within the folder.
+    results.sort((a, b) => {
+      const fa = a.floppy.sourceFolder ?? '', fb = b.floppy.sourceFolder ?? '';
+      if (fa !== fb) return fa.localeCompare(fb, undefined, { numeric: true, sensitivity: 'base' });
+      const na = String(a.floppy.originalFilename ?? a.floppy.volumeName ?? a.floppy.id);
+      const nb = String(b.floppy.originalFilename ?? b.floppy.volumeName ?? b.floppy.id);
+      return na.localeCompare(nb, undefined, { numeric: true, sensitivity: 'base' });
+    });
+
     const total = results.length;
     const page = results.slice(offset, offset + limit);
 
@@ -855,16 +906,32 @@ app.get('/api/match/queue', async (req, res) => {
   }
 });
 
+type MatchTarget = { productId?: string; newProduct?: { id: string; name: string } };
+type MatchOverrides = { version?: string; language?: string; diskNumber?: number };
+type MatchGroup = { floppyIds: string[]; target: MatchTarget; overrides?: MatchOverrides };
+
 app.post('/api/match/confirm', async (req, res) => {
   try {
-    const { floppyIds, target, overrides } = req.body as {
-      floppyIds: string[];
-      target: { productId?: string; newProduct?: { id: string; name: string } };
-      overrides?: { version?: string; language?: string; diskNumber?: number };
+    const body = req.body as {
+      floppyIds?: string[];
+      target?: MatchTarget;
+      overrides?: MatchOverrides;
+      /** Batch form: several product groups confirmed in ONE request. */
+      groups?: MatchGroup[];
     };
 
-    if (!floppyIds?.length || !target) {
-      res.status(400).json({ error: 'floppyIds and target are required' });
+    // Confirming a "Select all" of 16 floppies used to be one request per
+    // product, each doing a full persistCatalog (1.6 s on 296 entries) and each
+    // re-arming the site rebuild. Accepting all groups at once means one
+    // persist and one rebuild for the whole selection.
+    const groups: MatchGroup[] = body.groups?.length
+      ? body.groups
+      : (body.floppyIds?.length && body.target
+          ? [{ floppyIds: body.floppyIds, target: body.target, overrides: body.overrides }]
+          : []);
+
+    if (!groups.length) {
+      res.status(400).json({ error: 'floppyIds and target (or groups) are required' });
       return;
     }
 
@@ -872,40 +939,52 @@ app.post('/api/match/confirm', async (req, res) => {
 
     // If creating a new product, add it first
     let productId: string;
-    if (target.newProduct) {
-      await saveProductYaml(ROOT_DIR, target.newProduct.id, { name: target.newProduct.name });
+    let updated = 0;
+    let createdProducts = 0;
+    const productIds: string[] = [];
+
+    for (const g of groups) {
+      let productId: string;
+      if (g.target.newProduct) {
+        await saveProductYaml(ROOT_DIR, g.target.newProduct.id, { name: g.target.newProduct.name });
+        productsCache = null;
+        productId = g.target.newProduct.id;
+        createdProducts++;
+      } else if (g.target.productId) {
+        productId = g.target.productId;
+      } else {
+        res.status(400).json({ error: 'each target must have productId or newProduct' });
+        return;
+      }
+      productIds.push(productId);
+
+      for (const fid of g.floppyIds) {
+        const entry = cat.entries.find(e => e.id === fid);
+        if (!entry) continue;
+        entry.productId = productId;
+        if (g.overrides?.version !== undefined) entry.version = g.overrides.version;
+        if (g.overrides?.diskNumber !== undefined) entry.diskNumber = g.overrides.diskNumber;
+        if (entry.storage?.git?.yamlPath) {
+          await saveFloppyYaml(ROOT_DIR, entry);
+        }
+        updated++;
+      }
+    }
+
+    // Regenerate products.json once, after every new product has been written.
+    if (createdProducts > 0) {
       const products = await loadProducts(ROOT_DIR);
       await saveProducts(ROOT_DIR, products.map(p => ({ Id: p.id, Name: p.name })));
       productsCache = null;
-      productId = target.newProduct.id;
-    } else if (target.productId) {
-      productId = target.productId;
-    } else {
-      res.status(400).json({ error: 'target must have productId or newProduct' });
-      return;
-    }
-
-    // Update each floppy
-    let updated = 0;
-    for (const fid of floppyIds) {
-      const entry = cat.entries.find(e => e.id === fid);
-      if (!entry) continue;
-      entry.productId = productId;
-      if (overrides?.version !== undefined) entry.version = overrides.version;
-      if (overrides?.diskNumber !== undefined) entry.diskNumber = overrides.diskNumber;
-      // Write YAML if entry has one
-      if (entry.storage?.git?.yamlPath) {
-        await saveFloppyYaml(ROOT_DIR, entry);
-      }
-      updated++;
     }
 
     // Now that these floppies have a product, consolidate their set photos
-    // into the product group folder + regenerate JSON from YAML.
+    // into the product group folder + regenerate JSON from YAML. Once for the
+    // whole batch, not once per product.
     await persistCatalog(ROOT_DIR);
     catalog = null; // invalidate cache; next read reloads from regenerated catalog
 
-    res.json({ success: true, updated, productId });
+    res.json({ success: true, updated, productId: productIds[0], productIds });
   } catch (err) {
     res.status(500).json({ error: String(err) });
   }
@@ -1666,7 +1745,10 @@ function scheduleSiteRebuild(): void {
     } finally {
       siteRebuildRunning = false;
     }
-  }, 1200);
+    // 5 s, not 1.2 s: a confirm request takes ~1.6 s on a 300-entry catalog, so
+    // a shorter window expires between requests in a burst and starts a full
+    // rebuild for each one.
+  }, 5000);
 }
 
 app.post('/api/rebuild-index', async (_req, res) => {
@@ -2088,6 +2170,184 @@ app.patch('/api/catalog-entry', async (req, res) => {
     catalog = null;
 
     res.json({ success: true, entry });
+  } catch (err) {
+    res.status(500).json({ error: String(err) });
+  }
+});
+
+// Browse an MS-DOS floppy: volume info plus the full directory tree.
+app.get('/api/dosfs/info', async (req, res) => {
+  try {
+    const entryId = String(req.query.id ?? '');
+    const cat = await getCatalog();
+    const entry = cat.entries.find(e => e.id === entryId);
+    if (!entry) { res.status(404).json({ error: 'Entry not found' }); return; }
+    const imagePath = entry.storage?.git?.imagePath;
+    if (!imagePath) { res.status(404).json({ error: 'No image file for this entry' }); return; }
+    const abs = resolve(ROOT_DIR, imagePath);
+    if (!abs.startsWith(ROOT_DIR)) { res.status(403).json({ error: 'Access denied' }); return; }
+
+    const { gunzipSync } = await import('zlib');
+    const { DosVolume, NotFatError } = await import('./lib/dosfs/index.js');
+    const raw = gunzipSync(await readFile(abs));
+    let vol;
+    try {
+      vol = DosVolume.open(new Uint8Array(raw));
+    } catch (err) {
+      const why = err instanceof NotFatError ? err.message : String(err);
+      res.status(422).json({ error: 'Not an MS-DOS filesystem: ' + why });
+      return;
+    }
+    res.json({ id: entryId, info: vol.info, entries: vol.listAll() });
+  } catch (err) {
+    res.status(500).json({ error: String(err) });
+  }
+});
+
+// One file off an MS-DOS floppy. ?as=text returns it decoded, otherwise raw bytes.
+app.get('/api/dosfs/read-file', async (req, res) => {
+  try {
+    const entryId = String(req.query.id ?? '');
+    const filePath = String(req.query.path ?? '');
+    if (!entryId || !filePath) { res.status(400).json({ error: 'Missing id or path' }); return; }
+    const cat = await getCatalog();
+    const entry = cat.entries.find(e => e.id === entryId);
+    const imagePath = entry?.storage?.git?.imagePath;
+    if (!imagePath) { res.status(404).json({ error: 'Entry or image not found' }); return; }
+    const abs = resolve(ROOT_DIR, imagePath);
+    if (!abs.startsWith(ROOT_DIR)) { res.status(403).json({ error: 'Access denied' }); return; }
+
+    const { gunzipSync } = await import('zlib');
+    const { DosVolume } = await import('./lib/dosfs/index.js');
+    const vol = DosVolume.open(new Uint8Array(gunzipSync(await readFile(abs))));
+    let data = vol.readFile(filePath);
+    if (!data) { res.status(404).json({ error: 'File not found on the disk' }); return; }
+    // Same option the NDFS reader offers: ND text written with the parity bit
+    // set is unreadable until bit 7 is cleared.
+    if (String(req.query.parity ?? '') === 'strip') {
+      const stripped = new Uint8Array(data.length);
+      for (let i = 0; i < data.length; i++) stripped[i] = data[i] & 0x7f;
+      data = stripped;
+    }
+    res.setHeader('Content-Type', 'application/octet-stream');
+    res.setHeader('Content-Disposition', 'inline; filename="' + basename(filePath) + '"');
+    res.send(Buffer.from(data));
+  } catch (err) {
+    res.status(500).json({ error: String(err) });
+  }
+});
+
+// Browse a Norsk Data backup volume. Handles both formats: a BACKUP-SYSTEM
+// (VOL1) volume lists its files; a WINCH-TO-FLOPP volume has no file names at
+// all, so it reports the header and the page map instead.
+app.get('/api/ndbackup/info', async (req, res) => {
+  try {
+    const entryId = String(req.query.id ?? '');
+    const cat = await getCatalog();
+    const entry = cat.entries.find(e => e.id === entryId);
+    const imagePath = entry?.storage?.git?.imagePath;
+    if (!imagePath) { res.status(404).json({ error: 'Entry or image not found' }); return; }
+    const abs = resolve(ROOT_DIR, imagePath);
+    if (!abs.startsWith(ROOT_DIR)) { res.status(403).json({ error: 'Access denied' }); return; }
+
+    const { gunzipSync } = await import('zlib');
+    const nb = await import('./lib/ndbackup/index.js');
+    const raw = new Uint8Array(gunzipSync(await readFile(abs)));
+
+    if (nb.isBackupVolume(raw)) { res.json(nb.readBackupVolume(raw)); return; }
+    if (nb.isWinchVolume(raw)) { res.json(nb.readWinchVolume(raw)); return; }
+    res.status(422).json({ error: 'Not a Norsk Data backup volume' });
+  } catch (err) {
+    res.status(500).json({ error: String(err) });
+  }
+});
+
+// One file off a BACKUP-SYSTEM volume, by its sequence position in the listing.
+app.get('/api/ndbackup/read-file', async (req, res) => {
+  try {
+    const entryId = String(req.query.id ?? '');
+    const index = parseInt(String(req.query.index ?? '-1'), 10);
+    if (!entryId || index < 0) { res.status(400).json({ error: 'Missing id or index' }); return; }
+    const cat = await getCatalog();
+    const entry = cat.entries.find(e => e.id === entryId);
+    const imagePath = entry?.storage?.git?.imagePath;
+    if (!imagePath) { res.status(404).json({ error: 'Entry or image not found' }); return; }
+    const abs = resolve(ROOT_DIR, imagePath);
+    if (!abs.startsWith(ROOT_DIR)) { res.status(403).json({ error: 'Access denied' }); return; }
+
+    const { gunzipSync } = await import('zlib');
+    const nb = await import('./lib/ndbackup/index.js');
+    const raw = new Uint8Array(gunzipSync(await readFile(abs)));
+    if (!nb.isBackupVolume(raw)) { res.status(422).json({ error: 'Not a BACKUP-SYSTEM volume' }); return; }
+    const vol = nb.readBackupVolume(raw);
+    const file = vol.files[index];
+    if (!file) { res.status(404).json({ error: 'No such file on this volume' }); return; }
+
+    let data = nb.readBackupFile(raw, file);
+    if (String(req.query.parity ?? '') === 'strip') {
+      const stripped = new Uint8Array(data.length);
+      for (let i = 0; i < data.length; i++) stripped[i] = data[i] & 0x7f;
+      data = stripped;
+    }
+    res.setHeader('Content-Type', 'application/octet-stream');
+    // SINTRAN writes NAME:TYPE, but a colon is illegal in a Windows filename -
+    // the browser silently truncates "LISTA:SYMB" to ".SYMB". Save as LISTA.SYMB.
+    const safeName = file.fullName.replace(/:/g, '.').replace(/[^A-Za-z0-9._-]/g, '_');
+    res.setHeader('Content-Disposition', 'inline; filename="' + safeName + '"');
+    res.send(Buffer.from(data));
+  } catch (err) {
+    res.status(500).json({ error: String(err) });
+  }
+});
+
+// Detect which filesystem an image holds and record it. Runs on one entry
+// (?id=) or over the whole catalog (?scope=missing|all). Re-runnable: an image
+// the NDFS parser rejected may still be a DOS floppy or a tar, and this is how
+// that gets established after the fact.
+app.post('/api/detect-filesystem', async (req, res) => {
+  try {
+    const entryId = String(req.query.id ?? '');
+    const scope = String(req.query.scope ?? '');
+    const cat = await getCatalog();
+    const { detectFilesystem, readDosLabel } = await import('./api/filesystem-detect.js');
+    const { gunzipSync } = await import('zlib');
+
+    let targets = cat.entries;
+    if (entryId) {
+      targets = cat.entries.filter(e => e.id === entryId);
+      if (!targets.length) { res.status(404).json({ error: 'Entry not found' }); return; }
+    } else if (scope === 'missing') {
+      targets = cat.entries.filter(e => !e.filesystem);
+    } else if (scope !== 'all') {
+      res.status(400).json({ error: 'Pass ?id=<entryId> or ?scope=missing|all' }); return;
+    }
+
+    const counts: Record<string, number> = {};
+    let scanned = 0, changed = 0, failed = 0;
+    for (const e of targets) {
+      const imagePath = e.storage?.git?.imagePath;
+      if (!imagePath) continue;
+      const abs = resolve(ROOT_DIR, imagePath);
+      if (!abs.startsWith(ROOT_DIR)) continue;
+      let kind: string;
+      let label: string | null = null;
+      try {
+        const raw = gunzipSync(await readFile(abs));
+        const ndfsParsed = !!(e.volumeName || e.ndfs?.files?.length || e.ndfs?.users?.length);
+        kind = detectFilesystem(raw, ndfsParsed);
+        if (kind === 'dos') label = readDosLabel(raw);
+      } catch { failed++; continue; }
+      scanned++;
+      counts[kind] = (counts[kind] ?? 0) + 1;
+      if (e.filesystem !== kind || (label && e.volumeLabel !== label)) {
+        e.filesystem = kind as any;
+        if (label) e.volumeLabel = label;
+        if (e.storage?.git?.yamlPath) await saveFloppyYaml(ROOT_DIR, e);
+        changed++;
+      }
+    }
+    if (changed > 0) { await persistCatalog(ROOT_DIR); catalog = null; }
+    res.json({ scanned, changed, failed, counts });
   } catch (err) {
     res.status(500).json({ error: String(err) });
   }

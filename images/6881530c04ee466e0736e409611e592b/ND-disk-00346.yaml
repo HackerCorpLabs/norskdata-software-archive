@@ -1,0 +1,216 @@
+id: img-6881530c04ee
+volumeName: OLLE-OE-1
+md5: 6881530c04ee466e0736e409611e592b
+image:
+  sizeBytes: 319488
+  format: raw
+  controller: floppy
+  totalPages: 156
+  pageSize: 2048
+  bootFormat: bpun
+filesystem: ndfs
+ndfs:
+  users:
+    - name: DNF
+      pagesUsed: 94
+  files:
+    - name: PROCUR:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 542
+      userName: DNF
+      dateCreated: 2359766417
+      lastDateRead: 2386106752
+      lastDateWritten: 2359766419
+      dateCreatedStr: 1985-02-19 18:54:17
+      lastDateReadStr: 1985-08-28 17:38:00
+      lastDateWrittenStr: 1985-02-19 18:54:19
+      bpunValid: null
+    - name: TANK-MJ:PROG
+      type: PROG
+      pages: 22
+      bytes: 43520
+      userName: DNF
+      dateCreated: 2357403736
+      lastDateRead: 2421611563
+      lastDateWritten: 2357403738
+      dateCreatedStr: 1985-02-01 18:01:24
+      lastDateReadStr: 1986-01-11 13:48:43
+      lastDateWrittenStr: 1985-02-01 18:01:26
+      bpunValid: null
+    - name: INSTR-TANK:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1337
+      userName: DNF
+      dateCreated: 2357414277
+      lastDateRead: 2357523569
+      lastDateWritten: 2357414278
+      dateCreatedStr: 1985-02-01 20:38:05
+      lastDateReadStr: 1985-02-02 15:17:49
+      lastDateWrittenStr: 1985-02-01 20:38:06
+      bpunValid: null
+    - name: GRAFSKR:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 295
+      userName: DNF
+      dateCreated: 2357513009
+      lastDateRead: 2386755284
+      lastDateWritten: 2357513625
+      dateCreatedStr: 1985-02-02 12:44:49
+      lastDateReadStr: 1985-09-01 15:59:20
+      lastDateWrittenStr: 1985-02-02 12:54:25
+      bpunValid: null
+    - name: KARAKT-OE:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 730
+      userName: DNF
+      dateCreated: 2359250965
+      lastDateRead: 2386106328
+      lastDateWritten: 2359250967
+      dateCreatedStr: 1985-02-15 21:00:21
+      lastDateReadStr: 1985-08-28 17:31:24
+      lastDateWrittenStr: 1985-02-15 21:00:23
+      bpunValid: null
+    - name: POST-OE:SYM
+      type: SYM
+      pages: 1
+      bytes: 929
+      userName: DNF
+      dateCreated: 2359119578
+      lastDateRead: 2359355254
+      lastDateWritten: 2359119580
+      dateCreatedStr: 1985-02-14 20:59:26
+      lastDateReadStr: 1985-02-16 14:29:54
+      lastDateWrittenStr: 1985-02-14 20:59:28
+      bpunValid: null
+    - name: SKRI:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 488
+      userName: DNF
+      dateCreated: 2358061389
+      lastDateRead: 2358329993
+      lastDateWritten: 2358061390
+      dateCreatedStr: 1985-02-06 18:37:13
+      lastDateReadStr: 1985-02-08 20:10:09
+      lastDateWrittenStr: 1985-02-06 18:37:14
+      bpunValid: null
+    - name: SPERMIE:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 782
+      userName: DNF
+      dateCreated: 2386117443
+      lastDateRead: 2386248991
+      lastDateWritten: 2386117444
+      dateCreatedStr: 1985-08-28 20:13:03
+      lastDateReadStr: 1985-08-29 20:20:31
+      lastDateWrittenStr: 1985-08-28 20:13:04
+      bpunValid: null
+    - name: OOOOOOOOOOOO-OE:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1601
+      userName: DNF
+      dateCreated: 2386253582
+      lastDateRead: 2386757062
+      lastDateWritten: 2386365163
+      dateCreatedStr: 1985-08-29 21:28:14
+      lastDateReadStr: 1985-09-01 16:23:06
+      lastDateWrittenStr: 1985-08-30 16:43:43
+      bpunValid: null
+    - name: STREBER-SM:PROG
+      type: PROG
+      pages: 35
+      bytes: 70656
+      userName: DNF
+      dateCreated: 2386755936
+      lastDateRead: 2391218694
+      lastDateWritten: 2386755937
+      dateCreatedStr: 1985-09-01 16:05:32
+      lastDateReadStr: 1985-10-03 17:40:06
+      lastDateWrittenStr: 1985-09-01 16:05:33
+      bpunValid: null
+    - name: MASK:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 3150
+      userName: DNF
+      dateCreated: 2386766181
+      lastDateRead: 2386766182
+      lastDateWritten: 2387022507
+      dateCreatedStr: 1985-09-01 18:37:37
+      lastDateReadStr: 1985-09-01 18:37:38
+      lastDateWrittenStr: 1985-09-03 17:10:43
+      bpunValid: null
+    - name: ORD-OE:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 492
+      userName: DNF
+      dateCreated: 2387022566
+      lastDateRead: null
+      lastDateWritten: 2387022568
+      dateCreatedStr: 1985-09-03 17:11:38
+      lastDateReadStr: null
+      lastDateWrittenStr: 1985-09-03 17:11:40
+      bpunValid: null
+    - name: STREBER-SM:DATA
+      type: DATA
+      pages: 4
+      bytes: 6272
+      userName: DNF
+      dateCreated: 2391218544
+      lastDateRead: null
+      lastDateWritten: 2391218546
+      dateCreatedStr: 1985-10-03 17:37:48
+      lastDateReadStr: null
+      lastDateWrittenStr: 1985-10-03 17:37:50
+      bpunValid: null
+    - name: ROCKEFELLER-OE:DATA
+      type: DATA
+      pages: 3
+      bytes: 4174
+      userName: DNF
+      dateCreated: 2391221557
+      lastDateRead: 2391223169
+      lastDateWritten: 2391221990
+      dateCreatedStr: 1985-10-03 18:20:53
+      lastDateReadStr: 1985-10-03 18:46:01
+      lastDateWrittenStr: 1985-10-03 18:27:38
+      bpunValid: null
+    - name: SLUTRF:DATA
+      type: DATA
+      pages: 3
+      bytes: 4174
+      userName: DNF
+      dateCreated: 2391225538
+      lastDateRead: 2391228936
+      lastDateWritten: 2391228839
+      dateCreatedStr: 1985-10-03 19:19:02
+      lastDateReadStr: 1985-10-03 20:08:08
+      lastDateWrittenStr: 1985-10-03 20:06:39
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 300/ND-disk-00346.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:45:49.583Z
+imagingLogs:
+  - ND-disk-00346.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-6881530c04ee
+  syncStatus: pending

@@ -1,0 +1,120 @@
+id: img-6b12555464c6
+volumeName: REENT-2
+md5: 6b12555464c6b0737bb45f50e26d5bc4
+image:
+  sizeBytes: 319488
+  format: raw
+  controller: floppy
+  totalPages: 156
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: SYSTEM
+      pagesUsed: 112
+  files:
+    - name: DELFI-EAO:BPUN
+      type: BPUN
+      pages: 9
+      bytes: 18347
+      userName: SYSTEM
+      dateCreated: 2527248858
+      lastDateRead: 2838845449
+      lastDateWritten: 2527248860
+      dateCreatedStr: 1987-10-17 12:07:26
+      lastDateReadStr: 1992-04-26 21:32:09
+      lastDateWrittenStr: 1987-10-17 12:07:28
+      bpunValid: true
+    - name: ACC-SERV-PR-B:BPUN
+      type: BPUN
+      pages: 39
+      bytes: 78710
+      userName: SYSTEM
+      dateCreated: 2128800056
+      lastDateRead: 2838845418
+      lastDateWritten: 2128800058
+      dateCreatedStr: 1981-11-17 14:36:56
+      lastDateReadStr: 1992-04-26 21:31:42
+      lastDateWrittenStr: 1981-11-17 14:36:58
+      bpunValid: true
+    - name: FIL-STAT-HELP:BPUN
+      type: BPUN
+      pages: 9
+      bytes: 16914
+      userName: SYSTEM
+      dateCreated: 2128803910
+      lastDateRead: 2838845442
+      lastDateWritten: 2128803911
+      dateCreatedStr: 1981-11-17 15:33:06
+      lastDateReadStr: 1992-04-26 21:32:02
+      lastDateWrittenStr: 1981-11-17 15:33:07
+      bpunValid: true
+    - name: LOAD-REENTRANT:MODE
+      type: MODE
+      pages: 1
+      bytes: 252
+      userName: SYSTEM
+      dateCreated: 2261706769
+      lastDateRead: 2838846325
+      lastDateWritten: 2838846325
+      dateCreatedStr: 1983-11-07 14:32:17
+      lastDateReadStr: 1992-04-26 21:45:53
+      lastDateWrittenStr: 1992-04-26 21:45:53
+      bpunValid: null
+    - name: PED:BPUN
+      type: BPUN
+      pages: 17
+      bytes: 33286
+      userName: SYSTEM
+      dateCreated: 2516551151
+      lastDateRead: 2782707074
+      lastDateWritten: 2516551153
+      dateCreatedStr: 1987-07-31 24:23:47
+      lastDateReadStr: 1991-07-14 11:54:02
+      lastDateWrittenStr: 1987-07-31 24:23:49
+      bpunValid: null
+    - name: DUMP-PED:MODE
+      type: MODE
+      pages: 1
+      bytes: 29
+      userName: SYSTEM
+      dateCreated: 2516551371
+      lastDateRead: 2782707089
+      lastDateWritten: 2516551373
+      dateCreatedStr: 1987-07-31 24:27:11
+      lastDateReadStr: 1991-07-14 11:54:17
+      lastDateWrittenStr: 1987-07-31 24:27:13
+      bpunValid: null
+    - name: BASIC-H00:BPUN
+      type: BPUN
+      pages: 28
+      bytes: 56737
+      userName: SYSTEM
+      dateCreated: 2527248911
+      lastDateRead: 2782707128
+      lastDateWritten: 2527248913
+      dateCreatedStr: 1987-10-17 12:08:15
+      lastDateReadStr: 1991-07-14 11:54:56
+      lastDateWrittenStr: 1987-10-17 12:08:17
+      bpunValid: true
+provenance:
+  contributor: gandalf
+  originalPath: 400/ND-disk-00440c.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:49:36.866Z
+imagingLogs:
+  - ND-disk-00440c.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-6b12555464c6
+  syncStatus: pending

@@ -1,0 +1,53 @@
+id: nd-210721-c01-d1-68dae73b
+volumeName: 210721C01-XX-01D
+md5: 68dae73b565995151d2966b89a4c685f
+product:
+  id: ND-210721
+  version: C01
+  diskNumber: 1
+  language: XX
+image:
+  sizeBytes: 1310720
+  format: raw
+  controller: floppy
+  totalPages: 640
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 46
+  files:
+    - name: BRF-LINKER-C01:PROG
+      type: PROG
+      pages: 44
+      bytes: 155648
+      userName: FLOPPY-USER
+      dateCreated: 2555433676
+      lastDateRead: 2560807162
+      lastDateWritten: 2555433681
+      dateCreatedStr: 1988-01-08 13:11:12
+      lastDateReadStr: 1988-02-17 13:03:58
+      lastDateWrittenStr: 1988-01-08 13:11:17
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 000/ND-disk-00006.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T14:54:02.648Z
+imagingLogs:
+  - ND-disk-00006.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-210721-c01-d1-68dae73b
+  syncStatus: pending

@@ -1,0 +1,372 @@
+id: img-b968e9ae3baf
+volumeName: OMAR-A
+md5: b968e9ae3bafb2155224bf4c4e16833c
+image:
+  sizeBytes: 319488
+  format: raw
+  controller: floppy
+  totalPages: 156
+  pageSize: 2048
+  bootFormat: bpun
+filesystem: ndfs
+ndfs:
+  users:
+    - name: SYSTEM
+      pagesUsed: 147
+  files:
+    - name: SIMULATOR:SYMB
+      type: SYMB
+      pages: 8
+      bytes: 15387
+      userName: SYSTEM
+      dateCreated: 1969655890
+      lastDateRead: 2664762820
+      lastDateWritten: 1969655898
+      dateCreatedStr: 1979-05-19 09:01:18
+      lastDateReadStr: 1989-11-10 16:55:04
+      lastDateWrittenStr: 1979-05-19 09:01:26
+      bpunValid: null
+    - name: ASSEMBLER:SYMB
+      type: SYMB
+      pages: 3
+      bytes: 6028
+      userName: SYSTEM
+      dateCreated: 1969655969
+      lastDateRead: 2170635929
+      lastDateWritten: 1969655971
+      dateCreatedStr: 1979-05-19 09:02:33
+      lastDateReadStr: 1982-05-16 20:26:25
+      lastDateWrittenStr: 1979-05-19 09:02:35
+      bpunValid: null
+    - name: SPACE-WAR:SYMB
+      type: SYMB
+      pages: 6
+      bytes: 10652
+      userName: SYSTEM
+      dateCreated: 1970996677
+      lastDateRead: 2170635947
+      lastDateWritten: 1970996679
+      dateCreatedStr: 1979-05-29 16:23:05
+      lastDateReadStr: 1982-05-16 20:26:43
+      lastDateWrittenStr: 1979-05-29 16:23:07
+      bpunValid: null
+    - name: MAIN-MATH:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 2338
+      userName: SYSTEM
+      dateCreated: 2023794424
+      lastDateRead: 2664762836
+      lastDateWritten: 2023794425
+      dateCreatedStr: 1980-02-16 10:27:56
+      lastDateReadStr: 1989-11-10 16:55:20
+      lastDateWrittenStr: 1980-02-16 10:27:57
+      bpunValid: null
+    - name: NPL-SC-MP:SYMB
+      type: SYMB
+      pages: 14
+      bytes: 26886
+      userName: SYSTEM
+      dateCreated: 2057633386
+      lastDateRead: 2664762852
+      lastDateWritten: 2063815320
+      dateCreatedStr: 1980-10-18 15:57:42
+      lastDateReadStr: 1989-11-10 16:55:36
+      lastDateWrittenStr: 1980-12-01 21:10:24
+      bpunValid: null
+    - name: LETTER:DATA
+      type: DATA
+      pages: 2
+      bytes: 3136
+      userName: SYSTEM
+      dateCreated: 1975167216
+      lastDateRead: 2664762890
+      lastDateWritten: 1975167218
+      dateCreatedStr: 1979-06-29 10:35:48
+      lastDateReadStr: 1989-11-10 16:56:10
+      lastDateWrittenStr: 1979-06-29 10:35:50
+      bpunValid: null
+    - name: SUBR-MATH:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1225
+      userName: SYSTEM
+      dateCreated: 2023794459
+      lastDateRead: 2170636136
+      lastDateWritten: 2023794461
+      dateCreatedStr: 1980-02-16 10:28:27
+      lastDateReadStr: 1982-05-16 20:29:40
+      lastDateWrittenStr: 1980-02-16 10:28:29
+      bpunValid: null
+    - name: COMPILATOR:SYMB
+      type: SYMB
+      pages: 7
+      bytes: 12477
+      userName: SYSTEM
+      dateCreated: 1975167355
+      lastDateRead: 2664762919
+      lastDateWritten: 1990151837
+      dateCreatedStr: 1979-06-29 10:37:59
+      lastDateReadStr: 1989-11-10 16:56:39
+      lastDateWrittenStr: 1979-10-15 20:58:29
+      bpunValid: null
+    - name: BIG-LETTER:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 424
+      userName: SYSTEM
+      dateCreated: 1975167405
+      lastDateRead: 2170636152
+      lastDateWritten: 2023032193
+      dateCreatedStr: 1979-06-29 10:38:45
+      lastDateReadStr: 1982-05-16 20:29:56
+      lastDateWrittenStr: 1980-02-10 16:22:01
+      bpunValid: null
+    - name: NPL-LIBRARY:SYMB
+      type: SYMB
+      pages: 7
+      bytes: 12417
+      userName: SYSTEM
+      dateCreated: 2031564906
+      lastDateRead: 2664762928
+      lastDateWritten: 2031564932
+      dateCreatedStr: 1980-04-11 19:33:42
+      lastDateReadStr: 1989-11-10 16:56:48
+      lastDateWrittenStr: 1980-04-11 19:34:04
+      bpunValid: null
+    - name: AUTO-IDIOTEN:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 2018
+      userName: SYSTEM
+      dateCreated: 1975167483
+      lastDateRead: 2664762947
+      lastDateWritten: 1975167489
+      dateCreatedStr: 1979-06-29 10:39:59
+      lastDateReadStr: 1989-11-10 16:57:03
+      lastDateWrittenStr: 1979-06-29 10:40:01
+      bpunValid: null
+    - name: PUZZLE:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1922
+      userName: SYSTEM
+      dateCreated: 2035622634
+      lastDateRead: 2170636191
+      lastDateWritten: 2035622635
+      dateCreatedStr: 1980-05-10 18:11:42
+      lastDateReadStr: 1982-05-16 20:30:31
+      lastDateWrittenStr: 1980-05-10 18:11:43
+      bpunValid: null
+    - name: COMP-TEST:SYMB
+      type: SYMB
+      pages: 4
+      bytes: 7442
+      userName: SYSTEM
+      dateCreated: 1975170257
+      lastDateRead: 2664762972
+      lastDateWritten: 1975170258
+      dateCreatedStr: 1979-06-29 11:19:17
+      lastDateReadStr: 1989-11-10 16:57:28
+      lastDateWrittenStr: 1979-06-29 11:19:18
+      bpunValid: null
+    - name: MIN-PATIENS:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 2254
+      userName: SYSTEM
+      dateCreated: 1994867130
+      lastDateRead: 2170636242
+      lastDateWritten: 2053320370
+      dateCreatedStr: 1979-11-19 20:06:58
+      lastDateReadStr: 1982-05-16 20:31:18
+      lastDateWrittenStr: 1980-09-17 18:58:50
+      bpunValid: null
+    - name: BACK-UP-BASIC:SYMB
+      type: SYMB
+      pages: 6
+      bytes: 9460
+      userName: SYSTEM
+      dateCreated: 2060779058
+      lastDateRead: 2515221554
+      lastDateWritten: 2061171513
+      dateCreatedStr: 1980-11-10 15:56:50
+      lastDateReadStr: 1987-07-21 19:48:50
+      lastDateWrittenStr: 1980-11-13 15:44:57
+      bpunValid: null
+    - name: BACK-UP-MAC:SYMB
+      type: SYMB
+      pages: 22
+      bytes: 43899
+      userName: SYSTEM
+      dateCreated: 1986204183
+      lastDateRead: 2664762982
+      lastDateWritten: 2064062289
+      dateCreatedStr: 1979-09-17 17:08:23
+      lastDateReadStr: 1989-11-10 16:57:38
+      lastDateWrittenStr: 1980-12-03 17:29:17
+      bpunValid: null
+    - name: OED:SYMB
+      type: SYMB
+      pages: 6
+      bytes: 11529
+      userName: SYSTEM
+      dateCreated: 2060261875
+      lastDateRead: 2664762994
+      lastDateWritten: 2060261876
+      dateCreatedStr: 1980-11-06 17:39:51
+      lastDateReadStr: 1989-11-10 16:57:50
+      lastDateWrittenStr: 1980-11-06 17:39:52
+      bpunValid: null
+    - name: LOGICAL:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 2307
+      userName: SYSTEM
+      dateCreated: 2060278001
+      lastDateRead: 2664763003
+      lastDateWritten: 2060278003
+      dateCreatedStr: 1980-11-06 21:35:49
+      lastDateReadStr: 1989-11-10 16:57:59
+      lastDateWrittenStr: 1980-11-06 21:35:51
+      bpunValid: null
+    - name: DW-3-PRT:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 698
+      userName: SYSTEM
+      dateCreated: 1986324525
+      lastDateRead: 2664768661
+      lastDateWritten: 1986324528
+      dateCreatedStr: 1979-09-18 14:32:45
+      lastDateReadStr: 1989-11-10 18:18:21
+      lastDateWrittenStr: 1979-09-18 14:32:48
+      bpunValid: null
+    - name: EDITOR:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 3232
+      userName: SYSTEM
+      dateCreated: 1994867172
+      lastDateRead: 2664768657
+      lastDateWritten: 1994867174
+      dateCreatedStr: 1979-11-19 20:07:36
+      lastDateReadStr: 1989-11-10 18:18:17
+      lastDateWrittenStr: 1979-11-19 20:07:38
+      bpunValid: null
+    - name: BACK-UP-NORD-PL:SYMB
+      type: SYMB
+      pages: 5
+      bytes: 8262
+      userName: SYSTEM
+      dateCreated: 2060779554
+      lastDateRead: 2664763024
+      lastDateWritten: 2060911786
+      dateCreatedStr: 1980-11-10 16:00:34
+      lastDateReadStr: 1989-11-10 16:58:16
+      lastDateWrittenStr: 1980-11-11 16:18:42
+      bpunValid: null
+    - name: CBAS-FORMATTER:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 2032
+      userName: SYSTEM
+      dateCreated: 2063411279
+      lastDateRead: 2664763036
+      lastDateWritten: 2063411281
+      dateCreatedStr: 1980-11-30 18:33:15
+      lastDateReadStr: 1989-11-10 16:58:28
+      lastDateWrittenStr: 1980-11-30 18:33:17
+      bpunValid: null
+    - name: N-PL-INTEPRET:SYMB
+      type: SYMB
+      pages: 5
+      bytes: 9872
+      userName: SYSTEM
+      dateCreated: 1994868065
+      lastDateRead: 2664763043
+      lastDateWritten: 1994868066
+      dateCreatedStr: 1979-11-19 20:21:33
+      lastDateReadStr: 1989-11-10 16:58:35
+      lastDateWrittenStr: 1979-11-19 20:21:34
+      bpunValid: null
+    - name: TRE-DIM-HURKLE:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1773
+      userName: SYSTEM
+      dateCreated: 1994868516
+      lastDateRead: 2170636597
+      lastDateWritten: 2053320417
+      dateCreatedStr: 1979-11-19 20:28:36
+      lastDateReadStr: 1982-05-16 20:36:53
+      lastDateWrittenStr: 1980-09-17 18:59:33
+      bpunValid: null
+    - name: BASIC-ASSEMBLER:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 2362
+      userName: SYSTEM
+      dateCreated: 1994868740
+      lastDateRead: 2664763048
+      lastDateWritten: 2031565810
+      dateCreatedStr: 1979-11-19 20:32:04
+      lastDateReadStr: 1989-11-10 16:58:40
+      lastDateWrittenStr: 1980-04-11 19:47:50
+      bpunValid: null
+    - name: LIST-FILE:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 724
+      userName: SYSTEM
+      dateCreated: 1994875097
+      lastDateRead: 2664763057
+      lastDateWritten: 2053320326
+      dateCreatedStr: 1979-11-19 22:03:25
+      lastDateReadStr: 1989-11-10 16:58:49
+      lastDateWrittenStr: 1980-09-17 18:58:06
+      bpunValid: null
+    - name: NEW-BIG-LETTER:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 662
+      userName: SYSTEM
+      dateCreated: 2023033640
+      lastDateRead: 2116746599
+      lastDateWritten: 2023033641
+      dateCreatedStr: 1980-02-10 16:44:40
+      lastDateReadStr: 1981-08-21 15:53:39
+      lastDateWrittenStr: 1980-02-10 16:44:41
+      bpunValid: null
+    - name: MAIN-MATH:BRF
+      type: BRF
+      pages: 4
+      bytes: 6639
+      userName: SYSTEM
+      dateCreated: 2023794491
+      lastDateRead: 2105717217
+      lastDateWritten: 2023794496
+      dateCreatedStr: 1980-02-16 10:28:59
+      lastDateReadStr: 1981-06-01 11:07:33
+      lastDateWrittenStr: 1980-02-16 10:29:00
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 200/ND-disk-00290.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:42:07.881Z
+imagingLogs:
+  - ND-disk-00290.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-b968e9ae3baf
+  syncStatus: pending

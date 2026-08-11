@@ -1,0 +1,137 @@
+id: nd-211078-a01-d2-337e70c7
+volumeName: 211078A01-EN-02D
+md5: 337e70c7407b0c9394de2cff8a64d29e
+product:
+  id: ND-211078
+  version: A01
+  diskNumber: 2
+  language: EN
+image:
+  sizeBytes: 1310720
+  format: raw
+  controller: floppy
+  totalPages: 640
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 496
+  files:
+    - name: DDBTABLES-G04:VTM
+      type: VTM
+      pages: 37
+      bytes: 75360
+      userName: FLOPPY-USER
+      dateCreated: 2580467834
+      lastDateRead: 3191039663
+      lastDateWritten: 2580467840
+      dateCreatedStr: 1988-07-07 13:01:58
+      lastDateReadStr: 1997-08-25 22:26:47
+      lastDateWrittenStr: 1988-07-07 13:02:00
+      bpunValid: null
+    - name: DESCRIPTION-FILE:DESC
+      type: DESC
+      pages: 8
+      bytes: 22528
+      userName: FLOPPY-USER
+      dateCreated: 2580997150
+      lastDateRead: 3191039705
+      lastDateWritten: 2580997711
+      dateCreatedStr: 1988-07-11 14:16:30
+      lastDateReadStr: 1997-08-25 22:27:25
+      lastDateWrittenStr: 1988-07-11 14:25:15
+      bpunValid: null
+    - name: SCRATCH-SEG-01:LINK
+      type: LINK
+      pages: 0
+      bytes: 4294967296
+      userName: FLOPPY-USER
+      dateCreated: 2580997158
+      lastDateRead: 2580997159
+      lastDateWritten: 2580997159
+      dateCreatedStr: 1988-07-11 14:16:38
+      lastDateReadStr: 1988-07-11 14:16:39
+      lastDateWrittenStr: 1988-07-11 14:16:39
+      bpunValid: null
+    - name: SCRATCH-SEG-01:DSEG
+      type: DSEG
+      pages: 1
+      bytes: 1029
+      userName: FLOPPY-USER
+      dateCreated: 2580997160
+      lastDateRead: 2580997173
+      lastDateWritten: 2580997161
+      dateCreatedStr: 1988-07-11 14:16:40
+      lastDateReadStr: 1988-07-11 14:16:53
+      lastDateWrittenStr: 1988-07-11 14:16:41
+      bpunValid: null
+    - name: SCRATCH-SEG-01:PSEG
+      type: PSEG
+      pages: 1
+      bytes: 5
+      userName: FLOPPY-USER
+      dateCreated: 2580997162
+      lastDateRead: 2580997163
+      lastDateWritten: 2580997163
+      dateCreatedStr: 1988-07-11 14:16:42
+      lastDateReadStr: 1988-07-11 14:16:43
+      lastDateWrittenStr: 1988-07-11 14:16:43
+      bpunValid: null
+    - name: OEM-STATU-A01:LINK
+      type: LINK
+      pages: 15
+      bytes: 30337
+      userName: FLOPPY-USER
+      dateCreated: 2580997185
+      lastDateRead: 3191039710
+      lastDateWritten: 2580997186
+      dateCreatedStr: 1988-07-11 14:17:01
+      lastDateReadStr: 1997-08-25 22:27:30
+      lastDateWrittenStr: 1988-07-11 14:17:02
+      bpunValid: null
+    - name: OEM-STATU-A01:DSEG
+      type: DSEG
+      pages: 332
+      bytes: 677897
+      userName: FLOPPY-USER
+      dateCreated: 2580997187
+      lastDateRead: 3191039710
+      lastDateWritten: 2580997188
+      dateCreatedStr: 1988-07-11 14:17:03
+      lastDateReadStr: 1997-08-25 22:27:30
+      lastDateWrittenStr: 1988-07-11 14:17:04
+      bpunValid: null
+    - name: OEM-STATU-A01:PSEG
+      type: PSEG
+      pages: 94
+      bytes: 191144
+      userName: FLOPPY-USER
+      dateCreated: 2580997189
+      lastDateRead: 3191039709
+      lastDateWritten: 2580997190
+      dateCreatedStr: 1988-07-11 14:17:05
+      lastDateReadStr: 1997-08-25 22:27:29
+      lastDateWrittenStr: 1988-07-11 14:17:06
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 000/ND-disk-00022.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T14:54:06.045Z
+imagingLogs:
+  - ND-disk-00022.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-211078-a01-d2-337e70c7
+  syncStatus: pending

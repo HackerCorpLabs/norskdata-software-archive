@@ -1,0 +1,76 @@
+id: nd-10532-k-d2-5e930b16
+volumeName: ND-10532K-PART2
+md5: 5e930b16ddd37a4ee41bb1cf9960e259
+product:
+  id: ND-10532
+  version: K
+  diskNumber: 2
+image:
+  sizeBytes: 1310720
+  format: raw
+  controller: floppy
+  totalPages: 640
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 81
+  files:
+    - name: PED-ENG-K:HELP
+      type: HELP
+      pages: 47
+      bytes: 96256
+      userName: FLOPPY-USER
+      dateCreated: 2295024706
+      lastDateRead: 2390156751
+      lastDateWritten: 2295024711
+      dateCreatedStr: 1984-03-05 20:49:02
+      lastDateReadStr: 1985-09-27 14:23:15
+      lastDateWrittenStr: 1984-03-05 20:49:07
+      bpunValid: null
+    - name: UE-ERMSG-ENG-A01:ERR
+      type: ERR
+      pages: 25
+      bytes: 50176
+      userName: FLOPPY-USER
+      dateCreated: 2296815820
+      lastDateRead: 2390156766
+      lastDateWritten: 2296815821
+      dateCreatedStr: 1984-03-19 10:03:12
+      lastDateReadStr: 1985-09-27 14:23:30
+      lastDateWrittenStr: 1984-03-19 10:03:13
+      bpunValid: null
+    - name: DDBTABLES-D-C:VTM
+      type: VTM
+      pages: 5
+      bytes: 9446
+      userName: FLOPPY-USER
+      dateCreated: 2295024846
+      lastDateRead: 2390156774
+      lastDateWritten: 2295024847
+      dateCreatedStr: 1984-03-05 20:51:14
+      lastDateReadStr: 1985-09-27 14:23:38
+      lastDateWrittenStr: 1984-03-05 20:51:15
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 000/ND-disk-00097.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T14:54:30.966Z
+imagingLogs:
+  - ND-disk-00097.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10532-k-d2-5e930b16
+  syncStatus: pending

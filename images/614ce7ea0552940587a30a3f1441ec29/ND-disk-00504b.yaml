@@ -1,0 +1,41 @@
+id: nd-211067-a02-d1-614ce7ea
+volumeName: 211067A02-XX-01S
+md5: 614ce7ea0552940587a30a3f1441ec29
+product:
+  id: ND-211067
+  version: A02
+  diskNumber: 1
+  language: XX
+image:
+  sizeBytes: 319488
+  format: raw
+  controller: floppy
+  totalPages: 156
+  pageSize: 2048
+  bootFormat: flomon
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 66
+  files: []
+provenance:
+  contributor: gandalf
+  originalPath: 500/ND-disk-00504b.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:50:38.200Z
+imagingLogs:
+  - ND-disk-00504b.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-211067-a02-d1-614ce7ea
+  syncStatus: pending

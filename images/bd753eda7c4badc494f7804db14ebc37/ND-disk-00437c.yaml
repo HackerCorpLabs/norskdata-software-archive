@@ -1,0 +1,168 @@
+id: img-bd753eda7c4b
+volumeName: HUMBUG
+md5: bd753eda7c4badc494f7804db14ebc37
+image:
+  sizeBytes: 319488
+  format: raw
+  controller: floppy
+  totalPages: 156
+  pageSize: 2048
+  bootFormat: binary
+filesystem: ndfs
+ndfs:
+  users:
+    - name: SYSTEM
+      pagesUsed: 123
+  files:
+    - name: MINI-HENT-MODE:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1398
+      userName: SYSTEM
+      dateCreated: 2533163790
+      lastDateRead: 2281708268
+      lastDateWritten: 2534853024
+      dateCreatedStr: 1987-11-30 16:12:14
+      lastDateReadStr: null
+      lastDateWrittenStr: 1987-12-11 12:38:32
+      bpunValid: null
+    - name: PED:PROG
+      type: PROG
+      pages: 29
+      bytes: 4294967296
+      userName: SYSTEM
+      dateCreated: 2493172411
+      lastDateRead: 2782480676
+      lastDateWritten: 2281702535
+      dateCreatedStr: 1987-02-13 12:42:59
+      lastDateReadStr: 1991-07-12 20:36:36
+      lastDateWrittenStr: null
+      bpunValid: null
+    - name: TED:PROG
+      type: PROG
+      pages: 15
+      bytes: 30210
+      userName: SYSTEM
+      dateCreated: 2493172651
+      lastDateRead: 2523977587
+      lastDateWritten: 2493172900
+      dateCreatedStr: 1987-02-13 12:46:43
+      lastDateReadStr: 1987-09-24 13:29:51
+      lastDateWrittenStr: 1987-02-13 12:50:36
+      bpunValid: null
+    - name: ENA-ESC-LAW:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 97
+      userName: SYSTEM
+      dateCreated: 2534323073
+      lastDateRead: 2838762825
+      lastDateWritten: 2534323203
+      dateCreatedStr: 1987-12-07 11:14:01
+      lastDateReadStr: 1992-04-26 01:21:09
+      lastDateWrittenStr: 1987-12-07 11:16:03
+      bpunValid: null
+    - name: LOAD-MODE:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1046
+      userName: SYSTEM
+      dateCreated: 2560025007
+      lastDateRead: 2782707768
+      lastDateWritten: 2281701721
+      dateCreatedStr: 1988-02-11 14:06:47
+      lastDateReadStr: 1991-07-14 12:00:56
+      lastDateWrittenStr: null
+      bpunValid: null
+    - name: HENT-MODE:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1820
+      userName: SYSTEM
+      dateCreated: 2533163546
+      lastDateRead: 2782707780
+      lastDateWritten: 2574863207
+      dateCreatedStr: 1987-11-30 16:08:26
+      lastDateReadStr: 1991-07-14 12:01:04
+      lastDateWrittenStr: 1988-05-28 20:45:39
+      bpunValid: null
+    - name: EXTRA-PASLIB-PBL:BRF
+      type: BRF
+      pages: 3
+      bytes: 6018
+      userName: SYSTEM
+      dateCreated: 2574710369
+      lastDateRead: 2397760165
+      lastDateWritten: 2574710370
+      dateCreatedStr: 1988-05-27 15:25:33
+      lastDateReadStr: 1985-11-21 14:42:37
+      lastDateWrittenStr: 1988-05-27 15:25:34
+      bpunValid: null
+    - name: ACC-SERV-PR-B:BPUN
+      type: BPUN
+      pages: 39
+      bytes: 78710
+      userName: SYSTEM
+      dateCreated: 2515345096
+      lastDateRead: 2838763176
+      lastDateWritten: 2515345098
+      dateCreatedStr: 1987-07-22 17:59:08
+      lastDateReadStr: 1992-04-26 01:26:40
+      lastDateWrittenStr: 1987-07-22 17:59:10
+      bpunValid: true
+    - name: BAUD-RATE:PROG
+      type: PROG
+      pages: 5
+      bytes: 9216
+      userName: SYSTEM
+      dateCreated: 2281702860
+      lastDateRead: 2838762775
+      lastDateWritten: 2281702862
+      dateCreatedStr: null
+      lastDateReadStr: 1992-04-26 01:20:23
+      lastDateWrittenStr: null
+      bpunValid: null
+    - name: LIBRARY-PBL:BRF
+      type: BRF
+      pages: 5
+      bytes: 8395
+      userName: SYSTEM
+      dateCreated: 2574710379
+      lastDateRead: 2397760176
+      lastDateWritten: 2574710381
+      dateCreatedStr: 1988-05-27 15:25:43
+      lastDateReadStr: 1985-11-21 14:42:48
+      lastDateWrittenStr: 1988-05-27 15:25:45
+      bpunValid: null
+    - name: BASLIBR-H00:BRF
+      type: BRF
+      pages: 12
+      bytes: 23080
+      userName: SYSTEM
+      dateCreated: 2574710219
+      lastDateRead: 2326970842
+      lastDateWritten: 2574710220
+      dateCreatedStr: 1988-05-27 15:23:11
+      lastDateReadStr: 1984-10-25 12:07:26
+      lastDateWrittenStr: 1988-05-27 15:23:12
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 400/ND-disk-00437c.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:49:35.061Z
+imagingLogs:
+  - ND-disk-00437c.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-bd753eda7c4b
+  syncStatus: pending

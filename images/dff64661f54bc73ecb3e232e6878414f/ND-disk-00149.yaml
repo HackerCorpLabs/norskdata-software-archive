@@ -1,0 +1,89 @@
+id: nd-210913-a00-d1-dff64661
+volumeName: 210913A00-XX-01D
+md5: dff64661f54bc73ecb3e232e6878414f
+product:
+  id: ND-210913
+  version: A00
+  diskNumber: 1
+  language: XX
+image:
+  sizeBytes: 1310720
+  format: raw
+  controller: floppy
+  totalPages: 640
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 20
+  files:
+    - name: MON-CALL-1B-A00:BRF
+      type: BRF
+      pages: 3
+      bytes: 6120
+      userName: FLOPPY-USER
+      dateCreated: 2447550928
+      lastDateRead: 2447551114
+      lastDateWritten: 2447550932
+      dateCreatedStr: 1986-07-17 10:39:16
+      lastDateReadStr: 1986-07-17 10:42:10
+      lastDateWrittenStr: 1986-07-17 10:39:20
+      bpunValid: null
+    - name: MON-CALL-2B-A00:BRF
+      type: BRF
+      pages: 4
+      bytes: 6159
+      userName: FLOPPY-USER
+      dateCreated: 2447550936
+      lastDateRead: 2447551146
+      lastDateWritten: 2447550937
+      dateCreatedStr: 1986-07-17 10:39:24
+      lastDateReadStr: 1986-07-17 10:42:42
+      lastDateWrittenStr: 1986-07-17 10:39:25
+      bpunValid: null
+    - name: MON-CALL-LIB-A00:NRF
+      type: NRF
+      pages: 4
+      bytes: 7923
+      userName: FLOPPY-USER
+      dateCreated: 2447550943
+      lastDateRead: null
+      lastDateWritten: 2447550944
+      dateCreatedStr: 1986-07-17 10:39:31
+      lastDateReadStr: null
+      lastDateWrittenStr: 1986-07-17 10:39:32
+      bpunValid: null
+    - name: MON-CALL-NAMES-A:DATA
+      type: DATA
+      pages: 4
+      bytes: 7379
+      userName: FLOPPY-USER
+      dateCreated: 2447550948
+      lastDateRead: null
+      lastDateWritten: 2447550950
+      dateCreatedStr: 1986-07-17 10:39:36
+      lastDateReadStr: null
+      lastDateWrittenStr: 1986-07-17 10:39:38
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 100/ND-disk-00149.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:25:58.532Z
+imagingLogs:
+  - ND-disk-00149.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-210913-a00-d1-dff64661
+  syncStatus: pending

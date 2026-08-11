@@ -1,0 +1,336 @@
+id: img-5cb40c082e43
+volumeName: MIKAEL-3
+md5: 5cb40c082e437b809d71957dd7860e36
+image:
+  sizeBytes: 319488
+  format: raw
+  controller: floppy
+  totalPages: 156
+  pageSize: 2048
+  bootFormat: bpun
+filesystem: ndfs
+ndfs:
+  users:
+    - name: SYSTEM
+      pagesUsed: 139
+  files:
+    - name: Z80-SIMULATOR-MJ:SYMB
+      type: SYMB
+      pages: 36
+      bytes: 72836
+      userName: SYSTEM
+      dateCreated: 2191345793
+      lastDateRead: 2647329924
+      lastDateWritten: 2428037242
+      dateCreatedStr: 1982-10-14 20:34:01
+      lastDateReadStr: 1989-07-05 16:50:04
+      lastDateWrittenStr: 1986-02-28 14:33:58
+      bpunValid: null
+    - name: LISP-FUNCS-MJ:LISP
+      type: LISP
+      pages: 3
+      bytes: 4547
+      userName: SYSTEM
+      dateCreated: 2191346212
+      lastDateRead: 2557282332
+      lastDateWritten: 2191346219
+      dateCreatedStr: 1982-10-14 20:40:36
+      lastDateReadStr: 1988-01-22 16:32:28
+      lastDateWrittenStr: 1982-10-14 20:40:43
+      bpunValid: null
+    - name: KNYCKT-TREK-MJ:SYMB
+      type: SYMB
+      pages: 15
+      bytes: 26514
+      userName: SYSTEM
+      dateCreated: 2267482409
+      lastDateRead: 2647329945
+      lastDateWritten: 2267482410
+      dateCreatedStr: 1983-12-19 16:36:41
+      lastDateReadStr: 1989-07-05 16:50:25
+      lastDateWrittenStr: 1983-12-19 16:36:42
+      bpunValid: null
+    - name: HP-CHARACTERS-MJ:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 722
+      userName: SYSTEM
+      dateCreated: 2173871054
+      lastDateRead: 2557282352
+      lastDateWritten: 2173871060
+      dateCreatedStr: 1982-06-09 10:15:14
+      lastDateReadStr: 1988-01-22 16:32:48
+      lastDateWrittenStr: 1982-06-09 10:15:20
+      bpunValid: null
+    - name: KNYCK-REGLER-MJ:DATA
+      type: DATA
+      pages: 3
+      bytes: 4342
+      userName: SYSTEM
+      dateCreated: 2267482452
+      lastDateRead: 2647329972
+      lastDateWritten: 2267482454
+      dateCreatedStr: 1983-12-19 16:37:20
+      lastDateReadStr: 1989-07-05 16:50:52
+      lastDateWrittenStr: 1983-12-19 16:37:22
+      bpunValid: null
+    - name: MORSE-MJ:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 2177
+      userName: SYSTEM
+      dateCreated: 2173871198
+      lastDateRead: 2557282368
+      lastDateWritten: 2173871204
+      dateCreatedStr: 1982-06-09 10:17:30
+      lastDateReadStr: 1988-01-22 16:33:00
+      lastDateWrittenStr: 1982-06-09 10:17:36
+      bpunValid: null
+    - name: OPTIMIZER-GDD-MJ:SYMB
+      type: SYMB
+      pages: 3
+      bytes: 4584
+      userName: SYSTEM
+      dateCreated: 2193021009
+      lastDateRead: 2557282373
+      lastDateWritten: 2431984683
+      dateCreatedStr: 1982-10-27 13:33:17
+      lastDateReadStr: 1988-01-22 16:33:05
+      lastDateWrittenStr: 1986-03-26 18:16:43
+      bpunValid: null
+    - name: BASIC-FORM-MJ:SYMB
+      type: SYMB
+      pages: 3
+      bytes: 4444
+      userName: SYSTEM
+      dateCreated: 2173869216
+      lastDateRead: 2557282381
+      lastDateWritten: 2173869221
+      dateCreatedStr: 1982-06-09 09:50:32
+      lastDateReadStr: 1988-01-22 16:33:13
+      lastDateWrittenStr: 1982-06-09 09:50:37
+      bpunValid: null
+    - name: LOGICAL-MJ:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 3235
+      userName: SYSTEM
+      dateCreated: 2173871262
+      lastDateRead: 2557282387
+      lastDateWritten: 2173871267
+      dateCreatedStr: 1982-06-09 10:18:30
+      lastDateReadStr: 1988-01-22 16:33:19
+      lastDateWrittenStr: 1982-06-09 10:18:35
+      bpunValid: null
+    - name: TALL-SHIP-MJ:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 728
+      userName: SYSTEM
+      dateCreated: 2173871559
+      lastDateRead: 2647330000
+      lastDateWritten: 2260287956
+      dateCreatedStr: 1982-06-09 10:23:07
+      lastDateReadStr: 1989-07-05 16:51:16
+      lastDateWrittenStr: 1983-10-28 20:07:20
+      bpunValid: null
+    - name: FARGKODER-MAC-MJ:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 3144
+      userName: SYSTEM
+      dateCreated: 2173871603
+      lastDateRead: 2647330005
+      lastDateWritten: 2173871616
+      dateCreatedStr: 1982-06-09 10:23:51
+      lastDateReadStr: 1989-07-05 16:51:21
+      lastDateWrittenStr: 1982-06-09 10:24:00
+      bpunValid: null
+    - name: TALL-SHIP-MJ:DATA
+      type: DATA
+      pages: 11
+      bytes: 21504
+      userName: SYSTEM
+      dateCreated: 2085144758
+      lastDateRead: 2557282404
+      lastDateWritten: 2190798520
+      dateCreatedStr: 1981-01-04 12:34:54
+      lastDateReadStr: 1988-01-22 16:33:36
+      lastDateWrittenStr: 1982-10-10 14:58:56
+      bpunValid: null
+    - name: LANGUAGE-MJ:SYMB
+      type: SYMB
+      pages: 5
+      bytes: 9250
+      userName: SYSTEM
+      dateCreated: 2173871657
+      lastDateRead: 2557282415
+      lastDateWritten: 2173871662
+      dateCreatedStr: 1982-06-09 10:24:41
+      lastDateReadStr: 1988-01-22 16:33:47
+      lastDateWrittenStr: 1982-06-09 10:24:46
+      bpunValid: null
+    - name: POLAR-PLOT-MJ:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 494
+      userName: SYSTEM
+      dateCreated: 2173872985
+      lastDateRead: 2557282422
+      lastDateWritten: 2173872990
+      dateCreatedStr: 1982-06-09 10:45:25
+      lastDateReadStr: 1988-01-22 16:33:54
+      lastDateWrittenStr: 1982-06-09 10:45:30
+      bpunValid: null
+    - name: MASTER-INIT-MJ:SYMB
+      type: SYMB
+      pages: 11
+      bytes: 18365
+      userName: SYSTEM
+      dateCreated: 2267482764
+      lastDateRead: 2557282427
+      lastDateWritten: 2267482765
+      dateCreatedStr: 1983-12-19 16:42:12
+      lastDateReadStr: 1988-01-22 16:33:59
+      lastDateWrittenStr: 1983-12-19 16:42:13
+      bpunValid: null
+    - name: LOTTO-SYSTEM-MJ:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 969
+      userName: SYSTEM
+      dateCreated: 2173873057
+      lastDateRead: 2647330021
+      lastDateWritten: 2173873062
+      dateCreatedStr: 1982-06-09 10:46:33
+      lastDateReadStr: 1989-07-05 16:51:37
+      lastDateWrittenStr: 1982-06-09 10:46:38
+      bpunValid: null
+    - name: FUNC-EDIT-MJ:SYMB
+      type: SYMB
+      pages: 4
+      bytes: 6937
+      userName: SYSTEM
+      dateCreated: 2056952437
+      lastDateRead: 2557282448
+      lastDateWritten: 2257501657
+      dateCreatedStr: 1980-10-13 09:41:53
+      lastDateReadStr: 1988-01-22 16:34:16
+      lastDateWrittenStr: 1983-10-07 11:55:25
+      bpunValid: null
+    - name: ROTERA-ORD-MJ:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 310
+      userName: SYSTEM
+      dateCreated: 2173873169
+      lastDateRead: 2557282457
+      lastDateWritten: 2173873181
+      dateCreatedStr: 1982-06-09 10:48:17
+      lastDateReadStr: 1988-01-22 16:34:25
+      lastDateWrittenStr: 1982-06-09 10:48:29
+      bpunValid: null
+    - name: SUSPECT-FILE-MJ:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 3956
+      userName: SYSTEM
+      dateCreated: 2173873275
+      lastDateRead: 2557282466
+      lastDateWritten: 2173873284
+      dateCreatedStr: 1982-06-09 10:49:59
+      lastDateReadStr: 1988-01-22 16:34:34
+      lastDateWrittenStr: 1982-06-09 10:50:04
+      bpunValid: null
+    - name: MAIL-DNF-MJ:SYMB
+      type: SYMB
+      pages: 6
+      bytes: 11952
+      userName: SYSTEM
+      dateCreated: 2173873431
+      lastDateRead: 2647330030
+      lastDateWritten: 2428041074
+      dateCreatedStr: 1982-06-09 10:52:23
+      lastDateReadStr: 1989-07-05 16:51:46
+      lastDateWrittenStr: 1986-02-28 15:29:50
+      bpunValid: null
+    - name: PASC-OUT-MJ:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1614
+      userName: SYSTEM
+      dateCreated: 2173873693
+      lastDateRead: 2557282486
+      lastDateWritten: 2372196602
+      dateCreatedStr: 1982-06-09 10:56:29
+      lastDateReadStr: 1988-01-22 16:34:54
+      lastDateWrittenStr: 1985-05-18 13:35:58
+      bpunValid: null
+    - name: LOOKER-PASC-MJ:SYMB
+      type: SYMB
+      pages: 6
+      bytes: 10840
+      userName: SYSTEM
+      dateCreated: 2267482793
+      lastDateRead: 2557282499
+      lastDateWritten: 2267482795
+      dateCreatedStr: 1983-12-19 16:42:41
+      lastDateReadStr: 1988-01-22 16:35:03
+      lastDateWrittenStr: 1983-12-19 16:42:43
+      bpunValid: null
+    - name: TIGER-MJ:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 2025
+      userName: SYSTEM
+      dateCreated: 2190817510
+      lastDateRead: 2647330050
+      lastDateWritten: 2190817526
+      dateCreatedStr: 1982-10-10 19:35:38
+      lastDateReadStr: 1989-07-05 16:52:02
+      lastDateWrittenStr: 1982-10-10 19:35:54
+      bpunValid: null
+    - name: TJUV-O-POLIS-MJ:SYMB
+      type: SYMB
+      pages: 4
+      bytes: 7904
+      userName: SYSTEM
+      dateCreated: 2190817630
+      lastDateRead: 2663984361
+      lastDateWritten: 2193020959
+      dateCreatedStr: 1982-10-10 19:37:30
+      lastDateReadStr: 1989-11-04 18:51:41
+      lastDateWrittenStr: 1982-10-27 13:32:31
+      bpunValid: null
+    - name: MAKE-WORDS-MJ:SYMB
+      type: SYMB
+      pages: 3
+      bytes: 4950
+      userName: SYSTEM
+      dateCreated: 2193021061
+      lastDateRead: 2557282528
+      lastDateWritten: 2263794219
+      dateCreatedStr: 1982-10-27 13:34:05
+      lastDateReadStr: 1988-01-22 16:35:32
+      lastDateWrittenStr: 1983-11-23 12:08:43
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 200/ND-disk-00297.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:42:10.717Z
+imagingLogs:
+  - ND-disk-00297.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-5cb40c082e43
+  syncStatus: pending

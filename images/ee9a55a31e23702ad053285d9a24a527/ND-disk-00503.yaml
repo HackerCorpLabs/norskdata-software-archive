@@ -1,0 +1,147 @@
+id: nd-10115-j-d1-ee9a55a3
+volumeName: ND-10115J
+md5: ee9a55a31e23702ad053285d9a24a527
+product:
+  id: ND-10115
+  version: J
+image:
+  sizeBytes: 319488
+  format: raw
+  controller: floppy
+  totalPages: 156
+  pageSize: 2048
+  bootFormat: flomon
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 73
+  files:
+    - name: SUPER-RAND-2222C:BPUN
+      type: BPUN
+      pages: 7
+      bytes: 12210
+      userName: FLOPPY-USER
+      dateCreated: 1911734853
+      lastDateRead: 1997343124
+      lastDateWritten: 1997342995
+      dateCreatedStr: 1978-07-25 12:09:05
+      lastDateReadStr: 1979-12-06 16:38:20
+      lastDateWrittenStr: 1979-12-06 16:36:19
+      bpunValid: true
+    - name: ECCTEST-2224B:BPUN
+      type: BPUN
+      pages: 9
+      bytes: 14398
+      userName: FLOPPY-USER
+      dateCreated: 1911735007
+      lastDateRead: 1998367075
+      lastDateWritten: 1998366811
+      dateCreatedStr: 1978-07-25 12:11:31
+      lastDateReadStr: 1979-12-14 10:37:35
+      lastDateWrittenStr: 1979-12-14 10:33:27
+      bpunValid: true
+    - name: PASCAN-2226A:BPUN
+      type: BPUN
+      pages: 9
+      bytes: 17312
+      userName: FLOPPY-USER
+      dateCreated: 1911735495
+      lastDateRead: null
+      lastDateWritten: 1911735497
+      dateCreatedStr: 1978-07-25 12:19:07
+      lastDateReadStr: null
+      lastDateWrittenStr: 1978-07-25 12:19:09
+      bpunValid: true
+    - name: GREMS-2231G:BPUN
+      type: BPUN
+      pages: 8
+      bytes: 15274
+      userName: FLOPPY-USER
+      dateCreated: 1917520922
+      lastDateRead: 2033113622
+      lastDateWritten: 2033113421
+      dateCreatedStr: 1978-09-05 16:48:26
+      lastDateReadStr: 1980-04-23 13:40:22
+      lastDateWrittenStr: 1980-04-23 13:37:13
+      bpunValid: true
+    - name: BIGFUNC-1824I:BPUN
+      type: BPUN
+      pages: 8
+      bytes: 16174
+      userName: FLOPPY-USER
+      dateCreated: 1917521219
+      lastDateRead: 2039919118
+      lastDateWritten: 2039918739
+      dateCreatedStr: 1978-09-05 16:53:03
+      lastDateReadStr: 1980-06-11 11:08:14
+      lastDateWrittenStr: 1980-06-11 11:02:19
+      bpunValid: true
+    - name: COP-VERIFY-2035D:BPUN
+      type: BPUN
+      pages: 9
+      bytes: 16592
+      userName: FLOPPY-USER
+      dateCreated: 1932180999
+      lastDateRead: 1979508241
+      lastDateWritten: 1979507953
+      dateCreatedStr: 1978-12-21 11:56:07
+      lastDateReadStr: 1979-07-30 14:24:17
+      lastDateWrittenStr: 1979-07-30 14:19:49
+      bpunValid: true
+    - name: BIG-RAND-1876C:BPUN
+      type: BPUN
+      pages: 4
+      bytes: 4869
+      userName: FLOPPY-USER
+      dateCreated: 1788401291
+      lastDateRead: 1838861159
+      lastDateWritten: 1903997241
+      dateCreatedStr: 1976-10-12 13:26:11
+      lastDateReadStr: 1977-06-13 12:45:39
+      lastDateWrittenStr: 1978-05-30 11:04:57
+      bpunValid: true
+    - name: BIMS-1871C:BPUN
+      type: BPUN
+      pages: 6
+      bytes: 11661
+      userName: FLOPPY-USER
+      dateCreated: 1787493609
+      lastDateRead: null
+      lastDateWritten: 1787493610
+      dateCreatedStr: 1976-10-05 15:51:41
+      lastDateReadStr: null
+      lastDateWrittenStr: 1976-10-05 15:51:42
+      bpunValid: true
+    - name: TSTAD-1870B:BPUN
+      type: BPUN
+      pages: 3
+      bytes: 5805
+      userName: FLOPPY-USER
+      dateCreated: 1788401558
+      lastDateRead: 1863909513
+      lastDateWritten: 1788401559
+      dateCreatedStr: 1976-10-12 13:30:22
+      lastDateReadStr: 1977-12-12 16:02:09
+      lastDateWrittenStr: 1976-10-12 13:30:23
+      bpunValid: true
+provenance:
+  contributor: gandalf
+  originalPath: 500/ND-disk-00503.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:50:37.638Z
+imagingLogs:
+  - ND-disk-00503.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10115-j-d1-ee9a55a3
+  syncStatus: pending

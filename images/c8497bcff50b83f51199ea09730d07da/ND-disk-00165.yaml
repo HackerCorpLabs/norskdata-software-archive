@@ -1,0 +1,233 @@
+id: nd-210403-e00-d1-c8497bcf
+volumeName: 210403E00-XX-01D
+md5: c8497bcff50b83f51199ea09730d07da
+product:
+  id: ND-210403
+  version: E00
+  diskNumber: 1
+  language: XX
+image:
+  sizeBytes: 1310720
+  format: raw
+  controller: floppy
+  totalPages: 640
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 447
+  files:
+    - name: X21NS-IN-E00:PROG
+      type: PROG
+      pages: 65
+      bytes: 195936
+      userName: FLOPPY-USER
+      dateCreated: 2465376283
+      lastDateRead: 2465519256
+      lastDateWritten: 2465376287
+      dateCreatedStr: 1986-11-25 10:32:27
+      lastDateReadStr: 1986-11-26 13:26:24
+      lastDateWrittenStr: 1986-11-25 10:32:31
+      bpunValid: null
+    - name: X21NS-2-E00:XCOM
+      type: XCOM
+      pages: 30
+      bytes: 58108
+      userName: FLOPPY-USER
+      dateCreated: 2465376342
+      lastDateRead: 2465531489
+      lastDateWritten: 2465376342
+      dateCreatedStr: 1986-11-25 10:33:22
+      lastDateReadStr: 1986-11-26 16:25:33
+      lastDateWrittenStr: 1986-11-25 10:33:22
+      bpunValid: null
+    - name: X21NS-3-E00:XCOM
+      type: XCOM
+      pages: 17
+      bytes: 34474
+      userName: FLOPPY-USER
+      dateCreated: 2465376372
+      lastDateRead: 2465531492
+      lastDateWritten: 2465376373
+      dateCreatedStr: 1986-11-25 10:33:52
+      lastDateReadStr: 1986-11-26 16:25:36
+      lastDateWrittenStr: 1986-11-25 10:33:53
+      bpunValid: null
+    - name: X21NS-4-E00:XCOM
+      type: XCOM
+      pages: 3
+      bytes: 4902
+      userName: FLOPPY-USER
+      dateCreated: 2465376390
+      lastDateRead: 2465531495
+      lastDateWritten: 2465376390
+      dateCreatedStr: 1986-11-25 10:34:06
+      lastDateReadStr: 1986-11-26 16:25:39
+      lastDateWrittenStr: 1986-11-25 10:34:06
+      bpunValid: null
+    - name: X21NS-5-E00:XCOM
+      type: XCOM
+      pages: 18
+      bytes: 35409
+      userName: FLOPPY-USER
+      dateCreated: 2465376395
+      lastDateRead: 2465531506
+      lastDateWritten: 2465376395
+      dateCreatedStr: 1986-11-25 10:34:11
+      lastDateReadStr: 1986-11-26 16:25:50
+      lastDateWrittenStr: 1986-11-25 10:34:11
+      bpunValid: null
+    - name: X21NS-GET-X21-E:PROG
+      type: PROG
+      pages: 3
+      bytes: 6144
+      userName: FLOPPY-USER
+      dateCreated: 2465376411
+      lastDateRead: 2465531510
+      lastDateWritten: 2465376411
+      dateCreatedStr: 1986-11-25 10:34:27
+      lastDateReadStr: 1986-11-26 16:25:54
+      lastDateWrittenStr: 1986-11-25 10:34:27
+      bpunValid: null
+    - name: X21NS-GET-HDLC-E:PROG
+      type: PROG
+      pages: 4
+      bytes: 8192
+      userName: FLOPPY-USER
+      dateCreated: 2465376416
+      lastDateRead: 2465531521
+      lastDateWritten: 2465376417
+      dateCreatedStr: 1986-11-25 10:34:32
+      lastDateReadStr: 1986-11-26 16:26:01
+      lastDateWrittenStr: 1986-11-25 10:34:33
+      bpunValid: null
+    - name: X21NS-1-E00:BRF
+      type: BRF
+      pages: 111
+      bytes: 227252
+      userName: FLOPPY-USER
+      dateCreated: 2465376423
+      lastDateRead: 2465531467
+      lastDateWritten: 2465376423
+      dateCreatedStr: 1986-11-25 10:34:39
+      lastDateReadStr: 1986-11-26 16:25:11
+      lastDateWrittenStr: 1986-11-25 10:34:39
+      bpunValid: null
+    - name: X21NS-2-E00:BRF
+      type: BRF
+      pages: 17
+      bytes: 33961
+      userName: FLOPPY-USER
+      dateCreated: 2465376532
+      lastDateRead: 2465531472
+      lastDateWritten: 2465376532
+      dateCreatedStr: 1986-11-25 10:36:20
+      lastDateReadStr: 1986-11-26 16:25:16
+      lastDateWrittenStr: 1986-11-25 10:36:20
+      bpunValid: null
+    - name: X21NS-GLOBAL-E00:BRF
+      type: BRF
+      pages: 14
+      bytes: 26724
+      userName: FLOPPY-USER
+      dateCreated: 2465376555
+      lastDateRead: 2465531477
+      lastDateWritten: 2465376556
+      dateCreatedStr: 1986-11-25 10:36:43
+      lastDateReadStr: 1986-11-26 16:25:21
+      lastDateWrittenStr: 1986-11-25 10:36:44
+      bpunValid: null
+    - name: X21NS-LINK-M-E00:BRF
+      type: BRF
+      pages: 21
+      bytes: 42228
+      userName: FLOPPY-USER
+      dateCreated: 2465376583
+      lastDateRead: 2465531480
+      lastDateWritten: 2465376583
+      dateCreatedStr: 1986-11-25 10:37:07
+      lastDateReadStr: 1986-11-26 16:25:24
+      lastDateWrittenStr: 1986-11-25 10:37:07
+      bpunValid: null
+    - name: X21NS-UTIL-F-E00:BRF
+      type: BRF
+      pages: 4
+      bytes: 6612
+      userName: FLOPPY-USER
+      dateCreated: 2465376612
+      lastDateRead: 2465531483
+      lastDateWritten: 2465376612
+      dateCreatedStr: 1986-11-25 10:37:36
+      lastDateReadStr: 1986-11-26 16:25:27
+      lastDateWrittenStr: 1986-11-25 10:37:36
+      bpunValid: null
+    - name: X21NS-PRINTLOG-E:PROG
+      type: PROG
+      pages: 34
+      bytes: 69632
+      userName: FLOPPY-USER
+      dateCreated: 2465376620
+      lastDateRead: 2465531498
+      lastDateWritten: 2465376620
+      dateCreatedStr: 1986-11-25 10:37:44
+      lastDateReadStr: 1986-11-26 16:25:42
+      lastDateWrittenStr: 1986-11-25 10:37:44
+      bpunValid: null
+    - name: X21NS-DEF-HD-E00:MODE
+      type: MODE
+      pages: 1
+      bytes: 77
+      userName: FLOPPY-USER
+      dateCreated: 2465376669
+      lastDateRead: 2465531502
+      lastDateWritten: 2465376670
+      dateCreatedStr: 1986-11-25 10:38:29
+      lastDateReadStr: 1986-11-26 16:25:46
+      lastDateWrittenStr: 1986-11-25 10:38:30
+      bpunValid: null
+    - name: X21NS-PLIB1F-E00:BRF
+      type: BRF
+      pages: 14
+      bytes: 26647
+      userName: FLOPPY-USER
+      dateCreated: 2465376674
+      lastDateRead: 2465531486
+      lastDateWritten: 2465376675
+      dateCreatedStr: 1986-11-25 10:38:34
+      lastDateReadStr: 1986-11-26 16:25:30
+      lastDateWrittenStr: 1986-11-25 10:38:35
+      bpunValid: null
+    - name: UE-ERMSG-EN-C02:ERR
+      type: ERR
+      pages: 74
+      bytes: 151552
+      userName: FLOPPY-USER
+      dateCreated: 2465376695
+      lastDateRead: 2465531532
+      lastDateWritten: 2465376696
+      dateCreatedStr: 1986-11-25 10:38:55
+      lastDateReadStr: 1986-11-26 16:26:12
+      lastDateWrittenStr: 1986-11-25 10:38:56
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 100/ND-disk-00165.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:26:00.662Z
+imagingLogs:
+  - ND-disk-00165.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-210403-e00-d1-c8497bcf
+  syncStatus: pending

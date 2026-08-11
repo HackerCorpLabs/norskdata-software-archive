@@ -1,0 +1,276 @@
+id: img-3ade262cfd50
+volumeName: LARS-JONSSON
+md5: 3ade262cfd500ae42b89e865b98c967b
+image:
+  sizeBytes: 319488
+  format: raw
+  controller: floppy
+  totalPages: 156
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: DNF
+      pagesUsed: 147
+  files:
+    - name: EBER-LJ:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 3545
+      userName: DNF
+      dateCreated: 2392673106
+      lastDateRead: 2623073845
+      lastDateWritten: 2392673107
+      dateCreatedStr: 1985-10-14 20:45:18
+      lastDateReadStr: 1989-01-12 14:56:53
+      lastDateWrittenStr: 1985-10-14 20:45:19
+      bpunValid: null
+    - name: CR-NE-FO-VE-LJ:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 176
+      userName: DNF
+      dateCreated: 2395525192
+      lastDateRead: 2623073850
+      lastDateWritten: 2429866061
+      dateCreatedStr: 1985-11-04 13:01:08
+      lastDateReadStr: 1989-01-12 14:56:58
+      lastDateWrittenStr: 1986-03-10 13:01:13
+      bpunValid: null
+    - name: PLOT-FORTH-LJ:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 3252
+      userName: DNF
+      dateCreated: 2395524319
+      lastDateRead: 2623073862
+      lastDateWritten: 2395524321
+      dateCreatedStr: 1985-11-04 12:51:31
+      lastDateReadStr: 1989-01-12 14:57:06
+      lastDateWrittenStr: 1985-11-04 12:51:33
+      bpunValid: null
+    - name: MANDELBROT-LJ:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1490
+      userName: DNF
+      dateCreated: 2395524338
+      lastDateRead: 2623073866
+      lastDateWritten: 2395524340
+      dateCreatedStr: 1985-11-04 12:51:50
+      lastDateReadStr: 1989-01-12 14:57:10
+      lastDateWrittenStr: 1985-11-04 12:51:52
+      bpunValid: null
+    - name: BATCH-IN-LJ:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 411
+      userName: DNF
+      dateCreated: 2392673067
+      lastDateRead: 2623073874
+      lastDateWritten: 2392673070
+      dateCreatedStr: 1985-10-14 20:44:43
+      lastDateReadStr: 1989-01-12 14:57:18
+      lastDateWrittenStr: 1985-10-14 20:44:46
+      bpunValid: null
+    - name: F-LIB-2-LJ:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1268
+      userName: DNF
+      dateCreated: 2395524360
+      lastDateRead: 2430149800
+      lastDateWritten: 2395524363
+      dateCreatedStr: 1985-11-04 12:52:08
+      lastDateReadStr: 1986-03-12 18:18:40
+      lastDateWrittenStr: 1985-11-04 12:52:11
+      bpunValid: null
+    - name: LABEL-FORTH-LJ:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 624
+      userName: DNF
+      dateCreated: 2392672729
+      lastDateRead: 2430150082
+      lastDateWritten: 2392672731
+      dateCreatedStr: 1985-10-14 20:39:25
+      lastDateReadStr: 1986-03-12 18:23:02
+      lastDateWrittenStr: 1985-10-14 20:39:27
+      bpunValid: null
+    - name: PRIMES-LJ:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 530
+      userName: DNF
+      dateCreated: 2395524388
+      lastDateRead: 2395525128
+      lastDateWritten: 2395524390
+      dateCreatedStr: 1985-11-04 12:52:36
+      lastDateReadStr: 1985-11-04 13:00:08
+      lastDateWrittenStr: 1985-11-04 12:52:38
+      bpunValid: null
+    - name: PI-10000-DEC-LJ:SYMB
+      type: SYMB
+      pages: 7
+      bytes: 11513
+      userName: DNF
+      dateCreated: 2395524838
+      lastDateRead: 2623073741
+      lastDateWritten: 2395524840
+      dateCreatedStr: 1985-11-04 12:59:38
+      lastDateReadStr: 1989-01-12 14:55:13
+      lastDateWrittenStr: 1985-11-04 12:59:40
+      bpunValid: null
+    - name: EBER-2-LJ:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1995
+      userName: DNF
+      dateCreated: 2435646508
+      lastDateRead: 2436289227
+      lastDateWritten: 2436289133
+      dateCreatedStr: 1986-04-22 16:16:44
+      lastDateReadStr: 1986-04-27 13:11:11
+      lastDateWrittenStr: 1986-04-27 13:09:45
+      bpunValid: null
+    - name: FORTH-SOURCE-MJ:SYMB
+      type: SYMB
+      pages: 50
+      bytes: 101148
+      userName: DNF
+      dateCreated: 2391739925
+      lastDateRead: 2435662523
+      lastDateWritten: 2392266693
+      dateCreatedStr: 1985-10-07 16:56:21
+      lastDateReadStr: 1986-04-22 20:10:59
+      lastDateWrittenStr: 1985-10-11 17:31:05
+      bpunValid: null
+    - name: PI-2-BER-LJ:SYMB
+      type: SYMB
+      pages: 3
+      bytes: 4398
+      userName: DNF
+      dateCreated: 2392673160
+      lastDateRead: 2623073758
+      lastDateWritten: 2392673162
+      dateCreatedStr: 1985-10-14 20:46:08
+      lastDateReadStr: 1989-01-12 14:55:30
+      lastDateWrittenStr: 1985-10-14 20:46:10
+      bpunValid: null
+    - name: PI-1-BER-LJ:SYMB
+      type: SYMB
+      pages: 3
+      bytes: 2654
+      userName: DNF
+      dateCreated: 2392672797
+      lastDateRead: 2623073771
+      lastDateWritten: 2392672799
+      dateCreatedStr: 1985-10-14 20:40:29
+      lastDateReadStr: 1989-01-12 14:55:43
+      lastDateWrittenStr: 1985-10-14 20:40:31
+      bpunValid: null
+    - name: DIV-FORTH-MAC-LJ:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1371
+      userName: DNF
+      dateCreated: 2392672451
+      lastDateRead: 2623073776
+      lastDateWritten: 2392672453
+      dateCreatedStr: 1985-10-14 20:35:03
+      lastDateReadStr: 1989-01-12 14:55:48
+      lastDateWrittenStr: 1985-10-14 20:35:05
+      bpunValid: null
+    - name: TURBO-FORTH-LJ:SYMB
+      type: SYMB
+      pages: 51
+      bytes: 102491
+      userName: DNF
+      dateCreated: 2392652240
+      lastDateRead: 2623073811
+      lastDateWritten: 2393191451
+      dateCreatedStr: 1985-10-14 15:39:16
+      lastDateReadStr: 1989-01-12 14:56:19
+      lastDateWrittenStr: 1985-10-18 19:16:27
+      bpunValid: null
+    - name: F-LIB-LJ:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 3204
+      userName: DNF
+      dateCreated: 2392672699
+      lastDateRead: 2623073799
+      lastDateWritten: 2393195425
+      dateCreatedStr: 1985-10-14 20:38:59
+      lastDateReadStr: 1989-01-12 14:56:07
+      lastDateWrittenStr: 1985-10-18 20:14:33
+      bpunValid: null
+    - name: FORTH-MAC-LIB-LJ:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1135
+      userName: DNF
+      dateCreated: 2395524302
+      lastDateRead: 2623073805
+      lastDateWritten: 2395524304
+      dateCreatedStr: 1985-11-04 12:51:14
+      lastDateReadStr: 1989-01-12 14:56:13
+      lastDateWrittenStr: 1985-11-04 12:51:16
+      bpunValid: null
+    - name: TURBO-LJ:PROG
+      type: PROG
+      pages: 8
+      bytes: 15686
+      userName: DNF
+      dateCreated: 2429865541
+      lastDateRead: 2623073898
+      lastDateWritten: 2430156283
+      dateCreatedStr: 1986-03-10 12:57:05
+      lastDateReadStr: 1989-01-12 14:57:42
+      lastDateWrittenStr: 1986-03-12 19:55:59
+      bpunValid: null
+    - name: FORTH-LIB-3-LJ:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 2403
+      userName: DNF
+      dateCreated: 2435646530
+      lastDateRead: null
+      lastDateWritten: 2435646532
+      dateCreatedStr: 1986-04-22 16:17:02
+      lastDateReadStr: null
+      lastDateWrittenStr: 1986-04-22 16:17:04
+      bpunValid: null
+    - name: FORTH-MANDEL-LJ:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 2379
+      userName: DNF
+      dateCreated: 2435646567
+      lastDateRead: 2435646568
+      lastDateWritten: 2435646568
+      dateCreatedStr: 1986-04-22 16:17:39
+      lastDateReadStr: 1986-04-22 16:17:40
+      lastDateWrittenStr: 1986-04-22 16:17:40
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 300/ND-disk-00341.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:45:48.977Z
+imagingLogs:
+  - ND-disk-00341.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-3ade262cfd50
+  syncStatus: pending

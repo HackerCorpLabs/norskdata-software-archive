@@ -1,0 +1,576 @@
+id: img-e7105c3926a6
+volumeName: FL1-UNIV
+md5: e7105c3926a603026c7ba074fdbf38ff
+image:
+  sizeBytes: 319488
+  format: raw
+  controller: floppy
+  totalPages: 156
+  pageSize: 2048
+  bootFormat: bpun
+filesystem: ndfs
+ndfs:
+  users:
+    - name: UNIVERSITETET
+      pagesUsed: 113
+  files:
+    - name: SR-KOLLAS:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1337
+      userName: UNIVERSITETET
+      dateCreated: 2198119210
+      lastDateRead: 2174682641
+      lastDateWritten: 2198119212
+      dateCreatedStr: 1982-12-02 10:12:42
+      lastDateReadStr: 1982-06-15 16:24:17
+      lastDateWrittenStr: 1982-12-02 10:12:44
+      bpunValid: null
+    - name: STARSTORY-PA:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 1949
+      userName: UNIVERSITETET
+      dateCreated: 2188058324
+      lastDateRead: 2174681759
+      lastDateWritten: 2188956518
+      dateCreatedStr: 1982-09-21 17:59:20
+      lastDateReadStr: 1982-06-15 16:10:31
+      lastDateWrittenStr: 1982-09-28 13:13:38
+      bpunValid: null
+    - name: PERSONFIL:DATA
+      type: DATA
+      pages: 1
+      bytes: 616
+      userName: UNIVERSITETET
+      dateCreated: 2197992745
+      lastDateRead: 2174681760
+      lastDateWritten: 2198117301
+      dateCreatedStr: 1982-12-01 11:20:41
+      lastDateReadStr: 1982-06-15 16:10:32
+      lastDateWrittenStr: 1982-12-02 09:46:53
+      bpunValid: null
+    - name: MEDLREGU:TEXT
+      type: TEXT
+      pages: 2
+      bytes: 4294967296
+      userName: UNIVERSITETET
+      dateCreated: 2240105334
+      lastDateRead: 2174681761
+      lastDateWritten: 2240106918
+      dateCreatedStr: 1983-06-02 20:45:54
+      lastDateReadStr: 1982-06-15 16:10:33
+      lastDateWrittenStr: 1983-06-02 21:06:38
+      bpunValid: null
+    - name: MLISTA:TEXT
+      type: TEXT
+      pages: 2
+      bytes: 4294967296
+      userName: UNIVERSITETET
+      dateCreated: 2240105644
+      lastDateRead: 2174681762
+      lastDateWritten: 2240105909
+      dateCreatedStr: 1983-06-02 20:50:44
+      lastDateReadStr: 1982-06-15 16:10:34
+      lastDateWrittenStr: 1983-06-02 20:54:53
+      bpunValid: null
+    - name: TRANSAKTION:SYMB
+      type: SYMB
+      pages: 0
+      bytes: 4294967296
+      userName: UNIVERSITETET
+      dateCreated: 2239310899
+      lastDateRead: 2174681763
+      lastDateWritten: 2239311466
+      dateCreatedStr: 1983-05-28 18:48:51
+      lastDateReadStr: 1982-06-15 16:10:35
+      lastDateWrittenStr: 1983-05-28 18:57:42
+      bpunValid: null
+    - name: U6-DLU:SYMB
+      type: SYMB
+      pages: 5
+      bytes: 8225
+      userName: UNIVERSITETET
+      dateCreated: 2237873322
+      lastDateRead: 2174681763
+      lastDateWritten: 2239700591
+      dateCreatedStr: 1983-05-17 19:50:42
+      lastDateReadStr: 1982-06-15 16:10:35
+      lastDateWrittenStr: 1983-05-31 17:57:47
+      bpunValid: null
+    - name: LARM:TEXT
+      type: TEXT
+      pages: 1
+      bytes: 4294967296
+      userName: UNIVERSITETET
+      dateCreated: 2240106233
+      lastDateRead: 2174681764
+      lastDateWritten: 2240106889
+      dateCreatedStr: 1983-06-02 20:59:57
+      lastDateReadStr: 1982-06-15 16:10:36
+      lastDateWrittenStr: 1983-06-02 21:06:09
+      bpunValid: null
+    - name: U5-DLU:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1897
+      userName: UNIVERSITETET
+      dateCreated: 2237873686
+      lastDateRead: 2174681765
+      lastDateWritten: 2238518390
+      dateCreatedStr: 1983-05-17 19:56:22
+      lastDateReadStr: 1982-06-15 16:10:37
+      lastDateWrittenStr: 1983-05-22 17:17:54
+      bpunValid: null
+    - name: LLLL:SYMB
+      type: SYMB
+      pages: 4
+      bytes: 7121
+      userName: UNIVERSITETET
+      dateCreated: 2237874333
+      lastDateRead: 2174681766
+      lastDateWritten: 2239285366
+      dateCreatedStr: 1983-05-17 20:02:29
+      lastDateReadStr: 1982-06-15 16:10:38
+      lastDateWrittenStr: 1983-05-28 12:33:54
+      bpunValid: null
+    - name: HBR710:SYMB
+      type: SYMB
+      pages: 5
+      bytes: 7490
+      userName: UNIVERSITETET
+      dateCreated: 2237874892
+      lastDateRead: 2174681767
+      lastDateWritten: 2239716710
+      dateCreatedStr: 1983-05-17 20:11:12
+      lastDateReadStr: 1982-06-15 16:10:39
+      lastDateWrittenStr: 1983-05-31 21:53:38
+      bpunValid: null
+    - name: U3-DL:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1907
+      userName: UNIVERSITETET
+      dateCreated: 2199994724
+      lastDateRead: 2174681768
+      lastDateWritten: 2238591215
+      dateCreatedStr: 1982-12-16 20:05:36
+      lastDateReadStr: 1982-06-15 16:10:40
+      lastDateWrittenStr: 1983-05-23 03:03:47
+      bpunValid: null
+    - name: UFIL:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 725
+      userName: UNIVERSITETET
+      dateCreated: 2237875011
+      lastDateRead: 2174681768
+      lastDateWritten: 2237878928
+      dateCreatedStr: 1983-05-17 20:13:03
+      lastDateReadStr: 1982-06-15 16:10:40
+      lastDateWrittenStr: 1983-05-17 21:10:16
+      bpunValid: null
+    - name: KGF-UPPG61:SYMB
+      type: SYMB
+      pages: 4
+      bytes: 2272
+      userName: UNIVERSITETET
+      dateCreated: 2237875576
+      lastDateRead: 2174681769
+      lastDateWritten: 2240103163
+      dateCreatedStr: 1983-05-17 20:21:56
+      lastDateReadStr: 1982-06-15 16:10:41
+      lastDateWrittenStr: 1983-06-02 20:11:59
+      bpunValid: null
+    - name: NYLISTA:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 4
+      userName: UNIVERSITETET
+      dateCreated: 2237925665
+      lastDateRead: 2174681770
+      lastDateWritten: 2238518002
+      dateCreatedStr: 1983-05-18 00:36:33
+      lastDateReadStr: 1982-06-15 16:10:42
+      lastDateWrittenStr: 1983-05-22 17:11:50
+      bpunValid: null
+    - name: MEDLREGU:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 4294967296
+      userName: UNIVERSITETET
+      dateCreated: 2239310942
+      lastDateRead: 2174681771
+      lastDateWritten: 2239314077
+      dateCreatedStr: 1983-05-28 18:49:30
+      lastDateReadStr: 1982-06-15 16:10:43
+      lastDateWrittenStr: 1983-05-28 19:34:29
+      bpunValid: null
+    - name: MREGRENS:SYMB
+      type: SYMB
+      pages: 0
+      bytes: 4294967296
+      userName: UNIVERSITETET
+      dateCreated: 2239311031
+      lastDateRead: 2174681772
+      lastDateWritten: 2239314103
+      dateCreatedStr: 1983-05-28 18:50:55
+      lastDateReadStr: 1982-06-15 16:10:44
+      lastDateWrittenStr: 1983-05-28 19:34:55
+      bpunValid: null
+    - name: HBR810:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1688
+      userName: UNIVERSITETET
+      dateCreated: 2237881434
+      lastDateRead: 2174681773
+      lastDateWritten: 2239722027
+      dateCreatedStr: 1983-05-17 21:49:26
+      lastDateReadStr: 1982-06-15 16:10:45
+      lastDateWrittenStr: 1983-05-31 23:08:43
+      bpunValid: null
+    - name: KGF-UPPG4:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 2154
+      userName: UNIVERSITETET
+      dateCreated: 2230014282
+      lastDateRead: 2174681773
+      lastDateWritten: 2236561864
+      dateCreatedStr: 1983-03-21 21:05:10
+      lastDateReadStr: 1982-06-15 16:10:45
+      lastDateWrittenStr: 1983-05-07 19:39:08
+      bpunValid: null
+    - name: SR-MFIL:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1839
+      userName: UNIVERSITETET
+      dateCreated: 2198000986
+      lastDateRead: 2174681774
+      lastDateWritten: 2198017443
+      dateCreatedStr: 1982-12-01 13:21:26
+      lastDateReadStr: 1982-06-15 16:10:46
+      lastDateWrittenStr: 1982-12-01 17:22:35
+      bpunValid: null
+    - name: ABV-5:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 3628
+      userName: UNIVERSITETET
+      dateCreated: 2237881768
+      lastDateRead: 2174681775
+      lastDateWritten: 2237996444
+      dateCreatedStr: 1983-05-17 21:54:40
+      lastDateReadStr: 1982-06-15 16:10:47
+      lastDateWrittenStr: 1983-05-18 17:54:28
+      bpunValid: null
+    - name: MITT-REG:DATA
+      type: DATA
+      pages: 1
+      bytes: 1748
+      userName: UNIVERSITETET
+      dateCreated: 2239312017
+      lastDateRead: 2239312075
+      lastDateWritten: 2239312017
+      dateCreatedStr: 1983-05-28 19:02:17
+      lastDateReadStr: 1983-05-28 19:03:11
+      lastDateWrittenStr: 1983-05-28 19:02:17
+      bpunValid: null
+    - name: DATERADFIL:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1368
+      userName: UNIVERSITETET
+      dateCreated: 2239698204
+      lastDateRead: 2239722965
+      lastDateWritten: 2239719111
+      dateCreatedStr: 1983-05-31 17:20:28
+      lastDateReadStr: 1983-05-31 23:23:21
+      lastDateWrittenStr: 1983-05-31 22:27:07
+      bpunValid: null
+    - name: HBR910:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1283
+      userName: UNIVERSITETET
+      dateCreated: 2239712578
+      lastDateRead: 2239722917
+      lastDateWritten: 2239714279
+      dateCreatedStr: 1983-05-31 20:53:02
+      lastDateReadStr: 1983-05-31 23:22:37
+      lastDateWrittenStr: 1983-05-31 21:15:39
+      bpunValid: null
+    - name: RENSLISTA:TEXT
+      type: TEXT
+      pages: 2
+      bytes: 4294967296
+      userName: UNIVERSITETET
+      dateCreated: 2239963136
+      lastDateRead: 2240103928
+      lastDateWritten: 2240103928
+      dateCreatedStr: 1983-06-01 18:00:00
+      lastDateReadStr: 1983-06-02 20:23:56
+      lastDateWrittenStr: 1983-06-02 20:23:56
+      bpunValid: null
+    - name: MREGRENS:TEXT
+      type: TEXT
+      pages: 2
+      bytes: 4294967296
+      userName: UNIVERSITETET
+      dateCreated: 2239963367
+      lastDateRead: 2240106949
+      lastDateWritten: 2240106949
+      dateCreatedStr: 1983-06-01 18:03:39
+      lastDateReadStr: 1983-06-02 21:07:05
+      lastDateWrittenStr: 1983-06-02 21:07:05
+      bpunValid: null
+    - name: MREG:TEXT
+      type: TEXT
+      pages: 2
+      bytes: 4294967296
+      userName: UNIVERSITETET
+      dateCreated: 2239963671
+      lastDateRead: 2240104115
+      lastDateWritten: 2240104115
+      dateCreatedStr: 1983-06-01 18:08:23
+      lastDateReadStr: 1983-06-02 20:26:51
+      lastDateWrittenStr: 1983-06-02 20:26:51
+      bpunValid: null
+    - name: SR-RESULTAT:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 966
+      userName: UNIVERSITETET
+      dateCreated: 2191828694
+      lastDateRead: 2239720451
+      lastDateWritten: 2239674834
+      dateCreatedStr: 1982-10-18 10:27:22
+      lastDateReadStr: 1983-05-31 22:48:03
+      lastDateWrittenStr: 1983-05-31 11:39:18
+      bpunValid: null
+    - name: ROLA-4:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1875
+      userName: UNIVERSITETET
+      dateCreated: 2240091255
+      lastDateRead: 2240104800
+      lastDateWritten: 2240098960
+      dateCreatedStr: 1983-06-02 17:17:55
+      lastDateReadStr: 1983-06-02 20:37:32
+      lastDateWrittenStr: 1983-06-02 19:10:16
+      bpunValid: null
+    - name: ROLA:DATA
+      type: DATA
+      pages: 1
+      bytes: 1212
+      userName: UNIVERSITETET
+      dateCreated: 2240094414
+      lastDateRead: 2240109843
+      lastDateWritten: 2240109268
+      dateCreatedStr: 1983-06-02 18:03:14
+      lastDateReadStr: 1983-06-02 21:52:19
+      lastDateWrittenStr: 1983-06-02 21:43:20
+      bpunValid: null
+    - name: ROLA-5:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 3618
+      userName: UNIVERSITETET
+      dateCreated: 2240092657
+      lastDateRead: 2240110181
+      lastDateWritten: 2240093000
+      dateCreatedStr: 1983-06-02 17:39:49
+      lastDateReadStr: 1983-06-02 21:57:37
+      lastDateWrittenStr: 1983-06-02 17:45:08
+      bpunValid: null
+    - name: MEDLREG:DATA
+      type: DATA
+      pages: 1
+      bytes: 1748
+      userName: UNIVERSITETET
+      dateCreated: 2198017551
+      lastDateRead: 2239719332
+      lastDateWritten: 2198017857
+      dateCreatedStr: 1982-12-01 17:24:15
+      lastDateReadStr: 1983-05-31 22:30:36
+      lastDateWrittenStr: 1982-12-01 17:29:01
+      bpunValid: null
+    - name: TRANS:TEXT
+      type: TEXT
+      pages: 0
+      bytes: 4294967296
+      userName: UNIVERSITETET
+      dateCreated: 2240106586
+      lastDateRead: 2173747655
+      lastDateWritten: 2240106899
+      dateCreatedStr: 1983-06-02 21:01:26
+      lastDateReadStr: 1982-06-08 12:07:07
+      lastDateWrittenStr: 1983-06-02 21:06:19
+      bpunValid: null
+    - name: SR-UPPL:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1306
+      userName: UNIVERSITETET
+      dateCreated: 2198008279
+      lastDateRead: 2235775864
+      lastDateWritten: 2198018571
+      dateCreatedStr: 1982-12-01 15:07:23
+      lastDateReadStr: 1983-05-01 19:45:56
+      lastDateWrittenStr: 1982-12-01 17:40:11
+      bpunValid: null
+    - name: KENNETH:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 832
+      userName: UNIVERSITETET
+      dateCreated: 2200387924
+      lastDateRead: 2237846941
+      lastDateWritten: 2200395140
+      dateCreatedStr: 1982-12-19 20:05:20
+      lastDateReadStr: 1983-05-17 13:22:29
+      lastDateWrittenStr: 1982-12-19 21:54:04
+      bpunValid: null
+    - name: SAMLINGAR-HBR:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 1520
+      userName: UNIVERSITETET
+      dateCreated: 2195140737
+      lastDateRead: 2239719190
+      lastDateWritten: 2238806430
+      dateCreatedStr: 1982-11-11 19:02:01
+      lastDateReadStr: 1983-05-31 22:28:22
+      lastDateWrittenStr: 1983-05-24 23:38:30
+      bpunValid: null
+    - name: U4-DLU:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1987
+      userName: UNIVERSITETET
+      dateCreated: 2232112193
+      lastDateRead: 2238520322
+      lastDateWritten: 2238520322
+      dateCreatedStr: 1983-04-05 21:17:01
+      lastDateReadStr: 1983-05-22 17:48:02
+      lastDateWrittenStr: 1983-05-22 17:48:02
+      bpunValid: null
+    - name: X6:SYMB
+      type: SYMB
+      pages: 5
+      bytes: 9807
+      userName: UNIVERSITETET
+      dateCreated: 2232370845
+      lastDateRead: 2240100034
+      lastDateWritten: 2237461952
+      dateCreatedStr: 1983-04-07 20:26:29
+      lastDateReadStr: 1983-06-02 19:27:02
+      lastDateWrittenStr: 1983-05-14 15:23:00
+      bpunValid: null
+    - name: KGF-UPPG5:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 2094
+      userName: UNIVERSITETET
+      dateCreated: 2132570783
+      lastDateRead: 2236568606
+      lastDateWritten: 2236568426
+      dateCreatedStr: 1981-12-14 07:10:31
+      lastDateReadStr: 1983-05-07 21:16:30
+      lastDateWrittenStr: 1983-05-07 21:13:42
+      bpunValid: null
+    - name: HBR-OMSORT:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1633
+      userName: UNIVERSITETET
+      dateCreated: 2233280944
+      lastDateRead: 2239723889
+      lastDateWritten: 2239697102
+      dateCreatedStr: 1983-04-14 18:38:48
+      lastDateReadStr: 1983-05-31 23:37:49
+      lastDateWrittenStr: 1983-05-31 17:03:14
+      bpunValid: null
+    - name: TRANSREG:DATA
+      type: DATA
+      pages: 1
+      bytes: 1404
+      userName: UNIVERSITETET
+      dateCreated: 2198018741
+      lastDateRead: 2239719315
+      lastDateWritten: 2198018804
+      dateCreatedStr: 1982-12-01 17:42:53
+      lastDateReadStr: 1983-05-31 22:30:19
+      lastDateWrittenStr: 1982-12-01 17:43:52
+      bpunValid: null
+    - name: RIKTIGT-SR:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 2065
+      userName: UNIVERSITETET
+      dateCreated: 2188079250
+      lastDateRead: 2174682758
+      lastDateWritten: 2188079250
+      dateCreatedStr: 1982-09-21 23:02:18
+      lastDateReadStr: 1982-06-15 16:26:06
+      lastDateWrittenStr: 1982-09-21 23:02:18
+      bpunValid: null
+    - name: KLP-UP4:SYMB
+      type: SYMB
+      pages: 3
+      bytes: 4878
+      userName: UNIVERSITETET
+      dateCreated: 2226317507
+      lastDateRead: 2226317507
+      lastDateWritten: 2226317507
+      dateCreatedStr: 1983-02-25 14:35:03
+      lastDateReadStr: 1983-02-25 14:35:03
+      lastDateWrittenStr: 1983-02-25 14:35:03
+      bpunValid: null
+    - name: KLP-UP1:SYMB
+      type: SYMB
+      pages: 3
+      bytes: 4817
+      userName: UNIVERSITETET
+      dateCreated: 2200630282
+      lastDateRead: 2238245273
+      lastDateWritten: 2220538258
+      dateCreatedStr: 1982-12-21 15:16:10
+      lastDateReadStr: 1983-05-20 14:38:25
+      lastDateWrittenStr: 1983-01-13 11:38:18
+      bpunValid: null
+    - name: KLP-UP2:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 560
+      userName: UNIVERSITETET
+      dateCreated: 2200630357
+      lastDateRead: 2174682923
+      lastDateWritten: 2200630357
+      dateCreatedStr: 1982-12-21 15:17:21
+      lastDateReadStr: 1982-06-15 16:28:43
+      lastDateWrittenStr: 1982-12-21 15:17:21
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 400/ND-disk-00420c.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:49:29.657Z
+imagingLogs:
+  - ND-disk-00420c.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-e7105c3926a6
+  syncStatus: pending

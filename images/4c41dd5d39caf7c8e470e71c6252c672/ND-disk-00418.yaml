@@ -1,0 +1,72 @@
+id: img-4c41dd5d39ca
+volumeName: ND-10013K-SSR-01
+md5: 4c41dd5d39caf7c8e470e71c6252c672
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 110
+  files:
+    - name: SCREEN-2BANK-K1:BRF
+      type: BRF
+      pages: 36
+      bytes: 73680
+      userName: FLOPPY-USER
+      dateCreated: 2244147899
+      lastDateRead: 2456214884
+      lastDateWritten: 2252527896
+      dateCreatedStr: 1983-07-01 15:42:59
+      lastDateReadStr: 1986-09-19 13:53:36
+      lastDateWrittenStr: 1983-09-01 13:36:24
+      bpunValid: null
+    - name: SCREEN-1BANK-K1:BRF
+      type: BRF
+      pages: 36
+      bytes: 72250
+      userName: FLOPPY-USER
+      dateCreated: 2244146720
+      lastDateRead: 2594370439
+      lastDateWritten: 2252527864
+      dateCreatedStr: 1983-07-01 15:24:32
+      lastDateReadStr: 1988-10-17 15:14:07
+      lastDateWrittenStr: 1983-09-01 13:35:56
+      bpunValid: null
+    - name: SCREEN-1REEN-K1:BRF
+      type: BRF
+      pages: 34
+      bytes: 68314
+      userName: FLOPPY-USER
+      dateCreated: 2244145777
+      lastDateRead: 2456214915
+      lastDateWritten: 2252527824
+      dateCreatedStr: 1983-07-01 15:09:49
+      lastDateReadStr: 1986-09-19 13:54:03
+      lastDateWrittenStr: 1983-09-01 13:35:16
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 400/ND-disk-00418.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:49:28.932Z
+imagingLogs:
+  - ND-disk-00418.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-4c41dd5d39ca
+  syncStatus: pending

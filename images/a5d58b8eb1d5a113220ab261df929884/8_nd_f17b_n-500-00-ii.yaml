@@ -3,7 +3,7 @@ volumeName: N-502-000-II
 md5: a5d58b8eb1d5a113220ab261df929884
 product:
   id: ND-210576
-  version: "K 86-11-05"
+  version: K 86-11-05
   systemNumber: 502-000
   diskNumber: 2
   diskTotal: 2
@@ -14,6 +14,7 @@ image:
   totalPages: 616
   pageSize: 2048
   bootFormat: flomon
+filesystem: ndfs
 ndfs:
   users:
     - name: SYSTEM

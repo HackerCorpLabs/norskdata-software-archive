@@ -1,0 +1,101 @@
+id: nd-210079-n08-d2-2a58aaf5
+volumeName: 210079N08-XX-02D
+md5: 2a58aaf504f87bb02e235a4e9e59145c
+product:
+  id: ND-210079
+  version: N08
+  diskNumber: 2
+  language: XX
+image:
+  sizeBytes: 1310720
+  format: raw
+  controller: floppy
+  totalPages: 640
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 166
+  files:
+    - name: DDBTABLES-G03:VTM
+      type: VTM
+      pages: 37
+      bytes: 75316
+      userName: FLOPPY-USER
+      dateCreated: 2558840881
+      lastDateRead: null
+      lastDateWritten: 2558840886
+      dateCreatedStr: 1988-02-02 13:00:49
+      lastDateReadStr: null
+      lastDateWrittenStr: 1988-02-02 13:00:54
+      bpunValid: null
+    - name: NOTIS-NTX-WP:INIT
+      type: INIT
+      pages: 1
+      bytes: 864
+      userName: FLOPPY-USER
+      dateCreated: 2558840910
+      lastDateRead: null
+      lastDateWritten: 2558840912
+      dateCreatedStr: 1988-02-02 13:01:14
+      lastDateReadStr: null
+      lastDateWrittenStr: 1988-02-02 13:01:16
+      bpunValid: null
+    - name: TF-LIB-COMPRESS:PROG
+      type: PROG
+      pages: 13
+      bytes: 26624
+      userName: FLOPPY-USER
+      dateCreated: 2558840915
+      lastDateRead: null
+      lastDateWritten: 2558840916
+      dateCreatedStr: 1988-02-02 13:01:19
+      lastDateReadStr: null
+      lastDateWrittenStr: 1988-02-02 13:01:20
+      bpunValid: null
+    - name: WP-OUT-TO-S-N05:PROG
+      type: PROG
+      pages: 69
+      bytes: 212992
+      userName: FLOPPY-USER
+      dateCreated: 2558840926
+      lastDateRead: null
+      lastDateWritten: 2558840927
+      dateCreatedStr: 1988-02-02 13:01:30
+      lastDateReadStr: null
+      lastDateWrittenStr: 1988-02-02 13:01:31
+      bpunValid: null
+    - name: WP-N-TO-M-N05:PROG
+      type: PROG
+      pages: 40
+      bytes: 165888
+      userName: FLOPPY-USER
+      dateCreated: 2558840977
+      lastDateRead: null
+      lastDateWritten: 2558840978
+      dateCreatedStr: 1988-02-02 13:02:17
+      lastDateReadStr: null
+      lastDateWrittenStr: 1988-02-02 13:02:18
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 100/ND-disk-00184.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:26:03.472Z
+imagingLogs:
+  - ND-disk-00184.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-210079-n08-d2-2a58aaf5
+  syncStatus: pending

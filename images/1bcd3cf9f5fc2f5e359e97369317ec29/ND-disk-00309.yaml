@@ -1,0 +1,96 @@
+id: img-1bcd3cf9f5fc
+volumeName: FORSKNING-KALIF
+md5: 1bcd3cf9f5fc2f5e359e97369317ec29
+image:
+  sizeBytes: 319488
+  format: raw
+  controller: floppy
+  totalPages: 156
+  pageSize: 2048
+  bootFormat: binary
+filesystem: ndfs
+ndfs:
+  users:
+    - name: SYSTEM
+      pagesUsed: 119
+  files:
+    - name: SLAEKT-FORSKNING:PROG
+      type: PROG
+      pages: 55
+      bytes: 111616
+      userName: SYSTEM
+      dateCreated: 2171689735
+      lastDateRead: 2515221752
+      lastDateWritten: 2171689736
+      dateCreatedStr: 1982-05-24 21:44:07
+      lastDateReadStr: 1987-07-21 19:51:56
+      lastDateWrittenStr: 1982-05-24 21:44:08
+      bpunValid: null
+    - name: SLAEKT-FORSKNING:INDX
+      type: INDX
+      pages: 1
+      bytes: 19
+      userName: SYSTEM
+      dateCreated: 2167233813
+      lastDateRead: 2515221777
+      lastDateWritten: 2515221777
+      dateCreatedStr: 1982-04-22 21:52:21
+      lastDateReadStr: 1987-07-21 19:52:17
+      lastDateWrittenStr: 1987-07-21 19:52:17
+      bpunValid: null
+    - name: FORSKNING-KALIF:KMDO
+      type: KMDO
+      pages: 2
+      bytes: 3035
+      userName: SYSTEM
+      dateCreated: 2186857207
+      lastDateRead: 2192123410
+      lastDateWritten: 2186857217
+      dateCreatedStr: 1982-09-12 12:43:55
+      lastDateReadStr: 1982-10-20 18:24:18
+      lastDateWrittenStr: 1982-09-12 12:44:01
+      bpunValid: null
+    - name: SLAEKT-FORSKNING:SYMB
+      type: SYMB
+      pages: 47
+      bytes: 96138
+      userName: SYSTEM
+      dateCreated: 2167233967
+      lastDateRead: 2192121384
+      lastDateWritten: 2186857357
+      dateCreatedStr: 1982-04-22 21:54:47
+      lastDateReadStr: 1982-10-20 17:56:40
+      lastDateWrittenStr: 1982-09-12 12:46:13
+      bpunValid: null
+    - name: SLAEKT-FORSKNING:PERS
+      type: PERS
+      pages: 10
+      bytes: 4294967296
+      userName: SYSTEM
+      dateCreated: 2192122980
+      lastDateRead: 2515221775
+      lastDateWritten: 2515221775
+      dateCreatedStr: 1982-10-20 18:17:36
+      lastDateReadStr: 1987-07-21 19:52:15
+      lastDateWrittenStr: 1987-07-21 19:52:15
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 300/ND-disk-00309.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:45:43.780Z
+imagingLogs:
+  - ND-disk-00309.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-1bcd3cf9f5fc
+  syncStatus: pending

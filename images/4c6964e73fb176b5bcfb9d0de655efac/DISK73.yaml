@@ -1,0 +1,58 @@
+id: img-4c6964e73fb1
+volumeName: ND
+md5: 4c6964e73fb176b5bcfb9d0de655efac
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 7
+  files:
+    - name: MANDEL:SYMB
+      type: SYMB
+      pages: 3
+      bytes: 4142
+      userName: FLOPPY-USER
+      dateCreated: 2424783846
+      lastDateRead: 2281701456
+      lastDateWritten: 2424783851
+      dateCreatedStr: 1986-02-03 20:15:38
+      lastDateReadStr: null
+      lastDateWrittenStr: 1986-02-03 20:15:43
+      bpunValid: null
+    - name: GRAF-CONST:DEF
+      type: DEF
+      pages: 1
+      bytes: 438
+      userName: FLOPPY-USER
+      dateCreated: 2424783908
+      lastDateRead: 2281701465
+      lastDateWritten: 2424783910
+      dateCreatedStr: 1986-02-03 20:16:36
+      lastDateReadStr: null
+      lastDateWrittenStr: 1986-02-03 20:16:38
+      bpunValid: null
+provenance:
+  contributor: www.datormuseum.se
+  originalPath: OK/DISK73.IMG
+  dateImaged: 2022-08-15
+  importedAt: 2026-08-11T17:07:05.190Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-4c6964e73fb1
+  syncStatus: pending

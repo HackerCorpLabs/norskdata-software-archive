@@ -1,0 +1,52 @@
+id: nd-10190-d-d2-a1c1d32f
+volumeName: ND-10190D-PART2
+md5: a1c1d32f317a7916e558a416e369c168
+product:
+  id: ND-10190
+  version: D
+  diskNumber: 2
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 54
+  files:
+    - name: FORTRAN-LIB-D:NRF
+      type: NRF
+      pages: 52
+      bytes: 100421
+      userName: FLOPPY-USER
+      dateCreated: 2159212532
+      lastDateRead: 2167370742
+      lastDateWritten: 2160504457
+      dateCreatedStr: 1982-02-25 15:31:52
+      lastDateReadStr: 1982-04-23 23:15:54
+      lastDateWrittenStr: 1982-03-03 10:58:09
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 400/ND-disk-00459c.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:49:44.489Z
+imagingLogs:
+  - ND-disk-00459c.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10190-d-d2-a1c1d32f
+  syncStatus: pending

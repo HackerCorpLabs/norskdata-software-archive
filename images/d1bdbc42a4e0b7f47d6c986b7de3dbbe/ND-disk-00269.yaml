@@ -1,0 +1,204 @@
+id: img-d1bdbc42a4e0
+volumeName: CHILL-IO
+md5: d1bdbc42a4e0b7f47d6c986b7de3dbbe
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 129
+  files:
+    - name: UDI-FILE:SYMB
+      type: SYMB
+      pages: 19
+      bytes: 37480
+      userName: FLOPPY-USER
+      dateCreated: 2328155753
+      lastDateRead: null
+      lastDateWritten: 2328155758
+      dateCreatedStr: 1984-11-02 13:25:41
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-11-02 13:25:46
+      bpunValid: null
+    - name: UDI-FILE:CBRF
+      type: CBRF
+      pages: 7
+      bytes: 13824
+      userName: FLOPPY-USER
+      dateCreated: 2328155778
+      lastDateRead: null
+      lastDateWritten: 2328155780
+      dateCreatedStr: 1984-11-02 13:26:02
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-11-02 13:26:04
+      bpunValid: null
+    - name: UDI-FILE-SUBPROC:SYMB
+      type: SYMB
+      pages: 8
+      bytes: 14581
+      userName: FLOPPY-USER
+      dateCreated: 2328155787
+      lastDateRead: null
+      lastDateWritten: 2328155789
+      dateCreatedStr: 1984-11-02 13:26:11
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-11-02 13:26:13
+      bpunValid: null
+    - name: UDI-FILE-SUBPROC:CBRF
+      type: CBRF
+      pages: 4
+      bytes: 6656
+      userName: FLOPPY-USER
+      dateCreated: 2328155798
+      lastDateRead: null
+      lastDateWritten: 2328155799
+      dateCreatedStr: 1984-11-02 13:26:22
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-11-02 13:26:23
+      bpunValid: null
+    - name: CRS-CIO-BAS:SYMB
+      type: SYMB
+      pages: 18
+      bytes: 36507
+      userName: FLOPPY-USER
+      dateCreated: 2328155805
+      lastDateRead: null
+      lastDateWritten: 2328155807
+      dateCreatedStr: 1984-11-02 13:26:29
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-11-02 13:26:31
+      bpunValid: null
+    - name: CRS-CIO-BAS:CBRF
+      type: CBRF
+      pages: 5
+      bytes: 8704
+      userName: FLOPPY-USER
+      dateCreated: 2328155829
+      lastDateRead: null
+      lastDateWritten: 2328155830
+      dateCreatedStr: 1984-11-02 13:26:53
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-11-02 13:26:54
+      bpunValid: null
+    - name: CRS-CIO-TXT:SYMB
+      type: SYMB
+      pages: 8
+      bytes: 16324
+      userName: FLOPPY-USER
+      dateCreated: 2328155843
+      lastDateRead: null
+      lastDateWritten: 2328155844
+      dateCreatedStr: 1984-11-02 13:27:03
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-11-02 13:27:04
+      bpunValid: null
+    - name: CRS-CIO-TXT:CBRF
+      type: CBRF
+      pages: 3
+      bytes: 5632
+      userName: FLOPPY-USER
+      dateCreated: 2328155857
+      lastDateRead: null
+      lastDateWritten: 2328155858
+      dateCreatedStr: 1984-11-02 13:27:17
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-11-02 13:27:18
+      bpunValid: null
+    - name: CMS-LINK:SYMB
+      type: SYMB
+      pages: 8
+      bytes: 14764
+      userName: FLOPPY-USER
+      dateCreated: 2328155865
+      lastDateRead: null
+      lastDateWritten: 2328155866
+      dateCreatedStr: 1984-11-02 13:27:25
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-11-02 13:27:26
+      bpunValid: null
+    - name: CIO-LINK:SYMB
+      type: SYMB
+      pages: 14
+      bytes: 27520
+      userName: FLOPPY-USER
+      dateCreated: 2328155880
+      lastDateRead: null
+      lastDateWritten: 2328155881
+      dateCreatedStr: 1984-11-02 13:27:40
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-11-02 13:27:41
+      bpunValid: null
+    - name: UDI-LINK:SYMB
+      type: SYMB
+      pages: 7
+      bytes: 4630
+      userName: FLOPPY-USER
+      dateCreated: 2328155909
+      lastDateRead: null
+      lastDateWritten: 2328155910
+      dateCreatedStr: 1984-11-02 13:28:05
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-11-02 13:28:06
+      bpunValid: null
+    - name: LINK:SYMB
+      type: SYMB
+      pages: 9
+      bytes: 17842
+      userName: FLOPPY-USER
+      dateCreated: 2328155925
+      lastDateRead: null
+      lastDateWritten: 2328155926
+      dateCreatedStr: 1984-11-02 13:28:21
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-11-02 13:28:22
+      bpunValid: null
+    - name: STK286-CIO-LINK:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 3938
+      userName: FLOPPY-USER
+      dateCreated: 2328155944
+      lastDateRead: null
+      lastDateWritten: 2328155945
+      dateCreatedStr: 1984-11-02 13:28:40
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-11-02 13:28:41
+      bpunValid: null
+    - name: STK286-UDI-LINK:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 248
+      userName: FLOPPY-USER
+      dateCreated: 2328155952
+      lastDateRead: null
+      lastDateWritten: 2328155953
+      dateCreatedStr: 1984-11-02 13:28:48
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-11-02 13:28:49
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 200/ND-disk-00269.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:42:00.729Z
+imagingLogs:
+  - ND-disk-00269.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-d1bdbc42a4e0
+  syncStatus: pending

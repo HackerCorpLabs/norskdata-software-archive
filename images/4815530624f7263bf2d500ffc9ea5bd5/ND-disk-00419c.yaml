@@ -1,0 +1,636 @@
+id: img-4815530624f7
+volumeName: FL2-REGISTER
+md5: 4815530624f7263bf2d500ffc9ea5bd5
+image:
+  sizeBytes: 319488
+  format: raw
+  controller: floppy
+  totalPages: 156
+  pageSize: 2048
+  bootFormat: bpun
+filesystem: ndfs
+ndfs:
+  users:
+    - name: REGISTER
+      pagesUsed: 112
+  files:
+    - name: INFORMATION:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 127
+      userName: REGISTER
+      dateCreated: 2131573562
+      lastDateRead: 2152637782
+      lastDateWritten: 2151986541
+      dateCreatedStr: 1981-12-06 19:44:58
+      lastDateReadStr: 1982-01-07 10:21:22
+      lastDateWrittenStr: 1982-01-02 11:21:45
+      bpunValid: null
+    - name: S2A:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 354
+      userName: REGISTER
+      dateCreated: 2131573577
+      lastDateRead: 2152637786
+      lastDateWritten: 2151986544
+      dateCreatedStr: 1981-12-06 19:45:09
+      lastDateReadStr: 1982-01-07 10:21:26
+      lastDateWrittenStr: 1982-01-02 11:21:48
+      bpunValid: null
+    - name: INLRSIGN:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1483
+      userName: REGISTER
+      dateCreated: 2131573583
+      lastDateRead: 2152637791
+      lastDateWritten: 2151986547
+      dateCreatedStr: 1981-12-06 19:45:15
+      lastDateReadStr: 1982-01-07 10:21:31
+      lastDateWrittenStr: 1982-01-02 11:21:51
+      bpunValid: null
+    - name: UTLRSIGN:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 320
+      userName: REGISTER
+      dateCreated: 2131573589
+      lastDateRead: 2152637795
+      lastDateWritten: 2151986549
+      dateCreatedStr: 1981-12-06 19:45:21
+      lastDateReadStr: 1982-01-07 10:21:35
+      lastDateWrittenStr: 1982-01-02 11:21:53
+      bpunValid: null
+    - name: IENP:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 2111
+      userName: REGISTER
+      dateCreated: 2131573595
+      lastDateRead: 2152637800
+      lastDateWritten: 2151986552
+      dateCreatedStr: 1981-12-06 19:45:27
+      lastDateReadStr: 1982-01-07 10:21:40
+      lastDateWrittenStr: 1982-01-02 11:21:56
+      bpunValid: null
+    - name: FRR:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1700
+      userName: REGISTER
+      dateCreated: 2131573602
+      lastDateRead: 2152637805
+      lastDateWritten: 2151986555
+      dateCreatedStr: 1981-12-06 19:45:34
+      lastDateReadStr: 1982-01-07 10:21:45
+      lastDateWrittenStr: 1982-01-02 11:21:59
+      bpunValid: null
+    - name: SID2:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1437
+      userName: REGISTER
+      dateCreated: 2131573608
+      lastDateRead: 2152637810
+      lastDateWritten: 2151986562
+      dateCreatedStr: 1981-12-06 19:45:40
+      lastDateReadStr: 1982-01-07 10:21:50
+      lastDateWrittenStr: 1982-01-02 11:22:02
+      bpunValid: null
+    - name: E-SG:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 1700
+      userName: REGISTER
+      dateCreated: 2131573614
+      lastDateRead: 2152637814
+      lastDateWritten: 2151986564
+      dateCreatedStr: 1981-12-06 19:45:46
+      lastDateReadStr: 1982-01-07 10:21:54
+      lastDateWrittenStr: 1982-01-02 11:22:04
+      bpunValid: null
+    - name: KLL:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1028
+      userName: REGISTER
+      dateCreated: 2131573621
+      lastDateRead: 2152637819
+      lastDateWritten: 2151986567
+      dateCreatedStr: 1981-12-06 19:45:53
+      lastDateReadStr: 1982-01-07 10:21:59
+      lastDateWrittenStr: 1982-01-02 11:22:07
+      bpunValid: null
+    - name: KLR:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1074
+      userName: REGISTER
+      dateCreated: 2131573627
+      lastDateRead: 2152637829
+      lastDateWritten: 2151986570
+      dateCreatedStr: 1981-12-06 19:45:59
+      lastDateReadStr: 1982-01-07 10:22:05
+      lastDateWrittenStr: 1982-01-02 11:22:10
+      bpunValid: null
+    - name: XINLRS:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1838
+      userName: REGISTER
+      dateCreated: 2131573637
+      lastDateRead: 2152637834
+      lastDateWritten: 2151986573
+      dateCreatedStr: 1981-12-06 19:46:05
+      lastDateReadStr: 1982-01-07 10:22:10
+      lastDateWrittenStr: 1982-01-02 11:22:13
+      bpunValid: null
+    - name: XINHL:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1935
+      userName: REGISTER
+      dateCreated: 2131573643
+      lastDateRead: 2152637838
+      lastDateWritten: 2151986575
+      dateCreatedStr: 1981-12-06 19:46:11
+      lastDateReadStr: 1982-01-07 10:22:14
+      lastDateWrittenStr: 1982-01-02 11:22:15
+      bpunValid: null
+    - name: UTHL:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 544
+      userName: REGISTER
+      dateCreated: 2131573649
+      lastDateRead: 2152637843
+      lastDateWritten: 2151986578
+      dateCreatedStr: 1981-12-06 19:46:17
+      lastDateReadStr: 1982-01-07 10:22:19
+      lastDateWrittenStr: 1982-01-02 11:22:18
+      bpunValid: null
+    - name: FRS:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 2338
+      userName: REGISTER
+      dateCreated: 2131573656
+      lastDateRead: 2152637848
+      lastDateWritten: 2151986581
+      dateCreatedStr: 1981-12-06 19:46:24
+      lastDateReadStr: 1982-01-07 10:22:24
+      lastDateWrittenStr: 1982-01-02 11:22:21
+      bpunValid: null
+    - name: IEAT:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1744
+      userName: REGISTER
+      dateCreated: 2131573663
+      lastDateRead: 2152637853
+      lastDateWritten: 2151986584
+      dateCreatedStr: 1981-12-06 19:46:31
+      lastDateReadStr: 1982-01-07 10:22:29
+      lastDateWrittenStr: 1982-01-02 11:22:24
+      bpunValid: null
+    - name: P-SG:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 933
+      userName: REGISTER
+      dateCreated: 2131573669
+      lastDateRead: 2152637858
+      lastDateWritten: 2151986587
+      dateCreatedStr: 1981-12-06 19:46:37
+      lastDateReadStr: 1982-01-07 10:22:34
+      lastDateWrittenStr: 1982-01-02 11:22:27
+      bpunValid: null
+    - name: TRAFIK:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1163
+      userName: REGISTER
+      dateCreated: 2131573675
+      lastDateRead: 2152637863
+      lastDateWritten: 2151986590
+      dateCreatedStr: 1981-12-06 19:46:43
+      lastDateReadStr: 1982-01-07 10:22:39
+      lastDateWrittenStr: 1982-01-02 11:22:30
+      bpunValid: null
+    - name: F0AR:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1451
+      userName: REGISTER
+      dateCreated: 2131573681
+      lastDateRead: 2152637868
+      lastDateWritten: 2151986592
+      dateCreatedStr: 1981-12-06 19:46:49
+      lastDateReadStr: 1982-01-07 10:22:44
+      lastDateWrittenStr: 1982-01-02 11:22:32
+      bpunValid: null
+    - name: LITRAF:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1710
+      userName: REGISTER
+      dateCreated: 2131573688
+      lastDateRead: 2152637873
+      lastDateWritten: 2151986595
+      dateCreatedStr: 1981-12-06 19:46:56
+      lastDateReadStr: 1982-01-07 10:22:49
+      lastDateWrittenStr: 1982-01-02 11:22:35
+      bpunValid: null
+    - name: UT-ENP:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 775
+      userName: REGISTER
+      dateCreated: 2131573698
+      lastDateRead: 2152637878
+      lastDateWritten: 2151986598
+      dateCreatedStr: 1981-12-06 19:47:02
+      lastDateReadStr: 1982-01-07 10:22:54
+      lastDateWrittenStr: 1982-01-02 11:22:38
+      bpunValid: null
+    - name: UT-KATKL:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 2249
+      userName: REGISTER
+      dateCreated: 2131573704
+      lastDateRead: 2152637883
+      lastDateWritten: 2151986601
+      dateCreatedStr: 1981-12-06 19:47:08
+      lastDateReadStr: 1982-01-07 10:22:59
+      lastDateWrittenStr: 1982-01-02 11:22:41
+      bpunValid: null
+    - name: KONTRP:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1246
+      userName: REGISTER
+      dateCreated: 2131573711
+      lastDateRead: 2152637893
+      lastDateWritten: 2151986604
+      dateCreatedStr: 1981-12-06 19:47:15
+      lastDateReadStr: 1982-01-07 10:23:05
+      lastDateWrittenStr: 1982-01-02 11:22:44
+      bpunValid: null
+    - name: ANTPF:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1244
+      userName: REGISTER
+      dateCreated: 2131573718
+      lastDateRead: 2152637898
+      lastDateWritten: 2151986607
+      dateCreatedStr: 1981-12-06 19:47:22
+      lastDateReadStr: 1982-01-07 10:23:10
+      lastDateWrittenStr: 1982-01-02 11:22:47
+      bpunValid: null
+    - name: UT-NPAT:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 997
+      userName: REGISTER
+      dateCreated: 2131573724
+      lastDateRead: 2152637903
+      lastDateWritten: 2151986610
+      dateCreatedStr: 1981-12-06 19:47:28
+      lastDateReadStr: 1982-01-07 10:23:15
+      lastDateWrittenStr: 1982-01-02 11:22:50
+      bpunValid: null
+    - name: SORT:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 3024
+      userName: REGISTER
+      dateCreated: 2131573730
+      lastDateRead: 2152637908
+      lastDateWritten: 2151986613
+      dateCreatedStr: 1981-12-06 19:47:34
+      lastDateReadStr: 1982-01-07 10:23:20
+      lastDateWrittenStr: 1982-01-02 11:22:53
+      bpunValid: null
+    - name: KLSMBOK:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 185
+      userName: REGISTER
+      dateCreated: 2131573737
+      lastDateRead: 2152637913
+      lastDateWritten: 2151986617
+      dateCreatedStr: 1981-12-06 19:47:41
+      lastDateReadStr: 1982-01-07 10:23:25
+      lastDateWrittenStr: 1982-01-02 11:22:57
+      bpunValid: null
+    - name: SID3:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 3058
+      userName: REGISTER
+      dateCreated: 2131573744
+      lastDateRead: 2152637919
+      lastDateWritten: 2151986624
+      dateCreatedStr: 1981-12-06 19:47:48
+      lastDateReadStr: 1982-01-07 10:23:31
+      lastDateWrittenStr: 1982-01-02 11:23:00
+      bpunValid: null
+    - name: SID1:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 2982
+      userName: REGISTER
+      dateCreated: 2131573751
+      lastDateRead: 2152637925
+      lastDateWritten: 2151986627
+      dateCreatedStr: 1981-12-06 19:47:55
+      lastDateReadStr: 1982-01-07 10:23:37
+      lastDateWrittenStr: 1982-01-02 11:23:03
+      bpunValid: null
+    - name: INLRAT:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1160
+      userName: REGISTER
+      dateCreated: 2131573762
+      lastDateRead: 2152637931
+      lastDateWritten: 2151986631
+      dateCreatedStr: 1981-12-06 19:48:02
+      lastDateReadStr: 1982-01-07 10:23:43
+      lastDateWrittenStr: 1982-01-02 11:23:07
+      bpunValid: null
+    - name: KN:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 498
+      userName: REGISTER
+      dateCreated: 2131573768
+      lastDateRead: 2152637936
+      lastDateWritten: 2151986634
+      dateCreatedStr: 1981-12-06 19:48:08
+      lastDateReadStr: 1982-01-07 10:23:48
+      lastDateWrittenStr: 1982-01-02 11:23:10
+      bpunValid: null
+    - name: KF:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 913
+      userName: REGISTER
+      dateCreated: 2131573774
+      lastDateRead: 2152637941
+      lastDateWritten: 2151986637
+      dateCreatedStr: 1981-12-06 19:48:14
+      lastDateReadStr: 1982-01-07 10:23:53
+      lastDateWrittenStr: 1982-01-02 11:23:13
+      bpunValid: null
+    - name: X:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 293
+      userName: REGISTER
+      dateCreated: 2131573780
+      lastDateRead: 2152637947
+      lastDateWritten: 2151986640
+      dateCreatedStr: 1981-12-06 19:48:20
+      lastDateReadStr: 1982-01-07 10:23:59
+      lastDateWrittenStr: 1982-01-02 11:23:16
+      bpunValid: null
+    - name: UT-KLTVGRT1:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1807
+      userName: REGISTER
+      dateCreated: 2131573787
+      lastDateRead: 2152637957
+      lastDateWritten: 2151986644
+      dateCreatedStr: 1981-12-06 19:48:27
+      lastDateReadStr: 1982-01-07 10:24:05
+      lastDateWrittenStr: 1982-01-02 11:23:20
+      bpunValid: null
+    - name: UTLP-KLTVGRT1:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1801
+      userName: REGISTER
+      dateCreated: 2131573797
+      lastDateRead: 2152637964
+      lastDateWritten: 2151986649
+      dateCreatedStr: 1981-12-06 19:48:37
+      lastDateReadStr: 1982-01-07 10:24:12
+      lastDateWrittenStr: 1982-01-02 11:23:25
+      bpunValid: null
+    - name: UTLP-TVKOLT1:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1437
+      userName: REGISTER
+      dateCreated: 2131573806
+      lastDateRead: 2152637970
+      lastDateWritten: 2151986654
+      dateCreatedStr: 1981-12-06 19:48:46
+      lastDateReadStr: 1982-01-07 10:24:18
+      lastDateWrittenStr: 1982-01-02 11:23:30
+      bpunValid: null
+    - name: IN-T1:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 871
+      userName: REGISTER
+      dateCreated: 2131573814
+      lastDateRead: 2152637977
+      lastDateWritten: 2151986658
+      dateCreatedStr: 1981-12-06 19:48:54
+      lastDateReadStr: 1982-01-07 10:24:25
+      lastDateWrittenStr: 1982-01-02 11:23:34
+      bpunValid: null
+    - name: UT-T1:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 346
+      userName: REGISTER
+      dateCreated: 2131573827
+      lastDateRead: 2152637984
+      lastDateWritten: 2151986663
+      dateCreatedStr: 1981-12-06 19:49:03
+      lastDateReadStr: 1982-01-07 10:24:32
+      lastDateWrittenStr: 1982-01-02 11:23:39
+      bpunValid: null
+    - name: UTLP-T1:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 393
+      userName: REGISTER
+      dateCreated: 2131573835
+      lastDateRead: 2152637990
+      lastDateWritten: 2151986668
+      dateCreatedStr: 1981-12-06 19:49:11
+      lastDateReadStr: 1982-01-07 10:24:38
+      lastDateWrittenStr: 1982-01-02 11:23:44
+      bpunValid: null
+    - name: UT-GRT1:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 939
+      userName: REGISTER
+      dateCreated: 2131573843
+      lastDateRead: 2152637997
+      lastDateWritten: 2151986673
+      dateCreatedStr: 1981-12-06 19:49:19
+      lastDateReadStr: 1982-01-07 10:24:45
+      lastDateWrittenStr: 1982-01-02 11:23:49
+      bpunValid: null
+    - name: UT-FLT1:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 890
+      userName: REGISTER
+      dateCreated: 2131573852
+      lastDateRead: 2152638004
+      lastDateWritten: 2151986677
+      dateCreatedStr: 1981-12-06 19:49:28
+      lastDateReadStr: 1982-01-07 10:24:52
+      lastDateWrittenStr: 1982-01-02 11:23:53
+      bpunValid: null
+    - name: IN-TVT1:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 910
+      userName: REGISTER
+      dateCreated: 2131573860
+      lastDateRead: 2152638011
+      lastDateWritten: 2151986682
+      dateCreatedStr: 1981-12-06 19:49:36
+      lastDateReadStr: 1982-01-07 10:24:59
+      lastDateWrittenStr: 1982-01-02 11:23:58
+      bpunValid: null
+    - name: IN-KLT1:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 449
+      userName: REGISTER
+      dateCreated: 2131573869
+      lastDateRead: 2152638022
+      lastDateWritten: 2151986691
+      dateCreatedStr: 1981-12-06 19:49:45
+      lastDateReadStr: 1982-01-07 10:25:06
+      lastDateWrittenStr: 1982-01-02 11:24:03
+      bpunValid: null
+    - name: UT-OPLT1:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 710
+      userName: REGISTER
+      dateCreated: 2131573878
+      lastDateRead: 2152638028
+      lastDateWritten: 2151986695
+      dateCreatedStr: 1981-12-06 19:49:54
+      lastDateReadStr: 1982-01-07 10:25:12
+      lastDateWrittenStr: 1982-01-02 11:24:07
+      bpunValid: null
+    - name: UT-KLT1:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 808
+      userName: REGISTER
+      dateCreated: 2131573890
+      lastDateRead: 2152638035
+      lastDateWritten: 2151986700
+      dateCreatedStr: 1981-12-06 19:50:02
+      lastDateReadStr: 1982-01-07 10:25:19
+      lastDateWrittenStr: 1982-01-02 11:24:12
+      bpunValid: null
+    - name: IN-BORTKLT1:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 785
+      userName: REGISTER
+      dateCreated: 2131573899
+      lastDateRead: 2152638042
+      lastDateWritten: 2151986705
+      dateCreatedStr: 1981-12-06 19:50:11
+      lastDateReadStr: 1982-01-07 10:25:26
+      lastDateWrittenStr: 1982-01-02 11:24:17
+      bpunValid: null
+    - name: UT-KLTVT1:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1043
+      userName: REGISTER
+      dateCreated: 2131573908
+      lastDateRead: 2152638049
+      lastDateWritten: 2151986710
+      dateCreatedStr: 1981-12-06 19:50:20
+      lastDateReadStr: 1982-01-07 10:25:33
+      lastDateWrittenStr: 1982-01-02 11:24:22
+      bpunValid: null
+    - name: UTLP-KLTVT1:SYMB
+      type: SYMB
+      pages: 0
+      bytes: 4294967296
+      userName: REGISTER
+      dateCreated: 2131573917
+      lastDateRead: 2152638056
+      lastDateWritten: 2151986715
+      dateCreatedStr: 1981-12-06 19:50:29
+      lastDateReadStr: 1982-01-07 10:25:40
+      lastDateWrittenStr: 1982-01-02 11:24:27
+      bpunValid: null
+    - name: SCH8-SG:SYMB
+      type: SYMB
+      pages: 3
+      bytes: 4701
+      userName: REGISTER
+      dateCreated: 2131573923
+      lastDateRead: 2152638062
+      lastDateWritten: 2151986719
+      dateCreatedStr: 1981-12-06 19:50:35
+      lastDateReadStr: 1982-01-07 10:25:46
+      lastDateWrittenStr: 1982-01-02 11:24:31
+      bpunValid: null
+    - name: SCHAND-SG:SYMB
+      type: SYMB
+      pages: 4
+      bytes: 6859
+      userName: REGISTER
+      dateCreated: 2131573934
+      lastDateRead: 2152638070
+      lastDateWritten: 2151986724
+      dateCreatedStr: 1981-12-06 19:50:46
+      lastDateReadStr: 1982-01-07 10:25:54
+      lastDateWrittenStr: 1982-01-02 11:24:36
+      bpunValid: null
+    - name: UMEAUNIV:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1224
+      userName: REGISTER
+      dateCreated: 2151986730
+      lastDateRead: 2152638082
+      lastDateWritten: 2151986731
+      dateCreatedStr: 1982-01-02 11:24:42
+      lastDateReadStr: 1982-01-07 10:26:02
+      lastDateWrittenStr: 1982-01-02 11:24:43
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 400/ND-disk-00419c.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:49:29.259Z
+imagingLogs:
+  - ND-disk-00419c.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-4815530624f7
+  syncStatus: pending

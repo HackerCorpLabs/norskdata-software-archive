@@ -1,0 +1,48 @@
+id: img-461c05a06723
+volumeName: ND
+md5: 461c05a067232ec30ebd723a75adb6e2
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: SYSTEM
+      pagesUsed: 4
+  files:
+    - name: PATCH-NEDKOPPL:MODE
+      type: MODE
+      pages: 2
+      bytes: 3045
+      userName: SYSTEM
+      dateCreated: 2317279426
+      lastDateRead: 2318052147
+      lastDateWritten: 2317279430
+      dateCreatedStr: 1984-08-15 14:03:02
+      lastDateReadStr: 1984-08-21 10:44:51
+      lastDateWrittenStr: 1984-08-15 14:03:06
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 400/ND-disk-00477.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:49:56.734Z
+imagingLogs:
+  - ND-disk-00477.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-461c05a06723
+  syncStatus: pending

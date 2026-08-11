@@ -1,0 +1,73 @@
+id: nd-10179-d-d1-6e5566dc
+volumeName: ND-10179D
+md5: 6e5566dca7cef1e2f5d5a70b58c13f63
+product:
+  id: ND-10179
+  version: D
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 65
+  files:
+    - name: SORT-MERGE-D:BPUN
+      type: BPUN
+      pages: 16
+      bytes: 32768
+      userName: FLOPPY-USER
+      dateCreated: 2243463520
+      lastDateRead: 2290527664
+      lastDateWritten: 2243463525
+      dateCreatedStr: 1983-06-28 08:37:32
+      lastDateReadStr: 1984-02-03 10:54:48
+      lastDateWrittenStr: 1983-06-28 08:37:37
+      bpunValid: true
+    - name: SORT-MERGE-1B-D:BRF
+      type: BRF
+      pages: 22
+      bytes: 44105
+      userName: FLOPPY-USER
+      dateCreated: 2243463563
+      lastDateRead: 2243625012
+      lastDateWritten: 2243463564
+      dateCreatedStr: 1983-06-28 08:38:11
+      lastDateReadStr: 1983-06-29 16:00:52
+      lastDateWrittenStr: 1983-06-28 08:38:12
+      bpunValid: null
+    - name: SORT-MERGE-2B-D:BRF
+      type: BRF
+      pages: 23
+      bytes: 45090
+      userName: FLOPPY-USER
+      dateCreated: 2243463606
+      lastDateRead: 2243625177
+      lastDateWritten: 2243463608
+      dateCreatedStr: 1983-06-28 08:38:54
+      lastDateReadStr: 1983-06-29 16:03:25
+      lastDateWrittenStr: 1983-06-28 08:38:56
+      bpunValid: null
+provenance:
+  contributor: www.datormuseum.se
+  originalPath: OK/DISK36.IMG
+  dateImaged: 2022-08-15
+  importedAt: 2026-08-11T17:07:04.063Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10179-d-d1-6e5566dc
+  syncStatus: pending

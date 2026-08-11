@@ -1,0 +1,408 @@
+id: img-ddf0e6614b33
+volumeName: FL2-TEKNOL
+md5: ddf0e6614b33185079282ed21ffb750a
+image:
+  sizeBytes: 319488
+  format: raw
+  controller: floppy
+  totalPages: 156
+  pageSize: 2048
+  bootFormat: bpun
+filesystem: ndfs
+ndfs:
+  users:
+    - name: TEKNOL-INST
+      pagesUsed: 121
+  files:
+    - name: PROJREM-LQ:SYMB
+      type: SYMB
+      pages: 8
+      bytes: 14674
+      userName: TEKNOL-INST
+      dateCreated: 2169305871
+      lastDateRead: 2707210696
+      lastDateWritten: 2170741029
+      dateCreatedStr: 1982-05-06 15:44:15
+      lastDateReadStr: 1990-05-14 12:07:08
+      lastDateWrittenStr: 1982-05-17 14:04:37
+      bpunValid: null
+    - name: BAST2-LQ:SYMB
+      type: SYMB
+      pages: 7
+      bytes: 12978
+      userName: TEKNOL-INST
+      dateCreated: 2158928029
+      lastDateRead: 2189591975
+      lastDateWritten: 2169717498
+      dateCreatedStr: 1982-02-23 10:02:29
+      lastDateReadStr: 1982-10-01 08:22:39
+      lastDateWrittenStr: 1982-05-09 20:11:58
+      bpunValid: null
+    - name: 1T2-LQ:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 896
+      userName: TEKNOL-INST
+      dateCreated: 2164997190
+      lastDateRead: 2165351850
+      lastDateWritten: 2165101918
+      dateCreatedStr: 1982-04-05 19:49:06
+      lastDateReadStr: 1982-04-08 10:22:42
+      lastDateWrittenStr: 1982-04-06 13:21:30
+      bpunValid: null
+    - name: 2T2-LQ:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 993
+      userName: TEKNOL-INST
+      dateCreated: 2164997257
+      lastDateRead: 2165351877
+      lastDateWritten: 2165102018
+      dateCreatedStr: 1982-04-05 19:50:09
+      lastDateReadStr: 1982-04-08 10:23:05
+      lastDateWrittenStr: 1982-04-06 13:23:02
+      bpunValid: null
+    - name: 3T2-LQ:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1011
+      userName: TEKNOL-INST
+      dateCreated: 2164997327
+      lastDateRead: 2165351895
+      lastDateWritten: 2165102127
+      dateCreatedStr: 1982-04-05 19:51:15
+      lastDateReadStr: 1982-04-08 10:23:23
+      lastDateWrittenStr: 1982-04-06 13:24:47
+      bpunValid: null
+    - name: 4T2-LQ:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1337
+      userName: TEKNOL-INST
+      dateCreated: 2164997365
+      lastDateRead: 2165351918
+      lastDateWritten: 2165244195
+      dateCreatedStr: 1982-04-05 19:51:53
+      lastDateReadStr: 1982-04-08 10:23:46
+      lastDateWrittenStr: 1982-04-07 16:04:35
+      bpunValid: null
+    - name: 5T2-LQ:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1185
+      userName: TEKNOL-INST
+      dateCreated: 2164997420
+      lastDateRead: 2165351966
+      lastDateWritten: 2165101450
+      dateCreatedStr: 1982-04-05 19:52:44
+      lastDateReadStr: 1982-04-08 10:24:30
+      lastDateWrittenStr: 1982-04-06 13:14:10
+      bpunValid: null
+    - name: 7T2-LQ:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1232
+      userName: TEKNOL-INST
+      dateCreated: 2164997505
+      lastDateRead: 2165352004
+      lastDateWritten: 2165113481
+      dateCreatedStr: 1982-04-05 19:54:01
+      lastDateReadStr: 1982-04-08 10:25:04
+      lastDateWrittenStr: 1982-04-06 16:10:09
+      bpunValid: null
+    - name: BAST1-LQ:SYMB
+      type: SYMB
+      pages: 9
+      bytes: 17038
+      userName: TEKNOL-INST
+      dateCreated: 2159346438
+      lastDateRead: 2192103131
+      lastDateWritten: 2162229802
+      dateCreatedStr: 1982-02-26 16:12:06
+      lastDateReadStr: 1982-10-20 13:27:27
+      lastDateWrittenStr: 1982-03-16 16:08:42
+      bpunValid: null
+    - name: 1T1-LQ:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 578
+      userName: TEKNOL-INST
+      dateCreated: 2163930994
+      lastDateRead: 2192104651
+      lastDateWritten: 2164855353
+      dateCreatedStr: 1982-03-29 15:29:50
+      lastDateReadStr: 1982-10-20 13:51:11
+      lastDateWrittenStr: 1982-04-04 17:08:57
+      bpunValid: null
+    - name: 2T1-LQ:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 565
+      userName: TEKNOL-INST
+      dateCreated: 2163931072
+      lastDateRead: 2192104688
+      lastDateWritten: 2164855270
+      dateCreatedStr: 1982-03-29 15:31:00
+      lastDateReadStr: 1982-10-20 13:51:48
+      lastDateWrittenStr: 1982-04-04 17:07:38
+      bpunValid: null
+    - name: 3T1-LQ:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 759
+      userName: TEKNOL-INST
+      dateCreated: 2163931143
+      lastDateRead: 2165241630
+      lastDateWritten: 2164955323
+      dateCreatedStr: 1982-03-29 15:32:07
+      lastDateReadStr: 1982-04-07 15:28:30
+      lastDateWrittenStr: 1982-04-05 09:34:59
+      bpunValid: null
+    - name: 4T1-LQ:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 903
+      userName: TEKNOL-INST
+      dateCreated: 2163931215
+      lastDateRead: 2165241737
+      lastDateWritten: 2164955479
+      dateCreatedStr: 1982-03-29 15:33:15
+      lastDateReadStr: 1982-04-07 15:30:09
+      lastDateWrittenStr: 1982-04-05 09:37:23
+      bpunValid: null
+    - name: 5T1-LQ:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1098
+      userName: TEKNOL-INST
+      dateCreated: 2163931273
+      lastDateRead: 2165356435
+      lastDateWritten: 2164955664
+      dateCreatedStr: 1982-03-29 15:34:09
+      lastDateReadStr: 1982-04-08 11:30:19
+      lastDateWrittenStr: 1982-04-05 09:40:16
+      bpunValid: null
+    - name: 6T1-LQ:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1499
+      userName: TEKNOL-INST
+      dateCreated: 2163931315
+      lastDateRead: 2165356800
+      lastDateWritten: 2164953882
+      dateCreatedStr: 1982-03-29 15:34:51
+      lastDateReadStr: 1982-04-08 11:36:00
+      lastDateWrittenStr: 1982-04-05 09:12:26
+      bpunValid: null
+    - name: 7T1-LQ:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 3258
+      userName: TEKNOL-INST
+      dateCreated: 2164083492
+      lastDateRead: 2192106211
+      lastDateWritten: 2165356271
+      dateCreatedStr: 1982-03-30 20:44:36
+      lastDateReadStr: 1982-10-20 14:11:35
+      lastDateWrittenStr: 1982-04-08 11:27:47
+      bpunValid: null
+    - name: MTRLEGENSK-LQ:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 3451
+      userName: TEKNOL-INST
+      dateCreated: 2186327545
+      lastDateRead: 2191344562
+      lastDateWritten: 2186335655
+      dateCreatedStr: 1982-09-08 11:23:57
+      lastDateReadStr: 1982-10-14 20:14:50
+      lastDateWrittenStr: 1982-09-08 13:22:39
+      bpunValid: null
+    - name: MTRLFE-SMN:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 2695
+      userName: TEKNOL-INST
+      dateCreated: 2192106718
+      lastDateRead: 2192106718
+      lastDateWritten: 2192106718
+      dateCreatedStr: 1982-10-20 14:19:30
+      lastDateReadStr: 1982-10-20 14:19:30
+      lastDateWrittenStr: 1982-10-20 14:19:30
+      bpunValid: null
+    - name: TILLV-KLU:SYMB
+      type: SYMB
+      pages: 4
+      bytes: 6746
+      userName: TEKNOL-INST
+      dateCreated: 2192106979
+      lastDateRead: 2192107528
+      lastDateWritten: 2192106979
+      dateCreatedStr: 1982-10-20 14:23:35
+      lastDateReadStr: 1982-10-20 14:32:08
+      lastDateWrittenStr: 1982-10-20 14:23:35
+      bpunValid: null
+    - name: HOPF-JHO:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 3187
+      userName: TEKNOL-INST
+      dateCreated: 2188965233
+      lastDateRead: 2190388135
+      lastDateWritten: 2190388100
+      dateCreatedStr: 1982-09-28 15:21:49
+      lastDateReadStr: 1982-10-07 10:46:39
+      lastDateWrittenStr: 1982-10-07 10:46:04
+      bpunValid: null
+    - name: PLASTTILLF-JHO:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 2654
+      userName: TEKNOL-INST
+      dateCreated: 2192107146
+      lastDateRead: 2192107962
+      lastDateWritten: 2192107146
+      dateCreatedStr: 1982-10-20 14:26:10
+      lastDateReadStr: 1982-10-20 14:38:58
+      lastDateWrittenStr: 1982-10-20 14:26:10
+      bpunValid: null
+    - name: OVNTILLV-KLU:SYMB
+      type: SYMB
+      pages: 4
+      bytes: 6860
+      userName: TEKNOL-INST
+      dateCreated: 2190387794
+      lastDateRead: 2190391941
+      lastDateWritten: 2190391941
+      dateCreatedStr: 1982-10-07 10:41:18
+      lastDateReadStr: 1982-10-07 11:42:05
+      lastDateWrittenStr: 1982-10-07 11:42:05
+      bpunValid: null
+    - name: PROV1-T1-KLU:SYMB
+      type: SYMB
+      pages: 5
+      bytes: 9830
+      userName: TEKNOL-INST
+      dateCreated: 2192108274
+      lastDateRead: 2192108274
+      lastDateWritten: 2192108274
+      dateCreatedStr: 1982-10-20 14:43:50
+      lastDateReadStr: 1982-10-20 14:43:50
+      lastDateWrittenStr: 1982-10-20 14:43:50
+      bpunValid: null
+    - name: PROV2-T1-KLU:SYMB
+      type: SYMB
+      pages: 5
+      bytes: 9935
+      userName: TEKNOL-INST
+      dateCreated: 2192108354
+      lastDateRead: 2192108354
+      lastDateWritten: 2192108354
+      dateCreatedStr: 1982-10-20 14:45:02
+      lastDateReadStr: 1982-10-20 14:45:02
+      lastDateWrittenStr: 1982-10-20 14:45:02
+      bpunValid: null
+    - name: PLACLISTA-LQ:SYMB
+      type: SYMB
+      pages: 3
+      bytes: 4919
+      userName: TEKNOL-INST
+      dateCreated: 2151874978
+      lastDateRead: 2191442322
+      lastDateWritten: 2163931488
+      dateCreatedStr: 1982-01-01 16:06:34
+      lastDateReadStr: 1982-10-15 12:06:18
+      lastDateWrittenStr: 1982-03-29 15:37:32
+      bpunValid: null
+    - name: KLASSLISTOR-LQ:DATA
+      type: DATA
+      pages: 2
+      bytes: 1431
+      userName: TEKNOL-INST
+      dateCreated: 2151875029
+      lastDateRead: 2191442379
+      lastDateWritten: 2188296591
+      dateCreatedStr: 1982-01-01 16:07:21
+      lastDateReadStr: 1982-10-15 12:07:11
+      lastDateWrittenStr: 1982-09-23 12:06:15
+      bpunValid: null
+    - name: KLASSLISTA-LQ:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 288
+      userName: TEKNOL-INST
+      dateCreated: 2151875035
+      lastDateRead: 2189591493
+      lastDateWritten: 2151875035
+      dateCreatedStr: 1982-01-01 16:07:27
+      lastDateReadStr: 1982-10-01 08:15:05
+      lastDateWrittenStr: 1982-01-01 16:07:27
+      bpunValid: null
+    - name: REPMOM-LQ:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1589
+      userName: TEKNOL-INST
+      dateCreated: 2155139704
+      lastDateRead: 2192108987
+      lastDateWritten: 2155143821
+      dateCreatedStr: 1982-01-26 13:09:56
+      lastDateReadStr: 1982-10-20 14:54:59
+      lastDateWrittenStr: 1982-01-26 14:10:13
+      bpunValid: null
+    - name: PROJREM-KLU:SYMB
+      type: SYMB
+      pages: 8
+      bytes: 14622
+      userName: TEKNOL-INST
+      dateCreated: 2169305871
+      lastDateRead: 2707210606
+      lastDateWritten: 2303250491
+      dateCreatedStr: 1982-05-06 15:44:15
+      lastDateReadStr: 1990-05-14 12:05:46
+      lastDateWrittenStr: 1984-05-04 13:00:59
+      bpunValid: null
+    - name: PROV3-KLU:SYMB
+      type: SYMB
+      pages: 5
+      bytes: 8481
+      userName: TEKNOL-INST
+      dateCreated: 2325799107
+      lastDateRead: 2325808201
+      lastDateWritten: 2325808201
+      dateCreatedStr: 1984-10-16 14:03:03
+      lastDateReadStr: 1984-10-16 16:17:09
+      lastDateWrittenStr: 1984-10-16 16:17:09
+      bpunValid: null
+    - name: PROV4-KLU:SYMB
+      type: SYMB
+      pages: 5
+      bytes: 8263
+      userName: TEKNOL-INST
+      dateCreated: 2325799748
+      lastDateRead: 2325808296
+      lastDateWritten: 2325808296
+      dateCreatedStr: 1984-10-16 14:13:04
+      lastDateReadStr: 1984-10-16 16:18:40
+      lastDateWrittenStr: 1984-10-16 16:18:40
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 400/ND-disk-00427.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:49:31.823Z
+imagingLogs:
+  - ND-disk-00427.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-ddf0e6614b33
+  syncStatus: pending

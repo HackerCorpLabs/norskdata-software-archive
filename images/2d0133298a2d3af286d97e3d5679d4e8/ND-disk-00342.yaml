@@ -1,0 +1,444 @@
+id: img-2d0133298a2d
+volumeName: NILSSON-1
+md5: 2d0133298a2d3af286d97e3d5679d4e8
+image:
+  sizeBytes: 319488
+  format: raw
+  controller: floppy
+  totalPages: 156
+  pageSize: 2048
+  bootFormat: bpun
+filesystem: ndfs
+ndfs:
+  users:
+    - name: MUD
+      pagesUsed: 147
+  files:
+    - name: V4-MUD-PA:SYMB
+      type: SYMB
+      pages: 31
+      bytes: 61495
+      userName: MUD
+      dateCreated: 2399619724
+      lastDateRead: 2664605498
+      lastDateWritten: 2399623517
+      dateCreatedStr: 1985-12-03 20:42:12
+      lastDateReadStr: 1989-11-09 10:28:58
+      lastDateWrittenStr: 1985-12-03 21:37:29
+      bpunValid: null
+    - name: BLINKA-LILLA-PA:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1108
+      userName: MUD
+      dateCreated: 2374300614
+      lastDateRead: 2665129768
+      lastDateWritten: 2374300616
+      dateCreatedStr: 1985-06-02 15:15:06
+      lastDateReadStr: 1989-11-13 10:28:40
+      lastDateWrittenStr: 1985-06-02 15:15:08
+      bpunValid: null
+    - name: FIGURAT-PA:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 658
+      userName: MUD
+      dateCreated: 2391091673
+      lastDateRead: 2665131723
+      lastDateWritten: 2391091676
+      dateCreatedStr: 1985-10-02 18:39:25
+      lastDateReadStr: 1989-11-13 10:59:11
+      lastDateWrittenStr: 1985-10-02 18:39:28
+      bpunValid: null
+    - name: DESCRIPT-PA:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 184
+      userName: MUD
+      dateCreated: 2393309961
+      lastDateRead: 2665131726
+      lastDateWritten: 2393309963
+      dateCreatedStr: 1985-10-19 16:12:09
+      lastDateReadStr: 1989-11-13 10:59:14
+      lastDateWrittenStr: 1985-10-19 16:12:11
+      bpunValid: null
+    - name: LOTTO-PAN:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 3680
+      userName: MUD
+      dateCreated: 2321082988
+      lastDateRead: 2560840358
+      lastDateWritten: 2353983897
+      dateCreatedStr: 1984-09-12 14:41:44
+      lastDateReadStr: 1988-02-17 21:10:38
+      lastDateWrittenStr: 1985-01-07 15:06:25
+      bpunValid: null
+    - name: FTN-TEST-PAN:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1612
+      userName: MUD
+      dateCreated: 2393308344
+      lastDateRead: 2560840364
+      lastDateWritten: 2395683575
+      dateCreatedStr: 1985-10-19 15:50:56
+      lastDateReadStr: 1988-02-17 21:10:44
+      lastDateWrittenStr: 1985-11-05 19:43:55
+      bpunValid: null
+    - name: PED-HELP-PAN:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 3174
+      userName: MUD
+      dateCreated: 2374300651
+      lastDateRead: 2665131747
+      lastDateWritten: 2374300653
+      dateCreatedStr: 1985-06-02 15:15:43
+      lastDateReadStr: 1989-11-13 10:59:35
+      lastDateWrittenStr: 1985-06-02 15:15:45
+      bpunValid: null
+    - name: PAS-GRAF-PAN:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 676
+      userName: MUD
+      dateCreated: 2391092140
+      lastDateRead: 2568930670
+      lastDateWritten: 2391092143
+      dateCreatedStr: 1985-10-02 18:46:44
+      lastDateReadStr: 1988-04-15 12:21:46
+      lastDateWrittenStr: 1985-10-02 18:46:47
+      bpunValid: null
+    - name: VILKA-SOM-PAN:SYMB
+      type: SYMB
+      pages: 4
+      bytes: 7746
+      userName: MUD
+      dateCreated: 2374300667
+      lastDateRead: 2665129804
+      lastDateWritten: 2388187687
+      dateCreatedStr: 1985-06-02 15:15:59
+      lastDateReadStr: 1989-11-13 10:29:12
+      lastDateWrittenStr: 1985-09-12 13:40:39
+      bpunValid: null
+    - name: HARD-PRINT-PAN:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 2233
+      userName: MUD
+      dateCreated: 2393309988
+      lastDateRead: 2562393161
+      lastDateWritten: 2393309991
+      dateCreatedStr: 1985-10-19 16:12:36
+      lastDateReadStr: 1988-02-29 16:17:09
+      lastDateWrittenStr: 1985-10-19 16:12:39
+      bpunValid: null
+    - name: VIDEO-LEK-PAN:SYMB
+      type: SYMB
+      pages: 3
+      bytes: 5464
+      userName: MUD
+      dateCreated: 2393308396
+      lastDateRead: 2560840403
+      lastDateWritten: 2393308398
+      dateCreatedStr: 1985-10-19 15:51:44
+      lastDateReadStr: 1988-02-17 21:11:19
+      lastDateWrittenStr: 1985-10-19 15:51:46
+      bpunValid: null
+    - name: RUTINER-PEG-PAN:SYMB
+      type: SYMB
+      pages: 4
+      bytes: 6058
+      userName: MUD
+      dateCreated: 2391092176
+      lastDateRead: 2665131760
+      lastDateWritten: 2391092178
+      dateCreatedStr: 1985-10-02 18:47:16
+      lastDateReadStr: 1989-11-13 10:59:48
+      lastDateWrittenStr: 1985-10-02 18:47:18
+      bpunValid: null
+    - name: SOL-PEGASUS-PAN:SYMB
+      type: SYMB
+      pages: 4
+      bytes: 5707
+      userName: MUD
+      dateCreated: 2391092205
+      lastDateRead: 2560840418
+      lastDateWritten: 2391092208
+      dateCreatedStr: 1985-10-02 18:47:45
+      lastDateReadStr: 1988-02-17 21:11:34
+      lastDateWrittenStr: 1985-10-02 18:47:48
+      bpunValid: null
+    - name: PATCH-FILES-PAN:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 651
+      userName: MUD
+      dateCreated: 2393309853
+      lastDateRead: 2665131770
+      lastDateWritten: 2393309855
+      dateCreatedStr: 1985-10-19 16:10:29
+      lastDateReadStr: 1989-11-13 10:59:58
+      lastDateWrittenStr: 1985-10-19 16:10:31
+      bpunValid: null
+    - name: POLIS-KODER-PAN:SYMB
+      type: SYMB
+      pages: 3
+      bytes: 4478
+      userName: MUD
+      dateCreated: 2391092393
+      lastDateRead: 2560840430
+      lastDateWritten: 2391092397
+      dateCreatedStr: 1985-10-02 18:50:41
+      lastDateReadStr: 1988-02-17 21:11:46
+      lastDateWrittenStr: 1985-10-02 18:50:45
+      bpunValid: null
+    - name: SCREEN-PAN:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 437
+      userName: MUD
+      dateCreated: 2300647144
+      lastDateRead: 2652778754
+      lastDateWritten: 2300647145
+      dateCreatedStr: 1984-04-16 17:27:40
+      lastDateReadStr: 1989-08-15 03:04:02
+      lastDateWrittenStr: 1984-04-16 17:27:41
+      bpunValid: null
+    - name: KAMERA-PAN:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 528
+      userName: MUD
+      dateCreated: 2391095333
+      lastDateRead: 2568930531
+      lastDateWritten: 2395683878
+      dateCreatedStr: 1985-10-02 19:32:37
+      lastDateReadStr: 1988-04-15 12:19:35
+      lastDateWrittenStr: 1985-11-05 19:48:38
+      bpunValid: null
+    - name: GRAPH-PAN:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 746
+      userName: MUD
+      dateCreated: 2300646395
+      lastDateRead: 2652778651
+      lastDateWritten: 2300646400
+      dateCreatedStr: 1984-04-16 17:15:59
+      lastDateReadStr: 1989-08-15 03:02:27
+      lastDateWrittenStr: 1984-04-16 17:16:00
+      bpunValid: null
+    - name: NY-FILI-PBL:SYMB
+      type: SYMB
+      pages: 9
+      bytes: 16841
+      userName: MUD
+      dateCreated: 2426095989
+      lastDateRead: 2665129816
+      lastDateWritten: 2426095991
+      dateCreatedStr: 1986-02-13 20:37:53
+      lastDateReadStr: 1989-11-13 10:29:24
+      lastDateWrittenStr: 1986-02-13 20:37:55
+      bpunValid: null
+    - name: LOOPA-I-MAC-PAN:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 190
+      userName: MUD
+      dateCreated: 2391096196
+      lastDateRead: 2652778864
+      lastDateWritten: 2391096200
+      dateCreatedStr: 1985-10-02 19:46:04
+      lastDateReadStr: 1989-08-15 03:05:48
+      lastDateWrittenStr: 1985-10-02 19:46:08
+      bpunValid: null
+    - name: CLEAR-MUD-PA:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 890
+      userName: MUD
+      dateCreated: 2395683401
+      lastDateRead: 2562393180
+      lastDateWritten: 2440874705
+      dateCreatedStr: 1985-11-05 19:41:09
+      lastDateReadStr: 1988-02-29 16:17:28
+      lastDateWrittenStr: 1986-05-30 12:43:17
+      bpunValid: null
+    - name: LOGG-DX-PAN:SYMB
+      type: SYMB
+      pages: 6
+      bytes: 4592
+      userName: MUD
+      dateCreated: 2374301764
+      lastDateRead: 2560840484
+      lastDateWritten: 2374301766
+      dateCreatedStr: 1985-06-02 15:33:04
+      lastDateReadStr: 1988-02-17 21:12:36
+      lastDateWrittenStr: 1985-06-02 15:33:06
+      bpunValid: null
+    - name: PALIB-PA:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 2801
+      userName: MUD
+      dateCreated: 2395683489
+      lastDateRead: 2562393187
+      lastDateWritten: 2395683491
+      dateCreatedStr: 1985-11-05 19:42:33
+      lastDateReadStr: 1988-02-29 16:17:35
+      lastDateWrittenStr: 1985-11-05 19:42:35
+      bpunValid: null
+    - name: RUMMARE-MUD-PA:SYMB
+      type: SYMB
+      pages: 5
+      bytes: 8489
+      userName: MUD
+      dateCreated: 2395683526
+      lastDateRead: 2665132047
+      lastDateWritten: 2399619556
+      dateCreatedStr: 1985-11-05 19:43:06
+      lastDateReadStr: 1989-11-13 11:00:15
+      lastDateWrittenStr: 1985-12-03 20:39:36
+      bpunValid: null
+    - name: DX-REPORT-PAN:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 2023
+      userName: MUD
+      dateCreated: 2374301840
+      lastDateRead: 2560840515
+      lastDateWritten: 2374301842
+      dateCreatedStr: 1985-06-02 15:34:16
+      lastDateReadStr: 1988-02-17 21:13:03
+      lastDateWrittenStr: 1985-06-02 15:34:18
+      bpunValid: null
+    - name: VISA-TERM-PAN:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 349
+      userName: MUD
+      dateCreated: 2374301857
+      lastDateRead: 2665132061
+      lastDateWritten: 2374301859
+      dateCreatedStr: 1985-06-02 15:34:33
+      lastDateReadStr: 1989-11-13 11:00:29
+      lastDateWrittenStr: 1985-06-02 15:34:35
+      bpunValid: null
+    - name: PEGASUS-6502-PAN:SYMB
+      type: SYMB
+      pages: 5
+      bytes: 5945
+      userName: MUD
+      dateCreated: 2391098670
+      lastDateRead: 2560840526
+      lastDateWritten: 2391098672
+      dateCreatedStr: 1985-10-02 20:20:46
+      lastDateReadStr: 1988-02-17 21:13:14
+      lastDateWrittenStr: 1985-10-02 20:20:48
+      bpunValid: null
+    - name: MUD-MODE-PA:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 123
+      userName: MUD
+      dateCreated: 2395683654
+      lastDateRead: 2665132065
+      lastDateWritten: 2396597661
+      dateCreatedStr: 1985-11-05 19:45:06
+      lastDateReadStr: 1989-11-13 11:00:33
+      lastDateWrittenStr: 1985-11-12 18:54:29
+      bpunValid: null
+    - name: V3-MUD-PA:SYMB
+      type: SYMB
+      pages: 30
+      bytes: 61237
+      userName: MUD
+      dateCreated: 2396610086
+      lastDateRead: 2560840539
+      lastDateWritten: 2399585060
+      dateCreatedStr: 1985-11-12 21:56:38
+      lastDateReadStr: 1988-02-17 21:13:27
+      lastDateWrittenStr: 1985-12-03 12:12:36
+      bpunValid: null
+    - name: SPELIDE-PA:SYMB
+      type: SYMB
+      pages: 3
+      bytes: 4909
+      userName: MUD
+      dateCreated: 2397912730
+      lastDateRead: 2665132076
+      lastDateWritten: 2399619635
+      dateCreatedStr: 1985-11-22 19:58:26
+      lastDateReadStr: 1989-11-13 11:00:44
+      lastDateWrittenStr: 1985-12-03 20:40:51
+      bpunValid: null
+    - name: SORT-SIGN-PAN:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 800
+      userName: MUD
+      dateCreated: 2374302326
+      lastDateRead: 2665132106
+      lastDateWritten: 2374302329
+      dateCreatedStr: 1985-06-02 15:41:54
+      lastDateReadStr: 1989-11-13 11:01:10
+      lastDateWrittenStr: 1985-06-02 15:41:57
+      bpunValid: null
+    - name: WEM-PAN:SYMB
+      type: SYMB
+      pages: 3
+      bytes: 4414
+      userName: MUD
+      dateCreated: 2374302569
+      lastDateRead: 2652778799
+      lastDateWritten: 2391088559
+      dateCreatedStr: 1985-06-02 15:45:41
+      lastDateReadStr: 1989-08-15 03:04:47
+      lastDateWrittenStr: 1985-10-02 17:54:47
+      bpunValid: null
+    - name: DISSEMBLER-PAN:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 468
+      userName: MUD
+      dateCreated: 2374302165
+      lastDateRead: 2665129870
+      lastDateWritten: 2374302168
+      dateCreatedStr: 1985-06-02 15:39:21
+      lastDateReadStr: 1989-11-13 10:30:14
+      lastDateWrittenStr: 1985-06-02 15:39:24
+      bpunValid: null
+    - name: LIB-FORTH-PAN:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 2983
+      userName: MUD
+      dateCreated: 2388183018
+      lastDateRead: 2562393223
+      lastDateWritten: 2399620383
+      dateCreatedStr: 1985-09-12 12:31:42
+      lastDateReadStr: 1988-02-29 16:18:07
+      lastDateWrittenStr: 1985-12-03 20:52:31
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 300/ND-disk-00342.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:45:49.095Z
+imagingLogs:
+  - ND-disk-00342.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-2d0133298a2d
+  syncStatus: pending

@@ -1,0 +1,64 @@
+id: nd-10176-a-d1-cb6fe13a
+volumeName: ND-10176A-PART1
+md5: cb6fe13a4ffbebfb92780bc93abff5ff
+product:
+  id: ND-10176
+  version: A
+  diskNumber: 1
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 145
+  files:
+    - name: COBOL:PROG
+      type: PROG
+      pages: 81
+      bytes: 172032
+      userName: FLOPPY-USER
+      dateCreated: 2095485834
+      lastDateRead: 2281704768
+      lastDateWritten: 2095499628
+      dateCreatedStr: 1981-03-19 09:14:10
+      lastDateReadStr: null
+      lastDateWrittenStr: 1981-03-19 12:37:44
+      bpunValid: null
+    - name: COBOL:BPUN
+      type: BPUN
+      pages: 61
+      bytes: 123519
+      userName: FLOPPY-USER
+      dateCreated: 2095485962
+      lastDateRead: 2281704818
+      lastDateWritten: 2095499668
+      dateCreatedStr: 1981-03-19 09:16:10
+      lastDateReadStr: null
+      lastDateWrittenStr: 1981-03-19 12:38:20
+      bpunValid: true
+provenance:
+  contributor: gandalf
+  originalPath: 400/ND-disk-00402.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:49:25.775Z
+imagingLogs:
+  - ND-disk-00402.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10176-a-d1-cb6fe13a
+  syncStatus: pending

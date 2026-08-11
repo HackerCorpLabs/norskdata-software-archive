@@ -1126,6 +1126,17 @@ code, pre { font-family: 'Consolas', 'Courier New', monospace; }
   background: var(--accent-bg);
 }
 
+/* The same selection highlight for the DOS and backup viewers, which use
+   .nd-table rather than .ndfs-file-table. Without this the row carried the
+   class but showed nothing, so a selected file was invisible. */
+tr.ndfs-file-selected,
+.nd-table tbody tr.ndfs-file-selected {
+  background: var(--accent-bg);
+  box-shadow: inset 3px 0 0 var(--accent);
+}
+.nd-table tbody tr[data-idx]:hover,
+.nd-table tbody tr[data-file]:hover { background: var(--bg-elev); }
+
 .ndfs-file-actions {
   padding: 0.5rem 0.75rem;
   border-top: 1px solid var(--border);
@@ -1592,6 +1603,33 @@ code, pre { font-family: 'Consolas', 'Courier New', monospace; }
   margin-top: 0.75rem;
 }
 
+/* Matcher disk chip: the checkbox, the name and the discard control are three
+   separate hit areas. The chip used to be a <label>, which meant clicking the
+   name toggled the checkbox and the disk could never be opened. */
+.nd-match-disk-chip { display: inline-flex; align-items: center; gap: 0.35rem; }
+.nd-dos-row:hover { background: var(--bg-elev); }
+.nd-dos-crumb { color: var(--accent); text-decoration: none; }
+.nd-dos-crumb:hover { text-decoration: underline; }
+.nd-disk-open {
+  background: none;
+  border: 0;
+  padding: 0;
+  color: var(--accent);
+  cursor: pointer;
+  font: inherit;
+}
+.nd-disk-open:hover code, .nd-disk-open:focus-visible code { text-decoration: underline; }
+.nd-disk-discard {
+  background: none;
+  border: 0;
+  padding: 0 0.15rem;
+  color: var(--text-muted);
+  cursor: pointer;
+  font-size: 0.85rem;
+  line-height: 1;
+}
+.nd-disk-discard:hover, .nd-disk-discard:focus-visible { color: var(--err, #ff6b6b); }
+
 .nd-btn-danger {
   background: var(--warn-bg);
   border-color: var(--warn);
@@ -1974,8 +2012,8 @@ code, pre { font-family: 'Consolas', 'Courier New', monospace; }
         '<div class="nd-queue-piles">' +
           ndQueuePile('auto', mq.auto || 0, 'Ready to link', 'Floppy name matches a known product — confirm to link them', 'ok') +
           ndQueuePile('new', mq.new || 0, 'New products', 'Floppy name parsed but product not yet in the list — create it', 'info') +
-          ndQueuePile('manual', mq.manual || 0, 'Needs review', 'Floppy name could not be parsed — pick the product manually', 'warn') +
-          ndQueuePile('broken', mq.broken || 0, 'Bad reads', 'Could not be read properly — may need re-imaging', 'patch') +
+          ndQueuePile('manual', mq.manual || 0, 'Needs review', 'The image has contents, but its name could not be parsed — pick the product manually', 'warn') +
+          ndQueuePile('broken', mq.broken || 0, 'No filesystem', 'No ND filesystem in the image — a bad read, an empty disk, or non-ND media such as MS-DOS', 'patch') +
         '</div>';
 
       // Contributors
@@ -2041,6 +2079,7 @@ code, pre { font-family: 'Consolas', 'Courier New', monospace; }
     var mode = params.mode || 'auto';
     matcherState.mode = mode;
     matcherState.offset = parseInt(params.offset || '0', 10);
+    if (params.limit) matcherState.limit = parseInt(params.limit, 10);
     matcherState.selected = new Set();
 
     el.innerHTML =
@@ -2049,7 +2088,7 @@ code, pre { font-family: 'Consolas', 'Courier New', monospace; }
           ndMatchTab('auto', 'Auto-match', 'ok') +
           ndMatchTab('new', 'New products', 'info') +
           ndMatchTab('manual', 'Unparseable', 'warn') +
-          ndMatchTab('broken', 'Bad reads', 'patch') +
+          ndMatchTab('broken', 'No filesystem', 'patch') +
         '</div>' +
         '<div class="nd-matcher-toolbar" id="match-toolbar">' +
           '<label class="nd-matcher-select-all"><input type="checkbox" id="match-select-all"> Select all</label>' +
@@ -2057,6 +2096,8 @@ code, pre { font-family: 'Consolas', 'Courier New', monospace; }
           '<span style="flex:1"></span>' +
           '<button class="nd-btn nd-btn-primary" id="match-confirm-btn" disabled>Link to product</button>' +
           '<button class="nd-btn nd-btn-ghost" id="match-skip-btn" disabled>Skip for now</button>' +
+          '<button class="nd-btn nd-btn-danger nd-write-only" id="match-discard-btn" disabled>Discard import</button>' +
+          '<button class="nd-btn nd-btn-ghost nd-write-only" id="match-detect-btn" title="Read every image that has no recorded filesystem and work out what it holds">Detect filesystems</button>' +
         '</div>' +
         '<div class="nd-matcher-body">' +
           '<div class="nd-matcher-list" id="match-list"><p class="nd-text-muted">Loading...</p></div>' +
@@ -2080,6 +2121,32 @@ code, pre { font-family: 'Consolas', 'Courier New', monospace; }
 
     document.getElementById('match-confirm-btn').addEventListener('click', matchConfirm);
     document.getElementById('match-skip-btn').addEventListener('click', matchSkip);
+    var mDetect = document.getElementById('match-detect-btn');
+    if (mDetect) mDetect.addEventListener('click', function() {
+      var b = this; b.disabled = true; b.textContent = 'Detecting...';
+      fetch('/api/detect-filesystem?scope=missing', { method: 'POST' })
+        .then(function(r) { return r.json(); })
+        .then(function(d) {
+          b.disabled = false; b.textContent = 'Detect filesystems';
+          if (d.error) { showMatchMessage('Detect failed: ' + d.error, 'warn'); return; }
+          var parts = Object.keys(d.counts || {}).map(function(k) { return k + ': ' + d.counts[k]; });
+          showMatchMessage('Scanned ' + d.scanned + ', recorded ' + d.changed +
+            (parts.length ? ' - ' + parts.join(', ') : '') + (d.failed ? ' (' + d.failed + ' unreadable)' : ''), 'ok');
+          loadMatchQueue();
+        })
+        .catch(function(err) { b.disabled = false; b.textContent = 'Detect filesystems'; showMatchMessage(String(err), 'warn'); });
+    });
+
+    var mDiscard = document.getElementById('match-discard-btn');
+    if (mDiscard) mDiscard.addEventListener('click', function() {
+      var ids = Array.from(matcherState.selected);
+      var label = '';
+      if (ids.length === 1) {
+        var one = matcherState.entries.find(function(e) { return e.floppy.id === ids[0]; });
+        label = one ? (one.floppy.volumeName || one.floppy.originalFilename || ids[0]) : ids[0];
+      }
+      matchDiscard(ids, label);
+    });
 
     loadMatchQueue();
   }
@@ -2143,10 +2210,17 @@ code, pre { font-family: 'Consolas', 'Courier New', monospace; }
           var vol = e.floppy.volumeName || '';
           var volDisplay = vol ? esc(vol) : '<span class="nd-text-muted">' + esc(e.floppy.originalFilename || e.floppy.id) + '</span>';
           var checked = matcherState.selected.has(e.floppy.id) ? ' checked' : '';
-          html += '<label class="nd-match-disk-chip nd-match-row" data-id="' + esc(e.floppy.id) + '">' +
-            '<input type="checkbox" class="nd-match-check"' + checked + '>' +
-            ' <code>' + volDisplay + '</code>' +
-          '</label>';
+          // The chip is NOT a <label>: wrapping it in one made every click
+          // toggle the checkbox, so the disk name could not be opened.
+          // The box is its own hit area; the name is a button that opens the disk.
+          html += '<span class="nd-match-disk-chip nd-match-row" data-id="' + esc(e.floppy.id) + '">' +
+            '<input type="checkbox" class="nd-match-check" title="Select"' + checked + '>' +
+            '<button type="button" class="nd-disk-open" data-id="' + esc(e.floppy.id) + '" ' +
+              'title="Open this disk and look at its contents"><code>' + volDisplay + '</code></button>' +
+            '<button type="button" class="nd-disk-discard nd-write-only" data-id="' + esc(e.floppy.id) + '" ' +
+              'data-vol="' + esc(vol || e.floppy.originalFilename || e.floppy.id) + '" ' +
+              'title="Discard this import - deletes the copied image and its YAML">&#10005;</button>' +
+          '</span>';
         });
         html += '</div>';
 
@@ -2182,11 +2256,20 @@ code, pre { font-family: 'Consolas', 'Courier New', monospace; }
         var parsedStr = p.productId ? esc(p.productId) + ' ' + esc(p.version || '') : '-';
         var langBadge = p.language ? ' <span class="nd-badge">' + esc(p.language) + '</span>' : '';
         var diskBadge = p.diskNumber ? ' <span class="nd-badge">d' + p.diskNumber + '</span>' : '';
-        var prodDisplay = s.productName
-          ? '<code>' + esc(s.productId) + '</code> ' + esc(s.productName)
-          : s.isNew
-            ? '<code>' + esc(s.productId) + '</code> <span class="nd-badge nd-badge-warn">NEW</span>'
-            : '-';
+        // A product that does not exist yet still gets a name when its old/new
+        // sibling number is known (ND-210511 borrows the name of ND-10511).
+        // Show NEW whenever it is new, and say where the name came from -
+        // otherwise a borrowed name makes it look like an existing product.
+        var prodDisplay = '-';
+        if (s.productId) {
+          prodDisplay = '<code>' + esc(s.productId) + '</code>';
+          if (s.isNew) prodDisplay += ' <span class="nd-badge nd-badge-warn">NEW</span>';
+          if (s.productName) prodDisplay += ' ' + esc(s.productName);
+          if (s.siblingOf) {
+            prodDisplay += ' <span class="nd-text-muted" style="font-size:0.8rem">(name from '
+              + esc(s.siblingOf) + ')</span>';
+          }
+        }
         var confPct = s.confidence != null ? Math.round(s.confidence * 100) + '%' : '-';
         var confCls = s.confidence >= 0.9 ? 'nd-conf-high' : s.confidence >= 0.7 ? 'nd-conf-mid' : 'nd-conf-low';
         html += '<td>' + parsedStr + langBadge + diskBadge + '</td>' +
@@ -2217,6 +2300,31 @@ code, pre { font-family: 'Consolas', 'Courier New', monospace; }
         if (entry) renderMatchDetail(entry);
         list.querySelectorAll('.nd-match-row').forEach(function(r) { r.classList.remove('nd-row-active'); });
         row.classList.add('nd-row-active');
+      });
+    });
+
+    // Open a disk from its name - shows the detail panel and, when the image has
+    // an NDFS filesystem, its contents. Separate from the checkbox on purpose.
+    list.querySelectorAll('.nd-disk-open').forEach(function(btn) {
+      btn.addEventListener('click', function(ev) {
+        ev.preventDefault();
+        ev.stopPropagation();
+        var id = this.getAttribute('data-id');
+        var entry = matcherState.entries.find(function(e) { return e.floppy.id === id; });
+        if (!entry) return;
+        renderMatchDetail(entry);
+        list.querySelectorAll('.nd-match-row').forEach(function(r) { r.classList.remove('nd-row-active'); });
+        var chip = this.closest('.nd-match-row');
+        if (chip) chip.classList.add('nd-row-active');
+      });
+    });
+
+    // Discard a single import straight from its chip.
+    list.querySelectorAll('.nd-disk-discard').forEach(function(btn) {
+      btn.addEventListener('click', function(ev) {
+        ev.preventDefault();
+        ev.stopPropagation();
+        matchDiscard([this.getAttribute('data-id')], this.getAttribute('data-vol'));
       });
     });
 
@@ -2452,6 +2560,12 @@ code, pre { font-family: 'Consolas', 'Courier New', monospace; }
         html += esc(fname) + '<br>';
       });
       html += '</div>';
+    } else {
+      // Say why the listing is empty - otherwise a disk whose directory could
+      // not be read looks the same as one nobody has looked at.
+      html += '<h4 style="margin-top:1rem;color:var(--accent)">Files on disk</h4>';
+      html += '<p class="nd-text-muted" style="font-size:0.85rem">No ND filesystem could be read from this image. ' +
+        'Open the floppy detail below to look at the raw image.</p>';
     }
 
     // Actions. The NDFS Viewer button is added after the lazy fetch below,
@@ -2483,12 +2597,65 @@ code, pre { font-family: 'Consolas', 'Courier New', monospace; }
       // NDFS Viewer button -- only when the actual image is stored in git.
       var git = e.storage && e.storage.git;
       if (e.storageClass === 'floppy-in-git' && git && git.imagePath) {
-        var btn = document.createElement('button');
-        btn.className = 'nd-btn nd-btn-primary nd-btn-sm';
-        btn.style.fontSize = '0.85rem';
-        btn.textContent = 'Open in NDFS Viewer';
-        btn.addEventListener('click', function() { openNdfsViewer(e.id); });
-        actions.insertBefore(btn, actions.firstChild);
+        // Only offer the NDFS viewer when the image might actually hold an ND
+        // filesystem - not on a disk already known to be DOS, a backup volume,
+        // a tar, or unreadable.
+        var btn = null;
+        if (!e.filesystem || e.filesystem === 'ndfs') {
+          btn = document.createElement('button');
+          btn.className = 'nd-btn nd-btn-primary nd-btn-sm';
+          btn.style.fontSize = '0.85rem';
+          btn.textContent = 'Open in NDFS Viewer';
+          btn.addEventListener('click', function() { openNdfsViewer(e.id); });
+          actions.insertBefore(btn, actions.firstChild);
+        }
+
+        // Hex view - the only way to look at a disk the NDFS parser cannot read.
+        var hexBtn = document.createElement('button');
+        hexBtn.className = 'nd-btn nd-btn-ghost nd-btn-sm';
+        hexBtn.style.fontSize = '0.85rem';
+        hexBtn.textContent = 'Open in HEX viewer';
+        hexBtn.addEventListener('click', function() { openHexViewer(e.id, e.volumeName || e.id); });
+        actions.insertBefore(hexBtn, btn ? btn.nextSibling : actions.firstChild);
+
+        // Re-run filesystem detection on this image. An image the NDFS parser
+        // rejected may still be a DOS floppy or a tar.
+        var detBtn = document.createElement('button');
+        detBtn.className = 'nd-btn nd-btn-ghost nd-btn-sm nd-write-only';
+        detBtn.style.fontSize = '0.85rem';
+        detBtn.textContent = 'Detect filesystem';
+        detBtn.addEventListener('click', function() {
+          var b = this; b.disabled = true; b.textContent = 'Detecting...';
+          fetch('/api/detect-filesystem?id=' + encodeURIComponent(e.id), { method: 'POST' })
+            .then(function(r) { return r.json(); })
+            .then(function(d) {
+              b.disabled = false; b.textContent = 'Detect filesystem';
+              if (d.error) { showMatchMessage('Detect failed: ' + d.error, 'warn'); return; }
+              var kind = Object.keys(d.counts || {})[0] || 'unknown';
+              showMatchMessage('Filesystem: ' + kind + (d.changed ? ' (recorded)' : ' (unchanged)'),
+                kind === 'none' ? 'warn' : 'ok');
+              loadMatchQueue();
+            })
+            .catch(function(err) { b.disabled = false; b.textContent = 'Detect filesystem'; showMatchMessage(String(err), 'warn'); });
+        });
+        actions.insertBefore(detBtn, hexBtn.nextSibling);
+
+        // MS-DOS disks get their own browser - the NDFS viewer has nothing to show.
+        if (e.filesystem === 'dos') {
+          var dosBtn = document.createElement('button');
+          dosBtn.className = 'nd-btn nd-btn-primary nd-btn-sm';
+          dosBtn.style.fontSize = '0.85rem';
+          dosBtn.textContent = 'Open in DOS viewer';
+          dosBtn.addEventListener('click', function() { openDosViewer(e.id, e.volumeName || e.volumeLabel || e.id); });
+          actions.insertBefore(dosBtn, actions.firstChild);
+        } else if (e.filesystem === 'backup' || e.filesystem === 'winch') {
+          var bkBtn = document.createElement('button');
+          bkBtn.className = 'nd-btn nd-btn-primary nd-btn-sm';
+          bkBtn.style.fontSize = '0.85rem';
+          bkBtn.textContent = 'Open in backup viewer';
+          bkBtn.addEventListener('click', function() { openBackupViewer(e.id, e.volumeName || e.volumeLabel || e.id); });
+          actions.insertBefore(bkBtn, actions.firstChild);
+        }
       }
 
       // Label photos
@@ -2505,16 +2672,37 @@ code, pre { font-family: 'Consolas', 'Courier New', monospace; }
     var page = Math.floor(offset / limit) + 1;
     var totalPages = Math.ceil(total / limit);
 
-    if (totalPages <= 1) { pager.innerHTML = '<span class="nd-text-muted">' + total + ' total</span>'; return; }
+    var first = total === 0 ? 0 : offset + 1;
+    var last = Math.min(offset + limit, total);
+    var link = function(off, lim, label, cls) {
+      return '<a href="#/match?mode=' + matcherState.mode + '&offset=' + off + '&limit=' + lim +
+        '" class="nd-btn ' + (cls || 'nd-btn-ghost') + ' nd-btn-sm">' + label + '</a> ';
+    };
 
-    var html = '<span class="nd-text-muted">' + total + ' total · Page ' + page + '/' + totalPages + '</span> ';
-    if (offset > 0) {
-      html += '<a href="#/match?mode=' + matcherState.mode + '&offset=' + Math.max(0, offset - limit) + '" class="nd-btn nd-btn-ghost">← Prev</a> ';
+    // Rows per page - without this there was no way to see or change it, and a
+    // 350-row queue arrived as 8 opaque pages of 50.
+    var sizes = [50, 100, 200, 500];
+    var sizeHtml = '<span class="nd-text-muted" style="margin-left:0.75rem">Rows:</span> ';
+    sizes.forEach(function(n) {
+      sizeHtml += n === limit
+        ? '<span class="nd-badge nd-badge-info" style="margin-right:0.25rem">' + n + '</span>'
+        : link(0, n, String(n), 'nd-btn-ghost');
+    });
+
+    var html = '<span class="nd-text-muted">Showing ' + first + '-' + last + ' of ' + total +
+      (totalPages > 1 ? '  ·  page ' + page + '/' + totalPages : '') + '</span> ';
+    if (totalPages > 1) {
+      html += ' ';
+      if (offset > 0) {
+        html += link(0, limit, '&laquo; First');
+        html += link(Math.max(0, offset - limit), limit, '&larr; Prev');
+      }
+      if (offset + limit < total) {
+        html += link(offset + limit, limit, 'Next &rarr;');
+        html += link((totalPages - 1) * limit, limit, 'Last &raquo;');
+      }
     }
-    if (offset + limit < total) {
-      html += '<a href="#/match?mode=' + matcherState.mode + '&offset=' + (offset + limit) + '" class="nd-btn nd-btn-ghost">Next →</a>';
-    }
-    pager.innerHTML = html;
+    pager.innerHTML = html + sizeHtml;
   }
 
   function updateMatchToolbar() {
@@ -2522,6 +2710,113 @@ code, pre { font-family: 'Consolas', 'Courier New', monospace; }
     document.getElementById('match-selection-count').textContent = count > 0 ? count + ' selected' : '';
     document.getElementById('match-confirm-btn').disabled = count === 0;
     document.getElementById('match-skip-btn').disabled = count === 0;
+    var discardBtn = document.getElementById('match-discard-btn');
+    if (discardBtn) {
+      discardBtn.disabled = count === 0;
+      discardBtn.textContent = count > 1 ? 'Discard ' + count + ' imports' : 'Discard import';
+    }
+  }
+
+  /**
+   * Discard imported floppies: delete the copied .img.gz, its .yaml and the
+   * files that came with it. Always previews the exact file list first
+   * (dryRun), then asks, then applies. The source folder is never touched, so
+   * a discarded disk can always be imported again.
+   */
+  function matchDiscard(ids, label) {
+    if (!ids.length) return;
+    function fmtKB(b) { return b >= 1048576 ? (b / 1048576).toFixed(1) + ' MB' : Math.max(1, Math.round(b / 1024)) + ' KB'; }
+
+    // 1) ask the server what each one would delete
+    Promise.all(ids.map(function(id) {
+      return fetch('/api/catalog-entry?id=' + encodeURIComponent(id) + '&dryRun=1', { method: 'DELETE' })
+        .then(function(r) { return r.json(); })
+        .then(function(p) { return { id: id, plan: p }; });
+    })).then(function(previews) {
+      var files = [], bytes = 0, bad = [];
+      previews.forEach(function(pv) {
+        if (pv.plan.error || !pv.plan.count) { bad.push(pv.id + ': ' + (pv.plan.error || 'nothing on disk')); return; }
+        pv.plan.files.forEach(function(f) { files.push('  - ' + f.path + '  (' + fmtKB(f.bytes) + ')'); });
+        bytes += pv.plan.totalBytes;
+      });
+      if (!files.length) { alert('Nothing on disk to discard.\n\n' + bad.join('\n')); return; }
+
+      var head = ids.length === 1
+        ? 'Discard the import of "' + label + '"?'
+        : 'Discard ' + ids.length + ' imported floppies?';
+      var plain = head + '\n\n'
+        + files.length + ' file(s), ' + fmtKB(bytes) + ', will be permanently deleted:\n\n'
+        + files.join('\n')
+        + (bad.length ? '\n\nSkipped:\n' + bad.join('\n') : '');
+
+      // 2) approval. A real modal, not confirm() - the file list has to be
+      // selectable and copyable, and confirm() gives neither.
+      var body = '<div class="nd-modal-header"><h3>' + esc(head) + '</h3>' +
+          '<button class="nd-modal-close" id="dsc-x" title="Cancel">&times;</button></div>' +
+        '<div style="padding:1rem 1.25rem;overflow-y:auto">' +
+          '<p style="margin-top:0">' + files.length + ' file(s), <strong>' + fmtKB(bytes) + '</strong>, ' +
+            'will be <strong>permanently deleted</strong>:</p>' +
+          '<pre id="dsc-list" style="user-select:text;background:var(--bg-sunken);border:1px solid var(--border);' +
+            'border-radius:4px;padding:0.6rem 0.75rem;max-height:40vh;overflow:auto;font-size:0.78rem;' +
+            'line-height:1.5;white-space:pre;margin:0">' + esc(files.join('\n')) + '</pre>' +
+          (bad.length ? '<p class="nd-text-muted" style="font-size:0.85rem;margin-top:0.75rem">Skipped: ' +
+            esc(bad.join('; ')) + '</p>' : '') +
+          '<p class="nd-text-muted" style="font-size:0.85rem;margin-top:0.75rem">' +
+            'The floppies drop out of the catalog. Shared &quot;set&quot; photos are kept. ' +
+            'The original images in the source folder are <strong>not</strong> touched, so they can be imported again.</p>' +
+        '</div>' +
+        '<div style="display:flex;gap:0.5rem;justify-content:flex-end;padding:0.75rem 1.25rem;border-top:1px solid var(--border)">' +
+          '<button class="nd-btn nd-btn-ghost nd-btn-sm" id="dsc-copy">Copy list</button>' +
+          '<span style="flex:1"></span>' +
+          '<button class="nd-btn nd-btn-ghost" id="dsc-cancel">Cancel</button>' +
+          '<button class="nd-btn nd-btn-danger" id="dsc-ok">Delete ' + files.length + ' file(s)</button>' +
+        '</div>';
+      ndModal.open(body, { wide: true });
+
+      document.getElementById('dsc-copy').addEventListener('click', function() {
+        var btn = this;
+        var done = function() { btn.textContent = 'Copied'; setTimeout(function() { btn.textContent = 'Copy list'; }, 1500); };
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(plain).then(done, function() { selectList(); });
+        } else { selectList(); }
+        function selectList() {
+          // Fallback: select it so Ctrl+C works.
+          var pre = document.getElementById('dsc-list');
+          var r = document.createRange(); r.selectNodeContents(pre);
+          var sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(r);
+          btn.textContent = 'Selected - press Ctrl+C';
+          setTimeout(function() { btn.textContent = 'Copy list'; }, 2500);
+        }
+      });
+      document.getElementById('dsc-x').addEventListener('click', function() { ndModal.close(); });
+      document.getElementById('dsc-cancel').addEventListener('click', function() { ndModal.close(); });
+      document.getElementById('dsc-ok').addEventListener('click', function() {
+        ndModal.close();
+        applyDiscard();
+      });
+      return;
+
+      function applyDiscard() {
+      // 3) apply, one at a time so a failure stops the rest
+      showMatchMessage('Discarding ' + ids.length + ' import(s)...', 'info');
+      var done = 0, failed = [];
+      (function next(i) {
+        if (i >= ids.length) {
+          matcherState.selected.clear();
+          showMatchMessage(
+            failed.length ? 'Discarded ' + done + ', failed ' + failed.length + ': ' + failed.join(', ')
+                          : 'Discarded ' + done + ' import(s)',
+            failed.length ? 'warn' : 'ok');
+          loadMatchQueue();
+          return;
+        }
+        fetch('/api/catalog-entry?id=' + encodeURIComponent(ids[i]), { method: 'DELETE' })
+          .then(function(r) { return r.json(); })
+          .then(function(d) { if (d.error) failed.push(ids[i]); else done++; next(i + 1); })
+          .catch(function() { failed.push(ids[i]); next(i + 1); });
+      })(0);
+      }
+    }).catch(function(err) { alert('Error: ' + String(err)); });
   }
 
   function showMatchMessage(text, variant) {
@@ -2568,37 +2863,34 @@ code, pre { font-family: 'Consolas', 'Courier New', monospace; }
     btn.disabled = true;
     btn.textContent = 'Confirming...';
 
-    // Confirm each product group separately, in sequence.
-    var totalLinked = 0;
-    var errors = [];
-    function finish() {
+    // All product groups go in ONE request. Sending them one at a time meant a
+    // full catalog regeneration per product (~1.6 s on 300 entries) and a site
+    // rebuild fired between them, so confirming 16 disks took tens of seconds.
+    var payload = keys.map(function(k) {
+      return { floppyIds: groups[k].ids, target: groups[k].target };
+    });
+    var total = payload.reduce(function(n, g) { return n + g.floppyIds.length; }, 0);
+
+    fetch('/api/match/confirm', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ groups: payload })
+    }).then(function(r) { return r.json(); }).then(function(data) {
       btn.disabled = false;
       btn.textContent = 'Link to product';
-      if (errors.length) {
-        showMatchMessage('Linked ' + totalLinked + ' floppy(s); ' + errors.length + ' error(s): ' + errors[0], 'warn');
+      if (data.error) {
+        showMatchMessage('Link failed: ' + data.error, 'warn');
       } else {
-        showMatchMessage('Linked ' + totalLinked + ' floppy(s) to ' + keys.length + ' product(s)' + (skipped ? ' (' + skipped + ' skipped)' : ''), 'ok');
+        showMatchMessage('Linked ' + (data.updated != null ? data.updated : total) + ' floppy(s) to ' +
+          keys.length + ' product(s)' + (skipped ? ' (' + skipped + ' skipped)' : ''), 'ok');
       }
       matcherState.selected.clear();
       loadMatchQueue();
-    }
-    function next(i) {
-      if (i >= keys.length) { finish(); return; }
-      var g = groups[keys[i]];
-      fetch('/api/match/confirm', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ floppyIds: g.ids, target: g.target })
-      }).then(function(r) { return r.json(); }).then(function(data) {
-        if (data.error) errors.push(g.label + ': ' + data.error);
-        else totalLinked += g.ids.length;
-        next(i + 1);
-      }).catch(function(err) {
-        errors.push(g.label + ': ' + String(err));
-        next(i + 1);
-      });
-    }
-    next(0);
+    }).catch(function(err) {
+      btn.disabled = false;
+      btn.textContent = 'Link to product';
+      showMatchMessage('Link failed: ' + String(err), 'warn');
+    });
   }
 
   function matchSkip() {
@@ -3315,12 +3607,13 @@ code, pre { font-family: 'Consolas', 'Courier New', monospace; }
   // ==============================================================
   // Catalog
   // ==============================================================
-  var catalogState = { q: '', contributor: '', status: '', offset: 0, limit: 50, total: 0, debounceTimer: null, sortCol: null, sortDir: 'asc', lastEntries: [] };
+  var catalogState = { q: '', contributor: '', status: '', filesystem: '', offset: 0, limit: 50, total: 0, debounceTimer: null, sortCol: null, sortDir: 'asc', lastEntries: [] };
 
   function renderCatalog(el, params) {
     catalogState.q = params.q || '';
     catalogState.contributor = params.contributor || '';
     catalogState.status = params.status || '';
+    catalogState.filesystem = params.filesystem || '';
     catalogState.offset = parseInt(params.offset || '0', 10);
 
     el.innerHTML =
@@ -3403,10 +3696,24 @@ code, pre { font-family: 'Consolas', 'Courier New', monospace; }
     if (catalogState.q) url += '&q=' + encodeURIComponent(catalogState.q);
     if (catalogState.contributor) url += '&contributor=' + encodeURIComponent(catalogState.contributor);
     if (catalogState.status) url += '&status=' + encodeURIComponent(catalogState.status);
+    if (catalogState.filesystem) url += '&filesystem=' + encodeURIComponent(catalogState.filesystem);
 
     fetch(url).then(function(r) { return r.json(); }).then(function(data) {
       catalogState.total = data.total;
-      document.getElementById('cat-total').textContent = data.total + ' floppies';
+      // Say which set is on screen: by default the catalog lists ND floppies
+      // only, and the disks with no ND filesystem are reachable from here.
+      var fs = catalogState.filesystem || 'ndfs';
+      var fsLabel = { ndfs: 'ND floppies', dos: 'MS-DOS disks', tar: 'tar archives',
+                      backup: 'BACKUP-SYSTEM volumes', winch: 'WINCH-TO-FLOPP volumes',
+                      none: 'no filesystem', all: 'all media' }[fs] || fs;
+      var links = ['ndfs', 'dos', 'backup', 'winch', 'tar', 'none', 'all'].filter(function(k) { return k !== fs; })
+        .map(function(k) {
+          var lbl = { ndfs: 'ND floppies', dos: 'MS-DOS', backup: 'BACKUP-SYSTEM', winch: 'WINCH-TO-FLOPP',
+                      tar: 'tar', none: 'no filesystem', all: 'all' }[k];
+          return '<a href="#/catalog?filesystem=' + k + '">' + lbl + '</a>';
+        }).join(' · ');
+      document.getElementById('cat-total').innerHTML = data.total + ' ' + fsLabel +
+        ' <span class="nd-text-muted" style="font-size:0.85rem">(show: ' + links + ')</span>';
       renderCatalogTable(data.entries);
       renderCatalogPager();
     }).catch(function(err) {
@@ -3438,7 +3745,8 @@ code, pre { font-family: 'Consolas', 'Courier New', monospace; }
     html += '</tr></thead><tbody>';
 
     data.forEach(function(e) {
-      var volText = e.volumeName ? esc(e.volumeName) : '<span class="nd-text-muted">' + esc(e.id) + '</span>';
+      var volName = e.volumeName || e.volumeLabel;
+      var volText = volName ? esc(volName) : '<span class="nd-text-muted">' + esc(e.id) + '</span>';
       var volDisplay = '<a href="#/disks/' + encodeURIComponent(e.id) + '"><code>' + volText + '</code></a>';
       var prodLabel = e.productId ? esc(e.productId) + (e.productName ? ' <span class="nd-text-muted" style="font-weight:normal">' + esc(e.productName) + '</span>' : '') : '';
       var prodDisplay = e.productId ? '<a href="#/products/' + encodeURIComponent(e.productId) + '">' + prodLabel + '</a>' : '<span class="nd-text-muted">-</span>';
@@ -3472,7 +3780,7 @@ code, pre { font-family: 'Consolas', 'Courier New', monospace; }
     return arr.slice().sort(function(a, b) {
       var av, bv;
       switch (col) {
-        case 0: av = (a.volumeName || a.id || '').toLowerCase(); bv = (b.volumeName || b.id || '').toLowerCase(); break;
+        case 0: av = (a.volumeName || a.volumeLabel || a.id || '').toLowerCase(); bv = (b.volumeName || b.volumeLabel || b.id || '').toLowerCase(); break;
         case 1: av = (a.productId || '').toLowerCase(); bv = (b.productId || '').toLowerCase(); break;
         case 2: av = (a.version || '').toLowerCase(); bv = (b.version || '').toLowerCase(); break;
         case 3: av = (a.bootFormat || '').toLowerCase(); bv = (b.bootFormat || '').toLowerCase(); break;
@@ -4633,14 +4941,28 @@ code, pre { font-family: 'Consolas', 'Courier New', monospace; }
       html += ndQuickStat(e.bootFormat || 'unknown', 'Boot Format', 'How the floppy boots: none = not bootable, flomon = ND floppy monitor, binary = raw bootstrap, bpun = packaged binary');
       html += ndQuickStat(e.totalPages != null ? e.totalPages : '-', 'NDFS Pages', 'NDFS filesystem pages (1 page = ' + (e.pageSize || 1024) + ' bytes)');
       html += ndQuickStat(sizeStr, 'Image Size', 'Total size of the disk image file');
-      html += ndQuickStat(fileCount, 'Files on Disk', 'Number of files stored on the floppy');
+      html += ndQuickStat(
+        e.filesystem === 'dos' ? '-' : fileCount,
+        e.filesystem === 'dos' ? 'MS-DOS disk' : 'Files on Disk',
+        e.filesystem === 'dos' ? 'This is an MS-DOS floppy - see the directory listing below'
+                               : 'Number of files stored on the floppy');
       html += '</div>';
 
       // NDFS viewer button (only when we have the actual image file)
       if (e.storageClass === 'floppy-in-git' && e.storage && e.storage.git && e.storage.git.imagePath) {
-        html += '<div style="margin-bottom:0.75rem">' +
-          '<button class="nd-btn nd-btn-primary nd-btn-sm" onclick="openNdfsViewer(\'' + esc(e.id) + '\')">Open in NDFS Viewer</button>' +
-          '</div>';
+        // Offer only the viewer that suits the image. Showing "Open in NDFS
+        // Viewer" on a disk we know has no ND filesystem just wastes a click.
+        var vLabel = esc(e.volumeName || e.volumeLabel || e.id);
+        html += '<div style="margin-bottom:0.75rem">';
+        if (e.filesystem === 'dos') {
+          html += '<button class="nd-btn nd-btn-primary nd-btn-sm" onclick="openDosViewer(\'' + esc(e.id) + '\', \'' + vLabel + '\')">Open in DOS viewer</button> ';
+        } else if (e.filesystem === 'backup' || e.filesystem === 'winch') {
+          html += '<button class="nd-btn nd-btn-primary nd-btn-sm" onclick="openBackupViewer(\'' + esc(e.id) + '\', \'' + vLabel + '\')">Open in backup viewer</button> ';
+        } else if (!e.filesystem || e.filesystem === 'ndfs') {
+          html += '<button class="nd-btn nd-btn-primary nd-btn-sm" onclick="openNdfsViewer(\'' + esc(e.id) + '\')">Open in NDFS Viewer</button> ';
+        }
+        html += '<button class="nd-btn nd-btn-ghost nd-btn-sm" onclick="openHexViewer(\'' + esc(e.id) + '\', \'' + vLabel + '\')">Open in HEX viewer</button>';
+        html += '</div>';
       }
 
       // Tags editor (write-only)
@@ -4739,8 +5061,18 @@ code, pre { font-family: 'Consolas', 'Courier New', monospace; }
         });
 
         html += '</tbody></table></div>';
+      } else if (e.filesystem === 'dos') {
+        // MS-DOS disk: its directory is not an NDFS listing, so show the real
+        // one. Filled in after render, from /api/dosfs/info.
+        html += '<div class="nd-card" id="dos-listing"><p class="nd-text-muted">Reading MS-DOS directory...</p></div>';
+      } else if (e.filesystem === 'tar') {
+        html += '<div class="nd-card"><p class="nd-text-muted">This image is a tar archive written straight to the media, not a filesystem. ' +
+          'Use the HEX viewer, or extract it with <code>tar -xf</code>.</p></div>';
       } else {
-        html += '<div class="nd-card"><p class="nd-text-muted">No NDFS file listing available for this image.</p></div>';
+        html += '<div class="nd-card"><p class="nd-text-muted">' +
+          (e.filesystem === 'none'
+            ? 'No filesystem could be read from this image - an empty disk, a failed read, or media this archive does not recognise. Use the HEX viewer to look at the raw bytes.'
+            : 'No NDFS file listing available for this image.') + '</p></div>';
       }
 
       // Photos (below file table)
@@ -4837,6 +5169,36 @@ code, pre { font-family: 'Consolas', 'Courier New', monospace; }
       html += '</div>';
 
       el.innerHTML = html;
+
+      // MS-DOS directory listing, in place of the NDFS table.
+      var dosBox = document.getElementById('dos-listing');
+      if (dosBox && e.filesystem === 'dos') {
+        fetch('/api/dosfs/info?id=' + encodeURIComponent(e.id))
+          .then(function(r) { return r.json().then(function(j) { return { ok: r.ok, j: j }; }); })
+          .then(function(res) {
+            if (!res.ok) { dosBox.innerHTML = '<p class="nd-text-muted">' + esc(res.j.error || 'Could not read the disk') + '</p>'; return; }
+            var i = res.j.info, entries = (res.j.entries || []).filter(function(x) { return !x.isVolumeLabel; });
+            var h = '<div style="padding:0.75rem 1rem;border-bottom:1px solid var(--border)">' +
+              '<strong>MS-DOS disk</strong> <span class="nd-text-muted">' +
+              esc(i.volumeLabel || '(no label)') + ' &middot; OEM ' + esc(i.oemName) + ' &middot; FAT' + i.fatBits +
+              ' &middot; ' + i.totalBytes.toLocaleString() + ' B, ' + i.freeBytes.toLocaleString() + ' B free</span>' +
+              ' <button class="nd-btn nd-btn-ghost nd-btn-sm" style="float:right;font-size:0.75rem" ' +
+              'onclick="openDosViewer(\'' + esc(e.id) + '\', \'' + esc(e.volumeName || e.id) + '\')">Browse</button></div>';
+            h += '<table class="nd-ndfs-table"><thead><tr><th>Name</th><th style="text-align:right">Size</th><th>Modified</th></tr></thead><tbody>';
+            entries.forEach(function(x) {
+              var depth = x.path.split('/').length - 1;
+              h += '<tr><td style="padding-left:' + (0.6 + depth * 1.2) + 'rem"><code style="font-size:0.82rem">' +
+                (x.isDirectory ? '&#128193; ' : '') + esc(x.name) + '</code></td>' +
+                '<td style="text-align:right">' + (x.isDirectory ? '<span class="nd-text-muted">&lt;DIR&gt;</span>' : x.size.toLocaleString()) + '</td>' +
+                '<td>' + (x.modified ? esc(x.modified) : '<span class="nd-date-null">-</span>') + '</td></tr>';
+            });
+            h += '</tbody></table>';
+            dosBox.style.padding = '0';
+            dosBox.style.overflowX = 'auto';
+            dosBox.innerHTML = h;
+          })
+          .catch(function(err) { dosBox.innerHTML = '<p class="nd-text-muted">' + esc(String(err)) + '</p>'; });
+      }
 
       // Wire up edit controls (write-only)
       var mode = document.documentElement.getAttribute('data-mode');
@@ -5185,6 +5547,412 @@ code, pre { font-family: 'Consolas', 'Courier New', monospace; }
 
       '</div>';
   }
+
+  // ==============================================================
+  // MS-DOS floppy viewer
+  // ==============================================================
+  // Same idea as the NDFS viewer, for the MS-DOS disks in the collection
+  // (ND-OWS, NORTEXT PC material). Reads through /api/dosfs/*, which uses the
+  // dosfs library in tools/src/lib/dosfs.
+  window.openDosViewer = function(entryId, label) {
+    ndModal.open(
+      '<div class="nd-modal-header"><h3>MS-DOS disk - ' + esc(label || entryId) + '</h3>' +
+        '<button class="nd-modal-close" onclick="ndModal.close()">&times;</button></div>' +
+      // The modal is a flex column: the header and the action bar keep their
+      // height, the listing takes the rest and scrolls. min-height:0 is what
+      // actually lets a flex child shrink enough to produce a scrollbar.
+      '<div id="doshead" style="flex:0 0 auto;padding:0.75rem 1.25rem;border-bottom:1px solid var(--border)"></div>' +
+      '<div id="dosbody" style="flex:1 1 auto;min-height:0;overflow-y:auto;overflow-x:auto;padding:0.75rem 1.25rem">Loading...</div>' +
+      '<div class="ndfs-file-actions" id="dosactions" style="flex:0 0 auto">' +
+        '<span class="ndfs-selected-label" id="dos-sel-label">Select a file</span>' +
+        '<button class="nd-btn nd-btn-sm nd-badge-ok" id="dos-btn-extract" disabled>Extract</button>' +
+        '<button class="nd-btn nd-btn-sm nd-badge-os" id="dos-btn-extract-strip" disabled>Extract (strip parity)</button>' +
+        '<button class="nd-btn nd-btn-sm nd-badge-info" id="dos-btn-hex" disabled>View as hex</button>' +
+        '<button class="nd-btn nd-btn-sm nd-badge-patch" id="dos-btn-text" disabled>View as text</button>' +
+      '</div>', { wide: true });
+
+    var shell = document.getElementById('nd-modal-content');
+    if (shell) { shell.style.height = '85vh'; shell.style.maxHeight = '85vh'; }
+
+    var head = document.getElementById('doshead');
+    var body = document.getElementById('dosbody');
+    var all = [], cwd = '', selected = null;
+
+    function childrenOf(dir) {
+      return all.filter(function(e) {
+        if (e.isVolumeLabel) return false;
+        var cut = e.path.lastIndexOf('/');
+        return (cut === -1 ? '' : e.path.slice(0, cut)) === dir;
+      });
+    }
+
+    function setSelected(entry) {
+      selected = entry;
+      document.getElementById('dos-sel-label').textContent = entry ? entry.path : 'Select a file';
+      ['dos-btn-extract', 'dos-btn-extract-strip', 'dos-btn-hex', 'dos-btn-text'].forEach(function(id) {
+        document.getElementById(id).disabled = !entry;
+      });
+      body.querySelectorAll('tr[data-file]').forEach(function(tr) {
+        tr.classList.toggle('ndfs-file-selected', !!entry && tr.getAttribute('data-file') === entry.path);
+      });
+    }
+
+    function fileUrl(strip) {
+      return '/api/dosfs/read-file?id=' + encodeURIComponent(entryId) +
+        '&path=' + encodeURIComponent(selected.path) + (strip ? '&parity=strip' : '');
+    }
+
+    function crumbs() {
+      var html = '<a href="#" data-goto="" class="nd-dos-crumb">disk root</a>';
+      var acc = '';
+      (cwd ? cwd.split('/') : []).forEach(function(p) {
+        acc = acc ? acc + '/' + p : p;
+        html += ' <span class="nd-text-muted">/</span> <a href="#" data-goto="' + esc(acc) + '" class="nd-dos-crumb"><code>' + esc(p) + '</code></a>';
+      });
+      return html;
+    }
+
+    function renderDir() {
+      var rows = childrenOf(cwd);
+      var dirs = rows.filter(function(e) { return e.isDirectory; }).sort(function(a, b) { return a.name.localeCompare(b.name); });
+      var files = rows.filter(function(e) { return !e.isDirectory; }).sort(function(a, b) { return a.name.localeCompare(b.name); });
+
+      var html = '<div style="margin-bottom:0.5rem">' + crumbs() + '</div>';
+      html += '<table class="nd-table nd-table-compact"><thead><tr>' +
+        '<th>Name</th><th style="width:8rem;text-align:right">Size</th><th style="width:11rem">Modified</th></tr></thead><tbody>';
+      if (cwd) {
+        var up = cwd.indexOf('/') === -1 ? '' : cwd.slice(0, cwd.lastIndexOf('/'));
+        html += '<tr class="nd-dos-row" data-goto="' + esc(up) + '" style="cursor:pointer"><td><code>&#8593; ..</code></td><td></td><td></td></tr>';
+      }
+      dirs.forEach(function(e) {
+        html += '<tr class="nd-dos-row" data-goto="' + esc(e.path) + '" style="cursor:pointer" title="Open this directory">' +
+          '<td><code>&#128193; ' + esc(e.name) + '</code></td>' +
+          '<td style="text-align:right" class="nd-text-muted">&lt;DIR&gt;</td>' +
+          '<td class="nd-text-muted">' + esc(e.modified || '') + '</td></tr>';
+      });
+      files.forEach(function(e) {
+        html += '<tr data-file="' + esc(e.path) + '" style="cursor:pointer" title="Select this file">' +
+          '<td><code>' + esc(e.name) + '</code></td>' +
+          '<td style="text-align:right">' + e.size.toLocaleString() + '</td>' +
+          '<td class="nd-text-muted">' + esc(e.modified || '') + '</td></tr>';
+      });
+      if (!rows.length) html += '<tr><td colspan="3" class="nd-text-muted">(empty directory)</td></tr>';
+      html += '</tbody></table>';
+      body.innerHTML = html;
+
+      body.querySelectorAll('[data-goto]').forEach(function(el) {
+        el.addEventListener('click', function(ev) {
+          ev.preventDefault();
+          cwd = this.getAttribute('data-goto') || '';
+          setSelected(null);
+          renderDir();
+        });
+      });
+      body.querySelectorAll('tr[data-file]').forEach(function(tr) {
+        tr.addEventListener('click', function() {
+          var path = this.getAttribute('data-file');
+          setSelected(all.find(function(x) { return x.path === path; }) || null);
+        });
+      });
+      setSelected(selected && childrenOf(cwd).some(function(x) { return x.path === selected.path; }) ? selected : null);
+    }
+
+    function showBytes(mode) {
+      if (!selected) return;
+      var strip = mode === 'text';
+      fetch(fileUrl(false)).then(function(r) { return r.arrayBuffer(); }).then(function(buf) {
+        var bytes = new Uint8Array(buf);
+        var out;
+        if (mode === 'hex') {
+          var lines = [];
+          for (var off = 0; off < bytes.length && off < 65536; off += 16) {
+            var h = '', a = '';
+            for (var i = 0; i < 16; i++) {
+              if (off + i >= bytes.length) { h += '   '; continue; }
+              var b = bytes[off + i];
+              h += (b < 16 ? '0' : '') + b.toString(16) + ' ' + (i === 7 ? ' ' : '');
+              a += (b >= 0x20 && b <= 0x7e) ? String.fromCharCode(b) : '.';
+            }
+            lines.push(('00000000' + off.toString(16)).slice(-8) + '  ' + h + ' |' + a + '|');
+          }
+          out = lines.join('\n') + (bytes.length > 65536 ? '\n... truncated at 64 KB' : '');
+        } else {
+          var txt = '';
+          for (var j = 0; j < bytes.length; j++) {
+            var c = bytes[j] & 0x7f;               // ND text carries the parity bit
+            txt += (c === 10 || c === 13 || c === 9 || (c >= 0x20 && c <= 0x7e)) ? String.fromCharCode(c) : '.';
+          }
+          out = txt;
+        }
+        body.innerHTML = '<p style="margin:0 0 0.5rem"><button class="nd-btn nd-btn-ghost nd-btn-sm" id="dos-back">&larr; back to listing</button> ' +
+          '<code>' + esc(selected.path) + '</code> <span class="nd-text-muted">' + bytes.length.toLocaleString() + ' bytes</span></p>' +
+          '<pre style="user-select:text;background:var(--bg-sunken);border:1px solid var(--border);border-radius:4px;' +
+          'padding:0.6rem 0.75rem;font-size:0.78rem;line-height:1.5;white-space:pre;margin:0">' +
+          esc(out) + '</pre>';
+        document.getElementById('dos-back').addEventListener('click', renderDir);
+      }).catch(function(err) { alert('Read failed: ' + err); });
+    }
+
+    function download(strip) {
+      if (!selected) return;
+      fetch(fileUrl(strip)).then(function(r) { return r.blob(); }).then(function(blob) {
+        var a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        a.download = selected.name;
+        document.body.appendChild(a); a.click(); document.body.removeChild(a);
+        URL.revokeObjectURL(a.href);
+      }).catch(function(err) { alert('Extract failed: ' + err); });
+    }
+
+    document.getElementById('dos-btn-extract').addEventListener('click', function() { download(false); });
+    document.getElementById('dos-btn-extract-strip').addEventListener('click', function() { download(true); });
+    document.getElementById('dos-btn-hex').addEventListener('click', function() { showBytes('hex'); });
+    document.getElementById('dos-btn-text').addEventListener('click', function() { showBytes('text'); });
+
+    fetch('/api/dosfs/info?id=' + encodeURIComponent(entryId))
+      .then(function(r) { return r.json().then(function(j) { return { ok: r.ok, j: j }; }); })
+      .then(function(res) {
+        if (!res.ok) { body.innerHTML = '<p class="nd-text-muted">' + esc(res.j.error || 'Could not read the disk') + '</p>'; return; }
+        var i = res.j.info;
+        all = res.j.entries || [];
+        head.innerHTML = '<strong>' + esc(i.volumeLabel || '(no label)') + '</strong>' +
+          ' <span class="nd-text-muted">OEM ' + esc(i.oemName) + ' &middot; FAT' + i.fatBits +
+          ' &middot; ' + i.bytesPerSector + ' B/sector &middot; ' + i.totalBytes.toLocaleString() +
+          ' B, ' + i.freeBytes.toLocaleString() + ' B free &middot; ' + all.length + ' entries</span>';
+        renderDir();
+      })
+      .catch(function(err) { body.innerHTML = '<p class="nd-text-muted">' + esc(String(err)) + '</p>'; });
+  };
+
+  // ==============================================================
+  // Norsk Data backup volume viewer
+  // ==============================================================
+  // Two formats behind one button. A BACKUP-SYSTEM (VOL1) volume names its
+  // files, so it browses and extracts like the NDFS and DOS viewers. A
+  // WINCH-TO-FLOPP volume has no file names on the media at all - it is a page
+  // dump of a directory - so it shows the header and the page map instead.
+  window.openBackupViewer = function(entryId, label) {
+    ndModal.open(
+      '<div class="nd-modal-header"><h3>Backup volume - ' + esc(label || entryId) + '</h3>' +
+        '<button class="nd-modal-close" onclick="ndModal.close()">&times;</button></div>' +
+      '<div id="bkhead" style="flex:0 0 auto;padding:0.75rem 1.25rem;border-bottom:1px solid var(--border)"></div>' +
+      '<div id="bkbody" style="flex:1 1 auto;min-height:0;overflow:auto;padding:0.75rem 1.25rem">Loading...</div>' +
+      '<div class="ndfs-file-actions" id="bkactions" style="flex:0 0 auto;display:none">' +
+        '<span class="ndfs-selected-label" id="bk-sel-label">Select a file</span>' +
+        '<button class="nd-btn nd-btn-sm nd-badge-ok" id="bk-btn-extract" disabled>Extract</button>' +
+        '<button class="nd-btn nd-btn-sm nd-badge-os" id="bk-btn-extract-strip" disabled>Extract (strip parity)</button>' +
+        '<button class="nd-btn nd-btn-sm nd-badge-info" id="bk-btn-hex" disabled>View as hex</button>' +
+        '<button class="nd-btn nd-btn-sm nd-badge-patch" id="bk-btn-text" disabled>View as text</button>' +
+      '</div>', { wide: true });
+
+    var shell = document.getElementById('nd-modal-content');
+    if (shell) { shell.style.height = '85vh'; shell.style.maxHeight = '85vh'; }
+    var head = document.getElementById('bkhead');
+    var body = document.getElementById('bkbody');
+    var actions = document.getElementById('bkactions');
+    var files = [], selectedIndex = -1;
+
+    function setSelected(i) {
+      selectedIndex = i;
+      var f = files[i];
+      document.getElementById('bk-sel-label').textContent = f ? f.fullName : 'Select a file';
+      ['bk-btn-extract', 'bk-btn-extract-strip', 'bk-btn-hex', 'bk-btn-text'].forEach(function(id) {
+        document.getElementById(id).disabled = !f;
+      });
+      body.querySelectorAll('tr[data-idx]').forEach(function(tr) {
+        var on = parseInt(tr.getAttribute('data-idx'), 10) === i;
+        tr.classList.toggle('ndfs-file-selected', on);
+        if (on && tr.scrollIntoView) tr.scrollIntoView({ block: 'nearest' });
+      });
+    }
+
+    function fileUrl(strip) {
+      return '/api/ndbackup/read-file?id=' + encodeURIComponent(entryId) +
+        '&index=' + selectedIndex + (strip ? '&parity=strip' : '');
+    }
+
+    function renderFiles() {
+      var html = '<table class="nd-table nd-table-compact"><thead><tr>' +
+        '<th>File</th><th style="width:6rem;text-align:right">Bytes</th><th style="width:5rem;text-align:right">Seq</th>' +
+        '<th style="width:8rem">Created</th><th style="width:10rem">System</th></tr></thead><tbody>';
+      files.forEach(function(f, i) {
+        html += '<tr data-idx="' + i + '" style="cursor:pointer"' + (f.stale ? ' title="Label left over from an older backup on this disk"' : '') + '>' +
+          '<td><code>' + esc(f.fullName) + '</code>' +
+            (f.continued ? ' <span class="nd-badge nd-badge-warn" style="font-size:0.65rem">continues</span>' : '') +
+            (f.stale ? ' <span class="nd-text-muted" style="font-size:0.7rem">stale</span>' : '') + '</td>' +
+          '<td style="text-align:right">' + f.dataLength.toLocaleString() + '</td>' +
+          '<td style="text-align:right" class="nd-text-muted">' + f.sequence + '</td>' +
+          '<td class="nd-text-muted">' + esc(f.created || '') + '</td>' +
+          '<td class="nd-text-muted">' + esc(f.system || '') + '</td></tr>';
+      });
+      html += '</tbody></table>';
+      body.innerHTML = html;
+      body.querySelectorAll('tr[data-idx]').forEach(function(tr) {
+        tr.addEventListener('click', function() { setSelected(parseInt(this.getAttribute('data-idx'), 10)); });
+      });
+      setSelected(-1);
+    }
+
+    function showBytes(mode) {
+      if (selectedIndex < 0) return;
+      fetch(fileUrl(false)).then(function(r) { return r.arrayBuffer(); }).then(function(buf) {
+        var bytes = new Uint8Array(buf), out;
+        if (mode === 'hex') {
+          var lines = [];
+          for (var off = 0; off < bytes.length && off < 65536; off += 16) {
+            var h = '', a = '';
+            for (var i = 0; i < 16; i++) {
+              if (off + i >= bytes.length) { h += '   '; continue; }
+              var b = bytes[off + i];
+              h += (b < 16 ? '0' : '') + b.toString(16) + ' ' + (i === 7 ? ' ' : '');
+              var c = b & 0x7f;
+              a += (c >= 0x20 && c <= 0x7e) ? String.fromCharCode(c) : '.';
+            }
+            lines.push(('00000000' + off.toString(16)).slice(-8) + '  ' + h + ' |' + a + '|');
+          }
+          out = lines.join('\n') + (bytes.length > 65536 ? '\n... truncated at 64 KB' : '');
+        } else {
+          var txt = '';
+          for (var j = 0; j < bytes.length; j++) {
+            var cc = bytes[j] & 0x7f;
+            txt += (cc === 10 || cc === 13 || cc === 9 || (cc >= 0x20 && cc <= 0x7e)) ? String.fromCharCode(cc) : '.';
+          }
+          out = txt;
+        }
+        body.innerHTML = '<p style="margin:0 0 0.5rem"><button class="nd-btn nd-btn-ghost nd-btn-sm" id="bk-back">&larr; back to listing</button> ' +
+          '<code>' + esc(files[selectedIndex].fullName) + '</code> <span class="nd-text-muted">' + bytes.length.toLocaleString() + ' bytes</span></p>' +
+          '<pre style="user-select:text;background:var(--bg-sunken);border:1px solid var(--border);border-radius:4px;' +
+          'padding:0.6rem 0.75rem;font-size:0.78rem;line-height:1.5;white-space:pre;margin:0">' + esc(out) + '</pre>';
+        document.getElementById('bk-back').addEventListener('click', renderFiles);
+      }).catch(function(err) { alert('Read failed: ' + err); });
+    }
+
+    function download(strip) {
+      if (selectedIndex < 0) return;
+      fetch(fileUrl(strip)).then(function(r) { return r.blob(); }).then(function(blob) {
+        var a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        // NAME:TYPE -> NAME.TYPE: a colon is illegal in a Windows filename and
+        // the browser drops everything before it, leaving files called ".SYMB".
+        a.download = files[selectedIndex].fullName.replace(/:/g, '.').replace(/[^A-Za-z0-9._-]/g, '_');
+        document.body.appendChild(a); a.click(); document.body.removeChild(a);
+        URL.revokeObjectURL(a.href);
+      }).catch(function(err) { alert('Extract failed: ' + err); });
+    }
+
+    document.getElementById('bk-btn-extract').addEventListener('click', function() { download(false); });
+    document.getElementById('bk-btn-extract-strip').addEventListener('click', function() { download(true); });
+    document.getElementById('bk-btn-hex').addEventListener('click', function() { showBytes('hex'); });
+    document.getElementById('bk-btn-text').addEventListener('click', function() { showBytes('text'); });
+
+    fetch('/api/ndbackup/info?id=' + encodeURIComponent(entryId))
+      .then(function(r) { return r.json().then(function(j) { return { ok: r.ok, j: j }; }); })
+      .then(function(res) {
+        if (!res.ok) { body.innerHTML = '<p class="nd-text-muted">' + esc(res.j.error || 'Could not read the volume') + '</p>'; return; }
+        var v = res.j;
+        if (v.kind === 'backup') {
+          files = v.files || [];
+          var live = files.filter(function(f) { return !f.stale; }).length;
+          head.innerHTML = '<strong>SINTRAN BACKUP-SYSTEM</strong> <span class="nd-text-muted">volume <code>' +
+            esc(v.volumeId) + '</code> &middot; owner <code>' + esc(v.owner) + '</code> &middot; ' +
+            live + ' file(s)' + (files.length - live ? ', ' + (files.length - live) + ' stale label(s)' : '') +
+            ' &middot; ' + v.sectorSize + ' B sectors, ' + v.blockLength + ' B blocks</span>';
+          actions.style.display = '';
+          renderFiles();
+        } else {
+          head.innerHTML = '<strong>WINCH-TO-FLOPP</strong> <span class="nd-text-muted">directory <code>' +
+            esc(v.directoryName) + '</code> &middot; volume ' + v.volumeNumber + ' of ' + v.totalVolumes +
+            ' &middot; ' + v.pages.length + ' page(s)' + (v.label ? ' &middot; "' + esc(v.label) + '"' : '') + '</span>';
+          var h = '<p class="nd-text-muted">This format stores no file names. It is a page-level dump of directory <code>' +
+            esc(v.directoryName) + '</code>: each stored page records which page of the original filesystem it came from. ' +
+            'File names appear only once all ' + v.totalVolumes + ' volumes of the set are reassembled into a directory image and read as NDFS.</p>';
+          h += '<table class="nd-table nd-table-compact"><thead><tr><th style="width:10rem">Original page</th>' +
+            '<th style="width:10rem">Offset in image</th></tr></thead><tbody>';
+          v.pages.slice(0, 400).forEach(function(p) {
+            h += '<tr><td><code>' + p.pageNumber + '</code></td><td class="nd-text-muted">' + p.offset.toLocaleString() + '</td></tr>';
+          });
+          h += '</tbody></table>';
+          if (v.pages.length > 400) h += '<p class="nd-text-muted">... ' + (v.pages.length - 400) + ' more pages</p>';
+          body.innerHTML = h;
+        }
+      })
+      .catch(function(err) { body.innerHTML = '<p class="nd-text-muted">' + esc(String(err)) + '</p>'; });
+  };
+
+  // ==============================================================
+  // Raw image hex viewer
+  // ==============================================================
+  // For disks with no ND filesystem there is nothing for the NDFS viewer to
+  // show, but the bytes still tell you what the disk is - a DOS boot sector, a
+  // tar header, ND file names, or nothing but fill. Reads the whole image once
+  // through /api/ndfs/raw (they are ~1.2 MB, local) and renders only the rows
+  // in view, so scrolling a 76 800-row dump stays smooth.
+  window.openHexViewer = function(entryId, label) {
+    var ROW = 16, LINEH = 18;
+    ndModal.open(
+      '<div class="nd-modal-header"><h3>Hex view - ' + esc(label || entryId) + '</h3>' +
+        '<button class="nd-modal-close" onclick="ndModal.close()">&times;</button></div>' +
+      '<div style="padding:0.75rem 1.25rem;border-bottom:1px solid var(--border);display:flex;gap:0.75rem;align-items:center;flex-wrap:wrap">' +
+        '<span class="nd-text-muted" id="hexinfo">Loading...</span>' +
+        '<span style="flex:1"></span>' +
+        '<label style="font-size:0.85rem;cursor:pointer" title="ND text is stored with the parity bit set; stripping it makes the ASCII column readable">' +
+          '<input type="checkbox" id="hexparity" checked> strip parity (7-bit ASCII)</label>' +
+        '<label style="font-size:0.85rem">go to offset <input class="nd-input" id="hexgoto" style="width:9rem;font-size:0.8rem" placeholder="0x1000 or 4096"></label>' +
+      '</div>' +
+      '<div id="hexscroll" style="overflow:auto;max-height:65vh;background:var(--bg-sunken)">' +
+        '<div id="hexspacer" style="position:relative"><pre id="hexrows" style="position:absolute;left:0;top:0;margin:0;' +
+          'font-size:0.78rem;line-height:' + LINEH + 'px;white-space:pre;user-select:text"></pre></div>' +
+      '</div>', { wide: true });
+
+    var scroll = document.getElementById('hexscroll');
+    var spacer = document.getElementById('hexspacer');
+    var rowsEl = document.getElementById('hexrows');
+    var info = document.getElementById('hexinfo');
+    var bytes = null, nrows = 0;
+
+    function hex2(b) { return (b < 16 ? '0' : '') + b.toString(16); }
+    function render() {
+      if (!bytes) return;
+      var strip = document.getElementById('hexparity').checked;
+      var top = scroll.scrollTop;
+      var first = Math.max(0, Math.floor(top / LINEH) - 4);
+      var count = Math.ceil(scroll.clientHeight / LINEH) + 8;
+      var out = [];
+      for (var r = first; r < Math.min(nrows, first + count); r++) {
+        var off = r * ROW, h = '', a = '';
+        for (var i = 0; i < ROW; i++) {
+          if (off + i >= bytes.length) { h += '   '; a += ' '; continue; }
+          var b = bytes[off + i];
+          h += hex2(b) + ' ' + (i === 7 ? ' ' : '');
+          var c = strip ? (b & 0x7f) : b;
+          a += (c >= 0x20 && c <= 0x7e) ? String.fromCharCode(c) : '.';
+        }
+        out.push(('00000000' + off.toString(16)).slice(-8) + '  ' + h + ' |' + a + '|');
+      }
+      rowsEl.style.top = (first * LINEH) + 'px';
+      rowsEl.textContent = out.join('\n');
+    }
+
+    scroll.addEventListener('scroll', render);
+    document.getElementById('hexparity').addEventListener('change', render);
+    document.getElementById('hexgoto').addEventListener('keydown', function(ev) {
+      if (ev.key !== 'Enter') return;
+      var v = this.value.trim();
+      var off = /^0x/i.test(v) ? parseInt(v, 16) : parseInt(v, 10);
+      if (!isNaN(off)) scroll.scrollTop = Math.floor(off / ROW) * LINEH;
+    });
+
+    fetch('/api/ndfs/raw?id=' + encodeURIComponent(entryId))
+      .then(function(r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.arrayBuffer(); })
+      .then(function(buf) {
+        bytes = new Uint8Array(buf);
+        nrows = Math.ceil(bytes.length / ROW);
+        spacer.style.height = (nrows * LINEH) + 'px';
+        info.textContent = bytes.length.toLocaleString() + ' bytes  ' + nrows.toLocaleString() + ' rows';
+        render();
+      })
+      .catch(function(err) { info.textContent = 'Could not read the image: ' + String(err); });
+  };
 
   // ==============================================================
   // Reusable modal system

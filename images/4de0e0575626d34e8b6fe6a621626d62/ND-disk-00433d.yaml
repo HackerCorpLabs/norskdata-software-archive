@@ -1,0 +1,384 @@
+id: img-4de0e0575626
+volumeName: FL1-TEKNOL
+md5: 4de0e0575626d34e8b6fe6a621626d62
+image:
+  sizeBytes: 319488
+  format: raw
+  controller: floppy
+  totalPages: 156
+  pageSize: 2048
+  bootFormat: bpun
+filesystem: ndfs
+ndfs:
+  users:
+    - name: TEKN-INST
+      pagesUsed: 145
+  files:
+    - name: EX5T1-HR:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 367
+      userName: TEKN-INST
+      dateCreated: 2151874950
+      lastDateRead: 2152636609
+      lastDateWritten: 2151874955
+      dateCreatedStr: 1982-01-01 16:06:06
+      lastDateReadStr: 1982-01-07 10:03:01
+      lastDateWrittenStr: 1982-01-01 16:06:11
+      bpunValid: null
+    - name: EX1T2-MN:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 180
+      userName: TEKN-INST
+      dateCreated: 2151874961
+      lastDateRead: 2152636614
+      lastDateWritten: 2151874961
+      dateCreatedStr: 1982-01-01 16:06:17
+      lastDateReadStr: 1982-01-07 10:03:06
+      lastDateWrittenStr: 1982-01-01 16:06:17
+      bpunValid: null
+    - name: TYPEX6T2-LQ:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1109
+      userName: TEKN-INST
+      dateCreated: 2151874966
+      lastDateRead: 2152636619
+      lastDateWritten: 2151874967
+      dateCreatedStr: 1982-01-01 16:06:22
+      lastDateReadStr: 1982-01-07 10:03:11
+      lastDateWrittenStr: 1982-01-01 16:06:23
+      bpunValid: null
+    - name: EX2T2-MN:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 413
+      userName: TEKN-INST
+      dateCreated: 2151874972
+      lastDateRead: 2152636624
+      lastDateWritten: 2151874972
+      dateCreatedStr: 1982-01-01 16:06:28
+      lastDateReadStr: 1982-01-07 10:03:16
+      lastDateWrittenStr: 1982-01-01 16:06:28
+      bpunValid: null
+    - name: PLACLISTA-LQ:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1837
+      userName: TEKN-INST
+      dateCreated: 2151874978
+      lastDateRead: 2152636628
+      lastDateWritten: 2151874978
+      dateCreatedStr: 1982-01-01 16:06:34
+      lastDateReadStr: 1982-01-07 10:03:20
+      lastDateWrittenStr: 1982-01-01 16:06:34
+      bpunValid: null
+    - name: TYPEX6LP-LQ:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1437
+      userName: TEKN-INST
+      dateCreated: 2151874983
+      lastDateRead: 2152636635
+      lastDateWritten: 2151874984
+      dateCreatedStr: 1982-01-01 16:06:39
+      lastDateReadStr: 1982-01-07 10:03:27
+      lastDateWrittenStr: 1982-01-01 16:06:40
+      bpunValid: null
+    - name: PD-KUGGHJUL:SYMB
+      type: SYMB
+      pages: 7
+      bytes: 14198
+      userName: TEKN-INST
+      dateCreated: 2151874989
+      lastDateRead: 2152636640
+      lastDateWritten: 2151874989
+      dateCreatedStr: 1982-01-01 16:06:45
+      lastDateReadStr: 1982-01-07 10:03:32
+      lastDateWrittenStr: 1982-01-01 16:06:45
+      bpunValid: null
+    - name: PD-KNACK:SYMB
+      type: SYMB
+      pages: 5
+      bytes: 8122
+      userName: TEKN-INST
+      dateCreated: 2151874999
+      lastDateRead: 2152636647
+      lastDateWritten: 2151875000
+      dateCreatedStr: 1982-01-01 16:06:55
+      lastDateReadStr: 1982-01-07 10:03:39
+      lastDateWrittenStr: 1982-01-01 16:06:56
+      bpunValid: null
+    - name: EX5T1LP-HR:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 656
+      userName: TEKN-INST
+      dateCreated: 2151875012
+      lastDateRead: 2152636653
+      lastDateWritten: 2151875012
+      dateCreatedStr: 1982-01-01 16:07:04
+      lastDateReadStr: 1982-01-07 10:03:45
+      lastDateWrittenStr: 1982-01-01 16:07:04
+      bpunValid: null
+    - name: PROJT2-LQ:SYMB
+      type: SYMB
+      pages: 5
+      bytes: 9633
+      userName: TEKN-INST
+      dateCreated: 2151875018
+      lastDateRead: 2303240234
+      lastDateWritten: 2151875018
+      dateCreatedStr: 1982-01-01 16:07:10
+      lastDateReadStr: 1984-05-04 10:32:42
+      lastDateWrittenStr: 1982-01-01 16:07:10
+      bpunValid: null
+    - name: KLASSLISTOR-LQ:DATA
+      type: DATA
+      pages: 1
+      bytes: 1364
+      userName: TEKN-INST
+      dateCreated: 2151875029
+      lastDateRead: 2152636664
+      lastDateWritten: 2151875029
+      dateCreatedStr: 1982-01-01 16:07:21
+      lastDateReadStr: 1982-01-07 10:03:56
+      lastDateWrittenStr: 1982-01-01 16:07:21
+      bpunValid: null
+    - name: KLASSLISTA-LQ:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 288
+      userName: TEKN-INST
+      dateCreated: 2151875035
+      lastDateRead: 2152636672
+      lastDateWritten: 2151875035
+      dateCreatedStr: 1982-01-01 16:07:27
+      lastDateReadStr: 1982-01-07 10:04:00
+      lastDateWrittenStr: 1982-01-01 16:07:27
+      bpunValid: null
+    - name: PD-PFBER:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 2951
+      userName: TEKN-INST
+      dateCreated: 2151875041
+      lastDateRead: 2152636677
+      lastDateWritten: 2151875041
+      dateCreatedStr: 1982-01-01 16:07:33
+      lastDateReadStr: 1982-01-07 10:04:05
+      lastDateWrittenStr: 1982-01-01 16:07:33
+      bpunValid: null
+    - name: PD-PFBER:BRF
+      type: BRF
+      pages: 3
+      bytes: 4257
+      userName: TEKN-INST
+      dateCreated: 2151875047
+      lastDateRead: 2152636682
+      lastDateWritten: 2151875048
+      dateCreatedStr: 1982-01-01 16:07:39
+      lastDateReadStr: 1982-01-07 10:04:10
+      lastDateWrittenStr: 1982-01-01 16:07:40
+      bpunValid: null
+    - name: EX4T1LP-HR:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 703
+      userName: TEKN-INST
+      dateCreated: 2151875055
+      lastDateRead: 2152636687
+      lastDateWritten: 2151875056
+      dateCreatedStr: 1982-01-01 16:07:47
+      lastDateReadStr: 1982-01-07 10:04:15
+      lastDateWrittenStr: 1982-01-01 16:07:48
+      bpunValid: null
+    - name: PD-MASKIN:PROG
+      type: PROG
+      pages: 17
+      bytes: 34304
+      userName: TEKN-INST
+      dateCreated: 2151875061
+      lastDateRead: 2152636692
+      lastDateWritten: 2151875061
+      dateCreatedStr: 1982-01-01 16:07:53
+      lastDateReadStr: 1982-01-07 10:04:20
+      lastDateWrittenStr: 1982-01-01 16:07:53
+      bpunValid: null
+    - name: T1TYP1-LQ:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 2549
+      userName: TEKN-INST
+      dateCreated: 2151875090
+      lastDateRead: 2152636705
+      lastDateWritten: 2151875090
+      dateCreatedStr: 1982-01-01 16:08:18
+      lastDateReadStr: 1982-01-07 10:04:33
+      lastDateWrittenStr: 1982-01-01 16:08:18
+      bpunValid: null
+    - name: T1BASIC-LQ:SYMB
+      type: SYMB
+      pages: 5
+      bytes: 9135
+      userName: TEKN-INST
+      dateCreated: 2151875097
+      lastDateRead: 2152636710
+      lastDateWritten: 2151875097
+      dateCreatedStr: 1982-01-01 16:08:25
+      lastDateReadStr: 1982-01-07 10:04:38
+      lastDateWrittenStr: 1982-01-01 16:08:25
+      bpunValid: null
+    - name: T1DEL2-LQ:SYMB
+      type: SYMB
+      pages: 3
+      bytes: 4198
+      userName: TEKN-INST
+      dateCreated: 2151875108
+      lastDateRead: 2152636717
+      lastDateWritten: 2151875108
+      dateCreatedStr: 1982-01-01 16:08:36
+      lastDateReadStr: 1982-01-07 10:04:45
+      lastDateWrittenStr: 1982-01-01 16:08:36
+      bpunValid: null
+    - name: T1INL-LQ:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 2975
+      userName: TEKN-INST
+      dateCreated: 2151875117
+      lastDateRead: 2152636723
+      lastDateWritten: 2151875117
+      dateCreatedStr: 1982-01-01 16:08:45
+      lastDateReadStr: 1982-01-07 10:04:51
+      lastDateWrittenStr: 1982-01-01 16:08:45
+      bpunValid: null
+    - name: PD-SYMBOL:SYMB
+      type: SYMB
+      pages: 4
+      bytes: 7206
+      userName: TEKN-INST
+      dateCreated: 2151875124
+      lastDateRead: 2152636729
+      lastDateWritten: 2151875124
+      dateCreatedStr: 1982-01-01 16:08:52
+      lastDateReadStr: 1982-01-07 10:04:57
+      lastDateWrittenStr: 1982-01-01 16:08:52
+      bpunValid: null
+    - name: PD-INSTR:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 2276
+      userName: TEKN-INST
+      dateCreated: 2151875137
+      lastDateRead: 2152636739
+      lastDateWritten: 2151875138
+      dateCreatedStr: 1982-01-01 16:09:01
+      lastDateReadStr: 1982-01-07 10:05:03
+      lastDateWrittenStr: 1982-01-01 16:09:02
+      bpunValid: null
+    - name: PD-KRYMP01:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 2883
+      userName: TEKN-INST
+      dateCreated: 2151875145
+      lastDateRead: 2152636745
+      lastDateWritten: 2151875145
+      dateCreatedStr: 1982-01-01 16:09:09
+      lastDateReadStr: 1982-01-07 10:05:09
+      lastDateWrittenStr: 1982-01-01 16:09:09
+      bpunValid: null
+    - name: PD-KRYMP02:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 2425
+      userName: TEKN-INST
+      dateCreated: 2151875152
+      lastDateRead: 2152636750
+      lastDateWritten: 2151875153
+      dateCreatedStr: 1982-01-01 16:09:16
+      lastDateReadStr: 1982-01-07 10:05:14
+      lastDateWrittenStr: 1982-01-01 16:09:17
+      bpunValid: null
+    - name: PD-RORFORL:BRF
+      type: BRF
+      pages: 15
+      bytes: 29302
+      userName: TEKN-INST
+      dateCreated: 2151875160
+      lastDateRead: 2152636756
+      lastDateWritten: 2151875160
+      dateCreatedStr: 1982-01-01 16:09:24
+      lastDateReadStr: 1982-01-07 10:05:20
+      lastDateWrittenStr: 1982-01-01 16:09:24
+      bpunValid: null
+    - name: PD-RORFORL:SYMB
+      type: SYMB
+      pages: 7
+      bytes: 13684
+      userName: TEKN-INST
+      dateCreated: 2151875188
+      lastDateRead: 2152636767
+      lastDateWritten: 2151875188
+      dateCreatedStr: 1982-01-01 16:09:52
+      lastDateReadStr: 1982-01-07 10:05:31
+      lastDateWrittenStr: 1982-01-01 16:09:52
+      bpunValid: null
+    - name: PD-RORFORL:PROG
+      type: PROG
+      pages: 14
+      bytes: 27136
+      userName: TEKN-INST
+      dateCreated: 2151875208
+      lastDateRead: 2152636775
+      lastDateWritten: 2151875208
+      dateCreatedStr: 1982-01-01 16:10:08
+      lastDateReadStr: 1982-01-07 10:05:39
+      lastDateWrittenStr: 1982-01-01 16:10:08
+      bpunValid: null
+    - name: LISTAN:SYMB
+      type: SYMB
+      pages: 7
+      bytes: 14201
+      userName: TEKN-INST
+      dateCreated: 2151875237
+      lastDateRead: 2152636787
+      lastDateWritten: 2151875237
+      dateCreatedStr: 1982-01-01 16:10:37
+      lastDateReadStr: 1982-01-07 10:05:51
+      lastDateWrittenStr: 1982-01-01 16:10:37
+      bpunValid: null
+    - name: T2EX6-LQ:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1459
+      userName: TEKN-INST
+      dateCreated: 2151875254
+      lastDateRead: 2152636795
+      lastDateWritten: 2151875255
+      dateCreatedStr: 1982-01-01 16:10:54
+      lastDateReadStr: 1982-01-07 10:05:59
+      lastDateWrittenStr: 1982-01-01 16:10:55
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 400/ND-disk-00433d.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:49:33.104Z
+imagingLogs:
+  - ND-disk-00433d.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-4de0e0575626
+  syncStatus: pending

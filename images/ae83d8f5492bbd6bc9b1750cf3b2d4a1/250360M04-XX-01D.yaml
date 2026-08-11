@@ -1,0 +1,198 @@
+id: nd-250360-m04-d1-ae83d8f5
+volumeName: 250360M04-XX-01D
+md5: ae83d8f5492bbd6bc9b1750cf3b2d4a1
+product:
+  id: ND-250360
+  version: M04
+  diskNumber: 1
+  language: XX
+image:
+  sizeBytes: 1261568
+  format: raw
+  controller: floppy
+  totalPages: 616
+  pageSize: 2048
+  bootFormat: binary
+filesystem: ndfs
+ndfs:
+  users:
+    - name: SYSTEM
+      pagesUsed: 254
+  files:
+    - name: NEW-SYSTEM:PROG
+      type: PROG
+      pages: 21
+      bytes: 43008
+      userName: SYSTEM
+      dateCreated: 2602625712
+      lastDateRead: 2719142725
+      lastDateWritten: 2602625717
+      dateCreatedStr: 1988-12-16 14:42:48
+      lastDateReadStr: 1990-08-09 13:13:05
+      lastDateWrittenStr: 1988-12-16 14:42:53
+      bpunValid: null
+    - name: START-PATCH-FILE:MODE
+      type: MODE
+      pages: 1
+      bytes: 1778
+      userName: SYSTEM
+      dateCreated: 2602625746
+      lastDateRead: 2719141915
+      lastDateWritten: 2602625748
+      dateCreatedStr: 1988-12-16 14:43:18
+      lastDateReadStr: 1990-08-09 13:00:27
+      lastDateWrittenStr: 1988-12-16 14:43:20
+      bpunValid: null
+    - name: PATCH-FILE:MODE
+      type: MODE
+      pages: 3
+      bytes: 4200
+      userName: SYSTEM
+      dateCreated: 2602625759
+      lastDateRead: 2719142008
+      lastDateWritten: 2602625761
+      dateCreatedStr: 1988-12-16 14:43:31
+      lastDateReadStr: 1990-08-09 13:01:56
+      lastDateWrittenStr: 1988-12-16 14:43:33
+      bpunValid: null
+    - name: SYMBOLS:FADM
+      type: FADM
+      pages: 1
+      bytes: 16
+      userName: SYSTEM
+      dateCreated: 2602625766
+      lastDateRead: 2719142018
+      lastDateWritten: 2602625767
+      dateCreatedStr: 1988-12-16 14:43:38
+      lastDateReadStr: 1990-08-09 13:02:02
+      lastDateWrittenStr: 1988-12-16 14:43:39
+      bpunValid: null
+    - name: PATCHES:PATC
+      type: PATC
+      pages: 21
+      bytes: 40256
+      userName: SYSTEM
+      dateCreated: 2602625770
+      lastDateRead: 2719142049
+      lastDateWritten: 2602625771
+      dateCreatedStr: 1988-12-16 14:43:42
+      lastDateReadStr: 1990-08-09 13:02:33
+      lastDateWrittenStr: 1988-12-16 14:43:43
+      bpunValid: null
+    - name: REFERENCE:FADM
+      type: FADM
+      pages: 1
+      bytes: 1574
+      userName: SYSTEM
+      dateCreated: 2602625792
+      lastDateRead: 2719142016
+      lastDateWritten: 2602625793
+      dateCreatedStr: 1988-12-16 14:44:00
+      lastDateReadStr: 1990-08-09 13:02:00
+      lastDateWrittenStr: 1988-12-16 14:44:01
+      bpunValid: null
+    - name: PF-LIBR-MARK:FADM
+      type: FADM
+      pages: 1
+      bytes: 1070
+      userName: SYSTEM
+      dateCreated: 2602625796
+      lastDateRead: 2719142048
+      lastDateWritten: 2602625798
+      dateCreatedStr: 1988-12-16 14:44:04
+      lastDateReadStr: 1990-08-09 13:02:32
+      lastDateWrittenStr: 1988-12-16 14:44:06
+      bpunValid: null
+    - name: LOAD-SERVERS:MODE
+      type: MODE
+      pages: 1
+      bytes: 1507
+      userName: SYSTEM
+      dateCreated: 2602625809
+      lastDateRead: 2719141947
+      lastDateWritten: 2602625811
+      dateCreatedStr: 1988-12-16 14:44:17
+      lastDateReadStr: 1990-08-09 13:00:59
+      lastDateWrittenStr: 1988-12-16 14:44:19
+      bpunValid: null
+    - name: ER-S3WD-CODE-D01:BPUN
+      type: BPUN
+      pages: 37
+      bytes: 75120
+      userName: SYSTEM
+      dateCreated: 2602625823
+      lastDateRead: 2719141975
+      lastDateWritten: 2602625824
+      dateCreatedStr: 1988-12-16 14:44:31
+      lastDateReadStr: 1990-08-09 13:01:23
+      lastDateWrittenStr: 1988-12-16 14:44:32
+      bpunValid: true
+    - name: ER-S3WD-DATA-D01:BPUN
+      type: BPUN
+      pages: 57
+      bytes: 115252
+      userName: SYSTEM
+      dateCreated: 2602625868
+      lastDateRead: 2719141988
+      lastDateWritten: 2602625870
+      dateCreatedStr: 1988-12-16 14:45:12
+      lastDateReadStr: 1990-08-09 13:01:36
+      lastDateWrittenStr: 1988-12-16 14:45:14
+      bpunValid: true
+    - name: ER-S3WD-DESC-D01:EDAT
+      type: EDAT
+      pages: 40
+      bytes: 81252
+      userName: SYSTEM
+      dateCreated: 2602625936
+      lastDateRead: 2719141953
+      lastDateWritten: 2602625937
+      dateCreatedStr: 1988-12-16 14:46:16
+      lastDateReadStr: 1990-08-09 13:01:01
+      lastDateWrittenStr: 1988-12-16 14:46:17
+      bpunValid: null
+    - name: ER-S3WD-MANA-D01:PROG
+      type: PROG
+      pages: 13
+      bytes: 26624
+      userName: SYSTEM
+      dateCreated: 2602625991
+      lastDateRead: 2719141962
+      lastDateWritten: 2602625992
+      dateCreatedStr: 1988-12-16 14:47:07
+      lastDateReadStr: 1990-08-09 13:01:10
+      lastDateWrittenStr: 1988-12-16 14:47:08
+      bpunValid: null
+    - name: ER-S3WD-LOG-D01:PROG
+      type: PROG
+      pages: 43
+      bytes: 88064
+      userName: SYSTEM
+      dateCreated: 2602626017
+      lastDateRead: 2719141966
+      lastDateWritten: 2602626018
+      dateCreatedStr: 1988-12-16 14:47:33
+      lastDateReadStr: 1990-08-09 13:01:14
+      lastDateWrittenStr: 1988-12-16 14:47:34
+      bpunValid: null
+provenance:
+  contributor: tor
+  originalPath: SIII-M-250305M05/250360M04-XX-01D.IMG
+  dateImaged: 2016-09-15
+  notes: "250360M04-XX-01D:  1 floppy image, 1/1  SINTRAN III/VSX Patch File  Patch Level 003200 for M-version  Release date 900816  (Never mind that file stamps seem to be Dec. 1988,   it's the right patch file floppy)"
+  importedAt: 2026-08-11T14:43:16.883Z
+imagingLogs:
+  - README.TXT
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-250360-m04-d1-ae83d8f5
+  syncStatus: pending

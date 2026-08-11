@@ -1,0 +1,125 @@
+id: nd-211056-a03-d1-6dd87ddb
+volumeName: 211056A03-XX-01D
+md5: 6dd87ddbbd5001d49605fcc1987a701e
+product:
+  id: ND-211056
+  version: A03
+  diskNumber: 1
+  language: XX
+image:
+  sizeBytes: 1310720
+  format: raw
+  controller: floppy
+  totalPages: 640
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 508
+  files:
+    - name: SSY-MAIN-A03:PROG
+      type: PROG
+      pages: 124
+      bytes: 401408
+      userName: FLOPPY-USER
+      dateCreated: 2568950978
+      lastDateRead: 2580066954
+      lastDateWritten: 2568950983
+      dateCreatedStr: 1988-04-15 17:19:02
+      lastDateReadStr: 1988-07-04 11:10:10
+      lastDateWrittenStr: 1988-04-15 17:19:07
+      bpunValid: null
+    - name: SSY-SECO-A03:PROG
+      type: PROG
+      pages: 56
+      bytes: 401408
+      userName: FLOPPY-USER
+      dateCreated: 2568951060
+      lastDateRead: 2580066978
+      lastDateWritten: 2568951060
+      dateCreatedStr: 1988-04-15 17:20:20
+      lastDateReadStr: 1988-07-04 11:10:34
+      lastDateWrittenStr: 1988-04-15 17:20:20
+      bpunValid: null
+    - name: SSY-SERVER-A03:PROG
+      type: PROG
+      pages: 96
+      bytes: 223232
+      userName: FLOPPY-USER
+      dateCreated: 2568951109
+      lastDateRead: 2580066992
+      lastDateWritten: 2568951110
+      dateCreatedStr: 1988-04-15 17:21:05
+      lastDateReadStr: 1988-07-04 11:10:48
+      lastDateWrittenStr: 1988-04-15 17:21:06
+      bpunValid: null
+    - name: SSY-PSHA-A03:PROG
+      type: PROG
+      pages: 36
+      bytes: 397312
+      userName: FLOPPY-USER
+      dateCreated: 2568951208
+      lastDateRead: 2580067017
+      lastDateWritten: 2568951209
+      dateCreatedStr: 1988-04-15 17:22:40
+      lastDateReadStr: 1988-07-04 11:11:09
+      lastDateWrittenStr: 1988-04-15 17:22:41
+      bpunValid: null
+    - name: VISI-SERVER-A03:PROG
+      type: PROG
+      pages: 75
+      bytes: 301056
+      userName: FLOPPY-USER
+      dateCreated: 2568951255
+      lastDateRead: 2580067057
+      lastDateWritten: 2568951256
+      dateCreatedStr: 1988-04-15 17:23:23
+      lastDateReadStr: 1988-07-04 11:11:49
+      lastDateWrittenStr: 1988-04-15 17:23:24
+      bpunValid: null
+    - name: PRM-SERVER-A03:PFIL
+      type: PFIL
+      pages: 64
+      bytes: 131072
+      userName: FLOPPY-USER
+      dateCreated: 2568951360
+      lastDateRead: 2580067028
+      lastDateWritten: 2568951361
+      dateCreatedStr: 1988-04-15 17:25:00
+      lastDateReadStr: 1988-07-04 11:11:20
+      lastDateWrittenStr: 1988-04-15 17:25:01
+      bpunValid: null
+    - name: PRM-SERVER-A03:DFIL
+      type: DFIL
+      pages: 49
+      bytes: 99840
+      userName: FLOPPY-USER
+      dateCreated: 2568951458
+      lastDateRead: 2580067043
+      lastDateWritten: 2568951458
+      dateCreatedStr: 1988-04-15 17:26:34
+      lastDateReadStr: 1988-07-04 11:11:35
+      lastDateWrittenStr: 1988-04-15 17:26:34
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 100/ND-disk-00188.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:26:04.139Z
+imagingLogs:
+  - ND-disk-00188.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-211056-a03-d1-6dd87ddb
+  syncStatus: pending

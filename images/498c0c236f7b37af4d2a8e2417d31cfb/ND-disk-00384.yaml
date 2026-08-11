@@ -1,0 +1,76 @@
+id: nd-10053-f-d1-498c0c23
+volumeName: ND-10053F-PART1
+md5: 498c0c236f7b37af4d2a8e2417d31cfb
+product:
+  id: ND-10053
+  version: F
+  diskNumber: 1
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 139
+  files:
+    - name: SCREEN-DEF-2155H:BPUN
+      type: BPUN
+      pages: 44
+      bytes: 84340
+      userName: FLOPPY-USER
+      dateCreated: 2108070611
+      lastDateRead: 2108083896
+      lastDateWritten: 2108070618
+      dateCreatedStr: 1981-06-19 09:43:19
+      lastDateReadStr: 1981-06-19 12:58:56
+      lastDateWrittenStr: 1981-06-19 09:43:26
+      bpunValid: true
+    - name: SCREEN-LIB-2154J:BRF
+      type: BRF
+      pages: 46
+      bytes: 92189
+      userName: FLOPPY-USER
+      dateCreated: 2108070771
+      lastDateRead: 2108083927
+      lastDateWritten: 2108070773
+      dateCreatedStr: 1981-06-19 09:45:51
+      lastDateReadStr: 1981-06-19 12:59:23
+      lastDateWrittenStr: 1981-06-19 09:45:53
+      bpunValid: null
+    - name: SCREEN-RTL-2156J:BRF
+      type: BRF
+      pages: 45
+      bytes: 90314
+      userName: FLOPPY-USER
+      dateCreated: 2108071016
+      lastDateRead: 2108083955
+      lastDateWritten: 2108071018
+      dateCreatedStr: 1981-06-19 09:49:40
+      lastDateReadStr: 1981-06-19 12:59:51
+      lastDateWrittenStr: 1981-06-19 09:49:42
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 300/ND-disk-00384.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:45:56.933Z
+imagingLogs:
+  - ND-disk-00384.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10053-f-d1-498c0c23
+  syncStatus: pending

@@ -1,0 +1,65 @@
+id: nd-250305-m05-d1-e085eadd
+volumeName: 250305M05-XX-01D
+md5: e085eadd67761bf7413bd19adde3487e
+product:
+  id: ND-250305
+  version: M05
+  diskNumber: 1
+  language: XX
+image:
+  sizeBytes: 1261568
+  format: raw
+  controller: floppy
+  totalPages: 616
+  pageSize: 2048
+  bootFormat: flomon
+filesystem: ndfs
+ndfs:
+  users:
+    - name: SYSTEM
+      pagesUsed: 610
+  files:
+    - name: MACM-1718L:BPUN
+      type: BPUN
+      pages: 20
+      bytes: 39497
+      userName: SYSTEM
+      dateCreated: 2691728137
+      lastDateRead: 2691728140
+      lastDateWritten: 2691728140
+      dateCreatedStr: 1990-01-24 08:12:09
+      lastDateReadStr: 1990-01-24 08:12:12
+      lastDateWrittenStr: 1990-01-24 08:12:12
+      bpunValid: true
+    - name: SINTRAN-M-1:DATA
+      type: DATA
+      pages: 589
+      bytes: 1109625
+      userName: SYSTEM
+      dateCreated: 2691728140
+      lastDateRead: 2691728148
+      lastDateWritten: 2691728148
+      dateCreatedStr: 1990-01-24 08:12:12
+      lastDateReadStr: 1990-01-24 08:12:20
+      lastDateWrittenStr: 1990-01-24 08:12:20
+      bpunValid: null
+provenance:
+  contributor: tor
+  originalPath: SIII-M-250305M05/250305M05-XX-01D.IMG
+  dateImaged: 1990-03-19
+  importedAt: 2026-08-11T14:43:16.544Z
+imagingLogs:
+  - README.TXT
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-250305-m05-d1-e085eadd
+  syncStatus: pending

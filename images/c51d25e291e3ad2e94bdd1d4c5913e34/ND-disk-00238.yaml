@@ -1,0 +1,209 @@
+id: nd-210374-c01-d1-c51d25e2
+volumeName: 210374C01-XX-01D
+md5: c51d25e291e3ad2e94bdd1d4c5913e34
+product:
+  id: ND-210374
+  version: C01
+  diskNumber: 1
+  language: XX
+image:
+  sizeBytes: 1261568
+  format: raw
+  controller: floppy
+  totalPages: 616
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 353
+  files:
+    - name: COS-CONNECT-TO:PROG
+      type: PROG
+      pages: 64
+      bytes: 313344
+      userName: FLOPPY-USER
+      dateCreated: 2324336132
+      lastDateRead: 2505745968
+      lastDateWritten: 2326846409
+      dateCreatedStr: 1984-10-05 08:56:04
+      lastDateReadStr: 1987-05-13 10:24:48
+      lastDateWrittenStr: 1984-10-24 13:47:09
+      bpunValid: null
+    - name: COS-FILE-TRANS:PROG
+      type: PROG
+      pages: 37
+      bytes: 74752
+      userName: FLOPPY-USER
+      dateCreated: 2324336136
+      lastDateRead: 2505746092
+      lastDateWritten: 2324336138
+      dateCreatedStr: 1984-10-05 08:56:08
+      lastDateReadStr: 1987-05-13 10:26:44
+      lastDateWrittenStr: 1984-10-05 08:56:10
+      bpunValid: null
+    - name: COS-COSPO-C01:BPUN
+      type: BPUN
+      pages: 19
+      bytes: 29046
+      userName: FLOPPY-USER
+      dateCreated: 2324336169
+      lastDateRead: 2505746214
+      lastDateWritten: 2356734285
+      dateCreatedStr: 1984-10-05 08:56:41
+      lastDateReadStr: 1987-05-13 10:28:38
+      lastDateWrittenStr: 1985-01-28 14:37:13
+      bpunValid: true
+    - name: COS-SPOOL-SERVIC:PROG
+      type: PROG
+      pages: 10
+      bytes: 19968
+      userName: FLOPPY-USER
+      dateCreated: 2324336196
+      lastDateRead: 2505746286
+      lastDateWritten: 2324336198
+      dateCreatedStr: 1984-10-05 08:57:04
+      lastDateReadStr: 1987-05-13 10:29:46
+      lastDateWrittenStr: 1984-10-05 08:57:06
+      bpunValid: null
+    - name: COS-LOAD-COSPO:MODE
+      type: MODE
+      pages: 1
+      bytes: 602
+      userName: FLOPPY-USER
+      dateCreated: 2324336213
+      lastDateRead: 2505746335
+      lastDateWritten: 2324336214
+      dateCreatedStr: 1984-10-05 08:57:21
+      lastDateReadStr: 1987-05-13 10:30:31
+      lastDateWrittenStr: 1984-10-05 08:57:22
+      bpunValid: null
+    - name: COS-DEFINE-PRINT:MODE
+      type: MODE
+      pages: 1
+      bytes: 1251
+      userName: FLOPPY-USER
+      dateCreated: 2324339393
+      lastDateRead: 2505746347
+      lastDateWritten: 2324339394
+      dateCreatedStr: 1984-10-05 09:43:01
+      lastDateReadStr: 1987-05-13 10:30:43
+      lastDateWrittenStr: 1984-10-05 09:43:02
+      bpunValid: null
+    - name: COS-FA-USER-1:BPUN
+      type: BPUN
+      pages: 23
+      bytes: 45430
+      userName: FLOPPY-USER
+      dateCreated: 2326588372
+      lastDateRead: 2505746593
+      lastDateWritten: 2326588377
+      dateCreatedStr: 1984-10-22 14:47:20
+      lastDateReadStr: 1987-05-13 10:34:33
+      lastDateWrittenStr: 1984-10-22 14:47:25
+      bpunValid: true
+    - name: COS-FA-USER-2:BPUN
+      type: BPUN
+      pages: 23
+      bytes: 45430
+      userName: FLOPPY-USER
+      dateCreated: 2326588395
+      lastDateRead: 2505746634
+      lastDateWritten: 2326588397
+      dateCreatedStr: 1984-10-22 14:47:43
+      lastDateReadStr: 1987-05-13 10:35:10
+      lastDateWrittenStr: 1984-10-22 14:47:45
+      bpunValid: true
+    - name: COS-FA-USER-LOAD:MODE
+      type: MODE
+      pages: 1
+      bytes: 226
+      userName: FLOPPY-USER
+      dateCreated: 2326588425
+      lastDateRead: 2505746678
+      lastDateWritten: 2326588426
+      dateCreatedStr: 1984-10-22 14:48:09
+      lastDateReadStr: 1987-05-13 10:35:54
+      lastDateWrittenStr: 1984-10-22 14:48:10
+      bpunValid: null
+    - name: COS-FS-ADMIN:PROG
+      type: PROG
+      pages: 37
+      bytes: 74752
+      userName: FLOPPY-USER
+      dateCreated: 2326588430
+      lastDateRead: 2505746693
+      lastDateWritten: 2326588431
+      dateCreatedStr: 1984-10-22 14:48:14
+      lastDateReadStr: 1987-05-13 10:36:05
+      lastDateWrittenStr: 1984-10-22 14:48:15
+      bpunValid: null
+    - name: COS-FSART:BPUN
+      type: BPUN
+      pages: 28
+      bytes: 56474
+      userName: FLOPPY-USER
+      dateCreated: 2326588483
+      lastDateRead: 2505746780
+      lastDateWritten: 2326588484
+      dateCreatedStr: 1984-10-22 14:49:03
+      lastDateReadStr: 1987-05-13 10:37:28
+      lastDateWrittenStr: 1984-10-22 14:49:04
+      bpunValid: true
+    - name: COS-FSART-LOAD:MODE
+      type: MODE
+      pages: 1
+      bytes: 230
+      userName: FLOPPY-USER
+      dateCreated: 2326588530
+      lastDateRead: 2505746855
+      lastDateWritten: 2326588531
+      dateCreatedStr: 1984-10-22 14:49:50
+      lastDateReadStr: 1987-05-13 10:38:39
+      lastDateWrittenStr: 1984-10-22 14:49:51
+      bpunValid: null
+    - name: COS-START-SERVER:MODE
+      type: MODE
+      pages: 1
+      bytes: 124
+      userName: FLOPPY-USER
+      dateCreated: 2326588536
+      lastDateRead: 2505746867
+      lastDateWritten: 2326588537
+      dateCreatedStr: 1984-10-22 14:49:56
+      lastDateReadStr: 1987-05-13 10:38:51
+      lastDateWrittenStr: 1984-10-22 14:49:57
+      bpunValid: null
+    - name: COS-FA-SERV-100:PROG
+      type: PROG
+      pages: 92
+      bytes: 238080
+      userName: FLOPPY-USER
+      dateCreated: 2326588663
+      lastDateRead: 2505747081
+      lastDateWritten: 2326588672
+      dateCreatedStr: 1984-10-22 14:51:55
+      lastDateReadStr: 1987-05-13 10:42:09
+      lastDateWrittenStr: 1984-10-22 14:52:00
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 200/ND-disk-00238.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:41:52.409Z
+imagingLogs:
+  - ND-disk-00238.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-210374-c01-d1-c51d25e2
+  syncStatus: pending

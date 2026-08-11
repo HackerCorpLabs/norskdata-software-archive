@@ -1,0 +1,137 @@
+id: nd-211160-b03-d1-09310488
+volumeName: 211160B03-XX-01D
+md5: 093104881b4ab680f981dab775106267
+product:
+  id: ND-211160
+  version: B03
+  diskNumber: 1
+  language: XX
+image:
+  sizeBytes: 1310720
+  format: raw
+  controller: floppy
+  totalPages: 640
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 276
+  files:
+    - name: DESCRIPTION-FILE:DESC
+      type: DESC
+      pages: 8
+      bytes: 22528
+      userName: FLOPPY-USER
+      dateCreated: 2587139549
+      lastDateRead: 2650994850
+      lastDateWritten: 2588597958
+      dateCreatedStr: 1988-08-26 09:55:29
+      lastDateReadStr: 1989-08-01 15:34:34
+      lastDateWrittenStr: 1988-09-05 13:59:06
+      bpunValid: null
+    - name: SCRATCH-SEG-01:LINK
+      type: LINK
+      pages: 0
+      bytes: 4294967296
+      userName: FLOPPY-USER
+      dateCreated: 2587139556
+      lastDateRead: 2587139557
+      lastDateWritten: 2587139557
+      dateCreatedStr: 1988-08-26 09:55:36
+      lastDateReadStr: 1988-08-26 09:55:37
+      lastDateWrittenStr: 1988-08-26 09:55:37
+      bpunValid: null
+    - name: SCRATCH-SEG-01:DSEG
+      type: DSEG
+      pages: 1
+      bytes: 1029
+      userName: FLOPPY-USER
+      dateCreated: 2587139558
+      lastDateRead: 2587139570
+      lastDateWritten: 2587139559
+      dateCreatedStr: 1988-08-26 09:55:38
+      lastDateReadStr: 1988-08-26 09:55:50
+      lastDateWrittenStr: 1988-08-26 09:55:39
+      bpunValid: null
+    - name: SCRATCH-SEG-01:PSEG
+      type: PSEG
+      pages: 1
+      bytes: 5
+      userName: FLOPPY-USER
+      dateCreated: 2587139560
+      lastDateRead: 2587139561
+      lastDateWritten: 2587139561
+      dateCreatedStr: 1988-08-26 09:55:40
+      lastDateReadStr: 1988-08-26 09:55:41
+      lastDateWrittenStr: 1988-08-26 09:55:41
+      bpunValid: null
+    - name: LED-B03:LINK
+      type: LINK
+      pages: 0
+      bytes: 4294967296
+      userName: FLOPPY-USER
+      dateCreated: 2587139576
+      lastDateRead: 2650994855
+      lastDateWritten: 2587139577
+      dateCreatedStr: 1988-08-26 09:55:56
+      lastDateReadStr: 1989-08-01 15:34:39
+      lastDateWrittenStr: 1988-08-26 09:55:57
+      bpunValid: null
+    - name: LED-B03:DSEG
+      type: DSEG
+      pages: 146
+      bytes: 394525
+      userName: FLOPPY-USER
+      dateCreated: 2587139578
+      lastDateRead: 2650994855
+      lastDateWritten: 2587139579
+      dateCreatedStr: 1988-08-26 09:55:58
+      lastDateReadStr: 1989-08-01 15:34:39
+      lastDateWrittenStr: 1988-08-26 09:55:59
+      bpunValid: null
+    - name: LED-B03:PSEG
+      type: PSEG
+      pages: 110
+      bytes: 223695
+      userName: FLOPPY-USER
+      dateCreated: 2587139584
+      lastDateRead: 2650994854
+      lastDateWritten: 2587139585
+      dateCreatedStr: 1988-08-26 09:56:00
+      lastDateReadStr: 1989-08-01 15:34:38
+      lastDateWrittenStr: 1988-08-26 09:56:01
+      bpunValid: null
+    - name: UPK-IF:DEFS
+      type: DEFS
+      pages: 3
+      bytes: 4770
+      userName: FLOPPY-USER
+      dateCreated: 2578910081
+      lastDateRead: null
+      lastDateWritten: 2578910082
+      dateCreatedStr: 1988-06-27 16:46:01
+      lastDateReadStr: null
+      lastDateWrittenStr: 1988-06-27 16:46:02
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 000/ND-disk-00095.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T14:54:30.551Z
+imagingLogs:
+  - ND-disk-00095.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-211160-b03-d1-09310488
+  syncStatus: pending

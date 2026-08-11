@@ -1,0 +1,112 @@
+id: nd-10053-f-d3-e569467d
+volumeName: ND-10053F-PART3
+md5: e569467d167579bc8f290e05f47cff6d
+product:
+  id: ND-10053
+  version: F
+  diskNumber: 3
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 105
+  files:
+    - name: DATA-EDIT-2392B:BRF
+      type: BRF
+      pages: 25
+      bytes: 50639
+      userName: FLOPPY-USER
+      dateCreated: 2108069588
+      lastDateRead: null
+      lastDateWritten: 2108069597
+      dateCreatedStr: 1981-06-19 09:27:20
+      lastDateReadStr: null
+      lastDateWrittenStr: 1981-06-19 09:27:29
+      bpunValid: null
+    - name: DATA-MAIN-2393B:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 870
+      userName: FLOPPY-USER
+      dateCreated: 2108069640
+      lastDateRead: null
+      lastDateWritten: 2108069643
+      dateCreatedStr: 1981-06-19 09:28:08
+      lastDateReadStr: null
+      lastDateWrittenStr: 1981-06-19 09:28:11
+      bpunValid: null
+    - name: DATA-LOAD-2391B:BRF
+      type: BRF
+      pages: 1
+      bytes: 655
+      userName: FLOPPY-USER
+      dateCreated: 2108069655
+      lastDateRead: null
+      lastDateWritten: 2108069656
+      dateCreatedStr: 1981-06-19 09:28:23
+      lastDateReadStr: null
+      lastDateWrittenStr: 1981-06-19 09:28:24
+      bpunValid: null
+    - name: DATA-ENTRY-2196F:BPUN
+      type: BPUN
+      pages: 49
+      bytes: 98678
+      userName: FLOPPY-USER
+      dateCreated: 2108069665
+      lastDateRead: null
+      lastDateWritten: 2108069666
+      dateCreatedStr: 1981-06-19 09:28:33
+      lastDateReadStr: null
+      lastDateWrittenStr: 1981-06-19 09:28:34
+      bpunValid: true
+    - name: DATA-COMP-2195F:BPUN
+      type: BPUN
+      pages: 21
+      bytes: 41334
+      userName: FLOPPY-USER
+      dateCreated: 2108069772
+      lastDateRead: null
+      lastDateWritten: 2108069775
+      dateCreatedStr: 1981-06-19 09:30:12
+      lastDateReadStr: null
+      lastDateWrittenStr: 1981-06-19 09:30:15
+      bpunValid: true
+    - name: DATA-BUNKE-A:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1410
+      userName: FLOPPY-USER
+      dateCreated: 2108069909
+      lastDateRead: null
+      lastDateWritten: 2108069911
+      dateCreatedStr: 1981-06-19 09:32:21
+      lastDateReadStr: null
+      lastDateWrittenStr: 1981-06-19 09:32:23
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 300/ND-disk-00386.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:45:57.127Z
+imagingLogs:
+  - ND-disk-00386.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10053-f-d3-e569467d
+  syncStatus: pending

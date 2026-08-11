@@ -1,0 +1,149 @@
+id: nd-210814-l05-d3-b5646a86
+volumeName: 210814L05-EN-03D
+md5: b5646a86bdc75be2550dded9f529dff8
+product:
+  id: ND-210814
+  version: L05
+  diskNumber: 3
+  language: EN
+image:
+  sizeBytes: 1310720
+  format: raw
+  controller: floppy
+  totalPages: 640
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: WORKFILES-NTX
+      pagesUsed: 431
+  files:
+    - name: CONTRBLOCK-CB-L0:FORM
+      type: FORM
+      pages: 30
+      bytes: 61440
+      userName: WORKFILES-NTX
+      dateCreated: 2520963143
+      lastDateRead: 2577981085
+      lastDateWritten: 2520998199
+      dateCreatedStr: 1987-09-01 13:33:07
+      lastDateReadStr: 1988-06-20 13:58:29
+      lastDateWrittenStr: 1987-09-01 22:04:55
+      bpunValid: null
+    - name: FONTINFO-FI-L00:FORM
+      type: FORM
+      pages: 70
+      bytes: 143360
+      userName: WORKFILES-NTX
+      dateCreated: 2396706631
+      lastDateRead: 2577981106
+      lastDateWritten: 2527788588
+      dateCreatedStr: 1985-11-13 13:29:07
+      lastDateReadStr: 1988-06-20 13:58:50
+      lastDateWrittenStr: 1987-10-21 15:56:44
+      bpunValid: null
+    - name: CONVTAB-CT-K01:FORM
+      type: FORM
+      pages: 50
+      bytes: 102400
+      userName: WORKFILES-NTX
+      dateCreated: 2315178541
+      lastDateRead: 2577981137
+      lastDateWritten: 2503527941
+      dateCreatedStr: 1984-07-31 13:08:45
+      lastDateReadStr: 1988-06-20 13:59:17
+      lastDateWrittenStr: 1987-04-28 12:56:05
+      bpunValid: null
+    - name: PHOTOINFO-PI-L04:FORM
+      type: FORM
+      pages: 35
+      bytes: 71680
+      userName: WORKFILES-NTX
+      dateCreated: 2555160426
+      lastDateRead: 2597255459
+      lastDateWritten: 2555160436
+      dateCreatedStr: 1988-01-06 10:29:42
+      lastDateReadStr: 1988-11-07 15:36:35
+      lastDateWrittenStr: 1988-01-06 10:29:52
+      bpunValid: null
+    - name: KERNTAB-KT-K00:FORM
+      type: FORM
+      pages: 25
+      bytes: 51200
+      userName: WORKFILES-NTX
+      dateCreated: 2317150509
+      lastDateRead: 2577981440
+      lastDateWritten: 2398781096
+      dateCreatedStr: 1984-08-14 14:36:45
+      lastDateReadStr: 1988-06-20 14:00:00
+      lastDateWrittenStr: 1985-11-29 07:58:40
+      bpunValid: null
+    - name: PICHAR-PC-K00:FORM
+      type: FORM
+      pages: 30
+      bytes: 61440
+      userName: WORKFILES-NTX
+      dateCreated: 2315451464
+      lastDateRead: 2577981460
+      lastDateWritten: 2503529529
+      dateCreatedStr: 1984-08-01 15:49:08
+      lastDateReadStr: 1988-06-20 14:00:20
+      lastDateWrittenStr: 1987-04-28 13:16:57
+      bpunValid: null
+    - name: MAINTENANCE-L01:FORM
+      type: FORM
+      pages: 100
+      bytes: 204800
+      userName: WORKFILES-NTX
+      dateCreated: 2359863978
+      lastDateRead: 2575237556
+      lastDateWritten: 2497249858
+      dateCreatedStr: 1985-02-20 10:42:42
+      lastDateReadStr: 1988-05-31 16:06:52
+      lastDateWrittenStr: 1987-03-12 16:09:02
+      bpunValid: null
+    - name: FORMAT-LIST-K02:FORM
+      type: FORM
+      pages: 40
+      bytes: 81920
+      userName: WORKFILES-NTX
+      dateCreated: 2400356208
+      lastDateRead: 2576399076
+      lastDateWritten: 2503531401
+      dateCreatedStr: 1985-12-09 08:29:48
+      lastDateReadStr: 1988-06-08 11:43:36
+      lastDateWrittenStr: 1987-04-28 13:46:09
+      bpunValid: null
+    - name: HYPHEN-TEST-L00:FORM
+      type: FORM
+      pages: 50
+      bytes: 102400
+      userName: WORKFILES-NTX
+      dateCreated: 2489358481
+      lastDateRead: 2597255483
+      lastDateWritten: 2505878573
+      dateCreatedStr: 1987-01-16 09:34:17
+      lastDateReadStr: 1988-11-07 15:36:59
+      lastDateWrittenStr: 1987-05-14 10:48:45
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 100/ND-disk-00174.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:26:02.085Z
+imagingLogs:
+  - ND-disk-00174.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-210814-l05-d3-b5646a86
+  syncStatus: pending

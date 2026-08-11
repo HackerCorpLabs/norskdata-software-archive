@@ -1,0 +1,180 @@
+id: img-95ba40caa2d4
+volumeName: BACKUP-GROUP-6
+md5: 95ba40caa2d4264713de83568073f48d
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 147
+  files:
+    - name: INFO-GAMES:TEXT
+      type: TEXT
+      pages: 17
+      bytes: 4294967296
+      userName: FLOPPY-USER
+      dateCreated: 2317126970
+      lastDateRead: 3033224048
+      lastDateWritten: 2320934706
+      dateCreatedStr: 1984-08-14 08:52:58
+      lastDateReadStr: 1995-03-05 21:13:48
+      lastDateWrittenStr: 1984-09-11 10:28:50
+      bpunValid: null
+    - name: MACMAN-48-EN:PROG
+      type: PROG
+      pages: 11
+      bytes: 22016
+      userName: FLOPPY-USER
+      dateCreated: 2317126991
+      lastDateRead: 3033224094
+      lastDateWritten: 2317126992
+      dateCreatedStr: 1984-08-14 08:53:15
+      lastDateReadStr: 1995-03-05 21:14:30
+      lastDateWrittenStr: 1984-08-14 08:53:16
+      bpunValid: null
+    - name: MACMAN-DATA:DATA
+      type: DATA
+      pages: 1
+      bytes: 768
+      userName: FLOPPY-USER
+      dateCreated: 2317126997
+      lastDateRead: 3033224122
+      lastDateWritten: 2320929621
+      dateCreatedStr: 1984-08-14 08:53:21
+      lastDateReadStr: 1995-03-05 21:14:58
+      lastDateWrittenStr: 1984-09-11 09:13:21
+      bpunValid: null
+    - name: MACMAN-LABS:SYMB
+      type: SYMB
+      pages: 5
+      bytes: 9567
+      userName: FLOPPY-USER
+      dateCreated: 2317126999
+      lastDateRead: 3033224134
+      lastDateWritten: 2317126999
+      dateCreatedStr: 1984-08-14 08:53:23
+      lastDateReadStr: 1995-03-05 21:15:06
+      lastDateWrittenStr: 1984-08-14 08:53:23
+      bpunValid: null
+    - name: STAR-TREK-48:PROG
+      type: PROG
+      pages: 45
+      bytes: 90624
+      userName: FLOPPY-USER
+      dateCreated: 2317127074
+      lastDateRead: 3033224150
+      lastDateWritten: 2317127074
+      dateCreatedStr: 1984-08-14 08:54:34
+      lastDateReadStr: 1995-03-05 21:15:22
+      lastDateWrittenStr: 1984-08-14 08:54:34
+      bpunValid: null
+    - name: CACTUSLAB:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1541
+      userName: FLOPPY-USER
+      dateCreated: 2229873590
+      lastDateRead: 2499196146
+      lastDateWritten: 2229873591
+      dateCreatedStr: 1983-03-20 18:46:54
+      lastDateReadStr: 1987-03-27 11:19:50
+      lastDateWrittenStr: 1983-03-20 18:46:55
+      bpunValid: null
+    - name: CACTUS-CITY:PASC
+      type: PASC
+      pages: 12
+      bytes: 22820
+      userName: FLOPPY-USER
+      dateCreated: 2229873820
+      lastDateRead: 2499196151
+      lastDateWritten: 2235105871
+      dateCreatedStr: 1983-03-20 18:50:28
+      lastDateReadStr: 1987-03-27 11:19:55
+      lastDateWrittenStr: 1983-04-28 16:09:15
+      bpunValid: null
+    - name: CACTUS-CITY:PROG
+      type: PROG
+      pages: 12
+      bytes: 24064
+      userName: FLOPPY-USER
+      dateCreated: 2230513106
+      lastDateRead: 2499196162
+      lastDateWritten: 2253442075
+      dateCreatedStr: 1983-03-25 14:55:18
+      lastDateReadStr: 1987-03-27 11:20:02
+      lastDateWrittenStr: 1983-09-08 12:48:27
+      bpunValid: null
+    - name: CACTUSDATA:DATA
+      type: DATA
+      pages: 1
+      bytes: 768
+      userName: FLOPPY-USER
+      dateCreated: 2229873974
+      lastDateRead: 2499196172
+      lastDateWritten: 2236410698
+      dateCreatedStr: 1983-03-20 18:52:54
+      lastDateReadStr: 1987-03-27 11:20:12
+      lastDateWrittenStr: 1983-05-06 14:45:10
+      bpunValid: null
+    - name: YATZEE:PROG
+      type: PROG
+      pages: 11
+      bytes: 22016
+      userName: FLOPPY-USER
+      dateCreated: 2246485632
+      lastDateRead: 2499196179
+      lastDateWritten: 2246485632
+      dateCreatedStr: 1983-07-19 10:26:00
+      lastDateReadStr: 1987-03-27 11:20:19
+      lastDateWrittenStr: 1983-07-19 10:26:00
+      bpunValid: null
+    - name: TRON-48-EN:PROG
+      type: PROG
+      pages: 12
+      bytes: 24064
+      userName: FLOPPY-USER
+      dateCreated: 2317127006
+      lastDateRead: 3033224372
+      lastDateWritten: 2317127007
+      dateCreatedStr: 1984-08-14 08:53:30
+      lastDateReadStr: 1995-03-05 21:18:52
+      lastDateWrittenStr: 1984-08-14 08:53:31
+      bpunValid: null
+    - name: FILM:PROG
+      type: PROG
+      pages: 6
+      bytes: 14336
+      userName: FLOPPY-USER
+      dateCreated: 2320947488
+      lastDateRead: 2499196191
+      lastDateWritten: 2320947489
+      dateCreatedStr: 1984-09-11 13:36:32
+      lastDateReadStr: 1987-03-27 11:20:31
+      lastDateWrittenStr: 1984-09-11 13:36:33
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 300/ND-disk-00327.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:45:45.599Z
+imagingLogs:
+  - ND-disk-00327.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-95ba40caa2d4
+  syncStatus: pending

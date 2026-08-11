@@ -1,0 +1,144 @@
+id: img-7293533ba7aa
+volumeName: DNF01
+md5: 7293533ba7aab3b1c77815f12a806f58
+image:
+  sizeBytes: 319488
+  format: raw
+  controller: floppy
+  totalPages: 156
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: SYSTEM
+      pagesUsed: 145
+  files:
+    - name: SANKA-SKEPP-GE:MAC
+      type: MAC
+      pages: 7
+      bytes: 13809
+      userName: SYSTEM
+      dateCreated: 2189197938
+      lastDateRead: 2397766101
+      lastDateWritten: 2189197941
+      dateCreatedStr: 1982-09-30 08:09:50
+      lastDateReadStr: 1985-11-21 16:07:21
+      lastDateWrittenStr: 1982-09-30 08:09:53
+      bpunValid: null
+    - name: NPL-FUNKTIONS-GE:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 3162
+      userName: SYSTEM
+      dateCreated: 2221588511
+      lastDateRead: 2397762843
+      lastDateWritten: 2221588517
+      dateCreatedStr: 1983-01-21 12:00:31
+      lastDateReadStr: 1985-11-21 15:20:27
+      lastDateWrittenStr: 1983-01-21 12:00:37
+      bpunValid: null
+    - name: PARANOI-LABYRINT:SYMB
+      type: SYMB
+      pages: 10
+      bytes: 20480
+      userName: SYSTEM
+      dateCreated: 2587658371
+      lastDateRead: 2397766430
+      lastDateWritten: 2587658371
+      dateCreatedStr: 1988-08-30 08:34:03
+      lastDateReadStr: 1985-11-21 16:12:30
+      lastDateWrittenStr: 1988-08-30 08:34:03
+      bpunValid: null
+    - name: STREBER-V2:SYMB
+      type: SYMB
+      pages: 36
+      bytes: 73728
+      userName: SYSTEM
+      dateCreated: 2587658385
+      lastDateRead: 2397765985
+      lastDateWritten: 2587658385
+      dateCreatedStr: 1988-08-30 08:34:17
+      lastDateReadStr: 1985-11-21 16:05:33
+      lastDateWrittenStr: 1988-08-30 08:34:17
+      bpunValid: null
+    - name: ADVENTURE:SYMB
+      type: SYMB
+      pages: 27
+      bytes: 55296
+      userName: SYSTEM
+      dateCreated: 2587658439
+      lastDateRead: 2587658439
+      lastDateWritten: 2587658439
+      dateCreatedStr: 1988-08-30 08:35:07
+      lastDateReadStr: 1988-08-30 08:35:07
+      lastDateWrittenStr: 1988-08-30 08:35:07
+      bpunValid: null
+    - name: ADVENTURE:DATA
+      type: DATA
+      pages: 7
+      bytes: 14336
+      userName: SYSTEM
+      dateCreated: 2587658513
+      lastDateRead: 2587658514
+      lastDateWritten: 2587658514
+      dateCreatedStr: 1988-08-30 08:36:17
+      lastDateReadStr: 1988-08-30 08:36:18
+      lastDateWrittenStr: 1988-08-30 08:36:18
+      bpunValid: null
+    - name: STREBER:DATA
+      type: DATA
+      pages: 4
+      bytes: 8192
+      userName: SYSTEM
+      dateCreated: 2587658540
+      lastDateRead: 2587658541
+      lastDateWritten: 2587658541
+      dateCreatedStr: 1988-08-30 08:36:44
+      lastDateReadStr: 1988-08-30 08:36:45
+      lastDateWrittenStr: 1988-08-30 08:36:45
+      bpunValid: null
+    - name: MAGGOT-SUPER-GP:SYMB
+      type: SYMB
+      pages: 3
+      bytes: 6144
+      userName: SYSTEM
+      dateCreated: 2587658650
+      lastDateRead: 2397765285
+      lastDateWritten: 2587658650
+      dateCreatedStr: 1988-08-30 08:38:26
+      lastDateReadStr: 1985-11-21 15:58:37
+      lastDateWrittenStr: 1988-08-30 08:38:26
+      bpunValid: null
+    - name: BLAND-HAJAR-O-PA:SYMB
+      type: SYMB
+      pages: 39
+      bytes: 79872
+      userName: SYSTEM
+      dateCreated: 2587658702
+      lastDateRead: 2587658702
+      lastDateWritten: 2587658702
+      dateCreatedStr: 1988-08-30 08:39:14
+      lastDateReadStr: 1988-08-30 08:39:14
+      lastDateWrittenStr: 1988-08-30 08:39:14
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 300/ND-disk-00348.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:45:49.816Z
+imagingLogs:
+  - ND-disk-00348.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-7293533ba7aa
+  syncStatus: pending

@@ -1,0 +1,100 @@
+id: nd-10374-a-d1-93f92124
+volumeName: ND-10374A-PART1
+md5: 93f92124c52def12c407c24808a9964b
+product:
+  id: ND-10374
+  version: A
+  diskNumber: 1
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: SYSTEM
+      pagesUsed: 146
+  files:
+    - name: COS-DATA-DEF:SYMB
+      type: SYMB
+      pages: 48
+      bytes: 89824
+      userName: SYSTEM
+      dateCreated: 2227759087
+      lastDateRead: 2295521770
+      lastDateWritten: 2227759109
+      dateCreatedStr: 1983-03-04 14:31:47
+      lastDateReadStr: 1984-03-09 14:07:42
+      lastDateWrittenStr: 1983-03-04 14:32:05
+      bpunValid: null
+    - name: COS-TAD-DATA-DEF:SYMB
+      type: SYMB
+      pages: 5
+      bytes: 9997
+      userName: SYSTEM
+      dateCreated: 2227759094
+      lastDateRead: 2295521796
+      lastDateWritten: 2227759124
+      dateCreatedStr: 1983-03-04 14:31:54
+      lastDateReadStr: 1984-03-09 14:08:04
+      lastDateWrittenStr: 1983-03-04 14:32:20
+      bpunValid: null
+    - name: COS-TAD-OBJECT:SYMB
+      type: SYMB
+      pages: 68
+      bytes: 138279
+      userName: SYSTEM
+      dateCreated: 2227759097
+      lastDateRead: 2295521615
+      lastDateWritten: 2227759127
+      dateCreatedStr: 1983-03-04 14:31:57
+      lastDateReadStr: 1984-03-09 14:05:15
+      lastDateWrittenStr: 1983-03-04 14:32:23
+      bpunValid: null
+    - name: COS-OBJ-CON-REQ:SYMB
+      type: SYMB
+      pages: 14
+      bytes: 28553
+      userName: SYSTEM
+      dateCreated: 2227759099
+      lastDateRead: 2295521733
+      lastDateWritten: 2227759154
+      dateCreatedStr: 1983-03-04 14:31:59
+      lastDateReadStr: 1984-03-09 14:07:05
+      lastDateWrittenStr: 1983-03-04 14:32:50
+      bpunValid: null
+    - name: COS-INSTALL-TAD:SYMB
+      type: SYMB
+      pages: 10
+      bytes: 19907
+      userName: SYSTEM
+      dateCreated: 2227759106
+      lastDateRead: 2295521578
+      lastDateWritten: 2227759162
+      dateCreatedStr: 1983-03-04 14:32:02
+      lastDateReadStr: 1984-03-09 14:04:42
+      lastDateWrittenStr: 1983-03-04 14:32:58
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 400/ND-disk-00446.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:49:38.494Z
+imagingLogs:
+  - ND-disk-00446.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10374-a-d1-93f92124
+  syncStatus: pending

@@ -1,0 +1,76 @@
+id: nd-10013-k-d2-dc67aa6c
+volumeName: ND-10013K-PART2
+md5: dc67aa6c016cf799a9d5aac4f10fc88e
+product:
+  id: ND-10013
+  version: K
+  diskNumber: 2
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 110
+  files:
+    - name: SCREEN-1BANK-K3:BRF
+      type: BRF
+      pages: 36
+      bytes: 72296
+      userName: FLOPPY-USER
+      dateCreated: 2293160986
+      lastDateRead: 2281701685
+      lastDateWritten: 2293160986
+      dateCreatedStr: 1984-02-23 13:48:26
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-02-23 13:48:26
+      bpunValid: null
+    - name: SCREEN-2BANK-K3:BRF
+      type: BRF
+      pages: 36
+      bytes: 73726
+      userName: FLOPPY-USER
+      dateCreated: 2293161169
+      lastDateRead: 2281701713
+      lastDateWritten: 2293161169
+      dateCreatedStr: 1984-02-23 13:51:17
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-02-23 13:51:17
+      bpunValid: null
+    - name: SCREEN-1REEN-K3:BRF
+      type: BRF
+      pages: 34
+      bytes: 68361
+      userName: FLOPPY-USER
+      dateCreated: 2293160813
+      lastDateRead: 2281701737
+      lastDateWritten: 2293160813
+      dateCreatedStr: 1984-02-23 13:45:45
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-02-23 13:45:45
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 300/ND-disk-00388.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:45:57.340Z
+imagingLogs:
+  - ND-disk-00388.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10013-k-d2-dc67aa6c
+  syncStatus: pending

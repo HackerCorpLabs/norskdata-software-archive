@@ -1,0 +1,53 @@
+id: nd-211226-b02-d2-b5b2c0e6
+volumeName: 211226B02-XX-02D
+md5: b5b2c0e6c5265a212ff520dcae6b2a51
+product:
+  id: ND-211226
+  version: B02
+  diskNumber: 2
+  language: XX
+image:
+  sizeBytes: 1310720
+  format: raw
+  controller: floppy
+  totalPages: 640
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 510
+  files:
+    - name: BM-FILERE-B02:DOM
+      type: DOM
+      pages: 508
+      bytes: 1040384
+      userName: FLOPPY-USER
+      dateCreated: 2647845801
+      lastDateRead: 2647976453
+      lastDateWritten: 2647845803
+      dateCreatedStr: 1989-07-09 14:46:41
+      lastDateReadStr: 1989-07-10 14:40:05
+      lastDateWrittenStr: 1989-07-09 14:46:43
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 000/ND-disk-00031.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T14:54:07.933Z
+imagingLogs:
+  - ND-disk-00031.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-211226-b02-d2-b5b2c0e6
+  syncStatus: pending

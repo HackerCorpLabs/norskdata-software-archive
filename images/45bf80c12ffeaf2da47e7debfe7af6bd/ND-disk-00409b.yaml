@@ -1,0 +1,183 @@
+id: nd-10022-q-d1-45bf80c1
+volumeName: ND-10022Q
+md5: 45bf80c12ffeaf2da47e7debfe7af6bd
+product:
+  id: ND-10022
+  version: Q
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: flomon
+filesystem: ndfs
+ndfs:
+  users:
+    - name: BPUN-FILES
+      pagesUsed: 147
+  files:
+    - name: ACCOUNTS-2183A:BPUN
+      type: BPUN
+      pages: 11
+      bytes: 20988
+      userName: BPUN-FILES
+      dateCreated: 2107039308
+      lastDateRead: 2281703520
+      lastDateWritten: 2107039754
+      dateCreatedStr: 1981-06-11 13:57:12
+      lastDateReadStr: null
+      lastDateWrittenStr: 1981-06-11 14:00:10
+      bpunValid: true
+    - name: FLOPPY-MON-2010F:BPUN
+      type: BPUN
+      pages: 3
+      bytes: 4306
+      userName: BPUN-FILES
+      dateCreated: 2117381653
+      lastDateRead: 2281703530
+      lastDateWritten: 2117381654
+      dateCreatedStr: 1981-08-26 10:56:21
+      lastDateReadStr: null
+      lastDateWrittenStr: 1981-08-26 10:56:22
+      bpunValid: true
+    - name: FILSYS-INV-2135H:BPUN
+      type: BPUN
+      pages: 18
+      bytes: 36544
+      userName: BPUN-FILES
+      dateCreated: 2117380792
+      lastDateRead: 2281703540
+      lastDateWritten: 2117380794
+      dateCreatedStr: 1981-08-26 10:42:56
+      lastDateReadStr: null
+      lastDateWrittenStr: 1981-08-26 10:42:58
+      bpunValid: false
+    - name: MEMTOF-2326A:BPUN
+      type: BPUN
+      pages: 2
+      bytes: 2612
+      userName: BPUN-FILES
+      dateCreated: 2107039376
+      lastDateRead: 2281703560
+      lastDateWritten: 2107039769
+      dateCreatedStr: 1981-06-11 13:58:16
+      lastDateReadStr: null
+      lastDateWrittenStr: 1981-06-11 14:00:25
+      bpunValid: true
+    - name: DUMPFL-2327A:BPUN
+      type: BPUN
+      pages: 58
+      bytes: 117691
+      userName: BPUN-FILES
+      dateCreated: 2107039398
+      lastDateRead: 2281703566
+      lastDateWritten: 2107039773
+      dateCreatedStr: 1981-06-11 13:58:38
+      lastDateReadStr: null
+      lastDateWrittenStr: 1981-06-11 14:00:29
+      bpunValid: false
+    - name: DMAC-1915D:BPUN
+      type: BPUN
+      pages: 14
+      bytes: 28599
+      userName: BPUN-FILES
+      dateCreated: 2107039415
+      lastDateRead: 2526071285
+      lastDateWritten: 2107039795
+      dateCreatedStr: 1981-06-11 13:58:55
+      lastDateReadStr: 1987-10-08 12:39:53
+      lastDateWrittenStr: 1981-06-11 14:00:51
+      bpunValid: true
+    - name: PERFORM-2412D:BPUN
+      type: BPUN
+      pages: 15
+      bytes: 30113
+      userName: BPUN-FILES
+      dateCreated: 2107039439
+      lastDateRead: 2281703610
+      lastDateWritten: 2107039802
+      dateCreatedStr: 1981-06-11 13:59:15
+      lastDateReadStr: null
+      lastDateWrittenStr: 1981-06-11 14:00:58
+      bpunValid: true
+    - name: PERFORM-LIBRARY:MCRO
+      type: MCRO
+      pages: 2
+      bytes: 2379
+      userName: BPUN-FILES
+      dateCreated: 2107039457
+      lastDateRead: 2281703626
+      lastDateWritten: 2107039813
+      dateCreatedStr: 1981-06-11 13:59:33
+      lastDateReadStr: null
+      lastDateWrittenStr: 1981-06-11 14:01:05
+      bpunValid: null
+    - name: DITAP-1880D:BPUN
+      type: BPUN
+      pages: 1
+      bytes: 1974
+      userName: BPUN-FILES
+      dateCreated: 2107039474
+      lastDateRead: 2526497577
+      lastDateWritten: 2107039816
+      dateCreatedStr: 1981-06-11 13:59:50
+      lastDateReadStr: 1987-10-11 20:44:41
+      lastDateWrittenStr: 1981-06-11 14:01:08
+      bpunValid: true
+    - name: COP-VERIFY-2035D:BPUN
+      type: BPUN
+      pages: 9
+      bytes: 16592
+      userName: BPUN-FILES
+      dateCreated: 2107040607
+      lastDateRead: 2281703638
+      lastDateWritten: 2107040724
+      dateCreatedStr: 1981-06-11 14:13:31
+      lastDateReadStr: null
+      lastDateWrittenStr: 1981-06-11 14:15:20
+      bpunValid: true
+    - name: MCOPY-HP-1650G:BPUN
+      type: BPUN
+      pages: 4
+      bytes: 6716
+      userName: BPUN-FILES
+      dateCreated: 2107040640
+      lastDateRead: 2281703649
+      lastDateWritten: 2107040709
+      dateCreatedStr: 1981-06-11 14:14:00
+      lastDateReadStr: null
+      lastDateWrittenStr: 1981-06-11 14:15:05
+      bpunValid: true
+    - name: MCOPY-TANB-1649I:BPUN
+      type: BPUN
+      pages: 7
+      bytes: 12786
+      userName: BPUN-FILES
+      dateCreated: 2107040660
+      lastDateRead: 2281703657
+      lastDateWritten: 2107040684
+      dateCreatedStr: 1981-06-11 14:14:20
+      lastDateReadStr: null
+      lastDateWrittenStr: 1981-06-11 14:14:44
+      bpunValid: true
+provenance:
+  contributor: gandalf
+  originalPath: 400/ND-disk-00409b.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:49:27.076Z
+imagingLogs:
+  - ND-disk-00409b.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10022-q-d1-45bf80c1
+  syncStatus: pending

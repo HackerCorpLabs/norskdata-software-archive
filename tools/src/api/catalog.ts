@@ -175,6 +175,8 @@ function entryToYamlDoc(entry: CatalogEntry, rootDir: string): Record<string, un
   // these writes they are read-but-never-written and silently lost on every
   // round-trip (regenerate-from-YAML), e.g. an edited mediaRole reverting.
   if (entry.mediaRole) doc.mediaRole = entry.mediaRole;
+  if (entry.filesystem) doc.filesystem = entry.filesystem;
+  if (entry.volumeLabel) doc.volumeLabel = entry.volumeLabel;
   if (entry.cpuTarget) doc.cpuTarget = entry.cpuTarget;
   if (entry.osRequirement) doc.osRequirement = entry.osRequirement;
 
@@ -215,6 +217,14 @@ function entryToYamlDoc(entry: CatalogEntry, rootDir: string): Record<string, un
     }
     if (git.setPhotos?.length) {
       photos.set = git.setPhotos
+        .filter(inOwnFolder)
+        .map(p => relative(dir, join(rootDir, p)));
+    }
+    // Imaging logs (Greaseweazle read logs and the like) copied in beside the
+    // image. Written so they are recorded rather than only showing up when
+    // something lists the folder, e.g. a delete preview.
+    if (git.imagingLogs?.length) {
+      doc.imagingLogs = git.imagingLogs
         .filter(inOwnFolder)
         .map(p => relative(dir, join(rootDir, p)));
     }
@@ -275,6 +285,9 @@ function yamlDocToEntry(doc: Record<string, unknown>, yamlRelPath: string, rootD
     ? relative(rootDir, join(yamlAbsDir, labelTransRel))
     : null;
 
+  const imagingLogs = ((doc.imagingLogs as string[] | undefined) ?? [])
+    .map(p => relative(rootDir, join(yamlAbsDir, p)));
+
   // Determine imagePath from YAML file location (same name but .img.gz)
   const yamlBaseName = basename(yamlRelPath, '.yaml');
   const imgGzPath = join(dirname(yamlRelPath), yamlBaseName + '.img.gz');
@@ -301,6 +314,8 @@ function yamlDocToEntry(doc: Record<string, unknown>, yamlRelPath: string, rootD
     cpuTarget: doc.cpuTarget as string[] | null ?? null,
     osRequirement: doc.osRequirement as string | null ?? null,
     ndfs: ndfs ?? null,
+    filesystem: (doc.filesystem as any) ?? null,
+    volumeLabel: (doc.volumeLabel as string | null) ?? null,
     docs: docsObj ? {
       piDocId: docsObj.piDocId as string | null ?? null,
       pdDocId: docsObj.pdDocId as string | null ?? null,
@@ -321,7 +336,7 @@ function yamlDocToEntry(doc: Record<string, unknown>, yamlRelPath: string, rootD
         diskPhotos,
         setPhotos,
         labelTranscription,
-        imagingLogs: [],
+        imagingLogs,
       },
       internetArchive: ia ? {
         itemId: String(ia.itemId ?? ''),

@@ -1,0 +1,48 @@
+id: img-6533a73b1cb8
+volumeName: SLASK
+md5: 6533a73b1cb8de5f9c7d3188f7c7a286
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: SYSTEM
+      pagesUsed: 73
+  files:
+    - name: BOKNING:SCH
+      type: SCH
+      pages: 71
+      bytes: 145141
+      userName: SYSTEM
+      dateCreated: 2488456734
+      lastDateRead: 2490820129
+      lastDateWritten: 2488456739
+      dateCreatedStr: 1987-01-09 13:24:30
+      lastDateReadStr: 1987-01-27 14:24:33
+      lastDateWrittenStr: 1987-01-09 13:24:35
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 400/ND-disk-00428.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:49:31.969Z
+imagingLogs:
+  - ND-disk-00428.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-6533a73b1cb8
+  syncStatus: pending

@@ -1,0 +1,160 @@
+id: nd-10760-a00-d1-6265fdd3
+volumeName: 10760A00-1
+md5: 6265fdd3cb938a3cd0a6eb3fcd5f852a
+product:
+  id: ND-10760
+  version: A00
+  diskNumber: 1
+image:
+  sizeBytes: 319488
+  format: raw
+  controller: floppy
+  totalPages: 156
+  pageSize: 2048
+  bootFormat: binary
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 145
+  files:
+    - name: 100-FCNTL:H
+      type: H
+      pages: 1
+      bytes: 1009
+      userName: FLOPPY-USER
+      dateCreated: 2331249410
+      lastDateRead: 48957226
+      lastDateWritten: 2331249410
+      dateCreatedStr: 1984-11-26 00:44:02
+      lastDateReadStr: 1950-11-21 16:28:42
+      lastDateWrittenStr: 1984-11-26 00:44:02
+      bpunValid: null
+    - name: 100-SETJMP:H
+      type: H
+      pages: 1
+      bytes: 80
+      userName: FLOPPY-USER
+      dateCreated: 2331249457
+      lastDateRead: 48957228
+      lastDateWritten: 2331249458
+      dateCreatedStr: 1984-11-26 00:44:49
+      lastDateReadStr: 1950-11-21 16:28:44
+      lastDateWrittenStr: 1984-11-26 00:44:50
+      bpunValid: null
+    - name: 100-VARARGS:H
+      type: H
+      pages: 1
+      bytes: 248
+      userName: FLOPPY-USER
+      dateCreated: 2331249490
+      lastDateRead: 48957230
+      lastDateWritten: 2331249490
+      dateCreatedStr: 1984-11-26 00:45:18
+      lastDateReadStr: 1950-11-21 16:28:46
+      lastDateWrittenStr: 1984-11-26 00:45:18
+      bpunValid: null
+    - name: 100-CTYPE:H
+      type: H
+      pages: 1
+      bytes: 817
+      userName: FLOPPY-USER
+      dateCreated: 2297707950
+      lastDateRead: 48957232
+      lastDateWritten: 2297707950
+      dateCreatedStr: 1984-03-26 03:54:46
+      lastDateReadStr: 1950-11-21 16:28:48
+      lastDateWrittenStr: 1984-03-26 03:54:46
+      bpunValid: null
+    - name: 100-ERRNO:H
+      type: H
+      pages: 1
+      bytes: 721
+      userName: FLOPPY-USER
+      dateCreated: 2297707952
+      lastDateRead: 48957233
+      lastDateWritten: 2297707952
+      dateCreatedStr: 1984-03-26 03:54:48
+      lastDateReadStr: 1950-11-21 16:28:49
+      lastDateWrittenStr: 1984-03-26 03:54:48
+      bpunValid: null
+    - name: 100-MATH:H
+      type: H
+      pages: 1
+      bytes: 386
+      userName: FLOPPY-USER
+      dateCreated: 2297707953
+      lastDateRead: 48957235
+      lastDateWritten: 2297707954
+      dateCreatedStr: 1984-03-26 03:54:49
+      lastDateReadStr: 1950-11-21 16:28:51
+      lastDateWrittenStr: 1984-03-26 03:54:50
+      bpunValid: null
+    - name: 100-STDIO:H
+      type: H
+      pages: 1
+      bytes: 1076
+      userName: FLOPPY-USER
+      dateCreated: 2330382358
+      lastDateRead: 48957237
+      lastDateWritten: 2330382358
+      dateCreatedStr: 1984-11-19 13:00:22
+      lastDateReadStr: 1950-11-21 16:28:53
+      lastDateWrittenStr: 1984-11-19 13:00:22
+      bpunValid: null
+    - name: CC-COM-100:PROG
+      type: PROG
+      pages: 112
+      bytes: 243200
+      userName: FLOPPY-USER
+      dateCreated: 2331265684
+      lastDateRead: 48957239
+      lastDateWritten: 2331265756
+      dateCreatedStr: 1984-11-26 04:42:20
+      lastDateReadStr: 1950-11-21 16:28:55
+      lastDateWrittenStr: 1984-11-26 04:43:28
+      bpunValid: null
+    - name: CC-BRF-100:PROG
+      type: PROG
+      pages: 14
+      bytes: 143360
+      userName: FLOPPY-USER
+      dateCreated: 2331265895
+      lastDateRead: 48957276
+      lastDateWritten: 2331265902
+      dateCreatedStr: 1984-11-26 04:45:39
+      lastDateReadStr: 1950-11-21 16:29:28
+      lastDateWrittenStr: 1984-11-26 04:45:46
+      bpunValid: null
+    - name: INSTALL-1:MODE
+      type: MODE
+      pages: 1
+      bytes: 140
+      userName: FLOPPY-USER
+      dateCreated: 2297701636
+      lastDateRead: 48957283
+      lastDateWritten: 2353440150
+      dateCreatedStr: 1984-03-26 02:20:04
+      lastDateReadStr: 1950-11-21 16:29:35
+      lastDateWrittenStr: 1985-01-03 10:22:22
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 200/ND-disk-00272.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:42:01.386Z
+imagingLogs:
+  - ND-disk-00272.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10760-a00-d1-6265fdd3
+  syncStatus: pending

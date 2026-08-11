@@ -1,0 +1,461 @@
+id: nd-250379-b04-d1-cd73d6d9
+volumeName: 250379B04-XX-01S
+md5: cd73d6d98927958db225662f96689988
+product:
+  id: ND-250379
+  version: B04
+  diskNumber: 1
+  language: XX
+image:
+  sizeBytes: 1310720
+  format: raw
+  controller: floppy
+  totalPages: 640
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 77
+  files:
+    - name: N-211226B-13:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 3672
+      userName: FLOPPY-USER
+      dateCreated: 2700914105
+      lastDateRead: 2701435690
+      lastDateWritten: 2700914106
+      dateCreatedStr: 1990-03-30 10:54:57
+      lastDateReadStr: 1990-04-02 10:12:42
+      lastDateWrittenStr: 1990-03-30 10:54:58
+      bpunValid: null
+    - name: N-211226B-14:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1284
+      userName: FLOPPY-USER
+      dateCreated: 2700914115
+      lastDateRead: 2701435698
+      lastDateWritten: 2700914115
+      dateCreatedStr: 1990-03-30 10:55:03
+      lastDateReadStr: 1990-04-02 10:12:50
+      lastDateWrittenStr: 1990-03-30 10:55:03
+      bpunValid: null
+    - name: N-211226B-15:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1967
+      userName: FLOPPY-USER
+      dateCreated: 2700914118
+      lastDateRead: 2701435702
+      lastDateWritten: 2700914119
+      dateCreatedStr: 1990-03-30 10:55:06
+      lastDateReadStr: 1990-04-02 10:12:54
+      lastDateWrittenStr: 1990-03-30 10:55:07
+      bpunValid: null
+    - name: N-211226B-17:SYMB
+      type: SYMB
+      pages: 3
+      bytes: 4205
+      userName: FLOPPY-USER
+      dateCreated: 2700914124
+      lastDateRead: 2701435712
+      lastDateWritten: 2700914125
+      dateCreatedStr: 1990-03-30 10:55:12
+      lastDateReadStr: 1990-04-02 10:13:00
+      lastDateWrittenStr: 1990-03-30 10:55:13
+      bpunValid: null
+    - name: N-211226B-19:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 892
+      userName: FLOPPY-USER
+      dateCreated: 2700914131
+      lastDateRead: 2701435720
+      lastDateWritten: 2700914131
+      dateCreatedStr: 1990-03-30 10:55:19
+      lastDateReadStr: 1990-04-02 10:13:08
+      lastDateWrittenStr: 1990-03-30 10:55:19
+      bpunValid: null
+    - name: N-211226B-16:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 3184
+      userName: FLOPPY-USER
+      dateCreated: 2700914135
+      lastDateRead: 2701435727
+      lastDateWritten: 2700914135
+      dateCreatedStr: 1990-03-30 10:55:23
+      lastDateReadStr: 1990-04-02 10:13:15
+      lastDateWrittenStr: 1990-03-30 10:55:23
+      bpunValid: null
+    - name: N-211226B-18:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1095
+      userName: FLOPPY-USER
+      dateCreated: 2700914141
+      lastDateRead: 2701435732
+      lastDateWritten: 2700914141
+      dateCreatedStr: 1990-03-30 10:55:29
+      lastDateReadStr: 1990-04-02 10:13:20
+      lastDateWrittenStr: 1990-03-30 10:55:29
+      bpunValid: null
+    - name: N-211154C-2:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 231
+      userName: FLOPPY-USER
+      dateCreated: 2700914151
+      lastDateRead: 2701435743
+      lastDateWritten: 2700914151
+      dateCreatedStr: 1990-03-30 10:55:39
+      lastDateReadStr: 1990-04-02 10:13:31
+      lastDateWrittenStr: 1990-03-30 10:55:39
+      bpunValid: null
+    - name: N-211286A-2:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 237
+      userName: FLOPPY-USER
+      dateCreated: 2700914161
+      lastDateRead: 2707227816
+      lastDateWritten: 2700914161
+      dateCreatedStr: 1990-03-30 10:55:49
+      lastDateReadStr: 1990-05-14 16:18:40
+      lastDateWrittenStr: 1990-03-30 10:55:49
+      bpunValid: null
+    - name: N-211286A-3:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 107
+      userName: FLOPPY-USER
+      dateCreated: 2700914163
+      lastDateRead: 2707227822
+      lastDateWritten: 2700914164
+      dateCreatedStr: 1990-03-30 10:55:51
+      lastDateReadStr: 1990-05-14 16:18:46
+      lastDateWrittenStr: 1990-03-30 10:55:52
+      bpunValid: null
+    - name: N-211289A-2:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 237
+      userName: FLOPPY-USER
+      dateCreated: 2700914166
+      lastDateRead: 2707227754
+      lastDateWritten: 2700914166
+      dateCreatedStr: 1990-03-30 10:55:54
+      lastDateReadStr: 1990-05-14 16:17:42
+      lastDateWrittenStr: 1990-03-30 10:55:54
+      bpunValid: null
+    - name: N-211212B-1:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 790
+      userName: FLOPPY-USER
+      dateCreated: 2700914183
+      lastDateRead: 2701435759
+      lastDateWritten: 2700914183
+      dateCreatedStr: 1990-03-30 10:56:07
+      lastDateReadStr: 1990-04-02 10:13:47
+      lastDateWrittenStr: 1990-03-30 10:56:07
+      bpunValid: null
+    - name: N-211212B-2:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1124
+      userName: FLOPPY-USER
+      dateCreated: 2700914187
+      lastDateRead: 2701435762
+      lastDateWritten: 2700914187
+      dateCreatedStr: 1990-03-30 10:56:11
+      lastDateReadStr: 1990-04-02 10:13:50
+      lastDateWrittenStr: 1990-03-30 10:56:11
+      bpunValid: null
+    - name: N-211212B-3:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 840
+      userName: FLOPPY-USER
+      dateCreated: 2700914191
+      lastDateRead: 2701435765
+      lastDateWritten: 2700914191
+      dateCreatedStr: 1990-03-30 10:56:15
+      lastDateReadStr: 1990-04-02 10:13:53
+      lastDateWrittenStr: 1990-03-30 10:56:15
+      bpunValid: null
+    - name: N-211212B-4:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 712
+      userName: FLOPPY-USER
+      dateCreated: 2700914194
+      lastDateRead: 2701435768
+      lastDateWritten: 2700914194
+      dateCreatedStr: 1990-03-30 10:56:18
+      lastDateReadStr: 1990-04-02 10:13:56
+      lastDateWrittenStr: 1990-03-30 10:56:18
+      bpunValid: null
+    - name: N-211212B-5:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1143
+      userName: FLOPPY-USER
+      dateCreated: 2700914197
+      lastDateRead: 2701435771
+      lastDateWritten: 2700914197
+      dateCreatedStr: 1990-03-30 10:56:21
+      lastDateReadStr: 1990-04-02 10:13:59
+      lastDateWrittenStr: 1990-03-30 10:56:21
+      bpunValid: null
+    - name: N-211212B-6:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1148
+      userName: FLOPPY-USER
+      dateCreated: 2700914200
+      lastDateRead: 2701435778
+      lastDateWritten: 2700914200
+      dateCreatedStr: 1990-03-30 10:56:24
+      lastDateReadStr: 1990-04-02 10:14:02
+      lastDateWrittenStr: 1990-03-30 10:56:24
+      bpunValid: null
+    - name: N-211212B-7:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1068
+      userName: FLOPPY-USER
+      dateCreated: 2700914204
+      lastDateRead: 2701435781
+      lastDateWritten: 2700914204
+      dateCreatedStr: 1990-03-30 10:56:28
+      lastDateReadStr: 1990-04-02 10:14:05
+      lastDateWrittenStr: 1990-03-30 10:56:28
+      bpunValid: null
+    - name: N-211212B-8:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 804
+      userName: FLOPPY-USER
+      dateCreated: 2700914207
+      lastDateRead: 2701435783
+      lastDateWritten: 2700914207
+      dateCreatedStr: 1990-03-30 10:56:31
+      lastDateReadStr: 1990-04-02 10:14:07
+      lastDateWrittenStr: 1990-03-30 10:56:31
+      bpunValid: null
+    - name: N-211212B-9:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 2273
+      userName: FLOPPY-USER
+      dateCreated: 2700914211
+      lastDateRead: 2701435786
+      lastDateWritten: 2700914211
+      dateCreatedStr: 1990-03-30 10:56:35
+      lastDateReadStr: 1990-04-02 10:14:10
+      lastDateWrittenStr: 1990-03-30 10:56:35
+      bpunValid: null
+    - name: N-211212B-13:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 682
+      userName: FLOPPY-USER
+      dateCreated: 2700914216
+      lastDateRead: 2701435789
+      lastDateWritten: 2700914216
+      dateCreatedStr: 1990-03-30 10:56:40
+      lastDateReadStr: 1990-04-02 10:14:13
+      lastDateWrittenStr: 1990-03-30 10:56:40
+      bpunValid: null
+    - name: N-211212B-14:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 951
+      userName: FLOPPY-USER
+      dateCreated: 2700914219
+      lastDateRead: 2701435793
+      lastDateWritten: 2700914219
+      dateCreatedStr: 1990-03-30 10:56:43
+      lastDateReadStr: 1990-04-02 10:14:17
+      lastDateWrittenStr: 1990-03-30 10:56:43
+      bpunValid: null
+    - name: N-211212B-15:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 629
+      userName: FLOPPY-USER
+      dateCreated: 2700914222
+      lastDateRead: 2701435796
+      lastDateWritten: 2700914222
+      dateCreatedStr: 1990-03-30 10:56:46
+      lastDateReadStr: 1990-04-02 10:14:20
+      lastDateWrittenStr: 1990-03-30 10:56:46
+      bpunValid: null
+    - name: N-211212B-16:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 282
+      userName: FLOPPY-USER
+      dateCreated: 2700914225
+      lastDateRead: 2701435799
+      lastDateWritten: 2700914225
+      dateCreatedStr: 1990-03-30 10:56:49
+      lastDateReadStr: 1990-04-02 10:14:23
+      lastDateWrittenStr: 1990-03-30 10:56:49
+      bpunValid: null
+    - name: N-211212B-17:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1344
+      userName: FLOPPY-USER
+      dateCreated: 2700914228
+      lastDateRead: 2701435802
+      lastDateWritten: 2700914228
+      dateCreatedStr: 1990-03-30 10:56:52
+      lastDateReadStr: 1990-04-02 10:14:26
+      lastDateWrittenStr: 1990-03-30 10:56:52
+      bpunValid: null
+    - name: N-211212B-18:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1055
+      userName: FLOPPY-USER
+      dateCreated: 2700914231
+      lastDateRead: 2701435805
+      lastDateWritten: 2700914231
+      dateCreatedStr: 1990-03-30 10:56:55
+      lastDateReadStr: 1990-04-02 10:14:29
+      lastDateWrittenStr: 1990-03-30 10:56:55
+      bpunValid: null
+    - name: N-211212B-19:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 885
+      userName: FLOPPY-USER
+      dateCreated: 2700914234
+      lastDateRead: 2701435808
+      lastDateWritten: 2700914234
+      dateCreatedStr: 1990-03-30 10:56:58
+      lastDateReadStr: 1990-04-02 10:14:32
+      lastDateWrittenStr: 1990-03-30 10:56:58
+      bpunValid: null
+    - name: N-211212B-21:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1076
+      userName: FLOPPY-USER
+      dateCreated: 2700914242
+      lastDateRead: 2701435811
+      lastDateWritten: 2700914242
+      dateCreatedStr: 1990-03-30 10:57:02
+      lastDateReadStr: 1990-04-02 10:14:35
+      lastDateWrittenStr: 1990-03-30 10:57:02
+      bpunValid: null
+    - name: N-211212B-22:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 300
+      userName: FLOPPY-USER
+      dateCreated: 2700914247
+      lastDateRead: 2701435814
+      lastDateWritten: 2700914248
+      dateCreatedStr: 1990-03-30 10:57:07
+      lastDateReadStr: 1990-04-02 10:14:38
+      lastDateWrittenStr: 1990-03-30 10:57:08
+      bpunValid: null
+    - name: N-211212B-23:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 705
+      userName: FLOPPY-USER
+      dateCreated: 2700914252
+      lastDateRead: 2701435817
+      lastDateWritten: 2700914252
+      dateCreatedStr: 1990-03-30 10:57:12
+      lastDateReadStr: 1990-04-02 10:14:41
+      lastDateWrittenStr: 1990-03-30 10:57:12
+      bpunValid: null
+    - name: N-211212B-24:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 691
+      userName: FLOPPY-USER
+      dateCreated: 2700914255
+      lastDateRead: 2701435820
+      lastDateWritten: 2700914255
+      dateCreatedStr: 1990-03-30 10:57:15
+      lastDateReadStr: 1990-04-02 10:14:44
+      lastDateWrittenStr: 1990-03-30 10:57:15
+      bpunValid: null
+    - name: N-211212B-10:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1456
+      userName: FLOPPY-USER
+      dateCreated: 2700914258
+      lastDateRead: 2701435823
+      lastDateWritten: 2700914258
+      dateCreatedStr: 1990-03-30 10:57:18
+      lastDateReadStr: 1990-04-02 10:14:47
+      lastDateWrittenStr: 1990-03-30 10:57:18
+      bpunValid: null
+    - name: N-211212B-11:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1456
+      userName: FLOPPY-USER
+      dateCreated: 2700914262
+      lastDateRead: 2701435827
+      lastDateWritten: 2700914262
+      dateCreatedStr: 1990-03-30 10:57:22
+      lastDateReadStr: 1990-04-02 10:14:51
+      lastDateWrittenStr: 1990-03-30 10:57:22
+      bpunValid: null
+    - name: N-211212B-12:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 593
+      userName: FLOPPY-USER
+      dateCreated: 2700914265
+      lastDateRead: 2701435830
+      lastDateWritten: 2700914265
+      dateCreatedStr: 1990-03-30 10:57:25
+      lastDateReadStr: 1990-04-02 10:14:54
+      lastDateWrittenStr: 1990-03-30 10:57:25
+      bpunValid: null
+    - name: N-211212B-25:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 960
+      userName: FLOPPY-USER
+      dateCreated: 2700914268
+      lastDateRead: 2701435833
+      lastDateWritten: 2700914268
+      dateCreatedStr: 1990-03-30 10:57:28
+      lastDateReadStr: 1990-04-02 10:14:57
+      lastDateWrittenStr: 1990-03-30 10:57:28
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 200/ND-disk-00213.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:41:43.494Z
+imagingLogs:
+  - ND-disk-00213.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-250379-b04-d1-cd73d6d9
+  syncStatus: pending

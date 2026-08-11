@@ -1,0 +1,62 @@
+id: nd-10166-e-d4-eee7e4de
+volumeName: ND-10166E-PART4
+md5: eee7e4defd39a9ace0a320b037dde350
+product:
+  id: ND-10166
+  version: E
+  diskNumber: 4
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 113
+  files:
+    - name: MAKEDRL-E10:PROG
+      type: PROG
+      pages: 20
+      bytes: 38912
+      userName: FLOPPY-USER
+      dateCreated: 2323030292
+      lastDateRead: 2425291996
+      lastDateWritten: 2370108301
+      dateCreatedStr: 1984-09-27 10:04:20
+      lastDateReadStr: 1986-02-07 16:19:28
+      lastDateWrittenStr: 1985-05-02 15:46:13
+      bpunValid: null
+    - name: SIB2-DRL-1-E10:PROG
+      type: PROG
+      pages: 90
+      bytes: 536576
+      userName: FLOPPY-USER
+      dateCreated: 2323030328
+      lastDateRead: 2425292003
+      lastDateWritten: 2425292003
+      dateCreatedStr: 1984-09-27 10:04:56
+      lastDateReadStr: 1986-02-07 16:19:35
+      lastDateWrittenStr: 1986-02-07 16:19:35
+      bpunValid: null
+provenance:
+  contributor: www.datormuseum.se
+  originalPath: OK/DISK56.IMG
+  dateImaged: 2022-08-15
+  importedAt: 2026-08-11T17:07:04.826Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10166-e-d4-eee7e4de
+  syncStatus: pending

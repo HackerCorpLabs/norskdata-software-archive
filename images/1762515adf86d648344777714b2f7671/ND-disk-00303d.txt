@@ -1,0 +1,666 @@
+Reading from: :d=0:s=0:t=1-77
+Writing a copy of the flux to ND-disk-303b.flux
+  1.0: 328 ms in 215974 bytes
+       32 records, 16 sectors; 1.94us clock (514kHz); 
+       Failed to read sector 2 (bad checksum); 
+       5 retries remaining
+  1.0: 328 ms in 215718 bytes
+       64 records, 32 sectors; 1.94us clock (514kHz); 
+       Failed to read sector 2 (bad checksum); 
+       4 retries remaining
+  1.0: 328 ms in 215911 bytes
+       96 records, 48 sectors; 1.94us clock (514kHz); 
+       Failed to read sector 2 (bad checksum); 
+       3 retries remaining
+  1.0: 328 ms in 216039 bytes
+       128 records, 64 sectors; 1.94us clock (514kHz); 
+       Failed to read sector 2 (bad checksum); 
+       2 retries remaining
+  1.0: 327 ms in 215399 bytes
+       160 records, 80 sectors; 1.94us clock (514kHz); 
+       Failed to read sector 2 (bad checksum); 
+       1 retries remaining
+  1.0: 327 ms in 215399 bytes
+       192 records, 96 sectors; 1.94us clock (514kHz); 
+       Failed to read sector 2 (bad checksum); 
+       giving up
+       logical track 0.0; 4096 bytes decoded.
+  2.0: 326 ms in 254631 bytes
+       32 records, 16 sectors; 1.95us clock (513kHz); 
+       logical track 2.0; 4096 bytes decoded.
+  3.0: 326 ms in 249575 bytes
+       32 records, 16 sectors; 2.02us clock (495kHz); 
+       logical track 3.0; 4096 bytes decoded.
+  4.0: 326 ms in 250022 bytes
+       32 records, 16 sectors; 2.01us clock (497kHz); 
+       Failed to read sector 6 (bad checksum); 
+       5 retries remaining
+  4.0: 326 ms in 250343 bytes
+       64 records, 32 sectors; 2.01us clock (497kHz); 
+       logical track 4.0; 4096 bytes decoded.
+  5.0: 327 ms in 222759 bytes
+       32 records, 16 sectors; 1.96us clock (510kHz); 
+       logical track 5.0; 4096 bytes decoded.
+  6.0: 327 ms in 225702 bytes
+       32 records, 16 sectors; 1.93us clock (517kHz); 
+       logical track 6.0; 4096 bytes decoded.
+  7.0: 327 ms in 256999 bytes
+       32 records, 16 sectors; 1.98us clock (504kHz); 
+       logical track 7.0; 4096 bytes decoded.
+  8.0: 327 ms in 258724 bytes
+       32 records, 16 sectors; 1.98us clock (506kHz); 
+       logical track 8.0; 4096 bytes decoded.
+  9.0: 327 ms in 256551 bytes
+       32 records, 16 sectors; 1.98us clock (504kHz); 
+       logical track 9.0; 4096 bytes decoded.
+ 10.0: 327 ms in 250599 bytes
+       32 records, 16 sectors; 1.95us clock (513kHz); 
+       logical track 10.0; 4096 bytes decoded.
+ 11.0: 327 ms in 251428 bytes
+       32 records, 16 sectors; 1.97us clock (509kHz); 
+       logical track 11.0; 4096 bytes decoded.
+ 12.0: 327 ms in 252131 bytes
+       30 records, 15 sectors; 1.98us clock (506kHz); 
+       logical track 12.0; 4096 bytes decoded.
+ 13.0: 327 ms in 252583 bytes
+       30 records, 14 sectors; 1.99us clock (502kHz); 
+       logical track 13.0; 3584 bytes decoded.
+ 14.0: 327 ms in 254630 bytes
+       30 records, 15 sectors; 1.99us clock (502kHz); 
+       Failed to read sector 5 (bad checksum); 
+       5 retries remaining
+ 14.0: 326 ms in 253927 bytes
+       62 records, 31 sectors; 1.99us clock (502kHz); 
+       Failed to read sector 5 (bad checksum); 
+       4 retries remaining
+ 14.0: 326 ms in 254055 bytes
+       94 records, 47 sectors; 1.99us clock (502kHz); 
+       Failed to read sector 5 (bad checksum); 
+       3 retries remaining
+ 14.0: 326 ms in 253732 bytes
+       126 records, 63 sectors; 1.99us clock (502kHz); 
+       Failed to read sector 5 (bad checksum); 
+       2 retries remaining
+ 14.0: 326 ms in 254116 bytes
+       158 records, 79 sectors; 1.99us clock (502kHz); 
+       Failed to read sector 5 (bad checksum); 
+       1 retries remaining
+ 14.0: 326 ms in 254183 bytes
+       190 records, 95 sectors; 1.99us clock (502kHz); 
+       Failed to read sector 5 (bad checksum); 
+       giving up
+       logical track 14.0; 4096 bytes decoded.
+ 15.0: 326 ms in 253095 bytes
+       32 records, 16 sectors; 1.99us clock (503kHz); 
+       Failed to read sector 5 (bad checksum); 
+       5 retries remaining
+ 15.0: 327 ms in 253155 bytes
+       64 records, 32 sectors; 1.99us clock (503kHz); 
+       Failed to read sector 5 (bad checksum); 
+       4 retries remaining
+ 15.0: 327 ms in 253220 bytes
+       96 records, 48 sectors; 1.99us clock (503kHz); 
+       Failed to read sector 5 (bad checksum); 
+       3 retries remaining
+ 15.0: 327 ms in 253287 bytes
+       128 records, 64 sectors; 1.99us clock (503kHz); 
+       Failed to read sector 5 (bad checksum); 
+       2 retries remaining
+ 15.0: 327 ms in 253095 bytes
+       160 records, 80 sectors; 1.99us clock (503kHz); 
+       Failed to read sector 5 (bad checksum); 
+       1 retries remaining
+ 15.0: 327 ms in 253351 bytes
+       192 records, 96 sectors; 1.99us clock (503kHz); 
+       Failed to read sector 5 (bad checksum); 
+       giving up
+       logical track 15.0; 4096 bytes decoded.
+ 16.0: 327 ms in 253347 bytes
+       32 records, 16 sectors; 1.97us clock (507kHz); 
+       Failed to read sector 5 (bad checksum); 
+       5 retries remaining
+ 16.0: 327 ms in 253351 bytes
+       64 records, 32 sectors; 1.97us clock (507kHz); 
+       Failed to read sector 5 (bad checksum); 
+       4 retries remaining
+ 16.0: 327 ms in 253351 bytes
+       96 records, 48 sectors; 1.97us clock (507kHz); 
+       logical track 16.0; 4096 bytes decoded.
+ 17.0: 326 ms in 252132 bytes
+       32 records, 16 sectors; 2.00us clock (500kHz); 
+       logical track 17.0; 4096 bytes decoded.
+ 18.0: 327 ms in 224932 bytes
+       32 records, 16 sectors; 2.03us clock (493kHz); 
+       logical track 18.0; 4096 bytes decoded.
+ 19.0: 327 ms in 253223 bytes
+       32 records, 16 sectors; 2.00us clock (500kHz); 
+       logical track 19.0; 4096 bytes decoded.
+ 20.0: 326 ms in 253440 bytes
+       32 records, 16 sectors; 1.96us clock (512kHz); 
+       logical track 20.0; 4096 bytes decoded.
+ 21.0: 326 ms in 255782 bytes
+       32 records, 16 sectors; 1.93us clock (519kHz); 
+       logical track 21.0; 4096 bytes decoded.
+ 22.0: 326 ms in 255207 bytes
+       32 records, 16 sectors; 1.97us clock (509kHz); 
+       logical track 22.0; 4096 bytes decoded.
+ 23.0: 326 ms in 255398 bytes
+       32 records, 16 sectors; 1.99us clock (503kHz); 
+       logical track 23.0; 4096 bytes decoded.
+ 24.0: 326 ms in 254464 bytes
+       32 records, 16 sectors; 1.97us clock (507kHz); 
+       logical track 24.0; 4096 bytes decoded.
+ 25.0: 327 ms in 254887 bytes
+       32 records, 16 sectors; 1.94us clock (514kHz); 
+       logical track 25.0; 4096 bytes decoded.
+ 26.0: 327 ms in 256295 bytes
+       32 records, 16 sectors; 1.96us clock (510kHz); 
+       logical track 26.0; 4096 bytes decoded.
+ 27.0: 327 ms in 253607 bytes
+       32 records, 16 sectors; 1.97us clock (509kHz); 
+       logical track 27.0; 4096 bytes decoded.
+ 28.0: 327 ms in 252647 bytes
+       32 records, 16 sectors; 2.01us clock (497kHz); 
+       logical track 28.0; 4096 bytes decoded.
+ 29.0: 327 ms in 252199 bytes
+       32 records, 16 sectors; 2.00us clock (500kHz); 
+       logical track 29.0; 4096 bytes decoded.
+ 30.0: 327 ms in 250980 bytes
+       32 records, 16 sectors; 1.99us clock (502kHz); 
+       logical track 30.0; 4096 bytes decoded.
+ 31.0: 327 ms in 252262 bytes
+       32 records, 16 sectors; 1.99us clock (502kHz); 
+       logical track 31.0; 4096 bytes decoded.
+ 32.0: 327 ms in 233984 bytes
+       30 records, 15 sectors; 1.96us clock (510kHz); 
+       logical track 32.0; 4096 bytes decoded.
+ 33.0: 326 ms in 250919 bytes
+       32 records, 16 sectors; 1.98us clock (506kHz); 
+       logical track 33.0; 4096 bytes decoded.
+ 34.0: 327 ms in 224419 bytes
+       32 records, 16 sectors; 1.97us clock (509kHz); 
+       logical track 34.0; 4096 bytes decoded.
+ 35.0: 326 ms in 264192 bytes
+       32 records, 16 sectors; 1.98us clock (504kHz); 
+       logical track 35.0; 4096 bytes decoded.
+ 36.0: 326 ms in 265188 bytes
+       32 records, 16 sectors; 1.96us clock (510kHz); 
+       logical track 36.0; 4096 bytes decoded.
+ 37.0: 326 ms in 265191 bytes
+       32 records, 16 sectors; 1.93us clock (519kHz); 
+       logical track 37.0; 4096 bytes decoded.
+ 38.0: 326 ms in 252928 bytes
+       32 records, 16 sectors; 1.97us clock (509kHz); 
+       logical track 38.0; 4096 bytes decoded.
+ 39.0: 327 ms in 252327 bytes
+       30 records, 15 sectors; 1.97us clock (509kHz); 
+       logical track 39.0; 4096 bytes decoded.
+ 40.0: 327 ms in 251687 bytes
+       32 records, 16 sectors; 1.98us clock (506kHz); 
+       logical track 40.0; 4096 bytes decoded.
+ 41.0: 327 ms in 253798 bytes
+       32 records, 16 sectors; 1.97us clock (507kHz); 
+       logical track 41.0; 4096 bytes decoded.
+ 42.0: 327 ms in 255488 bytes
+       32 records, 16 sectors; 1.98us clock (506kHz); 
+       logical track 42.0; 4096 bytes decoded.
+ 43.0: 327 ms in 256487 bytes
+       32 records, 16 sectors; 1.97us clock (507kHz); 
+       logical track 43.0; 4096 bytes decoded.
+ 44.0: 327 ms in 255527 bytes
+       32 records, 16 sectors; 1.94us clock (514kHz); 
+       logical track 44.0; 4096 bytes decoded.
+ 45.0: 327 ms in 251367 bytes
+       32 records, 16 sectors; 1.97us clock (507kHz); 
+       logical track 45.0; 4096 bytes decoded.
+ 46.0: 326 ms in 251621 bytes
+       32 records, 16 sectors; 1.99us clock (503kHz); 
+       logical track 46.0; 4096 bytes decoded.
+ 47.0: 326 ms in 251392 bytes
+       32 records, 16 sectors; 2.02us clock (495kHz); 
+       logical track 47.0; 4096 bytes decoded.
+ 48.0: 326 ms in 255488 bytes
+       32 records, 16 sectors; 1.95us clock (513kHz); 
+       logical track 48.0; 4096 bytes decoded.
+ 49.0: 326 ms in 256295 bytes
+       32 records, 16 sectors; 1.96us clock (510kHz); 
+       logical track 49.0; 4096 bytes decoded.
+ 50.0: 326 ms in 256806 bytes
+       32 records, 16 sectors; 1.98us clock (504kHz); 
+       logical track 50.0; 4096 bytes decoded.
+ 51.0: 326 ms in 254311 bytes
+       32 records, 16 sectors; 1.99us clock (503kHz); 
+       logical track 51.0; 4096 bytes decoded.
+ 52.0: 326 ms in 252324 bytes
+       32 records, 16 sectors; 2.02us clock (496kHz); 
+       logical track 52.0; 4096 bytes decoded.
+ 53.0: 327 ms in 253670 bytes
+       32 records, 16 sectors; 2.00us clock (500kHz); 
+       logical track 53.0; 4096 bytes decoded.
+ 54.0: 326 ms in 253223 bytes
+       32 records, 16 sectors; 1.99us clock (503kHz); 
+       logical track 54.0; 4096 bytes decoded.
+ 55.0: 327 ms in 253223 bytes
+       32 records, 16 sectors; 1.95us clock (513kHz); 
+       logical track 55.0; 4096 bytes decoded.
+ 56.0: 327 ms in 253926 bytes
+       30 records, 15 sectors; 1.98us clock (504kHz); 
+       logical track 56.0; 4096 bytes decoded.
+ 57.0: 327 ms in 251428 bytes
+       32 records, 16 sectors; 1.98us clock (504kHz); 
+       logical track 57.0; 4096 bytes decoded.
+ 58.0: 327 ms in 253092 bytes
+       32 records, 16 sectors; 2.00us clock (499kHz); 
+       logical track 58.0; 4096 bytes decoded.
+ 59.0: 327 ms in 252643 bytes
+       32 records, 16 sectors; 2.01us clock (497kHz); 
+       logical track 59.0; 4096 bytes decoded.
+ 60.0: 327 ms in 251239 bytes
+       32 records, 16 sectors; 1.99us clock (503kHz); 
+       logical track 60.0; 4096 bytes decoded.
+ 61.0: 328 ms in 225573 bytes
+       32 records, 16 sectors; 1.96us clock (512kHz); 
+       logical track 61.0; 4096 bytes decoded.
+ 62.0: 327 ms in 250404 bytes
+       32 records, 16 sectors; 1.99us clock (503kHz); 
+       logical track 62.0; 4096 bytes decoded.
+ 63.0: 327 ms in 250852 bytes
+       32 records, 16 sectors; 2.00us clock (499kHz); 
+       logical track 63.0; 4096 bytes decoded.
+ 64.0: 327 ms in 252583 bytes
+       32 records, 16 sectors; 2.02us clock (496kHz); 
+       logical track 64.0; 4096 bytes decoded.
+ 65.0: 326 ms in 251429 bytes
+       32 records, 16 sectors; 1.99us clock (502kHz); 
+       logical track 65.0; 4096 bytes decoded.
+ 66.0: 326 ms in 250791 bytes
+       32 records, 16 sectors; 1.97us clock (507kHz); 
+       logical track 66.0; 4096 bytes decoded.
+ 67.0: 326 ms in 251172 bytes
+       32 records, 16 sectors; 1.97us clock (509kHz); 
+       logical track 67.0; 4096 bytes decoded.
+ 68.0: 326 ms in 250406 bytes
+       32 records, 16 sectors; 1.97us clock (509kHz); 
+       logical track 68.0; 4096 bytes decoded.
+ 69.0: 326 ms in 255271 bytes
+       32 records, 16 sectors; 1.97us clock (509kHz); 
+       logical track 69.0; 4096 bytes decoded.
+ 70.0: 326 ms in 262631 bytes
+       32 records, 16 sectors; 1.98us clock (504kHz); 
+       logical track 70.0; 4096 bytes decoded.
+ 71.0: 326 ms in 262627 bytes
+       32 records, 16 sectors; 1.98us clock (506kHz); 
+       Failed to read sector 0 (bad checksum); 
+       Failed to read sector 2 (bad checksum); 
+       Failed to read sector 3 (bad checksum); 
+       Failed to read sector 4 (bad checksum); 
+       Failed to read sector 6 (bad checksum); 
+       5 retries remaining
+ 71.0: 326 ms in 262631 bytes
+       64 records, 32 sectors; 1.98us clock (506kHz); 
+       Failed to read sector 0 (bad checksum); 
+       Failed to read sector 2 (bad checksum); 
+       Failed to read sector 3 (bad checksum); 
+       Failed to read sector 4 (bad checksum); 
+       Failed to read sector 6 (bad checksum); 
+       4 retries remaining
+ 71.0: 326 ms in 262694 bytes
+       94 records, 47 sectors; 1.98us clock (506kHz); 
+       Failed to read sector 0 (bad checksum); 
+       Failed to read sector 2 (bad checksum); 
+       Failed to read sector 3 (bad checksum); 
+       Failed to read sector 4 (bad checksum); 
+       Failed to read sector 6 (bad checksum); 
+       3 retries remaining
+ 71.0: 326 ms in 262628 bytes
+       126 records, 63 sectors; 1.98us clock (506kHz); 
+       Failed to read sector 0 (bad checksum); 
+       Failed to read sector 2 (bad checksum); 
+       Failed to read sector 3 (bad checksum); 
+       Failed to read sector 4 (bad checksum); 
+       Failed to read sector 6 (bad checksum); 
+       2 retries remaining
+ 71.0: 327 ms in 262887 bytes
+       158 records, 79 sectors; 1.98us clock (506kHz); 
+       Failed to read sector 0 (bad checksum); 
+       Failed to read sector 2 (bad checksum); 
+       Failed to read sector 3 (bad checksum); 
+       Failed to read sector 4 (bad checksum); 
+       Failed to read sector 6 (bad checksum); 
+       1 retries remaining
+ 71.0: 327 ms in 262886 bytes
+       189 records, 94 sectors; 1.98us clock (506kHz); 
+       Failed to read sector 0 (bad checksum); 
+       Failed to read sector 2 (bad checksum); 
+       Failed to read sector 3 (bad checksum); 
+       Failed to read sector 4 (bad checksum); 
+       Failed to read sector 6 (bad checksum); 
+       giving up
+       logical track 71.0; 4096 bytes decoded.
+ 72.0: 327 ms in 263143 bytes
+       30 records, 15 sectors; 1.98us clock (504kHz); 
+       Failed to read sector 0 (bad checksum); 
+       Failed to read sector 1 (bad checksum); 
+       Failed to read sector 2 (bad checksum); 
+       Failed to read sector 3 (bad checksum); 
+       Failed to read sector 4 (present but no data found); 
+       Failed to read sector 5 (bad checksum); 
+       Failed to read sector 6 (bad checksum); 
+       Failed to read sector 7 (bad checksum); 
+       5 retries remaining
+ 72.0: 327 ms in 263463 bytes
+       62 records, 31 sectors; 1.98us clock (504kHz); 
+       Failed to read sector 0 (bad checksum); 
+       Failed to read sector 1 (bad checksum); 
+       Failed to read sector 2 (bad checksum); 
+       Failed to read sector 3 (bad checksum); 
+       Failed to read sector 5 (bad checksum); 
+       Failed to read sector 6 (bad checksum); 
+       4 retries remaining
+ 72.0: 327 ms in 263463 bytes
+       94 records, 47 sectors; 1.98us clock (504kHz); 
+       Failed to read sector 0 (bad checksum); 
+       Failed to read sector 1 (bad checksum); 
+       Failed to read sector 2 (bad checksum); 
+       Failed to read sector 3 (bad checksum); 
+       Failed to read sector 5 (bad checksum); 
+       Failed to read sector 6 (bad checksum); 
+       3 retries remaining
+ 72.0: 326 ms in 262695 bytes
+       126 records, 63 sectors; 1.98us clock (504kHz); 
+       Failed to read sector 0 (bad checksum); 
+       Failed to read sector 1 (bad checksum); 
+       Failed to read sector 2 (bad checksum); 
+       Failed to read sector 3 (bad checksum); 
+       Failed to read sector 5 (bad checksum); 
+       Failed to read sector 6 (bad checksum); 
+       2 retries remaining
+ 72.0: 326 ms in 262439 bytes
+       158 records, 79 sectors; 1.98us clock (504kHz); 
+       Failed to read sector 0 (bad checksum); 
+       Failed to read sector 1 (bad checksum); 
+       Failed to read sector 2 (bad checksum); 
+       Failed to read sector 3 (bad checksum); 
+       Failed to read sector 5 (bad checksum); 
+       Failed to read sector 6 (bad checksum); 
+       1 retries remaining
+ 72.0: 326 ms in 262823 bytes
+       190 records, 95 sectors; 1.98us clock (504kHz); 
+       Failed to read sector 0 (bad checksum); 
+       Failed to read sector 1 (bad checksum); 
+       Failed to read sector 2 (bad checksum); 
+       Failed to read sector 3 (bad checksum); 
+       Failed to read sector 5 (bad checksum); 
+       Failed to read sector 6 (bad checksum); 
+       giving up
+       logical track 72.0; 4096 bytes decoded.
+ 73.0: 326 ms in 263527 bytes
+       32 records, 16 sectors; 1.96us clock (510kHz); 
+       Failed to read sector 4 (bad checksum); 
+       Failed to read sector 7 (bad checksum); 
+       5 retries remaining
+ 73.0: 326 ms in 263652 bytes
+       64 records, 32 sectors; 1.96us clock (510kHz); 
+       Failed to read sector 7 (bad checksum); 
+       4 retries remaining
+ 73.0: 326 ms in 263652 bytes
+       96 records, 48 sectors; 1.96us clock (510kHz); 
+       Failed to read sector 7 (bad checksum); 
+       3 retries remaining
+ 73.0: 326 ms in 263655 bytes
+       128 records, 64 sectors; 1.96us clock (510kHz); 
+       Failed to read sector 7 (bad checksum); 
+       2 retries remaining
+ 73.0: 326 ms in 263719 bytes
+       160 records, 80 sectors; 1.96us clock (510kHz); 
+       Failed to read sector 7 (bad checksum); 
+       1 retries remaining
+ 73.0: 326 ms in 263847 bytes
+       192 records, 96 sectors; 1.96us clock (510kHz); 
+       Failed to read sector 7 (bad checksum); 
+       giving up
+       logical track 73.0; 4096 bytes decoded.
+ 74.0: 326 ms in 259751 bytes
+       30 records, 14 sectors; 1.97us clock (509kHz); 
+       Failed to read sector 0 (present but no data found); 
+       Failed to read sector 1 (bad checksum); 
+       Failed to read sector 2 (bad checksum); 
+       Failed to read sector 4 (bad checksum); 
+       Failed to read sector 5 (bad checksum); 
+       Failed to read sector 6 (bad checksum); 
+       Failed to read sector 7 (bad checksum); 
+       5 retries remaining
+ 74.0: 327 ms in 259879 bytes
+       59 records, 28 sectors; 1.97us clock (509kHz); 
+       Failed to read sector 0 (present but no data found); 
+       Failed to read sector 1 (bad checksum); 
+       Failed to read sector 2 (bad checksum); 
+       Failed to read sector 4 (bad checksum); 
+       Failed to read sector 5 (bad checksum); 
+       Failed to read sector 6 (bad checksum); 
+       Failed to read sector 7 (bad checksum); 
+       4 retries remaining
+ 74.0: 327 ms in 260007 bytes
+       89 records, 43 sectors; 1.97us clock (509kHz); 
+       Failed to read sector 0 (present but no data found); 
+       Failed to read sector 1 (bad checksum); 
+       Failed to read sector 2 (bad checksum); 
+       Failed to read sector 3 (bad checksum); 
+       Failed to read sector 4 (bad checksum); 
+       Failed to read sector 5 (bad checksum); 
+       Failed to read sector 6 (bad checksum); 
+       Failed to read sector 7 (bad checksum); 
+       3 retries remaining
+ 74.0: 327 ms in 260007 bytes
+       120 records, 58 sectors; 1.97us clock (509kHz); 
+       Failed to read sector 0 (present but no data found); 
+       Failed to read sector 1 (bad checksum); 
+       Failed to read sector 2 (bad checksum); 
+       Failed to read sector 3 (bad checksum); 
+       Failed to read sector 4 (bad checksum); 
+       Failed to read sector 5 (bad checksum); 
+       Failed to read sector 6 (bad checksum); 
+       Failed to read sector 7 (bad checksum); 
+       2 retries remaining
+ 74.0: 327 ms in 260071 bytes
+       150 records, 73 sectors; 1.97us clock (509kHz); 
+       Failed to read sector 0 (present but no data found); 
+       Failed to read sector 1 (bad checksum); 
+       Failed to read sector 2 (bad checksum); 
+       Failed to read sector 3 (bad checksum); 
+       Failed to read sector 4 (bad checksum); 
+       Failed to read sector 5 (bad checksum); 
+       Failed to read sector 6 (bad checksum); 
+       Failed to read sector 7 (bad checksum); 
+       1 retries remaining
+ 74.0: 327 ms in 260071 bytes
+       180 records, 88 sectors; 1.97us clock (509kHz); 
+       Failed to read sector 0 (present but no data found); 
+       Failed to read sector 1 (bad checksum); 
+       Failed to read sector 2 (bad checksum); 
+       Failed to read sector 3 (bad checksum); 
+       Failed to read sector 4 (bad checksum); 
+       Failed to read sector 5 (bad checksum); 
+       Failed to read sector 6 (bad checksum); 
+       Failed to read sector 7 (bad checksum); 
+       giving up
+       logical track 74.0; 3584 bytes decoded.
+ 75.0: 328 ms in 204134 bytes
+       30 records, 15 sectors; 1.95us clock (513kHz); 
+       Failed to read sector 1 (bad checksum); 
+       Failed to read sector 4 (bad checksum); 
+       5 retries remaining
+ 75.0: 328 ms in 204391 bytes
+       60 records, 30 sectors; 1.95us clock (513kHz); 
+       Failed to read sector 1 (bad checksum); 
+       4 retries remaining
+ 75.0: 328 ms in 204454 bytes
+       92 records, 46 sectors; 1.95us clock (513kHz); 
+       Failed to read sector 1 (bad checksum); 
+       3 retries remaining
+ 75.0: 327 ms in 203943 bytes
+       124 records, 62 sectors; 1.95us clock (513kHz); 
+       Failed to read sector 1 (bad checksum); 
+       2 retries remaining
+ 75.0: 327 ms in 204007 bytes
+       156 records, 78 sectors; 1.95us clock (513kHz); 
+       Failed to read sector 1 (bad checksum); 
+       1 retries remaining
+ 75.0: 328 ms in 203427 bytes
+       188 records, 94 sectors; 1.95us clock (513kHz); 
+       Failed to read sector 1 (bad checksum); 
+       giving up
+       logical track 75.0; 4096 bytes decoded.
+ 76.0: 328 ms in 196454 bytes
+       30 records, 14 sectors; 1.98us clock (506kHz); 
+       Failed to read sector 0 (bad checksum); 
+       Failed to read sector 1 (bad checksum); 
+       Failed to read sector 2 (present but no data found); 
+       5 retries remaining
+ 76.0: 328 ms in 196519 bytes
+       59 records, 28 sectors; 1.98us clock (506kHz); 
+       Failed to read sector 0 (bad checksum); 
+       Failed to read sector 1 (bad checksum); 
+       Failed to read sector 2 (present but no data found); 
+       4 retries remaining
+ 76.0: 328 ms in 196519 bytes
+       89 records, 43 sectors; 1.98us clock (506kHz); 
+       Failed to read sector 0 (bad checksum); 
+       Failed to read sector 1 (bad checksum); 
+       Failed to read sector 3 (present but no data found); 
+       3 retries remaining
+ 76.0: 328 ms in 196582 bytes
+       119 records, 57 sectors; 1.98us clock (506kHz); 
+       Failed to read sector 0 (bad checksum); 
+       Failed to read sector 1 (bad checksum); 
+       Failed to read sector 3 (present but no data found); 
+       2 retries remaining
+ 76.0: 328 ms in 196259 bytes
+       148 records, 71 sectors; 1.98us clock (506kHz); 
+       Failed to read sector 0 (bad checksum); 
+       Failed to read sector 1 (bad checksum); 
+       Failed to read sector 3 (present but no data found); 
+       1 retries remaining
+ 76.0: 328 ms in 196608 bytes
+       179 records, 86 sectors; 1.98us clock (506kHz); 
+       Failed to read sector 0 (bad checksum); 
+       Failed to read sector 1 (bad checksum); 
+       Failed to read sector 3 (present but no data found); 
+       giving up
+       logical track 76.0; 3584 bytes decoded.
+ 77.0: 327 ms in 233444 bytes
+       31 records, 15 sectors; 1.95us clock (513kHz); 
+       Failed to read sector 0 (bad checksum); 
+       Failed to read sector 1 (bad checksum); 
+       Failed to read sector 3 (bad checksum); 
+       Failed to read sector 5 (bad checksum); 
+       Failed to read sector 6 (bad checksum); 
+       Failed to read sector 7 (bad checksum); 
+       5 retries remaining
+ 77.0: 327 ms in 233895 bytes
+       62 records, 30 sectors; 1.95us clock (513kHz); 
+       Failed to read sector 0 (bad checksum); 
+       Failed to read sector 1 (bad checksum); 
+       Failed to read sector 3 (bad checksum); 
+       Failed to read sector 5 (bad checksum); 
+       Failed to read sector 6 (bad checksum); 
+       Failed to read sector 7 (bad checksum); 
+       4 retries remaining
+ 77.0: 327 ms in 233767 bytes
+       94 records, 46 sectors; 1.95us clock (513kHz); 
+       Failed to read sector 0 (bad checksum); 
+       Failed to read sector 1 (bad checksum); 
+       Failed to read sector 3 (bad checksum); 
+       Failed to read sector 5 (bad checksum); 
+       Failed to read sector 6 (bad checksum); 
+       3 retries remaining
+ 77.0: 327 ms in 233702 bytes
+       123 records, 60 sectors; 1.95us clock (513kHz); 
+       Failed to read sector 0 (bad checksum); 
+       Failed to read sector 1 (bad checksum); 
+       Failed to read sector 3 (bad checksum); 
+       Failed to read sector 5 (bad checksum); 
+       Failed to read sector 6 (bad checksum); 
+       2 retries remaining
+ 77.0: 327 ms in 233958 bytes
+       155 records, 76 sectors; 1.95us clock (513kHz); 
+       Failed to read sector 0 (bad checksum); 
+       Failed to read sector 1 (bad checksum); 
+       Failed to read sector 3 (bad checksum); 
+       Failed to read sector 5 (bad checksum); 
+       Failed to read sector 6 (bad checksum); 
+       1 retries remaining
+ 77.0: 327 ms in 233828 bytes
+       187 records, 92 sectors; 1.95us clock (513kHz); 
+       Failed to read sector 0 (bad checksum); 
+       Failed to read sector 1 (bad checksum); 
+       Failed to read sector 3 (bad checksum); 
+       Failed to read sector 5 (bad checksum); 
+       Failed to read sector 6 (bad checksum); 
+       giving up
+       logical track 77.0; 4096 bytes decoded.
+writing visualisation
+Autodetecting output geometry
+H.SS Tracks --->
+0. 0 .X.....................................................................BB.?.BB
+0. 1 .X......................................................................B.BBBB
+0. 2 BX.....................................................................BB.B...
+0. 3 .X.....................................................................BB.B.?B
+0. 4 .X.....................................................................B..B...
+0. 5 .X............BB........................................................B.B..B
+0. 6 .X...........X.........................................................BB.B..B
+0. 7 .X.......................................................................BB...
+Good sectors: 585/624 (93%)
+Missing sectors: 9/624 (1%)
+Bad sectors: 30/624 (4%)
+writing 78 tracks, 1 heads, 8 sectors, 512 bytes per sector, 312 kB total
+Directory name            : MIKAEL-5
+Object file index pointer : 150 SI: 0x1 (indexed)
+User file index pointer   : 152 SI: 0x1 (indexed)
+Bit file pointer          : 77 SI: 0x0 (contiguous)
+No. of unreserved pages   : 1
+Files:
+  0   0: C       10 pages     18578 bytes 1983-04-01 13:49:46 (DNF)USERS-GUIDE-MJ:TEXT
+  0   1: I       24 pages     48077 bytes 1985-10-21 20:47:45 (DNF)STAR-TREKK-ND:SYMB
+  0   2: C        9 pages     17458 bytes 1983-08-31 20:45:39 (DNF)REAKTOR-CC:SYMB
+  0   4: C       10 pages     19025 bytes 1982-06-09 09:34:36 (DNF)LOST-DUTCHMAN-CC:SYMB
+  0   5: C        6 pages     11536 bytes 1984-03-18 17:19:17 (DNF)DUKEDOM-CC:SYMB
+  0   6: C        7 pages     13636 bytes 1982-06-09 09:36:36 (DNF)DUKEDOM-CC:DATA
+  0   7: I       12 pages     23254 bytes 1982-06-09 11:35:01 (DNF)NODAL-ND:PROG
+  0   8: C       15 pages     30085 bytes 1982-06-09 09:31:31 (DNF)STREETS-OF-CC:SYMB
+  0   9: C        4 pages      6947 bytes 1984-10-11 15:10:13 (DNF)STAR-LANES-CC:SYMB
+  0  10: I       35 pages     71223 bytes 1983-11-20 14:30:48 (DNF)DELFI-3-EAO:SYMB
+  0  11: I        6 pages     10482 bytes 1983-03-04 16:15:19 (DNF)TANK-BATTLE-ERIC:SYMB
+  0  14: C        3 pages      5973 bytes 1982-06-09 13:15:11 (DNF)CUBE-MD:SYMB
+212 2757: A ! -861121595 pages -1009462568 bytes 1971-05-00 20:19:03 (????)DOUBLE INTEGER L:OCAT
+197 2637: A ! -1395567295 pages 1154667693 bytes 2001-13-06 28:61:04 (????)L,ENERGY,STENEG,:TORP
+212 3540: T ! 1403802565 pages 1321620437 bytes 2002-11-07 20:11:05 (????)BAS,TOTENE,BASES:,
+ 
+212 3417: P ! -1395144370 pages 1403834797 bytes 1966-05-06 28:21:19 (????)G,TRNFLG,COMFLG,:
+  
+195 972: S ! 608947401 pages 1313321513 bytes 1990-02-16 10:02:32 (????)
+     $KLING1(9,:2),K
+210 3269: I ! 1120260648 pages -1297503021 bytes 1990-00-18 04:05:13 (????)ATE(8,10,10),HIT:VAL(
+160 2720: P ! 1094889411 pages 1154469037 bytes 1971-09-00 29:11:09 (????)DOCKED(2)
+     :  EX
+172 3213: Pt! -2012855010 pages 1655006119 bytes 1969-07-25 24:24:33 (????)ADRW,QUADCL,SECT:RW,S
+ 32 2794: Pt! 631728107 pages -1487525397 bytes 1970-01-08 05:00:18 (????)d-Vfg:g i"
+189 2637: A ! 178299040 pages -1600085855 bytes 1993-02-28 10:38:13 (????)IIL=MAX0(SECTRW-:1,1)
+160 3232: P ! -1396004562 pages 1321545268 bytes 2002-11-10 02:35:09 (????),IIH
+       DO :179 
+160 1184: I ! 1271219240 pages -1297511157 bytes 1997-05-02 12:63:03 (????) 179
+       CDO:L(1)
+207 1490: T ! -868137170 pages -976146895 bytes 1990-00-20 12:39:06 (????) ENERGY=STENEG
+:    
+160 2208: Pt! -735170514 pages -1449114558 bytes 1968-14-20 18:59:12 (????) 187
+       DO :175 
+141 3338: T ! -985388879 pages -1450374495 bytes 1994-06-20 27:55:18 (????)DOL(2)=GREEN(2):
+   
+ 10 3249: At! 1120260648 pages -1314288373 bytes 1992-06-30 20:05:13 (????)CDOL(2)=RED(2)
+:    
+141 3338: T ! -967487805 pages -724971697 bytes 1998-12-06 10:02:32 (????) CDOL(2)=AMBER(2:)
+1
+160 1440: Tt! -1600085819 pages 1313115403 bytes 1990-02-16 10:02:32 (????)=0
+       IF (X:.LT.
+212 1231: Pt! -1600105643 pages 1121111894 bytes 1990-02-16 10:02:32 (????)FIGURE MAXIMUM A:CCEP
+169 1165: Pt! 1095649101 pages -917590974 bytes 1967-15-02 29:10:32 (????)IDTH(DELTAX,DELT:AY,A

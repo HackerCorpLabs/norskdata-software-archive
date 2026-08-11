@@ -1,0 +1,161 @@
+id: nd-10079-m07-d1-0789cdf1
+volumeName: 10079M07-XX-1D
+md5: 0789cdf1ed3133ea4341ab82ee7391be
+product:
+  id: ND-10079
+  version: M07
+  diskNumber: 1
+  language: XX
+image:
+  sizeBytes: 1310720
+  format: raw
+  controller: floppy
+  totalPages: 640
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 385
+  files:
+    - name: INST-WP-100-M04:PROG
+      type: PROG
+      pages: 66
+      bytes: 195144
+      userName: FLOPPY-USER
+      dateCreated: 2501824762
+      lastDateRead: null
+      lastDateWritten: 2501824763
+      dateCreatedStr: 1987-04-15 13:03:58
+      lastDateReadStr: null
+      lastDateWrittenStr: 1987-04-15 13:03:59
+      bpunValid: null
+    - name: DDBTABLES-E04:VTM
+      type: VTM
+      pages: 11
+      bytes: 20756
+      userName: FLOPPY-USER
+      dateCreated: 2382628963
+      lastDateRead: 2455804743
+      lastDateWritten: 2446641497
+      dateCreatedStr: 1985-08-02 00:33:35
+      lastDateReadStr: 1986-09-16 09:45:07
+      lastDateWrittenStr: 1986-07-10 12:37:25
+      bpunValid: null
+    - name: WP-PRINTERS-L03:SYMB
+      type: SYMB
+      pages: 4
+      bytes: 6466
+      userName: FLOPPY-USER
+      dateCreated: 2501824815
+      lastDateRead: null
+      lastDateWritten: 2501824816
+      dateCreatedStr: 1987-04-15 13:04:47
+      lastDateReadStr: null
+      lastDateWrittenStr: 1987-04-15 13:04:48
+      bpunValid: null
+    - name: WP-EDITOR-M07:PROG
+      type: PROG
+      pages: 66
+      bytes: 135168
+      userName: FLOPPY-USER
+      dateCreated: 2503020890
+      lastDateRead: 2503021620
+      lastDateWritten: 2503020890
+      dateCreatedStr: 1987-04-24 17:05:26
+      lastDateReadStr: 1987-04-24 17:16:52
+      lastDateWrittenStr: 1987-04-24 17:05:26
+      bpunValid: null
+    - name: WP-UTIL-M07:PROG
+      type: PROG
+      pages: 53
+      bytes: 135168
+      userName: FLOPPY-USER
+      dateCreated: 2503020965
+      lastDateRead: 2503021804
+      lastDateWritten: 2503020965
+      dateCreatedStr: 1987-04-24 17:06:37
+      lastDateReadStr: 1987-04-24 17:19:44
+      lastDateWrittenStr: 1987-04-24 17:06:37
+      bpunValid: null
+    - name: WP-CMD-M07:PROG
+      type: PROG
+      pages: 67
+      bytes: 137216
+      userName: FLOPPY-USER
+      dateCreated: 2503021033
+      lastDateRead: 2503021875
+      lastDateWritten: 2503021034
+      dateCreatedStr: 1987-04-24 17:07:41
+      lastDateReadStr: 1987-04-24 17:20:51
+      lastDateWrittenStr: 1987-04-24 17:07:42
+      bpunValid: null
+    - name: TF-LIB-COMPRESS:PROG
+      type: PROG
+      pages: 13
+      bytes: 26624
+      userName: FLOPPY-USER
+      dateCreated: 2450446353
+      lastDateRead: 2450453356
+      lastDateWritten: 2450447790
+      dateCreatedStr: 1986-08-07 13:32:17
+      lastDateReadStr: 1986-08-07 15:13:44
+      lastDateWrittenStr: 1986-08-07 13:54:46
+      bpunValid: null
+    - name: WP-PRM-M07:PROG
+      type: PROG
+      pages: 34
+      bytes: 145408
+      userName: FLOPPY-USER
+      dateCreated: 2503021107
+      lastDateRead: 2503021108
+      lastDateWritten: 2503021108
+      dateCreatedStr: 1987-04-24 17:08:51
+      lastDateReadStr: 1987-04-24 17:08:52
+      lastDateWrittenStr: 1987-04-24 17:08:52
+      bpunValid: null
+    - name: WP-SETUP-M03:XCOM
+      type: XCOM
+      pages: 13
+      bytes: 24151
+      userName: FLOPPY-USER
+      dateCreated: 2450446534
+      lastDateRead: 2450452830
+      lastDateWritten: 2450446536
+      dateCreatedStr: 1986-08-07 13:35:06
+      lastDateReadStr: 1986-08-07 15:05:30
+      lastDateWrittenStr: 1986-08-07 13:35:08
+      bpunValid: null
+    - name: WP-HYPH-M07:PROG
+      type: PROG
+      pages: 47
+      bytes: 135168
+      userName: FLOPPY-USER
+      dateCreated: 2503021217
+      lastDateRead: 2503021217
+      lastDateWritten: 2503021217
+      dateCreatedStr: 1987-04-24 17:10:33
+      lastDateReadStr: 1987-04-24 17:10:33
+      lastDateWrittenStr: 1987-04-24 17:10:33
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 200/ND-disk-00236.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:41:52.156Z
+imagingLogs:
+  - ND-disk-00236.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10079-m07-d1-0789cdf1
+  syncStatus: pending

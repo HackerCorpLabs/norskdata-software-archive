@@ -1,0 +1,257 @@
+id: nd-211249-c13-d1-bcc6e60e
+volumeName: 211249C13-XX-01D
+md5: bcc6e60ed620b5cf12d2e1e34f7e4ae1
+product:
+  id: ND-211249
+  version: C13
+  diskNumber: 1
+  language: XX
+image:
+  sizeBytes: 1310720
+  format: raw
+  controller: floppy
+  totalPages: 640
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 604
+  files:
+    - name: INSTALL-START:PROG
+      type: PROG
+      pages: 46
+      bytes: 156710
+      userName: FLOPPY-USER
+      dateCreated: 2630154284
+      lastDateRead: 2646126244
+      lastDateWritten: 2638665689
+      dateCreatedStr: 1989-03-02 15:32:44
+      lastDateReadStr: 1989-06-28 10:58:36
+      lastDateWrittenStr: 1989-05-03 13:31:25
+      bpunValid: null
+    - name: START-IN-S5-C13:PROG
+      type: PROG
+      pages: 65
+      bytes: 194598
+      userName: FLOPPY-USER
+      dateCreated: 2629210783
+      lastDateRead: 2646126262
+      lastDateWritten: 2631568804
+      dateCreatedStr: 1989-02-27 09:10:31
+      lastDateReadStr: 1989-06-28 10:58:54
+      lastDateWrittenStr: 1989-03-13 08:54:36
+      bpunValid: null
+    - name: START-SR-A-C13:NRF
+      type: NRF
+      pages: 114
+      bytes: 231587
+      userName: FLOPPY-USER
+      dateCreated: 2576288410
+      lastDateRead: 2646126728
+      lastDateWritten: 2639562460
+      dateCreatedStr: 1988-06-07 16:42:26
+      lastDateReadStr: 1989-06-28 11:02:08
+      lastDateWrittenStr: 1989-05-10 08:27:28
+      bpunValid: null
+    - name: START-SIIF-C13:NRF
+      type: NRF
+      pages: 111
+      bytes: 226040
+      userName: FLOPPY-USER
+      dateCreated: 2525666223
+      lastDateRead: 2639562462
+      lastDateWritten: 2639562462
+      dateCreatedStr: 1987-10-05 09:46:47
+      lastDateReadStr: 1989-05-10 08:27:30
+      lastDateWrittenStr: 1989-05-10 08:27:30
+      bpunValid: null
+    - name: UNISTART-DRL-EN:SYMB
+      type: SYMB
+      pages: 27
+      bytes: 53985
+      userName: FLOPPY-USER
+      dateCreated: 2509679170
+      lastDateRead: 2638665454
+      lastDateWritten: 2638665454
+      dateCreatedStr: 1987-06-11 10:41:02
+      lastDateReadStr: 1989-05-03 13:27:46
+      lastDateWrittenStr: 1989-05-03 13:27:46
+      bpunValid: null
+    - name: START-MAIN-C13:NRF
+      type: NRF
+      pages: 89
+      bytes: 180729
+      userName: FLOPPY-USER
+      dateCreated: 2529597635
+      lastDateRead: 2646126682
+      lastDateWritten: 2639562397
+      dateCreatedStr: 1987-11-03 09:35:03
+      lastDateReadStr: 1989-06-28 11:01:26
+      lastDateWrittenStr: 1989-05-10 08:26:29
+      bpunValid: null
+    - name: START-LIB-C13:NRF
+      type: NRF
+      pages: 67
+      bytes: 136057
+      userName: FLOPPY-USER
+      dateCreated: 2529597642
+      lastDateRead: 2646126709
+      lastDateWritten: 2638666693
+      dateCreatedStr: 1987-11-03 09:35:10
+      lastDateReadStr: 1989-06-28 11:01:53
+      lastDateWrittenStr: 1989-05-03 13:47:05
+      bpunValid: null
+    - name: START-DUMMY-C13:NRF
+      type: NRF
+      pages: 2
+      bytes: 2253
+      userName: FLOPPY-USER
+      dateCreated: 2529597650
+      lastDateRead: 2646126754
+      lastDateWritten: 2638665459
+      dateCreatedStr: 1987-11-03 09:35:18
+      lastDateReadStr: 1989-06-28 11:02:34
+      lastDateWrittenStr: 1989-05-03 13:27:51
+      bpunValid: null
+    - name: UNISTART-DDC-EN:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 3040
+      userName: FLOPPY-USER
+      dateCreated: 2509684290
+      lastDateRead: 2638665460
+      lastDateWritten: 2638665460
+      dateCreatedStr: 1987-06-11 11:57:02
+      lastDateReadStr: 1989-05-03 13:27:52
+      lastDateWrittenStr: 1989-05-03 13:27:52
+      bpunValid: null
+    - name: UNISTART-DDC-SW:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 3040
+      userName: FLOPPY-USER
+      dateCreated: 2590811027
+      lastDateRead: 2646126769
+      lastDateWritten: 2638665462
+      dateCreatedStr: 1988-09-22 10:14:19
+      lastDateReadStr: 1989-06-28 11:02:49
+      lastDateWrittenStr: 1989-05-03 13:27:54
+      bpunValid: null
+    - name: UNISTART-DRL-NO:SYMB
+      type: SYMB
+      pages: 23
+      bytes: 46024
+      userName: FLOPPY-USER
+      dateCreated: 2562363731
+      lastDateRead: 2638922219
+      lastDateWritten: 2638665464
+      dateCreatedStr: 1988-02-29 09:05:19
+      lastDateReadStr: 1989-05-05 12:07:43
+      lastDateWrittenStr: 1989-05-03 13:27:56
+      bpunValid: null
+    - name: UNISTART-DDC-NO:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 3040
+      userName: FLOPPY-USER
+      dateCreated: 2562363780
+      lastDateRead: 2638922225
+      lastDateWritten: 2638665465
+      dateCreatedStr: 1988-02-29 09:06:04
+      lastDateReadStr: 1989-05-05 12:07:49
+      lastDateWrittenStr: 1989-05-03 13:27:57
+      bpunValid: null
+    - name: START-TEXT-C13:DATA
+      type: DATA
+      pages: 8
+      bytes: 15931
+      userName: FLOPPY-USER
+      dateCreated: 2570255780
+      lastDateRead: 2646126756
+      lastDateWritten: 2596703744
+      dateCreatedStr: 1988-04-25 15:54:36
+      lastDateReadStr: 1989-06-28 11:02:36
+      lastDateWrittenStr: 1988-11-03 08:56:00
+      bpunValid: null
+    - name: START-L-SF5H-C13:MODE
+      type: MODE
+      pages: 1
+      bytes: 1265
+      userName: FLOPPY-USER
+      dateCreated: 2595785822
+      lastDateRead: 2638915200
+      lastDateWritten: 2638915200
+      dateCreatedStr: 1988-10-28 08:49:30
+      lastDateReadStr: 1989-05-05 10:26:00
+      lastDateWrittenStr: 1989-05-05 10:26:00
+      bpunValid: null
+    - name: START-L-SR5T-C13:MODE
+      type: MODE
+      pages: 1
+      bytes: 534
+      userName: FLOPPY-USER
+      dateCreated: 2595786198
+      lastDateRead: 2646129501
+      lastDateWritten: 2638915422
+      dateCreatedStr: 1988-10-28 08:55:22
+      lastDateReadStr: 1989-06-28 11:45:29
+      lastDateWrittenStr: 1989-05-05 10:29:30
+      bpunValid: null
+    - name: START-D-S5-C13:MODE
+      type: MODE
+      pages: 1
+      bytes: 471
+      userName: FLOPPY-USER
+      dateCreated: 2595786398
+      lastDateRead: 2638665473
+      lastDateWritten: 2638665473
+      dateCreatedStr: 1988-10-28 08:58:30
+      lastDateReadStr: 1989-05-03 13:28:01
+      lastDateWrittenStr: 1989-05-03 13:28:01
+      bpunValid: null
+    - name: START-L-SR5H-C13:MODE
+      type: MODE
+      pages: 1
+      bytes: 1309
+      userName: FLOPPY-USER
+      dateCreated: 2595795542
+      lastDateRead: 2638915265
+      lastDateWritten: 2638915265
+      dateCreatedStr: 1988-10-28 11:09:22
+      lastDateReadStr: 1989-05-05 10:27:01
+      lastDateWrittenStr: 1989-05-05 10:27:01
+      bpunValid: null
+    - name: UNISTART-DRL-SW:SYMB
+      type: SYMB
+      pages: 23
+      bytes: 45689
+      userName: FLOPPY-USER
+      dateCreated: 2638666700
+      lastDateRead: 2646126761
+      lastDateWritten: 2638666702
+      dateCreatedStr: 1989-05-03 13:47:12
+      lastDateReadStr: 1989-06-28 11:02:41
+      lastDateWrittenStr: 1989-05-03 13:47:14
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 000/ND-disk-00091.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T14:54:29.622Z
+imagingLogs:
+  - ND-disk-00091.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-211249-c13-d1-bcc6e60e
+  syncStatus: pending

@@ -1,0 +1,135 @@
+id: nd-10116-a-d1-567cf062
+volumeName: ND-10116A
+md5: 567cf062a6216370644767aabd5693ef
+product:
+  id: ND-10116
+  version: A
+image:
+  sizeBytes: 319488
+  format: raw
+  controller: floppy
+  totalPages: 156
+  pageSize: 2048
+  bootFormat: flomon
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 80
+  files:
+    - name: 1158-SIMPL-2219A:BPUN
+      type: BPUN
+      pages: 1
+      bytes: 1102
+      userName: FLOPPY-USER
+      dateCreated: 1969022389
+      lastDateRead: 1969022702
+      lastDateWritten: 1969022390
+      dateCreatedStr: 1979-05-14 14:22:53
+      lastDateReadStr: 1979-05-14 14:27:46
+      lastDateWrittenStr: 1979-05-14 14:22:54
+      bpunValid: true
+    - name: TESTMONO-1534A:BPUN
+      type: BPUN
+      pages: 8
+      bytes: 15712
+      userName: FLOPPY-USER
+      dateCreated: 1969022473
+      lastDateRead: 1969022737
+      lastDateWritten: 1969022474
+      dateCreatedStr: 1979-05-14 14:24:09
+      lastDateReadStr: 1979-05-14 14:28:17
+      lastDateWrittenStr: 1979-05-14 14:24:10
+      bpunValid: true
+    - name: ES-PICT-2216A:BPUN
+      type: BPUN
+      pages: 2
+      bytes: 2691
+      userName: FLOPPY-USER
+      dateCreated: 1903997560
+      lastDateRead: null
+      lastDateWritten: 1903997561
+      dateCreatedStr: 1978-05-30 11:09:56
+      lastDateReadStr: null
+      lastDateWrittenStr: 1978-05-30 11:09:57
+      bpunValid: true
+    - name: TNCT-2039A:BPUN
+      type: BPUN
+      pages: 11
+      bytes: 21237
+      userName: FLOPPY-USER
+      dateCreated: 1969022568
+      lastDateRead: 1969022790
+      lastDateWritten: 1969022569
+      dateCreatedStr: 1979-05-14 14:25:40
+      lastDateReadStr: 1979-05-14 14:29:06
+      lastDateWrittenStr: 1979-05-14 14:25:41
+      bpunValid: true
+    - name: S1172-HAR-2235B:BPUN
+      type: BPUN
+      pages: 13
+      bytes: 25142
+      userName: FLOPPY-USER
+      dateCreated: 1932177738
+      lastDateRead: null
+      lastDateWritten: 1952375552
+      dateCreatedStr: 1978-12-21 11:05:10
+      lastDateReadStr: null
+      lastDateWrittenStr: 1979-01-15 14:12:00
+      bpunValid: true
+    - name: INTER-T-2233A:BPUN
+      type: BPUN
+      pages: 24
+      bytes: 47670
+      userName: FLOPPY-USER
+      dateCreated: 2281719557
+      lastDateRead: 2281719849
+      lastDateWritten: 2281719687
+      dateCreatedStr: null
+      lastDateReadStr: null
+      lastDateWrittenStr: null
+      bpunValid: false
+    - name: DS1172-2282B:BPUN
+      type: BPUN
+      pages: 9
+      bytes: 15120
+      userName: FLOPPY-USER
+      dateCreated: 1952373292
+      lastDateRead: 1963250809
+      lastDateWritten: 1963250282
+      dateCreatedStr: 1979-01-15 13:40:44
+      lastDateReadStr: 1979-04-02 13:17:57
+      lastDateWrittenStr: 1979-04-02 13:09:42
+      bpunValid: true
+    - name: PROCES-PAN-1865A:BPUN
+      type: BPUN
+      pages: 3
+      bytes: 5101
+      userName: FLOPPY-USER
+      dateCreated: 1787490993
+      lastDateRead: null
+      lastDateWritten: 1787490994
+      dateCreatedStr: 1976-10-05 15:10:49
+      lastDateReadStr: null
+      lastDateWrittenStr: 1976-10-05 15:10:50
+      bpunValid: true
+provenance:
+  contributor: gandalf
+  originalPath: 500/ND-disk-00500.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:50:36.749Z
+imagingLogs:
+  - ND-disk-00500.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10116-a-d1-567cf062
+  syncStatus: pending

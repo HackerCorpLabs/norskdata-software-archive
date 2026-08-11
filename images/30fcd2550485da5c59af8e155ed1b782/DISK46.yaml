@@ -1,0 +1,110 @@
+id: nd-10004-q-d2-30fcd255
+volumeName: ND-10004Q-PART2
+md5: 30fcd2550485da5c59af8e155ed1b782
+product:
+  id: ND-10004
+  version: Q
+  diskNumber: 2
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: binary
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 125
+  files:
+    - name: N50MON:BPUN
+      type: BPUN
+      pages: 29
+      bytes: 59068
+      userName: FLOPPY-USER
+      dateCreated: 2251082921
+      lastDateRead: 2281704604
+      lastDateWritten: 2253314591
+      dateCreatedStr: 1983-08-22 12:50:41
+      lastDateReadStr: null
+      lastDateWrittenStr: 1983-09-07 13:40:31
+      bpunValid: true
+    - name: N50MON-1:BPUN
+      type: BPUN
+      pages: 6
+      bytes: 10632
+      userName: FLOPPY-USER
+      dateCreated: 2253314269
+      lastDateRead: 2281704620
+      lastDateWritten: 2253314270
+      dateCreatedStr: 1983-09-07 13:35:29
+      lastDateReadStr: null
+      lastDateWrittenStr: 1983-09-07 13:35:30
+      bpunValid: true
+    - name: N50MON-2:BPUN
+      type: BPUN
+      pages: 24
+      bytes: 48828
+      userName: FLOPPY-USER
+      dateCreated: 2251083018
+      lastDateRead: 2281704627
+      lastDateWritten: 2253314298
+      dateCreatedStr: 1983-08-22 12:52:10
+      lastDateReadStr: null
+      lastDateWrittenStr: 1983-09-07 13:35:58
+      bpunValid: true
+    - name: MINI-N50MON:BPUN
+      type: BPUN
+      pages: 29
+      bytes: 50868
+      userName: FLOPPY-USER
+      dateCreated: 2251084271
+      lastDateRead: 2281704645
+      lastDateWritten: 2253314643
+      dateCreatedStr: 1983-08-22 13:07:47
+      lastDateReadStr: null
+      lastDateWrittenStr: 1983-09-07 13:41:19
+      bpunValid: true
+    - name: MINI-N50MON-1:BPUN
+      type: BPUN
+      pages: 6
+      bytes: 10632
+      userName: FLOPPY-USER
+      dateCreated: 2251084340
+      lastDateRead: 2281704662
+      lastDateWritten: 2253314696
+      dateCreatedStr: 1983-08-22 13:08:52
+      lastDateReadStr: null
+      lastDateWrittenStr: 1983-09-07 13:42:08
+      bpunValid: true
+    - name: MINI-N50MON-2:BPUN
+      type: BPUN
+      pages: 24
+      bytes: 40628
+      userName: FLOPPY-USER
+      dateCreated: 2251084368
+      lastDateRead: 2281704669
+      lastDateWritten: 2253314711
+      dateCreatedStr: 1983-08-22 13:09:16
+      lastDateReadStr: null
+      lastDateWrittenStr: 1983-09-07 13:42:23
+      bpunValid: true
+provenance:
+  contributor: www.datormuseum.se
+  originalPath: OK/DISK46.IMG
+  dateImaged: 2022-08-15
+  importedAt: 2026-08-11T17:07:04.445Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10004-q-d2-30fcd255
+  syncStatus: pending

@@ -11,6 +11,7 @@ image:
   totalPages: 154
   pageSize: 2048
   bootFormat: bpun
+filesystem: ndfs
 ndfs:
   users:
     - name: SYSTEM

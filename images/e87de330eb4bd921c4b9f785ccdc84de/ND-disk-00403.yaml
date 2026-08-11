@@ -1,0 +1,52 @@
+id: nd-10176-a-d2-e87de330
+volumeName: ND-10176A-PART2
+md5: e87de330eb4bd921c4b9f785ccdc84de
+product:
+  id: ND-10176
+  version: A
+  diskNumber: 2
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 52
+  files:
+    - name: LIST-COBOL-FILE:BPUN
+      type: BPUN
+      pages: 50
+      bytes: 101929
+      userName: FLOPPY-USER
+      dateCreated: 2096033271
+      lastDateRead: 2281704912
+      lastDateWritten: 2096033281
+      dateCreatedStr: 1981-03-23 14:55:55
+      lastDateReadStr: null
+      lastDateWrittenStr: 1981-03-23 14:56:01
+      bpunValid: true
+provenance:
+  contributor: gandalf
+  originalPath: 400/ND-disk-00403.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:49:25.955Z
+imagingLogs:
+  - ND-disk-00403.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10176-a-d2-e87de330
+  syncStatus: pending

@@ -1,0 +1,72 @@
+id: os-n-100-1002-i-98e5fb51
+volumeName: N-100-1002-IV
+md5: 98e5fb51871592dd85cf1172f7d0d21b
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: SYSTEM
+      pagesUsed: 44
+  files:
+    - name: SYMBOL-2-LIST:SYMB
+      type: SYMB
+      pages: 15
+      bytes: 28119
+      userName: SYSTEM
+      dateCreated: 2435493265
+      lastDateRead: 2696323354
+      lastDateWritten: 2435493282
+      dateCreatedStr: 1986-04-21 10:54:17
+      lastDateReadStr: 1990-02-27 10:04:26
+      lastDateWrittenStr: 1986-04-21 10:54:34
+      bpunValid: null
+    - name: SYMBOL-1-LIST:SYMB
+      type: SYMB
+      pages: 26
+      bytes: 53233
+      userName: SYSTEM
+      dateCreated: 2435493270
+      lastDateRead: 2696323345
+      lastDateWritten: 2435493272
+      dateCreatedStr: 1986-04-21 10:54:22
+      lastDateReadStr: 1990-02-27 10:04:17
+      lastDateWrittenStr: 1986-04-21 10:54:24
+      bpunValid: null
+    - name: LIBRARY-MARKS:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 4088
+      userName: SYSTEM
+      dateCreated: 2435493271
+      lastDateRead: 2696323359
+      lastDateWritten: 2435493287
+      dateCreatedStr: 1986-04-21 10:54:23
+      lastDateReadStr: 1990-02-27 10:04:31
+      lastDateWrittenStr: 1986-04-21 10:54:39
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 400/ND-disk-00481.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:49:57.399Z
+imagingLogs:
+  - ND-disk-00481.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-os-n-100-1002-i-98e5fb51
+  syncStatus: pending

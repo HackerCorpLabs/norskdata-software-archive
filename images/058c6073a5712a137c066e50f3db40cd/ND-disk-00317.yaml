@@ -1,0 +1,144 @@
+id: img-058c6073a571
+volumeName: TROTYL
+md5: 058c6073a5712a137c066e50f3db40cd
+image:
+  sizeBytes: 319488
+  format: raw
+  controller: floppy
+  totalPages: 156
+  pageSize: 2048
+  bootFormat: binary
+filesystem: ndfs
+ndfs:
+  users:
+    - name: SYSTEM
+      pagesUsed: 90
+  files:
+    - name: ADVENTURE-ENB:SYMB
+      type: SYMB
+      pages: 10
+      bytes: 19235
+      userName: SYSTEM
+      dateCreated: 2225405156
+      lastDateRead: 2397761006
+      lastDateWritten: 2240218273
+      dateCreatedStr: 1983-02-18 15:51:36
+      lastDateReadStr: 1985-11-21 14:55:46
+      lastDateWrittenStr: 1983-06-03 16:18:33
+      bpunValid: null
+    - name: DOD-ENB:SYMB
+      type: SYMB
+      pages: 6
+      bytes: 11340
+      userName: SYSTEM
+      dateCreated: 2225405960
+      lastDateRead: 2465781533
+      lastDateWritten: 2263550541
+      dateCreatedStr: 1983-02-18 16:00:08
+      lastDateReadStr: 1986-11-28 13:28:29
+      lastDateWrittenStr: 1983-11-21 16:41:13
+      bpunValid: null
+    - name: TRAMP:PROG
+      type: PROG
+      pages: 4
+      bytes: 6390
+      userName: SYSTEM
+      dateCreated: 2225406137
+      lastDateRead: 3033979562
+      lastDateWritten: 2225406138
+      dateCreatedStr: 1983-02-18 16:02:57
+      lastDateReadStr: 1995-03-11 13:42:42
+      lastDateWrittenStr: 1983-02-18 16:02:58
+      bpunValid: null
+    - name: SANKY:SYMB
+      type: SYMB
+      pages: 3
+      bytes: 5634
+      userName: SYSTEM
+      dateCreated: 2225412394
+      lastDateRead: 2465781546
+      lastDateWritten: 2225412395
+      dateCreatedStr: 1983-02-18 17:36:42
+      lastDateReadStr: 1986-11-28 13:28:42
+      lastDateWrittenStr: 1983-02-18 17:36:43
+      bpunValid: null
+    - name: LABYRINT-ENB:SYMB
+      type: SYMB
+      pages: 10
+      bytes: 19984
+      userName: SYSTEM
+      dateCreated: 2236811338
+      lastDateRead: 2281701907
+      lastDateWritten: 2240216775
+      dateCreatedStr: 1983-05-09 16:33:10
+      lastDateReadStr: null
+      lastDateWrittenStr: 1983-06-03 15:59:07
+      bpunValid: null
+    - name: DELFI-MANUAL:SYMB
+      type: SYMB
+      pages: 0
+      bytes: 4294967296
+      userName: SYSTEM
+      dateCreated: 2465792337
+      lastDateRead: null
+      lastDateWritten: null
+      dateCreatedStr: 1986-11-28 16:05:17
+      lastDateReadStr: null
+      lastDateWrittenStr: null
+      bpunValid: null
+    - name: INVADERS-ENB:SYMB
+      type: SYMB
+      pages: 5
+      bytes: 9326
+      userName: SYSTEM
+      dateCreated: 2288972937
+      lastDateRead: 2281701858
+      lastDateWritten: 2288972938
+      dateCreatedStr: 1984-01-23 15:18:09
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-01-23 15:18:10
+      bpunValid: null
+    - name: STARHAWKS-ENB:SYMB
+      type: SYMB
+      pages: 9
+      bytes: 17614
+      userName: SYSTEM
+      dateCreated: 2290547589
+      lastDateRead: 2465781572
+      lastDateWritten: 2290551171
+      dateCreatedStr: 1984-02-03 15:46:05
+      lastDateReadStr: 1986-11-28 13:29:04
+      lastDateWrittenStr: 1984-02-03 16:38:03
+      bpunValid: null
+    - name: SKURPULVER:SYMB
+      type: SYMB
+      pages: 34
+      bytes: 67894
+      userName: SYSTEM
+      dateCreated: 2431194515
+      lastDateRead: 3033145517
+      lastDateWritten: 2431194516
+      dateCreatedStr: 1986-03-20 17:22:19
+      lastDateReadStr: 1995-03-05 02:02:45
+      lastDateWrittenStr: 1986-03-20 17:22:20
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 300/ND-disk-00317.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:45:44.559Z
+imagingLogs:
+  - ND-disk-00317.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-058c6073a571
+  syncStatus: pending

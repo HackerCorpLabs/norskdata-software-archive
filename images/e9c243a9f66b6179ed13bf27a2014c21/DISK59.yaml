@@ -1,0 +1,110 @@
+id: nd-10166-e-d7-e9c243a9
+volumeName: ND-10166E-PART7
+md5: e9c243a9f66b6179ed13bf27a2014c21
+product:
+  id: ND-10166
+  version: E
+  diskNumber: 7
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 132
+  files:
+    - name: SIBAS-SERV-MXE00:PROG
+      type: PROG
+      pages: 59
+      bytes: 120832
+      userName: FLOPPY-USER
+      dateCreated: 2323031413
+      lastDateRead: 2425292241
+      lastDateWritten: 2323031418
+      dateCreatedStr: 1984-09-27 10:21:53
+      lastDateReadStr: 1986-02-07 16:23:17
+      lastDateWrittenStr: 1984-09-27 10:21:58
+      bpunValid: null
+    - name: SIB2-DML-B-MXE10:BRF
+      type: BRF
+      pages: 15
+      bytes: 29606
+      userName: FLOPPY-USER
+      dateCreated: 2323031479
+      lastDateRead: 2425292263
+      lastDateWritten: 2370086347
+      dateCreatedStr: 1984-09-27 10:22:55
+      lastDateReadStr: 1986-02-07 16:23:39
+      lastDateWrittenStr: 1985-05-02 10:23:11
+      bpunValid: null
+    - name: SIB2-DML-R-MXE10:BRF
+      type: BRF
+      pages: 13
+      bytes: 26574
+      userName: FLOPPY-USER
+      dateCreated: 2323031502
+      lastDateRead: 2425292275
+      lastDateWritten: 2370086353
+      dateCreatedStr: 1984-09-27 10:23:14
+      lastDateReadStr: 1986-02-07 16:23:51
+      lastDateWrittenStr: 1985-05-02 10:23:17
+      bpunValid: null
+    - name: SIBLIB-1N-MX-E10:BRF
+      type: BRF
+      pages: 13
+      bytes: 26388
+      userName: FLOPPY-USER
+      dateCreated: 2323031522
+      lastDateRead: 2425292290
+      lastDateWritten: 2370086358
+      dateCreatedStr: 1984-09-27 10:23:34
+      lastDateReadStr: 1986-02-07 16:24:02
+      lastDateWrittenStr: 1985-05-02 10:23:22
+      bpunValid: null
+    - name: SIBLIB-1R-MX-E10:BRF
+      type: BRF
+      pages: 11
+      bytes: 21963
+      userName: FLOPPY-USER
+      dateCreated: 2323031544
+      lastDateRead: 2425292301
+      lastDateWritten: 2370086364
+      dateCreatedStr: 1984-09-27 10:23:56
+      lastDateReadStr: 1986-02-07 16:24:13
+      lastDateWrittenStr: 1985-05-02 10:23:28
+      bpunValid: null
+    - name: SIBLIB-2N-MX-E10:BRF
+      type: BRF
+      pages: 14
+      bytes: 27703
+      userName: FLOPPY-USER
+      dateCreated: 2323031568
+      lastDateRead: 2425292312
+      lastDateWritten: 2370086369
+      dateCreatedStr: 1984-09-27 10:24:16
+      lastDateReadStr: 1986-02-07 16:24:24
+      lastDateWrittenStr: 1985-05-02 10:23:33
+      bpunValid: null
+provenance:
+  contributor: www.datormuseum.se
+  originalPath: OK/DISK59.IMG
+  dateImaged: 2022-08-15
+  importedAt: 2026-08-11T17:07:04.937Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10166-e-d7-e9c243a9
+  syncStatus: pending

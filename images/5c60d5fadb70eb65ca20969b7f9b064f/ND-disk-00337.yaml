@@ -1,0 +1,84 @@
+id: img-5c60d5fadb70
+volumeName: DNF
+md5: 5c60d5fadb70eb65ca20969b7f9b064f
+image:
+  sizeBytes: 319488
+  format: raw
+  controller: floppy
+  totalPages: 156
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: MUD
+      pagesUsed: 112
+  files:
+    - name: PASCAL-COD-J:BRF
+      type: BRF
+      pages: 77
+      bytes: 156350
+      userName: MUD
+      dateCreated: 2265892267
+      lastDateRead: 2664741750
+      lastDateWritten: 2266012879
+      dateCreatedStr: 1983-12-07 12:22:43
+      lastDateReadStr: 1989-11-10 11:45:54
+      lastDateWrittenStr: 1983-12-08 09:51:15
+      bpunValid: null
+    - name: PASCAL-LIB-J:BRF
+      type: BRF
+      pages: 13
+      bytes: 25828
+      userName: MUD
+      dateCreated: 2265892379
+      lastDateRead: 2664741750
+      lastDateWritten: 2265892382
+      dateCreatedStr: 1983-12-07 12:24:27
+      lastDateReadStr: 1989-11-10 11:45:54
+      lastDateWrittenStr: 1983-12-07 12:24:30
+      bpunValid: null
+    - name: PASCAL-2LIB-J:BRF
+      type: BRF
+      pages: 13
+      bytes: 26078
+      userName: MUD
+      dateCreated: 2265892445
+      lastDateRead: 2664741751
+      lastDateWritten: 2265892447
+      dateCreatedStr: 1983-12-07 12:25:29
+      lastDateReadStr: 1989-11-10 11:45:55
+      lastDateWrittenStr: 1983-12-07 12:25:31
+      bpunValid: null
+    - name: PASCAL-ERR-J:SYMB
+      type: SYMB
+      pages: 4
+      bytes: 7393
+      userName: MUD
+      dateCreated: 2265892487
+      lastDateRead: 2664741751
+      lastDateWritten: 2265892488
+      dateCreatedStr: 1983-12-07 12:26:07
+      lastDateReadStr: 1989-11-10 11:45:55
+      lastDateWrittenStr: 1983-12-07 12:26:08
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 300/ND-disk-00337.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:45:48.066Z
+imagingLogs:
+  - ND-disk-00337.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-5c60d5fadb70
+  syncStatus: pending

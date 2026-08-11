@@ -1,0 +1,89 @@
+id: nd-211056-a04-d5-9023c604
+volumeName: 211056A04-XX-05D
+md5: 9023c60489ab099469c34f5f57091e32
+product:
+  id: ND-211056
+  version: A04
+  diskNumber: 5
+  language: XX
+image:
+  sizeBytes: 1310720
+  format: raw
+  controller: floppy
+  totalPages: 640
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 227
+  files:
+    - name: PRM-SERV-AI-A04:PFIL
+      type: PFIL
+      pages: 61
+      bytes: 124928
+      userName: FLOPPY-USER
+      dateCreated: 2597903045
+      lastDateRead: 2598440179
+      lastDateWritten: 2598438745
+      dateCreatedStr: 1988-11-12 13:43:05
+      lastDateReadStr: 1988-11-16 16:51:51
+      lastDateWrittenStr: 1988-11-16 16:29:25
+      bpunValid: null
+    - name: PRM-SERV-AI-A04:DFIL
+      type: DFIL
+      pages: 51
+      bytes: 103936
+      userName: FLOPPY-USER
+      dateCreated: 2597903079
+      lastDateRead: 2598440194
+      lastDateWritten: 2598438755
+      dateCreatedStr: 1988-11-12 13:43:39
+      lastDateReadStr: 1988-11-16 16:52:02
+      lastDateWrittenStr: 1988-11-16 16:29:35
+      bpunValid: null
+    - name: PRM-SERV-AJ-A04:PFIL
+      type: PFIL
+      pages: 59
+      bytes: 119808
+      userName: FLOPPY-USER
+      dateCreated: 2597903126
+      lastDateRead: 2598440202
+      lastDateWritten: 2598438777
+      dateCreatedStr: 1988-11-12 13:44:22
+      lastDateReadStr: 1988-11-16 16:52:10
+      lastDateWrittenStr: 1988-11-16 16:29:57
+      bpunValid: null
+    - name: PRM-SERV-AJ-A04:DFIL
+      type: DFIL
+      pages: 51
+      bytes: 102912
+      userName: FLOPPY-USER
+      dateCreated: 2597903176
+      lastDateRead: 2598440214
+      lastDateWritten: 2598438791
+      dateCreatedStr: 1988-11-12 13:45:08
+      lastDateReadStr: 1988-11-16 16:52:22
+      lastDateWrittenStr: 1988-11-16 16:30:07
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 000/ND-disk-00011.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T14:54:03.690Z
+imagingLogs:
+  - ND-disk-00011.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-211056-a04-d5-9023c604
+  syncStatus: pending

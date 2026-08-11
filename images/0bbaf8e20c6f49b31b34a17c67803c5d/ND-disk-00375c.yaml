@@ -1,0 +1,168 @@
+id: img-0bbaf8e20c6f
+volumeName: CLAS-4
+md5: 0bbaf8e20c6f49b31b34a17c67803c5d
+image:
+  sizeBytes: 319488
+  format: raw
+  controller: floppy
+  totalPages: 156
+  pageSize: 2048
+  bootFormat: bpun
+filesystem: ndfs
+ndfs:
+  users:
+    - name: SYSTEM
+      pagesUsed: 148
+  files:
+    - name: BASLIB-CT:SYMB
+      type: SYMB
+      pages: 61
+      bytes: 123280
+      userName: SYSTEM
+      dateCreated: 2192215390
+      lastDateRead: 2388327065
+      lastDateWritten: 2221588001
+      dateCreatedStr: 1982-10-21 08:53:30
+      lastDateReadStr: 1985-09-13 15:42:25
+      lastDateWrittenStr: 1983-01-21 11:56:33
+      bpunValid: null
+    - name: NUMBIG:SYMB
+      type: SYMB
+      pages: 16
+      bytes: 32080
+      userName: SYSTEM
+      dateCreated: 2292123988
+      lastDateRead: 2292123990
+      lastDateWritten: 2292123990
+      dateCreatedStr: 1984-02-15 16:37:20
+      lastDateReadStr: 1984-02-15 16:37:22
+      lastDateWrittenStr: 1984-02-15 16:37:22
+      bpunValid: null
+    - name: YEANLING-CT:SYMB
+      type: SYMB
+      pages: 12
+      bytes: 23859
+      userName: SYSTEM
+      dateCreated: 2261943008
+      lastDateRead: 2266823866
+      lastDateWritten: 2261943010
+      dateCreatedStr: 1983-11-09 08:11:32
+      lastDateReadStr: 1983-12-14 15:50:58
+      lastDateWrittenStr: 1983-11-09 08:11:34
+      bpunValid: null
+    - name: FINGER:SYMB
+      type: SYMB
+      pages: 6
+      bytes: 10867
+      userName: SYSTEM
+      dateCreated: 2262614472
+      lastDateRead: 2266823881
+      lastDateWritten: 2263530738
+      dateCreatedStr: 1983-11-14 12:07:08
+      lastDateReadStr: 1983-12-14 15:51:09
+      lastDateWrittenStr: 1983-11-21 11:51:50
+      bpunValid: null
+    - name: REMARK-A-LOT-CT:SYMB
+      type: SYMB
+      pages: 4
+      bytes: 7087
+      userName: SYSTEM
+      dateCreated: 2262745415
+      lastDateRead: 2388327099
+      lastDateWritten: 2263551734
+      dateCreatedStr: 1983-11-15 12:05:07
+      lastDateReadStr: 1985-09-13 15:42:59
+      lastDateWrittenStr: 1983-11-21 16:59:54
+      bpunValid: null
+    - name: UNDAUTRI-CT:SYMB
+      type: SYMB
+      pages: 4
+      bytes: 8049
+      userName: SYSTEM
+      dateCreated: 2263010766
+      lastDateRead: 2266823906
+      lastDateWritten: 2263530807
+      dateCreatedStr: 1983-11-17 12:55:14
+      lastDateReadStr: 1983-12-14 15:51:34
+      lastDateWrittenStr: 1983-11-21 11:52:55
+      bpunValid: null
+    - name: FINGER-PACKER-CT:SYMB
+      type: SYMB
+      pages: 3
+      bytes: 4436
+      userName: SYSTEM
+      dateCreated: 2266824099
+      lastDateRead: null
+      lastDateWritten: 2266824101
+      dateCreatedStr: 1983-12-14 15:54:35
+      lastDateReadStr: null
+      lastDateWrittenStr: 1983-12-14 15:54:37
+      bpunValid: null
+    - name: QUAINT-CT:SYMB
+      type: SYMB
+      pages: 11
+      bytes: 21896
+      userName: SYSTEM
+      dateCreated: 2263909238
+      lastDateRead: 2292125361
+      lastDateWritten: 2292125361
+      dateCreatedStr: 1983-11-24 08:13:54
+      lastDateReadStr: 1984-02-15 16:58:49
+      lastDateWrittenStr: 1984-02-15 16:58:49
+      bpunValid: null
+    - name: INPUT-ROUTINE-CT:SYMB
+      type: SYMB
+      pages: 4
+      bytes: 7920
+      userName: SYSTEM
+      dateCreated: 2264486560
+      lastDateRead: 2267345109
+      lastDateWritten: 2264486561
+      dateCreatedStr: 1983-11-28 21:10:32
+      lastDateReadStr: 1983-12-18 15:03:21
+      lastDateWrittenStr: 1983-11-28 21:10:33
+      bpunValid: null
+    - name: RUNNER-CT:SYMB
+      type: SYMB
+      pages: 8
+      bytes: 11844
+      userName: SYSTEM
+      dateCreated: 2265115920
+      lastDateRead: 2388327117
+      lastDateWritten: 2292125755
+      dateCreatedStr: 1983-12-01 14:52:16
+      lastDateReadStr: 1985-09-13 15:43:13
+      lastDateWrittenStr: 1984-02-15 17:00:59
+      bpunValid: null
+    - name: PA-HWYL-CT:SYMB
+      type: SYMB
+      pages: 7
+      bytes: 13866
+      userName: SYSTEM
+      dateCreated: 2265666905
+      lastDateRead: 2292123650
+      lastDateWritten: 2292123650
+      dateCreatedStr: 1983-12-05 21:21:25
+      lastDateReadStr: 1984-02-15 16:32:02
+      lastDateWrittenStr: 1984-02-15 16:32:02
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 300/ND-disk-00375c.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:45:55.608Z
+imagingLogs:
+  - ND-disk-00375c.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-0bbaf8e20c6f
+  syncStatus: pending

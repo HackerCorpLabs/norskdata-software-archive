@@ -1,0 +1,58 @@
+id: img-0c0a8c8e67d6
+volumeName: BD
+md5: 0c0a8c8e67d69aaed3ef87ad69ff5f5b
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: binary
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 7
+  files:
+    - name: N50INIT:OUT
+      type: OUT
+      pages: 2
+      bytes: 2310
+      userName: FLOPPY-USER
+      dateCreated: 2281704579
+      lastDateRead: 2401554554
+      lastDateWritten: 2281704583
+      dateCreatedStr: null
+      lastDateReadStr: 1985-12-18 13:01:58
+      lastDateWrittenStr: null
+      bpunValid: null
+    - name: N50INITIALIZE-A:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 2145
+      userName: FLOPPY-USER
+      dateCreated: 2281704627
+      lastDateRead: 2401554580
+      lastDateWritten: 2281704629
+      dateCreatedStr: null
+      lastDateReadStr: 1985-12-18 13:02:20
+      lastDateWrittenStr: null
+      bpunValid: null
+provenance:
+  contributor: www.datormuseum.se
+  originalPath: OK/DISK84.IMG
+  dateImaged: 2022-08-15
+  importedAt: 2026-08-11T17:07:05.377Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-0c0a8c8e67d6
+  syncStatus: pending

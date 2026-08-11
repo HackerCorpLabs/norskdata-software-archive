@@ -21,6 +21,9 @@ make static-site    # build GitHub Pages site into site/
 make site-serve     # build the static site + serve site/ on :8000
 make mcp            # run the MCP server (stdio; launched by MCP clients, not watched in a terminal)
 make check          # validate catalog integrity (run after metadata edits)
+make identify PATH_=<file-or-folder> [ARGS="--recursive --only dos"]
+                    # what does this image hold? works on any file, imported or not
+                    # (PATH_ not PATH - PATH is reserved by make)
 make search Q=...    # search the catalog
 ```
 
@@ -32,7 +35,7 @@ cd tools && npm run watch      # tsc --watch
 cd tools && node dist/cli.js <subcommand>   # run any CLI command directly
 ```
 
-There is **no test suite and no linter** — `make check` (the `check` CLI subcommand) is the validation gate. CI enforces it: `.github/workflows/validate.yml` builds the NDFS submodule, builds the tools, and runs `make check` on every push and PR to `main`. `.github/workflows/pages.yml` regenerates `site/` from source and deploys it; `.github/workflows/ia-verify.yml` checks Internet Archive checksums. CLI subcommands: `import`, `import-folder`, `search`, `check`, `check-deps`, `ia-sync`/`ia-verify`/`ia-upload`, `build-static-site`, `rebuild-catalog`, `migrate-products`, `extract-legacy`, `mcp`.
+There is **no test suite and no linter** — `make check` (the `check` CLI subcommand) is the validation gate. CI enforces it: `.github/workflows/validate.yml` builds the NDFS submodule, builds the tools, and runs `make check` on every push and PR to `main`. `.github/workflows/pages.yml` regenerates `site/` from source and deploys it; `.github/workflows/ia-verify.yml` checks Internet Archive checksums. CLI subcommands: `import`, `import-folder`, `search`, `check`, `check-deps`, `identify` (alias `detect`), `ia-sync`/`ia-verify`/`ia-upload`, `build-static-site`, `rebuild-catalog`, `migrate-products`, `extract-legacy`, `mcp`.
 
 Two proof scripts under `tools/scripts/` are the closest thing to tests, and they assert the "one persist path" rule below:
 
@@ -50,6 +53,15 @@ bash tools/scripts/persistence-proof.sh       # needs the dev server on :3000 (m
 Products are separate YAML under `products/` (`id`, `name`, `categories`, `platform`, `docs`); categories are defined in `categories/product-categories.yaml`. A floppy's `product.id` links it to a product file.
 
 **ND documentation.** `docs/nd/product-info/` and `docs/nd/installation-description/` hold ND's Product Information sheets and Program/Installation Descriptions as markdown, named by ND document number. A product's `docs:` block references them by id — one document often describes several products (`ND-10174-10-EN` covers ND-10174, ND-10575 and ND-10576), so documents are stored once and referenced, never copied per product. `api/nd-docs.ts` is the shared resolver used by both the static-site builder and the MCP server; `static-site-builder.ts` pre-renders each referenced document to `site/docs/<id>.html` at build time rather than inlining it, so `site/index.html` stays small and the no-`fetch()`/`file://` property holds.
+
+**Not every image is an ND filesystem.** A real collection also holds MS-DOS floppies (ND-OWS / NORTEXT PC material), backup volumes, tar archives written straight to the media, blank disks and failed reads. Each floppy therefore records a `filesystem` field — `ndfs` | `dos` | `tar` | `backup` | `winch` | `none` — detected from the bytes by `api/filesystem-detect.ts`:
+
+- **`dos`** — FAT12/16, recognised from the BIOS parameter block rather than the `0x55AA` signature (ND-era formatters often omit it). Read by the in-repo library `lib/dosfs/` (`DosVolume.open()` → `readDir`/`listAll`/`readFile`). A FAT label is also stored as `volumeLabel`, because on these disks it is an ND part number (`30002EN1A00`) and the Matcher matches on it exactly like an NDFS volume name.
+- **`backup`** — SINTRAN III BACKUP-SYSTEM: an ANSI-labelled tape-style volume (`VOL1` at 0, `HDR1`/`HDR2` at the first or second sector boundary, `EOF1` closing each file). Labels name every file, so `lib/ndbackup/` lists and extracts them. BACKUP-SYSTEM does not erase the media first, so labels from an older run survive; they are flagged `stale` by comparing system code and date against the run that starts the volume.
+- **`winch`** — WINCH-TO-FLOPP: a page-level dump of a whole ND directory across a set of floppies. **There are no file names on the media** — a 16 KB big-endian header maps each stored 2048-byte page to its page number in the original directory. One volume alone can only report "volume N of M", the directory name and the page map; file names need every volume of the set reassembled and then parsed as NDFS. Header layout verified against `flopp-to-winch.c`.
+- **`tar`** — v7 tar, detected by header checksum (these have no `ustar` magic).
+
+Detection runs at import and is re-runnable afterwards: `POST /api/detect-filesystem?id=<entry>|?scope=missing|all`, a per-disk and a bulk button in the Matcher, and the `identify` CLI for files that were never imported. `api/identify.ts` is the shared summariser behind the CLI.
 
 **NDFS parsing** is done by the bundled submodule at `externals/norskdata-ndfs/ndfs-ts` (imported as `norskdata-ndfs` via a `file:` dependency). It extracts volume name, boot format, users, file listings, and BPUN checksum validation. The same parser is bundled into the static site so the browser-based NDFS viewer runs client-side. If NDFS behavior looks wrong, the bug is likely in the submodule, not in `tools/src/`.
 
@@ -70,15 +82,21 @@ Products are separate YAML under `products/` (`id`, `name`, `categories`, `platf
 - `api/ia-sync.ts` — Internet Archive sync (large artifacts go to IA; floppies ≤1.3 MB stay in git).
 - `mcp/server.ts` — read-only MCP server (stdio) exposing the catalog to LLMs; see below.
 - `migrate*.ts`, `extract-legacy.ts`, `merge-legacy.ts` — one-off data migration scripts; not part of normal flow.
+- `api/filesystem-detect.ts` — what a raw image holds; `api/identify.ts` — the summary the `identify` CLI prints.
+- `lib/dosfs/` — FAT12/16 reader; `lib/ndbackup/` — BACKUP-SYSTEM and WINCH-TO-FLOPP readers. Both are dependency-free and browser-safe, so they can be bundled for the static site the way the NDFS parser is.
 - `types.ts` — shared types; `zod` is used for schema validation.
 
 **MCP server** (`mcp/server.ts`): a stdio MCP server, **read-only**, that loads `catalog/floppies.json` + `catalog/products.json` and exposes 10 tools (`search_floppies`, `get_floppy`, `list_product_floppies`, `list_products`, `download_floppy`, `list_floppy_files`, `get_archive_stats`, `list_product_documents`, `read_document`, `search_documents`). It reads `ARCHIVE_ROOT` (defaults to repo root). MCP clients launch it themselves via the repo's `.mcp.json`; `make mcp` is only for manually testing that it boots. It has no write tools — imports/edits stay in the web UI.
+
+**Matcher queues** are decided by one function, `classifyForQueue()` in `server.ts`, used by both `/api/match/queue` and the dashboard counts — they previously carried separate copies of the rule and drifted apart. A parseable name wins first (`auto` when the product exists, `new` when it does not), then `broken` for an image with no filesystem, then `manual`. The name used is `volumeName ?? volumeLabel`, so a DOS disk matches on its FAT label.
 
 ## Conventions
 
 - After editing image/product/category metadata, run `make check` and regenerate the catalog (`rebuild-catalog`) so `catalog/*.json` stays in sync with YAML.
 - `make setup` must succeed before anything; if the NDFS submodule is missing, run `git submodule update --init --recursive`.
 - Storage policy: floppy images ≤1.3 MB are committed compressed; HDD images / tapes go to Internet Archive (`storageClass` + `internetArchive` fields in YAML drive this).
+- The catalog view lists `filesystem: ndfs` only by default; `?filesystem=dos|backup|winch|tar|none|all` shows the rest. Images with no recorded filesystem count as ND so nothing disappears before a detect run.
+- A running server caches the catalog but reloads when any YAML under `images/`, `products/`, `collections/` or `categories/` changes, so editing YAML by hand or switching branch is picked up without a restart.
 
 ## Git in this repo
 

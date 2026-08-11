@@ -1,0 +1,192 @@
+id: img-c3c4546e6a1e
+volumeName: JOERGEN-2A
+md5: c3c4546e6a1e95af53c1938c198cfb45
+image:
+  sizeBytes: 319488
+  format: raw
+  controller: floppy
+  totalPages: 156
+  pageSize: 2048
+  bootFormat: bpun
+filesystem: ndfs
+ndfs:
+  users:
+    - name: SYSTEM
+      pagesUsed: 39
+  files:
+    - name: POLISKOD-JNI:SYMB
+      type: SYMB
+      pages: 3
+      bytes: 4478
+      userName: SYSTEM
+      dateCreated: 2385044912
+      lastDateRead: 2422006353
+      lastDateWritten: 2385044913
+      dateCreatedStr: 1985-08-20 14:22:48
+      lastDateReadStr: 1986-01-14 14:09:17
+      lastDateWrittenStr: 1985-08-20 14:22:49
+      bpunValid: null
+    - name: HUBBA-TERM-JNI:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 170
+      userName: SYSTEM
+      dateCreated: 2367604206
+      lastDateRead: 2435102667
+      lastDateWritten: 2367604207
+      dateCreatedStr: 1985-04-15 12:23:46
+      lastDateReadStr: 1986-04-18 11:31:11
+      lastDateWrittenStr: 1985-04-15 12:23:47
+      bpunValid: null
+    - name: TERM-HUBBA-2-JNI:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 82
+      userName: SYSTEM
+      dateCreated: 2367604318
+      lastDateRead: 2435102798
+      lastDateWritten: 2435102791
+      dateCreatedStr: 1985-04-15 12:25:30
+      lastDateReadStr: 1986-04-18 11:33:14
+      lastDateWrittenStr: 1986-04-18 11:33:07
+      bpunValid: null
+    - name: NUTS-JNI:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1784
+      userName: SYSTEM
+      dateCreated: 2370361480
+      lastDateRead: 2392278086
+      lastDateWritten: 2370361481
+      dateCreatedStr: 1985-05-04 13:34:08
+      lastDateReadStr: 1985-10-11 20:17:06
+      lastDateWrittenStr: 1985-05-04 13:34:09
+      bpunValid: null
+    - name: MIDLAND-CHANNEL:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1809
+      userName: SYSTEM
+      dateCreated: 2368937298
+      lastDateRead: 2435102548
+      lastDateWritten: 2371033759
+      dateCreatedStr: 1985-04-25 17:53:18
+      lastDateReadStr: 1986-04-18 11:29:20
+      lastDateWrittenStr: 1985-05-09 17:42:31
+      bpunValid: null
+    - name: ORDF-TAL-JNI:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 2093
+      userName: SYSTEM
+      dateCreated: 2370361569
+      lastDateRead: 2370361867
+      lastDateWritten: 2370361571
+      dateCreatedStr: 1985-05-04 13:35:33
+      lastDateReadStr: 1985-05-04 13:40:11
+      lastDateWrittenStr: 1985-05-04 13:35:35
+      bpunValid: null
+    - name: WAVE-JNI:TEXT
+      type: TEXT
+      pages: 2
+      bytes: 2258
+      userName: SYSTEM
+      dateCreated: 2371031738
+      lastDateRead: 2435102560
+      lastDateWritten: 2371031739
+      dateCreatedStr: 1985-05-09 17:10:58
+      lastDateReadStr: 1986-04-18 11:29:32
+      lastDateWrittenStr: 1985-05-09 17:10:59
+      bpunValid: null
+    - name: SOLFLACKAR-JNI:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 3180
+      userName: SYSTEM
+      dateCreated: 2435103467
+      lastDateRead: 2435103468
+      lastDateWritten: 2435103468
+      dateCreatedStr: 1986-04-18 11:43:43
+      lastDateReadStr: 1986-04-18 11:43:44
+      lastDateWrittenStr: 1986-04-18 11:43:44
+      bpunValid: null
+    - name: MID-FET-KAN:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1850
+      userName: SYSTEM
+      dateCreated: 2371034720
+      lastDateRead: 2435102565
+      lastDateWritten: 2371034721
+      dateCreatedStr: 1985-05-09 17:57:32
+      lastDateReadStr: 1986-04-18 11:29:37
+      lastDateWrittenStr: 1985-05-09 17:57:33
+      bpunValid: null
+    - name: BLINK-BLINK-JNI:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 119
+      userName: SYSTEM
+      dateCreated: 2385045063
+      lastDateRead: 2435102583
+      lastDateWritten: 2385045064
+      dateCreatedStr: 1985-08-20 14:25:07
+      lastDateReadStr: 1986-04-18 11:29:55
+      lastDateWrittenStr: 1985-08-20 14:25:08
+      bpunValid: null
+    - name: SORTERING-JNI:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 332
+      userName: SYSTEM
+      dateCreated: 2371546587
+      lastDateRead: 2392277812
+      lastDateWritten: 2371546588
+      dateCreatedStr: 1985-05-13 14:55:27
+      lastDateReadStr: 1985-10-11 20:12:52
+      lastDateWrittenStr: 1985-05-13 14:55:28
+      bpunValid: null
+    - name: HY-GAIN-UPD-JNI:SYMB
+      type: SYMB
+      pages: 3
+      bytes: 4410
+      userName: SYSTEM
+      dateCreated: 2396813767
+      lastDateRead: 2435102451
+      lastDateWritten: 2396813769
+      dateCreatedStr: 1985-11-14 07:39:07
+      lastDateReadStr: 1986-04-18 11:27:51
+      lastDateWrittenStr: 1985-11-14 07:39:09
+      bpunValid: null
+    - name: QOA-QUX-ADR-99:SYMB
+      type: SYMB
+      pages: 6
+      bytes: 12070
+      userName: SYSTEM
+      dateCreated: 2372579023
+      lastDateRead: 2423831917
+      lastDateWritten: 2372579024
+      dateCreatedStr: 1985-05-21 10:59:15
+      lastDateReadStr: 1986-01-28 11:53:45
+      lastDateWrittenStr: 1985-05-21 10:59:16
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 300/ND-disk-00315.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:45:44.394Z
+imagingLogs:
+  - ND-disk-00315.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-c3c4546e6a1e
+  syncStatus: pending

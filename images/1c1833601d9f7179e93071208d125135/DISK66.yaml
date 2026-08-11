@@ -1,0 +1,58 @@
+id: img-1c1833601d9f
+volumeName: DAMBU
+md5: 1c1833601d9f7179e93071208d125135
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: DAMBU
+      pagesUsed: 136
+  files:
+    - name: TIPS-S:PROG
+      type: PROG
+      pages: 126
+      bytes: 258048
+      userName: DAMBU
+      dateCreated: 51381207
+      lastDateRead: 2243497076
+      lastDateWritten: 51381278
+      dateCreatedStr: 1950-12-08 00:15:23
+      lastDateReadStr: 1983-06-28 16:49:52
+      lastDateWrittenStr: 1950-12-08 00:16:30
+      bpunValid: null
+    - name: RESULT:SYMB
+      type: SYMB
+      pages: 7
+      bytes: 13942
+      userName: DAMBU
+      dateCreated: 51383984
+      lastDateRead: 2243497189
+      lastDateWritten: 51384000
+      dateCreatedStr: 1950-12-08 00:58:48
+      lastDateReadStr: 1983-06-28 16:51:37
+      lastDateWrittenStr: 1950-12-08 00:59:00
+      bpunValid: null
+provenance:
+  contributor: www.datormuseum.se
+  originalPath: OK/DISK66.IMG
+  dateImaged: 2022-08-15
+  importedAt: 2026-08-11T17:07:05.089Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-1c1833601d9f
+  syncStatus: pending

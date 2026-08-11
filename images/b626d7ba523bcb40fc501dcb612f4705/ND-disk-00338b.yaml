@@ -1,0 +1,386 @@
+id: img-b626d7ba523b
+volumeName: ZAPSTARS
+md5: b626d7ba523bcb40fc501dcb612f4705
+image:
+  sizeBytes: 319488
+  format: raw
+  controller: floppy
+  totalPages: 156
+  pageSize: 2048
+  bootFormat: bpun
+filesystem: ndfs
+ndfs:
+  users:
+    - name: SYSTEM
+      pagesUsed: 67
+    - name: HULTEN
+      pagesUsed: 46
+  files:
+    - name: HUFFMANN:SYMB
+      type: SYMB
+      pages: 8
+      bytes: 15689
+      userName: SYSTEM
+      dateCreated: 2560803658
+      lastDateRead: 2865709711
+      lastDateWritten: 2560803660
+      dateCreatedStr: 1988-02-17 12:13:10
+      lastDateReadStr: 1992-11-07 20:10:15
+      lastDateWrittenStr: 1988-02-17 12:13:12
+      bpunValid: null
+    - name: SPY-CH:PROG
+      type: PROG
+      pages: 1
+      bytes: 2048
+      userName: SYSTEM
+      dateCreated: 2525160100
+      lastDateRead: 2865709737
+      lastDateWritten: 2525160102
+      dateCreatedStr: 1987-10-01 14:10:36
+      lastDateReadStr: 1992-11-07 20:10:41
+      lastDateWrittenStr: 1987-10-01 14:10:38
+      bpunValid: null
+    - name: SETDAT:BRF
+      type: BRF
+      pages: 1
+      bytes: 1372
+      userName: SYSTEM
+      dateCreated: 2526984787
+      lastDateRead: 2865709744
+      lastDateWritten: 2526984789
+      dateCreatedStr: 1987-10-15 11:41:19
+      lastDateReadStr: 1992-11-07 20:10:48
+      lastDateWrittenStr: 1987-10-15 11:41:21
+      bpunValid: null
+    - name: SMYG:PROG
+      type: PROG
+      pages: 1
+      bytes: 1098
+      userName: SYSTEM
+      dateCreated: 2526984909
+      lastDateRead: 2865709751
+      lastDateWritten: 2526984910
+      dateCreatedStr: 1987-10-15 11:43:13
+      lastDateReadStr: 1992-11-07 20:10:55
+      lastDateWrittenStr: 1987-10-15 11:43:14
+      bpunValid: null
+    - name: CODER-FV:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 3528
+      userName: SYSTEM
+      dateCreated: 2526985374
+      lastDateRead: 2865709763
+      lastDateWritten: 2526985376
+      dateCreatedStr: 1987-10-15 11:50:30
+      lastDateReadStr: 1992-11-07 20:11:03
+      lastDateWrittenStr: 1987-10-15 11:50:32
+      bpunValid: null
+    - name: MACLIB-CH:SYMB
+      type: SYMB
+      pages: 3
+      bytes: 4946
+      userName: SYSTEM
+      dateCreated: 2526985825
+      lastDateRead: 2865709774
+      lastDateWritten: 2526985827
+      dateCreatedStr: 1987-10-15 11:57:33
+      lastDateReadStr: 1992-11-07 20:11:14
+      lastDateWrittenStr: 1987-10-15 11:57:35
+      bpunValid: null
+    - name: LIFILE:PROG
+      type: PROG
+      pages: 15
+      bytes: 29184
+      userName: SYSTEM
+      dateCreated: 2531445890
+      lastDateRead: 2865709786
+      lastDateWritten: 2531445892
+      dateCreatedStr: 1987-11-17 12:50:02
+      lastDateReadStr: 1992-11-07 20:11:26
+      lastDateWrittenStr: 1987-11-17 12:50:04
+      bpunValid: null
+    - name: FILI-GE:PROG
+      type: PROG
+      pages: 3
+      bytes: 5370
+      userName: SYSTEM
+      dateCreated: 2557929261
+      lastDateRead: 2865709826
+      lastDateWritten: 2557929263
+      dateCreatedStr: 1988-01-27 14:28:45
+      lastDateReadStr: 1992-11-07 20:12:02
+      lastDateWrittenStr: 1988-01-27 14:28:47
+      bpunValid: null
+    - name: ALIEN:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 243
+      userName: SYSTEM
+      dateCreated: 2561846210
+      lastDateRead: 2865709840
+      lastDateWritten: 2561846212
+      dateCreatedStr: 1988-02-25 10:47:02
+      lastDateReadStr: 1992-11-07 20:12:16
+      lastDateWrittenStr: 1988-02-25 10:47:04
+      bpunValid: null
+    - name: SETDATE:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1964
+      userName: SYSTEM
+      dateCreated: 2529501852
+      lastDateRead: 2865709848
+      lastDateWritten: 2530935226
+      dateCreatedStr: 1987-11-02 18:10:28
+      lastDateReadStr: 1992-11-07 20:12:24
+      lastDateWrittenStr: 1987-11-13 16:06:58
+      bpunValid: null
+    - name: SECRET-COPY:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1613
+      userName: SYSTEM
+      dateCreated: 2529501934
+      lastDateRead: 2560026962
+      lastDateWritten: 2529501935
+      dateCreatedStr: 1987-11-02 18:11:46
+      lastDateReadStr: 1988-02-11 14:37:18
+      lastDateWrittenStr: 1987-11-02 18:11:47
+      bpunValid: null
+    - name: WEM-IZ-ON:SYMB
+      type: SYMB
+      pages: 3
+      bytes: 2817
+      userName: SYSTEM
+      dateCreated: 2529501971
+      lastDateRead: 2560026970
+      lastDateWritten: 2529501973
+      dateCreatedStr: 1987-11-02 18:12:19
+      lastDateReadStr: 1988-02-11 14:37:26
+      lastDateWrittenStr: 1987-11-02 18:12:21
+      bpunValid: null
+    - name: RT-WHO-IS-ON:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 2048
+      userName: SYSTEM
+      dateCreated: 2529502006
+      lastDateRead: 2560026978
+      lastDateWritten: 2529502008
+      dateCreatedStr: 1987-11-02 18:12:54
+      lastDateReadStr: 1988-02-11 14:37:34
+      lastDateWrittenStr: 1987-11-02 18:12:56
+      bpunValid: null
+    - name: AMQUACK:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1017
+      userName: SYSTEM
+      dateCreated: 2529502035
+      lastDateRead: 2574448927
+      lastDateWritten: 2529505345
+      dateCreatedStr: 1987-11-02 18:13:19
+      lastDateReadStr: 1988-05-25 15:36:31
+      lastDateWrittenStr: 1987-11-02 19:01:01
+      bpunValid: null
+    - name: USER-STATISTICS:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1415
+      userName: SYSTEM
+      dateCreated: 2529503503
+      lastDateRead: 2560026993
+      lastDateWritten: 2529503505
+      dateCreatedStr: 1987-11-02 18:36:15
+      lastDateReadStr: 1988-02-11 14:37:49
+      lastDateWrittenStr: 1987-11-02 18:36:17
+      bpunValid: null
+    - name: SETTERM:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1096
+      userName: SYSTEM
+      dateCreated: 2529878137
+      lastDateRead: 2560027000
+      lastDateWritten: 2529880204
+      dateCreatedStr: 1987-11-05 14:01:57
+      lastDateReadStr: 1988-02-11 14:37:56
+      lastDateWrittenStr: 1987-11-05 14:34:12
+      bpunValid: null
+    - name: LINDA-JO-RIZZO:ZYX
+      type: ZYX
+      pages: 5
+      bytes: 9059
+      userName: SYSTEM
+      dateCreated: 2555569449
+      lastDateRead: 2574448939
+      lastDateWritten: 2555569451
+      dateCreatedStr: 1988-01-09 14:20:41
+      lastDateReadStr: 1988-05-25 15:36:43
+      lastDateWrittenStr: 1988-01-09 14:20:43
+      bpunValid: null
+    - name: CRUNCHER:SYMB
+      type: SYMB
+      pages: 8
+      bytes: 13989
+      userName: HULTEN
+      dateCreated: 2559884203
+      lastDateRead: 2865709926
+      lastDateWritten: 2564877962
+      dateCreatedStr: 1988-02-10 11:46:43
+      lastDateReadStr: 1992-11-07 20:13:38
+      lastDateWrittenStr: 1988-03-16 14:58:10
+      bpunValid: null
+    - name: LOGIN-PH:SYMB
+      type: SYMB
+      pages: 4
+      bytes: 5597
+      userName: HULTEN
+      dateCreated: 2559884196
+      lastDateRead: 2865709955
+      lastDateWritten: 2559884196
+      dateCreatedStr: 1988-02-10 11:46:36
+      lastDateReadStr: 1992-11-07 20:14:03
+      lastDateWrittenStr: 1988-02-10 11:46:36
+      bpunValid: null
+    - name: LOGIN-SERV-PROG:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 2843
+      userName: HULTEN
+      dateCreated: 2559884186
+      lastDateRead: 2865709970
+      lastDateWritten: 2559884187
+      dateCreatedStr: 1988-02-10 11:46:26
+      lastDateReadStr: 1992-11-07 20:14:18
+      lastDateWrittenStr: 1988-02-10 11:46:27
+      bpunValid: null
+    - name: UTINT:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1411
+      userName: HULTEN
+      dateCreated: 2559884193
+      lastDateRead: 2865709981
+      lastDateWritten: 2559884193
+      dateCreatedStr: 1988-02-10 11:46:33
+      lastDateReadStr: 1992-11-07 20:14:29
+      lastDateWrittenStr: 1988-02-10 11:46:33
+      bpunValid: null
+    - name: DUMP-MEMORY:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 477
+      userName: HULTEN
+      dateCreated: 2559884200
+      lastDateRead: 2865709989
+      lastDateWritten: 2559884200
+      dateCreatedStr: 1988-02-10 11:46:40
+      lastDateReadStr: 1992-11-07 20:14:37
+      lastDateWrittenStr: 1988-02-10 11:46:40
+      bpunValid: null
+    - name: DUMP-BYTE-FILE:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1432
+      userName: HULTEN
+      dateCreated: 2559884208
+      lastDateRead: 2865710001
+      lastDateWritten: 2559884208
+      dateCreatedStr: 1988-02-10 11:46:48
+      lastDateReadStr: 1992-11-07 20:14:49
+      lastDateWrittenStr: 1988-02-10 11:46:48
+      bpunValid: null
+    - name: ERROR-DEVICE:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 162
+      userName: HULTEN
+      dateCreated: 2559884211
+      lastDateRead: 2865710010
+      lastDateWritten: 2559884211
+      dateCreatedStr: 1988-02-10 11:46:51
+      lastDateReadStr: 1992-11-07 20:14:58
+      lastDateWrittenStr: 1988-02-10 11:46:51
+      bpunValid: null
+    - name: MOSA:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 354
+      userName: HULTEN
+      dateCreated: 2558978498
+      lastDateRead: 2865710023
+      lastDateWritten: 2558978500
+      dateCreatedStr: 1988-02-03 14:39:02
+      lastDateReadStr: 1992-11-07 20:15:07
+      lastDateWrittenStr: 1988-02-03 14:39:04
+      bpunValid: null
+    - name: MAKE-INCRUNCH:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 311
+      userName: HULTEN
+      dateCreated: 2559884378
+      lastDateRead: 2865710031
+      lastDateWritten: 2559884378
+      dateCreatedStr: 1988-02-10 11:49:26
+      lastDateReadStr: 1992-11-07 20:15:15
+      lastDateWrittenStr: 1988-02-10 11:49:26
+      bpunValid: null
+    - name: RECRUNCHER:SYMB
+      type: SYMB
+      pages: 4
+      bytes: 7718
+      userName: HULTEN
+      dateCreated: 2564877798
+      lastDateRead: 2865710039
+      lastDateWritten: 2564878001
+      dateCreatedStr: 1988-03-16 14:55:38
+      lastDateReadStr: 1992-11-07 20:15:23
+      lastDateWrittenStr: 1988-03-16 14:58:49
+      bpunValid: null
+    - name: 0-RECRUNCHER:SYMB
+      type: SYMB
+      pages: 4
+      bytes: 7503
+      userName: HULTEN
+      dateCreated: 2564878413
+      lastDateRead: 2865710055
+      lastDateWritten: 2564878555
+      dateCreatedStr: 1988-03-16 15:01:13
+      lastDateReadStr: 1992-11-07 20:15:39
+      lastDateWrittenStr: 1988-03-16 15:03:27
+      bpunValid: null
+    - name: 0-CRUNCHER:SYMB
+      type: SYMB
+      pages: 5
+      bytes: 4294967296
+      userName: HULTEN
+      dateCreated: 2564878452
+      lastDateRead: 2865710073
+      lastDateWritten: 2564878453
+      dateCreatedStr: 1988-03-16 15:01:52
+      lastDateReadStr: 1992-11-07 20:15:57
+      lastDateWrittenStr: 1988-03-16 15:01:53
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 300/ND-disk-00338b.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:45:48.272Z
+imagingLogs:
+  - ND-disk-00338b.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-b626d7ba523b
+  syncStatus: pending

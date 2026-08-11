@@ -1,0 +1,108 @@
+id: img-9dd6b2d003ba
+volumeName: XMSG
+md5: 9dd6b2d003baf29a3bb267b9212d231b
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 144
+  files:
+    - name: XMSG-KERN-CX-K01:BPUN
+      type: BPUN
+      pages: 24
+      bytes: 47634
+      userName: FLOPPY-USER
+      dateCreated: 2438809991
+      lastDateRead: 2461022645
+      lastDateWritten: 2438809993
+      dateCreatedStr: 1986-05-14 20:38:07
+      lastDateReadStr: 1986-10-24 03:38:53
+      lastDateWrittenStr: 1986-05-14 20:38:09
+      bpunValid: true
+    - name: XMSG-XROU-CX-K01:BPUN
+      type: BPUN
+      pages: 43
+      bytes: 79202
+      userName: FLOPPY-USER
+      dateCreated: 2438810013
+      lastDateRead: 2466956009
+      lastDateWritten: 2438810014
+      dateCreatedStr: 1986-05-14 20:38:29
+      lastDateReadStr: 1986-12-05 12:11:41
+      lastDateWrittenStr: 1986-05-14 20:38:30
+      bpunValid: true
+    - name: XMSG-SYMB-CX-K01:SYMB
+      type: SYMB
+      pages: 13
+      bytes: 26465
+      userName: FLOPPY-USER
+      dateCreated: 2438810056
+      lastDateRead: 2466956020
+      lastDateWritten: 2438810057
+      dateCreatedStr: 1986-05-14 20:39:08
+      lastDateReadStr: 1986-12-05 12:11:52
+      lastDateWrittenStr: 1986-05-14 20:39:09
+      bpunValid: null
+    - name: XMSG-LOAD-CX-K01:MODE
+      type: MODE
+      pages: 1
+      bytes: 1595
+      userName: FLOPPY-USER
+      dateCreated: 2438810071
+      lastDateRead: 2466956025
+      lastDateWritten: 2438810072
+      dateCreatedStr: 1986-05-14 20:39:23
+      lastDateReadStr: 1986-12-05 12:11:57
+      lastDateWrittenStr: 1986-05-14 20:39:24
+      bpunValid: null
+    - name: XMSG-KERN-NX-K01:BPUN
+      type: BPUN
+      pages: 13
+      bytes: 25032
+      userName: FLOPPY-USER
+      dateCreated: 2438810076
+      lastDateRead: 2466956032
+      lastDateWritten: 2438810077
+      dateCreatedStr: 1986-05-14 20:39:28
+      lastDateReadStr: 1986-12-05 12:12:00
+      lastDateWrittenStr: 1986-05-14 20:39:29
+      bpunValid: true
+    - name: XMSG-XROU-NX-K01:BPUN
+      type: BPUN
+      pages: 43
+      bytes: 78974
+      userName: FLOPPY-USER
+      dateCreated: 2438810091
+      lastDateRead: 2466956037
+      lastDateWritten: 2438810092
+      dateCreatedStr: 1986-05-14 20:39:43
+      lastDateReadStr: 1986-12-05 12:12:05
+      lastDateWrittenStr: 1986-05-14 20:39:44
+      bpunValid: true
+provenance:
+  contributor: gandalf
+  originalPath: 300/ND-disk-00349.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:45:49.934Z
+imagingLogs:
+  - ND-disk-00349.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-9dd6b2d003ba
+  syncStatus: pending

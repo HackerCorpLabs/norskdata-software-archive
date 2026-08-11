@@ -1,0 +1,77 @@
+id: nd-210628-f02-d2-73626e14
+volumeName: 210628F02-XX-02S
+md5: 73626e141044033a03f8c1638a80222f
+product:
+  id: ND-210628
+  version: F02
+  diskNumber: 2
+  language: XX
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: flomon
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 57
+  files:
+    - name: FLOPPY-MON-H01:BPUN
+      type: BPUN
+      pages: 3
+      bytes: 4332
+      userName: FLOPPY-USER
+      dateCreated: 2458311482
+      lastDateRead: 2625949162
+      lastDateWritten: 2458311532
+      dateCreatedStr: 1986-10-03 13:44:58
+      lastDateReadStr: 1989-02-02 12:55:42
+      lastDateWrittenStr: 1986-10-03 13:45:44
+      bpunValid: true
+    - name: MCOPY-TANDB-P07:BPUN
+      type: BPUN
+      pages: 23
+      bytes: 39174
+      userName: FLOPPY-USER
+      dateCreated: 2622152133
+      lastDateRead: 2625949169
+      lastDateWritten: 2622152135
+      dateCreatedStr: 1989-01-05 13:55:05
+      lastDateReadStr: 1989-02-02 12:55:49
+      lastDateWrittenStr: 1989-01-05 13:55:07
+      bpunValid: true
+    - name: FILSYS-INV-Q06:BPUN
+      type: BPUN
+      pages: 27
+      bytes: 53868
+      userName: FLOPPY-USER
+      dateCreated: 2622152772
+      lastDateRead: 2625949236
+      lastDateWritten: 2622152773
+      dateCreatedStr: 1989-01-05 14:01:04
+      lastDateReadStr: 1989-02-02 12:56:52
+      lastDateWrittenStr: 1989-01-05 14:01:05
+      bpunValid: true
+provenance:
+  contributor: gandalf
+  originalPath: 500/ND-disk-00510.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:50:40.678Z
+imagingLogs:
+  - ND-disk-00510.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-210628-f02-d2-73626e14
+  syncStatus: pending

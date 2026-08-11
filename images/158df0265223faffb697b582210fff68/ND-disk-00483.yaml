@@ -1,0 +1,48 @@
+id: os-n-100-1001-i-158df026
+volumeName: N-100-1001-II
+md5: 158df0265223faffb697b582210fff68
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: SYSTEM
+      pagesUsed: 148
+  files:
+    - name: SINTRAN-II:DATA
+      type: DATA
+      pages: 147
+      bytes: 225913
+      userName: SYSTEM
+      dateCreated: 2423845734
+      lastDateRead: 2423845739
+      lastDateWritten: 2423845739
+      dateCreatedStr: 1986-01-28 15:13:38
+      lastDateReadStr: 1986-01-28 15:13:43
+      lastDateWrittenStr: 1986-01-28 15:13:43
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 400/ND-disk-00483.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:49:57.719Z
+imagingLogs:
+  - ND-disk-00483.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-os-n-100-1001-i-158df026
+  syncStatus: pending

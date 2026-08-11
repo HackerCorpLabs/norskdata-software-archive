@@ -1,0 +1,63 @@
+id: nd-10315-b-d1-43c0f074
+volumeName: ND-10315B
+md5: 43c0f0748f9a43b32a7d1b397acd7c26
+product:
+  id: ND-10315
+  version: B
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 51
+  files:
+    - name: ACC-SERV-PR-B:BPUN
+      type: BPUN
+      pages: 39
+      bytes: 78710
+      userName: FLOPPY-USER
+      dateCreated: 2119644236
+      lastDateRead: null
+      lastDateWritten: 2119644243
+      dateCreatedStr: 1981-09-11 19:17:12
+      lastDateReadStr: null
+      lastDateWrittenStr: 1981-09-11 19:17:19
+      bpunValid: true
+    - name: ACCRT-B:BPUN
+      type: BPUN
+      pages: 9
+      bytes: 16948
+      userName: FLOPPY-USER
+      dateCreated: 2119644294
+      lastDateRead: null
+      lastDateWritten: 2119644295
+      dateCreatedStr: 1981-09-11 19:18:06
+      lastDateReadStr: null
+      lastDateWrittenStr: 1981-09-11 19:18:07
+      bpunValid: true
+provenance:
+  contributor: gandalf
+  originalPath: 400/ND-disk-00460b.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:49:47.940Z
+imagingLogs:
+  - ND-disk-00460b.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10315-b-d1-43c0f074
+  syncStatus: pending

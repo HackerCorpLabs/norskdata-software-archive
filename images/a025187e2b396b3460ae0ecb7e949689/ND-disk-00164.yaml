@@ -1,0 +1,161 @@
+id: nd-211129-a00-d1-a025187e
+volumeName: 211129A00-EN-01D
+md5: a025187e2b396b3460ae0ecb7e949689
+product:
+  id: ND-211129
+  version: A00
+  diskNumber: 1
+  language: EN
+image:
+  sizeBytes: 1310720
+  format: raw
+  controller: floppy
+  totalPages: 640
+  pageSize: 2048
+  bootFormat: binary
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 217
+  files:
+    - name: BUAS-INSTALL-A00:PROG
+      type: PROG
+      pages: 48
+      bytes: 161708
+      userName: FLOPPY-USER
+      dateCreated: 2502736565
+      lastDateRead: 2583884724
+      lastDateWritten: 2502736568
+      dateCreatedStr: 1987-04-22 11:42:53
+      lastDateReadStr: 1988-08-01 15:14:52
+      lastDateWrittenStr: 1987-04-22 11:42:56
+      bpunValid: null
+    - name: BUAS-INSTALL-A00:MODE
+      type: MODE
+      pages: 1
+      bytes: 129
+      userName: FLOPPY-USER
+      dateCreated: 2502736596
+      lastDateRead: 2583884723
+      lastDateWritten: 2502736598
+      dateCreatedStr: 1987-04-22 11:43:20
+      lastDateReadStr: 1988-08-01 15:14:51
+      lastDateWrittenStr: 1987-04-22 11:43:22
+      bpunValid: null
+    - name: BUAS-A00:PROG
+      type: PROG
+      pages: 92
+      bytes: 253952
+      userName: FLOPPY-USER
+      dateCreated: 2502736601
+      lastDateRead: 2583884816
+      lastDateWritten: 2502747525
+      dateCreatedStr: 1987-04-22 11:43:25
+      lastDateReadStr: 1988-08-01 15:16:16
+      lastDateWrittenStr: 1987-04-22 14:22:05
+      bpunValid: null
+    - name: BUAS-START-A00:MODE
+      type: MODE
+      pages: 1
+      bytes: 653
+      userName: FLOPPY-USER
+      dateCreated: 2502736667
+      lastDateRead: 2583884811
+      lastDateWritten: 2502736668
+      dateCreatedStr: 1987-04-22 11:44:27
+      lastDateReadStr: 1988-08-01 15:16:11
+      lastDateWrittenStr: 1987-04-22 11:44:28
+      bpunValid: null
+    - name: BUAS-STOP-A00:MODE
+      type: MODE
+      pages: 1
+      bytes: 305
+      userName: FLOPPY-USER
+      dateCreated: 2502736672
+      lastDateRead: 2583884813
+      lastDateWritten: 2502736673
+      dateCreatedStr: 1987-04-22 11:44:32
+      lastDateReadStr: 1988-08-01 15:16:13
+      lastDateWrittenStr: 1987-04-22 11:44:33
+      bpunValid: null
+    - name: BUAS-J-MN373-A00:MODE
+      type: MODE
+      pages: 4
+      bytes: 6831
+      userName: FLOPPY-USER
+      dateCreated: 2502736677
+      lastDateRead: null
+      lastDateWritten: 2502736678
+      dateCreatedStr: 1987-04-22 11:44:37
+      lastDateReadStr: null
+      lastDateWrittenStr: 1987-04-22 11:44:38
+      bpunValid: null
+    - name: BUAS-J-MN373-A00:OBJ
+      type: OBJ
+      pages: 6
+      bytes: 11288
+      userName: FLOPPY-USER
+      dateCreated: 2502736684
+      lastDateRead: null
+      lastDateWritten: 2502736685
+      dateCreatedStr: 1987-04-22 11:44:44
+      lastDateReadStr: null
+      lastDateWrittenStr: 1987-04-22 11:44:45
+      bpunValid: null
+    - name: BUAS-J-DEFS-A00:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 3827
+      userName: FLOPPY-USER
+      dateCreated: 2502736692
+      lastDateRead: null
+      lastDateWritten: 2502736694
+      dateCreatedStr: 1987-04-22 11:44:52
+      lastDateReadStr: null
+      lastDateWrittenStr: 1987-04-22 11:44:54
+      bpunValid: null
+    - name: BUAS-K-MN373-A00:MODE
+      type: MODE
+      pages: 34
+      bytes: 18673
+      userName: FLOPPY-USER
+      dateCreated: 2502736698
+      lastDateRead: 2461059764
+      lastDateWritten: 2502736704
+      dateCreatedStr: 1987-04-22 11:44:58
+      lastDateReadStr: 1986-10-24 12:42:52
+      lastDateWrittenStr: 1987-04-22 11:45:00
+      bpunValid: null
+    - name: BUAS-CONFIG-ENA0:PROG
+      type: PROG
+      pages: 17
+      bytes: 266240
+      userName: FLOPPY-USER
+      dateCreated: 2502736734
+      lastDateRead: 2504831156
+      lastDateWritten: 2502736735
+      dateCreatedStr: 1987-04-22 11:45:30
+      lastDateReadStr: 1987-05-06 11:02:52
+      lastDateWrittenStr: 1987-04-22 11:45:31
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 100/ND-disk-00164.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:26:00.487Z
+imagingLogs:
+  - ND-disk-00164.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-211129-a00-d1-a025187e
+  syncStatus: pending

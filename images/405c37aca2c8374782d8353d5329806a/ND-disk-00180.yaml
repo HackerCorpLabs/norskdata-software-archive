@@ -1,0 +1,185 @@
+id: nd-210518-c03-d2-405c37ac
+volumeName: 210518C03-XX-02D
+md5: 405c37aca2c8374782d8353d5329806a
+product:
+  id: ND-210518
+  version: C03
+  diskNumber: 2
+  language: XX
+image:
+  sizeBytes: 1310720
+  format: raw
+  controller: floppy
+  totalPages: 640
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 382
+  files:
+    - name: UE-FUNC-C03:PROG
+      type: PROG
+      pages: 122
+      bytes: 264192
+      userName: FLOPPY-USER
+      dateCreated: 2580081925
+      lastDateRead: 2591621162
+      lastDateWritten: 2580081927
+      dateCreatedStr: 1988-07-04 14:52:05
+      lastDateReadStr: 1988-09-28 16:00:42
+      lastDateWrittenStr: 1988-07-04 14:52:07
+      bpunValid: null
+    - name: NDP-COMPILER-E:PROG
+      type: PROG
+      pages: 35
+      bytes: 151552
+      userName: FLOPPY-USER
+      dateCreated: 2580082023
+      lastDateRead: 2591620775
+      lastDateWritten: 2580082024
+      dateCreatedStr: 1988-07-04 14:53:39
+      lastDateReadStr: 1988-09-28 15:58:39
+      lastDateWrittenStr: 1988-07-04 14:53:40
+      bpunValid: null
+    - name: UE-PSERVER-C03:PROG
+      type: PROG
+      pages: 87
+      bytes: 196608
+      userName: FLOPPY-USER
+      dateCreated: 2580082061
+      lastDateRead: 2591621132
+      lastDateWritten: 2580082062
+      dateCreatedStr: 1988-07-04 14:54:13
+      lastDateReadStr: 1988-09-28 16:00:12
+      lastDateWrittenStr: 1988-07-04 14:54:14
+      bpunValid: null
+    - name: UE-PLIB-C02:DEFS
+      type: DEFS
+      pages: 2
+      bytes: 3171
+      userName: FLOPPY-USER
+      dateCreated: 2580082157
+      lastDateRead: 2591621126
+      lastDateWritten: 2580082159
+      dateCreatedStr: 1988-07-04 14:55:45
+      lastDateReadStr: 1988-09-28 16:00:06
+      lastDateWrittenStr: 1988-07-04 14:55:47
+      bpunValid: null
+    - name: UE-PLIB-C00:IMPT
+      type: IMPT
+      pages: 2
+      bytes: 2578
+      userName: FLOPPY-USER
+      dateCreated: 2580082164
+      lastDateRead: 2591621120
+      lastDateWritten: 2580082165
+      dateCreatedStr: 1988-07-04 14:55:52
+      lastDateReadStr: 1988-09-28 16:00:00
+      lastDateWrittenStr: 1988-07-04 14:55:53
+      bpunValid: null
+    - name: UE-PLIB-P1-C03:BRF
+      type: BRF
+      pages: 34
+      bytes: 69373
+      userName: FLOPPY-USER
+      dateCreated: 2580082170
+      lastDateRead: 2591620792
+      lastDateWritten: 2580082171
+      dateCreatedStr: 1988-07-04 14:55:58
+      lastDateReadStr: 1988-09-28 15:58:56
+      lastDateWrittenStr: 1988-07-04 14:55:59
+      bpunValid: null
+    - name: UE-PLIB-D1-C03:BRF
+      type: BRF
+      pages: 1
+      bytes: 753
+      userName: FLOPPY-USER
+      dateCreated: 2580082217
+      lastDateRead: 2591620811
+      lastDateWritten: 2580082219
+      dateCreatedStr: 1988-07-04 14:56:41
+      lastDateReadStr: 1988-09-28 15:59:11
+      lastDateWrittenStr: 1988-07-04 14:56:43
+      bpunValid: null
+    - name: UE-PLIB-P2-C03:BRF
+      type: BRF
+      pages: 36
+      bytes: 72571
+      userName: FLOPPY-USER
+      dateCreated: 2580082223
+      lastDateRead: 2591620817
+      lastDateWritten: 2580082226
+      dateCreatedStr: 1988-07-04 14:56:47
+      lastDateReadStr: 1988-09-28 15:59:17
+      lastDateWrittenStr: 1988-07-04 14:56:50
+      bpunValid: null
+    - name: UE-PLIB-D2-C03:BRF
+      type: BRF
+      pages: 1
+      bytes: 777
+      userName: FLOPPY-USER
+      dateCreated: 2580082275
+      lastDateRead: 2591620833
+      lastDateWritten: 2580082276
+      dateCreatedStr: 1988-07-04 14:57:35
+      lastDateReadStr: 1988-09-28 15:59:33
+      lastDateWrittenStr: 1988-07-04 14:57:36
+      bpunValid: null
+    - name: UE-PLIB-P5-C03:NRF
+      type: NRF
+      pages: 32
+      bytes: 64840
+      userName: FLOPPY-USER
+      dateCreated: 2580082280
+      lastDateRead: 2591620839
+      lastDateWritten: 2580082281
+      dateCreatedStr: 1988-07-04 14:57:40
+      lastDateReadStr: 1988-09-28 15:59:39
+      lastDateWrittenStr: 1988-07-04 14:57:41
+      bpunValid: null
+    - name: UE-PLIB-D5-C03:NRF
+      type: NRF
+      pages: 1
+      bytes: 972
+      userName: FLOPPY-USER
+      dateCreated: 2580082329
+      lastDateRead: 2591620854
+      lastDateWritten: 2580082330
+      dateCreatedStr: 1988-07-04 14:58:25
+      lastDateReadStr: 1988-09-28 15:59:54
+      lastDateWrittenStr: 1988-07-04 14:58:26
+      bpunValid: null
+    - name: DDBTABLES-E09:VTM
+      type: VTM
+      pages: 16
+      bytes: 32598
+      userName: FLOPPY-USER
+      dateCreated: 2580082338
+      lastDateRead: 2634725966
+      lastDateWritten: 2580082339
+      dateCreatedStr: 1988-07-04 14:58:34
+      lastDateReadStr: 1989-04-05 11:41:14
+      lastDateWrittenStr: 1988-07-04 14:58:35
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 100/ND-disk-00180.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:26:02.993Z
+imagingLogs:
+  - ND-disk-00180.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-210518-c03-d2-405c37ac
+  syncStatus: pending

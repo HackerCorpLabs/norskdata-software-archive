@@ -1,0 +1,149 @@
+id: nd-211090-c01-d1-cfc4771c
+volumeName: 211090C01-XX-01D
+md5: cfc4771cca5776f0bd8d5e3fc1ecd710
+product:
+  id: ND-211090
+  version: C01
+  diskNumber: 1
+  language: XX
+image:
+  sizeBytes: 1310720
+  format: raw
+  controller: floppy
+  totalPages: 640
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 568
+  files:
+    - name: UE-MENU-C00:PROG
+      type: PROG
+      pages: 1
+      bytes: 738
+      userName: FLOPPY-USER
+      dateCreated: 2496080049
+      lastDateRead: 2504847886
+      lastDateWritten: 2496080050
+      dateCreatedStr: 1987-03-03 18:34:49
+      lastDateReadStr: 1987-05-06 15:08:14
+      lastDateWrittenStr: 1987-03-03 18:34:50
+      bpunValid: null
+    - name: UE-RUN-C01:PROG
+      type: PROG
+      pages: 122
+      bytes: 264192
+      userName: FLOPPY-USER
+      dateCreated: 2497879011
+      lastDateRead: 2504847899
+      lastDateWritten: 2497879013
+      dateCreatedStr: 1987-03-17 09:47:35
+      lastDateReadStr: 1987-05-06 15:08:27
+      lastDateWrittenStr: 1987-03-17 09:47:37
+      bpunValid: null
+    - name: UE-PMAN-C01:PROG
+      type: PROG
+      pages: 103
+      bytes: 219136
+      userName: FLOPPY-USER
+      dateCreated: 2496080098
+      lastDateRead: 2504847974
+      lastDateWritten: 2496080099
+      dateCreatedStr: 1987-03-03 18:35:34
+      lastDateReadStr: 1987-05-06 15:09:38
+      lastDateWrittenStr: 1987-03-03 18:35:35
+      bpunValid: null
+    - name: UE-FUNC-C01:PROG
+      type: PROG
+      pages: 121
+      bytes: 264192
+      userName: FLOPPY-USER
+      dateCreated: 2496080137
+      lastDateRead: 2504848040
+      lastDateWritten: 2496101078
+      dateCreatedStr: 1987-03-03 18:36:09
+      lastDateReadStr: 1987-05-06 15:10:40
+      lastDateWrittenStr: 1987-03-03 23:43:22
+      bpunValid: null
+    - name: NDP-COMPILER-E:PROG
+      type: PROG
+      pages: 33
+      bytes: 67584
+      userName: FLOPPY-USER
+      dateCreated: 2496080178
+      lastDateRead: 2504848115
+      lastDateWritten: 2496080180
+      dateCreatedStr: 1987-03-03 18:36:50
+      lastDateReadStr: 1987-05-06 15:11:51
+      lastDateWrittenStr: 1987-03-03 18:36:52
+      bpunValid: null
+    - name: UE-PSERVER-C01:PROG
+      type: PROG
+      pages: 85
+      bytes: 196608
+      userName: FLOPPY-USER
+      dateCreated: 2496080199
+      lastDateRead: 2504848155
+      lastDateWritten: 2496080243
+      dateCreatedStr: 1987-03-03 18:37:07
+      lastDateReadStr: 1987-05-06 15:12:27
+      lastDateWrittenStr: 1987-03-03 18:37:51
+      bpunValid: null
+    - name: UE-ST-LAMU-C01:PROG
+      type: PROG
+      pages: 8
+      bytes: 137216
+      userName: FLOPPY-USER
+      dateCreated: 2496316248
+      lastDateRead: null
+      lastDateWritten: 2496316249
+      dateCreatedStr: 1987-03-05 12:13:24
+      lastDateReadStr: null
+      lastDateWrittenStr: 1987-03-05 12:13:25
+      bpunValid: null
+    - name: DDBTABLES-E04:VTM
+      type: VTM
+      pages: 11
+      bytes: 20756
+      userName: FLOPPY-USER
+      dateCreated: 2496316353
+      lastDateRead: null
+      lastDateWritten: 2496316355
+      dateCreatedStr: 1987-03-05 12:15:01
+      lastDateReadStr: null
+      lastDateWrittenStr: 1987-03-05 12:15:03
+      bpunValid: null
+    - name: UE-ERMSG-EN-C01:ERR
+      type: ERR
+      pages: 74
+      bytes: 150528
+      userName: FLOPPY-USER
+      dateCreated: 2497514816
+      lastDateRead: 2504840403
+      lastDateWritten: 2497514818
+      dateCreatedStr: 1987-03-14 16:53:00
+      lastDateReadStr: 1987-05-06 13:19:19
+      lastDateWrittenStr: 1987-03-14 16:53:02
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 100/ND-disk-00110.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:25:51.572Z
+imagingLogs:
+  - ND-disk-00110.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-211090-c01-d1-cfc4771c
+  syncStatus: pending

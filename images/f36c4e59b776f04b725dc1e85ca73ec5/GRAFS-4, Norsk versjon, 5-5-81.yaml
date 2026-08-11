@@ -12,6 +12,7 @@ image:
   totalPages: 154
   pageSize: 2048
   bootFormat: none
+filesystem: ndfs
 ndfs:
   users:
     - name: GRAFS-USER

@@ -1,0 +1,221 @@
+id: nd-211066-d10-d1-4239a4e7
+volumeName: 211066D10-SW-01D
+md5: 4239a4e7ca1e8c383cd1b6e3bd3fb626
+product:
+  id: ND-211066
+  version: D10
+  diskNumber: 1
+  language: SW
+image:
+  sizeBytes: 1310720
+  format: raw
+  controller: floppy
+  totalPages: 640
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 541
+  files:
+    - name: INST-RP-500-D10:PROG
+      type: PROG
+      pages: 64
+      bytes: 190464
+      userName: FLOPPY-USER
+      dateCreated: 2667107947
+      lastDateRead: 2668167774
+      lastDateWritten: 2667107952
+      dateCreatedStr: 1989-11-28 13:25:43
+      lastDateReadStr: 1989-12-04 16:09:30
+      lastDateWrittenStr: 1989-11-28 13:25:48
+      bpunValid: null
+    - name: RP-SETUP-D10:XCOM
+      type: XCOM
+      pages: 5
+      bytes: 8169
+      userName: FLOPPY-USER
+      dateCreated: 2667107995
+      lastDateRead: 2668167788
+      lastDateWritten: 2667107996
+      dateCreatedStr: 1989-11-28 13:26:27
+      lastDateReadStr: 1989-12-04 16:09:44
+      lastDateWrittenStr: 1989-11-28 13:26:28
+      bpunValid: null
+    - name: RGP-SI-DUMMY-D10:NRF
+      type: NRF
+      pages: 9
+      bytes: 16692
+      userName: FLOPPY-USER
+      dateCreated: 2667108002
+      lastDateRead: 2668167865
+      lastDateWritten: 2667108003
+      dateCreatedStr: 1989-11-28 13:26:34
+      lastDateReadStr: 1989-12-04 16:10:57
+      lastDateWrittenStr: 1989-11-28 13:26:35
+      bpunValid: null
+    - name: RG-CONFIG-SW-D:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 619
+      userName: FLOPPY-USER
+      dateCreated: 2667108011
+      lastDateRead: null
+      lastDateWritten: 2667108013
+      dateCreatedStr: 1989-11-28 13:26:43
+      lastDateReadStr: null
+      lastDateWrittenStr: 1989-11-28 13:26:45
+      bpunValid: null
+    - name: SM-STD-SW-H00:ALPH
+      type: ALPH
+      pages: 1
+      bytes: 1392
+      userName: FLOPPY-USER
+      dateCreated: 2667108016
+      lastDateRead: null
+      lastDateWritten: 2667108017
+      dateCreatedStr: 1989-11-28 13:26:48
+      lastDateReadStr: null
+      lastDateWrittenStr: 1989-11-28 13:26:49
+      bpunValid: null
+    - name: DESCRIPTION-FILE:DESC
+      type: DESC
+      pages: 8
+      bytes: 22528
+      userName: FLOPPY-USER
+      dateCreated: 2667108024
+      lastDateRead: 2668167970
+      lastDateWritten: 2667108651
+      dateCreatedStr: 1989-11-28 13:26:56
+      lastDateReadStr: 1989-12-04 16:12:34
+      lastDateWrittenStr: 1989-11-28 13:36:43
+      bpunValid: null
+    - name: SCRATCH-SEG-01:LINK
+      type: LINK
+      pages: 0
+      bytes: 4294967296
+      userName: FLOPPY-USER
+      dateCreated: 2667108037
+      lastDateRead: 2667108038
+      lastDateWritten: 2667108038
+      dateCreatedStr: 1989-11-28 13:27:05
+      lastDateReadStr: 1989-11-28 13:27:06
+      lastDateWrittenStr: 1989-11-28 13:27:06
+      bpunValid: null
+    - name: SCRATCH-SEG-01:DSEG
+      type: DSEG
+      pages: 1
+      bytes: 1029
+      userName: FLOPPY-USER
+      dateCreated: 2667108039
+      lastDateRead: 2667108054
+      lastDateWritten: 2667108040
+      dateCreatedStr: 1989-11-28 13:27:07
+      lastDateReadStr: 1989-11-28 13:27:22
+      lastDateWrittenStr: 1989-11-28 13:27:08
+      bpunValid: null
+    - name: SCRATCH-SEG-01:PSEG
+      type: PSEG
+      pages: 1
+      bytes: 5
+      userName: FLOPPY-USER
+      dateCreated: 2667108041
+      lastDateRead: 2667108043
+      lastDateWritten: 2667108043
+      dateCreatedStr: 1989-11-28 13:27:09
+      lastDateReadStr: 1989-11-28 13:27:11
+      lastDateWrittenStr: 1989-11-28 13:27:11
+      bpunValid: null
+    - name: NOTIS-RP-SW-D10:LINK
+      type: LINK
+      pages: 23
+      bytes: 45249
+      userName: FLOPPY-USER
+      dateCreated: 2667108064
+      lastDateRead: 2668167889
+      lastDateWritten: 2667108065
+      dateCreatedStr: 1989-11-28 13:27:32
+      lastDateReadStr: 1989-12-04 16:11:17
+      lastDateWrittenStr: 1989-11-28 13:27:33
+      bpunValid: null
+    - name: NOTIS-RP-SW-D10:DSEG
+      type: DSEG
+      pages: 99
+      bytes: 203321
+      userName: FLOPPY-USER
+      dateCreated: 2667108066
+      lastDateRead: 2668167889
+      lastDateWritten: 2667108067
+      dateCreatedStr: 1989-11-28 13:27:34
+      lastDateReadStr: 1989-12-04 16:11:17
+      lastDateWrittenStr: 1989-11-28 13:27:35
+      bpunValid: null
+    - name: NOTIS-RP-SW-D10:PSEG
+      type: PSEG
+      pages: 187
+      bytes: 381462
+      userName: FLOPPY-USER
+      dateCreated: 2667108067
+      lastDateRead: 2668167888
+      lastDateWritten: 2667108068
+      dateCreatedStr: 1989-11-28 13:27:35
+      lastDateReadStr: 1989-12-04 16:11:16
+      lastDateWrittenStr: 1989-11-28 13:27:36
+      bpunValid: null
+    - name: RP-START-SW-D10:LINK
+      type: LINK
+      pages: 15
+      bytes: 28929
+      userName: FLOPPY-USER
+      dateCreated: 2667108437
+      lastDateRead: 2668167975
+      lastDateWritten: 2667108439
+      dateCreatedStr: 1989-11-28 13:33:21
+      lastDateReadStr: 1989-12-04 16:12:39
+      lastDateWrittenStr: 1989-11-28 13:33:23
+      bpunValid: null
+    - name: RP-START-SW-D10:DSEG
+      type: DSEG
+      pages: 31
+      bytes: 92161
+      userName: FLOPPY-USER
+      dateCreated: 2667108440
+      lastDateRead: 2668167975
+      lastDateWritten: 2667108441
+      dateCreatedStr: 1989-11-28 13:33:24
+      lastDateReadStr: 1989-12-04 16:12:39
+      lastDateWrittenStr: 1989-11-28 13:33:25
+      bpunValid: null
+    - name: RP-START-SW-D10:PSEG
+      type: PSEG
+      pages: 81
+      bytes: 165314
+      userName: FLOPPY-USER
+      dateCreated: 2667108442
+      lastDateRead: 2668167974
+      lastDateWritten: 2667108443
+      dateCreatedStr: 1989-11-28 13:33:26
+      lastDateReadStr: 1989-12-04 16:12:38
+      lastDateWrittenStr: 1989-11-28 13:33:27
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 200/ND-disk-00214.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:41:43.815Z
+imagingLogs:
+  - ND-disk-00214.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-211066-d10-d1-4239a4e7
+  syncStatus: pending

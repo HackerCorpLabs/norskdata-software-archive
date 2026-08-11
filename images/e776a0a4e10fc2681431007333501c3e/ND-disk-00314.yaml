@@ -1,0 +1,444 @@
+id: img-e776a0a4e10f
+volumeName: MAGNUS-2
+md5: e776a0a4e10fc2681431007333501c3e
+image:
+  sizeBytes: 319488
+  format: raw
+  controller: floppy
+  totalPages: 156
+  pageSize: 2048
+  bootFormat: bpun
+filesystem: ndfs
+ndfs:
+  users:
+    - name: DNF
+      pagesUsed: 147
+  files:
+    - name: KANT:SYMB
+      type: SYMB
+      pages: 6
+      bytes: 11711
+      userName: DNF
+      dateCreated: 2034710252
+      lastDateRead: 2499193348
+      lastDateWritten: 2034710261
+      dateCreatedStr: 1980-05-03 19:27:44
+      lastDateReadStr: 1987-03-27 10:40:04
+      lastDateWrittenStr: 1980-05-03 19:27:53
+      bpunValid: null
+    - name: TINCO:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1049
+      userName: DNF
+      dateCreated: 2037965697
+      lastDateRead: 2499193355
+      lastDateWritten: 2085818455
+      dateCreatedStr: 1980-05-28 14:14:01
+      lastDateReadStr: 1987-03-27 10:40:11
+      lastDateWrittenStr: 1981-01-09 17:01:23
+      bpunValid: null
+    - name: MAGIC:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1844
+      userName: DNF
+      dateCreated: 2037965737
+      lastDateRead: 2499193359
+      lastDateWritten: 2388737302
+      dateCreatedStr: 1980-05-28 14:14:41
+      lastDateReadStr: 1987-03-27 10:40:15
+      lastDateWrittenStr: 1985-09-16 19:52:22
+      bpunValid: null
+    - name: MAGIC:DATA
+      type: DATA
+      pages: 3
+      bytes: 4874
+      userName: DNF
+      dateCreated: 2037965764
+      lastDateRead: 2499193363
+      lastDateWritten: 2122659541
+      dateCreatedStr: 1980-05-28 14:15:04
+      lastDateReadStr: 1987-03-27 10:40:19
+      lastDateWrittenStr: 1981-10-02 19:27:21
+      bpunValid: null
+    - name: TEST-2:SYMB
+      type: SYMB
+      pages: 14
+      bytes: 27536
+      userName: DNF
+      dateCreated: 2054076069
+      lastDateRead: 2452965771
+      lastDateWritten: 2054076071
+      dateCreatedStr: 1980-09-23 11:26:37
+      lastDateReadStr: 1986-08-26 20:38:11
+      lastDateWrittenStr: 1980-09-23 11:26:39
+      bpunValid: null
+    - name: INFO-SCAN:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1194
+      userName: DNF
+      dateCreated: 2110058806
+      lastDateRead: 2452965780
+      lastDateWritten: 2110058808
+      dateCreatedStr: 1981-07-02 15:04:54
+      lastDateReadStr: 1986-08-26 20:38:20
+      lastDateWrittenStr: 1981-07-02 15:04:56
+      bpunValid: null
+    - name: MORD-MODE:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 64
+      userName: DNF
+      dateCreated: 2066283077
+      lastDateRead: 2452965789
+      lastDateWritten: 2183330145
+      dateCreatedStr: 1980-12-20 15:41:05
+      lastDateReadStr: 1986-08-26 20:38:29
+      lastDateWrittenStr: 1982-08-17 15:37:33
+      bpunValid: null
+    - name: SUPER-ELIZA:SYMB
+      type: SYMB
+      pages: 6
+      bytes: 10566
+      userName: DNF
+      dateCreated: 2093943914
+      lastDateRead: 2499198536
+      lastDateWritten: 2093943916
+      dateCreatedStr: 1981-03-07 16:49:42
+      lastDateReadStr: 1987-03-27 11:57:08
+      lastDateWrittenStr: 1981-03-07 16:49:44
+      bpunValid: null
+    - name: POLYNOMIALT:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 3355
+      userName: DNF
+      dateCreated: 2093945523
+      lastDateRead: 2452965841
+      lastDateWritten: 2093945525
+      dateCreatedStr: 1981-03-07 17:10:51
+      lastDateReadStr: 1986-08-26 20:39:17
+      lastDateWrittenStr: 1981-03-07 17:10:53
+      bpunValid: null
+    - name: KRIGISK-FRED:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 3997
+      userName: DNF
+      dateCreated: 2093945576
+      lastDateRead: 2452965850
+      lastDateWritten: 2093945577
+      dateCreatedStr: 1981-03-07 17:11:40
+      lastDateReadStr: 1986-08-26 20:39:26
+      lastDateWrittenStr: 1981-03-07 17:11:41
+      bpunValid: null
+    - name: DATA-TILL-KRIG:DATA
+      type: DATA
+      pages: 2
+      bytes: 2644
+      userName: DNF
+      dateCreated: 2093945628
+      lastDateRead: 2385831004
+      lastDateWritten: 2093945630
+      dateCreatedStr: 1981-03-07 17:12:28
+      lastDateReadStr: 1985-08-26 14:17:28
+      lastDateWrittenStr: 1981-03-07 17:12:30
+      bpunValid: null
+    - name: ASTRONOMI-TI5859:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 2643
+      userName: DNF
+      dateCreated: 2093945708
+      lastDateRead: 2452965861
+      lastDateWritten: 2093945709
+      dateCreatedStr: 1981-03-07 17:13:44
+      lastDateReadStr: 1986-08-26 20:39:37
+      lastDateWrittenStr: 1981-03-07 17:13:45
+      bpunValid: null
+    - name: TEXAS-TOLK:SYMB
+      type: SYMB
+      pages: 5
+      bytes: 9891
+      userName: DNF
+      dateCreated: 2093945777
+      lastDateRead: 2452965871
+      lastDateWritten: 2093945778
+      dateCreatedStr: 1981-03-07 17:14:49
+      lastDateReadStr: 1986-08-26 20:39:47
+      lastDateWrittenStr: 1981-03-07 17:14:50
+      bpunValid: null
+    - name: SEA-BATTLE:SYMB
+      type: SYMB
+      pages: 6
+      bytes: 10714
+      userName: DNF
+      dateCreated: 2102597751
+      lastDateRead: 2600123654
+      lastDateWritten: 2102597762
+      dateCreatedStr: 1981-05-09 17:33:55
+      lastDateReadStr: 1988-11-29 11:52:06
+      lastDateWrittenStr: 1981-05-09 17:34:02
+      bpunValid: null
+    - name: MUTANT:SYMB
+      type: SYMB
+      pages: 8
+      bytes: 16201
+      userName: DNF
+      dateCreated: 2102604518
+      lastDateRead: 2499198553
+      lastDateWritten: 2104951509
+      dateCreatedStr: 1981-05-09 19:11:38
+      lastDateReadStr: 1987-03-27 11:57:25
+      lastDateWrittenStr: 1981-05-27 16:11:21
+      bpunValid: null
+    - name: FRAND:DATA
+      type: DATA
+      pages: 12
+      bytes: 24068
+      userName: DNF
+      dateCreated: 2102711275
+      lastDateRead: 2499193454
+      lastDateWritten: 2104951690
+      dateCreatedStr: 1981-05-10 13:15:43
+      lastDateReadStr: 1987-03-27 10:41:46
+      lastDateWrittenStr: 1981-05-27 16:14:10
+      bpunValid: null
+    - name: ENVIRO-MD:DATA
+      type: DATA
+      pages: 1
+      bytes: 128
+      userName: DNF
+      dateCreated: 2104951793
+      lastDateRead: 2452965911
+      lastDateWritten: 2104951794
+      dateCreatedStr: 1981-05-27 16:15:49
+      lastDateReadStr: 1986-08-26 20:40:23
+      lastDateWrittenStr: 1981-05-27 16:15:50
+      bpunValid: null
+    - name: OUT-MD:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 2554
+      userName: DNF
+      dateCreated: 2104951864
+      lastDateRead: 2385831502
+      lastDateWritten: 2104951866
+      dateCreatedStr: 1981-05-27 16:16:56
+      lastDateReadStr: 1985-08-26 14:25:14
+      lastDateWrittenStr: 1981-05-27 16:16:58
+      bpunValid: null
+    - name: TITLES-MD:DATA
+      type: DATA
+      pages: 2
+      bytes: 2775
+      userName: DNF
+      dateCreated: 2104951903
+      lastDateRead: 2452965922
+      lastDateWritten: 2104951904
+      dateCreatedStr: 1981-05-27 16:17:31
+      lastDateReadStr: 1986-08-26 20:40:34
+      lastDateWrittenStr: 1981-05-27 16:17:32
+      bpunValid: null
+    - name: FEATURE-EDITOR:SYMB
+      type: SYMB
+      pages: 4
+      bytes: 6472
+      userName: DNF
+      dateCreated: 2104951928
+      lastDateRead: 2452965931
+      lastDateWritten: 2104951930
+      dateCreatedStr: 1981-05-27 16:17:56
+      lastDateReadStr: 1986-08-26 20:40:43
+      lastDateWrittenStr: 1981-05-27 16:17:58
+      bpunValid: null
+    - name: ANPASS-MD:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 3497
+      userName: DNF
+      dateCreated: 2104951962
+      lastDateRead: 2385831518
+      lastDateWritten: 2104951964
+      dateCreatedStr: 1981-05-27 16:18:26
+      lastDateReadStr: 1985-08-26 14:25:30
+      lastDateWrittenStr: 1981-05-27 16:18:28
+      bpunValid: null
+    - name: CHA-RAND:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 504
+      userName: DNF
+      dateCreated: 2104952021
+      lastDateRead: 2385831523
+      lastDateWritten: 2104952023
+      dateCreatedStr: 1981-05-27 16:19:21
+      lastDateReadStr: 1985-08-26 14:25:35
+      lastDateWrittenStr: 1981-05-27 16:19:23
+      bpunValid: null
+    - name: MATA-IN:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 505
+      userName: DNF
+      dateCreated: 2104952041
+      lastDateRead: 2385831527
+      lastDateWritten: 2104952043
+      dateCreatedStr: 1981-05-27 16:19:41
+      lastDateReadStr: 1985-08-26 14:25:39
+      lastDateWrittenStr: 1981-05-27 16:19:43
+      bpunValid: null
+    - name: INMAT:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 286
+      userName: DNF
+      dateCreated: 2104952103
+      lastDateRead: 2452965941
+      lastDateWritten: 2104952105
+      dateCreatedStr: 1981-05-27 16:20:39
+      lastDateReadStr: 1986-08-26 20:40:53
+      lastDateWrittenStr: 1981-05-27 16:20:41
+      bpunValid: null
+    - name: SUDDA-TISDAG:DATA
+      type: DATA
+      pages: 1
+      bytes: 2047
+      userName: DNF
+      dateCreated: 2104952146
+      lastDateRead: 2385831564
+      lastDateWritten: 2104952147
+      dateCreatedStr: 1981-05-27 16:21:18
+      lastDateReadStr: 1985-08-26 14:26:12
+      lastDateWrittenStr: 1981-05-27 16:21:19
+      bpunValid: null
+    - name: EXTRA-DJUR:DATA
+      type: DATA
+      pages: 1
+      bytes: 2029
+      userName: DNF
+      dateCreated: 2104952193
+      lastDateRead: 2385831571
+      lastDateWritten: 2104952194
+      dateCreatedStr: 1981-05-27 16:22:01
+      lastDateReadStr: 1985-08-26 14:26:19
+      lastDateWrittenStr: 1981-05-27 16:22:02
+      bpunValid: null
+    - name: SCAN-MD:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 2296
+      userName: DNF
+      dateCreated: 2104952229
+      lastDateRead: 2388737046
+      lastDateWritten: 2104952279
+      dateCreatedStr: 1981-05-27 16:22:37
+      lastDateReadStr: 1985-09-16 19:48:22
+      lastDateWrittenStr: 1981-05-27 16:23:23
+      bpunValid: null
+    - name: PLOT-MD:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 2239
+      userName: DNF
+      dateCreated: 2104953845
+      lastDateRead: 2385831580
+      lastDateWritten: 2104953846
+      dateCreatedStr: 1981-05-27 16:47:53
+      lastDateReadStr: 1985-08-26 14:26:28
+      lastDateWrittenStr: 1981-05-27 16:47:54
+      bpunValid: null
+    - name: RUBRIKS-CUBE:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 3575
+      userName: DNF
+      dateCreated: 2110058959
+      lastDateRead: 2647328460
+      lastDateWritten: 2110058961
+      dateCreatedStr: 1981-07-02 15:07:15
+      lastDateReadStr: 1989-07-05 16:27:12
+      lastDateWrittenStr: 1981-07-02 15:07:17
+      bpunValid: null
+    - name: NEW-MORDOR:SYMB
+      type: SYMB
+      pages: 9
+      bytes: 16961
+      userName: DNF
+      dateCreated: 2106542952
+      lastDateRead: 2499198597
+      lastDateWritten: 2157507678
+      dateCreatedStr: 1981-06-07 20:45:40
+      lastDateReadStr: 1987-03-27 11:58:05
+      lastDateWrittenStr: 1982-02-12 15:17:30
+      bpunValid: null
+    - name: 3-D-LABYRINT:SYMB
+      type: SYMB
+      pages: 5
+      bytes: 9846
+      userName: DNF
+      dateCreated: 2110058221
+      lastDateRead: 2499198610
+      lastDateWritten: 2388737204
+      dateCreatedStr: 1981-07-02 14:59:45
+      lastDateReadStr: 1987-03-27 11:58:18
+      lastDateWrittenStr: 1985-09-16 19:50:52
+      bpunValid: null
+    - name: BLACK-HOLE:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 923
+      userName: DNF
+      dateCreated: 2110060496
+      lastDateRead: 2499193525
+      lastDateWritten: 2110060497
+      dateCreatedStr: 1981-07-02 15:31:16
+      lastDateReadStr: 1987-03-27 10:42:53
+      lastDateWrittenStr: 1981-07-02 15:31:17
+      bpunValid: null
+    - name: KOPR-MD:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1418
+      userName: DNF
+      dateCreated: 2122659210
+      lastDateRead: 2452966058
+      lastDateWritten: 2122659217
+      dateCreatedStr: 1981-10-02 19:22:10
+      lastDateReadStr: 1986-08-26 20:42:42
+      lastDateWrittenStr: 1981-10-02 19:22:17
+      bpunValid: null
+    - name: STEEL-P-MD:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1738
+      userName: DNF
+      dateCreated: 2122659662
+      lastDateRead: 2452966068
+      lastDateWritten: 2122659663
+      dateCreatedStr: 1981-10-02 19:29:14
+      lastDateReadStr: 1986-08-26 20:42:52
+      lastDateWrittenStr: 1981-10-02 19:29:15
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 300/ND-disk-00314.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:45:44.305Z
+imagingLogs:
+  - ND-disk-00314.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-e776a0a4e10f
+  syncStatus: pending

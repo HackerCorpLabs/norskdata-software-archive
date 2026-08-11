@@ -1,0 +1,125 @@
+id: nd-210400-b00-d1-9cb614a4
+volumeName: 210400B00-XX-01D
+md5: 9cb614a4585fba6cca25c2ca5d69381e
+product:
+  id: ND-210400
+  version: B00
+  diskNumber: 1
+  language: XX
+image:
+  sizeBytes: 1310720
+  format: raw
+  controller: floppy
+  totalPages: 640
+  pageSize: 2048
+  bootFormat: flomon
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 118
+  files:
+    - name: FMAC-1408D:BPUN
+      type: BPUN
+      pages: 15
+      bytes: 28844
+      userName: FLOPPY-USER
+      dateCreated: 2263541428
+      lastDateRead: 2506677916
+      lastDateWritten: 2263541430
+      dateCreatedStr: 1983-11-21 14:26:52
+      lastDateReadStr: 1987-05-20 13:58:28
+      lastDateWrittenStr: 1983-11-21 14:26:54
+      bpunValid: true
+    - name: MAC-1415C:BPUN
+      type: BPUN
+      pages: 14
+      bytes: 28389
+      userName: FLOPPY-USER
+      dateCreated: 1816586163
+      lastDateRead: 2506677934
+      lastDateWritten: 1903994989
+      dateCreatedStr: 1977-01-03 14:30:51
+      lastDateReadStr: 1987-05-20 13:58:46
+      lastDateWrittenStr: 1978-05-30 10:33:45
+      bpunValid: true
+    - name: QED-1644L:BPUN
+      type: BPUN
+      pages: 9
+      bytes: 17520
+      userName: FLOPPY-USER
+      dateCreated: 1849481556
+      lastDateRead: 2506677955
+      lastDateWritten: 2052234278
+      dateCreatedStr: 1977-08-30 13:37:20
+      lastDateReadStr: 1987-05-20 13:59:03
+      lastDateWrittenStr: 1980-09-09 09:48:38
+      bpunValid: true
+    - name: F32-MAC-1628C:BPUN
+      type: BPUN
+      pages: 15
+      bytes: 29001
+      userName: FLOPPY-USER
+      dateCreated: 2162218243
+      lastDateRead: 2506677968
+      lastDateWritten: 2162218244
+      dateCreatedStr: 1982-03-16 13:20:03
+      lastDateReadStr: 1987-05-20 13:59:16
+      lastDateWrittenStr: 1982-03-16 13:20:04
+      bpunValid: true
+    - name: F32-FMAC-1920C:BPUN
+      type: BPUN
+      pages: 15
+      bytes: 28844
+      userName: FLOPPY-USER
+      dateCreated: 2263541526
+      lastDateRead: 2506677989
+      lastDateWritten: 2263541527
+      dateCreatedStr: 1983-11-21 14:28:22
+      lastDateReadStr: 1987-05-20 13:59:37
+      lastDateWrittenStr: 1983-11-21 14:28:23
+      bpunValid: true
+    - name: DITAP-1880D:BPUN
+      type: BPUN
+      pages: 1
+      bytes: 1974
+      userName: FLOPPY-USER
+      dateCreated: 2263544970
+      lastDateRead: 2506678272
+      lastDateWritten: 2263544971
+      dateCreatedStr: 1983-11-21 15:18:10
+      lastDateReadStr: 1987-05-20 14:00:00
+      lastDateWrittenStr: 1983-11-21 15:18:11
+      bpunValid: true
+    - name: NPL-1896D:BPUN
+      type: BPUN
+      pages: 31
+      bytes: 62288
+      userName: FLOPPY-USER
+      dateCreated: 1788412195
+      lastDateRead: 2506678277
+      lastDateWritten: 2029582960
+      dateCreatedStr: 1976-10-12 16:04:35
+      lastDateReadStr: 1987-05-20 14:00:05
+      lastDateWrittenStr: 1980-03-28 15:41:48
+      bpunValid: true
+provenance:
+  contributor: gandalf
+  originalPath: 000/ND-disk-00078.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T14:54:26.934Z
+imagingLogs:
+  - ND-disk-00078.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-210400-b00-d1-9cb614a4
+  syncStatus: pending

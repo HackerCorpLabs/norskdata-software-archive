@@ -17,6 +17,8 @@ import type { Catalog, CatalogEntry, StorageClass } from '../types.js';
 import { generateId, saveFloppyYaml } from './catalog.js';
 import { checkDuplicate } from './dedup.js';
 import { matchProduct } from './product-matcher.js';
+import { detectFilesystem } from './filesystem-detect.js';
+import { readDosLabel } from './filesystem-detect.js';
 
 /** Maximum raw image size for in-git storage (roughly 700 NDFS pages) */
 const FLOPPY_SIZE_LIMIT = 1_400_000;
@@ -208,6 +210,9 @@ export interface ScannedArtifacts {
   diskPhotos: Map<string, string[]>;  // imgFilename -> [photo filenames]
   setPhotos: string[];
   transcription: string | null;
+  /** imgFilename -> [log filenames] for logs named after their own image */
+  diskLogs: Map<string, string[]>;
+  /** logs that belong to no single disk, copied to every disk of the set */
   imagingLogs: string[];
   unmapped: string[];                 // files not matching any configured extension
 }
@@ -239,6 +244,7 @@ export async function scanFolderArtifacts(
   const diskPhotos = new Map<string, string[]>();
   const setPhotos: string[] = [];
   let transcription: string | null = null;
+  const diskLogs = new Map<string, string[]>();
   const imagingLogs: string[] = [];
   const unmapped: string[] = [];
 
@@ -282,7 +288,21 @@ export async function scanFolderArtifacts(
       } else if (f.toLowerCase() === 'labels.txt') {
         transcription = f;
       } else if (docExts.has(ext)) {
-        imagingLogs.push(f);
+        // A read log named after its own image (cob1.log next to cob1.img) is
+        // that disk's file, not the folder's. Matched exactly like a photo -
+        // without this every disk in the folder got a copy of every log.
+        const logBase = f.replace(/\.[^.]+$/i, '').toLowerCase();
+        let matchedLog = false;
+        for (let i = 0; i < imgBases.length; i++) {
+          if (logBase === imgBases[i] || (volBases[i] && logBase === volBases[i])) {
+            const key = imgFilenames[i];
+            if (!diskLogs.has(key)) diskLogs.set(key, []);
+            diskLogs.get(key)!.push(f);
+            matchedLog = true;
+            break;
+          }
+        }
+        if (!matchedLog) imagingLogs.push(f);
       } else {
         // Not matched by any configured extension
         unmapped.push(f);
@@ -290,7 +310,7 @@ export async function scanFolderArtifacts(
     }
   } catch { /* ignore */ }
 
-  return { diskPhotos, setPhotos, transcription, imagingLogs, unmapped };
+  return { diskPhotos, setPhotos, transcription, diskLogs, imagingLogs, unmapped };
 }
 
 /**
@@ -362,6 +382,8 @@ export interface ImportOptions {
   setArtifacts?: { setPhotos: string[]; labelTranscription: string | null; imagingLogs: string[] };
   /** Pre-scanned disk photos for this specific image */
   diskPhotoFiles?: string[];
+  /** Pre-scanned read logs belonging to this specific image (e.g. cob1.log) */
+  diskLogFiles?: string[];
 }
 
 /**
@@ -436,12 +458,24 @@ export async function importImage(
       if (myDiskPhotos.length > 0) {
         gitDiskPhotos = await copyDiskPhotos(rootDir, sourceDir, targetDir, myDiskPhotos);
       }
+      const myLogs = artifacts.diskLogs.get(filename) ?? [];
+      if (myLogs.length > 0) {
+        gitImagingLogs = gitImagingLogs.concat(await copyDiskPhotos(rootDir, sourceDir, targetDir, myLogs));
+      }
     }
 
     // Disk photos for this specific image (from folder import)
     if (options?.diskPhotoFiles && options.diskPhotoFiles.length > 0 && !gitDiskPhotos.length) {
       const sourceDir = options?.sourceDir ?? dirname(filePath);
       gitDiskPhotos = await copyDiskPhotos(rootDir, sourceDir, targetDir, options.diskPhotoFiles);
+    }
+
+    // Read logs belonging to this image only (from folder import)
+    if (options?.diskLogFiles && options.diskLogFiles.length > 0) {
+      const sourceDir = options?.sourceDir ?? dirname(filePath);
+      gitImagingLogs = gitImagingLogs.concat(
+        await copyDiskPhotos(rootDir, sourceDir, targetDir, options.diskLogFiles)
+      );
     }
   }
 
@@ -505,6 +539,11 @@ export async function importImage(
     cpuTarget: null,
     osRequirement: null,
     ndfs: ndfsResult ? { users: ndfsResult.users, files: ndfsResult.files } : null,
+    // Record what the image actually holds. An image the NDFS parser rejects is
+    // not necessarily broken - it may be an MS-DOS floppy or a tar written
+    // straight to the media.
+    filesystem: detectFilesystem(buffer, !!ndfsResult),
+    volumeLabel: readDosLabel(buffer),
     docs: null,
     provenance: {
       contributor: options?.contributor ?? 'unknown',

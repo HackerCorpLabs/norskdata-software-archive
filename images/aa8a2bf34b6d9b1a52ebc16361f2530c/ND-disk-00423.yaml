@@ -1,0 +1,228 @@
+id: img-aa8a2bf34b6d
+volumeName: STURE-LO
+md5: aa8a2bf34b6d9b1a52ebc16361f2530c
+image:
+  sizeBytes: 319488
+  format: raw
+  controller: floppy
+  totalPages: 156
+  pageSize: 2048
+  bootFormat: bpun
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 61
+  files:
+    - name: START-LO:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 275
+      userName: FLOPPY-USER
+      dateCreated: 2255393821
+      lastDateRead: 2556337743
+      lastDateWritten: 2389609615
+      dateCreatedStr: 1983-09-23 09:16:29
+      lastDateReadStr: 1988-01-15 09:57:15
+      lastDateWrittenStr: 1985-09-23 08:50:15
+      bpunValid: null
+    - name: TVADIM-LO:BRF
+      type: BRF
+      pages: 0
+      bytes: 4294967296
+      userName: FLOPPY-USER
+      dateCreated: 2389100327
+      lastDateRead: null
+      lastDateWritten: 2389100327
+      dateCreatedStr: 1985-09-19 12:28:39
+      lastDateReadStr: null
+      lastDateWrittenStr: 1985-09-19 12:28:39
+      bpunValid: null
+    - name: TREDIM-LO:SYMB
+      type: SYMB
+      pages: 8
+      bytes: 15027
+      userName: FLOPPY-USER
+      dateCreated: 2255393967
+      lastDateRead: 2556337747
+      lastDateWritten: 2256070151
+      dateCreatedStr: 1983-09-23 09:18:47
+      lastDateReadStr: 1988-01-15 09:57:19
+      lastDateWrittenStr: 1983-09-28 14:24:07
+      bpunValid: null
+    - name: TVARSN-LO:SYMB
+      type: SYMB
+      pages: 4
+      bytes: 6741
+      userName: FLOPPY-USER
+      dateCreated: 2255394149
+      lastDateRead: 2556337751
+      lastDateWritten: 2296305366
+      dateCreatedStr: 1983-09-23 09:21:37
+      lastDateReadStr: 1988-01-15 09:57:23
+      lastDateWrittenStr: 1984-03-15 13:27:22
+      bpunValid: null
+    - name: DEL1-LO:SYMB
+      type: SYMB
+      pages: 5
+      bytes: 8530
+      userName: FLOPPY-USER
+      dateCreated: 2255394329
+      lastDateRead: 2556337754
+      lastDateWritten: 2296421175
+      dateCreatedStr: 1983-09-23 09:24:25
+      lastDateReadStr: 1988-01-15 09:57:26
+      lastDateWrittenStr: 1984-03-16 09:44:55
+      bpunValid: null
+    - name: DEL2-LO:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 2097
+      userName: FLOPPY-USER
+      dateCreated: 2255394399
+      lastDateRead: 2556337757
+      lastDateWritten: 2255394399
+      dateCreatedStr: 1983-09-23 09:25:31
+      lastDateReadStr: 1988-01-15 09:57:29
+      lastDateWrittenStr: 1983-09-23 09:25:31
+      bpunValid: null
+    - name: DEL3-LO:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 2877
+      userName: FLOPPY-USER
+      dateCreated: 2255394450
+      lastDateRead: 2556337760
+      lastDateWritten: 2258939245
+      dateCreatedStr: 1983-09-23 09:26:18
+      lastDateReadStr: 1988-01-15 09:57:32
+      lastDateWrittenStr: 1983-10-18 10:53:45
+      bpunValid: null
+    - name: DEL4-LO:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 2635
+      userName: FLOPPY-USER
+      dateCreated: 2255394509
+      lastDateRead: 2556337762
+      lastDateWritten: 2255394509
+      dateCreatedStr: 1983-09-23 09:27:13
+      lastDateReadStr: 1988-01-15 09:57:34
+      lastDateWrittenStr: 1983-09-23 09:27:13
+      bpunValid: null
+    - name: DEL5-LO:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 2729
+      userName: FLOPPY-USER
+      dateCreated: 2255394569
+      lastDateRead: 2556337765
+      lastDateWritten: 2297241266
+      dateCreatedStr: 1983-09-23 09:28:09
+      lastDateReadStr: 1988-01-15 09:57:37
+      lastDateWrittenStr: 1984-03-22 17:58:50
+      bpunValid: null
+    - name: TVADIM-LO:SYMB
+      type: SYMB
+      pages: 7
+      bytes: 13834
+      userName: FLOPPY-USER
+      dateCreated: 2258812107
+      lastDateRead: 2556337767
+      lastDateWritten: 2328540264
+      dateCreatedStr: 1983-10-17 11:51:11
+      lastDateReadStr: 1988-01-15 09:57:39
+      lastDateWrittenStr: 1984-11-05 11:17:40
+      bpunValid: null
+    - name: SEKTION-LO:SYMB
+      type: SYMB
+      pages: 3
+      bytes: 4610
+      userName: FLOPPY-USER
+      dateCreated: 2258812288
+      lastDateRead: 2556337771
+      lastDateWritten: 2258927776
+      dateCreatedStr: 1983-10-17 11:54:00
+      lastDateReadStr: 1988-01-15 09:57:43
+      lastDateWrittenStr: 1983-10-18 08:02:32
+      bpunValid: null
+    - name: ETAPP1-LO:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 4031
+      userName: FLOPPY-USER
+      dateCreated: 2258812395
+      lastDateRead: 2556337774
+      lastDateWritten: 2293684312
+      dateCreatedStr: 1983-10-17 11:55:43
+      lastDateReadStr: 1988-01-15 09:57:46
+      lastDateWrittenStr: 1984-02-27 13:33:24
+      bpunValid: null
+    - name: ETAPP2-LO:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1860
+      userName: FLOPPY-USER
+      dateCreated: 2258812485
+      lastDateRead: 2556337777
+      lastDateWritten: 2258812485
+      dateCreatedStr: 1983-10-17 11:57:05
+      lastDateReadStr: 1988-01-15 09:57:49
+      lastDateWrittenStr: 1983-10-17 11:57:05
+      bpunValid: null
+    - name: ETAPP3-LO:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 2879
+      userName: FLOPPY-USER
+      dateCreated: 2258812556
+      lastDateRead: 2556337779
+      lastDateWritten: 2258812556
+      dateCreatedStr: 1983-10-17 11:58:12
+      lastDateReadStr: 1988-01-15 09:57:51
+      lastDateWrittenStr: 1983-10-17 11:58:12
+      bpunValid: null
+    - name: ETAPP4-LO:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 2372
+      userName: FLOPPY-USER
+      dateCreated: 2258812633
+      lastDateRead: 2556337782
+      lastDateWritten: 2258812633
+      dateCreatedStr: 1983-10-17 11:59:25
+      lastDateReadStr: 1988-01-15 09:57:54
+      lastDateWrittenStr: 1983-10-17 11:59:25
+      bpunValid: null
+    - name: ETAPP5-LO:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 2506
+      userName: FLOPPY-USER
+      dateCreated: 2258812942
+      lastDateRead: 2556337785
+      lastDateWritten: 2294601041
+      dateCreatedStr: 1983-10-17 12:00:14
+      lastDateReadStr: 1988-01-15 09:57:57
+      lastDateWrittenStr: 1984-03-02 13:21:17
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 400/ND-disk-00423.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:49:30.364Z
+imagingLogs:
+  - ND-disk-00423.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-aa8a2bf34b6d
+  syncStatus: pending

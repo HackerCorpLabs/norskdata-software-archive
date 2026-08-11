@@ -1,0 +1,209 @@
+id: nd-211068-a00-d1-e2f4504e
+volumeName: 211068A00-EN-01D
+md5: e2f4504e9a70cbfdeb992a7d0465fcd5
+product:
+  id: ND-211068
+  version: A00
+  diskNumber: 1
+  language: EN
+image:
+  sizeBytes: 1310720
+  format: raw
+  controller: floppy
+  totalPages: 640
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 386
+  files:
+    - name: INSTAL-OE-A00:PROG
+      type: PROG
+      pages: 45
+      bytes: 151138
+      userName: FLOPPY-USER
+      dateCreated: 2494759270
+      lastDateRead: 2579943060
+      lastDateWritten: 2496463069
+      dateCreatedStr: 1987-02-25 16:05:38
+      lastDateReadStr: 1988-07-03 12:58:20
+      lastDateWrittenStr: 1987-03-06 16:03:29
+      bpunValid: null
+    - name: INSTAL-OE-EN-A00:XCOM
+      type: XCOM
+      pages: 50
+      bytes: 102086
+      userName: FLOPPY-USER
+      dateCreated: 2498944748
+      lastDateRead: 2579943065
+      lastDateWritten: 2501022672
+      dateCreatedStr: 1987-03-25 13:59:44
+      lastDateReadStr: 1988-07-03 12:58:25
+      lastDateWrittenStr: 1987-04-09 09:15:16
+      bpunValid: null
+    - name: OEA-AREAS-EN-A00:CONF
+      type: CONF
+      pages: 14
+      bytes: 155828
+      userName: FLOPPY-USER
+      dateCreated: 2498794839
+      lastDateRead: 2498917835
+      lastDateWritten: 2498794842
+      dateCreatedStr: 1987-03-24 09:21:23
+      lastDateReadStr: 1987-03-25 07:23:11
+      lastDateWrittenStr: 1987-03-24 09:21:26
+      bpunValid: null
+    - name: OEB-BCKUP-EN-A00:CONF
+      type: CONF
+      pages: 13
+      bytes: 154228
+      userName: FLOPPY-USER
+      dateCreated: 2497355447
+      lastDateRead: 2498917851
+      lastDateWritten: 2497355449
+      dateCreatedStr: 1987-03-13 09:58:55
+      lastDateReadStr: 1987-03-25 07:23:27
+      lastDateWrittenStr: 1987-03-13 09:58:57
+      bpunValid: null
+    - name: OEB-CONF-EN-A00:SYMB
+      type: SYMB
+      pages: 6
+      bytes: 9075
+      userName: FLOPPY-USER
+      dateCreated: 2445581070
+      lastDateRead: 2579943829
+      lastDateWritten: 2496460216
+      dateCreatedStr: 1986-07-02 09:44:14
+      lastDateReadStr: 1988-07-03 13:06:21
+      lastDateWrittenStr: 1987-03-06 15:22:56
+      bpunValid: null
+    - name: OEB-LOGBO-EN-A00:DATA
+      type: DATA
+      pages: 1
+      bytes: 288
+      userName: FLOPPY-USER
+      dateCreated: 2491993074
+      lastDateRead: 2579943823
+      lastDateWritten: 2491993075
+      dateCreatedStr: 1987-02-04 12:47:50
+      lastDateReadStr: 1988-07-03 13:06:15
+      lastDateWrittenStr: 1987-02-04 12:47:51
+      bpunValid: null
+    - name: OEC-CONFI-EN-A00:CONF
+      type: CONF
+      pages: 20
+      bytes: 169128
+      userName: FLOPPY-USER
+      dateCreated: 2496317828
+      lastDateRead: 2498917876
+      lastDateWritten: 2496317830
+      dateCreatedStr: 1987-03-05 12:38:04
+      lastDateReadStr: 1987-03-25 07:23:52
+      lastDateWrittenStr: 1987-03-05 12:38:06
+      bpunValid: null
+    - name: OEF-FUNCT-EN-A00:CONF
+      type: CONF
+      pages: 6
+      bytes: 140746
+      userName: FLOPPY-USER
+      dateCreated: 2498795906
+      lastDateRead: 2498917903
+      lastDateWritten: 2498795910
+      dateCreatedStr: 1987-03-24 09:38:02
+      lastDateReadStr: 1987-03-25 07:24:15
+      lastDateWrittenStr: 1987-03-24 09:38:06
+      bpunValid: null
+    - name: OEM-MENUE-EN-A00:CONF
+      type: CONF
+      pages: 18
+      bytes: 163994
+      userName: FLOPPY-USER
+      dateCreated: 2500245997
+      lastDateRead: 2579943796
+      lastDateWritten: 2500246003
+      dateCreatedStr: 1987-04-03 11:39:45
+      lastDateReadStr: 1988-07-03 13:05:52
+      lastDateWrittenStr: 1987-04-03 11:39:51
+      bpunValid: null
+    - name: OEM-MENUE-EN-A00:NDPF
+      type: NDPF
+      pages: 42
+      bytes: 86016
+      userName: FLOPPY-USER
+      dateCreated: 2500245997
+      lastDateRead: 2579943809
+      lastDateWritten: 2500246001
+      dateCreatedStr: 1987-04-03 11:39:45
+      lastDateReadStr: 1988-07-03 13:06:01
+      lastDateWrittenStr: 1987-04-03 11:39:49
+      bpunValid: null
+    - name: OEP-PERFO-EN-A00:CONF
+      type: CONF
+      pages: 20
+      bytes: 169530
+      userName: FLOPPY-USER
+      dateCreated: 2497113645
+      lastDateRead: 2499985508
+      lastDateWritten: 2500122964
+      dateCreatedStr: 1987-03-11 14:56:45
+      lastDateReadStr: 1987-04-01 12:01:36
+      lastDateWrittenStr: 1987-04-02 13:37:20
+      bpunValid: null
+    - name: OES-STATU-EN-A00:CONF
+      type: CONF
+      pages: 19
+      bytes: 167148
+      userName: FLOPPY-USER
+      dateCreated: 2498796602
+      lastDateRead: 2498918022
+      lastDateWritten: 2498796609
+      dateCreatedStr: 1987-03-24 09:48:58
+      lastDateReadStr: 1987-03-25 07:26:06
+      lastDateWrittenStr: 1987-03-24 09:49:01
+      bpunValid: null
+    - name: OEV-VERIF-EN-A00:CONF
+      type: CONF
+      pages: 15
+      bytes: 159242
+      userName: FLOPPY-USER
+      dateCreated: 2498794957
+      lastDateRead: 2498918049
+      lastDateWritten: 2498794960
+      dateCreatedStr: 1987-03-24 09:23:13
+      lastDateReadStr: 1987-03-25 07:26:33
+      lastDateWrittenStr: 1987-03-24 09:23:16
+      bpunValid: null
+    - name: UE-ERMSG-EN-C02:ERR
+      type: ERR
+      pages: 102
+      bytes: 208384
+      userName: FLOPPY-USER
+      dateCreated: 2459111866
+      lastDateRead: 2498918071
+      lastDateWritten: 2491718318
+      dateCreatedStr: 1986-10-09 17:06:58
+      lastDateReadStr: 1987-03-25 07:26:55
+      lastDateWrittenStr: 1987-02-02 09:42:46
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 100/ND-disk-00159.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:25:59.753Z
+imagingLogs:
+  - ND-disk-00159.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-211068-a00-d1-e2f4504e
+  syncStatus: pending

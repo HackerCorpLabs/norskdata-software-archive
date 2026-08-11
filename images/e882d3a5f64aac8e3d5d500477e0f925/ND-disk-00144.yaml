@@ -1,0 +1,108 @@
+id: patch-nd-patch-sin-k-e882d3a5
+volumeName: ND-PATCH-SIN-K
+md5: e882d3a5f64aac8e3d5d500477e0f925
+image:
+  sizeBytes: 1310720
+  format: raw
+  controller: floppy
+  totalPages: 640
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: SYSTEM
+      pagesUsed: 145
+  files:
+    - name: PATCHES-10200:PATC
+      type: PATC
+      pages: 118
+      bytes: 241139
+      userName: SYSTEM
+      dateCreated: 2583096751
+      lastDateRead: 2699604245
+      lastDateWritten: 2583096751
+      dateCreatedStr: 1988-07-27 14:54:47
+      lastDateReadStr: 1990-03-20 11:04:21
+      lastDateWrittenStr: 1988-07-27 14:54:47
+      bpunValid: null
+    - name: REFERENCE-10200:FADM
+      type: FADM
+      pages: 4
+      bytes: 8174
+      userName: SYSTEM
+      dateCreated: 2561994037
+      lastDateRead: 2699604173
+      lastDateWritten: 2583080515
+      dateCreatedStr: 1988-02-26 14:52:53
+      lastDateReadStr: 1990-03-20 11:03:13
+      lastDateWrittenStr: 1988-07-27 10:57:03
+      bpunValid: null
+    - name: SYMBOLS-10200:FADM
+      type: FADM
+      pages: 1
+      bytes: 17
+      userName: SYSTEM
+      dateCreated: 2561994020
+      lastDateRead: 2699604183
+      lastDateWritten: 2583080507
+      dateCreatedStr: 1988-02-26 14:52:36
+      lastDateReadStr: 1990-03-20 11:03:23
+      lastDateWrittenStr: 1988-07-27 10:56:59
+      bpunValid: null
+    - name: NEW-SYSTEM:PROG
+      type: PROG
+      pages: 18
+      bytes: 36864
+      userName: SYSTEM
+      dateCreated: 2576286196
+      lastDateRead: 2699604979
+      lastDateWritten: 2576286203
+      dateCreatedStr: 1988-06-07 16:07:52
+      lastDateReadStr: 1990-03-20 11:15:51
+      lastDateWrittenStr: 1988-06-07 16:07:59
+      bpunValid: null
+    - name: START-PATCH-FILE:MODE
+      type: MODE
+      pages: 1
+      bytes: 1785
+      userName: SYSTEM
+      dateCreated: 2576286223
+      lastDateRead: 2699604144
+      lastDateWritten: 2576286230
+      dateCreatedStr: 1988-06-07 16:08:15
+      lastDateReadStr: 1990-03-20 11:02:48
+      lastDateWrittenStr: 1988-06-07 16:08:22
+      bpunValid: null
+    - name: PATCH-FILE:MODE
+      type: MODE
+      pages: 2
+      bytes: 3144
+      userName: SYSTEM
+      dateCreated: 2576286236
+      lastDateRead: 2699604171
+      lastDateWritten: 2576286241
+      dateCreatedStr: 1988-06-07 16:08:28
+      lastDateReadStr: 1990-03-20 11:03:11
+      lastDateWrittenStr: 1988-06-07 16:08:33
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 100/ND-disk-00144.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:25:57.656Z
+imagingLogs:
+  - ND-disk-00144.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-patch-nd-patch-sin-k-e882d3a5
+  syncStatus: pending

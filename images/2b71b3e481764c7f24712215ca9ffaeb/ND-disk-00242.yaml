@@ -1,0 +1,113 @@
+id: nd-211089-b01-d1-2b71b3e4
+volumeName: 211089B01-EN-01D
+md5: 2b71b3e481764c7f24712215ca9ffaeb
+product:
+  id: ND-211089
+  version: B01
+  diskNumber: 1
+  language: EN
+image:
+  sizeBytes: 1310720
+  format: raw
+  controller: floppy
+  totalPages: 640
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 218
+  files:
+    - name: FILE-MAN-PRI-B00:PROG
+      type: PROG
+      pages: 21
+      bytes: 137216
+      userName: FLOPPY-USER
+      dateCreated: 2359597871
+      lastDateRead: 2498954291
+      lastDateWritten: 2365252516
+      dateCreatedStr: 1985-02-18 09:44:47
+      lastDateReadStr: 1987-03-25 16:16:51
+      lastDateWrittenStr: 1985-03-29 14:14:36
+      bpunValid: null
+    - name: FILE-MAN-EN-B00:PROG
+      type: PROG
+      pages: 115
+      bytes: 251904
+      userName: FLOPPY-USER
+      dateCreated: 2360531348
+      lastDateRead: 2498954227
+      lastDateWritten: 2365254877
+      dateCreatedStr: 1985-02-25 13:38:20
+      lastDateReadStr: 1987-03-25 16:15:51
+      lastDateWrittenStr: 1985-03-29 14:51:29
+      bpunValid: null
+    - name: ALTER:PROG
+      type: PROG
+      pages: 1
+      bytes: 1536
+      userName: FLOPPY-USER
+      dateCreated: 2461220363
+      lastDateRead: 2498954314
+      lastDateWritten: 2461220364
+      dateCreatedStr: 1986-10-25 19:56:11
+      lastDateReadStr: 1987-03-25 16:17:10
+      lastDateWrittenStr: 1986-10-25 19:56:12
+      bpunValid: null
+    - name: UE-ERMSG-EN-B06:ERR
+      type: ERR
+      pages: 72
+      bytes: 145664
+      userName: FLOPPY-USER
+      dateCreated: 2498697033
+      lastDateRead: 2498954317
+      lastDateWritten: 2498947033
+      dateCreatedStr: 1987-03-23 17:29:09
+      lastDateReadStr: 1987-03-25 16:17:13
+      lastDateWrittenStr: 1987-03-25 14:31:25
+      bpunValid: null
+    - name: FILE-MAN-INSTALL:MODE
+      type: MODE
+      pages: 1
+      bytes: 1171
+      userName: FLOPPY-USER
+      dateCreated: 2461218865
+      lastDateRead: 2498954218
+      lastDateWritten: 2498954184
+      dateCreatedStr: 1986-10-25 19:32:49
+      lastDateReadStr: 1987-03-25 16:15:42
+      lastDateWrittenStr: 1987-03-25 16:15:08
+      bpunValid: null
+    - name: FILE-MAN-LOAD-B:MODE
+      type: MODE
+      pages: 1
+      bytes: 506
+      userName: FLOPPY-USER
+      dateCreated: 2461219595
+      lastDateRead: 2498954308
+      lastDateWritten: 2496886705
+      dateCreatedStr: 1986-10-25 19:44:11
+      lastDateReadStr: 1987-03-25 16:17:04
+      lastDateWrittenStr: 1987-03-09 23:30:49
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 200/ND-disk-00242.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:41:53.314Z
+imagingLogs:
+  - ND-disk-00242.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-211089-b01-d1-2b71b3e4
+  syncStatus: pending

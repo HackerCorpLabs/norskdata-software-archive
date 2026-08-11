@@ -1,0 +1,65 @@
+id: nd-211093-a00-d2-9c21d47c
+volumeName: 211093A00-EN-02D
+md5: 9c21d47ca710d83a41a12b3069ad8f14
+product:
+  id: ND-211093
+  version: A00
+  diskNumber: 2
+  language: EN
+image:
+  sizeBytes: 1310720
+  format: raw
+  controller: floppy
+  totalPages: 640
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 164
+  files:
+    - name: ID-UTIL-EN-B01:PROG
+      type: PROG
+      pages: 57
+      bytes: 145408
+      userName: FLOPPY-USER
+      dateCreated: 2463947662
+      lastDateRead: 2504851560
+      lastDateWritten: 2463947663
+      dateCreatedStr: 1986-11-14 13:46:14
+      lastDateReadStr: 1987-05-06 16:01:40
+      lastDateWrittenStr: 1986-11-14 13:46:15
+      bpunValid: null
+    - name: NOTIS-ID-EN-B01:PROG
+      type: PROG
+      pages: 104
+      bytes: 212992
+      userName: FLOPPY-USER
+      dateCreated: 2463947788
+      lastDateRead: 2504851467
+      lastDateWritten: 2463947789
+      dateCreatedStr: 1986-11-14 13:48:12
+      lastDateReadStr: 1987-05-06 16:00:11
+      lastDateWrittenStr: 1986-11-14 13:48:13
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 200/ND-disk-00248.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:41:54.544Z
+imagingLogs:
+  - ND-disk-00248.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-211093-a00-d2-9c21d47c
+  syncStatus: pending

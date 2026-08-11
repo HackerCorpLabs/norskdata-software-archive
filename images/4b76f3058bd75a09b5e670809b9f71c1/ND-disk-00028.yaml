@@ -1,0 +1,53 @@
+id: nd-211187-b01-d1-4b76f305
+volumeName: 211187B01-XX-01D
+md5: 4b76f3058bd75a09b5e670809b9f71c1
+product:
+  id: ND-211187
+  version: B01
+  diskNumber: 1
+  language: XX
+image:
+  sizeBytes: 1310720
+  format: raw
+  controller: floppy
+  totalPages: 640
+  pageSize: 2048
+  bootFormat: flomon
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 4
+  files:
+    - name: FLOMEM:BPUN
+      type: BPUN
+      pages: 2
+      bytes: 2612
+      userName: FLOPPY-USER
+      dateCreated: 2507470552
+      lastDateRead: null
+      lastDateWritten: 2598149598
+      dateCreatedStr: 1987-05-26 15:27:24
+      lastDateReadStr: null
+      lastDateWrittenStr: 1988-11-14 09:55:30
+      bpunValid: true
+provenance:
+  contributor: gandalf
+  originalPath: 000/ND-disk-00028.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T14:54:07.322Z
+imagingLogs:
+  - ND-disk-00028.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-211187-b01-d1-4b76f305
+  syncStatus: pending

@@ -1,0 +1,72 @@
+id: img-5c8443ff228e
+volumeName: CLAS-2
+md5: 5c8443ff228e3468a727ad173c887371
+image:
+  sizeBytes: 319488
+  format: raw
+  controller: floppy
+  totalPages: 156
+  pageSize: 2048
+  bootFormat: bpun
+filesystem: ndfs
+ndfs:
+  users:
+    - name: DNF
+      pagesUsed: 136
+  files:
+    - name: BASIC:SYMB
+      type: SYMB
+      pages: 109
+      bytes: 218172
+      userName: DNF
+      dateCreated: 2182811823
+      lastDateRead: 2266837408
+      lastDateWritten: 2231320198
+      dateCreatedStr: 1982-08-13 17:02:47
+      lastDateReadStr: 1983-12-14 19:06:32
+      lastDateWrittenStr: 1983-03-31 19:58:06
+      bpunValid: null
+    - name: PEDWAR-CT:SYMB
+      type: SYMB
+      pages: 20
+      bytes: 40809
+      userName: DNF
+      dateCreated: 2292125939
+      lastDateRead: null
+      lastDateWritten: 2292125940
+      dateCreatedStr: 1984-02-15 17:03:51
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-02-15 17:03:52
+      bpunValid: null
+    - name: FINGER-PACKER-CT:SYMB
+      type: SYMB
+      pages: 3
+      bytes: 4436
+      userName: DNF
+      dateCreated: 2292126084
+      lastDateRead: null
+      lastDateWritten: 2292126086
+      dateCreatedStr: 1984-02-15 17:06:04
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-02-15 17:06:06
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 300/ND-disk-00372d.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:45:54.791Z
+imagingLogs:
+  - ND-disk-00372d.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-5c8443ff228e
+  syncStatus: pending

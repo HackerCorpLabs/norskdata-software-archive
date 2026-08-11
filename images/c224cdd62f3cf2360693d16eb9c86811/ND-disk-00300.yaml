@@ -1,0 +1,60 @@
+id: img-c224cdd62f3c
+volumeName: MIKAEL-13
+md5: c224cdd62f3cf2360693d16eb9c86811
+image:
+  sizeBytes: 319488
+  format: raw
+  controller: floppy
+  totalPages: 156
+  pageSize: 2048
+  bootFormat: binary
+filesystem: ndfs
+ndfs:
+  users:
+    - name: SYSTEM
+      pagesUsed: 109
+  files:
+    - name: MASSA-MJ:TEXT
+      type: TEXT
+      pages: 55
+      bytes: 111654
+      userName: SYSTEM
+      dateCreated: 2397394702
+      lastDateRead: 2663984016
+      lastDateWritten: 2397394707
+      dateCreatedStr: 1985-11-18 21:28:14
+      lastDateReadStr: 1989-11-04 18:46:16
+      lastDateWrittenStr: 1985-11-18 21:28:19
+      bpunValid: null
+    - name: MAZUR-MJ:TEXT
+      type: TEXT
+      pages: 51
+      bytes: 96654
+      userName: SYSTEM
+      dateCreated: 2398565236
+      lastDateRead: 2557283307
+      lastDateWritten: 2398570263
+      dateCreatedStr: 1985-11-27 19:13:52
+      lastDateReadStr: 1988-01-22 16:47:43
+      lastDateWrittenStr: 1985-11-27 20:28:23
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 300/ND-disk-00300.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:45:41.137Z
+imagingLogs:
+  - ND-disk-00300.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-c224cdd62f3c
+  syncStatus: pending

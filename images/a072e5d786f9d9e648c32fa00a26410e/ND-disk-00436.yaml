@@ -1,0 +1,192 @@
+id: img-a072e5d786f9
+volumeName: FLOPP
+md5: a072e5d786f9d9e648c32fa00a26410e
+image:
+  sizeBytes: 319488
+  format: raw
+  controller: floppy
+  totalPages: 156
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 34
+  files:
+    - name: NOTIS:TEXT
+      type: TEXT
+      pages: 2
+      bytes: 3828
+      userName: FLOPPY-USER
+      dateCreated: 2225242449
+      lastDateRead: 2266048522
+      lastDateWritten: 2226161826
+      dateCreatedStr: 1983-02-17 08:05:17
+      lastDateReadStr: 1983-12-08 18:32:10
+      lastDateWrittenStr: 1983-02-24 08:34:34
+      bpunValid: null
+    - name: NOTIS-1:TEXT
+      type: TEXT
+      pages: 1
+      bytes: 1092
+      userName: FLOPPY-USER
+      dateCreated: 2225907598
+      lastDateRead: 2262515782
+      lastDateWritten: 2225907598
+      dateCreatedStr: 1983-02-22 10:30:14
+      lastDateReadStr: 1983-11-13 20:01:06
+      lastDateWrittenStr: 1983-02-22 10:30:14
+      bpunValid: null
+    - name: NOTIS-2:TEXT
+      type: TEXT
+      pages: 2
+      bytes: 2766
+      userName: FLOPPY-USER
+      dateCreated: 2225907746
+      lastDateRead: 2262515929
+      lastDateWritten: 2225907746
+      dateCreatedStr: 1983-02-22 10:32:34
+      lastDateReadStr: 1983-11-13 20:03:25
+      lastDateWrittenStr: 1983-02-22 10:32:34
+      bpunValid: null
+    - name: SKI-1:TEXT
+      type: TEXT
+      pages: 1
+      bytes: 780
+      userName: FLOPPY-USER
+      dateCreated: 2225262075
+      lastDateRead: 2265397913
+      lastDateWritten: 2225915488
+      dateCreatedStr: 1983-02-17 12:55:59
+      lastDateReadStr: 1983-12-03 19:42:25
+      lastDateWrittenStr: 1983-02-22 12:25:32
+      bpunValid: null
+    - name: BREV-HUVUD:TEXT
+      type: TEXT
+      pages: 1
+      bytes: 646
+      userName: FLOPPY-USER
+      dateCreated: 2220544309
+      lastDateRead: 2262516089
+      lastDateWritten: 2220544309
+      dateCreatedStr: 1983-01-13 13:04:53
+      lastDateReadStr: 1983-11-13 20:05:57
+      lastDateWrittenStr: 1983-01-13 13:04:53
+      bpunValid: null
+    - name: BREV:TEXT
+      type: TEXT
+      pages: 1
+      bytes: 366
+      userName: FLOPPY-USER
+      dateCreated: 2225916174
+      lastDateRead: 2262516108
+      lastDateWritten: 2225916174
+      dateCreatedStr: 1983-02-22 12:36:14
+      lastDateReadStr: 1983-11-13 20:06:12
+      lastDateWrittenStr: 1983-02-22 12:36:14
+      bpunValid: null
+    - name: DEMO-DKM:TEXT
+      type: TEXT
+      pages: 6
+      bytes: 6590
+      userName: FLOPPY-USER
+      dateCreated: 2187131978
+      lastDateRead: 2263784897
+      lastDateWritten: 2174679564
+      dateCreatedStr: 1982-09-14 15:49:10
+      lastDateReadStr: 1983-11-23 09:55:01
+      lastDateWrittenStr: 1982-06-15 15:40:12
+      bpunValid: null
+    - name: BREV-MAKRO:TEXT
+      type: TEXT
+      pages: 1
+      bytes: 445
+      userName: FLOPPY-USER
+      dateCreated: 2057879607
+      lastDateRead: 2238772329
+      lastDateWritten: 2100757211
+      dateCreatedStr: 1980-10-20 12:00:55
+      lastDateReadStr: 1983-05-24 15:17:41
+      lastDateWrittenStr: 1981-04-27 16:11:27
+      bpunValid: null
+    - name: BREV-MACRO:TEXT
+      type: TEXT
+      pages: 1
+      bytes: 341
+      userName: FLOPPY-USER
+      dateCreated: 2057373860
+      lastDateRead: 2262516299
+      lastDateWritten: 2057373860
+      dateCreatedStr: 1980-10-16 16:34:36
+      lastDateReadStr: 1983-11-13 20:09:11
+      lastDateWrittenStr: 1980-10-16 16:34:36
+      bpunValid: null
+    - name: BREV-1:TEXT
+      type: TEXT
+      pages: 1
+      bytes: 368
+      userName: FLOPPY-USER
+      dateCreated: 2226160470
+      lastDateRead: 2234823220
+      lastDateWritten: 2226160470
+      dateCreatedStr: 1983-02-24 08:13:22
+      lastDateReadStr: 1983-04-26 11:08:52
+      lastDateWrittenStr: 1983-02-24 08:13:22
+      bpunValid: null
+    - name: TELEFON:TEXT
+      type: TEXT
+      pages: 1
+      bytes: 1422
+      userName: FLOPPY-USER
+      dateCreated: 2227356450
+      lastDateRead: 2227365202
+      lastDateWritten: 2227356450
+      dateCreatedStr: 1983-03-01 12:12:34
+      lastDateReadStr: 1983-03-01 14:21:18
+      lastDateWrittenStr: 1983-03-01 12:12:34
+      bpunValid: null
+    - name: BAT-UTAN-RAM:TEXT
+      type: TEXT
+      pages: 1
+      bytes: 1528
+      userName: FLOPPY-USER
+      dateCreated: 2227357430
+      lastDateRead: 2227376481
+      lastDateWritten: 2227357430
+      dateCreatedStr: 1983-03-01 12:27:54
+      lastDateReadStr: 1983-03-01 17:05:33
+      lastDateWrittenStr: 1983-03-01 12:27:54
+      bpunValid: null
+    - name: EL-HUVUD:TEXT
+      type: TEXT
+      pages: 1
+      bytes: 1086
+      userName: FLOPPY-USER
+      dateCreated: 2227357557
+      lastDateRead: 2257279364
+      lastDateWritten: 2227357659
+      dateCreatedStr: 1983-03-01 12:29:53
+      lastDateReadStr: 1983-10-05 21:38:04
+      lastDateWrittenStr: 1983-03-01 12:31:27
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 400/ND-disk-00436.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:49:34.385Z
+imagingLogs:
+  - ND-disk-00436.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-a072e5d786f9
+  syncStatus: pending

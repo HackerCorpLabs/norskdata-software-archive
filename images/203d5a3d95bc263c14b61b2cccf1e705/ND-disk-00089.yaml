@@ -1,0 +1,149 @@
+id: nd-210872-c13-d1-203d5a3d
+volumeName: 210872C13-XX-01D
+md5: 203d5a3d95bc263c14b61b2cccf1e705
+product:
+  id: ND-210872
+  version: C13
+  diskNumber: 1
+  language: XX
+image:
+  sizeBytes: 1310720
+  format: raw
+  controller: floppy
+  totalPages: 640
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 256
+  files:
+    - name: INSTALL-UNIQ:PROG
+      type: PROG
+      pages: 46
+      bytes: 156744
+      userName: FLOPPY-USER
+      dateCreated: 2505481812
+      lastDateRead: 2646125475
+      lastDateWritten: 2563282072
+      dateCreatedStr: 1987-05-11 09:57:20
+      lastDateReadStr: 1989-06-28 10:46:35
+      lastDateWrittenStr: 1988-03-04 09:18:24
+      bpunValid: null
+    - name: QUICK-IN-S5-C13:PROG
+      type: PROG
+      pages: 62
+      bytes: 185610
+      userName: FLOPPY-USER
+      dateCreated: 2510633193
+      lastDateRead: 2646125492
+      lastDateWritten: 2638518959
+      dateCreatedStr: 1987-06-18 19:35:41
+      lastDateReadStr: 1989-06-28 10:46:52
+      lastDateWrittenStr: 1989-05-02 09:42:47
+      bpunValid: null
+    - name: QUICK-MAIN-C13:NRF
+      type: NRF
+      pages: 11
+      bytes: 20597
+      userName: FLOPPY-USER
+      dateCreated: 2638514155
+      lastDateRead: 2646125582
+      lastDateWritten: 2638514162
+      dateCreatedStr: 1989-05-02 08:31:43
+      lastDateReadStr: 1989-06-28 10:48:14
+      lastDateWrittenStr: 1989-05-02 08:31:50
+      bpunValid: null
+    - name: QUICK-1-C13:NRF
+      type: NRF
+      pages: 60
+      bytes: 121486
+      userName: FLOPPY-USER
+      dateCreated: 2638514155
+      lastDateRead: 2646125587
+      lastDateWritten: 2638514200
+      dateCreatedStr: 1989-05-02 08:31:43
+      lastDateReadStr: 1989-06-28 10:48:19
+      lastDateWrittenStr: 1989-05-02 08:32:24
+      bpunValid: null
+    - name: QUICK-LIB-C13:NRF
+      type: NRF
+      pages: 62
+      bytes: 126931
+      userName: FLOPPY-USER
+      dateCreated: 2638514155
+      lastDateRead: 2646125603
+      lastDateWritten: 2638514235
+      dateCreatedStr: 1989-05-02 08:31:43
+      lastDateReadStr: 1989-06-28 10:48:35
+      lastDateWrittenStr: 1989-05-02 08:32:59
+      bpunValid: null
+    - name: QUICK-DUMMY-C13:NRF
+      type: NRF
+      pages: 2
+      bytes: 2523
+      userName: FLOPPY-USER
+      dateCreated: 2638514155
+      lastDateRead: 2646125619
+      lastDateWritten: 2638514240
+      dateCreatedStr: 1989-05-02 08:31:43
+      lastDateReadStr: 1989-06-28 10:48:51
+      lastDateWrittenStr: 1989-05-02 08:33:00
+      bpunValid: null
+    - name: QUIC-LOAD-S5-C13:MODE
+      type: MODE
+      pages: 1
+      bytes: 1293
+      userName: FLOPPY-USER
+      dateCreated: 2638525073
+      lastDateRead: 2638525220
+      lastDateWritten: 2638525220
+      dateCreatedStr: 1989-05-02 11:10:17
+      lastDateReadStr: 1989-05-02 11:12:36
+      lastDateWrittenStr: 1989-05-02 11:12:36
+      bpunValid: null
+    - name: QUIC-DUMP-S5-C13:MODE
+      type: MODE
+      pages: 1
+      bytes: 453
+      userName: FLOPPY-USER
+      dateCreated: 2638525104
+      lastDateRead: 2638525293
+      lastDateWritten: 2638525293
+      dateCreatedStr: 1989-05-02 11:10:48
+      lastDateReadStr: 1989-05-02 11:13:45
+      lastDateWrittenStr: 1989-05-02 11:13:45
+      bpunValid: null
+    - name: QUIC-DOMLOAD-C13:MODE
+      type: MODE
+      pages: 1
+      bytes: 964
+      userName: FLOPPY-USER
+      dateCreated: 2595710473
+      lastDateRead: 2638531469
+      lastDateWritten: 2638518020
+      dateCreatedStr: 1988-10-27 22:24:09
+      lastDateReadStr: 1989-05-02 12:46:13
+      lastDateWrittenStr: 1989-05-02 09:28:04
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 000/ND-disk-00089.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T14:54:29.152Z
+imagingLogs:
+  - ND-disk-00089.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-210872-c13-d1-203d5a3d
+  syncStatus: pending

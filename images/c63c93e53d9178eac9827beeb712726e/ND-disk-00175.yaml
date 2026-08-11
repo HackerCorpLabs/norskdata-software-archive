@@ -1,0 +1,117 @@
+id: nd-210809-l05-d1-c63c93e5
+volumeName: 210809L05-XX-01D
+md5: c63c93e53d9178eac9827beeb712726e
+product:
+  id: ND-210809
+  version: L05
+  diskNumber: 1
+  language: XX
+image:
+  sizeBytes: 1310720
+  format: raw
+  controller: floppy
+  totalPages: 640
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 6
+    - name: REALTIME-NTX
+      pagesUsed: 97
+    - name: PARAMETERS-NTX
+      pagesUsed: 3
+  files:
+    - name: INSTALL-LINES-K0:XCOM
+      type: XCOM
+      pages: 4
+      bytes: 6851
+      userName: FLOPPY-USER
+      dateCreated: 2581501450
+      lastDateRead: 2597255664
+      lastDateWritten: 2581502189
+      dateCreatedStr: 1988-07-15 09:24:10
+      lastDateReadStr: 1988-11-07 15:39:48
+      lastDateWrittenStr: 1988-07-15 09:35:45
+      bpunValid: null
+    - name: AUTOJ-JU-L04:SEGP
+      type: SEGP
+      pages: 51
+      bytes: 103424
+      userName: REALTIME-NTX
+      dateCreated: 2579664485
+      lastDateRead: 2597255593
+      lastDateWritten: 2579664609
+      dateCreatedStr: 1988-07-01 08:57:37
+      lastDateReadStr: 1988-11-07 15:38:41
+      lastDateWrittenStr: 1988-07-01 08:59:33
+      bpunValid: null
+    - name: AUTOJ-JU-L04:SEGD
+      type: SEGD
+      pages: 33
+      bytes: 66048
+      userName: REALTIME-NTX
+      dateCreated: 2579664486
+      lastDateRead: 2597255609
+      lastDateWritten: 2579664616
+      dateCreatedStr: 1988-07-01 08:57:38
+      lastDateReadStr: 1988-11-07 15:38:57
+      lastDateWrittenStr: 1988-07-01 08:59:40
+      bpunValid: null
+    - name: AUTOJ-JU-L04:ENTR
+      type: ENTR
+      pages: 6
+      bytes: 12046
+      userName: REALTIME-NTX
+      dateCreated: 2579664562
+      lastDateRead: 2597255623
+      lastDateWritten: 2579664562
+      dateCreatedStr: 1988-07-01 08:58:50
+      lastDateReadStr: 1988-11-07 15:39:07
+      lastDateWrittenStr: 1988-07-01 08:58:50
+      bpunValid: null
+    - name: BUILD-JU-K02:XCOM
+      type: XCOM
+      pages: 2
+      bytes: 2130
+      userName: REALTIME-NTX
+      dateCreated: 2391854611
+      lastDateRead: 2597255626
+      lastDateWritten: 2423168596
+      dateCreatedStr: 1985-10-08 12:56:19
+      lastDateReadStr: 1988-11-07 15:39:10
+      lastDateWrittenStr: 1986-01-23 09:57:20
+      bpunValid: null
+    - name: AUTOJ01-PARAM-K1:NTXP
+      type: NTXP
+      pages: 1
+      bytes: 929
+      userName: PARAMETERS-NTX
+      dateCreated: 2331449861
+      lastDateRead: 2597255583
+      lastDateWritten: 2569450784
+      dateCreatedStr: 1984-11-27 17:40:05
+      lastDateReadStr: 1988-11-07 15:38:31
+      lastDateWrittenStr: 1988-04-19 11:20:32
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 100/ND-disk-00175.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:26:02.208Z
+imagingLogs:
+  - ND-disk-00175.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-210809-l05-d1-c63c93e5
+  syncStatus: pending

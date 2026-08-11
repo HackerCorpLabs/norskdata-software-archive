@@ -1,0 +1,77 @@
+id: nd-210375-c00-d1-ff4aff15
+volumeName: 210375C00-XX-01D
+md5: ff4aff152b18f6c1257f07bd73f0fe1d
+product:
+  id: ND-210375
+  version: C00
+  diskNumber: 1
+  language: XX
+image:
+  sizeBytes: 1310720
+  format: raw
+  controller: floppy
+  totalPages: 640
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 13
+  files:
+    - name: TELEFIX-A-RECE-C:PROG
+      type: PROG
+      pages: 4
+      bytes: 8192
+      userName: FLOPPY-USER
+      dateCreated: 2395130973
+      lastDateRead: 2508900814
+      lastDateWritten: 2395130980
+      dateCreatedStr: 1985-11-01 12:49:29
+      lastDateReadStr: 1987-06-05 12:39:14
+      lastDateWrittenStr: 1985-11-01 12:49:36
+      bpunValid: null
+    - name: TELEFIX-A-TRAN-C:PROG
+      type: PROG
+      pages: 4
+      bytes: 8192
+      userName: FLOPPY-USER
+      dateCreated: 2395130986
+      lastDateRead: 2508900818
+      lastDateWritten: 2395130987
+      dateCreatedStr: 1985-11-01 12:49:42
+      lastDateReadStr: 1987-06-05 12:39:18
+      lastDateWrittenStr: 1985-11-01 12:49:43
+      bpunValid: null
+    - name: TELEFIX-FILE-TR:MODE
+      type: MODE
+      pages: 1
+      bytes: 607
+      userName: FLOPPY-USER
+      dateCreated: 2508775617
+      lastDateRead: 2508900812
+      lastDateWritten: 2508777702
+      dateCreatedStr: 1987-06-04 14:03:01
+      lastDateReadStr: 1987-06-05 12:39:12
+      lastDateWrittenStr: 1987-06-04 14:35:38
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 200/ND-disk-00239.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:41:52.618Z
+imagingLogs:
+  - ND-disk-00239.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-210375-c00-d1-ff4aff15
+  syncStatus: pending

@@ -1,0 +1,209 @@
+id: nd-211226-b02-d1-d91616fb
+volumeName: 211226B02-XX-01D
+md5: d91616fbc2dfb42c4cacd61141c2b529
+product:
+  id: ND-211226
+  version: B02
+  diskNumber: 1
+  language: XX
+image:
+  sizeBytes: 1310720
+  format: raw
+  controller: floppy
+  totalPages: 640
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 372
+  files:
+    - name: IN-BCKMAN-XX-B02:INIT
+      type: INIT
+      pages: 4
+      bytes: 7092
+      userName: FLOPPY-USER
+      dateCreated: 2576306311
+      lastDateRead: 2963599607
+      lastDateWritten: 2647959278
+      dateCreatedStr: 1988-06-07 21:02:07
+      lastDateReadStr: 1994-02-18 15:03:55
+      lastDateWrittenStr: 1989-07-10 10:27:46
+      bpunValid: null
+    - name: IN-BCKMAN-XX-B02:XCOM
+      type: XCOM
+      pages: 13
+      bytes: 25835
+      userName: FLOPPY-USER
+      dateCreated: 2576306336
+      lastDateRead: 2963599583
+      lastDateWritten: 2647959278
+      dateCreatedStr: 1988-06-07 21:02:32
+      lastDateReadStr: 1994-02-18 15:03:31
+      lastDateWrittenStr: 1989-07-10 10:27:46
+      bpunValid: null
+    - name: IN-BCKMAN-XX-B02:PROG
+      type: PROG
+      pages: 80
+      bytes: 202698
+      userName: FLOPPY-USER
+      dateCreated: 2576305734
+      lastDateRead: 2963599607
+      lastDateWritten: 2647959279
+      dateCreatedStr: 1988-06-07 20:57:06
+      lastDateReadStr: 1994-02-18 15:03:55
+      lastDateWrittenStr: 1989-07-10 10:27:47
+      bpunValid: null
+    - name: BM-JOBDB-B02:DATA
+      type: DATA
+      pages: 32
+      bytes: 214092
+      userName: FLOPPY-USER
+      dateCreated: 2647844688
+      lastDateRead: 2647976307
+      lastDateWritten: 2647844689
+      dateCreatedStr: 1989-07-09 14:29:16
+      lastDateReadStr: 1989-07-10 14:37:51
+      lastDateWrittenStr: 1989-07-09 14:29:17
+      bpunValid: null
+    - name: BM-PARAMETER-B02:DATA
+      type: DATA
+      pages: 2
+      bytes: 3080
+      userName: FLOPPY-USER
+      dateCreated: 2647844714
+      lastDateRead: 2647976315
+      lastDateWritten: 2647844716
+      dateCreatedStr: 1989-07-09 14:29:42
+      lastDateReadStr: 1989-07-10 14:37:59
+      lastDateWrittenStr: 1989-07-09 14:29:44
+      bpunValid: null
+    - name: BM-SIBDUM-B02:NRF
+      type: NRF
+      pages: 29
+      bytes: 57546
+      userName: FLOPPY-USER
+      dateCreated: 2647844720
+      lastDateRead: 2647976337
+      lastDateWritten: 2647844721
+      dateCreatedStr: 1989-07-09 14:29:48
+      lastDateReadStr: 1989-07-10 14:38:17
+      lastDateWrittenStr: 1989-07-09 14:29:49
+      bpunValid: null
+    - name: BM-OSIBAS-B02:NRF
+      type: NRF
+      pages: 86
+      bytes: 176025
+      userName: FLOPPY-USER
+      dateCreated: 2647844749
+      lastDateRead: 2647976345
+      lastDateWritten: 2647844750
+      dateCreatedStr: 1989-07-09 14:30:13
+      lastDateReadStr: 1989-07-10 14:38:25
+      lastDateWrittenStr: 1989-07-09 14:30:14
+      bpunValid: null
+    - name: BM-DRSIB-B02:MODE
+      type: MODE
+      pages: 1
+      bytes: 999
+      userName: FLOPPY-USER
+      dateCreated: 2647844832
+      lastDateRead: 2647976370
+      lastDateWritten: 2647844833
+      dateCreatedStr: 1989-07-09 14:31:32
+      lastDateReadStr: 1989-07-10 14:38:50
+      lastDateWrittenStr: 1989-07-09 14:31:33
+      bpunValid: null
+    - name: BM-DNOSIB-B02:MODE
+      type: MODE
+      pages: 1
+      bytes: 447
+      userName: FLOPPY-USER
+      dateCreated: 2647844837
+      lastDateRead: 2647976372
+      lastDateWritten: 2647844838
+      dateCreatedStr: 1989-07-09 14:31:37
+      lastDateReadStr: 1989-07-10 14:38:52
+      lastDateWrittenStr: 1989-07-09 14:31:38
+      bpunValid: null
+    - name: BM-SERVER-B02:MODE
+      type: MODE
+      pages: 1
+      bytes: 329
+      userName: FLOPPY-USER
+      dateCreated: 2647844841
+      lastDateRead: 2647976374
+      lastDateWritten: 2647844842
+      dateCreatedStr: 1989-07-09 14:31:41
+      lastDateReadStr: 1989-07-10 14:38:54
+      lastDateWrittenStr: 1989-07-09 14:31:42
+      bpunValid: null
+    - name: BM-DUMP-B02:MODE
+      type: MODE
+      pages: 1
+      bytes: 675
+      userName: FLOPPY-USER
+      dateCreated: 2588728821
+      lastDateRead: 2647976376
+      lastDateWritten: 2647958110
+      dateCreatedStr: 1988-09-06 13:55:53
+      lastDateReadStr: 1989-07-10 14:38:56
+      lastDateWrittenStr: 1989-07-10 10:09:30
+      bpunValid: null
+    - name: BM-START-B02:MODE
+      type: MODE
+      pages: 1
+      bytes: 286
+      userName: FLOPPY-USER
+      dateCreated: 2647844850
+      lastDateRead: 2647976378
+      lastDateWritten: 2647844852
+      dateCreatedStr: 1989-07-09 14:31:50
+      lastDateReadStr: 1989-07-10 14:38:58
+      lastDateWrittenStr: 1989-07-09 14:31:52
+      bpunValid: null
+    - name: BM-SERVER-B02:PROG
+      type: PROG
+      pages: 104
+      bytes: 241664
+      userName: FLOPPY-USER
+      dateCreated: 2647844855
+      lastDateRead: 2647976385
+      lastDateWritten: 2647844856
+      dateCreatedStr: 1989-07-09 14:31:55
+      lastDateReadStr: 1989-07-10 14:39:01
+      lastDateWrittenStr: 1989-07-09 14:31:56
+      bpunValid: null
+    - name: BM-DMAPTC:MODE
+      type: MODE
+      pages: 2
+      bytes: 1840
+      userName: FLOPPY-USER
+      dateCreated: 2638830950
+      lastDateRead: 2647976410
+      lastDateWritten: 2647958216
+      dateCreatedStr: 1989-05-04 21:53:38
+      lastDateReadStr: 1989-07-10 14:39:26
+      lastDateWrittenStr: 1989-07-10 10:11:08
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 000/ND-disk-00032.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T14:54:08.104Z
+imagingLogs:
+  - ND-disk-00032.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-211226-b02-d1-d91616fb
+  syncStatus: pending

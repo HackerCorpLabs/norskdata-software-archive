@@ -1,0 +1,137 @@
+id: nd-210518-c01-d1-0599be63
+volumeName: 210518C01-XX-01D
+md5: 0599be636cbc3ad9784aa32ce04f4c15
+product:
+  id: ND-210518
+  version: C01
+  diskNumber: 1
+  language: XX
+image:
+  sizeBytes: 1310720
+  format: raw
+  controller: floppy
+  totalPages: 640
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 598
+  files:
+    - name: UE-PMAN-C01:PROG
+      type: PROG
+      pages: 103
+      bytes: 219136
+      userName: FLOPPY-USER
+      dateCreated: 2458705509
+      lastDateRead: 2459885582
+      lastDateWritten: 2458705516
+      dateCreatedStr: 1986-10-06 13:57:37
+      lastDateReadStr: 1986-10-15 14:00:14
+      lastDateWrittenStr: 1986-10-06 13:57:44
+      bpunValid: null
+    - name: UE-RUN-C01:PROG
+      type: PROG
+      pages: 122
+      bytes: 264192
+      userName: FLOPPY-USER
+      dateCreated: 2458705608
+      lastDateRead: 2459885273
+      lastDateWritten: 2458956496
+      dateCreatedStr: 1986-10-06 13:59:08
+      lastDateReadStr: 1986-10-15 13:59:25
+      lastDateWrittenStr: 1986-10-08 11:11:16
+      bpunValid: null
+    - name: UE-FUNC-C01:PROG
+      type: PROG
+      pages: 121
+      bytes: 264192
+      userName: FLOPPY-USER
+      dateCreated: 2458706005
+      lastDateRead: 2459885609
+      lastDateWritten: 2458706006
+      dateCreatedStr: 1986-10-06 14:01:21
+      lastDateReadStr: 1986-10-15 14:00:41
+      lastDateWrittenStr: 1986-10-06 14:01:22
+      bpunValid: null
+    - name: UE-LOGIN-C01:PROG
+      type: PROG
+      pages: 59
+      bytes: 157696
+      userName: FLOPPY-USER
+      dateCreated: 2458706177
+      lastDateRead: 2459885304
+      lastDateWritten: 2458706179
+      dateCreatedStr: 1986-10-06 14:04:01
+      lastDateReadStr: 1986-10-15 13:59:56
+      lastDateWrittenStr: 1986-10-06 14:04:03
+      bpunValid: null
+    - name: UE-MENU-C00:PROG
+      type: PROG
+      pages: 1
+      bytes: 738
+      userName: FLOPPY-USER
+      dateCreated: 2458706283
+      lastDateRead: 2459885266
+      lastDateWritten: 2458706284
+      dateCreatedStr: 1986-10-06 14:05:43
+      lastDateReadStr: 1986-10-15 13:59:18
+      lastDateWrittenStr: 1986-10-06 14:05:44
+      bpunValid: null
+    - name: UE-MEUTIL-C01:PROG
+      type: PROG
+      pages: 48
+      bytes: 403456
+      userName: FLOPPY-USER
+      dateCreated: 2458706291
+      lastDateRead: 2459885644
+      lastDateWritten: 2458706294
+      dateCreatedStr: 1986-10-06 14:05:51
+      lastDateReadStr: 1986-10-15 14:01:12
+      lastDateWrittenStr: 1986-10-06 14:05:54
+      bpunValid: null
+    - name: UE-MEMAIN-C01:PROG
+      type: PROG
+      pages: 127
+      bytes: 401408
+      userName: FLOPPY-USER
+      dateCreated: 2458706413
+      lastDateRead: 2459885661
+      lastDateWritten: 2458706418
+      dateCreatedStr: 1986-10-06 14:07:45
+      lastDateReadStr: 1986-10-15 14:01:29
+      lastDateWrittenStr: 1986-10-06 14:07:50
+      bpunValid: null
+    - name: UE-ST-LAMU-C01:PROG
+      type: PROG
+      pages: 8
+      bytes: 137216
+      userName: FLOPPY-USER
+      dateCreated: 2458706585
+      lastDateRead: null
+      lastDateWritten: 2458706586
+      dateCreatedStr: 1986-10-06 14:10:25
+      lastDateReadStr: null
+      lastDateWrittenStr: 1986-10-06 14:10:26
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 000/ND-disk-00074.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T14:54:25.234Z
+imagingLogs:
+  - ND-disk-00074.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-210518-c01-d1-0599be63
+  syncStatus: pending

@@ -1,0 +1,64 @@
+id: nd-10374-a-d3-0f25bbe5
+volumeName: ND-10374A-PART3
+md5: 0f25bbe58e6399db0c04e529933dbe27
+product:
+  id: ND-10374
+  version: A
+  diskNumber: 3
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: SYSTEM
+      pagesUsed: 61
+  files:
+    - name: COS-CONNECT-TO-A:BPUN
+      type: BPUN
+      pages: 46
+      bytes: 54603
+      userName: SYSTEM
+      dateCreated: 2226050199
+      lastDateRead: 2257129970
+      lastDateWritten: 2228143173
+      dateCreatedStr: 1983-02-23 13:18:23
+      lastDateReadStr: 1983-10-04 17:07:50
+      lastDateWrittenStr: 1983-03-07 12:17:05
+      bpunValid: true
+    - name: COS-FILE-TRANS-A:BPUN
+      type: BPUN
+      pages: 14
+      bytes: 23291
+      userName: SYSTEM
+      dateCreated: 2226050369
+      lastDateRead: 2257129994
+      lastDateWritten: 2227769840
+      dateCreatedStr: 1983-02-23 13:21:01
+      lastDateReadStr: 1983-10-04 17:08:10
+      lastDateWrittenStr: 1983-03-04 17:07:48
+      bpunValid: true
+provenance:
+  contributor: gandalf
+  originalPath: 400/ND-disk-00448.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:49:38.960Z
+imagingLogs:
+  - ND-disk-00448.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10374-a-d3-0f25bbe5
+  syncStatus: pending

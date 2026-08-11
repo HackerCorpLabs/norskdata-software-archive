@@ -1,0 +1,101 @@
+id: nd-210191-f02-d1-5b6a3ad3
+volumeName: 210191F02-XX-01D
+md5: 5b6a3ad3e72571540755b93d1607ff09
+product:
+  id: ND-210191
+  version: F02
+  diskNumber: 1
+  language: XX
+image:
+  sizeBytes: 1310720
+  format: raw
+  controller: floppy
+  totalPages: 640
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 363
+  files:
+    - name: FORTRAN-100-F02:PROG
+      type: PROG
+      pages: 137
+      bytes: 655360
+      userName: FLOPPY-USER
+      dateCreated: 2464617025
+      lastDateRead: 3033273246
+      lastDateWritten: 2464617162
+      dateCreatedStr: 1986-11-19 17:09:01
+      lastDateReadStr: 1995-03-06 01:14:30
+      lastDateWrittenStr: 1986-11-19 17:11:10
+      bpunValid: null
+    - name: FORT48-1BANK-F02:BRF
+      type: BRF
+      pages: 54
+      bytes: 110436
+      userName: FLOPPY-USER
+      dateCreated: 2464728733
+      lastDateRead: 3033273288
+      lastDateWritten: 2464728734
+      dateCreatedStr: 1986-11-20 12:26:29
+      lastDateReadStr: 1995-03-06 01:15:08
+      lastDateWrittenStr: 1986-11-20 12:26:30
+      bpunValid: null
+    - name: FORT48-2BANK-F02:BRF
+      type: BRF
+      pages: 56
+      bytes: 114142
+      userName: FLOPPY-USER
+      dateCreated: 2464728789
+      lastDateRead: 3033273308
+      lastDateWritten: 2464728791
+      dateCreatedStr: 1986-11-20 12:27:21
+      lastDateReadStr: 1995-03-06 01:15:28
+      lastDateWrittenStr: 1986-11-20 12:27:23
+      bpunValid: null
+    - name: FORT32-1BANK-F02:BRF
+      type: BRF
+      pages: 54
+      bytes: 109664
+      userName: FLOPPY-USER
+      dateCreated: 2464728864
+      lastDateRead: 2585048983
+      lastDateWritten: 2464728865
+      dateCreatedStr: 1986-11-20 12:28:32
+      lastDateReadStr: 1988-08-10 11:30:23
+      lastDateWrittenStr: 1986-11-20 12:28:33
+      bpunValid: null
+    - name: FORT32-2BANK-F02:BRF
+      type: BRF
+      pages: 56
+      bytes: 113738
+      userName: FLOPPY-USER
+      dateCreated: 2464728961
+      lastDateRead: 2585049060
+      lastDateWritten: 2464728963
+      dateCreatedStr: 1986-11-20 12:30:01
+      lastDateReadStr: 1988-08-10 11:31:36
+      lastDateWrittenStr: 1986-11-20 12:30:03
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 000/ND-disk-00067.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T14:54:19.274Z
+imagingLogs:
+  - ND-disk-00067.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-210191-f02-d1-5b6a3ad3
+  syncStatus: pending

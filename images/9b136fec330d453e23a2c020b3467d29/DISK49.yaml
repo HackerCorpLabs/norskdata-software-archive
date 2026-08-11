@@ -1,0 +1,61 @@
+id: nd-10337-e02-d1-9b136fec
+volumeName: ND-10337E02
+md5: 9b136fec330d453e23a2c020b3467d29
+product:
+  id: ND-10337
+  version: E02
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 71
+  files:
+    - name: BACKUP-E00:BPUN
+      type: BPUN
+      pages: 64
+      bytes: 129001
+      userName: FLOPPY-USER
+      dateCreated: 2262605105
+      lastDateRead: 2281701858
+      lastDateWritten: 2301686493
+      dateCreatedStr: 1983-11-14 09:52:49
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-04-24 15:11:29
+      bpunValid: true
+    - name: BACKUP-E02:PATC
+      type: PATC
+      pages: 4
+      bytes: 6167
+      userName: FLOPPY-USER
+      dateCreated: 2306423638
+      lastDateRead: 2281701783
+      lastDateWritten: 2309408904
+      dateCreatedStr: 1984-05-28 19:45:22
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-06-19 12:34:08
+      bpunValid: null
+provenance:
+  contributor: www.datormuseum.se
+  originalPath: OK/DISK49.IMG
+  dateImaged: 2022-08-15
+  importedAt: 2026-08-11T17:07:04.522Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10337-e02-d1-9b136fec
+  syncStatus: pending

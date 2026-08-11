@@ -1,0 +1,113 @@
+id: nd-210337-i04-d1-60eb2926
+volumeName: 210337I04-XX-01D
+md5: 60eb29264642075dd453aec3922381fd
+product:
+  id: ND-210337
+  version: I04
+  diskNumber: 1
+  language: XX
+image:
+  sizeBytes: 1310720
+  format: raw
+  controller: floppy
+  totalPages: 640
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 358
+  files:
+    - name: INST-BASY-I04:PROG
+      type: PROG
+      pages: 60
+      bytes: 181592
+      userName: FLOPPY-USER
+      dateCreated: 2522778703
+      lastDateRead: 2523957075
+      lastDateWritten: 2522778704
+      dateCreatedStr: 1987-09-15 08:49:15
+      lastDateReadStr: 1987-09-24 08:29:19
+      lastDateWrittenStr: 1987-09-15 08:49:16
+      bpunValid: null
+    - name: RESERVE-SYSTEM:MODE
+      type: MODE
+      pages: 2
+      bytes: 2692
+      userName: FLOPPY-USER
+      dateCreated: 2372831336
+      lastDateRead: 2520317401
+      lastDateWritten: 2511154260
+      dateCreatedStr: 1985-05-23 08:33:40
+      lastDateReadStr: 1987-08-28 15:55:25
+      lastDateWrittenStr: 1987-06-22 18:49:20
+      bpunValid: null
+    - name: RESERVE-SYSTEM:BATC
+      type: BATC
+      pages: 1
+      bytes: 1830
+      userName: FLOPPY-USER
+      dateCreated: 2372846803
+      lastDateRead: 2520317402
+      lastDateWritten: 2511154759
+      dateCreatedStr: 1985-05-23 12:19:19
+      lastDateReadStr: 1987-08-28 15:55:26
+      lastDateWrittenStr: 1987-06-22 18:57:07
+      bpunValid: null
+    - name: BACKUP-SERV-I02:PROG
+      type: PROG
+      pages: 58
+      bytes: 117032
+      userName: FLOPPY-USER
+      dateCreated: 2520298540
+      lastDateRead: 2523957123
+      lastDateWritten: 2520298588
+      dateCreatedStr: 1987-08-28 11:16:44
+      lastDateReadStr: 1987-09-24 08:30:03
+      lastDateWrittenStr: 1987-08-28 11:17:28
+      bpunValid: null
+    - name: BACKUP-SYS-I02:PROG
+      type: PROG
+      pages: 120
+      bytes: 245248
+      userName: FLOPPY-USER
+      dateCreated: 2505108676
+      lastDateRead: 2523957147
+      lastDateWritten: 2520308444
+      dateCreatedStr: 1987-05-08 14:51:04
+      lastDateReadStr: 1987-09-24 08:30:27
+      lastDateWrittenStr: 1987-08-28 13:43:28
+      bpunValid: null
+    - name: UE-ERMSG-EN-C05:ERR
+      type: ERR
+      pages: 110
+      bytes: 224512
+      userName: FLOPPY-USER
+      dateCreated: 2517574386
+      lastDateRead: 2520969728
+      lastDateWritten: 2517575497
+      dateCreatedStr: 1987-08-07 18:11:50
+      lastDateReadStr: 1987-09-01 15:08:00
+      lastDateWrittenStr: 1987-08-07 18:29:09
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 000/ND-disk-00081.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T14:54:27.665Z
+imagingLogs:
+  - ND-disk-00081.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-210337-i04-d1-60eb2926
+  syncStatus: pending

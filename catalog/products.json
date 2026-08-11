@@ -212,6 +212,18 @@
     "Name": "Test-programs For ND-50"
   },
   {
+    "Id": "ND-10113",
+    "Name": "Test programs for I/O devices and communications"
+  },
+  {
+    "Id": "ND-10115",
+    "Name": "Test programs for large disks (33/66/38/75/288 Mb)"
+  },
+  {
+    "Id": "ND-10116",
+    "Name": "Test programs for NORDCOM and process I/O"
+  },
+  {
     "Id": "ND-10130",
     "Name": "Xmessage For SINTRAN-III/VS"
   },
@@ -306,6 +318,10 @@
   {
     "Id": "ND-10191",
     "Name": "FORTRAN For ND-100/NORD-10"
+  },
+  {
+    "Id": "ND-10193",
+    "Name": "NOTIS-RG"
   },
   {
     "Id": "ND-10195",
@@ -492,6 +508,10 @@
     "Name": "VTM/VMT Terminal Table product (UNVERIFIED)"
   },
   {
+    "Id": "ND-10465",
+    "Name": "VTM terminal tables"
+  },
+  {
     "Id": "ND-10491",
     "Name": "PLANC for MC68000"
   },
@@ -512,6 +532,14 @@
     "Name": "FILE-HANDLER"
   },
   {
+    "Id": "ND-10522",
+    "Name": "Test Programs for NORD 10/12"
+  },
+  {
+    "Id": "ND-10523",
+    "Name": "Test programs for ND-100"
+  },
+  {
     "Id": "ND-10526",
     "Name": "NOTIS-WP for ND-500"
   },
@@ -522,6 +550,14 @@
   {
     "Id": "ND-10530",
     "Name": "NOTIS-CALC (for ND-100 and ND-500)"
+  },
+  {
+    "Id": "ND-10532",
+    "Name": "PED for ND-500/5000 (English)"
+  },
+  {
+    "Id": "ND-10534",
+    "Name": "Job Execution Control"
   },
   {
     "Id": "ND-10536",
@@ -580,6 +616,10 @@
     "Name": "COSMOS Programmers Library"
   },
   {
+    "Id": "ND-10620",
+    "Name": "TCS Terminal Control System"
+  },
+  {
     "Id": "ND-10624",
     "Name": "ND-GAMES for ND-100 / NORD-10"
   },
@@ -616,6 +656,10 @@
     "Name": "ND-BENCH Environment for ND-500"
   },
   {
+    "Id": "ND-10719",
+    "Name": "PC-LINK for APPLE II"
+  },
+  {
     "Id": "ND-10724",
     "Name": "NOTIS-BG for ND-100 (Business Graphics) 48 bits floating format"
   },
@@ -640,12 +684,16 @@
     "Name": "ND-Ada"
   },
   {
+    "Id": "ND-10755",
+    "Name": "BASIC for ND-500"
+  },
+  {
     "Id": "ND-10758",
     "Name": "NOTIS-BG for ND-100 (Business Graphics) 32 bits floating format"
   },
   {
     "Id": "ND-10760",
-    "Name": "C-Compiler for ND-100 (CC-100) *(article no. assumed from floppy label)*"
+    "Name": "C-Compiler for ND-100 (CC-100)"
   },
   {
     "Id": "ND-10770",
@@ -740,6 +788,10 @@
     "Name": "ND-100 BASIC"
   },
   {
+    "Id": "ND-210044",
+    "Name": "Subsystem Package (48-bit)"
+  },
+  {
     "Id": "ND-210073",
     "Name": "ISAM for ND-100/ND-500"
   },
@@ -754,6 +806,10 @@
   {
     "Id": "ND-210142",
     "Name": "DDPP - Discrete Data Program Package"
+  },
+  {
+    "Id": "ND-210152",
+    "Name": "NOTIS-IR"
   },
   {
     "Id": "ND-210166",
@@ -848,8 +904,16 @@
     "Name": "Subsystem Package II"
   },
   {
+    "Id": "ND-210403",
+    "Name": "COSMOS X.21 Option"
+  },
+  {
     "Id": "ND-210405",
     "Name": "COSMOS X.29 PAD"
+  },
+  {
+    "Id": "ND-210411",
+    "Name": "DDHF"
   },
   {
     "Id": "ND-210412",
@@ -868,6 +932,10 @@
     "Name": "FORTRAN Runtime system for ND-500"
   },
   {
+    "Id": "ND-210511",
+    "Name": "ND-500 Exception Library"
+  },
+  {
     "Id": "ND-210518",
     "Name": "User-Environment"
   },
@@ -884,6 +952,14 @@
     "Name": "NOTIS-IR (Information Retrieval)"
   },
   {
+    "Id": "ND-210528",
+    "Name": "Report Generator for ND-500"
+  },
+  {
+    "Id": "ND-210530",
+    "Name": "NOTIS-CALC for ND-100"
+  },
+  {
     "Id": "ND-210534",
     "Name": "JEC (Job Execution Control)"
   },
@@ -894,6 +970,10 @@
   {
     "Id": "ND-210570",
     "Name": "COSMOS X.25 Option for PIOC"
+  },
+  {
+    "Id": "ND-210573",
+    "Name": "COSMOS X.25 Option (HDLC)"
   },
   {
     "Id": "ND-210575",
@@ -910,6 +990,10 @@
   {
     "Id": "ND-210582",
     "Name": "Ethernet Interfacing Tools"
+  },
+  {
+    "Id": "ND-210586",
+    "Name": "UE-ERRORS - standard error message texts"
   },
   {
     "Id": "ND-210587",
@@ -1016,8 +1100,16 @@
     "Name": "CBASIC Compiler for ND-100"
   },
   {
+    "Id": "ND-210758",
+    "Name": "NOTIS-BG for ND-100, 32 bit floating format"
+  },
+  {
     "Id": "ND-210761",
     "Name": "C-Compiler for ND-500"
+  },
+  {
+    "Id": "ND-210770",
+    "Name": "ND Coloured Books, Red/Blue Book, Job, File and Mail Transfer"
   },
   {
     "Id": "ND-210771",
@@ -1045,7 +1137,7 @@
   },
   {
     "Id": "ND-210814",
-    "Name": "NORTEXT-100"
+    "Name": "NORTEXT-100 Typographic Tables Maintenance"
   },
   {
     "Id": "ND-210820",
@@ -1053,7 +1145,7 @@
   },
   {
     "Id": "ND-210821",
-    "Name": "NORTEXT-100"
+    "Name": "NORTEXT-100 CG8600 Output Module"
   },
   {
     "Id": "ND-210822",
@@ -1066,6 +1158,10 @@
   {
     "Id": "ND-210824",
     "Name": "NORTEXT-100 DIGISET T20 Output Module"
+  },
+  {
+    "Id": "ND-210831",
+    "Name": "NORTEXT, German Hyphenation Tables"
   },
   {
     "Id": "ND-210839",
@@ -1104,6 +1200,10 @@
     "Name": "DIALOGUE Example for ND-100"
   },
   {
+    "Id": "ND-210871",
+    "Name": "UNIQUE UNIQUICK SIBAS for ND-110"
+  },
+  {
     "Id": "ND-210872",
     "Name": "UNIQUE UNIQUICK SIBAS for ND-500/5000"
   },
@@ -1112,12 +1212,36 @@
     "Name": "ND I/O Line Switch"
   },
   {
+    "Id": "ND-210874",
+    "Name": "NORTEXT-100 SL202 Output Module"
+  },
+  {
+    "Id": "ND-210881",
+    "Name": "NORTEXT-100 Reporter Terminal Basic Program"
+  },
+  {
+    "Id": "ND-210884",
+    "Name": "NORTEXT-100 Reporter Terminal"
+  },
+  {
     "Id": "ND-210886",
     "Name": "AUTOMAKE for ND-100/ND-500"
   },
   {
     "Id": "ND-210887",
     "Name": "AUTOMAKE for ND-500"
+  },
+  {
+    "Id": "ND-210888",
+    "Name": "NOTIS-TELETEX for Norway, Remote User Module"
+  },
+  {
+    "Id": "ND-210891",
+    "Name": "NOTIS-TELETEX for Denmark (X.21)"
+  },
+  {
+    "Id": "ND-210892",
+    "Name": "NOTIS-TELETEX for Denmark, Remote User Module"
   },
   {
     "Id": "ND-210895",
@@ -1256,6 +1380,10 @@
     "Name": "ND-500/2 Micro Test Programs II"
   },
   {
+    "Id": "ND-211042",
+    "Name": "ND-211042"
+  },
+  {
     "Id": "ND-211048",
     "Name": "NOTIS-DISOSS Bridge"
   },
@@ -1278,6 +1406,10 @@
   {
     "Id": "ND-211056",
     "Name": "SPRINT Spooling system"
+  },
+  {
+    "Id": "ND-211061",
+    "Name": "ND OSI Session Service"
   },
   {
     "Id": "ND-211065",
@@ -1316,6 +1448,10 @@
     "Name": "Performance Monitor for ND-100/500/5000"
   },
   {
+    "Id": "ND-211075",
+    "Name": "File Manager"
+  },
+  {
     "Id": "ND-211078",
     "Name": "Multi-Machine Operator Environment"
   },
@@ -1326,6 +1462,10 @@
   {
     "Id": "ND-211081",
     "Name": "ABM Runtime for ND-100"
+  },
+  {
+    "Id": "ND-211082",
+    "Name": "ABM Runtime for ND-500/5000"
   },
   {
     "Id": "ND-211083",
@@ -1340,8 +1480,24 @@
     "Name": "SINTRAN III for Butterfly-110"
   },
   {
+    "Id": "ND-211089",
+    "Name": "FILE-MANAGER"
+  },
+  {
+    "Id": "ND-211090",
+    "Name": "User Environment"
+  },
+  {
+    "Id": "ND-211091",
+    "Name": "ND-211091"
+  },
+  {
     "Id": "ND-211092",
     "Name": "Butterfly-110 ND System software"
+  },
+  {
+    "Id": "ND-211093",
+    "Name": "ND-211093"
   },
   {
     "Id": "ND-211104",
@@ -1356,6 +1512,10 @@
     "Name": "ABM Application Building and Maintenance for ND-500/5000"
   },
   {
+    "Id": "ND-211111",
+    "Name": "ABM/PG Runtime for ND-500/5000"
+  },
+  {
     "Id": "ND-211114",
     "Name": "ADA for ND-500/5000"
   },
@@ -1364,8 +1524,32 @@
     "Name": "TRUE Basic System and TRUEMAN (Transaction User Environment)"
   },
   {
+    "Id": "ND-211124",
+    "Name": "ND-5000 Test Microprograms"
+  },
+  {
+    "Id": "ND-211127",
+    "Name": "NOTIS-DISOSS Bridge for ND-500/5000"
+  },
+  {
     "Id": "ND-211128",
     "Name": "FTX Error Logger"
+  },
+  {
+    "Id": "ND-211129",
+    "Name": "ND-211129"
+  },
+  {
+    "Id": "ND-211130",
+    "Name": "TPE-MON test programs for ND-100"
+  },
+  {
+    "Id": "ND-211144",
+    "Name": "SIBAS/R Process"
+  },
+  {
+    "Id": "ND-211146",
+    "Name": "SIBAS/R Runtime"
   },
   {
     "Id": "ND-211149",
@@ -1392,6 +1576,10 @@
     "Name": "LED - Language Editor (LED, LED-FORTRAN, LED-PLANC, LED-DEBUGGER)"
   },
   {
+    "Id": "ND-211161",
+    "Name": "NORTEXT PC-FT"
+  },
+  {
     "Id": "ND-211168",
     "Name": "FTX - Automatic Reconfiguration Module"
   },
@@ -1400,12 +1588,28 @@
     "Name": "NOTIS-PRO for ND-500/5000"
   },
   {
+    "Id": "ND-211183",
+    "Name": "XMSG"
+  },
+  {
     "Id": "ND-211185",
     "Name": "COSMOS TCP/IP Gateway"
   },
   {
     "Id": "ND-211187",
     "Name": "Disk Restore"
+  },
+  {
+    "Id": "ND-211190",
+    "Name": "NORTEXT, PC-FT for PDWS (ND-110)"
+  },
+  {
+    "Id": "ND-211191",
+    "Name": "NORTEXT, PC-FT for PDWS (ND-500/5000)"
+  },
+  {
+    "Id": "ND-211192",
+    "Name": "NORTEXT, Support programs for PDWS"
   },
   {
     "Id": "ND-211196",
@@ -1420,8 +1624,16 @@
     "Name": "UNIQUE Application Development (DIALOGUE-1)"
   },
   {
+    "Id": "ND-211209",
+    "Name": "DIALOGUE-3 for ND-500/5000"
+  },
+  {
     "Id": "ND-211212",
     "Name": "SIBAS/R - Data Management"
+  },
+  {
+    "Id": "ND-211221",
+    "Name": "DIALOGUE Utilities"
   },
   {
     "Id": "ND-211224",
@@ -1440,12 +1652,20 @@
     "Name": "CONVERT-DOMAIN"
   },
   {
+    "Id": "ND-211240",
+    "Name": "ND-SHELL"
+  },
+  {
     "Id": "ND-211244",
     "Name": "NOTIS-DM (Document Manager)"
   },
   {
     "Id": "ND-211245",
     "Name": "UNIQUE XTRA SIBAS for ND-110"
+  },
+  {
+    "Id": "ND-211246",
+    "Name": "UNIQUE START SIBAS for ND-110"
   },
   {
     "Id": "ND-211247",
@@ -1468,6 +1688,10 @@
     "Name": "ND-PILOT Runtime for ND-500/5000"
   },
   {
+    "Id": "ND-211254",
+    "Name": "ND-PILOT Runtime for ND-110"
+  },
+  {
     "Id": "ND-211261",
     "Name": "NOTIS-DCA Convert"
   },
@@ -1480,6 +1704,30 @@
     "Name": "UNIQUE XTRA Runtime for ND-500/5000"
   },
   {
+    "Id": "ND-211266",
+    "Name": "NOTIS-DH Document Handler"
+  },
+  {
+    "Id": "ND-211267",
+    "Name": "ABM Tool for ND-500/5000"
+  },
+  {
+    "Id": "ND-211272",
+    "Name": "ND-5200 Microprogram"
+  },
+  {
+    "Id": "ND-211274",
+    "Name": "ND-5500 Microprogram"
+  },
+  {
+    "Id": "ND-211275",
+    "Name": "ND-5700 Microprogram"
+  },
+  {
+    "Id": "ND-211276",
+    "Name": "ND-5800 Microprogram"
+  },
+  {
     "Id": "ND-211277",
     "Name": "ND SNA Gateway II"
   },
@@ -1490,6 +1738,10 @@
   {
     "Id": "ND-211279",
     "Name": "SNA 3270 Program Access II"
+  },
+  {
+    "Id": "ND-211280",
+    "Name": "SNA RJE Support II"
   },
   {
     "Id": "ND-211281",
@@ -1544,6 +1796,22 @@
     "Name": "SINTRAN NFS Support"
   },
   {
+    "Id": "ND-211300",
+    "Name": "ND-PILOT for ND-110"
+  },
+  {
+    "Id": "ND-211302",
+    "Name": "ND-PILOT Tutorial in NOTIS-WP-N for ND-500/5000"
+  },
+  {
+    "Id": "ND-211303",
+    "Name": "ND-PILOT Tutorial in NOTIS-WP-N for ND-110"
+  },
+  {
+    "Id": "ND-211304",
+    "Name": "SIBAS/R Libraries for ND-100/500/5000"
+  },
+  {
     "Id": "ND-211305",
     "Name": "ND-500(0) System Package for SINTRAN III/VSX L"
   },
@@ -1580,6 +1848,10 @@
     "Name": "DIALOGUE SIBAS/R ONLINE TUTORIAL for ND-500/5000"
   },
   {
+    "Id": "ND-211419",
+    "Name": "Additional fonts for ND-616CN"
+  },
+  {
     "Id": "ND-211455",
     "Name": "SIBAS Manager for ND-500/5000"
   },
@@ -1600,6 +1872,14 @@
     "Name": "Basic TECHNOVISION Software for TECHNOSTATION"
   },
   {
+    "Id": "ND-211475",
+    "Name": "NOTIS-DM with ABM Definition Tool"
+  },
+  {
+    "Id": "ND-211476",
+    "Name": "Graphic Server for Leonardo"
+  },
+  {
     "Id": "ND-211478",
     "Name": "DOMINO/SCSI System Package"
   },
@@ -1616,6 +1896,10 @@
     "Name": "DSS Test programs"
   },
   {
+    "Id": "ND-211486",
+    "Name": "NORTEXT, Access Server for ND-500/5000"
+  },
+  {
     "Id": "ND-211488",
     "Name": "OpenLAN TCP/IP Access Module/II"
   },
@@ -1628,12 +1912,36 @@
     "Name": "UNIQUE SERVER for ND-500/5000"
   },
   {
+    "Id": "ND-211494",
+    "Name": "NOTIS-DM Upgrade for NOTIS-WP"
+  },
+  {
+    "Id": "ND-211495",
+    "Name": "SINTRAN Sprint printer driver for ND 708, ND 708 II D and HP LaserJet series II"
+  },
+  {
     "Id": "ND-211498",
     "Name": "SINTRAN MS-DOS Service (SMS)"
   },
   {
+    "Id": "ND-211560",
+    "Name": "Patch Kit for ND TpServer Platform (211560) version B"
+  },
+  {
     "Id": "ND-211564",
     "Name": "NOTIS-SPELL for ND-500/5000"
+  },
+  {
+    "Id": "ND-211565",
+    "Name": "CAT-PROFILE for ND-500/5000"
+  },
+  {
+    "Id": "ND-211566",
+    "Name": "SINTRAN Socket Library"
+  },
+  {
+    "Id": "ND-211573",
+    "Name": "ND SPELL Dictionaries for ND-500/500"
   },
   {
     "Id": "ND-211574",
@@ -1650,6 +1958,26 @@
   {
     "Id": "ND-211586",
     "Name": "OpenLAN SNA Gateway Software"
+  },
+  {
+    "Id": "ND-211610",
+    "Name": "NORTEXT, Italian Hyphenation"
+  },
+  {
+    "Id": "ND-211611",
+    "Name": "NORTEXT, Spanish Hyphenation"
+  },
+  {
+    "Id": "ND-211612",
+    "Name": "NORTEXT, Portuguese Hyphenation"
+  },
+  {
+    "Id": "ND-211613",
+    "Name": "NORTEXT, Turkish Hyphenation"
+  },
+  {
+    "Id": "ND-211647",
+    "Name": "ABM/PG Kit for Porting to Uniline x0"
   },
   {
     "Id": "ND-211655",
@@ -1692,6 +2020,10 @@
     "Name": "SOFTICE for Xenix Software Key Installation Program"
   },
   {
+    "Id": "ND-211998",
+    "Name": "X Window System for ND-500/5000"
+  },
+  {
     "Id": "ND-220001",
     "Name": "SIBAS/R for ND-500/5000"
   },
@@ -1732,6 +2064,14 @@
     "Name": "NORTEXT Page Designer"
   },
   {
+    "Id": "ND-230021",
+    "Name": "Microsoft&reg; Windows 2.10"
+  },
+  {
+    "Id": "ND-230022",
+    "Name": "NOTIS-WP for ND-WS"
+  },
+  {
     "Id": "ND-230025",
     "Name": "Desk Top Manager for OWS"
   },
@@ -1746,6 +2086,10 @@
   {
     "Id": "ND-230036",
     "Name": "MS-DOS Printer Driver for ND Applications"
+  },
+  {
+    "Id": "ND-230041",
+    "Name": "NORTEXT, Ad Designer"
   },
   {
     "Id": "ND-230042",
@@ -1764,12 +2108,32 @@
     "Name": "NORTEXT NEWS"
   },
   {
+    "Id": "ND-230061",
+    "Name": "ND SMX for Windows"
+  },
+  {
+    "Id": "ND-230062",
+    "Name": "ND Network Printing for Windows"
+  },
+  {
+    "Id": "ND-230068",
+    "Name": "OWS Software Distribution System"
+  },
+  {
     "Id": "ND-230080",
     "Name": "PC/TCP Kernel for Etherlink II"
   },
   {
     "Id": "ND-230083",
     "Name": "PC/TCP Kernel for Etherlink/MC"
+  },
+  {
+    "Id": "ND-230084",
+    "Name": "OWS SNA 3270 Emulator II"
+  },
+  {
+    "Id": "ND-230087",
+    "Name": "SQL Library for OWS"
   },
   {
     "Id": "ND-230114",
@@ -1794,6 +2158,22 @@
   {
     "Id": "ND-230143",
     "Name": "PC-NOTIS Server for ND-500/5000"
+  },
+  {
+    "Id": "ND-230144",
+    "Name": "PC-NOTIS WP"
+  },
+  {
+    "Id": "ND-230145",
+    "Name": "PC-NOTIS CALC"
+  },
+  {
+    "Id": "ND-230146",
+    "Name": "PC-NOTIS ID"
+  },
+  {
+    "Id": "ND-230147",
+    "Name": "PC-NOTIS DS"
   },
   {
     "Id": "ND-230156",
@@ -1824,6 +2204,10 @@
     "Name": "Operating System Customization for Uniline x0 for SCO UNIX 386"
   },
   {
+    "Id": "ND-250004",
+    "Name": "XCOM, eXtended COMmand processor"
+  },
+  {
     "Id": "ND-250006",
     "Name": "Perform for ND-500"
   },
@@ -1836,28 +2220,68 @@
     "Name": "NDP"
   },
   {
+    "Id": "ND-250178",
+    "Name": "UE-ERRORS Translation Kit"
+  },
+  {
     "Id": "ND-250196",
     "Name": "REPRO for ND-100"
+  },
+  {
+    "Id": "ND-250197",
+    "Name": "REPRO for ND-500"
+  },
+  {
+    "Id": "ND-250247",
+    "Name": "DDHF"
+  },
+  {
+    "Id": "ND-250274",
+    "Name": "Standard XCOM installation procedure"
+  },
+  {
+    "Id": "ND-250289",
+    "Name": "SIBAS/R Softkey"
   },
   {
     "Id": "ND-250290",
     "Name": "ND-500/5000 Place-Library"
   },
   {
+    "Id": "ND-250295",
+    "Name": "NUCLEUS Library"
+  },
+  {
     "Id": "ND-250304",
     "Name": "SINTRAN III/VSX-500 Standard system A"
   },
   {
+    "Id": "ND-250305",
+    "Name": "SINTRAN III/VSX-500 Standard system B"
+  },
+  {
     "Id": "ND-250306",
-    "Name": "SINTRAN III for ND-500"
+    "Name": "SINTRAN III/VSX-500 Standard system C"
+  },
+  {
+    "Id": "ND-250321",
+    "Name": "Bridge test for ND-100"
   },
   {
     "Id": "ND-250360",
     "Name": "SINTRAN III/VSX Patch File 106000"
   },
   {
+    "Id": "ND-250377",
+    "Name": "SIBAS/R Utilities"
+  },
+  {
     "Id": "ND-250379",
     "Name": "System files"
+  },
+  {
+    "Id": "ND-250386",
+    "Name": "TECHNOGSU, Graphics Service Utilities"
   },
   {
     "Id": "ND-250405",
@@ -1940,7 +2364,19 @@
     "Name": "Patch Kit for ND tpServer"
   },
   {
+    "Id": "ND-800029",
+    "Name": "Installation description for SCSI Optical Disk Drive LD 1200"
+  },
+  {
+    "Id": "ND-899092",
+    "Name": "Publisher 19 Display Unit w/Adapter Card ND PC and OWS"
+  },
+  {
     "Id": "PLANC-SCREEN",
     "Name": "PLANC Screen Handling"
+  },
+  {
+    "Id": "UNIQUE-KEY",
+    "Name": "UNIQUE product key disk (site licence)"
   }
 ]

@@ -1,0 +1,64 @@
+id: nd-10191-a-d2-f01896b2
+volumeName: ND-10191A-PART2
+md5: f01896b2106b273a53afd9e1b03cccda
+product:
+  id: ND-10191
+  version: A
+  diskNumber: 2
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 94
+  files:
+    - name: FORTRAN-1BANK-A:BRF
+      type: BRF
+      pages: 45
+      bytes: 90668
+      userName: FLOPPY-USER
+      dateCreated: 2174156237
+      lastDateRead: 2192364858
+      lastDateWritten: 2174157721
+      dateCreatedStr: 1982-06-11 15:55:13
+      lastDateReadStr: 1982-10-22 13:20:58
+      lastDateWrittenStr: 1982-06-11 16:14:25
+      bpunValid: null
+    - name: FORTRAN-2BANK-A:BRF
+      type: BRF
+      pages: 46
+      bytes: 92978
+      userName: FLOPPY-USER
+      dateCreated: 2174156464
+      lastDateRead: 2192364884
+      lastDateWritten: 2174653391
+      dateCreatedStr: 1982-06-11 15:58:48
+      lastDateReadStr: 1982-10-22 13:21:20
+      lastDateWrittenStr: 1982-06-15 09:15:15
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 300/ND-disk-00392.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:45:57.749Z
+imagingLogs:
+  - ND-disk-00392.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10191-a-d2-f01896b2
+  syncStatus: pending

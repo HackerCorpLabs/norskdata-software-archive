@@ -1,0 +1,185 @@
+id: nd-210337-h07-d1-c63d20d5
+volumeName: 210337H07-EN-01D
+md5: c63d20d5f253faef585463c6121ab96f
+product:
+  id: ND-210337
+  version: H07
+  diskNumber: 1
+  language: EN
+image:
+  sizeBytes: 1310720
+  format: raw
+  controller: floppy
+  totalPages: 640
+  pageSize: 2048
+  bootFormat: flomon
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 347
+  files:
+    - name: BACKUP-H06:PROG
+      type: PROG
+      pages: 117
+      bytes: 239354
+      userName: FLOPPY-USER
+      dateCreated: 2439568671
+      lastDateRead: 2490928871
+      lastDateWritten: 2490813882
+      dateCreatedStr: 1986-05-20 13:52:31
+      lastDateReadStr: 1987-01-28 08:59:39
+      lastDateWrittenStr: 1987-01-27 12:54:58
+      bpunValid: null
+    - name: RESERVE-SYSTEM:MODE
+      type: MODE
+      pages: 2
+      bytes: 2294
+      userName: FLOPPY-USER
+      dateCreated: 2372831336
+      lastDateRead: 2441784550
+      lastDateWritten: 2372966981
+      dateCreatedStr: 1985-05-23 08:33:40
+      lastDateReadStr: 1986-06-05 10:51:38
+      lastDateWrittenStr: 1985-05-24 09:41:05
+      bpunValid: null
+    - name: RESERVE-SYSTEM:BATC
+      type: BATC
+      pages: 1
+      bytes: 1438
+      userName: FLOPPY-USER
+      dateCreated: 2372846803
+      lastDateRead: 2441784558
+      lastDateWritten: 2372855763
+      dateCreatedStr: 1985-05-23 12:19:19
+      lastDateReadStr: 1986-06-05 10:51:46
+      lastDateWrittenStr: 1985-05-23 14:31:19
+      bpunValid: null
+    - name: UE-ERMSG-EN-B05:ERR
+      type: ERR
+      pages: 70
+      bytes: 142080
+      userName: FLOPPY-USER
+      dateCreated: 2436540063
+      lastDateRead: 2441780558
+      lastDateWritten: 2436540063
+      dateCreatedStr: 1986-04-29 10:26:31
+      lastDateReadStr: 1986-06-05 09:53:14
+      lastDateWrittenStr: 1986-04-29 10:26:31
+      bpunValid: null
+    - name: BACKUP-SERV-H04:PROG
+      type: PROG
+      pages: 55
+      bytes: 111104
+      userName: FLOPPY-USER
+      dateCreated: 2439304686
+      lastDateRead: 2493565518
+      lastDateWritten: 2490813941
+      dateCreatedStr: 1986-05-18 13:23:46
+      lastDateReadStr: 1987-02-16 12:41:14
+      lastDateWrittenStr: 1987-01-27 12:55:53
+      bpunValid: null
+    - name: INST-BASY-H00:PROG
+      type: PROG
+      pages: 62
+      bytes: 186658
+      userName: FLOPPY-USER
+      dateCreated: 2421901901
+      lastDateRead: 2444410360
+      lastDateWritten: 2441788869
+      dateCreatedStr: 1986-01-13 20:41:13
+      lastDateReadStr: 1986-06-25 11:55:56
+      lastDateWrittenStr: 1986-06-05 11:55:05
+      bpunValid: null
+    - name: FLOPPY-MON-H01:BPUN
+      type: BPUN
+      pages: 3
+      bytes: 4332
+      userName: FLOPPY-USER
+      dateCreated: 2458311482
+      lastDateRead: 2458312925
+      lastDateWritten: 2458311532
+      dateCreatedStr: 1986-10-03 13:44:58
+      lastDateReadStr: 1986-10-03 14:03:29
+      lastDateWrittenStr: 1986-10-03 13:45:44
+      bpunValid: true
+    - name: FLOPPY-SINTR-H00:MODE
+      type: MODE
+      pages: 13
+      bytes: 25582
+      userName: FLOPPY-USER
+      dateCreated: 2435509593
+      lastDateRead: 2492111058
+      lastDateWritten: 2439576596
+      dateCreatedStr: 1986-04-21 14:53:25
+      lastDateReadStr: 1987-02-05 09:35:18
+      lastDateWrittenStr: 1986-05-20 15:48:20
+      bpunValid: null
+    - name: MINI-LOAD-H00:BPUN
+      type: BPUN
+      pages: 1
+      bytes: 1492
+      userName: FLOPPY-USER
+      dateCreated: 2400634402
+      lastDateRead: 2439586024
+      lastDateWritten: 2400634402
+      dateCreatedStr: 1985-12-11 12:24:34
+      lastDateReadStr: 1986-05-20 18:03:40
+      lastDateWrittenStr: 1985-12-11 12:24:34
+      bpunValid: true
+    - name: START-UP-H00:MODE
+      type: MODE
+      pages: 1
+      bytes: 87
+      userName: FLOPPY-USER
+      dateCreated: 2400634407
+      lastDateRead: 2439813866
+      lastDateWritten: 2439580662
+      dateCreatedStr: 1985-12-11 12:24:39
+      lastDateReadStr: 1986-05-22 09:43:42
+      lastDateWrittenStr: 1986-05-20 16:47:54
+      bpunValid: null
+    - name: BACKUP-LOAD-H00:MODE
+      type: MODE
+      pages: 2
+      bytes: 607
+      userName: FLOPPY-USER
+      dateCreated: 2318837111
+      lastDateRead: 2439824531
+      lastDateWritten: 2439816469
+      dateCreatedStr: 1984-08-27 10:21:55
+      lastDateReadStr: 1986-05-22 12:18:19
+      lastDateWrittenStr: 1986-05-22 10:20:21
+      bpunValid: null
+    - name: BACKUP-ERMSG-H00:ERR
+      type: ERR
+      pages: 6
+      bytes: 11776
+      userName: FLOPPY-USER
+      dateCreated: 2439030180
+      lastDateRead: 2439813899
+      lastDateWritten: 2439030180
+      dateCreatedStr: 1986-05-16 10:22:36
+      lastDateReadStr: 1986-05-22 09:44:11
+      lastDateWrittenStr: 1986-05-16 10:22:36
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 100/ND-disk-00103.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:25:50.810Z
+imagingLogs:
+  - ND-disk-00103.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-210337-h07-d1-c63d20d5
+  syncStatus: pending

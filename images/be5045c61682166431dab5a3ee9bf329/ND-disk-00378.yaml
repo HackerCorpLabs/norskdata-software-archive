@@ -1,0 +1,324 @@
+id: img-be5045c61682
+volumeName: ERIK-1
+md5: be5045c61682166431dab5a3ee9bf329
+image:
+  sizeBytes: 319488
+  format: raw
+  controller: floppy
+  totalPages: 156
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 139
+  files:
+    - name: EKVA-EM:SYMB
+      type: SYMB
+      pages: 3
+      bytes: 4376
+      userName: FLOPPY-USER
+      dateCreated: 1999172723
+      lastDateRead: 2060397470
+      lastDateWritten: 2053327673
+      dateCreatedStr: 1979-12-20 15:17:51
+      lastDateReadStr: 1980-11-07 18:46:30
+      lastDateWrittenStr: 1980-09-17 20:44:57
+      bpunValid: null
+    - name: 7BIO:DATA
+      type: DATA
+      pages: 2
+      bytes: 2414
+      userName: FLOPPY-USER
+      dateCreated: 2087536064
+      lastDateRead: null
+      lastDateWritten: 2087536065
+      dateCreatedStr: 1981-01-22 20:23:00
+      lastDateReadStr: null
+      lastDateWrittenStr: 1981-01-22 20:23:01
+      bpunValid: null
+    - name: DELFI-EAO:SYMB
+      type: SYMB
+      pages: 9
+      bytes: 17691
+      userName: FLOPPY-USER
+      dateCreated: 2087536108
+      lastDateRead: 2158941451
+      lastDateWritten: 2158935554
+      dateCreatedStr: 1981-01-22 20:23:44
+      lastDateReadStr: 1982-02-23 13:20:11
+      lastDateWrittenStr: 1982-02-23 11:56:02
+      bpunValid: null
+    - name: COMMUL-EM:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 354
+      userName: FLOPPY-USER
+      dateCreated: 1999173002
+      lastDateRead: 2060397452
+      lastDateWritten: 2053327666
+      dateCreatedStr: 1979-12-20 15:22:10
+      lastDateReadStr: 1980-11-07 18:46:12
+      lastDateWrittenStr: 1980-09-17 20:44:50
+      bpunValid: null
+    - name: TREKK-EAO:PROG
+      type: PROG
+      pages: 5
+      bytes: 9216
+      userName: FLOPPY-USER
+      dateCreated: 2060395286
+      lastDateRead: 2190275895
+      lastDateWritten: 2062760106
+      dateCreatedStr: 1980-11-07 18:12:22
+      lastDateReadStr: 1982-10-06 15:20:55
+      lastDateWrittenStr: 1980-11-25 19:34:42
+      bpunValid: null
+    - name: DELFI:PROG
+      type: PROG
+      pages: 9
+      bytes: 16896
+      userName: FLOPPY-USER
+      dateCreated: 2053333279
+      lastDateRead: 2190275911
+      lastDateWritten: 2053333285
+      dateCreatedStr: 1980-09-17 22:04:31
+      lastDateReadStr: 1982-10-06 15:21:07
+      lastDateWrittenStr: 1980-09-17 22:04:37
+      bpunValid: null
+    - name: FAKULTET:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 2676
+      userName: FLOPPY-USER
+      dateCreated: 2087536152
+      lastDateRead: null
+      lastDateWritten: 2102350166
+      dateCreatedStr: 1981-01-22 20:24:24
+      lastDateReadStr: null
+      lastDateWrittenStr: 1981-05-07 21:05:22
+      bpunValid: null
+    - name: SKOTT-EAO:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1038
+      userName: FLOPPY-USER
+      dateCreated: 2054077123
+      lastDateRead: 2097369653
+      lastDateWritten: 2087535894
+      dateCreatedStr: 1980-09-23 11:43:03
+      lastDateReadStr: 1981-04-01 21:08:53
+      lastDateWrittenStr: 1981-01-22 20:20:22
+      bpunValid: null
+    - name: FAKULTET:PROG
+      type: PROG
+      pages: 1
+      bytes: 894
+      userName: FLOPPY-USER
+      dateCreated: 2087536177
+      lastDateRead: 2124873077
+      lastDateWritten: 2087536178
+      dateCreatedStr: 1981-01-22 20:24:49
+      lastDateReadStr: 1981-10-19 15:53:53
+      lastDateWrittenStr: 1981-01-22 20:24:50
+      bpunValid: null
+    - name: MAGIC-MD:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1850
+      userName: FLOPPY-USER
+      dateCreated: 2087536245
+      lastDateRead: 2102349407
+      lastDateWritten: 2087536251
+      dateCreatedStr: 1981-01-22 20:25:53
+      lastDateReadStr: 1981-05-07 20:57:31
+      lastDateWrittenStr: 1981-01-22 20:25:59
+      bpunValid: null
+    - name: STAR-TREKK-EAO:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1331
+      userName: FLOPPY-USER
+      dateCreated: 2054077161
+      lastDateRead: 2190275926
+      lastDateWritten: 2087537941
+      dateCreatedStr: 1980-09-23 11:43:41
+      lastDateReadStr: 1982-10-06 15:21:22
+      lastDateWrittenStr: 1981-01-22 20:52:21
+      bpunValid: null
+    - name: LUFF-GAN:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 3869
+      userName: FLOPPY-USER
+      dateCreated: 2087536299
+      lastDateRead: null
+      lastDateWritten: 2087536306
+      dateCreatedStr: 1981-01-22 20:26:43
+      lastDateReadStr: null
+      lastDateWrittenStr: 1981-01-22 20:26:50
+      bpunValid: null
+    - name: MAGIC-MD:DATA
+      type: DATA
+      pages: 3
+      bytes: 4874
+      userName: FLOPPY-USER
+      dateCreated: 2087536378
+      lastDateRead: 2102349556
+      lastDateWritten: 2087536384
+      dateCreatedStr: 1981-01-22 20:27:58
+      lastDateReadStr: 1981-05-07 20:59:52
+      lastDateWrittenStr: 1981-01-22 20:28:00
+      bpunValid: null
+    - name: NEW-MD-MD:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 3867
+      userName: FLOPPY-USER
+      dateCreated: 2087536621
+      lastDateRead: null
+      lastDateWritten: 2087536624
+      dateCreatedStr: 1981-01-22 20:31:45
+      lastDateReadStr: null
+      lastDateWrittenStr: 1981-01-22 20:31:48
+      bpunValid: null
+    - name: MORD-MD:SYMB
+      type: SYMB
+      pages: 9
+      bytes: 17363
+      userName: FLOPPY-USER
+      dateCreated: 2087536943
+      lastDateRead: null
+      lastDateWritten: 2087536946
+      dateCreatedStr: 1981-01-22 20:36:47
+      lastDateReadStr: null
+      lastDateWrittenStr: 1981-01-22 20:36:50
+      bpunValid: null
+    - name: PERSONER-EAO:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 2571
+      userName: FLOPPY-USER
+      dateCreated: 2087537179
+      lastDateRead: 2190275956
+      lastDateWritten: 2087537181
+      dateCreatedStr: 1981-01-22 20:40:27
+      lastDateReadStr: 1982-10-06 15:21:52
+      lastDateWrittenStr: 1981-01-22 20:40:29
+      bpunValid: null
+    - name: PERSONER-EAO:DATA
+      type: DATA
+      pages: 5
+      bytes: 9965
+      userName: FLOPPY-USER
+      dateCreated: 2087537337
+      lastDateRead: 2190275981
+      lastDateWritten: 2125797442
+      dateCreatedStr: 1981-01-22 20:42:57
+      lastDateReadStr: 1982-10-06 15:22:13
+      lastDateWrittenStr: 1981-10-26 17:33:02
+      bpunValid: null
+    - name: POKER-MD:SYMB
+      type: SYMB
+      pages: 3
+      bytes: 5773
+      userName: FLOPPY-USER
+      dateCreated: 2087537883
+      lastDateRead: null
+      lastDateWritten: 2087537885
+      dateCreatedStr: 1981-01-22 20:51:27
+      lastDateReadStr: null
+      lastDateWrittenStr: 1981-01-22 20:51:29
+      bpunValid: null
+    - name: SCAN-MD:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 2296
+      userName: FLOPPY-USER
+      dateCreated: 2106142382
+      lastDateRead: null
+      lastDateWritten: 2106142383
+      dateCreatedStr: 1981-06-04 18:58:46
+      lastDateReadStr: null
+      lastDateWrittenStr: 1981-06-04 18:58:47
+      bpunValid: null
+    - name: INFO-SCAN:DATA
+      type: DATA
+      pages: 1
+      bytes: 1194
+      userName: FLOPPY-USER
+      dateCreated: 2106142412
+      lastDateRead: null
+      lastDateWritten: 2106142413
+      dateCreatedStr: 1981-06-04 18:59:12
+      lastDateReadStr: null
+      lastDateWrittenStr: 1981-06-04 18:59:13
+      bpunValid: null
+    - name: SVAR-EAO:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1425
+      userName: FLOPPY-USER
+      dateCreated: 2106142454
+      lastDateRead: null
+      lastDateWritten: 2106142456
+      dateCreatedStr: 1981-06-04 18:59:54
+      lastDateReadStr: null
+      lastDateWrittenStr: 1981-06-04 18:59:56
+      bpunValid: null
+    - name: SNYGG-PRIM-EAO:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 382
+      userName: FLOPPY-USER
+      dateCreated: 2039295725
+      lastDateRead: 2301957196
+      lastDateWritten: 2039296119
+      dateCreatedStr: 1980-06-06 18:59:45
+      lastDateReadStr: 1984-04-26 17:17:12
+      lastDateWrittenStr: 1980-06-06 19:01:55
+      bpunValid: null
+    - name: BRF-3-EAO:SYMB
+      type: SYMB
+      pages: 29
+      bytes: 58292
+      userName: FLOPPY-USER
+      dateCreated: 2050296281
+      lastDateRead: 2530156864
+      lastDateWritten: 2122657798
+      dateCreatedStr: 1980-08-26 16:39:25
+      lastDateReadStr: 1987-11-07 18:05:00
+      lastDateWrittenStr: 1981-10-02 19:00:06
+      bpunValid: null
+    - name: STAR-TREKK-MJ:PROG
+      type: PROG
+      pages: 19
+      bytes: 38400
+      userName: FLOPPY-USER
+      dateCreated: 2050296759
+      lastDateRead: 2060394778
+      lastDateWritten: 2050297229
+      dateCreatedStr: 1980-08-26 16:46:55
+      lastDateReadStr: 1980-11-07 18:04:26
+      lastDateWrittenStr: 1980-08-26 16:54:13
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 300/ND-disk-00378.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:45:56.256Z
+imagingLogs:
+  - ND-disk-00378.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-be5045c61682
+  syncStatus: pending

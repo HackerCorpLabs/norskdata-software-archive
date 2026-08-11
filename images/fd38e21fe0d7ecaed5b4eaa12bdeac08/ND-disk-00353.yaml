@@ -1,0 +1,28 @@
+id: img-fd38e21fe0d7
+volumeName: null
+md5: fd38e21fe0d7ecaed5b4eaa12bdeac08
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+filesystem: backup
+provenance:
+  contributor: gandalf
+  originalPath: 300/ND-disk-00353.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:45:50.586Z
+imagingLogs:
+  - ND-disk-00353.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-fd38e21fe0d7
+  syncStatus: pending

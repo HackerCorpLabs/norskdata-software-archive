@@ -1,0 +1,252 @@
+id: img-de83fb9b0181
+volumeName: LUNDIN-4
+md5: de83fb9b018168f96fad7daf3a42db6c
+image:
+  sizeBytes: 319488
+  format: raw
+  controller: floppy
+  totalPages: 156
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: SYSTEM
+      pagesUsed: 74
+  files:
+    - name: ARDA-LU:SYMB
+      type: SYMB
+      pages: 11
+      bytes: 22287
+      userName: SYSTEM
+      dateCreated: 2453868579
+      lastDateRead: 2532001293
+      lastDateWritten: 2506938235
+      dateCreatedStr: 1986-09-01 17:00:35
+      lastDateReadStr: 1987-11-21 20:24:13
+      lastDateWrittenStr: 1987-05-22 13:29:59
+      bpunValid: null
+    - name: KONSTIGT-LU:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 2093
+      userName: SYSTEM
+      dateCreated: 2506938416
+      lastDateRead: 2531999764
+      lastDateWritten: 2506938425
+      dateCreatedStr: 1987-05-22 13:32:48
+      lastDateReadStr: 1987-11-21 20:00:20
+      lastDateWrittenStr: 1987-05-22 13:32:57
+      bpunValid: null
+    - name: ARDA-INSTR-LU:DATA
+      type: DATA
+      pages: 2
+      bytes: 2494
+      userName: SYSTEM
+      dateCreated: 2455712848
+      lastDateRead: 2506938223
+      lastDateWritten: 2506938213
+      dateCreatedStr: 1986-09-15 19:17:16
+      lastDateReadStr: 1987-05-22 13:29:47
+      lastDateWrittenStr: 1987-05-22 13:29:37
+      bpunValid: null
+    - name: MESSAGE-LU:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 123
+      userName: SYSTEM
+      dateCreated: 2456484893
+      lastDateRead: 2532001336
+      lastDateWritten: 2456484895
+      dateCreatedStr: 1986-09-21 15:48:29
+      lastDateReadStr: 1987-11-21 20:24:56
+      lastDateWrittenStr: 1986-09-21 15:48:31
+      bpunValid: null
+    - name: LEGEND-LU:ZYMB
+      type: ZYMB
+      pages: 23
+      bytes: 45982
+      userName: SYSTEM
+      dateCreated: 2506939013
+      lastDateRead: 2532000389
+      lastDateWritten: 2506939014
+      dateCreatedStr: 1987-05-22 13:42:05
+      lastDateReadStr: 1987-11-21 20:10:05
+      lastDateWrittenStr: 1987-05-22 13:42:06
+      bpunValid: null
+    - name: 2LEGEND-LU:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 131
+      userName: SYSTEM
+      dateCreated: 2506939151
+      lastDateRead: 2532000000
+      lastDateWritten: 2506939152
+      dateCreatedStr: 1987-05-22 13:44:15
+      lastDateReadStr: 1987-11-21 20:04:00
+      lastDateWrittenStr: 1987-05-22 13:44:16
+      bpunValid: null
+    - name: ABCDEFGHIJKLM-LU:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1648
+      userName: SYSTEM
+      dateCreated: 2456484845
+      lastDateRead: 2532001195
+      lastDateWritten: 2457274794
+      dateCreatedStr: 1986-09-21 15:47:45
+      lastDateReadStr: 1987-11-21 20:22:43
+      lastDateWrittenStr: 1986-09-27 16:38:42
+      bpunValid: null
+    - name: 2ARDA-LU:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 171
+      userName: SYSTEM
+      dateCreated: 2456484870
+      lastDateRead: 2506938482
+      lastDateWritten: 2466709099
+      dateCreatedStr: 1986-09-21 15:48:06
+      lastDateReadStr: 1987-05-22 13:33:50
+      lastDateWrittenStr: 1986-12-03 15:57:43
+      bpunValid: null
+    - name: SORTING-LU:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 375
+      userName: SYSTEM
+      dateCreated: 2458594222
+      lastDateRead: 2532001393
+      lastDateWritten: 2458594224
+      dateCreatedStr: 1986-10-05 18:46:46
+      lastDateReadStr: 1987-11-21 20:25:49
+      lastDateWrittenStr: 1986-10-05 18:46:48
+      bpunValid: null
+    - name: JOKES-LU:DATA
+      type: DATA
+      pages: 6
+      bytes: 10305
+      userName: SYSTEM
+      dateCreated: 2457274898
+      lastDateRead: 2531998646
+      lastDateWritten: 2506938518
+      dateCreatedStr: 1986-09-27 16:40:18
+      lastDateReadStr: 1987-11-21 19:46:54
+      lastDateWrittenStr: 1987-05-22 13:34:22
+      bpunValid: null
+    - name: MENY-LU:DATA
+      type: DATA
+      pages: 1
+      bytes: 75
+      userName: SYSTEM
+      dateCreated: 2457274916
+      lastDateRead: 2531998611
+      lastDateWritten: 2506938541
+      dateCreatedStr: 1986-09-27 16:40:36
+      lastDateReadStr: 1987-11-21 19:46:19
+      lastDateWrittenStr: 1987-05-22 13:34:45
+      bpunValid: null
+    - name: STAT-USER-RA-LU:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1250
+      userName: SYSTEM
+      dateCreated: 2457274951
+      lastDateRead: 2532001049
+      lastDateWritten: 2457274953
+      dateCreatedStr: 1986-09-27 16:41:07
+      lastDateReadStr: 1987-11-21 20:20:25
+      lastDateWrittenStr: 1986-09-27 16:41:09
+      bpunValid: null
+    - name: CALCULATOR-LU:SYMB
+      type: SYMB
+      pages: 5
+      bytes: 8701
+      userName: SYSTEM
+      dateCreated: 2458594260
+      lastDateRead: null
+      lastDateWritten: 2506938600
+      dateCreatedStr: 1986-10-05 18:47:20
+      lastDateReadStr: null
+      lastDateWrittenStr: 1987-05-22 13:35:40
+      bpunValid: null
+    - name: FILMISAR-LU:TEXT
+      type: TEXT
+      pages: 2
+      bytes: 2667
+      userName: SYSTEM
+      dateCreated: 2457274999
+      lastDateRead: 2506938612
+      lastDateWritten: 2466709542
+      dateCreatedStr: 1986-09-27 16:41:55
+      lastDateReadStr: 1987-05-22 13:35:52
+      lastDateWrittenStr: 1986-12-03 16:00:38
+      bpunValid: null
+    - name: LOSENFIL-ARDA-LU:DATA
+      type: DATA
+      pages: 1
+      bytes: 1255
+      userName: SYSTEM
+      dateCreated: 2457275018
+      lastDateRead: 2506938624
+      lastDateWritten: 2506938660
+      dateCreatedStr: 1986-09-27 16:42:10
+      lastDateReadStr: 1987-05-22 13:36:00
+      lastDateWrittenStr: 1987-05-22 13:36:36
+      bpunValid: null
+    - name: MYNDIG-LU:DATA
+      type: DATA
+      pages: 1
+      bytes: 879
+      userName: SYSTEM
+      dateCreated: 2458594279
+      lastDateRead: 2532001491
+      lastDateWritten: 2458594280
+      dateCreatedStr: 1986-10-05 18:47:39
+      lastDateReadStr: 1987-11-21 20:27:19
+      lastDateWrittenStr: 1986-10-05 18:47:40
+      bpunValid: null
+    - name: BESKED-LU:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1646
+      userName: SYSTEM
+      dateCreated: 2458594290
+      lastDateRead: 2532001508
+      lastDateWritten: 2532001467
+      dateCreatedStr: 1986-10-05 18:47:50
+      lastDateReadStr: 1987-11-21 20:27:36
+      lastDateWrittenStr: 1987-11-21 20:26:59
+      bpunValid: null
+    - name: KOLLA-RUM-LU:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 259
+      userName: SYSTEM
+      dateCreated: 2458594149
+      lastDateRead: 2663991386
+      lastDateWritten: 2458594152
+      dateCreatedStr: 1986-10-05 18:45:37
+      lastDateReadStr: 1989-11-04 20:33:26
+      lastDateWrittenStr: 1986-10-05 18:45:40
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 300/ND-disk-00344.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:45:49.388Z
+imagingLogs:
+  - ND-disk-00344.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-de83fb9b0181
+  syncStatus: pending

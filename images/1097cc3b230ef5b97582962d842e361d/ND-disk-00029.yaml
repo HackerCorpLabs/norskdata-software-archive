@@ -1,0 +1,245 @@
+id: nd-211224-b01-d1-1097cc3b
+volumeName: 211224B01-XX-01D
+md5: 1097cc3b230ef5b97582962d842e361d
+product:
+  id: ND-211224
+  version: B01
+  diskNumber: 1
+  language: XX
+image:
+  sizeBytes: 1310720
+  format: raw
+  controller: floppy
+  totalPages: 640
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 572
+  files:
+    - name: IN-LINK-XX-B01:PROG
+      type: PROG
+      pages: 67
+      bytes: 192510
+      userName: FLOPPY-USER
+      dateCreated: 2625932450
+      lastDateRead: 2594620877
+      lastDateWritten: 2625932455
+      dateCreatedStr: 1989-02-02 08:50:34
+      lastDateReadStr: 1988-10-19 12:23:13
+      lastDateWrittenStr: 1989-02-02 08:50:39
+      bpunValid: null
+    - name: IN-LINK-XX-B01:XCOM
+      type: XCOM
+      pages: 14
+      bytes: 26766
+      userName: FLOPPY-USER
+      dateCreated: 2625932493
+      lastDateRead: 2594620912
+      lastDateWritten: 2625932495
+      dateCreatedStr: 1989-02-02 08:51:13
+      lastDateReadStr: 1988-10-19 12:23:48
+      lastDateWrittenStr: 1989-02-02 08:51:15
+      bpunValid: null
+    - name: IN-LINK-XX-B01:INIT
+      type: INIT
+      pages: 10
+      bytes: 19310
+      userName: FLOPPY-USER
+      dateCreated: 2625932505
+      lastDateRead: 2594620933
+      lastDateWritten: 2625932506
+      dateCreatedStr: 1989-02-02 08:51:25
+      lastDateReadStr: 1988-10-19 12:24:05
+      lastDateWrittenStr: 1989-02-02 08:51:26
+      bpunValid: null
+    - name: LINKER-B01:HELP
+      type: HELP
+      pages: 96
+      bytes: 191618
+      userName: FLOPPY-USER
+      dateCreated: 2625932515
+      lastDateRead: 2594621873
+      lastDateWritten: 2625932516
+      dateCreatedStr: 1989-02-02 08:51:35
+      lastDateReadStr: 1988-10-19 12:38:49
+      lastDateWrittenStr: 1989-02-02 08:51:36
+      bpunValid: null
+    - name: LINKER-B01:INIT
+      type: INIT
+      pages: 1
+      bytes: 25
+      userName: FLOPPY-USER
+      dateCreated: 2625932592
+      lastDateRead: 2594621934
+      lastDateWritten: 2625932593
+      dateCreatedStr: 1989-02-02 08:52:48
+      lastDateReadStr: 1988-10-19 12:39:46
+      lastDateWrittenStr: 1989-02-02 08:52:49
+      bpunValid: null
+    - name: LINKER-B01:DOM
+      type: DOM
+      pages: 354
+      bytes: 724992
+      userName: FLOPPY-USER
+      dateCreated: 2625932596
+      lastDateRead: 2594621972
+      lastDateWritten: 2625932597
+      dateCreatedStr: 1989-02-02 08:52:52
+      lastDateReadStr: 1988-10-19 12:40:20
+      lastDateWrittenStr: 1989-02-02 08:52:53
+      bpunValid: null
+    - name: LINKER-AUTO:JOB
+      type: JOB
+      pages: 1
+      bytes: 878
+      userName: FLOPPY-USER
+      dateCreated: 2625933040
+      lastDateRead: 2594622121
+      lastDateWritten: 2625933041
+      dateCreatedStr: 1989-02-02 08:59:48
+      lastDateReadStr: 1988-10-19 12:42:41
+      lastDateWrittenStr: 1989-02-02 08:59:49
+      bpunValid: null
+    - name: LINKER-AUTO-5ASM:JOB
+      type: JOB
+      pages: 1
+      bytes: 1382
+      userName: FLOPPY-USER
+      dateCreated: 2625933043
+      lastDateRead: 2594622195
+      lastDateWritten: 2625933045
+      dateCreatedStr: 1989-02-02 08:59:51
+      lastDateReadStr: 1988-10-19 12:43:51
+      lastDateWrittenStr: 1989-02-02 08:59:53
+      bpunValid: null
+    - name: LINKER-AUTO-FORT:JOB
+      type: JOB
+      pages: 2
+      bytes: 2809
+      userName: FLOPPY-USER
+      dateCreated: 2625933048
+      lastDateRead: 2594622249
+      lastDateWritten: 2625933049
+      dateCreatedStr: 1989-02-02 08:59:56
+      lastDateReadStr: 1988-10-19 12:44:41
+      lastDateWrittenStr: 1989-02-02 08:59:57
+      bpunValid: null
+    - name: LINKER-AUTO-PLNC:JOB
+      type: JOB
+      pages: 1
+      bytes: 1431
+      userName: FLOPPY-USER
+      dateCreated: 2625933313
+      lastDateRead: 2594622288
+      lastDateWritten: 2625933314
+      dateCreatedStr: 1989-02-02 09:00:01
+      lastDateReadStr: 1988-10-19 12:45:16
+      lastDateWrittenStr: 1989-02-02 09:00:02
+      bpunValid: null
+    - name: LINKER-AUTO-COB:JOB
+      type: JOB
+      pages: 1
+      bytes: 1416
+      userName: FLOPPY-USER
+      dateCreated: 2625933317
+      lastDateRead: 2594622491
+      lastDateWritten: 2625933318
+      dateCreatedStr: 1989-02-02 09:00:05
+      lastDateReadStr: 1988-10-19 12:48:27
+      lastDateWrittenStr: 1989-02-02 09:00:06
+      bpunValid: null
+    - name: LINKER-AUTO-PASC:JOB
+      type: JOB
+      pages: 1
+      bytes: 1412
+      userName: FLOPPY-USER
+      dateCreated: 2625933321
+      lastDateRead: 2594622369
+      lastDateWritten: 2625933322
+      dateCreatedStr: 1989-02-02 09:00:09
+      lastDateReadStr: 1988-10-19 12:46:33
+      lastDateWrittenStr: 1989-02-02 09:00:10
+      bpunValid: null
+    - name: LINKER-AUTO-SIMU:JOB
+      type: JOB
+      pages: 1
+      bytes: 1412
+      userName: FLOPPY-USER
+      dateCreated: 2625933326
+      lastDateRead: 2594622395
+      lastDateWritten: 2625933327
+      dateCreatedStr: 1989-02-02 09:00:14
+      lastDateReadStr: 1988-10-19 12:46:59
+      lastDateWrittenStr: 1989-02-02 09:00:15
+      bpunValid: null
+    - name: LINKER-AUTO-ADA:JOB
+      type: JOB
+      pages: 1
+      bytes: 1400
+      userName: FLOPPY-USER
+      dateCreated: 2625933330
+      lastDateRead: 2594622431
+      lastDateWritten: 2625933331
+      dateCreatedStr: 1989-02-02 09:00:18
+      lastDateReadStr: 1988-10-19 12:47:31
+      lastDateWrittenStr: 1989-02-02 09:00:19
+      bpunValid: null
+    - name: LINKER-AUTO-COR:JOB
+      type: JOB
+      pages: 1
+      bytes: 1407
+      userName: FLOPPY-USER
+      dateCreated: 2625933333
+      lastDateRead: 2594622493
+      lastDateWritten: 2625933335
+      dateCreatedStr: 1989-02-02 09:00:21
+      lastDateReadStr: 1988-10-19 12:48:29
+      lastDateWrittenStr: 1989-02-02 09:00:23
+      bpunValid: null
+    - name: LINKER-AUTO-C:JOB
+      type: JOB
+      pages: 1
+      bytes: 1613
+      userName: FLOPPY-USER
+      dateCreated: 2625933337
+      lastDateRead: 2594622496
+      lastDateWritten: 2625933338
+      dateCreatedStr: 1989-02-02 09:00:25
+      lastDateReadStr: 1988-10-19 12:48:32
+      lastDateWrittenStr: 1989-02-02 09:00:26
+      bpunValid: null
+    - name: LINKER-AUTO-BASC:JOB
+      type: JOB
+      pages: 1
+      bytes: 1407
+      userName: FLOPPY-USER
+      dateCreated: 2625933341
+      lastDateRead: 2594622529
+      lastDateWritten: 2625933342
+      dateCreatedStr: 1989-02-02 09:00:29
+      lastDateReadStr: 1988-10-19 12:49:01
+      lastDateWrittenStr: 1989-02-02 09:00:30
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 000/ND-disk-00029.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T14:54:07.536Z
+imagingLogs:
+  - ND-disk-00029.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-211224-b01-d1-1097cc3b
+  syncStatus: pending

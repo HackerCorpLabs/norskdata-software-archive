@@ -1,0 +1,121 @@
+id: nd-10620-a-d1-153eeeac
+volumeName: ND-10620A
+md5: 153eeeaceeacb833123363cfbf10e682
+product:
+  id: ND-10620
+  version: A
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 78
+  files:
+    - name: TCS-A:SYMB
+      type: SYMB
+      pages: 51
+      bytes: 103317
+      userName: FLOPPY-USER
+      dateCreated: 2286336361
+      lastDateRead: 2367081371
+      lastDateWritten: 2288960994
+      dateCreatedStr: 1984-01-03 11:37:41
+      lastDateReadStr: 1985-04-11 12:46:27
+      lastDateWrittenStr: 1984-01-23 12:23:34
+      bpunValid: null
+    - name: TCS-VER-A:SYMB
+      type: SYMB
+      pages: 11
+      bytes: 22411
+      userName: FLOPPY-USER
+      dateCreated: 2286336365
+      lastDateRead: 2367081390
+      lastDateWritten: 2288961009
+      dateCreatedStr: 1984-01-03 11:37:45
+      lastDateReadStr: 1985-04-11 12:46:46
+      lastDateWrittenStr: 1984-01-23 12:23:49
+      bpunValid: null
+    - name: TCS-DRIVER-100-A:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 2050
+      userName: FLOPPY-USER
+      dateCreated: 2286336366
+      lastDateRead: 2367081396
+      lastDateWritten: 2288961014
+      dateCreatedStr: 1984-01-03 11:37:46
+      lastDateReadStr: 1985-04-11 12:46:52
+      lastDateWrittenStr: 1984-01-23 12:23:54
+      bpunValid: null
+    - name: TCS-LOAD-100-A:MODE
+      type: MODE
+      pages: 1
+      bytes: 787
+      userName: FLOPPY-USER
+      dateCreated: 2286336366
+      lastDateRead: 2367081399
+      lastDateWritten: 2288961016
+      dateCreatedStr: 1984-01-03 11:37:46
+      lastDateReadStr: 1985-04-11 12:46:55
+      lastDateWrittenStr: 1984-01-23 12:23:56
+      bpunValid: null
+    - name: TCS-TABLET-A:SYMB
+      type: SYMB
+      pages: 3
+      bytes: 4650
+      userName: FLOPPY-USER
+      dateCreated: 2286336367
+      lastDateRead: 2367081408
+      lastDateWritten: 2288961018
+      dateCreatedStr: 1984-01-03 11:37:47
+      lastDateReadStr: 1985-04-11 12:47:00
+      lastDateWrittenStr: 1984-01-23 12:23:58
+      bpunValid: null
+    - name: TEST1-A:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 343
+      userName: FLOPPY-USER
+      dateCreated: 2286336367
+      lastDateRead: 2367081412
+      lastDateWritten: 2288961024
+      dateCreatedStr: 1984-01-03 11:37:47
+      lastDateReadStr: 1985-04-11 12:47:04
+      lastDateWrittenStr: 1984-01-23 12:24:00
+      bpunValid: null
+    - name: TEST2-A:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 553
+      userName: FLOPPY-USER
+      dateCreated: 2286336368
+      lastDateRead: 2367081415
+      lastDateWritten: 2288961026
+      dateCreatedStr: 1984-01-03 11:37:48
+      lastDateReadStr: 1985-04-11 12:47:07
+      lastDateWrittenStr: 1984-01-23 12:24:02
+      bpunValid: null
+provenance:
+  contributor: www.datormuseum.se
+  originalPath: OK/DISK74.IMG
+  dateImaged: 2022-08-15
+  importedAt: 2026-08-11T17:07:05.222Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10620-a-d1-153eeeac
+  syncStatus: pending

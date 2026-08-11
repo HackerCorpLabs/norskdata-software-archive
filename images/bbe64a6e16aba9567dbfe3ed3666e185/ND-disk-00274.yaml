@@ -1,0 +1,160 @@
+id: nd-10760-a00-d2-bbe64a6e
+volumeName: 10760A00-2
+md5: bbe64a6e16aba9567dbfe3ed3666e185
+product:
+  id: ND-10760
+  version: A00
+  diskNumber: 2
+image:
+  sizeBytes: 319488
+  format: raw
+  controller: floppy
+  totalPages: 156
+  pageSize: 2048
+  bootFormat: binary
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 129
+  files:
+    - name: CC-1BANK-A:BRF
+      type: BRF
+      pages: 30
+      bytes: 58568
+      userName: FLOPPY-USER
+      dateCreated: 2297707008
+      lastDateRead: 2499190994
+      lastDateWritten: 2331250083
+      dateCreatedStr: 1984-03-26 03:40:00
+      lastDateReadStr: 1987-03-27 10:03:18
+      lastDateWrittenStr: 1984-11-26 00:54:35
+      bpunValid: null
+    - name: CC-2HEADER-A:BRF
+      type: BRF
+      pages: 1
+      bytes: 1441
+      userName: FLOPPY-USER
+      dateCreated: 2297707020
+      lastDateRead: 2499191006
+      lastDateWritten: 2331250247
+      dateCreatedStr: 1984-03-26 03:40:12
+      lastDateReadStr: 1987-03-27 10:03:30
+      lastDateWrittenStr: 1984-11-26 00:57:07
+      bpunValid: null
+    - name: CC-2BANK-A:BRF
+      type: BRF
+      pages: 30
+      bytes: 59416
+      userName: FLOPPY-USER
+      dateCreated: 2297707022
+      lastDateRead: 2499191009
+      lastDateWritten: 2331250176
+      dateCreatedStr: 1984-03-26 03:40:14
+      lastDateReadStr: 1987-03-27 10:03:33
+      lastDateWrittenStr: 1984-11-26 00:56:00
+      bpunValid: null
+    - name: CC-1HEADER-A:BRF
+      type: BRF
+      pages: 1
+      bytes: 1254
+      userName: FLOPPY-USER
+      dateCreated: 2297707002
+      lastDateRead: 2499191020
+      lastDateWritten: 2331250223
+      dateCreatedStr: 1984-03-26 03:39:58
+      lastDateReadStr: 1987-03-27 10:03:44
+      lastDateWrittenStr: 1984-11-26 00:56:47
+      bpunValid: null
+    - name: CC-1TRAILER-A:BRF
+      type: BRF
+      pages: 1
+      bytes: 667
+      userName: FLOPPY-USER
+      dateCreated: 2297707018
+      lastDateRead: 2499191023
+      lastDateWritten: 2331250270
+      dateCreatedStr: 1984-03-26 03:40:10
+      lastDateReadStr: 1987-03-27 10:03:47
+      lastDateWrittenStr: 1984-11-26 00:57:30
+      bpunValid: null
+    - name: CC-2TRAILER-A:BRF
+      type: BRF
+      pages: 1
+      bytes: 1179
+      userName: FLOPPY-USER
+      dateCreated: 2297707036
+      lastDateRead: 2499191025
+      lastDateWritten: 2331250297
+      dateCreatedStr: 1984-03-26 03:40:28
+      lastDateReadStr: 1987-03-27 10:03:49
+      lastDateWrittenStr: 1984-11-26 00:57:57
+      bpunValid: null
+    - name: CC-100-A:PROG
+      type: PROG
+      pages: 51
+      bytes: 205824
+      userName: FLOPPY-USER
+      dateCreated: 2331265013
+      lastDateRead: 2499191032
+      lastDateWritten: 2331265033
+      dateCreatedStr: 1984-11-26 04:31:53
+      lastDateReadStr: 1987-03-27 10:03:56
+      lastDateWrittenStr: 1984-11-26 04:32:09
+      bpunValid: null
+    - name: CAT:C
+      type: C
+      pages: 1
+      bytes: 814
+      userName: FLOPPY-USER
+      dateCreated: 2297706996
+      lastDateRead: 2499190360
+      lastDateWritten: 2297706996
+      dateCreatedStr: 1984-03-26 03:39:52
+      lastDateReadStr: 1987-03-27 09:57:24
+      lastDateWrittenStr: 1984-03-26 03:39:52
+      bpunValid: null
+    - name: CSESSION:MODE
+      type: MODE
+      pages: 1
+      bytes: 115
+      userName: FLOPPY-USER
+      dateCreated: 2297706999
+      lastDateRead: 2787823705
+      lastDateWritten: 2331252006
+      dateCreatedStr: 1984-03-26 03:39:55
+      lastDateReadStr: 1991-08-21 13:01:25
+      lastDateWrittenStr: 1984-11-26 01:20:38
+      bpunValid: null
+    - name: INSTALL-2:MODE
+      type: MODE
+      pages: 1
+      bytes: 133
+      userName: FLOPPY-USER
+      dateCreated: 2297701766
+      lastDateRead: 2499190988
+      lastDateWritten: 2353440344
+      dateCreatedStr: 1984-03-26 02:22:06
+      lastDateReadStr: 1987-03-27 10:03:12
+      lastDateWrittenStr: 1985-01-03 10:25:24
+      bpunValid: null
+provenance:
+  contributor: gandalf
+  originalPath: 200/ND-disk-00274.img
+  dateImaged: 2020-02-29
+  importedAt: 2026-08-11T15:42:01.758Z
+imagingLogs:
+  - ND-disk-00274.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10760-a00-d2-bbe64a6e
+  syncStatus: pending
