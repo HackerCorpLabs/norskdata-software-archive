@@ -12,7 +12,7 @@ import { loadCatalog } from './api/catalog.js';
 import { findImageFolders } from './api/import-folder.js';
 import { runImportFile, runImportFolder } from './api/import-runner.js';
 import { writeIndex } from './api/index-builder.js';
-import { buildSite } from './api/site-builder.js';
+import { buildStaticSite } from './api/static-site-builder.js';
 
 const rl = createInterface({ input: process.stdin, output: process.stdout, terminal: process.stdin.isTTY ?? false });
 
@@ -137,7 +137,7 @@ async function main() {
     // Rebuild
     console.log('\nRebuilding index and site...');
     await writeIndex(rootDir, catalog);
-    await buildSite(rootDir);
+    await buildStaticSite(rootDir);
     console.log('Done. Site is in site/ directory.');
     rl.close();
     return;
@@ -229,7 +229,7 @@ async function main() {
       console.log('Building index...');
       await writeIndex(rootDir, runResult.catalog);
       console.log('Building site...');
-      await buildSite(rootDir);
+      await buildStaticSite(rootDir);
       console.log('Done.');
     }
 

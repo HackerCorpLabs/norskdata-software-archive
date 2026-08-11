@@ -14,7 +14,6 @@ import { runMergeLegacy } from './merge-legacy.js';
 import { getUnsyncedEntries, getSyncStatusSummary, syncToIa, detectChanges } from './api/ia-sync.js';
 import { runImportFile, runImportFolder } from './api/import-runner.js';
 import { writeIndex } from './api/index-builder.js';
-import { buildSite } from './api/site-builder.js';
 import { buildStaticSite } from './api/static-site-builder.js';
 
 const program = new Command();
@@ -348,20 +347,6 @@ program
   .argument('[item]', 'Item ID to upload')
   .action((_item) => {
     console.log('ia-upload: Not yet implemented');
-  });
-
-// --- build-site ---
-program
-  .command('build-site')
-  .description('Build the GitHub Pages static site')
-  .action(async () => {
-    const rootDir = getRepoRoot();
-    try {
-      await buildSite(rootDir);
-    } catch (err) {
-      console.error('Site build failed:', err);
-      process.exit(1);
-    }
   });
 
 // --- build-static-site ---

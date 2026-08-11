@@ -1,4 +1,4 @@
-.PHONY: all setup import serve import-cli import-folder import-file search check check-deps ia-sync ia-verify ia-upload site-build site-serve static-site mcp cache-clean rebuild-catalog migrate-products extract-legacy help
+.PHONY: all setup import serve import-cli import-folder import-file search check check-deps ia-sync ia-verify ia-upload site-serve static-site mcp cache-clean rebuild-catalog migrate-products extract-legacy help
 
 # Default: build tools and start the web UI (the primary import tool)
 all: setup import
@@ -53,14 +53,11 @@ ia-upload: setup
 	cd tools && node dist/cli.js ia-upload $(ITEM)
 
 # Site
-site-build: setup
-	@cd tools && node dist/cli.js build-site
-
-site-serve: site-build
-	@cd tools && npx serve ../site -p 8000
-
 static-site: setup
 	@cd tools && node dist/cli.js build-static-site
+
+site-serve: static-site
+	@cd tools && npx serve ../site -p 8000
 
 # MCP server
 mcp: setup
@@ -94,8 +91,7 @@ help:
 	@echo "  make search Q=... Search the catalog"
 	@echo "  make check        Validate catalog integrity"
 	@echo "  make check-deps   Check if prerequisites are installed"
-	@echo "  make site-build   Build the GitHub Pages static site"
-	@echo "  make site-serve   Build and serve the site locally on port 8000"
+	@echo "  make site-serve   Build the static site and serve it locally on port 8000"
 	@echo "  make mcp          Start the MCP server"
 	@echo ""
 	@echo "  Console import (import only - map products afterwards in the web UI):"
