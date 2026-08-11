@@ -1,0 +1,86 @@
+id: nd-210510-j03-d1-0a48ffc7
+volumeName: 210510J03-XX-01S
+md5: 0a48ffc716c2f36e04cb34fb4026207f
+product:
+  id: ND-210510
+  version: J03
+  diskNumber: 1
+  language: XX
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 109
+  files:
+    - name: FORTRAN-LIB-J03:NRF
+      type: NRF
+      pages: 50
+      bytes: 98832
+      userName: FLOPPY-USER
+      dateCreated: 2497648399
+      lastDateRead: 2497652116
+      lastDateWritten: 2499722888
+      dateCreatedStr: 1987-03-15 17:28:15
+      lastDateReadStr: 1987-03-15 18:22:20
+      lastDateWrittenStr: 1987-03-31 11:58:08
+      bpunValid: null
+    - name: FORTRAN-TPS-J03:NRF
+      type: NRF
+      pages: 52
+      bytes: 102231
+      userName: FLOPPY-USER
+      dateCreated: 2497648471
+      lastDateRead: 2497652131
+      lastDateWritten: 2499722915
+      dateCreatedStr: 1987-03-15 17:29:23
+      lastDateReadStr: 1987-03-15 18:22:35
+      lastDateWrittenStr: 1987-03-31 11:58:35
+      bpunValid: null
+    - name: INST-510-J03:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 627
+      userName: FLOPPY-USER
+      dateCreated: 2497648869
+      lastDateRead: 2497656796
+      lastDateWritten: 2497652761
+      dateCreatedStr: 1987-03-15 17:35:37
+      lastDateReadStr: 1987-03-15 19:31:28
+      lastDateWrittenStr: 1987-03-15 18:32:25
+      bpunValid: null
+    - name: INST-510-TPS-J03:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 119
+      userName: FLOPPY-USER
+      dateCreated: 2497648937
+      lastDateRead: 2497652782
+      lastDateWritten: 2497652782
+      dateCreatedStr: 1987-03-15 17:36:41
+      lastDateReadStr: 1987-03-15 18:32:46
+      lastDateWrittenStr: 1987-03-15 18:32:46
+      bpunValid: null
+provenance:
+  contributor: ndwiki
+  originalPath: tingo/8_nd_f0b_210510j03-xx-01s.img
+  dateImaged: 2026-08-10
+  importedAt: 2026-08-11T12:29:22.994Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-210510-j03-d1-0a48ffc7
+  syncStatus: pending

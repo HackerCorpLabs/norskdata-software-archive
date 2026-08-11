@@ -1,0 +1,217 @@
+id: nd-10704-e00-d1-997e9020
+volumeName: 10704E00-1D
+md5: 997e90203a4baee684082039a4d7bf39
+product:
+  id: ND-10704
+  version: E00
+  diskNumber: 1
+image:
+  sizeBytes: 1261568
+  format: raw
+  controller: floppy
+  totalPages: 616
+  pageSize: 2048
+  bootFormat: none
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 35
+  files:
+    - name: T2-BEN-BEN:NRF
+      type: NRF
+      pages: 4
+      bytes: 6616
+      userName: FLOPPY-USER
+      dateCreated: 2360816457
+      lastDateRead: 2372705953
+      lastDateWritten: 2360816460
+      dateCreatedStr: 1985-02-27 19:13:09
+      lastDateReadStr: 1985-05-22 09:58:33
+      lastDateWrittenStr: 1985-02-27 19:13:12
+      bpunValid: null
+    - name: PATCH-UPD-BEN:MODE
+      type: MODE
+      pages: 1
+      bytes: 405
+      userName: FLOPPY-USER
+      dateCreated: 2360816464
+      lastDateRead: 2372705949
+      lastDateWritten: 2362132967
+      dateCreatedStr: 1985-02-27 19:13:16
+      lastDateReadStr: 1985-05-22 09:58:29
+      lastDateWrittenStr: 1985-03-05 20:39:39
+      bpunValid: null
+    - name: T2BA01:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1894
+      userName: FLOPPY-USER
+      dateCreated: 2360816467
+      lastDateRead: 2373635374
+      lastDateWritten: 2360816468
+      dateCreatedStr: 1985-02-27 19:13:19
+      lastDateReadStr: 1985-05-29 12:52:46
+      lastDateWrittenStr: 1985-02-27 19:13:20
+      bpunValid: null
+    - name: T2BA02:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1894
+      userName: FLOPPY-USER
+      dateCreated: 2360816471
+      lastDateRead: 2372705957
+      lastDateWritten: 2360816472
+      dateCreatedStr: 1985-02-27 19:13:23
+      lastDateReadStr: 1985-05-22 09:58:37
+      lastDateWrittenStr: 1985-02-27 19:13:24
+      bpunValid: null
+    - name: T2BA03:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1894
+      userName: FLOPPY-USER
+      dateCreated: 2360816475
+      lastDateRead: 2372705958
+      lastDateWritten: 2360816476
+      dateCreatedStr: 1985-02-27 19:13:27
+      lastDateReadStr: 1985-05-22 09:58:38
+      lastDateWrittenStr: 1985-02-27 19:13:28
+      bpunValid: null
+    - name: T2BA04:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1894
+      userName: FLOPPY-USER
+      dateCreated: 2360816479
+      lastDateRead: 2372705960
+      lastDateWritten: 2360816480
+      dateCreatedStr: 1985-02-27 19:13:31
+      lastDateReadStr: 1985-05-22 09:58:40
+      lastDateWrittenStr: 1985-02-27 19:13:32
+      bpunValid: null
+    - name: T2BA05:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1934
+      userName: FLOPPY-USER
+      dateCreated: 2360816483
+      lastDateRead: 2372705961
+      lastDateWritten: 2360816484
+      dateCreatedStr: 1985-02-27 19:13:35
+      lastDateReadStr: 1985-05-22 09:58:41
+      lastDateWrittenStr: 1985-02-27 19:13:36
+      bpunValid: null
+    - name: T2BA06:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1934
+      userName: FLOPPY-USER
+      dateCreated: 2360816487
+      lastDateRead: 2372705963
+      lastDateWritten: 2360816488
+      dateCreatedStr: 1985-02-27 19:13:39
+      lastDateReadStr: 1985-05-22 09:58:43
+      lastDateWrittenStr: 1985-02-27 19:13:40
+      bpunValid: null
+    - name: T2BA07:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1934
+      userName: FLOPPY-USER
+      dateCreated: 2360816491
+      lastDateRead: 2372705965
+      lastDateWritten: 2360816492
+      dateCreatedStr: 1985-02-27 19:13:43
+      lastDateReadStr: 1985-05-22 09:58:45
+      lastDateWrittenStr: 1985-02-27 19:13:44
+      bpunValid: null
+    - name: T2BA08:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1934
+      userName: FLOPPY-USER
+      dateCreated: 2360816495
+      lastDateRead: 2372705967
+      lastDateWritten: 2360816496
+      dateCreatedStr: 1985-02-27 19:13:47
+      lastDateReadStr: 1985-05-22 09:58:47
+      lastDateWrittenStr: 1985-02-27 19:13:48
+      bpunValid: null
+    - name: T2BA09:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1934
+      userName: FLOPPY-USER
+      dateCreated: 2360816499
+      lastDateRead: 2372705969
+      lastDateWritten: 2360816500
+      dateCreatedStr: 1985-02-27 19:13:51
+      lastDateReadStr: 1985-05-22 09:58:49
+      lastDateWrittenStr: 1985-02-27 19:13:52
+      bpunValid: null
+    - name: T2BA10:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1935
+      userName: FLOPPY-USER
+      dateCreated: 2360816503
+      lastDateRead: 2372705971
+      lastDateWritten: 2360816505
+      dateCreatedStr: 1985-02-27 19:13:55
+      lastDateReadStr: 1985-05-22 09:58:51
+      lastDateWrittenStr: 1985-02-27 19:13:57
+      bpunValid: null
+    - name: T2BA11:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1914
+      userName: FLOPPY-USER
+      dateCreated: 2360816507
+      lastDateRead: 2372705973
+      lastDateWritten: 2360816513
+      dateCreatedStr: 1985-02-27 19:13:59
+      lastDateReadStr: 1985-05-22 09:58:53
+      lastDateWrittenStr: 1985-02-27 19:14:01
+      bpunValid: null
+    - name: T2BA12:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1935
+      userName: FLOPPY-USER
+      dateCreated: 2360816515
+      lastDateRead: 2372705975
+      lastDateWritten: 2360816517
+      dateCreatedStr: 1985-02-27 19:14:03
+      lastDateReadStr: 1985-05-22 09:58:55
+      lastDateWrittenStr: 1985-02-27 19:14:05
+      bpunValid: null
+    - name: INSTALL-10704-1:XCOM
+      type: XCOM
+      pages: 2
+      bytes: 2981
+      userName: FLOPPY-USER
+      dateCreated: 2360816520
+      lastDateRead: 2374534627
+      lastDateWritten: 2374410613
+      dateCreatedStr: 1985-02-27 19:14:08
+      lastDateReadStr: 1985-06-04 08:23:35
+      lastDateWrittenStr: 1985-06-03 10:05:53
+      bpunValid: null
+provenance:
+  contributor: ndwiki
+  originalPath: tingo/8_nd_f17b_10704e00-xx-01d.img
+  dateImaged: 2026-08-10
+  importedAt: 2026-08-11T12:29:23.539Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10704-e00-d1-997e9020
+  syncStatus: pending

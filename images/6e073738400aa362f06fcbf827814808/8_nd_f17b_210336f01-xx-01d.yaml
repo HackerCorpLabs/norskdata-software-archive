@@ -1,0 +1,50 @@
+id: nd-210336-f01-d1-6e073738
+volumeName: 210336F01-XX-01D
+md5: 6e073738400aa362f06fcbf827814808
+product:
+  id: ND-210336
+  version: F01
+  diskNumber: 1
+  language: XX
+image:
+  sizeBytes: 1261568
+  format: raw
+  controller: floppy
+  totalPages: 616
+  pageSize: 2048
+  bootFormat: none
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 89
+  files:
+    - name: DEBUGGER-F01:BPUN
+      type: BPUN
+      pages: 87
+      bytes: 107060
+      userName: FLOPPY-USER
+      dateCreated: 2436552491
+      lastDateRead: 2560677613
+      lastDateWritten: 2436552495
+      dateCreatedStr: 1986-04-29 13:28:43
+      lastDateReadStr: 1988-02-16 13:27:45
+      lastDateWrittenStr: 1986-04-29 13:28:47
+      bpunValid: true
+provenance:
+  contributor: ndwiki
+  originalPath: tingo/8_nd_f17b_210336f01-xx-01d.img
+  dateImaged: 2026-08-10
+  importedAt: 2026-08-11T12:29:24.146Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-210336-f01-d1-6e073738
+  syncStatus: pending

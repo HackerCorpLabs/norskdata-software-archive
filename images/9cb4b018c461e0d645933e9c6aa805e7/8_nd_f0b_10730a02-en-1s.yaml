@@ -1,0 +1,242 @@
+id: nd-10730-a02-d1-9cb4b018
+volumeName: 10730A02-EN-1
+md5: 9cb4b018c461e0d645933e9c6aa805e7
+product:
+  id: ND-10730
+  version: A02
+  diskNumber: 1
+  language: EN
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 128
+  files:
+    - name: UNIQ-A02:MCRO
+      type: MCRO
+      pages: 3
+      bytes: 5281
+      userName: FLOPPY-USER
+      dateCreated: 2366863700
+      lastDateRead: 2430772297
+      lastDateWritten: 2390936226
+      dateCreatedStr: 1985-04-09 23:37:20
+      lastDateReadStr: 1986-03-17 10:17:09
+      lastDateWrittenStr: 1985-10-01 12:42:34
+      bpunValid: null
+    - name: UNIQ-S-AC-EN-A00:HELP
+      type: HELP
+      pages: 1
+      bytes: 1508
+      userName: FLOPPY-USER
+      dateCreated: 2385185561
+      lastDateRead: 2430772300
+      lastDateWritten: 2385185562
+      dateCreatedStr: 1985-08-21 16:44:25
+      lastDateReadStr: 1986-03-17 10:17:12
+      lastDateWrittenStr: 1985-08-21 16:44:26
+      bpunValid: null
+    - name: UNIQ-S-MC-EN-A00:HELP
+      type: HELP
+      pages: 1
+      bytes: 963
+      userName: FLOPPY-USER
+      dateCreated: 2385185567
+      lastDateRead: 2430772301
+      lastDateWritten: 2392622208
+      dateCreatedStr: 1985-08-21 16:44:31
+      lastDateReadStr: 1986-03-17 10:17:13
+      lastDateWrittenStr: 1985-10-14 08:18:00
+      bpunValid: null
+    - name: UNIQUE-II-S-A02:MENU
+      type: MENU
+      pages: 1
+      bytes: 844
+      userName: FLOPPY-USER
+      dateCreated: 2378604655
+      lastDateRead: 2430772303
+      lastDateWritten: 2388326809
+      dateCreatedStr: 1985-07-03 10:01:47
+      lastDateReadStr: 1986-03-17 10:17:15
+      lastDateWrittenStr: 1985-09-13 15:38:25
+      bpunValid: null
+    - name: UNIQUE-A:BASE
+      type: BASE
+      pages: 1
+      bytes: 373
+      userName: FLOPPY-USER
+      dateCreated: 2385185578
+      lastDateRead: 2430772305
+      lastDateWritten: 2385185579
+      dateCreatedStr: 1985-08-21 16:44:42
+      lastDateReadStr: 1986-03-17 10:17:17
+      lastDateWrittenStr: 1985-08-21 16:44:43
+      bpunValid: null
+    - name: UNIQUE-II-A00-0:DEFL
+      type: DEFL
+      pages: 1
+      bytes: 949
+      userName: FLOPPY-USER
+      dateCreated: 2379388534
+      lastDateRead: 2430772306
+      lastDateWritten: 2392623571
+      dateCreatedStr: 1985-07-09 09:25:54
+      lastDateReadStr: 1986-03-17 10:17:18
+      lastDateWrittenStr: 1985-10-14 08:39:19
+      bpunValid: null
+    - name: DEFINE-USER-A00:UNIQ
+      type: UNIQ
+      pages: 1
+      bytes: 1524
+      userName: FLOPPY-USER
+      dateCreated: 2385185589
+      lastDateRead: 2430772308
+      lastDateWritten: 2385185590
+      dateCreatedStr: 1985-08-21 16:44:53
+      lastDateReadStr: 1986-03-17 10:17:20
+      lastDateWrittenStr: 1985-08-21 16:44:54
+      bpunValid: null
+    - name: UNIQPASS-A00:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 2035
+      userName: FLOPPY-USER
+      dateCreated: 2385185594
+      lastDateRead: 2430772310
+      lastDateWritten: 2385185595
+      dateCreatedStr: 1985-08-21 16:44:58
+      lastDateReadStr: 1986-03-17 10:17:22
+      lastDateWrittenStr: 1985-08-21 16:44:59
+      bpunValid: null
+    - name: UNIQ-S-B1-A00:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1960
+      userName: FLOPPY-USER
+      dateCreated: 2385185604
+      lastDateRead: 2430772311
+      lastDateWritten: 2385185605
+      dateCreatedStr: 1985-08-21 16:45:04
+      lastDateReadStr: 1986-03-17 10:17:23
+      lastDateWrittenStr: 1985-08-21 16:45:05
+      bpunValid: null
+    - name: UNIQ-S-B2-A00:SYMB
+      type: SYMB
+      pages: 3
+      bytes: 5001
+      userName: FLOPPY-USER
+      dateCreated: 2385185610
+      lastDateRead: 2430772313
+      lastDateWritten: 2385185611
+      dateCreatedStr: 1985-08-21 16:45:10
+      lastDateReadStr: 1986-03-17 10:17:25
+      lastDateWrittenStr: 1985-08-21 16:45:11
+      bpunValid: null
+    - name: UNIQ-SP-FORT-A00:SYMB
+      type: SYMB
+      pages: 4
+      bytes: 6878
+      userName: FLOPPY-USER
+      dateCreated: 2385185618
+      lastDateRead: 2430772316
+      lastDateWritten: 2385185619
+      dateCreatedStr: 1985-08-21 16:45:18
+      lastDateReadStr: 1986-03-17 10:17:28
+      lastDateWrittenStr: 1985-08-21 16:45:19
+      bpunValid: null
+    - name: UNIQ-SP-COB-A00:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1651
+      userName: FLOPPY-USER
+      dateCreated: 2385185627
+      lastDateRead: 2430772319
+      lastDateWritten: 2385185628
+      dateCreatedStr: 1985-08-21 16:45:27
+      lastDateReadStr: 1986-03-17 10:17:31
+      lastDateWrittenStr: 1985-08-21 16:45:28
+      bpunValid: null
+    - name: CUSTOMER-REG-A00:UNIQ
+      type: UNIQ
+      pages: 1
+      bytes: 1527
+      userName: FLOPPY-USER
+      dateCreated: 2385185633
+      lastDateRead: 2430772320
+      lastDateWritten: 2385185634
+      dateCreatedStr: 1985-08-21 16:45:33
+      lastDateReadStr: 1986-03-17 10:17:32
+      lastDateWrittenStr: 1985-08-21 16:45:34
+      bpunValid: null
+    - name: PART-REG-A00:UNIQ
+      type: UNIQ
+      pages: 1
+      bytes: 1059
+      userName: FLOPPY-USER
+      dateCreated: 2385185638
+      lastDateRead: 2430772322
+      lastDateWritten: 2385185639
+      dateCreatedStr: 1985-08-21 16:45:38
+      lastDateReadStr: 1986-03-17 10:17:34
+      lastDateWrittenStr: 1985-08-21 16:45:39
+      bpunValid: null
+    - name: ORDER-REG-A00:UNIQ
+      type: UNIQ
+      pages: 2
+      bytes: 2405
+      userName: FLOPPY-USER
+      dateCreated: 2385185644
+      lastDateRead: 2430772324
+      lastDateWritten: 2385185645
+      dateCreatedStr: 1985-08-21 16:45:44
+      lastDateReadStr: 1986-03-17 10:17:36
+      lastDateWrittenStr: 1985-08-21 16:45:45
+      bpunValid: null
+    - name: DDBTABLES-E02:VTM
+      type: VTM
+      pages: 7
+      bytes: 13628
+      userName: FLOPPY-USER
+      dateCreated: 2385185651
+      lastDateRead: 2430772327
+      lastDateWritten: 2385185652
+      dateCreatedStr: 1985-08-21 16:45:51
+      lastDateReadStr: 1986-03-17 10:17:39
+      lastDateWrittenStr: 1985-08-21 16:45:52
+      bpunValid: null
+    - name: UNIQ-S-3-EN-A02:NRF
+      type: NRF
+      pages: 80
+      bytes: 162575
+      userName: FLOPPY-USER
+      dateCreated: 2388603702
+      lastDateRead: 2430772330
+      lastDateWritten: 2388604198
+      dateCreatedStr: 1985-09-15 19:12:54
+      lastDateReadStr: 1986-03-17 10:17:42
+      lastDateWrittenStr: 1985-09-15 19:20:38
+      bpunValid: null
+provenance:
+  contributor: ndwiki
+  originalPath: tingo/8_nd_f0b_10730a02-en-1s.img
+  dateImaged: 2026-08-10
+  importedAt: 2026-08-11T12:29:22.673Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10730-a02-d1-9cb4b018
+  syncStatus: pending

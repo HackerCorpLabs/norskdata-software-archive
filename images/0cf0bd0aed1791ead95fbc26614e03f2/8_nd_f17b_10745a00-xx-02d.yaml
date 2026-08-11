@@ -1,0 +1,134 @@
+id: nd-10745-a00-d2-0cf0bd0a
+volumeName: 10745A00-XX-02D
+md5: 0cf0bd0aed1791ead95fbc26614e03f2
+product:
+  id: ND-10745
+  version: A00
+  diskNumber: 2
+  language: XX
+image:
+  sizeBytes: 1261568
+  format: raw
+  controller: floppy
+  totalPages: 616
+  pageSize: 2048
+  bootFormat: none
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 212
+  files:
+    - name: ADA-DEMO-A00:ADA
+      type: ADA
+      pages: 3
+      bytes: 6106
+      userName: FLOPPY-USER
+      dateCreated: 2373909057
+      lastDateRead: 2375609147
+      lastDateWritten: 2373909061
+      dateCreatedStr: 1985-05-31 15:41:01
+      lastDateReadStr: 1985-06-12 14:44:59
+      lastDateWrittenStr: 1985-05-31 15:41:05
+      bpunValid: null
+    - name: ADA-DEMO-A00:MODE
+      type: MODE
+      pages: 1
+      bytes: 803
+      userName: FLOPPY-USER
+      dateCreated: 2373909066
+      lastDateRead: 2375609153
+      lastDateWritten: 2373909067
+      dateCreatedStr: 1985-05-31 15:41:10
+      lastDateReadStr: 1985-06-12 14:45:01
+      lastDateWrittenStr: 1985-05-31 15:41:11
+      bpunValid: null
+    - name: ADA-LILO-COPY:PSEG
+      type: PSEG
+      pages: 79
+      bytes: 161555
+      userName: FLOPPY-USER
+      dateCreated: 2373909071
+      lastDateRead: 2375609103
+      lastDateWritten: 2373909072
+      dateCreatedStr: 1985-05-31 15:41:15
+      lastDateReadStr: 1985-06-12 14:44:15
+      lastDateWrittenStr: 1985-05-31 15:41:16
+      bpunValid: null
+    - name: ADA-LILO-COPY:DSEG
+      type: DSEG
+      pages: 69
+      bytes: 398889
+      userName: FLOPPY-USER
+      dateCreated: 2373909139
+      lastDateRead: 2375609124
+      lastDateWritten: 2373909140
+      dateCreatedStr: 1985-05-31 15:42:19
+      lastDateReadStr: 1985-06-12 14:44:36
+      lastDateWrittenStr: 1985-05-31 15:42:20
+      bpunValid: null
+    - name: ADA-LILO-COPY:LINK
+      type: LINK
+      pages: 13
+      bytes: 25889
+      userName: FLOPPY-USER
+      dateCreated: 2373909209
+      lastDateRead: 2375609142
+      lastDateWritten: 2373909210
+      dateCreatedStr: 1985-05-31 15:43:25
+      lastDateReadStr: 1985-06-12 14:44:54
+      lastDateWrittenStr: 1985-05-31 15:43:26
+      bpunValid: null
+    - name: ADA-RUN-TIME-A00:NRF
+      type: NRF
+      pages: 10
+      bytes: 19874
+      userName: FLOPPY-USER
+      dateCreated: 2373909240
+      lastDateRead: 2375609077
+      lastDateWritten: 2373909241
+      dateCreatedStr: 1985-05-31 15:43:56
+      lastDateReadStr: 1985-06-12 14:43:53
+      lastDateWrittenStr: 1985-05-31 15:43:57
+      bpunValid: null
+    - name: ADA-TIO-A00:NRF
+      type: NRF
+      pages: 26
+      bytes: 52232
+      userName: FLOPPY-USER
+      dateCreated: 2373909257
+      lastDateRead: 2375609082
+      lastDateWritten: 2373909258
+      dateCreatedStr: 1985-05-31 15:44:09
+      lastDateReadStr: 1985-06-12 14:43:58
+      lastDateWrittenStr: 1985-05-31 15:44:10
+      bpunValid: null
+    - name: ADA-CAL-A00:NRF
+      type: NRF
+      pages: 2
+      bytes: 3182
+      userName: FLOPPY-USER
+      dateCreated: 2373909316
+      lastDateRead: 2375609099
+      lastDateWritten: 2373909318
+      dateCreatedStr: 1985-05-31 15:45:04
+      lastDateReadStr: 1985-06-12 14:44:11
+      lastDateWrittenStr: 1985-05-31 15:45:06
+      bpunValid: null
+provenance:
+  contributor: ndwiki
+  originalPath: tingo/8_nd_f17b_10745a00-xx-02d.img
+  dateImaged: 2026-08-10
+  importedAt: 2026-08-11T12:29:23.718Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10745-a00-d2-0cf0bd0a
+  syncStatus: pending

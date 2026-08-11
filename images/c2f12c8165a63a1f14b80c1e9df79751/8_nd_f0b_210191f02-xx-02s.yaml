@@ -1,0 +1,62 @@
+id: nd-210191-f02-d2-c2f12c81
+volumeName: 210191F02-XX-02S
+md5: c2f12c8165a63a1f14b80c1e9df79751
+product:
+  id: ND-210191
+  version: F02
+  diskNumber: 2
+  language: XX
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 113
+  files:
+    - name: FORT48-1BANK-F02:BRF
+      type: BRF
+      pages: 54
+      bytes: 110436
+      userName: FLOPPY-USER
+      dateCreated: 2464717158
+      lastDateRead: 2514228651
+      lastDateWritten: 2464717161
+      dateCreatedStr: 1986-11-20 09:37:38
+      lastDateReadStr: 1987-07-14 01:22:43
+      lastDateWrittenStr: 1986-11-20 09:37:41
+      bpunValid: null
+    - name: FORT48-2BANK-F02:BRF
+      type: BRF
+      pages: 56
+      bytes: 114142
+      userName: FLOPPY-USER
+      dateCreated: 2464717216
+      lastDateRead: 2514228673
+      lastDateWritten: 2464717217
+      dateCreatedStr: 1986-11-20 09:38:32
+      lastDateReadStr: 1987-07-14 01:23:01
+      lastDateWrittenStr: 1986-11-20 09:38:33
+      bpunValid: null
+provenance:
+  contributor: ndwiki
+  originalPath: tingo/8_nd_f0b_210191f02-xx-02s.img
+  dateImaged: 2026-08-10
+  importedAt: 2026-08-11T12:29:22.922Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-210191-f02-d2-c2f12c81
+  syncStatus: pending

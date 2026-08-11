@@ -1,0 +1,198 @@
+id: nd-210260-k02-d1-d0d083a0
+volumeName: 210260K02-XX-01D
+md5: d0d083a00468b1c55e8fac6690ea98e8
+product:
+  id: ND-210260
+  version: K02
+  diskNumber: 1
+  language: XX
+image:
+  sizeBytes: 1261568
+  format: raw
+  controller: floppy
+  totalPages: 616
+  pageSize: 2048
+  bootFormat: none
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 7
+    - name: RELEASE-NTX
+      pagesUsed: 324
+    - name: MAINTENANCE-NTX
+      pagesUsed: 151
+  files:
+    - name: INSTALL-NTXPG-K0:XCOM
+      type: XCOM
+      pages: 1
+      bytes: 880
+      userName: FLOPPY-USER
+      dateCreated: 2368779285
+      lastDateRead: 2447305587
+      lastDateWritten: 2423957852
+      dateCreatedStr: 1985-04-24 11:16:21
+      lastDateReadStr: 1986-07-15 14:45:51
+      lastDateWrittenStr: 1986-01-29 10:37:28
+      bpunValid: null
+    - name: NTXPG-INSTALL2-K:XCOM
+      type: XCOM
+      pages: 3
+      bytes: 5749
+      userName: FLOPPY-USER
+      dateCreated: 2368777527
+      lastDateRead: 2447305580
+      lastDateWritten: 2430115923
+      dateCreatedStr: 1985-04-24 10:52:55
+      lastDateReadStr: 1986-07-15 14:45:44
+      lastDateWrittenStr: 1986-03-12 10:01:19
+      bpunValid: null
+    - name: PG-PAGINATE-K66:PROG
+      type: PROG
+      pages: 77
+      bytes: 413696
+      userName: RELEASE-NTX
+      dateCreated: 2447171856
+      lastDateRead: 2447305616
+      lastDateWritten: 2447175857
+      dateCreatedStr: 1986-07-14 14:04:16
+      lastDateReadStr: 1986-07-15 14:46:16
+      lastDateWrittenStr: 1986-07-14 15:02:49
+      bpunValid: null
+    - name: PG-PAGINATE-K66:ENTR
+      type: ENTR
+      pages: 4
+      bytes: 7198
+      userName: RELEASE-NTX
+      dateCreated: 2447171858
+      lastDateRead: 2447305636
+      lastDateWritten: 2447172076
+      dateCreatedStr: 1986-07-14 14:04:18
+      lastDateReadStr: 1986-07-15 14:46:36
+      lastDateWrittenStr: 1986-07-14 14:07:44
+      bpunValid: null
+    - name: PG-EDITOR-K66:PROG
+      type: PROG
+      pages: 81
+      bytes: 421888
+      userName: RELEASE-NTX
+      dateCreated: 2447171095
+      lastDateRead: 2447305639
+      lastDateWritten: 2447174858
+      dateCreatedStr: 1986-07-14 13:56:23
+      lastDateReadStr: 1986-07-15 14:46:39
+      lastDateWrittenStr: 1986-07-14 14:51:10
+      bpunValid: null
+    - name: PG-EDITOR-K66:ENTR
+      type: ENTR
+      pages: 4
+      bytes: 7770
+      userName: RELEASE-NTX
+      dateCreated: 2447171098
+      lastDateRead: 2447305659
+      lastDateWritten: 2447171281
+      dateCreatedStr: 1986-07-14 13:56:26
+      lastDateReadStr: 1986-07-15 14:46:59
+      lastDateWrittenStr: 1986-07-14 13:59:17
+      bpunValid: null
+    - name: PG-UTILITY-K66:PROG
+      type: PROG
+      pages: 53
+      bytes: 405504
+      userName: RELEASE-NTX
+      dateCreated: 2447170870
+      lastDateRead: 2447305667
+      lastDateWritten: 2447174609
+      dateCreatedStr: 1986-07-14 13:52:54
+      lastDateReadStr: 1986-07-15 14:47:03
+      lastDateWrittenStr: 1986-07-14 14:47:17
+      bpunValid: null
+    - name: PG-UTILITY-K66:ENTR
+      type: ENTR
+      pages: 3
+      bytes: 4238
+      userName: RELEASE-NTX
+      dateCreated: 2447170872
+      lastDateRead: 2447305682
+      lastDateWritten: 2447171042
+      dateCreatedStr: 1986-07-14 13:52:56
+      lastDateReadStr: 1986-07-15 14:47:18
+      lastDateWrittenStr: 1986-07-14 13:55:34
+      bpunValid: null
+    - name: PG-JULIE-K66:PROG
+      type: PROG
+      pages: 86
+      bytes: 415744
+      userName: RELEASE-NTX
+      dateCreated: 2447171608
+      lastDateRead: 2447305686
+      lastDateWritten: 2447175246
+      dateCreatedStr: 1986-07-14 14:00:24
+      lastDateReadStr: 1986-07-15 14:47:22
+      lastDateWrittenStr: 1986-07-14 14:57:14
+      bpunValid: null
+    - name: PG-JULIE-K66:ENTR
+      type: ENTR
+      pages: 3
+      bytes: 5090
+      userName: RELEASE-NTX
+      dateCreated: 2447171610
+      lastDateRead: 2447305708
+      lastDateWritten: 2447171797
+      dateCreatedStr: 1986-07-14 14:00:26
+      lastDateReadStr: 1986-07-15 14:47:44
+      lastDateWrittenStr: 1986-07-14 14:03:21
+      bpunValid: null
+    - name: DUMP-PG-K01:XCOM
+      type: XCOM
+      pages: 3
+      bytes: 5983
+      userName: RELEASE-NTX
+      dateCreated: 2422786755
+      lastDateRead: 2447305712
+      lastDateWritten: 2430114403
+      dateCreatedStr: 1986-01-20 12:43:03
+      lastDateReadStr: 1986-07-15 14:47:48
+      lastDateWrittenStr: 1986-03-12 09:41:35
+      bpunValid: null
+    - name: DESCRIBE-PG-K03:PROG
+      type: PROG
+      pages: 110
+      bytes: 337920
+      userName: MAINTENANCE-NTX
+      dateCreated: 2447167784
+      lastDateRead: 2447305733
+      lastDateWritten: 2447167904
+      dateCreatedStr: 1986-07-14 13:04:40
+      lastDateReadStr: 1986-07-15 14:48:05
+      lastDateWrittenStr: 1986-07-14 13:06:32
+      bpunValid: null
+    - name: REGISTER-PG-K01:PROG
+      type: PROG
+      pages: 38
+      bytes: 294912
+      userName: MAINTENANCE-NTX
+      dateCreated: 2447168170
+      lastDateRead: 2447305763
+      lastDateWritten: 2447168237
+      dateCreatedStr: 1986-07-14 13:10:42
+      lastDateReadStr: 1986-07-15 14:48:35
+      lastDateWrittenStr: 1986-07-14 13:11:45
+      bpunValid: null
+provenance:
+  contributor: ndwiki
+  originalPath: tingo/8_nd_f17b_210260k02-xx-01d.img
+  dateImaged: 2026-08-10
+  importedAt: 2026-08-11T12:29:24.112Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-210260-k02-d1-d0d083a0
+  syncStatus: pending

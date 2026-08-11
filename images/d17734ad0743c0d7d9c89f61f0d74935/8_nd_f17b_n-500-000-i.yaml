@@ -1,0 +1,63 @@
+id: os-n-502-000-i-d17734ad
+volumeName: N-502-000-I
+md5: d17734ad0743c0d7d9c89f61f0d74935
+product:
+  id: ND-210576
+  version: "K 86-11-05"
+  systemNumber: 502-000
+  diskNumber: 1
+  diskTotal: 2
+image:
+  sizeBytes: 1261568
+  format: raw
+  controller: floppy
+  totalPages: 616
+  pageSize: 2048
+  bootFormat: flomon
+ndfs:
+  users:
+    - name: SYSTEM
+      pagesUsed: 595
+  files:
+    - name: MACM-1718L:BPUN
+      type: BPUN
+      pages: 20
+      bytes: 36335
+      userName: SYSTEM
+      dateCreated: 2462764437
+      lastDateRead: 2462764443
+      lastDateWritten: 2462764443
+      dateCreatedStr: 1986-11-05 12:54:21
+      lastDateReadStr: 1986-11-05 12:54:27
+      lastDateWrittenStr: 1986-11-05 12:54:27
+      bpunValid: false
+    - name: SINTRAN:DATA
+      type: DATA
+      pages: 574
+      bytes: 665967
+      userName: SYSTEM
+      dateCreated: 2462764441
+      lastDateRead: 2462764450
+      lastDateWritten: 2462764450
+      dateCreatedStr: 1986-11-05 12:54:25
+      lastDateReadStr: 1986-11-05 12:54:34
+      lastDateWrittenStr: 1986-11-05 12:54:34
+      bpunValid: null
+provenance:
+  contributor: ndwiki
+  originalPath: tingo/8_nd_f17b_n-500-000-i.img
+  dateImaged: 2026-08-10
+  importedAt: 2026-08-11T12:29:24.698Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-os-n-502-000-i-d17734ad
+  syncStatus: pending

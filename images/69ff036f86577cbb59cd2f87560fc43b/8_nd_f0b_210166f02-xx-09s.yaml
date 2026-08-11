@@ -1,0 +1,62 @@
+id: nd-210166-f02-d9-69ff036f
+volumeName: 210166F02-XX-09S
+md5: 69ff036f86577cbb59cd2f87560fc43b
+product:
+  id: ND-210166
+  version: F02
+  diskNumber: 9
+  language: XX
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 146
+  files:
+    - name: SIB2-LOOKLOG-F00:PROG
+      type: PROG
+      pages: 70
+      bytes: 92160
+      userName: FLOPPY-USER
+      dateCreated: 2446386581
+      lastDateRead: 2464861217
+      lastDateWritten: 2446386588
+      dateCreatedStr: 1986-07-08 14:22:21
+      lastDateReadStr: 1986-11-21 12:48:33
+      lastDateWrittenStr: 1986-07-08 14:22:28
+      bpunValid: null
+    - name: SIB2-DBCONV-F02:PROG
+      type: PROG
+      pages: 73
+      bytes: 225280
+      userName: FLOPPY-USER
+      dateCreated: 2446386675
+      lastDateRead: 2464861248
+      lastDateWritten: 2464334154
+      dateCreatedStr: 1986-07-08 14:23:51
+      lastDateReadStr: 1986-11-21 12:49:00
+      lastDateWrittenStr: 1986-11-17 12:05:10
+      bpunValid: null
+provenance:
+  contributor: ndwiki
+  originalPath: tingo/8_nd_f0b_210166f02-xx-09s.img
+  dateImaged: 2026-08-10
+  importedAt: 2026-08-11T12:29:22.873Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-210166-f02-d9-69ff036f
+  syncStatus: pending

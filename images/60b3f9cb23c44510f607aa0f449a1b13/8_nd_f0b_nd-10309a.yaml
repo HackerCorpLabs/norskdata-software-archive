@@ -1,0 +1,72 @@
+id: nd-10309-a-d1-60b3f9cb
+volumeName: ND-10309A
+md5: 60b3f9cb23c44510f607aa0f449a1b13
+product:
+  id: ND-10309
+  version: A
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 90
+  files:
+    - name: PLANC-100-A:BPUN
+      type: BPUN
+      pages: 63
+      bytes: 128597
+      userName: FLOPPY-USER
+      dateCreated: 2155002565
+      lastDateRead: 2156322234
+      lastDateWritten: 2156177990
+      dateCreatedStr: 1982-01-25 11:43:05
+      lastDateReadStr: 1982-02-03 13:54:58
+      lastDateWrittenStr: 1982-02-02 10:41:06
+      bpunValid: true
+    - name: PLANC-1BANK-A:BRF
+      type: BRF
+      pages: 11
+      bytes: 22023
+      userName: FLOPPY-USER
+      dateCreated: 2155002887
+      lastDateRead: 2156322348
+      lastDateWritten: 2156178091
+      dateCreatedStr: 1982-01-25 11:48:07
+      lastDateReadStr: 1982-02-03 13:56:44
+      lastDateWrittenStr: 1982-02-02 10:42:43
+      bpunValid: null
+    - name: PLANC-2BANK-A:BRF
+      type: BRF
+      pages: 12
+      bytes: 22693
+      userName: FLOPPY-USER
+      dateCreated: 2155002919
+      lastDateRead: 2156322398
+      lastDateWritten: 2156178112
+      dateCreatedStr: 1982-01-25 11:48:39
+      lastDateReadStr: 1982-02-03 13:57:30
+      lastDateWrittenStr: 1982-02-02 10:43:00
+      bpunValid: null
+provenance:
+  contributor: ndwiki
+  originalPath: tingo/8_nd_f0b_nd-10309a.img
+  dateImaged: 2026-08-10
+  importedAt: 2026-08-11T12:29:23.104Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10309-a-d1-60b3f9cb
+  syncStatus: pending

@@ -1,0 +1,62 @@
+id: nd-10730-a02-d3-e60750d0
+volumeName: 10730A02-EN-3
+md5: e60750d030448ff06313e27161961121
+product:
+  id: ND-10730
+  version: A02
+  diskNumber: 3
+  language: EN
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 105
+  files:
+    - name: UNIQ-S-1-EN-A02:NRF
+      type: NRF
+      pages: 41
+      bytes: 83736
+      userName: FLOPPY-USER
+      dateCreated: 2386087374
+      lastDateRead: 2430772581
+      lastDateWritten: 2386087388
+      dateCreatedStr: 1985-08-28 12:55:14
+      lastDateReadStr: 1986-03-17 10:21:37
+      lastDateWrittenStr: 1985-08-28 12:55:28
+      bpunValid: null
+    - name: UNIQ-SCR-VTM-A02:NRF
+      type: NRF
+      pages: 61
+      bytes: 45035
+      userName: FLOPPY-USER
+      dateCreated: 2378502506
+      lastDateRead: 2430772594
+      lastDateWritten: 2386087227
+      dateCreatedStr: 1985-07-02 17:05:42
+      lastDateReadStr: 1986-03-17 10:21:50
+      lastDateWrittenStr: 1985-08-28 12:52:59
+      bpunValid: null
+provenance:
+  contributor: ndwiki
+  originalPath: tingo/8_nd_f0b_10730a02-en-3.img
+  dateImaged: 2026-08-10
+  importedAt: 2026-08-11T12:29:22.707Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10730-a02-d3-e60750d0
+  syncStatus: pending

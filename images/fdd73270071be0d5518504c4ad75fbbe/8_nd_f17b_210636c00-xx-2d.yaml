@@ -1,0 +1,134 @@
+id: nd-210636-c00-d2-fdd73270
+volumeName: 210636C00-XX-2D
+md5: fdd73270071be0d5518504c4ad75fbbe
+product:
+  id: ND-210636
+  version: C00
+  diskNumber: 2
+  language: XX
+image:
+  sizeBytes: 1261568
+  format: raw
+  controller: floppy
+  totalPages: 616
+  pageSize: 2048
+  bootFormat: none
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 457
+  files:
+    - name: OR-ADUTILITY-C00:PROG
+      type: PROG
+      pages: 71
+      bytes: 145408
+      userName: FLOPPY-USER
+      dateCreated: 2431685279
+      lastDateRead: 2431685279
+      lastDateWritten: 2431685279
+      dateCreatedStr: 1986-03-24 09:10:31
+      lastDateReadStr: 1986-03-24 09:10:31
+      lastDateWrittenStr: 1986-03-24 09:10:31
+      bpunValid: null
+    - name: OR-EDITOR-C00:PROG
+      type: PROG
+      pages: 64
+      bytes: 135168
+      userName: FLOPPY-USER
+      dateCreated: 2431685290
+      lastDateRead: 2431685290
+      lastDateWritten: 2431685290
+      dateCreatedStr: 1986-03-24 09:10:42
+      lastDateReadStr: 1986-03-24 09:10:42
+      lastDateWrittenStr: 1986-03-24 09:10:42
+      bpunValid: null
+    - name: OR-UTILITY-C00:PROG
+      type: PROG
+      pages: 48
+      bytes: 135168
+      userName: FLOPPY-USER
+      dateCreated: 2431685351
+      lastDateRead: 2431685351
+      lastDateWritten: 2431685351
+      dateCreatedStr: 1986-03-24 09:11:39
+      lastDateReadStr: 1986-03-24 09:11:39
+      lastDateWrittenStr: 1986-03-24 09:11:39
+      bpunValid: null
+    - name: OR-DISPLAY-C00:PROG
+      type: PROG
+      pages: 69
+      bytes: 143360
+      userName: FLOPPY-USER
+      dateCreated: 2431685315
+      lastDateRead: 2431685315
+      lastDateWritten: 2431685315
+      dateCreatedStr: 1986-03-24 09:11:03
+      lastDateReadStr: 1986-03-24 09:11:03
+      lastDateWrittenStr: 1986-03-24 09:11:03
+      bpunValid: null
+    - name: OR-JULIE-C00:PROG
+      type: PROG
+      pages: 59
+      bytes: 143360
+      userName: FLOPPY-USER
+      dateCreated: 2431685330
+      lastDateRead: 2431685330
+      lastDateWritten: 2431685330
+      dateCreatedStr: 1986-03-24 09:11:18
+      lastDateReadStr: 1986-03-24 09:11:18
+      lastDateWrittenStr: 1986-03-24 09:11:18
+      bpunValid: null
+    - name: OR-COMMAND-C00:PROG
+      type: PROG
+      pages: 56
+      bytes: 139264
+      userName: FLOPPY-USER
+      dateCreated: 2431685371
+      lastDateRead: 2431685371
+      lastDateWritten: 2431685371
+      dateCreatedStr: 1986-03-24 09:11:59
+      lastDateReadStr: 1986-03-24 09:11:59
+      lastDateWrittenStr: 1986-03-24 09:11:59
+      bpunValid: null
+    - name: AD-PROD-C00:PROG
+      type: PROG
+      pages: 74
+      bytes: 176128
+      userName: FLOPPY-USER
+      dateCreated: 2431685384
+      lastDateRead: 2431685384
+      lastDateWritten: 2431685384
+      dateCreatedStr: 1986-03-24 09:12:08
+      lastDateReadStr: 1986-03-24 09:12:08
+      lastDateWrittenStr: 1986-03-24 09:12:08
+      bpunValid: null
+    - name: TEXT-CONVERT:PROG
+      type: PROG
+      pages: 7
+      bytes: 135168
+      userName: FLOPPY-USER
+      dateCreated: 2366965064
+      lastDateRead: 2428030183
+      lastDateWritten: 2366965064
+      dateCreatedStr: 1985-04-10 16:21:08
+      lastDateReadStr: 1986-02-28 12:51:39
+      lastDateWrittenStr: 1985-04-10 16:21:08
+      bpunValid: null
+provenance:
+  contributor: ndwiki
+  originalPath: tingo/8_nd_f17b_210636c00-xx-2d.img
+  dateImaged: 2026-08-10
+  importedAt: 2026-08-11T12:29:24.255Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-210636-c00-d2-fdd73270
+  syncStatus: pending

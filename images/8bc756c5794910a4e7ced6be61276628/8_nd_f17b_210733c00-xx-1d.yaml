@@ -1,0 +1,74 @@
+id: nd-210733-c00-d1-8bc756c5
+volumeName: 210733C00-XX-1D
+md5: 8bc756c5794910a4e7ced6be61276628
+product:
+  id: ND-210733
+  version: C00
+  diskNumber: 1
+  language: XX
+image:
+  sizeBytes: 1261568
+  format: raw
+  controller: floppy
+  totalPages: 616
+  pageSize: 2048
+  bootFormat: none
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 216
+  files:
+    - name: 210733C00-IN:PROG
+      type: PROG
+      pages: 54
+      bytes: 173244
+      userName: FLOPPY-USER
+      dateCreated: 2401686509
+      lastDateRead: 2420427698
+      lastDateWritten: 2403128631
+      dateCreatedStr: 1985-12-19 13:15:45
+      lastDateReadStr: 1986-01-02 12:46:50
+      lastDateWrittenStr: 1985-12-30 13:20:55
+      bpunValid: null
+    - name: OR-MAIN-C00:PROG
+      type: PROG
+      pages: 90
+      bytes: 184320
+      userName: FLOPPY-USER
+      dateCreated: 2431707352
+      lastDateRead: 2431708467
+      lastDateWritten: 2431707352
+      dateCreatedStr: 1986-03-24 14:35:24
+      lastDateReadStr: 1986-03-24 14:52:51
+      lastDateWrittenStr: 1986-03-24 14:35:24
+      bpunValid: null
+    - name: OR-INVEDIT-C00:PROG
+      type: PROG
+      pages: 68
+      bytes: 139264
+      userName: FLOPPY-USER
+      dateCreated: 2431707371
+      lastDateRead: 2431708489
+      lastDateWritten: 2431707371
+      dateCreatedStr: 1986-03-24 14:35:43
+      lastDateReadStr: 1986-03-24 14:53:09
+      lastDateWrittenStr: 1986-03-24 14:35:43
+      bpunValid: null
+provenance:
+  contributor: ndwiki
+  originalPath: tingo/8_nd_f17b_210733c00-xx-1d.img
+  dateImaged: 2026-08-10
+  importedAt: 2026-08-11T12:29:24.286Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-210733-c00-d1-8bc756c5
+  syncStatus: pending

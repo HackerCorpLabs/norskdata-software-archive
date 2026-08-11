@@ -1,0 +1,73 @@
+id: nd-10340-d-d5-91381693
+volumeName: ND-10340D-PART5
+md5: 91381693b9e468db39e3876003b47976
+product:
+  id: ND-10340
+  version: D
+  diskNumber: 5
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: bpun
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 79
+  files:
+    - name: FORTRAN-LIB-E:NRF
+      type: NRF
+      pages: 53
+      bytes: 106137
+      userName: FLOPPY-USER
+      dateCreated: 2232988209
+      lastDateRead: 2234294772
+      lastDateWritten: 2232988214
+      dateCreatedStr: 1983-04-12 11:08:49
+      lastDateReadStr: 1983-04-22 10:07:52
+      lastDateWrittenStr: 1983-04-12 11:08:54
+      bpunValid: null
+    - name: PLANC-LIB-B:NRF
+      type: NRF
+      pages: 10
+      bytes: 18466
+      userName: FLOPPY-USER
+      dateCreated: 2232988306
+      lastDateRead: 2234294945
+      lastDateWritten: 2232988308
+      dateCreatedStr: 1983-04-12 11:10:18
+      lastDateReadStr: 1983-04-22 10:10:33
+      lastDateWrittenStr: 1983-04-12 11:10:20
+      bpunValid: null
+    - name: PLANC-1BANK-C:BRF
+      type: BRF
+      pages: 12
+      bytes: 24526
+      userName: FLOPPY-USER
+      dateCreated: 2232988375
+      lastDateRead: 2236806317
+      lastDateWritten: 2232988377
+      dateCreatedStr: 1983-04-12 11:11:23
+      lastDateReadStr: 1983-05-09 15:18:45
+      lastDateWrittenStr: 1983-04-12 11:11:25
+      bpunValid: null
+provenance:
+  contributor: ndwiki
+  originalPath: tingo/8_nd_f0b_nd-10340d-part5.img
+  dateImaged: 2026-08-10
+  importedAt: 2026-08-11T12:29:23.196Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10340-d-d5-91381693
+  syncStatus: pending

@@ -1,0 +1,480 @@
+id: nd-10624-a-d1-6b893e31
+volumeName: ND-10624A
+md5: 6b893e31892f8a0876e53a717d298a6f
+product:
+  id: ND-10624
+  version: A
+image:
+  sizeBytes: 1261568
+  format: raw
+  controller: floppy
+  totalPages: 616
+  pageSize: 2048
+  bootFormat: none
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 538
+  files:
+    - name: INSTALL-GAMES-NO:PROG
+      type: PROG
+      pages: 8
+      bytes: 16384
+      userName: FLOPPY-USER
+      dateCreated: 2294506652
+      lastDateRead: 2391329280
+      lastDateWritten: 2294506656
+      dateCreatedStr: 1984-03-01 22:18:28
+      lastDateReadStr: 1985-10-04 12:40:00
+      lastDateWrittenStr: 1984-03-01 22:18:32
+      bpunValid: null
+    - name: INFO-SPILL:TEXT
+      type: TEXT
+      pages: 13
+      bytes: 26151
+      userName: FLOPPY-USER
+      dateCreated: 2294506667
+      lastDateRead: 2294632849
+      lastDateWritten: 2294506668
+      dateCreatedStr: 1984-03-01 22:18:43
+      lastDateReadStr: 1984-03-02 21:06:17
+      lastDateWrittenStr: 1984-03-01 22:18:44
+      bpunValid: null
+    - name: DIGGER-32-NO:PROG
+      type: PROG
+      pages: 15
+      bytes: 30208
+      userName: FLOPPY-USER
+      dateCreated: 2294506683
+      lastDateRead: 2294632855
+      lastDateWritten: 2294506688
+      dateCreatedStr: 1984-03-01 22:18:59
+      lastDateReadStr: 1984-03-02 21:06:23
+      lastDateWrittenStr: 1984-03-01 22:19:00
+      bpunValid: null
+    - name: DIGGER-48-NO:PROG
+      type: PROG
+      pages: 15
+      bytes: 29184
+      userName: FLOPPY-USER
+      dateCreated: 2294506699
+      lastDateRead: 2294607319
+      lastDateWritten: 2294506700
+      dateCreatedStr: 1984-03-01 22:19:11
+      lastDateReadStr: 1984-03-02 14:55:23
+      lastDateWrittenStr: 1984-03-01 22:19:12
+      bpunValid: null
+    - name: DIGGER-BUILDING:SYMB
+      type: SYMB
+      pages: 5
+      bytes: 9256
+      userName: FLOPPY-USER
+      dateCreated: 2294506716
+      lastDateRead: 2294632859
+      lastDateWritten: 2294506717
+      dateCreatedStr: 1984-03-01 22:19:28
+      lastDateReadStr: 1984-03-02 21:06:27
+      lastDateWrittenStr: 1984-03-01 22:19:29
+      bpunValid: null
+    - name: DIGGER-DATA:DATA
+      type: DATA
+      pages: 1
+      bytes: 1024
+      userName: FLOPPY-USER
+      dateCreated: 2294506727
+      lastDateRead: 2294632862
+      lastDateWritten: 2294506729
+      dateCreatedStr: 1984-03-01 22:19:39
+      lastDateReadStr: 1984-03-02 21:06:30
+      lastDateWrittenStr: 1984-03-01 22:19:41
+      bpunValid: null
+    - name: FIDO-32-NO:PROG
+      type: PROG
+      pages: 14
+      bytes: 27648
+      userName: FLOPPY-USER
+      dateCreated: 2294506744
+      lastDateRead: 2294632864
+      lastDateWritten: 2294506745
+      dateCreatedStr: 1984-03-01 22:19:56
+      lastDateReadStr: 1984-03-02 21:06:32
+      lastDateWrittenStr: 1984-03-01 22:19:57
+      bpunValid: null
+    - name: FIDO-48-NO:PROG
+      type: PROG
+      pages: 14
+      bytes: 27136
+      userName: FLOPPY-USER
+      dateCreated: 2294506760
+      lastDateRead: 2294607328
+      lastDateWritten: 2294506761
+      dateCreatedStr: 1984-03-01 22:20:08
+      lastDateReadStr: 1984-03-02 14:55:32
+      lastDateWrittenStr: 1984-03-01 22:20:09
+      bpunValid: null
+    - name: FIDO-KART:DATA
+      type: DATA
+      pages: 15
+      bytes: 25202
+      userName: FLOPPY-USER
+      dateCreated: 2294506788
+      lastDateRead: 2294632868
+      lastDateWritten: 2294506789
+      dateCreatedStr: 1984-03-01 22:20:36
+      lastDateReadStr: 1984-03-02 21:06:36
+      lastDateWrittenStr: 1984-03-01 22:20:37
+      bpunValid: null
+    - name: FIDO-LISTE:DATA
+      type: DATA
+      pages: 1
+      bytes: 2048
+      userName: FLOPPY-USER
+      dateCreated: 2294506807
+      lastDateRead: 2294632872
+      lastDateWritten: 2294506808
+      dateCreatedStr: 1984-03-01 22:20:55
+      lastDateReadStr: 1984-03-02 21:06:40
+      lastDateWrittenStr: 1984-03-01 22:20:56
+      bpunValid: null
+    - name: MACMAN-32-NO:PROG
+      type: PROG
+      pages: 11
+      bytes: 22016
+      userName: FLOPPY-USER
+      dateCreated: 2294506845
+      lastDateRead: 2294632874
+      lastDateWritten: 2294506846
+      dateCreatedStr: 1984-03-01 22:21:29
+      lastDateReadStr: 1984-03-02 21:06:42
+      lastDateWrittenStr: 1984-03-01 22:21:30
+      bpunValid: null
+    - name: MACMAN-48-NO:PROG
+      type: PROG
+      pages: 12
+      bytes: 22016
+      userName: FLOPPY-USER
+      dateCreated: 2294506856
+      lastDateRead: 2294607338
+      lastDateWritten: 2294506857
+      dateCreatedStr: 1984-03-01 22:21:40
+      lastDateReadStr: 1984-03-02 14:55:42
+      lastDateWrittenStr: 1984-03-01 22:21:41
+      bpunValid: null
+    - name: MACMAN-DATA:DATA
+      type: DATA
+      pages: 1
+      bytes: 1024
+      userName: FLOPPY-USER
+      dateCreated: 2294506892
+      lastDateRead: 2294632878
+      lastDateWritten: 2294508032
+      dateCreatedStr: 1984-03-01 22:22:12
+      lastDateReadStr: 1984-03-02 21:06:46
+      lastDateWrittenStr: 1984-03-01 22:40:00
+      bpunValid: null
+    - name: MACMAN-LABS:SYMB
+      type: SYMB
+      pages: 5
+      bytes: 9567
+      userName: FLOPPY-USER
+      dateCreated: 2294506913
+      lastDateRead: 2294632881
+      lastDateWritten: 2294506914
+      dateCreatedStr: 1984-03-01 22:22:33
+      lastDateReadStr: 1984-03-02 21:06:49
+      lastDateWrittenStr: 1984-03-01 22:22:34
+      bpunValid: null
+    - name: TERRANOVA-32-NO:PROG
+      type: PROG
+      pages: 13
+      bytes: 25088
+      userName: FLOPPY-USER
+      dateCreated: 2294506947
+      lastDateRead: 2294632973
+      lastDateWritten: 2294506948
+      dateCreatedStr: 1984-03-01 22:23:03
+      lastDateReadStr: 1984-03-02 21:08:13
+      lastDateWrittenStr: 1984-03-01 22:23:04
+      bpunValid: null
+    - name: TERRANOVA-48-NO:PROG
+      type: PROG
+      pages: 12
+      bytes: 23552
+      userName: FLOPPY-USER
+      dateCreated: 2294506961
+      lastDateRead: 2294607347
+      lastDateWritten: 2294506962
+      dateCreatedStr: 1984-03-01 22:23:17
+      lastDateReadStr: 1984-03-02 14:55:51
+      lastDateWrittenStr: 1984-03-01 22:23:18
+      bpunValid: null
+    - name: TERRA-BOARD:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1541
+      userName: FLOPPY-USER
+      dateCreated: 2294507368
+      lastDateRead: 2294632978
+      lastDateWritten: 2294507369
+      dateCreatedStr: 1984-03-01 22:29:40
+      lastDateReadStr: 1984-03-02 21:08:18
+      lastDateWrittenStr: 1984-03-01 22:29:41
+      bpunValid: null
+    - name: TERRA-DATA:DATA
+      type: DATA
+      pages: 1
+      bytes: 1024
+      userName: FLOPPY-USER
+      dateCreated: 2294507397
+      lastDateRead: 2294632980
+      lastDateWritten: 2294507398
+      dateCreatedStr: 1984-03-01 22:30:05
+      lastDateReadStr: 1984-03-02 21:08:20
+      lastDateWrittenStr: 1984-03-01 22:30:06
+      bpunValid: null
+    - name: SPILL-32:PROG
+      type: PROG
+      pages: 39
+      bytes: 79360
+      userName: FLOPPY-USER
+      dateCreated: 2294507413
+      lastDateRead: 2294632984
+      lastDateWritten: 2294507414
+      dateCreatedStr: 1984-03-01 22:30:21
+      lastDateReadStr: 1984-03-02 21:08:24
+      lastDateWrittenStr: 1984-03-01 22:30:22
+      bpunValid: null
+    - name: SPILL-48:PROG
+      type: PROG
+      pages: 39
+      bytes: 79360
+      userName: FLOPPY-USER
+      dateCreated: 2294507450
+      lastDateRead: 2294607355
+      lastDateWritten: 2294507451
+      dateCreatedStr: 1984-03-01 22:30:58
+      lastDateReadStr: 1984-03-02 14:55:59
+      lastDateWrittenStr: 1984-03-01 22:30:59
+      bpunValid: null
+    - name: SPILL-BRUKSANV:DATA
+      type: DATA
+      pages: 11
+      bytes: 22314
+      userName: FLOPPY-USER
+      dateCreated: 2294507495
+      lastDateRead: 2294632995
+      lastDateWritten: 2294507496
+      dateCreatedStr: 1984-03-01 22:31:39
+      lastDateReadStr: 1984-03-02 21:08:35
+      lastDateWrittenStr: 1984-03-01 22:31:40
+      bpunValid: null
+    - name: SPILL-HANGMAN:DATA
+      type: DATA
+      pages: 2
+      bytes: 2173
+      userName: FLOPPY-USER
+      dateCreated: 2294507515
+      lastDateRead: 2294632999
+      lastDateWritten: 2294507521
+      dateCreatedStr: 1984-03-01 22:31:59
+      lastDateReadStr: 1984-03-02 21:08:39
+      lastDateWrittenStr: 1984-03-01 22:32:01
+      bpunValid: null
+    - name: TRON-32-NO:PROG
+      type: PROG
+      pages: 12
+      bytes: 24064
+      userName: FLOPPY-USER
+      dateCreated: 2294507542
+      lastDateRead: 2294633006
+      lastDateWritten: 2294507543
+      dateCreatedStr: 1984-03-01 22:32:22
+      lastDateReadStr: 1984-03-02 21:08:46
+      lastDateWrittenStr: 1984-03-01 22:32:23
+      bpunValid: null
+    - name: TRON-48-NO:PROG
+      type: PROG
+      pages: 12
+      bytes: 23040
+      userName: FLOPPY-USER
+      dateCreated: 2294507559
+      lastDateRead: 2294607374
+      lastDateWritten: 2294507561
+      dateCreatedStr: 1984-03-01 22:32:39
+      lastDateReadStr: 1984-03-02 14:56:14
+      lastDateWrittenStr: 1984-03-01 22:32:41
+      bpunValid: null
+    - name: MASTERMIND-32-NO:PROG
+      type: PROG
+      pages: 23
+      bytes: 46592
+      userName: FLOPPY-USER
+      dateCreated: 2294507600
+      lastDateRead: 2294633013
+      lastDateWritten: 2294507601
+      dateCreatedStr: 1984-03-01 22:33:16
+      lastDateReadStr: 1984-03-02 21:08:53
+      lastDateWrittenStr: 1984-03-01 22:33:17
+      bpunValid: null
+    - name: MASTERMIND-48-NO:PROG
+      type: PROG
+      pages: 21
+      bytes: 41984
+      userName: FLOPPY-USER
+      dateCreated: 2294507630
+      lastDateRead: 2294607380
+      lastDateWritten: 2294507632
+      dateCreatedStr: 1984-03-01 22:33:46
+      lastDateReadStr: 1984-03-02 14:56:20
+      lastDateWrittenStr: 1984-03-01 22:33:48
+      bpunValid: null
+    - name: MASTERMIND-BRETT:DATA
+      type: DATA
+      pages: 1
+      bytes: 1944
+      userName: FLOPPY-USER
+      dateCreated: 2294507664
+      lastDateRead: 2294633019
+      lastDateWritten: 2294507665
+      dateCreatedStr: 1984-03-01 22:34:16
+      lastDateReadStr: 1984-03-02 21:08:59
+      lastDateWrittenStr: 1984-03-01 22:34:17
+      bpunValid: null
+    - name: ORM:PROG
+      type: PROG
+      pages: 35
+      bytes: 70144
+      userName: FLOPPY-USER
+      dateCreated: 2294507679
+      lastDateRead: 2294633028
+      lastDateWritten: 2294507680
+      dateCreatedStr: 1984-03-01 22:34:31
+      lastDateReadStr: 1984-03-02 21:09:04
+      lastDateWrittenStr: 1984-03-01 22:34:32
+      bpunValid: null
+    - name: ORM-INTRO:TEXT
+      type: TEXT
+      pages: 1
+      bytes: 1088
+      userName: FLOPPY-USER
+      dateCreated: 2294507731
+      lastDateRead: 2294633036
+      lastDateWritten: 2294507732
+      dateCreatedStr: 1984-03-01 22:35:19
+      lastDateReadStr: 1984-03-02 21:09:12
+      lastDateWrittenStr: 1984-03-01 22:35:20
+      bpunValid: null
+    - name: DDBTABLES-D-C:VTM
+      type: VTM
+      pages: 5
+      bytes: 9458
+      userName: FLOPPY-USER
+      dateCreated: 2294507747
+      lastDateRead: null
+      lastDateWritten: 2294507748
+      dateCreatedStr: 1984-03-01 22:35:35
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-03-01 22:35:36
+      bpunValid: null
+    - name: PASCAL-ERR-J:SYMB
+      type: SYMB
+      pages: 4
+      bytes: 7393
+      userName: FLOPPY-USER
+      dateCreated: 2294507762
+      lastDateRead: null
+      lastDateWritten: 2294507763
+      dateCreatedStr: 1984-03-01 22:35:50
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-03-01 22:35:51
+      bpunValid: null
+    - name: SVHA-ADVENTURE:PROG
+      type: PROG
+      pages: 43
+      bytes: 87040
+      userName: FLOPPY-USER
+      dateCreated: 2294507791
+      lastDateRead: 2294633040
+      lastDateWritten: 2294507792
+      dateCreatedStr: 1984-03-01 22:36:15
+      lastDateReadStr: 1984-03-02 21:09:16
+      lastDateWrittenStr: 1984-03-01 22:36:16
+      bpunValid: null
+    - name: SVHA-KOLOTEXT:SYMB
+      type: SYMB
+      pages: 16
+      bytes: 31824
+      userName: FLOPPY-USER
+      dateCreated: 2294507863
+      lastDateRead: 2294633049
+      lastDateWritten: 2294507865
+      dateCreatedStr: 1984-03-01 22:37:23
+      lastDateReadStr: 1984-03-02 21:09:25
+      lastDateWrittenStr: 1984-03-01 22:37:25
+      bpunValid: null
+    - name: SVHA-OBJETEXT:SYMB
+      type: SYMB
+      pages: 20
+      bytes: 40536
+      userName: FLOPPY-USER
+      dateCreated: 2294507893
+      lastDateRead: 2294633055
+      lastDateWritten: 2294507894
+      dateCreatedStr: 1984-03-01 22:37:53
+      lastDateReadStr: 1984-03-02 21:09:31
+      lastDateWrittenStr: 1984-03-01 22:37:54
+      bpunValid: null
+    - name: SVHA-STLOTEXT:SYMB
+      type: SYMB
+      pages: 18
+      bytes: 35496
+      userName: FLOPPY-USER
+      dateCreated: 2294507934
+      lastDateRead: 2294633063
+      lastDateWritten: 2294507935
+      dateCreatedStr: 1984-03-01 22:38:30
+      lastDateReadStr: 1984-03-02 21:09:39
+      lastDateWrittenStr: 1984-03-01 22:38:31
+      bpunValid: null
+    - name: SVHA-TILFTEXT:SYMB
+      type: SYMB
+      pages: 22
+      bytes: 43272
+      userName: FLOPPY-USER
+      dateCreated: 2294507971
+      lastDateRead: 2294633069
+      lastDateWritten: 2294507973
+      dateCreatedStr: 1984-03-01 22:39:03
+      lastDateReadStr: 1984-03-02 21:09:45
+      lastDateWrittenStr: 1984-03-01 22:39:05
+      bpunValid: null
+    - name: SVHA-DATAFIL:SYMB
+      type: SYMB
+      pages: 18
+      bytes: 35932
+      userName: FLOPPY-USER
+      dateCreated: 2294508002
+      lastDateRead: 2294633090
+      lastDateWritten: 2294508004
+      dateCreatedStr: 1984-03-01 22:39:34
+      lastDateReadStr: 1984-03-02 21:10:02
+      lastDateWrittenStr: 1984-03-01 22:39:36
+      bpunValid: null
+provenance:
+  contributor: ndwiki
+  originalPath: tingo/8_nd_f17b_nd-10624a.img
+  dateImaged: 2026-08-10
+  importedAt: 2026-08-11T12:29:24.798Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10624-a-d1-6b893e31
+  syncStatus: pending

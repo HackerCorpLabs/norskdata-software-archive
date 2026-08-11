@@ -1,0 +1,49 @@
+id: nd-10340-d-d4-b36f63ab
+volumeName: ND-10340D-PART4
+md5: b36f63ab57c2a9fde4b706d99407a9d6
+product:
+  id: ND-10340
+  version: D
+  diskNumber: 4
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: bpun
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 129
+  files:
+    - name: SIB2-DRL-D:PROG
+      type: PROG
+      pages: 127
+      bytes: 520192
+      userName: FLOPPY-USER
+      dateCreated: 2234165509
+      lastDateRead: 2236811617
+      lastDateWritten: 2234165514
+      dateCreatedStr: 1983-04-21 10:36:05
+      lastDateReadStr: 1983-05-09 16:37:33
+      lastDateWrittenStr: 1983-04-21 10:36:10
+      bpunValid: null
+provenance:
+  contributor: ndwiki
+  originalPath: tingo/8_nd_f0b_nd-10340d-part4.img
+  dateImaged: 2026-08-10
+  importedAt: 2026-08-11T12:29:23.180Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10340-d-d4-b36f63ab
+  syncStatus: pending

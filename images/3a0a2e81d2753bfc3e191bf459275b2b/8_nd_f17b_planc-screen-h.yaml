@@ -1,0 +1,132 @@
+id: img-3a0a2e81d275
+volumeName: PLANC-SCREEN-H
+md5: 3a0a2e81d2753bfc3e191bf459275b2b
+product:
+  id: PLANC-SCREEN
+  version: H
+image:
+  sizeBytes: 1261568
+  format: raw
+  controller: floppy
+  totalPages: 616
+  pageSize: 2048
+  bootFormat: none
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 110
+  files:
+    - name: DEMO-SCREEN:SYMB
+      type: SYMB
+      pages: 7
+      bytes: 12536
+      userName: FLOPPY-USER
+      dateCreated: 2488085725
+      lastDateRead: 2492207321
+      lastDateWritten: 2488444663
+      dateCreatedStr: 1987-01-06 18:51:29
+      lastDateReadStr: 1987-02-06 01:03:25
+      lastDateWrittenStr: 1987-01-09 10:27:55
+      bpunValid: null
+    - name: PLANC-GEN-A00:PROG
+      type: PROG
+      pages: 39
+      bytes: 155648
+      userName: FLOPPY-USER
+      dateCreated: 2488828703
+      lastDateRead: 2492207326
+      lastDateWritten: 2488828704
+      dateCreatedStr: 1987-01-12 08:12:31
+      lastDateReadStr: 1987-02-06 01:03:30
+      lastDateWrittenStr: 1987-01-12 08:12:32
+      bpunValid: null
+    - name: INTERF:NRF
+      type: NRF
+      pages: 17
+      bytes: 34679
+      userName: FLOPPY-USER
+      dateCreated: 2488460857
+      lastDateRead: 2492207341
+      lastDateWritten: 2488828420
+      dateCreatedStr: 1987-01-09 14:24:57
+      lastDateReadStr: 1987-02-06 01:03:45
+      lastDateWrittenStr: 1987-01-12 08:08:04
+      bpunValid: null
+    - name: SUM:PICT
+      type: PICT
+      pages: 1
+      bytes: 335
+      userName: FLOPPY-USER
+      dateCreated: 2463692832
+      lastDateRead: 2492207348
+      lastDateWritten: 2463926314
+      dateCreatedStr: 1986-11-12 15:32:32
+      lastDateReadStr: 1987-02-06 01:03:52
+      lastDateWrittenStr: 1986-11-14 08:32:42
+      bpunValid: null
+    - name: SUM:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 319
+      userName: FLOPPY-USER
+      dateCreated: 2463692866
+      lastDateRead: 2492207350
+      lastDateWritten: 2488452843
+      dateCreatedStr: 1986-11-12 15:33:02
+      lastDateReadStr: 1987-02-06 01:03:54
+      lastDateWrittenStr: 1987-01-09 12:27:43
+      bpunValid: null
+    - name: SCREEN:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 926
+      userName: FLOPPY-USER
+      dateCreated: 2449010298
+      lastDateRead: 2492207352
+      lastDateWritten: 2487952015
+      dateCreatedStr: 1986-07-28 14:57:58
+      lastDateReadStr: 1987-02-06 01:03:56
+      lastDateWrittenStr: 1987-01-05 18:10:15
+      bpunValid: null
+    - name: INTERF-1B:BRF
+      type: BRF
+      pages: 17
+      bytes: 34666
+      userName: FLOPPY-USER
+      dateCreated: 2488460899
+      lastDateRead: 2492207354
+      lastDateWritten: 2488828480
+      dateCreatedStr: 1987-01-09 14:25:35
+      lastDateReadStr: 1987-02-06 01:03:58
+      lastDateWrittenStr: 1987-01-12 08:09:00
+      bpunValid: null
+    - name: INTERF-2B:BRF
+      type: BRF
+      pages: 18
+      bytes: 35134
+      userName: FLOPPY-USER
+      dateCreated: 2488460962
+      lastDateRead: 2492207365
+      lastDateWritten: 2488828538
+      dateCreatedStr: 1987-01-09 14:26:34
+      lastDateReadStr: 1987-02-06 01:04:05
+      lastDateWrittenStr: 1987-01-12 08:09:58
+      bpunValid: null
+provenance:
+  contributor: ndwiki
+  originalPath: tingo/8_nd_f17b_planc-screen-h.img
+  dateImaged: 2026-08-10
+  importedAt: 2026-08-11T12:29:24.825Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-3a0a2e81d275
+  syncStatus: pending

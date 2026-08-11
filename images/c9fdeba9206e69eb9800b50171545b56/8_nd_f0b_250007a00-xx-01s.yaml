@@ -1,0 +1,218 @@
+id: nd-250007-a00-d1-c9fdeba9
+volumeName: 250007A00-XX-01S
+md5: c9fdeba9206e69eb9800b50171545b56
+product:
+  id: ND-250007
+  version: A00
+  diskNumber: 1
+  language: XX
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: binary
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 35
+  files:
+    - name: MLE-LINE-1B-A00:BRF
+      type: BRF
+      pages: 1
+      bytes: 1186
+      userName: FLOPPY-USER
+      dateCreated: 2368109730
+      lastDateRead: null
+      lastDateWritten: 2368109735
+      dateCreatedStr: 1985-04-19 07:50:34
+      lastDateReadStr: null
+      lastDateWrittenStr: 1985-04-19 07:50:39
+      bpunValid: null
+    - name: MLE-LINE-2B-A00:BRF
+      type: BRF
+      pages: 1
+      bytes: 1198
+      userName: FLOPPY-USER
+      dateCreated: 2368109739
+      lastDateRead: null
+      lastDateWritten: 2368109740
+      dateCreatedStr: 1985-04-19 07:50:43
+      lastDateReadStr: null
+      lastDateWrittenStr: 1985-04-19 07:50:44
+      bpunValid: null
+    - name: MLE-EDIT-1B-A00:BRF
+      type: BRF
+      pages: 1
+      bytes: 538
+      userName: FLOPPY-USER
+      dateCreated: 2368109744
+      lastDateRead: null
+      lastDateWritten: 2368109745
+      dateCreatedStr: 1985-04-19 07:50:48
+      lastDateReadStr: null
+      lastDateWrittenStr: 1985-04-19 07:50:49
+      bpunValid: null
+    - name: MLE-EDIT-2B-A00:BRF
+      type: BRF
+      pages: 1
+      bytes: 548
+      userName: FLOPPY-USER
+      dateCreated: 2368109749
+      lastDateRead: null
+      lastDateWritten: 2368109750
+      dateCreatedStr: 1985-04-19 07:50:53
+      lastDateReadStr: null
+      lastDateWrittenStr: 1985-04-19 07:50:54
+      bpunValid: null
+    - name: MLE-SERVI-1B-A00:BRF
+      type: BRF
+      pages: 1
+      bytes: 313
+      userName: FLOPPY-USER
+      dateCreated: 2368109753
+      lastDateRead: null
+      lastDateWritten: 2368109755
+      dateCreatedStr: 1985-04-19 07:50:57
+      lastDateReadStr: null
+      lastDateWrittenStr: 1985-04-19 07:50:59
+      bpunValid: null
+    - name: MLE-SERVI-2B-A00:BRF
+      type: BRF
+      pages: 1
+      bytes: 319
+      userName: FLOPPY-USER
+      dateCreated: 2368109763
+      lastDateRead: null
+      lastDateWritten: 2368109764
+      dateCreatedStr: 1985-04-19 07:51:03
+      lastDateReadStr: null
+      lastDateWrittenStr: 1985-04-19 07:51:04
+      bpunValid: null
+    - name: MLE-LIB-1B-A00:BRF
+      type: BRF
+      pages: 2
+      bytes: 2189
+      userName: FLOPPY-USER
+      dateCreated: 2368109768
+      lastDateRead: null
+      lastDateWritten: 2368109769
+      dateCreatedStr: 1985-04-19 07:51:08
+      lastDateReadStr: null
+      lastDateWrittenStr: 1985-04-19 07:51:09
+      bpunValid: null
+    - name: MLE-LIB-2B-A00:BRF
+      type: BRF
+      pages: 2
+      bytes: 2255
+      userName: FLOPPY-USER
+      dateCreated: 2368109775
+      lastDateRead: null
+      lastDateWritten: 2368109776
+      dateCreatedStr: 1985-04-19 07:51:15
+      lastDateReadStr: null
+      lastDateWrittenStr: 1985-04-19 07:51:16
+      bpunValid: null
+    - name: MLE-A00:NRF
+      type: NRF
+      pages: 3
+      bytes: 5916
+      userName: FLOPPY-USER
+      dateCreated: 2368109781
+      lastDateRead: null
+      lastDateWritten: 2368109783
+      dateCreatedStr: 1985-04-19 07:51:21
+      lastDateReadStr: null
+      lastDateWrittenStr: 1985-04-19 07:51:23
+      bpunValid: null
+    - name: MLE-DATA-1B-A00:BRF
+      type: BRF
+      pages: 1
+      bytes: 109
+      userName: FLOPPY-USER
+      dateCreated: 2368636778
+      lastDateRead: null
+      lastDateWritten: 2368636779
+      dateCreatedStr: 1985-04-23 08:29:42
+      lastDateReadStr: null
+      lastDateWrittenStr: 1985-04-23 08:29:43
+      bpunValid: null
+    - name: MLE-DATA-2B-A00:BRF
+      type: BRF
+      pages: 1
+      bytes: 113
+      userName: FLOPPY-USER
+      dateCreated: 2368636794
+      lastDateRead: null
+      lastDateWritten: 2368636795
+      dateCreatedStr: 1985-04-23 08:29:58
+      lastDateReadStr: null
+      lastDateWrittenStr: 1985-04-23 08:29:59
+      bpunValid: null
+    - name: MLE-SCREE-1B-A00:BRF
+      type: BRF
+      pages: 1
+      bytes: 1524
+      userName: FLOPPY-USER
+      dateCreated: 2368636864
+      lastDateRead: null
+      lastDateWritten: 2368636865
+      dateCreatedStr: 1985-04-23 08:31:00
+      lastDateReadStr: null
+      lastDateWrittenStr: 1985-04-23 08:31:01
+      bpunValid: null
+    - name: MLE-SCREE-2B-A00:BRF
+      type: BRF
+      pages: 1
+      bytes: 1562
+      userName: FLOPPY-USER
+      dateCreated: 2368636881
+      lastDateRead: null
+      lastDateWritten: 2368636882
+      dateCreatedStr: 1985-04-23 08:31:17
+      lastDateReadStr: null
+      lastDateWrittenStr: 1985-04-23 08:31:18
+      bpunValid: null
+    - name: MLE-UTILI-2B-A00:BRF
+      type: BRF
+      pages: 1
+      bytes: 402
+      userName: FLOPPY-USER
+      dateCreated: 2368636908
+      lastDateRead: null
+      lastDateWritten: 2368636910
+      dateCreatedStr: 1985-04-23 08:31:44
+      lastDateReadStr: null
+      lastDateWrittenStr: 1985-04-23 08:31:46
+      bpunValid: null
+    - name: MLE-UTILI-1B-A00:BRF
+      type: BRF
+      pages: 1
+      bytes: 384
+      userName: FLOPPY-USER
+      dateCreated: 2368636923
+      lastDateRead: null
+      lastDateWritten: 2368636928
+      dateCreatedStr: 1985-04-23 08:31:59
+      lastDateReadStr: null
+      lastDateWrittenStr: 1985-04-23 08:32:00
+      bpunValid: null
+provenance:
+  contributor: ndwiki
+  originalPath: tingo/8_nd_f0b_250007a00-xx-01s.img
+  dateImaged: 2026-08-10
+  importedAt: 2026-08-11T12:29:23.004Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-250007-a00-d1-c9fdeba9
+  syncStatus: pending

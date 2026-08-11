@@ -1,0 +1,120 @@
+id: img-1cf2eacdd0c1
+volumeName: 10516C01-D
+md5: 1cf2eacdd0c16b1b2fc18e0e7867a26d
+product:
+  id: ND-10516
+  version: C01
+image:
+  sizeBytes: 1261568
+  format: raw
+  controller: floppy
+  totalPages: 616
+  pageSize: 2048
+  bootFormat: none
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 189
+  files:
+    - name: INSTALL-FH-C01:PROG
+      type: PROG
+      pages: 43
+      bytes: 157562
+      userName: FLOPPY-USER
+      dateCreated: 2384126379
+      lastDateRead: 2384127885
+      lastDateWritten: 2384127761
+      dateCreatedStr: 1985-08-13 14:06:43
+      lastDateReadStr: 1985-08-13 14:30:13
+      lastDateWrittenStr: 1985-08-13 14:28:17
+      bpunValid: null
+    - name: EMPLOYEES-C00:DATA
+      type: DATA
+      pages: 4
+      bytes: 7716
+      userName: FLOPPY-USER
+      dateCreated: 2362229831
+      lastDateRead: 2384127983
+      lastDateWritten: 2362229845
+      dateCreatedStr: 1985-03-06 12:17:07
+      lastDateReadStr: 1985-08-13 14:31:47
+      lastDateWrittenStr: 1985-03-06 12:17:21
+      bpunValid: null
+    - name: FILE-HANDLER-C00:HELP
+      type: HELP
+      pages: 7
+      bytes: 12743
+      userName: FLOPPY-USER
+      dateCreated: 2358825558
+      lastDateRead: 2435113155
+      lastDateWritten: 2358825573
+      dateCreatedStr: 1985-02-12 13:09:22
+      lastDateReadStr: 1986-04-18 14:03:03
+      lastDateWrittenStr: 1985-02-12 13:09:37
+      bpunValid: null
+    - name: FILE-HANDLER-C00:PROG
+      type: PROG
+      pages: 94
+      bytes: 206848
+      userName: FLOPPY-USER
+      dateCreated: 2362229877
+      lastDateRead: 2435113095
+      lastDateWritten: 2362229879
+      dateCreatedStr: 1985-03-06 12:17:53
+      lastDateReadStr: 1986-04-18 14:02:07
+      lastDateWrittenStr: 1985-03-06 12:17:55
+      bpunValid: null
+    - name: SALES-DESC-C00:DATA
+      type: DATA
+      pages: 1
+      bytes: 117
+      userName: FLOPPY-USER
+      dateCreated: 2358825659
+      lastDateRead: 2384127988
+      lastDateWritten: 2358825664
+      dateCreatedStr: 1985-02-12 13:10:59
+      lastDateReadStr: 1985-08-13 14:31:52
+      lastDateWrittenStr: 1985-02-12 13:11:00
+      bpunValid: null
+    - name: SALES-C00:DATA
+      type: DATA
+      pages: 1
+      bytes: 1342
+      userName: FLOPPY-USER
+      dateCreated: 2358825717
+      lastDateRead: 2384127991
+      lastDateWritten: 2358825719
+      dateCreatedStr: 1985-02-12 13:11:53
+      lastDateReadStr: 1985-08-13 14:31:55
+      lastDateWrittenStr: 1985-02-12 13:11:55
+      bpunValid: null
+    - name: UE-ERMSG-EN-B00:ERR
+      type: ERR
+      pages: 34
+      bytes: 69120
+      userName: FLOPPY-USER
+      dateCreated: 2358825748
+      lastDateRead: 2366415627
+      lastDateWritten: 2358825813
+      dateCreatedStr: 1985-02-12 13:12:20
+      lastDateReadStr: 1985-04-06 10:12:11
+      lastDateWrittenStr: 1985-02-12 13:13:21
+      bpunValid: null
+provenance:
+  contributor: ndwiki
+  originalPath: tingo/8_nd_f17b_10516c01-1d.img
+  dateImaged: 2026-08-10
+  importedAt: 2026-08-11T12:29:23.478Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-1cf2eacdd0c1
+  syncStatus: pending

@@ -1,0 +1,97 @@
+id: nd-10191-e00-d1-ee0518f1
+volumeName: 10191E00-1D
+md5: ee0518f1e88968f2c0173d1d6791d2bc
+product:
+  id: ND-10191
+  version: E00
+  diskNumber: 1
+image:
+  sizeBytes: 1261568
+  format: raw
+  controller: floppy
+  totalPages: 616
+  pageSize: 2048
+  bootFormat: none
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 344
+  files:
+    - name: FORTRAN-100-E00:PROG
+      type: PROG
+      pages: 118
+      bytes: 608256
+      userName: FLOPPY-USER
+      dateCreated: 2372861570
+      lastDateRead: 2492206394
+      lastDateWritten: 2372861575
+      dateCreatedStr: 1985-05-23 15:58:02
+      lastDateReadStr: 1987-02-06 00:52:58
+      lastDateWrittenStr: 1985-05-23 15:58:07
+      bpunValid: null
+    - name: FORT32-1BANK-E0:BRF
+      type: BRF
+      pages: 54
+      bytes: 109964
+      userName: FLOPPY-USER
+      dateCreated: 2372961171
+      lastDateRead: null
+      lastDateWritten: 2372961172
+      dateCreatedStr: 1985-05-24 08:14:19
+      lastDateReadStr: null
+      lastDateWrittenStr: 1985-05-24 08:14:20
+      bpunValid: null
+    - name: FORT32-2BANK-E0:BRF
+      type: BRF
+      pages: 56
+      bytes: 114098
+      userName: FLOPPY-USER
+      dateCreated: 2372961252
+      lastDateRead: null
+      lastDateWritten: 2372961253
+      dateCreatedStr: 1985-05-24 08:15:36
+      lastDateReadStr: null
+      lastDateWrittenStr: 1985-05-24 08:15:37
+      bpunValid: null
+    - name: FORT48-1BANK-E0:BRF
+      type: BRF
+      pages: 54
+      bytes: 110384
+      userName: FLOPPY-USER
+      dateCreated: 2372962779
+      lastDateRead: 2492206272
+      lastDateWritten: 2375721816
+      dateCreatedStr: 1985-05-24 08:39:27
+      lastDateReadStr: 1987-02-06 00:51:00
+      lastDateWrittenStr: 1985-06-13 10:13:24
+      bpunValid: null
+    - name: FORT48-2BANK-E0:BRF
+      type: BRF
+      pages: 56
+      bytes: 114518
+      userName: FLOPPY-USER
+      dateCreated: 2372962907
+      lastDateRead: 2492206316
+      lastDateWritten: 2372962908
+      dateCreatedStr: 1985-05-24 08:41:27
+      lastDateReadStr: 1987-02-06 00:51:44
+      lastDateWrittenStr: 1985-05-24 08:41:28
+      bpunValid: null
+provenance:
+  contributor: ndwiki
+  originalPath: tingo/8_nd_f17b_10191e00-1d.img
+  dateImaged: 2026-08-10
+  importedAt: 2026-08-11T12:29:23.373Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10191-e00-d1-ee0518f1
+  syncStatus: pending

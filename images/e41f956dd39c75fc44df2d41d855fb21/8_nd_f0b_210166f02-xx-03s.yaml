@@ -1,0 +1,74 @@
+id: nd-210166-f02-d3-e41f956d
+volumeName: 210166F02-XX-03S
+md5: e41f956dd39c75fc44df2d41d855fb21
+product:
+  id: ND-210166
+  version: F02
+  diskNumber: 3
+  language: XX
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 135
+  files:
+    - name: SIBAS-SERV-F02:PROG
+      type: PROG
+      pages: 105
+      bytes: 131072
+      userName: FLOPPY-USER
+      dateCreated: 2446383609
+      lastDateRead: 2464860730
+      lastDateWritten: 2464333002
+      dateCreatedStr: 1986-07-08 13:39:57
+      lastDateReadStr: 1986-11-21 12:40:58
+      lastDateWrittenStr: 1986-11-17 11:51:10
+      bpunValid: null
+    - name: SIBLIB-1BANK-F02:BRF
+      type: BRF
+      pages: 13
+      bytes: 25087
+      userName: FLOPPY-USER
+      dateCreated: 2446383798
+      lastDateRead: 2464860769
+      lastDateWritten: 2464333038
+      dateCreatedStr: 1986-07-08 13:42:54
+      lastDateReadStr: 1986-11-21 12:41:33
+      lastDateWrittenStr: 1986-11-17 11:51:46
+      bpunValid: null
+    - name: SIBLIB-2BANK-F02:BRF
+      type: BRF
+      pages: 13
+      bytes: 25828
+      userName: FLOPPY-USER
+      dateCreated: 2446383853
+      lastDateRead: 2464860782
+      lastDateWritten: 2464333069
+      dateCreatedStr: 1986-07-08 13:43:45
+      lastDateReadStr: 1986-11-21 12:41:46
+      lastDateWrittenStr: 1986-11-17 11:52:13
+      bpunValid: null
+provenance:
+  contributor: ndwiki
+  originalPath: tingo/8_nd_f0b_210166f02-xx-03s.img
+  dateImaged: 2026-08-10
+  importedAt: 2026-08-11T12:29:22.757Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-210166-f02-d3-e41f956d
+  syncStatus: pending

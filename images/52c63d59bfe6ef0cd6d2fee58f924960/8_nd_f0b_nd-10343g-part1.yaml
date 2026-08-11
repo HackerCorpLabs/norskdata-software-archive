@@ -1,0 +1,49 @@
+id: nd-10343-g-d1-52c63d59
+volumeName: ND-10343G-PART1
+md5: 52c63d59bfe6ef0cd6d2fee58f924960
+product:
+  id: ND-10343
+  version: G
+  diskNumber: 1
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 46
+  files:
+    - name: ISAM-LIB-G:NRF
+      type: NRF
+      pages: 44
+      bytes: 88465
+      userName: FLOPPY-USER
+      dateCreated: 2241518036
+      lastDateRead: 2291455611
+      lastDateWritten: 2241519197
+      dateCreatedStr: 1983-06-13 13:39:20
+      lastDateReadStr: 1984-02-10 13:25:59
+      lastDateWrittenStr: 1983-06-13 13:57:29
+      bpunValid: null
+provenance:
+  contributor: ndwiki
+  originalPath: tingo/8_nd_f0b_nd-10343g-part1.img
+  dateImaged: 2026-08-10
+  importedAt: 2026-08-11T12:29:23.227Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10343-g-d1-52c63d59
+  syncStatus: pending
