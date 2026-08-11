@@ -37,6 +37,10 @@
 - id: scientific
   name: Scientific & Mathematical
   description: Subroutine libraries, scientific computing, plotting packages
+- id: third-party
+  name: Third-Party / Non-ND Software
+  description: Software not produced by Norsk Data - university ports, OEM and
+    externally written programs distributed on ND media
 - id: other
   name: Other / Miscellaneous
   description: Products not fitting other categories
