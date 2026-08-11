@@ -37,6 +37,15 @@ const ARTICLE_DISK_ONLY_PATTERN = /^(\d{5,6})([A-Z])(\d{2})-(\d+)([SD]?)$/;
 const BARE_ARTICLE_PATTERN = /^(\d{5,6})([A-Z])(\d{2})$/;
 
 /**
+ * Pattern 4c: Article number followed only by the density letter - no language
+ * field and no disk number at all.
+ * Example: 10516C01-D (ND-10516 FILE-HANDLER, version C01, single disk).
+ * Without this the whole label falls through to "unmatched" even when the
+ * product is already in the catalog.
+ */
+const ARTICLE_DENSITY_ONLY_PATTERN = /^(\d{5,6})([A-Z])(\d{2})-([SD])$/;
+
+/**
  * Pattern 5: Bare article number with single-letter version
  * Examples: ND-10142B-PART1 (volume name might be ND-10142B)
  */
@@ -120,6 +129,17 @@ export function matchProduct(volumeName: string | null): ProductMatch | null {
       version: `${m[2]}${m[3]}`,
       diskNumber: parseInt(m[5], 10),
       language: m[4],
+    };
+  }
+
+  // Pattern 4c: Article with a density letter only - no language, no disk
+  m = trimmed.match(ARTICLE_DENSITY_ONLY_PATTERN);
+  if (m) {
+    return {
+      productId: normalizeProductId(m[1]),
+      version: `${m[2]}${m[3]}`,
+      diskNumber: null,
+      language: null,
     };
   }
 
