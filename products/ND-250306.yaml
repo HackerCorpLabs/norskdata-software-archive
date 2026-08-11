@@ -2,3 +2,8 @@ id: ND-250306
 name: SINTRAN III for ND-500
 categories:
 - os
+platform:
+  - "500"
+docs:
+  installationDescription:
+    - ND-896058-4-EN

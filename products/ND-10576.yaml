@@ -2,3 +2,8 @@ id: ND-10576
 name: SINTRAN III/VSX-500
 categories:
 - os
+platform:
+  - "500"
+docs:
+  installationDescription:
+    - ND-10174-10-EN

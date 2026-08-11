@@ -9,7 +9,7 @@ import { readFile, writeFile, readdir, stat, mkdir, copyFile, unlink } from 'fs/
 import { join, relative, dirname, basename } from 'path';
 import { parse as yamlParse, stringify as yamlStringify } from 'yaml';
 import { glob } from 'glob';
-import type { Catalog, CatalogEntry, Product, Collection } from '../types.js';
+import type { Catalog, CatalogEntry, Product, ProductDocs, Collection } from '../types.js';
 import { matchProduct } from './product-matcher.js';
 
 const FLOPPIES_FILE = 'catalog/floppies.json';
@@ -19,6 +19,21 @@ const PRODUCTS_DIR = 'products';
 const COLLECTIONS_DIR = 'collections';
 
 // ── Product YAML operations ──────────────────────────────────
+
+/** Read the docs: block of a product YAML, dropping anything malformed. */
+function readProductDocs(raw: unknown): ProductDocs | undefined {
+  if (!raw || typeof raw !== 'object') return undefined;
+  const d = raw as Record<string, unknown>;
+  const list = (v: unknown) =>
+    Array.isArray(v) ? v.filter((x): x is string => typeof x === 'string' && x.length > 0) : undefined;
+  const productInfo = list(d.productInfo);
+  const installationDescription = list(d.installationDescription);
+  if (!productInfo?.length && !installationDescription?.length) return undefined;
+  return {
+    ...(productInfo?.length ? { productInfo } : {}),
+    ...(installationDescription?.length ? { installationDescription } : {}),
+  };
+}
 
 /**
  * Load products by scanning products/*.yaml files.
@@ -42,6 +57,7 @@ export async function loadProducts(rootDir: string): Promise<Product[]> {
             siblingId: doc.siblingId ?? null,
             categories: Array.isArray(doc.categories) ? doc.categories : undefined,
             platform: Array.isArray(doc.platform) ? doc.platform : undefined,
+            docs: readProductDocs(doc.docs),
           });
         }
       } catch {
@@ -85,6 +101,9 @@ export async function saveProductYaml(
   else if (Array.isArray(existing.categories) && (existing.categories as string[]).length > 0) doc.categories = existing.categories;
   if (updates.platform !== undefined) { if (updates.platform.length > 0) doc.platform = updates.platform; }
   else if (Array.isArray(existing.platform) && (existing.platform as string[]).length > 0) doc.platform = existing.platform;
+  // docs: is never edited through this path, but it must survive it - otherwise a
+  // product edit in the web UI drops the ND document references written by hand.
+  if (existing.docs) doc.docs = existing.docs;
 
   const yamlStr = yamlStringify(doc, { lineWidth: 0 });
   await writeFile(filePath, yamlStr, 'utf-8');

@@ -2,3 +2,9 @@ id: ND-380799
 name: Basic System Package for ND-5000 Systems
 categories:
 - languages
+platform:
+  - "500"
+docs:
+  installationDescription:
+    - ND-895560-1-EN
+    - ND-895560-2-EN

@@ -2,3 +2,9 @@ id: ND-210863
 name: FORTRAN Crosscompiler for ND-100 running on ND-500.
 categories:
 - languages
+platform:
+  - "100"
+  - "500"
+docs:
+  installationDescription:
+    - ND-210863-7-EN

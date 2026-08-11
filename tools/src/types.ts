@@ -177,6 +177,21 @@ export interface Product {
   siblingId?: string | null;
   categories?: string[];
   platform?: string[];  // '100' | '500' | 'PC'
+  /**
+   * ND documents describing this product, by document id (the file name in
+   * docs/nd/<collection>/<id>.md, which is the ND document number).
+   * One document can cover several products - e.g. ND-10174-10-EN covers
+   * ND-10174, ND-10575 and ND-10576 - so it is stored once and referenced.
+   */
+  docs?: ProductDocs;
+}
+
+/** ND documentation attached to a product */
+export interface ProductDocs {
+  /** Product Information sheets -> docs/nd/product-info/<id>.md */
+  productInfo?: string[];
+  /** Program / Installation Descriptions -> docs/nd/installation-description/<id>.md */
+  installationDescription?: string[];
 }
 
 /** Collection definition */
