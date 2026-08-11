@@ -113,7 +113,7 @@ For the read-only static site:
 
 ```bash
 make static-site
-make site-serve    # serves on port 8000
+make site-serve    # builds the static site and serves it on port 8000
 ```
 
 ---
@@ -293,7 +293,7 @@ make mcp
 `make mcp` builds the tools (if needed) and runs `tools/dist/mcp/server.js`. The server:
 
 - Communicates over **stdio** (standard input/output) using the MCP protocol -- it is **not** an HTTP server and prints nothing useful when run by hand. It is meant to be **launched by an MCP client**, not run in a terminal you watch.
-- On startup, loads `catalog/floppies.json` and `catalog/products.json` into memory and builds a search index.
+- On startup, loads `catalog/floppies.json` and `catalog/products.json` into memory, builds a search index, and resolves the ND documentation in `docs/nd/` from each product's `docs:` block.
 - Reads the archive location from the `ARCHIVE_ROOT` environment variable (defaults to the repo root). The bundled `.mcp.json` sets `ARCHIVE_ROOT` to `.`.
 
 It is **read-only**: it never imports, edits, or commits anything. Use the web UI (`make import`) for write operations.
@@ -309,6 +309,9 @@ It is **read-only**: it never imports, edits, or commits anything. Use the web U
 | `download_floppy` | The local `.img.gz` path and/or Internet Archive URL for an image (no actual download -- it returns where the bytes live). |
 | `list_floppy_files` | The NDFS users and files inside an image, from cached metadata -- no download or parsing needed. |
 | `get_archive_stats` | Summary stats: totals, breakdown by storage class and boot format, top products. |
+| `list_product_documents` | The ND documents describing a product (Program/Installation Descriptions and Product Information sheets), with title, kind and the other products each document covers. |
+| `read_document` | The full markdown of one ND document by document id (e.g. `ND-10174-10-EN`), with `offset`/`maxChars` paging for long ones. |
+| `search_documents` | Full-text search across all ND product documentation, returning matching documents with a snippet around the first hit. |
 
 ### What an LLM can use it for
 
@@ -377,8 +380,7 @@ make check          Validate catalog integrity
 make check-deps     Check prerequisites (node, npm, git)
 
 make static-site    Build the GitHub Pages static site
-make site-build     Build per-product HTML pages
-make site-serve     Build and serve on port 8000
+make site-serve     Build the static site and serve it on port 8000
 make mcp            Start the MCP server
 
 make import-folder  Non-interactive folder import (scripted)
@@ -411,7 +413,13 @@ collections/                Shared "set" photos, grouped by product+version
     group.yaml                  Which photos belong to the set
     *.JPG                       The shared set/box photos
 
-products/                   Product YAML files (id, name, categories, platform)
+products/                   Product YAML files (id, name, categories, platform, docs)
+
+docs/nd/                    ND documentation copied from the NDInsight archive
+  product-info/               Product Information sheets, <ND-doc-number>.md
+  installation-description/   Program / Installation Descriptions
+                              One document can describe several products, so it is
+                              stored once and referenced by id from products/*.yaml
 
 categories/                 Product category definitions
   product-categories.yaml
@@ -427,7 +435,6 @@ tools/                      Node.js/TypeScript tooling
       product-matcher.ts      ND product number matching
       catalog.ts              YAML/JSON catalog read/write (single persist path)
       static-site-builder.ts  GitHub Pages generator (main site)
-      site-builder.ts         Per-product HTML pages
     mcp/
       server.ts               MCP server
     ui/
