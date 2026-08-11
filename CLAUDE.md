@@ -32,7 +32,16 @@ cd tools && npm run watch      # tsc --watch
 cd tools && node dist/cli.js <subcommand>   # run any CLI command directly
 ```
 
-There is **no test suite and no linter** — `make check` (the `check` CLI subcommand) is the validation gate. CLI subcommands: `import`, `import-folder`, `search`, `check`, `check-deps`, `ia-sync`/`ia-verify`/`ia-upload`, `build-site`, `build-static-site`, `rebuild-catalog`, `migrate-products`, `extract-legacy`, `mcp`.
+There is **no test suite and no linter** — `make check` (the `check` CLI subcommand) is the validation gate. CI enforces it: `.github/workflows/validate.yml` builds the NDFS submodule, builds the tools, and runs `make check` on every push and PR to `main`. `.github/workflows/pages.yml` regenerates `site/` from source and deploys it; `.github/workflows/ia-verify.yml` checks Internet Archive checksums. CLI subcommands: `import`, `import-folder`, `search`, `check`, `check-deps`, `ia-sync`/`ia-verify`/`ia-upload`, `build-site`, `build-static-site`, `rebuild-catalog`, `migrate-products`, `extract-legacy`, `mcp`.
+
+Two proof scripts under `tools/scripts/` are the closest thing to tests, and they assert the "one persist path" rule below:
+
+```bash
+node tools/scripts/roundtrip-proof.mjs        # every YAML field survives write -> reload
+bash tools/scripts/persistence-proof.sh       # needs the dev server on :3000 (make import)
+```
+
+`roundtrip-proof.mjs` sets a sentinel on every field of a real entry, writes YAML, reloads it, and asserts each sentinel came back — a field that does not come back is a read-without-write gap. `persistence-proof.sh` injects a field straight into `floppies.json` and proves a regenerate wipes it (JSON is a pure projection of YAML), then proves every mutation endpoint's change survives the same regenerate, and statically asserts no `saveCatalog()` call is reachable from live code.
 
 ## Architecture & data model
 
@@ -45,6 +54,8 @@ Products are separate YAML under `products/` (`id`, `name`, `categories`, `platf
 **Import pipeline** (`tools/src/api/import.ts`, `import-folder.ts`): read `.img` → MD5 → parse NDFS → validate BPUN → match volume name against ND product-number patterns (`product-matcher.ts` + `name-parser.ts`) — recorded as a *suggestion*; the floppy is left **unassigned** (productId null) so it is confirmed in the Matcher, never auto-linked → dedup by MD5 (`dedup.ts`) → gzip into `images/{md5}/` → copy photos (per-disk photos stay with the image; shared "set" photos consolidate into `collections/{product}/`) → write YAML → regenerate derived artifacts.
 
 **One persist path.** After any import or product assignment, derived artifacts are regenerated from the YAML source of truth — never from an in-memory snapshot. `catalog.ts` `persistCatalog()` = `consolidateGroupPhotos` + `generateCatalogJson` (floppies.json + products.json). The web UI import/assign endpoints and the CLI (`import-runner.ts`) both then rebuild the `catalog/index.json` search index (`writeIndex`) and the static site (`buildStaticSite`), so every import path — web UI and `import-*` CLI — leaves the repo in an identical state. Do **not** persist the catalog by writing the in-memory catalog to JSON (`saveCatalog`) without regenerating from YAML; that can drift to a partial catalog.
+
+**Two front-ends, two audiences.** The Express server (`server.ts`, `make import`, port 3000) is the *contributor workbench*: it renders every page live from the running Node process and is the only place that imports, assigns products, or commits. The static site (`static-site-builder.ts`, `make static-site`, output in `site/`) is the *public read-only window*: flat pre-rendered HTML, one file per product, served by GitHub Pages, which cannot run server-side code. `site/` is gitignored and rebuilt by CI from the YAML/catalog on every push, so any local `site/` is a throwaway preview — never edit it, and do not treat a large diff under `site/` as meaningful work.
 
 ### `tools/src/` map
 
@@ -66,3 +77,9 @@ Products are separate YAML under `products/` (`id`, `name`, `categories`, `platf
 - After editing image/product/category metadata, run `make check` and regenerate the catalog (`rebuild-catalog`) so `catalog/*.json` stays in sync with YAML.
 - `make setup` must succeed before anything; if the NDFS submodule is missing, run `git submodule update --init --recursive`.
 - Storage policy: floppy images ≤1.3 MB are committed compressed; HDD images / tapes go to Internet Archive (`storageClass` + `internetArchive` fields in YAML drive this).
+
+## Git in this repo
+
+- **Never `git add -A` / `git add .`** here. Imported floppy data routinely sits uncommitted in the working tree, so a blanket add sweeps unrelated images and YAML into someone else's commit. Always stage explicit paths.
+- **Imported floppy data and metadata** (`images/`, `collections/`, `products/`, `categories/`, `catalog/`) go on a branch and through a PR, so the import can be reviewed before it lands.
+- **Code and tooling changes** (`tools/`, `Makefile`, docs) push straight to `main`.
