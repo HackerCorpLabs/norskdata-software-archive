@@ -6,6 +6,17 @@ image:
   format: raw
   controller: floppy
 filesystem: winch
+backupSet:
+  kind: winch
+  name: PACK-ONE
+  label: 90-03-04
+  volumeNumber: 1
+  totalVolumes: 13
+  pageCount: 300
+  listedPages: 608
+  imageBytes: 630784
+  pageFirst: 0
+  pageLast: 299
 provenance:
   contributor: gandalf
   originalPath: 300/ND-disk-00312.img
