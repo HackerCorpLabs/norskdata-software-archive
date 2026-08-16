@@ -730,6 +730,7 @@ app.get('/api/floppies', async (req, res) => {
         // A DOS floppy has no NDFS volume name; its FAT label is what names it.
         volumeLabel: e.volumeLabel ?? null,
         filesystem: e.filesystem ?? null,
+        backupSet: e.backupSet ?? null,
         productId: e.productId,
         productName: resolveProdName(e.productId),
         version: e.version,
@@ -2240,6 +2241,42 @@ app.get('/api/dosfs/read-file', async (req, res) => {
 // Browse a Norsk Data backup volume. Handles both formats: a BACKUP-SYSTEM
 // (VOL1) volume lists its files; a WINCH-TO-FLOPP volume has no file names at
 // all, so it reports the header and the page map instead.
+/**
+ * The backup set one image belongs to: every volume of the set with its own
+ * status, plus the state of the set as a whole. Grouped from the catalog, so
+ * no image has to be opened - the facts were recorded at detect time.
+ */
+app.get('/api/backup-set', async (req, res) => {
+  try {
+    const entryId = String(req.query.id ?? '');
+    const cat = await getCatalog();
+    const { groupBackupSets, setKeyOf, describeSet, setVerdict } = await import('./lib/backupsets/index.js');
+    const inputs = cat.entries.map(e => ({
+      id: e.id,
+      volumeName: e.volumeName,
+      imageSizeBytes: e.imageSizeBytes,
+      backupSet: e.backupSet,
+    }));
+
+    if (!entryId) {
+      // no id: every set in the archive, for a listing
+      const sets = [...groupBackupSets(inputs).values()]
+        .map(s => ({ ...s, summary: describeSet(s), verdict: setVerdict(s) }));
+      res.json({ sets });
+      return;
+    }
+
+    const entry = cat.entries.find(e => e.id === entryId);
+    if (!entry) { res.status(404).json({ error: 'Entry not found' }); return; }
+    const key = setKeyOf({ id: entry.id, backupSet: entry.backupSet });
+    if (!key) { res.json({ set: null }); return; }
+    const set = groupBackupSets(inputs).get(key) ?? null;
+    res.json({ set: set ? { ...set, summary: describeSet(set), verdict: setVerdict(set) } : null });
+  } catch (err) {
+    res.status(500).json({ error: String(err) });
+  }
+});
+
 app.get('/api/ndbackup/info', async (req, res) => {
   try {
     const entryId = String(req.query.id ?? '');
@@ -2309,7 +2346,7 @@ app.post('/api/detect-filesystem', async (req, res) => {
     const entryId = String(req.query.id ?? '');
     const scope = String(req.query.scope ?? '');
     const cat = await getCatalog();
-    const { detectFilesystem, readDosLabel } = await import('./api/filesystem-detect.js');
+    const { detectFilesystem, readDosLabel, readBackupSet } = await import('./api/filesystem-detect.js');
     const { gunzipSync } = await import('zlib');
 
     let targets = cat.entries;
@@ -2331,17 +2368,21 @@ app.post('/api/detect-filesystem', async (req, res) => {
       if (!abs.startsWith(ROOT_DIR)) continue;
       let kind: string;
       let label: string | null = null;
+      let set: ReturnType<typeof readBackupSet> = null;
       try {
         const raw = gunzipSync(await readFile(abs));
         const ndfsParsed = !!(e.volumeName || e.ndfs?.files?.length || e.ndfs?.users?.length);
         kind = detectFilesystem(raw, ndfsParsed);
         if (kind === 'dos') label = readDosLabel(raw);
+        if (kind === 'winch') set = readBackupSet(raw);
       } catch { failed++; continue; }
       scanned++;
       counts[kind] = (counts[kind] ?? 0) + 1;
-      if (e.filesystem !== kind || (label && e.volumeLabel !== label)) {
+      const setChanged = JSON.stringify(set ?? null) !== JSON.stringify(e.backupSet ?? null);
+      if (e.filesystem !== kind || (label && e.volumeLabel !== label) || setChanged) {
         e.filesystem = kind as any;
         if (label) e.volumeLabel = label;
+        e.backupSet = set;
         if (e.storage?.git?.yamlPath) await saveFloppyYaml(ROOT_DIR, e);
         changed++;
       }

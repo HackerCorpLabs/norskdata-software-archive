@@ -5866,6 +5866,8 @@ tr.ndfs-file-selected,
           var h = '<p class="nd-text-muted">This format stores no file names. It is a page-level dump of directory <code>' +
             esc(v.directoryName) + '</code>: each stored page records which page of the original filesystem it came from. ' +
             'File names appear only once all ' + v.totalVolumes + ' volumes of the set are reassembled into a directory image and read as NDFS.</p>';
+          h += '<div id="bk-set">Loading the rest of the set...</div>';
+          h += '<h4 style="margin:1rem 0 0.35rem">Pages on this volume</h4>';
           h += '<table class="nd-table nd-table-compact"><thead><tr><th style="width:10rem">Original page</th>' +
             '<th style="width:10rem">Offset in image</th></tr></thead><tbody>';
           v.pages.slice(0, 400).forEach(function(p) {
@@ -5874,9 +5876,77 @@ tr.ndfs-file-selected,
           h += '</tbody></table>';
           if (v.pages.length > 400) h += '<p class="nd-text-muted">... ' + (v.pages.length - 400) + ' more pages</p>';
           body.innerHTML = h;
+          renderBackupSetPanel(entryId, document.getElementById('bk-set'));
         }
       })
       .catch(function(err) { body.innerHTML = '<p class="nd-text-muted">' + esc(String(err)) + '</p>'; });
+  };
+
+  // ==============================================================
+  // Backup set panel
+  // ==============================================================
+  // A WINCH-TO-FLOPP backup is one ND directory spread over a set of floppies,
+  // and this archive holds several reads of some of them. The panel shows every
+  // volume of the set - held, missing, or held only as an incomplete read - so
+  // one disk page answers what the whole set looks like. Each volume can still
+  // be opened on its own or dumped as hex.
+  window.renderBackupSetPanel = function(entryId, box) {
+    if (!box) return;
+    fetch('/api/backup-set?id=' + encodeURIComponent(entryId))
+      .then(function(r) { return r.json(); })
+      .then(function(res) {
+        var set = res.set;
+        if (!set) { box.innerHTML = ''; return; }
+        var pct = set.pagesExpected ? Math.round(set.pagesHeld * 100 / set.pagesExpected) : 0;
+        var h = '<div class="nd-card" style="margin:0.75rem 0;padding:0.75rem 1rem">';
+        h += '<h4 style="margin:0 0 0.25rem">Backup set <code>' + esc(set.name) + '</code>' +
+          (set.label ? ' <span class="nd-text-muted" style="font-weight:normal">' + esc(set.label) + '</span>' : '') + '</h4>';
+        h += '<p style="margin:0 0 0.5rem"><span class="nd-badge ' + (set.complete ? 'nd-badge-ok' : 'nd-badge-warn') + '">' +
+          esc(set.summary) + '</span> <span class="nd-text-muted">' + set.imageCount + ' image(s) &middot; ' +
+          set.pagesHeld.toLocaleString() + ' of ' + set.pagesExpected.toLocaleString() +
+          ' pages of the volumes held (' + pct + '%)</span></p>';
+        h += '<p class="nd-text-muted" style="margin:0 0 0.6rem;font-size:0.85rem">' + esc(set.verdict) + '</p>';
+        h += '<table class="nd-table nd-table-compact"><thead><tr><th style="width:4rem">Volume</th><th>Image</th>' +
+          '<th>Status</th><th style="text-align:right">Pages</th><th>Original pages</th><th style="width:11rem"></th>' +
+          '</tr></thead><tbody>';
+        set.slots.forEach(function(sl) {
+          if (!sl.present) {
+            h += '<tr><td><strong>' + sl.volumeNumber + '</strong></td>' +
+              '<td colspan="4" class="nd-text-muted">not in the archive</td>' +
+              '<td><span class="nd-badge nd-badge-warn">missing</span></td></tr>';
+            return;
+          }
+          sl.reads.forEach(function(rd, i) {
+            var isCurrent = rd.id === entryId;
+            h += '<tr' + (isCurrent ? ' class="ndfs-file-selected"' : '') + '>';
+            h += '<td>' + (i === 0 ? '<strong>' + sl.volumeNumber + '</strong>' : '') + '</td>';
+            h += '<td><a href="#/disks/' + encodeURIComponent(rd.id) + '"><code>' + esc(rd.name) + '</code></a>' +
+              (i === 0 ? '' : ' <span class="nd-text-muted" style="font-size:0.75rem">alternate read</span>') +
+              (isCurrent ? ' <span class="nd-badge nd-badge-info" style="font-size:0.65rem">open</span>' : '') + '</td>';
+            var badge = rd.status === 'complete' ? '<span class="nd-badge nd-badge-ok">complete</span>'
+              : rd.status === 'partial'
+                ? '<span class="nd-badge nd-badge-warn">' + (rd.sideOne ? 'side 0 only' : 'incomplete read') + '</span>'
+                : '<span class="nd-badge">unknown</span>';
+            h += '<td>' + badge + (rd.coverage !== null ? ' <span class="nd-text-muted" style="font-size:0.75rem">' +
+              Math.round(rd.coverage * 100) + '%</span>' : '') + '</td>';
+            h += '<td style="text-align:right">' + rd.pageCount.toLocaleString() +
+              (rd.listedPages ? '<span class="nd-text-muted"> / ' + rd.listedPages.toLocaleString() + '</span>' : '') + '</td>';
+            h += '<td class="nd-text-muted">' + (rd.pageFirst === null ? '-' : rd.pageFirst + '-' + rd.pageLast) + '</td>';
+            h += '<td><button class="nd-btn nd-btn-sm" data-bk-open="' + esc(rd.id) + '"' + (isCurrent ? ' disabled' : '') + '>Open</button> ' +
+              '<button class="nd-btn nd-btn-sm nd-badge-info" data-bk-hex="' + esc(rd.id) + '" data-bk-name="' + esc(rd.name) + '">Hex</button></td>';
+            h += '</tr>';
+          });
+        });
+        h += '</tbody></table></div>';
+        box.innerHTML = h;
+        box.querySelectorAll('[data-bk-open]').forEach(function(b) {
+          b.addEventListener('click', function() { openBackupViewer(this.getAttribute('data-bk-open')); });
+        });
+        box.querySelectorAll('[data-bk-hex]').forEach(function(b) {
+          b.addEventListener('click', function() { openHexViewer(this.getAttribute('data-bk-hex'), this.getAttribute('data-bk-name')); });
+        });
+      })
+      .catch(function(err) { box.innerHTML = '<p class="nd-text-muted">Could not load the set: ' + esc(String(err)) + '</p>'; });
   };
 
   // ==============================================================

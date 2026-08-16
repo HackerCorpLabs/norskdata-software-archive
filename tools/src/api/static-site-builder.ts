@@ -103,6 +103,7 @@ export async function buildStaticSite(rootDir: string): Promise<void> {
   for (const [rel, globals] of [
     ['src/lib/dosfs/index.ts', ['DosVolume', 'NotFatError']],
     ['src/lib/ndbackup/index.ts', ['isBackupVolume', 'readBackupVolume', 'readBackupFile', 'isWinchVolume', 'readWinchVolume', 'readWinchPage']],
+    ['src/lib/backupsets/index.ts', ['groupBackupSets', 'backupSetFor', 'setKeyOf', 'describeSet', 'setVerdict']],
   ] as [string, string[]][]) {
     try {
       const tsSource = await readFile(join(rootDir, 'tools', rel), 'utf-8');
@@ -120,7 +121,7 @@ export async function buildStaticSite(rootDir: string): Promise<void> {
       console.warn(`WARNING: ${rel} not found -- its viewer will be disabled in the static site`);
     }
   }
-  console.log(`Media libraries inlined: ${(mediaLibsJS.length / 1024).toFixed(1)} KB (dosfs + ndbackup)`);
+  console.log(`Media libraries inlined: ${(mediaLibsJS.length / 1024).toFixed(1)} KB (dosfs + ndbackup + backupsets)`);
 
   console.log(`Loaded ${entries.length} catalog entries, ${products.length} products, ${categoriesRaw.length} categories.`);
 
@@ -2663,6 +2664,122 @@ function getAppJS(): string {
     });
   };
 
+  // A hex dump of the raw image, so any floppy can be looked at byte by byte -
+  // including the volumes of a backup set, which carry no file names. Rendered
+  // one 32 KB window at a time: a whole 1.2 MB image at 16 bytes per row is
+  // 76 800 rows, which no browser lays out smoothly.
+  window.openHexViewer = function(entryId, label) {
+    var WINDOW_BYTES = 32768, ROW = 16;
+    var entry = catalogMap[entryId] || {};
+    ndModal.open('<div class="nd-modal-header"><h3>Hex view - <code>' + esc(label || entry.volumeName || entryId) +
+      '</code></h3><button class="nd-modal-close" onclick="ndModal.close()">&times;</button></div>' +
+      '<div class="nd-modal-body" id="hexbody">Reading image...</div>', { wide: true });
+    loadImageBytes(entryId).then(function(bytes) {
+      var box = document.getElementById('hexbody');
+      var start = 0, strip = true;
+      function render() {
+        if (start < 0) start = 0;
+        if (start >= bytes.length) start = Math.max(0, bytes.length - WINDOW_BYTES);
+        var end = Math.min(bytes.length, start + WINDOW_BYTES);
+        var lines = [];
+        for (var off = start; off < end; off += ROW) {
+          var hex = '', txt = '';
+          for (var i = 0; i < ROW; i++) {
+            if (off + i < end) {
+              var b = bytes[off + i];
+              hex += (b < 16 ? '0' : '') + b.toString(16) + ' ';
+              var c = strip ? (b & 0x7f) : b;
+              txt += (c >= 0x20 && c <= 0x7e) ? String.fromCharCode(c) : '.';
+            } else { hex += '   '; }
+            if (i === 7) hex += ' ';
+          }
+          lines.push(('0000000' + off.toString(16)).slice(-8) + '  ' + hex + ' |' + txt + '|');
+        }
+        var h = '<div style="display:flex;gap:0.75rem;align-items:center;flex-wrap:wrap;margin-bottom:0.5rem">' +
+          '<span class="nd-text-muted">' + bytes.length.toLocaleString() + ' bytes &middot; showing 0x' +
+          start.toString(16) + ' - 0x' + (end - 1).toString(16) + '</span>' +
+          '<button class="nd-btn nd-btn-sm" id="hex-prev"' + (start <= 0 ? ' disabled' : '') + '>Previous</button>' +
+          '<button class="nd-btn nd-btn-sm" id="hex-next"' + (end >= bytes.length ? ' disabled' : '') + '>Next</button>' +
+          '<label style="font-size:0.85rem">go to <input class="nd-input" id="hex-goto" style="width:9rem;font-size:0.8rem" placeholder="0x2000 or 8192"></label>' +
+          '<label style="font-size:0.85rem;cursor:pointer" title="ND text is written with the parity bit set"><input type="checkbox" id="hex-strip"' +
+          (strip ? ' checked' : '') + '> strip parity</label></div>';
+        h += '<pre class="ndfs-hex-view" style="max-height:60vh;overflow:auto">' + esc(lines.join('\\n')) + '</pre>';
+        box.innerHTML = h;
+        var prev = document.getElementById('hex-prev'), next = document.getElementById('hex-next');
+        prev.addEventListener('click', function() { start -= WINDOW_BYTES; render(); });
+        next.addEventListener('click', function() { start += WINDOW_BYTES; render(); });
+        document.getElementById('hex-strip').addEventListener('change', function() { strip = this.checked; render(); });
+        document.getElementById('hex-goto').addEventListener('change', function() {
+          var v = this.value.trim();
+          var n = /^0x/i.test(v) ? parseInt(v.slice(2), 16) : parseInt(v, 10);
+          if (!isNaN(n)) { start = Math.floor(n / ROW) * ROW; render(); }
+        });
+      }
+      render();
+    }).catch(function(err) {
+      document.getElementById('hexbody').innerHTML = '<p class="nd-text-muted">Could not read this image: ' + esc(String(err)) + '</p>';
+    });
+  };
+
+  // Every volume of a WINCH-TO-FLOPP backup set, with the status of each image
+  // and of the set as a whole. Grouped from the catalog that is already in the
+  // page, so nothing extra is downloaded; each volume can still be opened or
+  // dumped as hex on its own.
+  window.renderBackupSetPanel = function(entryId, box) {
+    if (!box || typeof groupBackupSets === 'undefined') return;
+    var entry = catalogMap[entryId];
+    var key = entry ? setKeyOf(entry) : null;
+    if (!key) { box.innerHTML = ''; return; }
+    var set = groupBackupSets(CATALOG).get(key);
+    if (!set) { box.innerHTML = ''; return; }
+    var pct = set.pagesExpected ? Math.round(set.pagesHeld * 100 / set.pagesExpected) : 0;
+    var h = '<div style="border:1px solid var(--border);border-radius:6px;margin:0.75rem 0;padding:0.75rem 1rem">';
+    h += '<h4 style="margin:0 0 0.25rem">Backup set <code>' + esc(set.name) + '</code>' +
+      (set.label ? ' <span class="nd-text-muted" style="font-weight:normal">' + esc(set.label) + '</span>' : '') + '</h4>';
+    h += '<p style="margin:0 0 0.5rem"><span class="nd-badge ' + (set.complete ? 'nd-badge-ok' : 'nd-badge-warn') + '">' +
+      esc(describeSet(set)) + '</span> <span class="nd-text-muted">' + set.imageCount + ' image(s) &middot; ' +
+      set.pagesHeld.toLocaleString() + ' of ' + set.pagesExpected.toLocaleString() + ' pages of the volumes held (' + pct + '%)</span></p>';
+    h += '<p class="nd-text-muted" style="margin:0 0 0.6rem;font-size:0.85rem">' + esc(setVerdict(set)) + '</p>';
+    h += '<div style="overflow-x:auto"><table class="nd-table nd-table-compact"><thead><tr><th>Volume</th><th>Image</th>' +
+      '<th>Status</th><th style="text-align:right">Pages</th><th>Original pages</th><th></th></tr></thead><tbody>';
+    set.slots.forEach(function(sl) {
+      if (!sl.present) {
+        h += '<tr><td><strong>' + sl.volumeNumber + '</strong></td><td colspan="4" class="nd-text-muted">not in the archive</td>' +
+          '<td><span class="nd-badge nd-badge-warn">missing</span></td></tr>';
+        return;
+      }
+      sl.reads.forEach(function(rd, i) {
+        var isCurrent = rd.id === entryId;
+        h += '<tr>';
+        h += '<td>' + (i === 0 ? '<strong>' + sl.volumeNumber + '</strong>' : '') + '</td>';
+        h += '<td><a href="#/disks/' + encodeURIComponent(rd.id) + '"><code>' + esc(rd.name) + '</code></a>' +
+          (i === 0 ? '' : ' <span class="nd-text-muted" style="font-size:0.75rem">alternate read</span>') +
+          (isCurrent ? ' <span class="nd-badge nd-badge-info" style="font-size:0.65rem">open</span>' : '') + '</td>';
+        var badge = rd.status === 'complete' ? '<span class="nd-badge nd-badge-ok">complete</span>'
+          : rd.status === 'partial'
+            ? '<span class="nd-badge nd-badge-warn">' + (rd.sideOne ? 'side 0 only' : 'incomplete read') + '</span>'
+            : '<span class="nd-badge">unknown</span>';
+        h += '<td>' + badge + (rd.coverage !== null ? ' <span class="nd-text-muted" style="font-size:0.75rem">' +
+          Math.round(rd.coverage * 100) + '%</span>' : '') + '</td>';
+        h += '<td style="text-align:right">' + rd.pageCount.toLocaleString() +
+          (rd.listedPages ? '<span class="nd-text-muted"> / ' + rd.listedPages.toLocaleString() + '</span>' : '') + '</td>';
+        h += '<td class="nd-text-muted">' + (rd.pageFirst === null ? '-' : rd.pageFirst + '-' + rd.pageLast) + '</td>';
+        h += '<td style="white-space:nowrap"><button class="nd-btn nd-btn-sm" data-bk-open="' + esc(rd.id) + '"' +
+          (isCurrent ? ' disabled' : '') + '>Open</button> <button class="nd-btn nd-btn-sm nd-badge-info" data-bk-hex="' +
+          esc(rd.id) + '" data-bk-name="' + esc(rd.name) + '">Hex</button></td>';
+        h += '</tr>';
+      });
+    });
+    h += '</tbody></table></div></div>';
+    box.innerHTML = h;
+    box.querySelectorAll('[data-bk-open]').forEach(function(b) {
+      b.addEventListener('click', function() { openBackupViewer(this.getAttribute('data-bk-open')); });
+    });
+    box.querySelectorAll('[data-bk-hex]').forEach(function(b) {
+      b.addEventListener('click', function() { openHexViewer(this.getAttribute('data-bk-hex'), this.getAttribute('data-bk-name')); });
+    });
+  };
+
   window.openBackupViewer = function(entryId) {
     if (typeof isBackupVolume === 'undefined') { alert('Backup reader not available in this build'); return; }
     var entry = catalogMap[entryId] || {};
@@ -2680,13 +2797,16 @@ function getAppJS(): string {
         h += '<p class="nd-text-muted">This format stores no file names - it is a page-level dump of directory <code>' +
           esc(w.directoryName) + '</code>. File names appear only when all ' + w.totalVolumes +
           ' volumes of the set are reassembled into a directory image and read as NDFS.</p>';
-        h += '<div style="max-height:50vh;overflow:auto"><table class="nd-table nd-table-compact"><thead><tr>' +
+        h += '<div id="bk-set"></div>';
+        h += '<h4 style="margin:1rem 0 0.35rem">Pages on this volume</h4>';
+        h += '<div style="max-height:40vh;overflow:auto"><table class="nd-table nd-table-compact"><thead><tr>' +
           '<th>Original page</th><th>Offset in image</th></tr></thead><tbody>';
         w.pages.slice(0, 400).forEach(function(p) {
           h += '<tr><td><code>' + p.pageNumber + '</code></td><td class="nd-text-muted">' + p.offset.toLocaleString() + '</td></tr>';
         });
         h += '</tbody></table></div>';
         box.innerHTML = h;
+        renderBackupSetPanel(entryId, document.getElementById('bk-set'));
         return;
       }
       var v = readBackupVolume(bytes);

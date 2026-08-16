@@ -154,6 +154,37 @@ export interface CatalogEntry {
    * match on it exactly as it matches an NDFS volume name.
    */
   volumeLabel?: string | null;
+  /**
+   * Which backup set this image is one volume of, read from the volume header.
+   *
+   * A WINCH-TO-FLOPP backup spreads one ND directory over a set of floppies:
+   * the header names the directory, gives this volume's number and how many
+   * volumes the set has, and lists which pages of the original directory are
+   * stored here. Recording it makes the set visible without opening every
+   * image: which volumes are held, which are missing, and which images are
+   * repeat reads of the same volume.
+   */
+  backupSet?: {
+    /** the format the set belongs to */
+    kind: 'winch';
+    /** name of the directory that was backed up, e.g. PACK-ONE */
+    name: string;
+    /** free text written when the backup was made, e.g. 90-03-04 */
+    label: string;
+    /** this volume's number in the set, 1-based */
+    volumeNumber: number;
+    /** how many volumes the set has */
+    totalVolumes: number;
+    /** pages of the original directory stored on this volume */
+    pageCount: number;
+    /** pages the header says the volume holds; more than pageCount means the image is an incomplete read */
+    listedPages: number;
+    /** size of the raw image, so an incomplete read is visible without opening it */
+    imageBytes: number;
+    /** lowest and highest page number stored here */
+    pageFirst: number | null;
+    pageLast: number | null;
+  } | null;
   directoryContentRaw?: string | null;
   /** References to related documentation */
   docs: {

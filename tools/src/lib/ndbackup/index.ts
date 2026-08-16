@@ -211,6 +211,13 @@ export interface WinchVolume {
   /** where the page data starts (after the 16 KB header) */
   dataOffset: number;
   pages: WinchPage[];
+  /**
+   * How many pages the header says this volume holds, counted over the whole
+   * page list rather than over what fits in the image. An image that stores
+   * fewer pages than this is an incomplete read of the floppy - in this archive
+   * that is usually a one-sided read of a double-sided 8 inch disk.
+   */
+  listedPages: number;
 }
 
 const WINCH_HEADER = 16384;
@@ -250,14 +257,22 @@ export function readWinchVolume(b: Uint8Array): WinchVolume {
   const be16 = (o: number) => (b[o] << 8) | b[o + 1];
   const be32 = (o: number) => ((b[o] << 24) | (b[o + 1] << 16) | (b[o + 2] << 8) | b[o + 3]) >>> 0;
 
+  // Slot handling follows flopp-to-winch.c exactly:
+  //   - the list is walked for (image size - header) / page size SLOTS, not for
+  //     the whole 16 KB list, which names more pages than fit on the media;
+  //   - a record whose running count is 0 ends a short volume;
+  //   - an unused slot (0xFFFFFFFF) is skipped WITHOUT consuming a stored page,
+  //     so it must not advance the read position.
+  const slotLimit = Math.max(0, Math.floor((b.length - WINCH_HEADER) / WINCH_PAGE));
   const pages: WinchPage[] = [];
   let stored = 0;
-  for (let rec = 76; rec + 36 <= WINCH_HEADER; rec += 36) {
+  let slot = 0;
+  for (let rec = 76; rec + 36 <= WINCH_HEADER && slot < slotLimit; rec += 36) {
     const count = be32(rec + 32);
     if (count === 0) break;                       // short volume: end of the list
-    for (let i = 0; i < 8; i++) {
+    for (let i = 0; i < 8; i++, slot++) {
       const pageNumber = be32(rec + i * 4);
-      if (pageNumber === 0xffffffff) { stored++; continue; }   // unused slot
+      if (pageNumber === 0xffffffff) continue;    // unused slot: no page stored
       const offset = WINCH_HEADER + stored * WINCH_PAGE;
       if (offset + WINCH_PAGE > b.length) break;
       pages.push({ pageNumber, offset });
@@ -265,10 +280,18 @@ export function readWinchVolume(b: Uint8Array): WinchVolume {
     }
   }
 
+  // The full page list, independent of how much of the floppy was imaged.
+  let listedPages = 0;
+  for (let rec = 76; rec + 36 <= WINCH_HEADER; rec += 36) {
+    if (be32(rec + 32) === 0) break;
+    for (let i = 0; i < 8; i++) if (be32(rec + i * 4) !== 0xffffffff) listedPages++;
+  }
+
   return {
     kind: 'winch',
     volumeNumber: be16(0),
     totalVolumes: be16(68),
+    listedPages,
     directoryName: ndString(ascii7(b, 2, 16)),
     label: ascii7(b, 18, 50).trim(),
     pageSize: WINCH_PAGE,

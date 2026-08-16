@@ -18,7 +18,7 @@ import { generateId, saveFloppyYaml } from './catalog.js';
 import { checkDuplicate } from './dedup.js';
 import { matchProduct } from './product-matcher.js';
 import { detectFilesystem } from './filesystem-detect.js';
-import { readDosLabel } from './filesystem-detect.js';
+import { readDosLabel, readBackupSet } from './filesystem-detect.js';
 
 /** Maximum raw image size for in-git storage (roughly 700 NDFS pages) */
 const FLOPPY_SIZE_LIMIT = 1_400_000;
@@ -544,6 +544,7 @@ export async function importImage(
     // straight to the media.
     filesystem: detectFilesystem(buffer, !!ndfsResult),
     volumeLabel: readDosLabel(buffer),
+    backupSet: readBackupSet(buffer),
     docs: null,
     provenance: {
       contributor: options?.contributor ?? 'unknown',

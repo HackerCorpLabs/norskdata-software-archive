@@ -522,6 +522,69 @@
         "null"
       ],
       "description": "Volume label of a non-NDFS filesystem (the FAT label of an MS-DOS disk). These often carry an ND part number."
+    },
+    "backupSet": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "description": "Which backup set this image is one volume of, read from the volume header. A WINCH-TO-FLOPP backup spreads one ND directory over a set of floppies.",
+      "properties": {
+        "kind": {
+          "type": "string",
+          "enum": [
+            "winch"
+          ]
+        },
+        "name": {
+          "type": "string",
+          "description": "Directory that was backed up, e.g. PACK-ONE"
+        },
+        "label": {
+          "type": "string",
+          "description": "Free text written when the backup was made, e.g. 90-03-04"
+        },
+        "volumeNumber": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "totalVolumes": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "pageCount": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "pageFirst": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "pageLast": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "listedPages": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Pages the header says the volume holds; more than pageCount means the image is an incomplete read of the floppy"
+        },
+        "imageBytes": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Size of the raw image the header was read from"
+        }
+      },
+      "required": [
+        "kind",
+        "name",
+        "volumeNumber",
+        "totalVolumes"
+      ]
     }
   },
   "additionalProperties": false

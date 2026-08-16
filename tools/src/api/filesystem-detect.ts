@@ -12,6 +12,7 @@
  */
 
 import { DosVolume } from '../lib/dosfs/index.js';
+import { isWinchVolume, readWinchVolume } from '../lib/ndbackup/index.js';
 
 export type FilesystemKind = 'ndfs' | 'dos' | 'tar' | 'backup' | 'winch' | 'none';
 
@@ -170,5 +171,42 @@ export function readDosLabel(buf: Buffer | Uint8Array): string | null {
     return vol.info.volumeLabel ?? null;
   } catch {
     return null;   // not FAT, or no label on it
+  }
+}
+
+/**
+ * Which backup set the image is one volume of, or null when it is not part of
+ * one. A WINCH-TO-FLOPP backup spreads one ND directory over a set of floppies
+ * and each volume's header names the directory, its own number and the size of
+ * the set, so the whole set can be reconstructed without opening every image.
+ *
+ * BACKUP-SYSTEM volumes are not covered: their ANSI labels carry no set name
+ * and no volume count, only a file that may continue on the next volume.
+ */
+export function readBackupSet(buf: Buffer | Uint8Array): {
+  kind: 'winch'; name: string; label: string;
+  volumeNumber: number; totalVolumes: number;
+  pageCount: number; listedPages: number; imageBytes: number;
+  pageFirst: number | null; pageLast: number | null;
+} | null {
+  const bytes = buf instanceof Uint8Array ? buf : new Uint8Array(buf);
+  if (!isWinchVolume(bytes)) return null;
+  try {
+    const vol = readWinchVolume(bytes);
+    const numbers = vol.pages.map(p => p.pageNumber);
+    return {
+      kind: 'winch',
+      name: vol.directoryName,
+      label: vol.label,
+      volumeNumber: vol.volumeNumber,
+      totalVolumes: vol.totalVolumes,
+      pageCount: numbers.length,
+      listedPages: vol.listedPages,
+      imageBytes: bytes.length,
+      pageFirst: numbers.length ? Math.min(...numbers) : null,
+      pageLast: numbers.length ? Math.max(...numbers) : null,
+    };
+  } catch {
+    return null;
   }
 }
