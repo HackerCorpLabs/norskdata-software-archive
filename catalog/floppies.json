@@ -4491,7 +4491,8 @@
         },
         "filesRecovered": 2,
         "namesConfirmedInBytes": 2,
-        "confirmRatio": 1
+        "confirmRatio": 1,
+        "acceptedBy": "own-bytes"
       }
     },
     "docs": {
@@ -18184,7 +18185,8 @@
         },
         "filesRecovered": 7,
         "namesConfirmedInBytes": 7,
-        "confirmRatio": 1
+        "confirmRatio": 1,
+        "acceptedBy": "own-bytes"
       }
     },
     "docs": {
@@ -28179,7 +28181,240 @@
     "bootFormat": null,
     "cpuTarget": null,
     "osRequirement": null,
-    "ndfs": null,
+    "ndfs": {
+      "users": [
+        {
+          "name": "DNF",
+          "pagesUsed": 123
+        },
+        {
+          "name": "ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ",
+          "pagesUsed": 4294967295
+        }
+      ],
+      "files": [
+        {
+          "name": "MAD-POINTS-MJ",
+          "type": "DATA",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "DNF",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "TURING-SIM-MJ",
+          "type": "SYMB",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "DNF",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "IDIOTEN-P-MJ",
+          "type": "SYMB",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "DNF",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "LISSAJOU-MJ",
+          "type": "SYMB",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "DNF",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "ARENA-OF-MJ",
+          "type": "SYMB",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "DNF",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "DIAMANT-MJ",
+          "type": "TOUR",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "DNF",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "MAD-OMEGA-MJ",
+          "type": "SYMB",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "DNF",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "MIN-WHO-MJ",
+          "type": "SYMB",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "DNF",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "SPRINGARE-MJ",
+          "type": "SYMB",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "DNF",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "FACIT-SETUP-MJ",
+          "type": "SYMB",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "DNF",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "8-QUEENS-MJ",
+          "type": "SYMB",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "DNF",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "OTHELLO-NPL-MJ",
+          "type": "SYMB",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "DNF",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "NOLLSTELLEN-MJ",
+          "type": "SYMB",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "DNF",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "HOW-MANY-MJ",
+          "type": "SYMB",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "DNF",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "FLOPPY-FORM-MJ",
+          "type": "SYMB",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "DNF",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "PID-REGULATOR-MJ",
+          "type": "SYMB",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "DNF",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "TRAPETS-MJ",
+          "type": "SYMB",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "DNF",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ",
+          "type": "ÿÿÿÿ",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ",
+          "type": "ÿÿÿÿ",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ",
+          "type": "ÿÿÿÿ",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ",
+          "type": "ÿÿÿÿ",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "CODE-XOR-MJ",
+          "type": "SYMB",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "DNF",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        }
+      ]
+    },
     "filesystem": "ndfs",
     "volumeLabel": null,
     "backupSet": null,
@@ -28196,7 +28431,19 @@
         "MONSC:REAL",
         "KOL:INTE"
       ],
-      "recovery": null
+      "recovery": {
+        "status": "recovered",
+        "layout": {
+          "object": 150,
+          "user": 152,
+          "bit": 77
+        },
+        "filesRecovered": 22,
+        "namesConfirmedInBytes": 17,
+        "confirmRatio": 0.773,
+        "acceptedBy": "sibling-listing",
+        "corroboratedBySibling": 18
+      }
     },
     "docs": {
       "piDocId": null,
@@ -32045,7 +32292,8 @@
         },
         "filesRecovered": 4,
         "namesConfirmedInBytes": 4,
-        "confirmRatio": 1
+        "confirmRatio": 1,
+        "acceptedBy": "own-bytes"
       }
     },
     "docs": {
@@ -32232,7 +32480,8 @@
         },
         "filesRecovered": 9,
         "namesConfirmedInBytes": 9,
-        "confirmRatio": 1
+        "confirmRatio": 1,
+        "acceptedBy": "own-bytes"
       }
     },
     "docs": {
@@ -37238,7 +37487,8 @@
         },
         "filesRecovered": 16,
         "namesConfirmedInBytes": 16,
-        "confirmRatio": 1
+        "confirmRatio": 1,
+        "acceptedBy": "own-bytes"
       }
     },
     "docs": {
@@ -37473,7 +37723,8 @@
         },
         "filesRecovered": 6,
         "namesConfirmedInBytes": 6,
-        "confirmRatio": 1
+        "confirmRatio": 1,
+        "acceptedBy": "own-bytes"
       }
     },
     "docs": {
@@ -45495,7 +45746,9 @@
         },
         "filesRecovered": 25,
         "namesConfirmedInBytes": 24,
-        "confirmRatio": 0.96
+        "confirmRatio": 0.96,
+        "acceptedBy": "own-bytes",
+        "corroboratedBySibling": 25
       }
     },
     "docs": {
@@ -60131,7 +60384,9 @@
         },
         "filesRecovered": 25,
         "namesConfirmedInBytes": 24,
-        "confirmRatio": 0.96
+        "confirmRatio": 0.96,
+        "acceptedBy": "own-bytes",
+        "corroboratedBySibling": 25
       }
     },
     "docs": {
@@ -61288,7 +61543,9 @@
         },
         "filesRecovered": 25,
         "namesConfirmedInBytes": 24,
-        "confirmRatio": 0.96
+        "confirmRatio": 0.96,
+        "acceptedBy": "own-bytes",
+        "corroboratedBySibling": 25
       }
     },
     "docs": {
@@ -64778,7 +65035,8 @@
         },
         "filesRecovered": 11,
         "namesConfirmedInBytes": 11,
-        "confirmRatio": 1
+        "confirmRatio": 1,
+        "acceptedBy": "own-bytes"
       }
     },
     "docs": {

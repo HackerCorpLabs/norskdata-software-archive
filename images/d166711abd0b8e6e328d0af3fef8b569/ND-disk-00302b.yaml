@@ -26,6 +26,8 @@ condition:
     filesRecovered: 25
     namesConfirmedInBytes: 24
     confirmRatio: 0.96
+    acceptedBy: own-bytes
+    corroboratedBySibling: 25
 ndfs:
   users:
     - name: DNF

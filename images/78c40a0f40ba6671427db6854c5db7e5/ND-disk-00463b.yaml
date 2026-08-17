@@ -29,6 +29,7 @@ condition:
     filesRecovered: 6
     namesConfirmedInBytes: 6
     confirmRatio: 1
+    acceptedBy: own-bytes
 ndfs:
   users:
     - name: FLOPPY-USER

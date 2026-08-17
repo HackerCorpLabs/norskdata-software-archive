@@ -29,6 +29,7 @@ condition:
     filesRecovered: 2
     namesConfirmedInBytes: 2
     confirmRatio: 1
+    acceptedBy: own-bytes
 ndfs:
   users:
     - name: SYSTEM
