@@ -448,7 +448,7 @@ app.get('/api/product-detail', async (req: express.Request, res: express.Respons
     if (floppies.length === 0 && !product) { res.status(404).json({ error: 'Product not found' }); return; }
 
     // Group by version, then by language
-    interface DiskInfo { id: string; volumeName: string | null; diskNumber: number | null; bootFormat: string | null; totalPages: number | null; fileCount: number; storageClass: string | null; diskPhotos: string[]; setPhotos: string[]; hasLabelTranscription: boolean }
+    interface DiskInfo { id: string; volumeName: string | null; volumeLabel: string | null; imagePath: string | null; diskNumber: number | null; bootFormat: string | null; totalPages: number | null; fileCount: number; storageClass: string | null; diskPhotos: string[]; setPhotos: string[]; hasLabelTranscription: boolean }
     // setPhotos keyed by filename: the same set photo is physically copied into
     // every disk's MD5 folder, so dedup by basename to show it once per version.
     const versionMap = new Map<string, { langMap: Map<string, DiskInfo[]>; setPhotos: Map<string, string>; labelTranscription: string | null }>();
@@ -473,6 +473,10 @@ app.get('/api/product-detail', async (req: express.Request, res: express.Respons
       verData.langMap.get(lang)!.push({
         id: e.id,
         volumeName: e.volumeName,
+        // a DOS floppy is named by its FAT label, and one with neither name is
+        // only known by the file the imaging produced
+        volumeLabel: e.volumeLabel ?? null,
+        imagePath: e.storage?.git?.imagePath ?? null,
         diskNumber: e.diskNumber,
         bootFormat: e.bootFormat,
         totalPages: e.totalPages,

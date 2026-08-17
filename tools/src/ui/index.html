@@ -4441,7 +4441,8 @@ tr.ndfs-file-selected,
 
           disks.sort(function(a, b) { return (a.diskNumber || 0) - (b.diskNumber || 0); });
           disks.forEach(function(d) {
-            var volDisplay = d.volumeName || d.id;
+            var dImage = (d.imagePath || '').split('/').pop().replace(/\.img\.gz$/i, '');
+            var volDisplay = d.volumeName || d.volumeLabel || dImage || d.id;
             var hasDiskPhoto = d.diskPhotos && d.diskPhotos.length > 0;
             var photoDot = hasDiskPhoto
               ? '<span class="nd-photo-dot nd-photo-dot-yes" title="Has disk label photo">&#9679;</span>'
@@ -4450,6 +4451,8 @@ tr.ndfs-file-selected,
             html += '<div class="nd-disk-card">' +
               photoDot +
               '<a href="#/disks/' + encodeURIComponent(d.id) + '">' + esc(volDisplay) + '</a> ' +
+              (dImage && dImage !== volDisplay
+                ? '<span class="nd-text-muted" style="font-size:0.8rem">' + esc(dImage) + '</span> ' : '') +
               (d.bootFormat && d.bootFormat !== 'none' ? '<span class="nd-badge">' + esc(d.bootFormat) + '</span> ' : '') +
               '<span class="nd-text-muted" style="font-size:0.78rem">' + (d.totalPages || '-') + 'p / ' + (d.fileCount || 0) + 'f</span>' +
             '</div>';

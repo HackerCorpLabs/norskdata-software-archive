@@ -2551,13 +2551,28 @@ function getAppJS(): string {
     }
   }
 
+  /** The name the imaging gave a disk, e.g. ND-disk-00055b. */
+  function imageName(e) {
+    var p = e.storage && e.storage.git && e.storage.git.imagePath;
+    if (!p) return null;
+    return p.split('/').pop().replace(/\.img\.gz$/i, '').replace(/\.img$/i, '');
+  }
+
   // ── Image Card (shared) ──────────────────────────────────────
   function renderImageCard(e, full) {
     var html = '<div class="nd-card">';
 
-    // ── Header: volume name + product link ──
+    // ── Header: what the disk is called, then what the imaging called it ──
+    // A DOS floppy has a FAT label rather than an NDFS volume name, and a
+    // floppy with neither is only ever known by its image file name - showing
+    // the entry id there told nobody anything.
+    var file = imageName(e);
+    var title = e.volumeName || e.volumeLabel || file || e.id;
     html += '<h3 style="font-family:Consolas,monospace;font-size:1.3rem;margin-bottom:0.25rem">' +
-      '<a href="#/disks/' + encodeURIComponent(e.id) + '" style="color:var(--text)">' + esc(e.volumeName || e.id) + '</a></h3>';
+      '<a href="#/disks/' + encodeURIComponent(e.id) + '" style="color:var(--text)">' + esc(title) + '</a>' +
+      (file && file !== title
+        ? ' <span class="nd-text-muted" style="font-size:0.85rem;font-weight:normal">' + esc(file) + '</span>'
+        : '') + '</h3>';
 
     if (e.productId) {
       var prodName = '';
