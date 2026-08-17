@@ -2433,6 +2433,10 @@ function getAppJS(): string {
         } else if (!fsKind || fsKind === 'ndfs') {
           html += '<button class="nd-btn nd-btn-primary nd-btn-sm" onclick="openNdfsViewer(\\'' + idArg + '\\')">Open in NDFS Viewer</button>';
         }
+        // The bytes are worth looking at whatever the image holds - and for an
+        // image with no filesystem at all they are the only thing there is.
+        var hexLabel = esc(e.volumeName || e.volumeLabel || e.id).replace(/'/g, "\\'");
+        html += '<button class="nd-btn nd-btn-sm" onclick="openHexViewer(\\'' + idArg + '\\', \\'' + hexLabel + '\\')">Open in HEX viewer</button>';
       }
       html += '</div>';
     }
