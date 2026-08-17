@@ -72,6 +72,12 @@ export interface RecoveryCandidate {
   confirmed: number;
   /** confirmed / files.length, 0..1 */
   ratio: number;
+  /** how many of them appear in a listing recovered from another read of the same disk */
+  corroborated: number;
+  /** corroborated / files.length, 0..1 */
+  corroborateRatio: number;
+  /** which evidence carried it, when it was accepted */
+  acceptedBy: 'own-bytes' | 'sibling-listing' | null;
 }
 
 export interface RecoveryResult {
@@ -356,6 +362,18 @@ export interface RecoverOptions {
    * is not a file list produces names the image does not contain.
    */
   sweep?: boolean;
+  /**
+   * File names from another read of the same physical floppy.
+   *
+   * A read that lost part of its own text cannot confirm much from its own
+   * bytes, but a second read of the same disk listing the same files is
+   * independent evidence for the same conclusion - the two reads failed
+   * differently and agree anyway. Used only as a second route to acceptance;
+   * it never lowers what the bytes have to say.
+   */
+  corroborate?: string[];
+  /** share of names that must match the sibling listing, 0..1 (default 0.8) */
+  minCorroborate?: number;
 }
 
 /**
@@ -418,6 +436,8 @@ export function recoverNdfs(image: Uint8Array, opts: RecoverOptions): RecoveryRe
   }
 
   const names = rawNameSet(image);
+  const sibling = new Set(opts.corroborate ?? []);
+  const minCorroborate = opts.minCorroborate ?? 0.8;
   const candidates: RecoveryCandidate[] = [];
   let tried = 0;
   for (const layout of toTry.slice(0, maxCandidates)) {
@@ -426,9 +446,13 @@ export function recoverNdfs(image: Uint8Array, opts: RecoverOptions): RecoveryRe
     try { parsed = opts.probe(applyLayout(image, layout)); } catch { parsed = null; }
     if (!parsed || !parsed.files.length) continue;
     const { confirmed, ratio } = confirmAgainstBytes(parsed.files, names);
+    let corroborated = 0;
+    for (const f of parsed.files) if (sibling.has(f.name)) corroborated++;
+    const corroborateRatio = parsed.files.length ? corroborated / parsed.files.length : 0;
     candidates.push({
       layout, files: parsed.files, users: parsed.users,
       directoryName: parsed.directoryName, confirmed, ratio,
+      corroborated, corroborateRatio, acceptedBy: null,
     });
   }
   // Rank by how many names the image itself backs, not by the share of them.
@@ -437,8 +461,11 @@ export function recoverNdfs(image: Uint8Array, opts: RecoverOptions): RecoveryRe
   // listing. Ratio decides between candidates with equal evidence.
   candidates.sort((a, b) => b.confirmed - a.confirmed || b.ratio - a.ratio || b.files.length - a.files.length);
 
-  const accepted = candidates.filter(c => c.ratio >= minConfirm);
-  const best = accepted[0] ?? null;
+  for (const c of candidates) {
+    if (c.ratio >= minConfirm) c.acceptedBy = 'own-bytes';
+    else if (sibling.size && c.corroborateRatio >= minCorroborate) c.acceptedBy = 'sibling-listing';
+  }
+  const best = candidates.find(c => c.acceptedBy) ?? null;
   const status: RecoveryResult['status'] =
     best ? 'recovered' : candidates.length ? 'unconfirmed' : 'failed';
   return { status, best, candidates, tried, minConfirm };
@@ -452,8 +479,11 @@ export function describeRecovery(result: RecoveryResult): string {
   const c = result.candidates[0];
   const where = 'object ' + c.layout.object.blockId + ', user ' + c.layout.user.blockId + ', bit ' + c.layout.bit.blockId;
   const backing = c.confirmed + ' of ' + c.files.length + ' names (' + Math.round(c.ratio * 100) + '%) occur in the image itself';
+  const via = c.acceptedBy === 'sibling-listing'
+    ? ' - accepted on another read of the same disk listing ' + Math.round(c.corroborateRatio * 100) + '% of the same files'
+    : '';
   return result.status === 'recovered'
-    ? 'Recovered with ' + where + ': ' + c.files.length + ' file(s), ' + backing + '.'
+    ? 'Recovered with ' + where + ': ' + c.files.length + ' file(s), ' + backing + via + '.'
     : 'A layout parsed (' + where + ') but only ' + backing + ', below the ' +
       Math.round(result.minConfirm * 100) + '% needed to accept it - treat it as a lead, not a listing.';
 }

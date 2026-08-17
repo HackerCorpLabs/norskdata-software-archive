@@ -57,7 +57,11 @@ async function makeProbe(owners: Map<string, string>): Promise<(image: Uint8Arra
  * no ND material in it - that is a blank disk or a failed read, not a damaged
  * ND floppy.
  */
-export async function tryRecoverDamaged(buf: Buffer | Uint8Array): Promise<DamagedAssessment | null> {
+export async function tryRecoverDamaged(
+  buf: Buffer | Uint8Array,
+  /** file names from other reads of the same physical floppy, when there are any */
+  corroborate: string[] = [],
+): Promise<DamagedAssessment | null> {
   const raw = buf instanceof Uint8Array ? buf : new Uint8Array(buf);
   const evidence = ndNameEvidence(raw);
   if (evidence.count < ND_NAME_EVIDENCE_MIN) return null;
@@ -83,7 +87,7 @@ export async function tryRecoverDamaged(buf: Buffer | Uint8Array): Promise<Damag
     recovery: null,
   };
 
-  const result = recoverNdfs(image, { probe });
+  const result = recoverNdfs(image, { probe, corroborate });
   if (result.status !== 'recovered' || !result.best) {
     return { condition, ndfs: null, result };
   }
@@ -95,6 +99,8 @@ export async function tryRecoverDamaged(buf: Buffer | Uint8Array): Promise<Damag
     filesRecovered: best.files.length,
     namesConfirmedInBytes: best.confirmed,
     confirmRatio: Math.round(best.ratio * 1000) / 1000,
+    acceptedBy: best.acceptedBy ?? 'own-bytes',
+    corroboratedBySibling: best.corroborated || undefined,
   };
   return {
     condition,

@@ -134,6 +134,28 @@ function identifyingName(e: CatalogEntry): string {
 
 type QueueKind = 'linked' | 'reviewed' | 'auto' | 'new' | 'manual' | 'broken';
 
+/**
+ * File names listed by other reads of the same physical floppy.
+ *
+ * Reads of one disk are named ND-disk-00302, ND-disk-00302b, ND-disk-00302c and
+ * so on, so the trailing letter is what separates them. A read that lost part of
+ * its own text can still be checked against what its siblings listed.
+ */
+function siblingFileNames(entries: CatalogEntry[], entry: CatalogEntry): string[] {
+  const baseOf = (e: CatalogEntry) => (e.storage?.git?.imagePath?.split('/').pop() ?? '')
+    .replace(/\.img\.gz$/, '')
+    .replace(/([0-9]{3,6})[a-z]$/, '$1')
+    .replace(/-track\d+.*$/, '');
+  const mine = baseOf(entry);
+  if (!mine) return [];
+  const names = new Set<string>();
+  for (const other of entries) {
+    if (other.id === entry.id || baseOf(other) !== mine) continue;
+    for (const f of other.ndfs?.files ?? []) names.add(f.name);
+  }
+  return [...names];
+}
+
 function classifyForQueue(
   e: CatalogEntry,
   hasProduct: (productId: string) => boolean,
@@ -2385,7 +2407,7 @@ app.post('/api/detect-filesystem', async (req, res) => {
         if (kind === 'dos') label = readDosLabel(raw);
         if (kind === 'winch' || kind === 'backup') set = readBackupSet(raw);
         if (kind === 'backup') files = readBackupFiles(raw);
-        if (kind === 'none') recovered = await tryRecoverDamaged(raw);
+        if (kind === 'none') recovered = await tryRecoverDamaged(raw, siblingFileNames(cat.entries, e));
       } catch { failed++; continue; }
       scanned++;
       counts[kind] = (counts[kind] ?? 0) + 1;

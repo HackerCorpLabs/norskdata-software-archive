@@ -242,6 +242,15 @@ export interface CatalogEntry {
       namesConfirmedInBytes: number;
       /** namesConfirmedInBytes / filesRecovered, 0..1 */
       confirmRatio: number;
+      /**
+       * Which evidence carried it: the image's own bytes, or another read of the
+       * same physical floppy listing the same files. A read that lost part of
+       * its text cannot confirm much on its own, and two reads that failed
+       * differently agreeing is evidence in its own right.
+       */
+      acceptedBy?: 'own-bytes' | 'sibling-listing';
+      /** names also present in that sibling listing */
+      corroboratedBySibling?: number;
     } | null;
   } | null;
   directoryContentRaw?: string | null;

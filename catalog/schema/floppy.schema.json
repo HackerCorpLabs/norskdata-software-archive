@@ -746,6 +746,18 @@
               "type": "number",
               "minimum": 0,
               "maximum": 1
+            },
+            "acceptedBy": {
+              "type": "string",
+              "enum": [
+                "own-bytes",
+                "sibling-listing"
+              ],
+              "description": "Which evidence carried the recovery: the image's own bytes, or another read of the same physical floppy listing the same files"
+            },
+            "corroboratedBySibling": {
+              "type": "integer",
+              "minimum": 0
             }
           },
           "required": [
