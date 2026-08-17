@@ -1,11 +1,114 @@
 id: img-9a6f2737d6ce
-volumeName: null
+volumeName: GLORFINDEL
 md5: 9a6f2737d6ce83498db475dce90f3b9b
 image:
   sizeBytes: 318976
   format: raw
   controller: floppy
-filesystem: none
+  totalPages: 156
+  bootFormat: bpun
+filesystem: ndfs
+ndfs:
+  users:
+    - name: SYSTEM
+      pagesUsed: 89
+  files:
+    - name: PLAN--GP
+      type: SYMB
+      pages: 0
+      bytes: 0
+    - name: FORMATERARE-GP
+      type: SYMB
+      pages: 0
+      bytes: 0
+    - name: MAC
+      type: SYMB
+      pages: 0
+      bytes: 0
+    - name: GEPELIB--GP
+      type: SYMB
+      pages: 0
+      bytes: 0
+    - name: TEXT-HUBBA-GP
+      type: PROG
+      pages: 0
+      bytes: 0
+    - name: G-LIB-GP
+      type: SYMB
+      pages: 0
+      bytes: 0
+    - name: TEXTARE-GP
+      type: SYMB
+      pages: 0
+      bytes: 0
+    - name: ADD-IT-GP
+      type: SYMB
+      pages: 0
+      bytes: 0
+    - name: FILHANTERING-GP
+      type: SYMB
+      pages: 0
+      bytes: 0
+    - name: ALL-ASCII
+      type: SYMB
+      pages: 0
+      bytes: 0
+    - name: FILI
+      type: SYMB
+      pages: 0
+      bytes: 0
+    - name: U
+      type: SYMB
+      pages: 0
+      bytes: 0
+    - name: MICRO-ADV-1-GP
+      type: SYMB
+      pages: 0
+      bytes: 0
+    - name: YATZY-BASIC-GP
+      type: SYMB
+      pages: 0
+      bytes: 0
+    - name: MICRO-ADV-2-GP
+      type: SYMB
+      pages: 0
+      bytes: 0
+    - name: MATRECEPT-GP
+      type: SYMB
+      pages: 0
+      bytes: 0
+    - name: DATAFIL-GP
+      type: MAT
+      pages: 0
+      bytes: 0
+    - name: STOR-ALFA
+      type: DATA
+      pages: 0
+      bytes: 0
+    - name: M
+      type: M
+      pages: 0
+      bytes: 0
+    - name: YATZY-MAC-GP
+      type: SYMB
+      pages: 0
+      bytes: 0
+    - name: MAGGOT-SUPER-GP
+      type: SYMB
+      pages: 0
+      bytes: 0
+    - name: HUBBAHUBBA
+      type: HUBB
+      pages: 0
+      bytes: 0
+    - name: FONTAINEBLEAU-GP
+      type: TEXT
+      pages: 0
+      bytes: 0
+    - name: FACIT-TER-PRI-GP
+      type: TEXT
+      pages: 0
+      bytes: 0
 provenance:
   contributor: gandalf
   originalPath: 300/ND-disk-00308c.img

@@ -1,11 +1,30 @@
 id: img-9b8db5ed8b49
-volumeName: null
+volumeName: CLAS-2
 md5: 9b8db5ed8b4936c127781a80f24697e5
 image:
   sizeBytes: 318976
   format: raw
   controller: floppy
-filesystem: none
+  totalPages: 156
+  bootFormat: bpun
+filesystem: ndfs
+ndfs:
+  users:
+    - name: DNF
+      pagesUsed: 136
+  files:
+    - name: BASIC
+      type: SYMB
+      pages: 0
+      bytes: 0
+    - name: PEDWAR-CT
+      type: SYMB
+      pages: 0
+      bytes: 0
+    - name: FINGER-PACKER-CT
+      type: SYMB
+      pages: 0
+      bytes: 0
 provenance:
   contributor: gandalf
   originalPath: 300/ND-disk-00372.img

@@ -1,15 +1,79 @@
 id: img-ee9ae4edb9f2
-volumeName: null
+volumeName: 210260K01-EN-02D
 md5: ee9ae4edb9f2ba26019ba918ec7b67ad
 product:
   id: ND-210260
   version: K01
   diskNumber: 2
+  language: EN
 image:
   sizeBytes: 1260544
   format: raw
   controller: floppy
-filesystem: none
+  totalPages: 616
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: RELEASE-NTX
+      pagesUsed: 329
+    - name: WORKFILES-NTX
+      pagesUsed: 71
+    - name: PARAMETERS-NTX
+      pagesUsed: 4
+  files:
+    - name: PG-MAIN-EN-K64
+      type: PROG
+      pages: 0
+      bytes: 0
+    - name: PG-MAIN-EN-K64
+      type: ENTR
+      pages: 0
+      bytes: 0
+    - name: PG-EN-J
+      type: INFO
+      pages: 0
+      bytes: 0
+    - name: PG-EN-J
+      type: HELP
+      pages: 0
+      bytes: 0
+    - name: PG-BATCH-1-K64
+      type: PROG
+      pages: 0
+      bytes: 0
+    - name: PG-BATCH-1-K64
+      type: ENTR
+      pages: 0
+      bytes: 0
+    - name: PG-BATCH-2-K64
+      type: PROG
+      pages: 0
+      bytes: 0
+    - name: PG-BATCH-2-K64
+      type: ENTR
+      pages: 0
+      bytes: 0
+    - name: PG-BATCH-3-K64
+      type: PROG
+      pages: 0
+      bytes: 0
+    - name: PG-BATCH-3-K64
+      type: ENTR
+      pages: 0
+      bytes: 0
+    - name: APPEND-BATCH-PG
+      type: XCOM
+      pages: 0
+      bytes: 0
+    - name: DESCRIBE-PG-K02
+      type: FORM
+      pages: 0
+      bytes: 0
+    - name: PGBATCH-PARAM-K1
+      type: NTXP
+      pages: 0
+      bytes: 0
 provenance:
   contributor: ndwiki
   originalPath: tingo/8_nd_f17b_210260k01-en-02d.img

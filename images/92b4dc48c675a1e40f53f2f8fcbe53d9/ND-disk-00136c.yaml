@@ -1,11 +1,46 @@
 id: img-92b4dc48c675
-volumeName: null
+volumeName: HALL
 md5: 92b4dc48c675a1e40f53f2f8fcbe53d9
 image:
   sizeBytes: 1260544
   format: raw
   controller: floppy
-filesystem: none
+  totalPages: 616
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: AGNETA
+      pagesUsed: 18
+  files:
+    - name: STOPPA
+      type: TEXT
+      pages: 0
+      bytes: 0
+    - name: TABELL
+      type: TEXT
+      pages: 0
+      bytes: 0
+    - name: A11
+      type: TEXT
+      pages: 0
+      bytes: 0
+    - name: A21
+      type: TEXT
+      pages: 0
+      bytes: 0
+    - name: VART
+      type: TEXT
+      pages: 0
+      bytes: 0
+    - name: A81
+      type: TEXT
+      pages: 0
+      bytes: 0
+    - name: STAND
+      type: STXT
+      pages: 0
+      bytes: 0
 provenance:
   contributor: gandalf
   originalPath: 100/ND-disk-00136c.img
