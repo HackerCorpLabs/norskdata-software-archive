@@ -671,6 +671,45 @@
           "name"
         ]
       }
+    },
+    "condition": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "description": "State of the media when it is not simply readable. 'damaged' means the image holds ND material - SINTRAN file names are present in the bytes - but the filesystem structures cannot be read, so no file list can be produced.",
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": [
+            "damaged"
+          ]
+        },
+        "parser": {
+          "type": "string",
+          "enum": [
+            "ndfs"
+          ]
+        },
+        "parserError": {
+          "type": "string",
+          "description": "what the parser said when it refused the image"
+        },
+        "ndNamesFound": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "distinct ND-style NAME:TYPE strings found in the raw bytes"
+        },
+        "ndNameSamples": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "status"
+      ]
     }
   },
   "additionalProperties": false

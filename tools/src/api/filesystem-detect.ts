@@ -312,3 +312,27 @@ export function readBackupFiles(buf: Buffer | Uint8Array): BackupFileFacts[] | n
     return null;
   }
 }
+
+/**
+ * Evidence that an image holds ND material even though no filesystem could be
+ * read from it: SINTRAN writes file names as NAME:TYPE, and they survive in the
+ * bytes with the parity bit set long after the directory structures are damaged.
+ *
+ * This is deliberately conservative - a name must look like a real ND name, and
+ * a handful of them must be present - because the point is to separate a
+ * damaged ND floppy from a blank disk or a failed read of nothing.
+ */
+export function ndNameEvidence(buf: Buffer | Uint8Array): { count: number; samples: string[] } {
+  const b = buf instanceof Uint8Array ? buf : new Uint8Array(buf);
+  let text = '';
+  for (let i = 0; i < b.length; i++) {
+    const c = b[i] & 0x7f;
+    text += (c >= 0x20 && c <= 0x7e) ? String.fromCharCode(c) : '\u0000';
+  }
+  const found = text.match(/[A-Z][A-Z0-9-]{2,15}:[A-Z]{2,4}/g) ?? [];
+  const unique = [...new Set(found)];
+  return { count: unique.length, samples: unique.slice(0, 8) };
+}
+
+/** How many ND-style names must be present before an image counts as ND material. */
+export const ND_NAME_EVIDENCE_MIN = 3;

@@ -1778,7 +1778,7 @@ function getAppJS(): string {
   }
 
   // ── Catalog ──────────────────────────────────────────────────
-  var catalogState = { query: '', media: 'all', page: 0, sortCol: null, sortDir: 'asc' };
+  var catalogState = { query: '', media: 'all', condition: 'all', page: 0, sortCol: null, sortDir: 'asc' };
 
   var catalogDebounce;
 
@@ -1797,6 +1797,12 @@ function getAppJS(): string {
   function mediaOf(e) {
     return e.filesystem || (e.ndfs && (e.ndfs.files || e.ndfs.users) ? 'ndfs' : 'none');
   }
+  var CONDITION_FILTERS = [['all', 'Any'], ['ok', 'Readable'], ['damaged', 'Damaged only']];
+  function isDamaged(e) { return !!(e.condition && e.condition.status === 'damaged'); }
+  var conditionCounts = { all: CATALOG.length, ok: 0, damaged: 0 };
+  for (var ci2 = 0; ci2 < CATALOG.length; ci2++) {
+    if (isDamaged(CATALOG[ci2])) conditionCounts.damaged++; else conditionCounts.ok++;
+  }
   var mediaCounts = { all: CATALOG.length };
   for (var mi = 0; mi < CATALOG.length; mi++) {
     var mk = mediaOf(CATALOG[mi]);
@@ -1809,6 +1815,14 @@ function getAppJS(): string {
     var fs = e.filesystem || (e.ndfs && (e.ndfs.files || e.ndfs.users) ? 'ndfs' : null);
     if (!fs) return '<span style="color:var(--text-muted)">-</span>';
     var label = MEDIA_LABEL[fs] || fs;
+    if (e.condition && e.condition.status === 'damaged') {
+      // Recorded as the ND floppy it is, but nothing can be read off it - say so
+      // in the listing rather than letting it pass as a complete disk.
+      return '<span style="color:var(--text-muted);font-size:0.8rem">' + label + '</span> ' +
+        '<span class="nd-badge nd-badge-warn" style="font-size:0.68rem" title="' +
+        esc(e.condition.ndNamesFound + ' ND file names are in the bytes, but the filesystem structures cannot be read (' +
+            (e.condition.parserError || '') + '), so no file list can be shown') + '">damaged</span>';
+    }
     if (fs === 'ndfs') return '<span style="color:var(--text-muted);font-size:0.8rem">' + label + '</span>';
     if (fs === 'none') return '<span style="color:var(--text-muted);font-size:0.8rem;font-style:italic">' + label + '</span>';
     return '<span class="nd-badge" style="font-size:0.72rem">' + label + '</span>';
@@ -1824,12 +1838,26 @@ function getAppJS(): string {
           return '<option value="' + m[0] + '"' + (catalogState.media === m[0] ? ' selected' : '') + '>' + m[1] +
             ' (' + mediaCounts[m[0]] + ')</option>';
         }).join('') +
+      '</select></label>' +
+      '<label style="font-size:0.85rem;white-space:nowrap" title="A damaged floppy holds ND material - SINTRAN file names are in the bytes - but its filesystem structures cannot be read, so no file list can be shown">' +
+        'Condition <select class="nd-input" id="cat-condition" style="width:auto">' +
+        CONDITION_FILTERS.map(function(cf) {
+          return '<option value="' + cf[0] + '"' + (catalogState.condition === cf[0] ? ' selected' : '') + '>' + cf[1] +
+            ' (' + conditionCounts[cf[0]] + ')</option>';
+        }).join('') +
       '</select></label></div>';
     shell += '<p id="cat-count" style="font-size:0.85rem;color:var(--text-muted);margin-bottom:0.5rem"></p>';
     shell += '<div id="cat-results" style="overflow-x:auto"></div>';
     shell += '<div class="nd-pagination" id="cat-pager"></div>';
 
     view.innerHTML = shell;
+
+    var conditionSelect = document.getElementById('cat-condition');
+    conditionSelect.addEventListener('change', function() {
+      catalogState.condition = this.value;
+      catalogState.page = 0;
+      updateCatalogResults();
+    });
 
     var mediaSelect = document.getElementById('cat-media');
     mediaSelect.addEventListener('change', function() {
@@ -1943,6 +1971,8 @@ function getAppJS(): string {
     var base = catalogState.media === 'all'
       ? CATALOG.slice()
       : CATALOG.filter(function(e) { return mediaOf(e) === catalogState.media; });
+    if (catalogState.condition === 'ok') base = base.filter(function(e) { return !isDamaged(e); });
+    else if (catalogState.condition === 'damaged') base = base.filter(isDamaged);
     if (!query) return base;
     var q = query.toLowerCase();
     return base.filter(function(e) {

@@ -216,6 +216,8 @@ A real collection contains more than ND floppies. Every image records a `filesys
 | `tar` | a tar archive written straight to the media | `tar -tf` lists it directly |
 | `none` | blank disk, failed read, or a format not recognised | raw bytes via the hex viewer |
 
+An image can also be recorded as `ndfs` and carry a `condition: damaged` block: ND material is plainly in the bytes (SINTRAN `NAME:TYPE` file names survive the parity bit) but the filesystem structures cannot be read, so no file list can be produced. It is still an ND floppy and is filed as one, marked in the catalog listing and filterable there (**Condition — Any / Readable / Damaged only**). See [docs/media-condition.md](docs/media-condition.md) for how that is decided and what to expect from such a disk.
+
 Detection runs during import and can be re-run at any time — per disk or in bulk — from the Matcher, or from the command line on files that were never imported:
 
 ```bash

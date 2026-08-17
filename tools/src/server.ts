@@ -147,6 +147,9 @@ function classifyForQueue(
   if (parsed) return hasProduct(parsed.productId) ? 'auto' : 'new';
 
   if (e.tags?.includes('hidden-in-legacy') ?? false) return 'broken';
+  // Recorded as the ND floppy it is, but nothing can be read off it, so there is
+  // no name to match on: it belongs with the unreadable ones, not in manual.
+  if (e.condition?.status === 'damaged') return 'broken';
 
   // Nothing to match on. Where it goes depends on whether the image holds
   // anything at all. Once detection has identified a filesystem - DOS, a backup
@@ -732,6 +735,7 @@ app.get('/api/floppies', async (req, res) => {
         volumeLabel: e.volumeLabel ?? null,
         filesystem: e.filesystem ?? null,
         backupSet: e.backupSet ?? null,
+        condition: e.condition ?? null,
         productId: e.productId,
         productName: resolveProdName(e.productId),
         version: e.version,

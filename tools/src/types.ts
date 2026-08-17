@@ -210,6 +210,24 @@ export interface CatalogEntry {
     continued: boolean;
     stale: boolean;
   }[] | null;
+  /**
+   * What state the media is in, when that is not simply "readable".
+   *
+   * `damaged` means the image holds ND material - SINTRAN file names are
+   * plainly present in the bytes - but the filesystem structures cannot be
+   * read, so no file list can be produced. Such a floppy is still an ND floppy
+   * and is recorded as one; this block says how far it can be trusted.
+   */
+  condition?: {
+    status: 'damaged';
+    /** which parser failed, and with what */
+    parser: 'ndfs';
+    parserError: string;
+    /** distinct ND-style file names found in the raw bytes */
+    ndNamesFound: number;
+    /** a few of them, as evidence */
+    ndNameSamples: string[];
+  } | null;
   directoryContentRaw?: string | null;
   /** References to related documentation */
   docs: {
