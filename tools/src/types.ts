@@ -321,6 +321,10 @@ export interface Collection {
 export interface IndexEntry {
   id: string;
   volumeName: string | null;
+  /** the name the imaging gave the disk, e.g. ND-disk-00283 */
+  imageName: string | null;
+  /** FAT label of an MS-DOS disk, which on these carries an ND part number */
+  volumeLabel: string | null;
   productId: string | null;
   tags: string[] | null;
   directoryContentRaw: string | null;

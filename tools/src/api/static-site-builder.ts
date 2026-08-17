@@ -1988,6 +1988,12 @@ function getAppJS(): string {
       if (e.id && e.id.toLowerCase().indexOf(q) >= 0) return true;
       if (e.volumeName && e.volumeName.toLowerCase().indexOf(q) >= 0) return true;
       if (e.volumeLabel && e.volumeLabel.toLowerCase().indexOf(q) >= 0) return true;
+      // the name the imaging gave it, e.g. ND-disk-00283 - often the only name
+      // a floppy has, and the one written on its label
+      if (e.storage && e.storage.git && e.storage.git.imagePath &&
+          e.storage.git.imagePath.toLowerCase().indexOf(q) >= 0) return true;
+      if (e.provenance && e.provenance.originalPath &&
+          e.provenance.originalPath.toLowerCase().indexOf(q) >= 0) return true;
       if (e.filesystem && e.filesystem.toLowerCase().indexOf(q) >= 0) return true;
       if (e.productId && e.productId.toLowerCase().indexOf(q) >= 0) return true;
       if (e.productId && productMap[e.productId] && productMap[e.productId].name.toLowerCase().indexOf(q) >= 0) return true;

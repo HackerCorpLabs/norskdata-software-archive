@@ -15,6 +15,11 @@ export function buildIndex(catalog: Catalog): IndexEntry[] {
   return catalog.entries.map(entry => ({
     id: entry.id,
     volumeName: entry.volumeName,
+    // What the imaging called it - ND-disk-00283. For a floppy with no volume
+    // name that is the only name anyone has for it, and it is what is written
+    // on the disk label, so it has to be searchable.
+    imageName: (entry.storage?.git?.imagePath?.split('/').pop() ?? '').replace(/\.img\.gz$/i, '').replace(/\.img$/i, '') || null,
+    volumeLabel: entry.volumeLabel ?? null,
     productId: entry.productId,
     tags: entry.tags,
     directoryContentRaw: entry.directoryContentRaw

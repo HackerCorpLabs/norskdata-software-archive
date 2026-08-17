@@ -708,6 +708,9 @@ app.get('/api/floppies', async (req, res) => {
         if (e.id.toLowerCase().includes(filterQ)) return true;
         if (e.volumeName?.toLowerCase().includes(filterQ)) return true;
         if (e.volumeLabel?.toLowerCase().includes(filterQ)) return true;
+        // the name the imaging gave it, e.g. ND-disk-00283
+        if (e.storage?.git?.imagePath?.toLowerCase().includes(filterQ)) return true;
+        if (e.provenance?.originalPath?.toLowerCase().includes(filterQ)) return true;
         if (e.productId?.toLowerCase().includes(filterQ)) return true;
         if (e.md5.toLowerCase().includes(filterQ)) return true;
         if (e.version?.toLowerCase().includes(filterQ)) return true;
