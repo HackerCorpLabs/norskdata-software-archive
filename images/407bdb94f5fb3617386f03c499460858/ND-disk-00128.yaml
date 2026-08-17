@@ -7,6 +7,123 @@ image:
   controller: floppy
 filesystem: dos
 volumeLabel: 30008XX2A01
+dosFiles:
+  - path: BUILD.LBL
+    bytes: 8
+    modified: 1986-08-11 12:02
+    directory: false
+  - path: GDI.EXE
+    bytes: 92638
+    modified: 1986-07-11 15:23
+    directory: false
+  - path: USER.EXE
+    bytes: 122432
+    modified: 1987-01-21 16:20
+    directory: false
+  - path: MSDOSD.EXE
+    bytes: 6242
+    modified: 1986-06-23 14:32
+    directory: false
+  - path: MSDOS.EXE
+    bytes: 43104
+    modified: 1986-06-09 16:57
+    directory: false
+  - path: CGA.GRB
+    bytes: 1403
+    modified: 1986-07-16 23:07
+    directory: false
+  - path: EGALORES.GRB
+    bytes: 1266
+    modified: 1986-07-16 23:07
+    directory: false
+  - path: EGAHIRES.GRB
+    bytes: 15
+    modified: 1985-07-24 13:55
+    directory: false
+  - path: EGAHIBW.GRB
+    bytes: 15
+    modified: 1985-07-24 13:55
+    directory: false
+  - path: EGAMONO.GRB
+    bytes: 1114
+    modified: 1986-07-16 23:07
+    directory: false
+  - path: HERCULES.GRB
+    bytes: 1303
+    modified: 1986-07-16 23:07
+    directory: false
+  - path: ATTDC.GRB
+    bytes: 1307
+    modified: 1986-02-22 10:34
+    directory: false
+  - path: ATTDEB.GRB
+    bytes: 12
+    modified: 1986-05-23 13:11
+    directory: false
+  - path: GENIUS.GRB
+    bytes: 9
+    modified: 1986-07-29 15:55
+    directory: false
+  - path: WIN.CNF
+    bytes: 1936
+    modified: 1985-11-12 16:13
+    directory: false
+  - path: EGALORES.LGO
+    bytes: 9
+    modified: 1985-06-27 12:29
+    directory: false
+  - path: EGAHIRES.LGO
+    bytes: 9
+    modified: 1985-06-27 12:29
+    directory: false
+  - path: EGAHIBW.LGO
+    bytes: 9
+    modified: 1985-06-27 12:29
+    directory: false
+  - path: GENIUS.LGO
+    bytes: 9
+    modified: 1985-06-27 12:29
+    directory: false
+  - path: EGAMONO.LGO
+    bytes: 2936
+    modified: 1986-08-11 11:41
+    directory: false
+  - path: HERCULES.LGO
+    bytes: 3060
+    modified: 1986-08-11 11:41
+    directory: false
+  - path: CGA.LGO
+    bytes: 2937
+    modified: 1986-08-11 11:41
+    directory: false
+  - path: ATTDC.LGO
+    bytes: 2916
+    modified: 1986-05-28 11:30
+    directory: false
+  - path: ATTDEB.LGO
+    bytes: 3095
+    modified: 1986-05-28 11:31
+    directory: false
+  - path: WIN.INI
+    bytes: 2093
+    modified: 1986-05-22 13:50
+    directory: false
+  - path: WINOLDAP.MOD
+    bytes: 19824
+    modified: 1986-08-01 03:16
+    directory: false
+  - path: SPOOLER.EXE
+    bytes: 13264
+    modified: 1986-06-30 18:09
+    directory: false
+  - path: WY700.GRB
+    bytes: 1368
+    modified: 1986-08-20 11:57
+    directory: false
+  - path: WY700.LGO
+    bytes: 2937
+    modified: 1986-08-11 11:41
+    directory: false
 provenance:
   contributor: gandalf
   originalPath: 100/ND-disk-00128.img

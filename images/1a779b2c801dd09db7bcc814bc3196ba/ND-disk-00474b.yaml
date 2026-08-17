@@ -7,6 +7,67 @@ image:
   controller: floppy
 filesystem: dos
 volumeLabel: 30022SW1N06
+dosFiles:
+  - path: WP-SWN06.HLP
+    bytes: 362496
+    modified: 1989-01-24 21:28
+    directory: false
+  - path: BIODRIV.EXE
+    bytes: 4816
+    modified: 1988-12-06 09:18
+    directory: false
+  - path: CSTDRIV.EXE
+    bytes: 43056
+    modified: 1988-12-06 09:18
+    directory: false
+  - path: EGADRIV.EXE
+    bytes: 13808
+    modified: 1988-12-06 09:16
+    directory: false
+  - path: INSTALL.EXE
+    bytes: 54754
+    modified: 1988-12-08 14:43
+    directory: false
+  - path: VGADRIV.EXE
+    bytes: 13808
+    modified: 1988-12-06 09:16
+    directory: false
+  - path: W7HDRIV.EXE
+    bytes: 42992
+    modified: 1988-12-06 09:17
+    directory: false
+  - path: ZENDRIV.EXE
+    bytes: 4832
+    modified: 1988-12-06 09:19
+    directory: false
+  - path: WPHYSW.TBL
+    bytes: 18221
+    modified: 1988-11-02 16:18
+    directory: false
+  - path: WPNTX.INI
+    bytes: 1694
+    modified: 1989-02-22 12:51
+    directory: false
+  - path: WPHYEN.TBL
+    bytes: 25672
+    modified: 1987-10-09 13:02
+    directory: false
+  - path: ANSI.TXT
+    bytes: 5632
+    modified: 1988-06-20 09:25
+    directory: false
+  - path: WSWP.TXT
+    bytes: 5995
+    modified: 1988-06-20 11:21
+    directory: false
+  - path: UE-SWC13.ERR
+    bytes: 144128
+    modified: 1980-01-22 20:56
+    directory: false
+  - path: INSTSW.TXT
+    bytes: 7375
+    modified: 1989-02-22 16:19
+    directory: false
 provenance:
   contributor: gandalf
   originalPath: 400/ND-disk-00474b.img

@@ -7,6 +7,295 @@ image:
   controller: floppy
 filesystem: dos
 volumeLabel: "#1310C61208"
+dosFiles:
+  - path: IBMBIO.COM
+    bytes: 9468
+    modified: 1986-11-07 15:00
+    directory: false
+  - path: IBMDOS.COM
+    bytes: 27760
+    modified: 1986-03-24 14:53
+    directory: false
+  - path: ACMODEM.COM
+    bytes: 2538
+    modified: 1986-09-22 01:21
+    directory: false
+  - path: ANSI.SYS
+    bytes: 1615
+    modified: 1986-08-25 09:03
+    directory: false
+  - path: ASSIGN.COM
+    bytes: 1509
+    modified: 1985-05-14 00:02
+    directory: false
+  - path: ATTRIB.EXE
+    bytes: 15091
+    modified: 1985-05-14 00:02
+    directory: false
+  - path: AUTOCOPY.COM
+    bytes: 1246
+    modified: 1984-06-07 16:42
+    directory: false
+  - path: CHKDSK.COM
+    bytes: 9435
+    modified: 1985-05-14 00:02
+    directory: false
+  - path: CLOCK.SYS
+    bytes: 1689
+    modified: 1985-11-01 10:48
+    directory: false
+  - path: COMMAND.COM
+    bytes: 23210
+    modified: 1985-05-14 00:02
+    directory: false
+  - path: COMP.EXE
+    bytes: 14822
+    modified: 1986-08-25 09:57
+    directory: false
+  - path: CONFIG.SYS
+    bytes: 40
+    modified: 1986-03-05 14:42
+    directory: false
+  - path: DISKCOMP.COM
+    bytes: 2839
+    modified: 1986-02-03 13:49
+    directory: false
+  - path: DISKCOPY.COM
+    bytes: 2877
+    modified: 1986-08-13 13:52
+    directory: false
+  - path: DOSGEN.BAT
+    bytes: 497
+    modified: 1986-06-16 10:09
+    directory: false
+  - path: DOSXFER.BAT
+    bytes: 469
+    modified: 1986-04-22 09:53
+    directory: false
+  - path: EDLIN.COM
+    bytes: 7261
+    modified: 1985-05-14 00:02
+    directory: false
+  - path: ERICLOCK.COM
+    bytes: 431
+    modified: 1984-11-13 13:03
+    directory: false
+  - path: FIND.EXE
+    bytes: 6403
+    modified: 1985-05-14 00:02
+    directory: false
+  - path: FONT.COM
+    bytes: 78
+    modified: 1984-03-19 11:17
+    directory: false
+  - path: FORMAT.COM
+    bytes: 8381
+    modified: 1986-06-03 10:19
+    directory: false
+  - path: GRAFCHAR.DAN
+    bytes: 5120
+    modified: 1985-01-17 09:03
+    directory: false
+  - path: GRAFCHAR.SYS
+    bytes: 5120
+    modified: 1985-01-17 09:02
+    directory: false
+  - path: GRAFTABL.COM
+    bytes: 1198
+    modified: 1985-01-17 09:10
+    directory: false
+  - path: GRAPHICS.COM
+    bytes: 1997
+    modified: 1986-05-12 12:03
+    directory: false
+  - path: JOIN.EXE
+    bytes: 15971
+    modified: 1985-05-14 00:02
+    directory: false
+  - path: KEYBSV.COM
+    bytes: 2372
+    modified: 1986-09-05 14:02
+    directory: false
+  - path: KEYBDA.COM
+    bytes: 2372
+    modified: 1986-09-05 14:02
+    directory: false
+  - path: KEYBNO.COM
+    bytes: 2372
+    modified: 1986-09-05 14:02
+    directory: false
+  - path: KEYBGR.COM
+    bytes: 2372
+    modified: 1986-09-05 14:02
+    directory: false
+  - path: KEYBUK.COM
+    bytes: 2372
+    modified: 1986-09-05 14:02
+    directory: false
+  - path: KEYBIT.COM
+    bytes: 2372
+    modified: 1986-09-05 14:02
+    directory: false
+  - path: KEYBFR.COM
+    bytes: 2372
+    modified: 1986-09-05 14:03
+    directory: false
+  - path: KEYBSP.COM
+    bytes: 2372
+    modified: 1986-09-05 14:03
+    directory: false
+  - path: KEYBUS.COM
+    bytes: 2372
+    modified: 1986-09-05 14:03
+    directory: false
+  - path: LABEL.COM
+    bytes: 880
+    modified: 1985-04-30 13:14
+    directory: false
+  - path: MODE.COM
+    bytes: 3128
+    modified: 1986-02-03 10:17
+    directory: false
+  - path: MORE.COM
+    bytes: 282
+    modified: 1985-05-14 00:02
+    directory: false
+  - path: PRESTART.COM
+    bytes: 633
+    modified: 1984-05-07 16:06
+    directory: false
+  - path: PRESTART.SYS
+    bytes: 24
+    modified: 1986-03-05 14:41
+    directory: false
+  - path: PRINT.COM
+    bytes: 8291
+    modified: 1985-05-14 00:02
+    directory: false
+  - path: RECOVER.COM
+    bytes: 4050
+    modified: 1985-05-14 00:02
+    directory: false
+  - path: SHARE.EXE
+    bytes: 8304
+    modified: 1985-05-14 00:02
+    directory: false
+  - path: SORT.EXE
+    bytes: 1664
+    modified: 1985-05-14 00:02
+    directory: false
+  - path: SUBST.EXE
+    bytes: 16611
+    modified: 1985-05-14 00:02
+    directory: false
+  - path: SWAP.COM
+    bytes: 691
+    modified: 1985-08-29 14:09
+    directory: false
+  - path: SWAPGEN.EXE
+    bytes: 12074
+    modified: 1985-04-29 14:01
+    directory: false
+  - path: SYS.COM
+    bytes: 3935
+    modified: 1986-02-05 10:11
+    directory: false
+  - path: TREE.COM
+    bytes: 1479
+    modified: 1985-09-13 11:31
+    directory: false
+  - path: VDISK.SYS
+    bytes: 5662
+    modified: 1986-01-13 15:30
+    directory: false
+  - path: XLATE.COM
+    bytes: 1665
+    modified: 1985-09-27 10:33
+    directory: false
+  - path: AUTOEXEC.BAT
+    bytes: 6
+    modified: 1980-01-01 00:03
+    directory: false
+  - path: INST.EXE
+    bytes: 32544
+    modified: 1986-11-16 14:39
+    directory: false
+  - path: MENU.TXT
+    bytes: 753
+    modified: 1986-12-03 15:13
+    directory: false
+  - path: VER.TXT
+    bytes: 29
+    modified: 1986-12-08 12:57
+    directory: false
+  - path: CRN.ANS
+    bytes: 128
+    modified: 1986-01-15 12:54
+    directory: false
+  - path: TEXT.SV
+    bytes: 1285
+    modified: 1986-11-19 11:21
+    directory: false
+  - path: TEXT.NO
+    bytes: 1354
+    modified: 1986-11-19 11:11
+    directory: false
+  - path: TEXT.UK
+    bytes: 1285
+    modified: 1986-11-19 11:11
+    directory: false
+  - path: TEXT.GR
+    bytes: 1920
+    modified: 1986-04-23 11:23
+    directory: false
+  - path: TEXT.US
+    bytes: 1278
+    modified: 1986-11-19 11:12
+    directory: false
+  - path: TEXT.DA
+    bytes: 1294
+    modified: 1986-11-19 11:13
+    directory: false
+  - path: TEXT.IT
+    bytes: 1301
+    modified: 1986-11-19 11:13
+    directory: false
+  - path: TEXT.SP
+    bytes: 1393
+    modified: 1986-11-19 11:14
+    directory: false
+  - path: TEXT.FR
+    bytes: 1536
+    modified: 1986-04-23 11:15
+    directory: false
+  - path: KITXTSV.TXT
+    bytes: 718
+    modified: 1986-11-16 14:42
+    directory: false
+  - path: KITXTDA.TXT
+    bytes: 734
+    modified: 1986-11-19 13:17
+    directory: false
+  - path: KITXTIT.TXT
+    bytes: 812
+    modified: 1986-11-28 09:30
+    directory: false
+  - path: KITXTNO.TXT
+    bytes: 781
+    modified: 1986-11-21 11:04
+    directory: false
+  - path: KITXTGR.TXT
+    bytes: 847
+    modified: 1986-11-26 11:53
+    directory: false
+  - path: KITXTFR.TXT
+    bytes: 710
+    modified: 1986-12-02 13:07
+    directory: false
+  - path: KITXTSP.TXT
+    bytes: 835
+    modified: 1986-12-08 09:08
+    directory: false
 provenance:
   contributor: gandalf
   originalPath: 100/ND-disk-00122.img

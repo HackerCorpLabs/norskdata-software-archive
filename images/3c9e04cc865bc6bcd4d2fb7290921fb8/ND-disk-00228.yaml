@@ -7,6 +7,159 @@ image:
   controller: floppy
 filesystem: dos
 volumeLabel: BASIC2
+dosFiles:
+  - path: BASIC2.EXE
+    bytes: 62462
+    modified: 1980-01-01 21:54
+    directory: false
+  - path: BASICINI.BAK
+    bytes: 3555
+    modified: 1986-10-30 09:15
+    directory: false
+  - path: INFO.BAK
+    bytes: 3556
+    modified: 1986-10-30 08:59
+    directory: false
+  - path: UTIL.BAT
+    bytes: 28
+    modified: 1986-03-19 13:44
+    directory: false
+  - path: UTIL.BAC
+    bytes: 1589
+    modified: 1986-04-22 15:59
+    directory: false
+  - path: FILEMENU.BAC
+    bytes: 1048
+    modified: 1986-03-20 14:30
+    directory: false
+  - path: TERMMENU.BAC
+    bytes: 633
+    modified: 1986-03-20 14:36
+    directory: false
+  - path: BENCMENU.BAC
+    bytes: 618
+    modified: 1986-03-15 12:43
+    directory: false
+  - path: SPECMENU.BAC
+    bytes: 2786
+    modified: 1986-03-20 14:45
+    directory: false
+  - path: MORE.BAC
+    bytes: 1618
+    modified: 1986-03-20 15:02
+    directory: false
+  - path: CAT.BAC
+    bytes: 855
+    modified: 1986-03-20 15:11
+    directory: false
+  - path: DUMP.BAC
+    bytes: 1540
+    modified: 1986-10-30 10:03
+    directory: false
+  - path: GREP.BAC
+    bytes: 816
+    modified: 1986-03-20 15:10
+    directory: false
+  - path: COPY.BAC
+    bytes: 953
+    modified: 1986-03-20 15:14
+    directory: false
+  - path: TER.BAC
+    bytes: 4509
+    modified: 1986-03-20 15:35
+    directory: false
+  - path: SIEVE.BAC
+    bytes: 570
+    modified: 1986-03-15 12:44
+    directory: false
+  - path: CALC.BAC
+    bytes: 385
+    modified: 1986-03-15 12:44
+    directory: false
+  - path: KILOBAUD.BAC
+    bytes: 337
+    modified: 1986-03-15 12:44
+    directory: false
+  - path: PEEK.BAC
+    bytes: 915
+    modified: 1986-03-17 13:52
+    directory: false
+  - path: LIB.BAC
+    bytes: 1540
+    modified: 1986-03-20 15:30
+    directory: false
+  - path: DUMPD.BAC
+    bytes: 1345
+    modified: 1986-03-20 15:22
+    directory: false
+  - path: PRTAB
+    bytes: 256
+    modified: 1987-01-21 16:44
+    directory: false
+  - path: ISAM.COM
+    bytes: 1524
+    modified: 1986-10-08 15:56
+    directory: false
+  - path: CROSSOVL.BAC
+    bytes: 4147
+    modified: 1986-05-13 14:18
+    directory: false
+  - path: CREINDEX.BAC
+    bytes: 2939
+    modified: 1980-01-01 18:23
+    directory: false
+  - path: CROSS.BAC
+    bytes: 5636
+    modified: 1986-05-13 13:30
+    directory: false
+  - path: SQUEZ.BAC
+    bytes: 6549
+    modified: 1986-10-01 10:29
+    directory: false
+  - path: SQZOVL.BAC
+    bytes: 4410
+    modified: 1986-10-01 10:30
+    directory: false
+  - path: DEMO.BAC
+    bytes: 3887
+    modified: 1986-10-29 10:34
+    directory: false
+  - path: DEMO.PIC
+    bytes: 4705
+    modified: 1980-01-04 13:57
+    directory: false
+  - path: GRAPHCGA.COM
+    bytes: 5599
+    modified: 1986-10-24 11:52
+    directory: false
+  - path: RESPRTAB
+    bytes: 256
+    modified: 1987-01-21 16:44
+    directory: false
+  - path: NYSORT.BAC
+    bytes: 416
+    modified: 1987-02-13 14:04
+    directory: false
+  - path: SORTORDR.TAB
+    bytes: 256
+    modified: 1987-02-13 14:04
+    directory: false
+  - path: INI.SYS
+    bytes: 3552
+    modified: 1987-10-12 09:49
+    directory: false
+  - path: X.BAS
+    bytes: 249
+    modified: 1988-02-09 12:04
+    directory: false
+  - path: BASICINI.SYS
+    bytes: 3539
+    modified: 1988-02-15 00:28
+    directory: false
+  - path: INFO.TXT
+    bytes: 3556
+    modified: 1988-09-27 09:52
+    directory: false
 provenance:
   contributor: gandalf
   originalPath: 200/ND-disk-00228.img

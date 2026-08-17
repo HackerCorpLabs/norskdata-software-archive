@@ -7,6 +7,179 @@ image:
   controller: floppy
 filesystem: dos
 volumeLabel: 30021SV2B01
+dosFiles:
+  - path: CGA.LGO
+    bytes: 468
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: FONTSQ.FON
+    bytes: 5728
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: FONTSQUS.FON
+    bytes: 5536
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: OLIMONO.GRB
+    bytes: 3407
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: EGAHIRES.GRB
+    bytes: 3573
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: CGA.GRB
+    bytes: 2672
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: HERCULES.GRB
+    bytes: 2615
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: EGAMONO.GRB
+    bytes: 3358
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: EISHR.GRB
+    bytes: 2686
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: SPOOLER.EXE
+    bytes: 14656
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: GDI.EXE
+    bytes: 101706
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: MSDOS.EXE
+    bytes: 46240
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: MSDOSD.EXE
+    bytes: 6490
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: USER.EXE
+    bytes: 154720
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: CITOH.DRV
+    bytes: 14208
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: EPSON.DRV
+    bytes: 17168
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: EPSONMX.DRV
+    bytes: 14240
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: HPPCL.DRV
+    bytes: 100576
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: HPPLOT.DRV
+    bytes: 62544
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: IBMCOLOR.DRV
+    bytes: 14128
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: IBMGRX.DRV
+    bytes: 14512
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: EPSONLQ2.DRV
+    bytes: 47696
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: NECP2.DRV
+    bytes: 14352
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: PROPRINT.DRV
+    bytes: 32976
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: TTY.DRV
+    bytes: 6192
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: INFOEPSO.TXT
+    bytes: 787
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: INFOHP.TXT
+    bytes: 3588
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: INFOPLOT.TXT
+    bytes: 876
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: INFOPROP.TXT
+    bytes: 699
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: PSCRIPT.DRV
+    bytes: 121168
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: THINKJET.DRV
+    bytes: 13296
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: TI850.DRV
+    bytes: 12816
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: TOSH.DRV
+    bytes: 14480
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: XER4020.DRV
+    bytes: 22016
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: CANONLP8.DRV
+    bytes: 62912
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: DM600.DRV
+    bytes: 28880
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: OLIPRINT.DRV
+    bytes: 34096
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: SMARTDRV.SYS
+    bytes: 17738
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: INFOPSCR.TXT
+    bytes: 4777
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: PSPREP.TXT
+    bytes: 19009
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: HARDWARE.TXT
+    bytes: 565
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: SOFTWARE.TXT
+    bytes: 409
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: REMM.SYS
+    bytes: 15643
+    modified: 1988-01-22 12:00
+    directory: false
 provenance:
   contributor: gandalf
   originalPath: 400/ND-disk-00466.img

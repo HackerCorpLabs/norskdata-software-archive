@@ -6,6 +6,95 @@ image:
   format: raw
   controller: floppy
 filesystem: dos
+dosFiles:
+  - path: LEV3.COD
+    bytes: 13149
+    modified: 1985-04-11 19:01
+    directory: false
+  - path: LEV3.CDT
+    bytes: 63230
+    modified: 1985-04-11 19:01
+    directory: false
+  - path: LEV1.COD
+    bytes: 4528
+    modified: 1980-01-09 05:27
+    directory: false
+  - path: LEV1.CDT
+    bytes: 16134
+    modified: 1980-01-09 05:27
+    directory: false
+  - path: LEV2.COD
+    bytes: 16279
+    modified: 1985-04-11 19:53
+    directory: false
+  - path: LEV2.CDT
+    bytes: 71004
+    modified: 1985-04-11 19:53
+    directory: false
+  - path: MAIN.COD
+    bytes: 602
+    modified: 1980-01-06 22:50
+    directory: false
+  - path: MAIN.CDT
+    bytes: 1181
+    modified: 1980-01-06 22:50
+    directory: false
+  - path: DEMO.COD
+    bytes: 1266
+    modified: 1980-01-09 05:23
+    directory: false
+  - path: DEMO.CDT
+    bytes: 8867
+    modified: 1980-01-09 05:23
+    directory: false
+  - path: LPLUG.EXE
+    bytes: 2176
+    modified: 1984-07-20 21:02
+    directory: false
+  - path: README
+    bytes: 535
+    modified: 1984-08-17 16:23
+    directory: false
+  - path: LEV4.COD
+    bytes: 7896
+    modified: 1985-04-11 19:02
+    directory: false
+  - path: LEV4.CDT
+    bytes: 34404
+    modified: 1985-04-11 19:02
+    directory: false
+  - path: LEV5.COD
+    bytes: 5015
+    modified: 1985-04-11 19:04
+    directory: false
+  - path: LEV5.CDT
+    bytes: 23374
+    modified: 1985-04-11 19:04
+    directory: false
+  - path: LEV6.COD
+    bytes: 7771
+    modified: 1980-01-09 05:07
+    directory: false
+  - path: LEV6.CDT
+    bytes: 32002
+    modified: 1980-01-09 05:07
+    directory: false
+  - path: LEV7.COD
+    bytes: 10118
+    modified: 1985-04-11 19:31
+    directory: false
+  - path: LEV7.CDT
+    bytes: 30162
+    modified: 1985-04-11 19:31
+    directory: false
+  - path: PLUG.BAT
+    bytes: 40
+    modified: 1985-04-14 21:06
+    directory: false
+  - path: PLUG.TXT
+    bytes: 592
+    modified: 1985-04-14 21:06
+    directory: false
 provenance:
   contributor: gandalf
   originalPath: 100/ND-disk-00191.img

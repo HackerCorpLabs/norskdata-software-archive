@@ -7,6 +7,11 @@ image:
   controller: floppy
 filesystem: dos
 volumeLabel: 30022XX2N06
+dosFiles:
+  - path: NOTIS-WP.EXE
+    bytes: 971076
+    modified: 1988-12-27 13:33
+    directory: false
 provenance:
   contributor: gandalf
   originalPath: 400/ND-disk-00475-ipa.img

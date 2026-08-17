@@ -6,6 +6,11 @@ image:
   format: raw
   controller: floppy
 filesystem: dos
+dosFiles:
+  - path: ADI.ARC
+    bytes: 167070
+    modified: 1988-09-17 15:10
+    directory: false
 provenance:
   contributor: gandalf
   originalPath: 000/ND-disk-00058.img

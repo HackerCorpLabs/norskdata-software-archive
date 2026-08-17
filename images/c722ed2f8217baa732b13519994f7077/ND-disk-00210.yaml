@@ -7,6 +7,247 @@ image:
   controller: floppy
 filesystem: dos
 volumeLabel: 30001EN1A01
+dosFiles:
+  - path: IBMBIO.COM
+    bytes: 9468
+    modified: 1986-04-18 08:43
+    directory: false
+  - path: IBMDOS.COM
+    bytes: 27760
+    modified: 1986-03-24 14:53
+    directory: false
+  - path: COMMAND.COM
+    bytes: 23210
+    modified: 1985-05-14 00:02
+    directory: false
+  - path: BFLY-110
+    bytes: 0
+    modified: 1987-05-22 13:36
+    directory: true
+  - path: BFLY-110/BFLY
+    bytes: 0
+    modified: 1987-05-22 13:36
+    directory: true
+  - path: BFLY-110/BFLY/SYSMGR.EXE
+    bytes: 49052
+    modified: 1987-03-18 11:56
+    directory: false
+  - path: BFLY-110/BFLY/NDIO.EXE
+    bytes: 47170
+    modified: 1987-05-22 09:24
+    directory: false
+  - path: BFLY-110/BFLY/STARTUP.EXE
+    bytes: 19194
+    modified: 1987-03-16 10:01
+    directory: false
+  - path: BFLY-110/BFLY/ACTIVE.EXE
+    bytes: 1022
+    modified: 1987-02-27 09:19
+    directory: false
+  - path: BFLY-110/BFLY/ICBM.COM
+    bytes: 3648
+    modified: 1987-03-16 13:21
+    directory: false
+  - path: BFLY-110/BFLY/DISPLAY.EXE
+    bytes: 12822
+    modified: 1987-04-16 16:35
+    directory: false
+  - path: BFLY-110/BFLY/MOUSE.COM
+    bytes: 5072
+    modified: 1987-02-03 11:34
+    directory: false
+  - path: BFLY-110/BFLY/ND-110.BAT
+    bytes: 617
+    modified: 1987-03-19 15:41
+    directory: false
+  - path: BFLY-110/BFLY/PCTRAP.COM
+    bytes: 9664
+    modified: 1987-03-13 15:29
+    directory: false
+  - path: BFLY-110/BFLY/WELCOME.MON
+    bytes: 17
+    modified: 1987-01-26 17:20
+    directory: false
+  - path: BFLY-110/BFLY/WELCOME.COL
+    bytes: 17
+    modified: 1984-08-28 15:46
+    directory: false
+  - path: BFLY-110/BFLY/WELCOME.EXE
+    bytes: 7106
+    modified: 1987-02-20 18:45
+    directory: false
+  - path: BFLY-110/BFLY/WELCOME.SAV
+    bytes: 112000
+    modified: 1987-01-09 13:31
+    directory: false
+  - path: BFLY-110/BFLY/WELCOME.PAL
+    bytes: 17
+    modified: 1987-01-27 10:24
+    directory: false
+  - path: BFLY-110/BFLY/SYSMGR.TXT
+    bytes: 22757
+    modified: 1987-03-12 15:36
+    directory: false
+  - path: BFLY-110/BFLY/CHECK.COM
+    bytes: 1541
+    modified: 1987-03-23 18:51
+    directory: false
+  - path: BFLY-110/BIN
+    bytes: 0
+    modified: 1987-05-22 13:36
+    directory: true
+  - path: BFLY-110/BIN/SUPV.EXE
+    bytes: 55212
+    modified: 1987-04-01 09:31
+    directory: false
+  - path: BFLY-110/BIN/KEYBOARD.COM
+    bytes: 13923
+    modified: 1987-03-16 12:40
+    directory: false
+  - path: BFLY-110/BIN/DUPLI.EXE
+    bytes: 17188
+    modified: 1987-04-01 09:54
+    directory: false
+  - path: BFLY-110/BIN/PRINT.EXE
+    bytes: 8294
+    modified: 1986-12-05 16:05
+    directory: false
+  - path: BFLY-110/BIN/VERSION.EXE
+    bytes: 9148
+    modified: 1987-02-24 10:21
+    directory: false
+  - path: BFLY-110/BIN/NVSET.EXE
+    bytes: 11668
+    modified: 1987-03-15 09:29
+    directory: false
+  - path: BFLY-110/BIN/COUNTRY.BAT
+    bytes: 899
+    modified: 1986-04-25 09:11
+    directory: false
+  - path: BFLY-110/BIN/TMP
+    bytes: 15
+    modified: 1987-05-22 13:28
+    directory: false
+  - path: BFLY-110/BIN/CONFIG.SYS
+    bytes: 16
+    modified: 1987-05-22 13:28
+    directory: false
+  - path: BFLY-110/MAINT
+    bytes: 0
+    modified: 1987-05-22 13:36
+    directory: true
+  - path: BFLY-110/MAINT/MAIN.EXE
+    bytes: 188678
+    modified: 1987-03-04 17:07
+    directory: false
+  - path: BFLY-110/MAINT/SETUP.EXE
+    bytes: 36376
+    modified: 1986-07-04 16:28
+    directory: false
+  - path: BFLY-110/MAINT/TESTCONF.SYS
+    bytes: 582
+    modified: 1986-11-06 11:07
+    directory: false
+  - path: BFLY-110/MAINT/DISKPREP.EXE
+    bytes: 29316
+    modified: 1987-04-01 09:35
+    directory: false
+  - path: BFLY-110/230001EN.A01
+    bytes: 3
+    modified: 1987-02-19 17:41
+    directory: false
+  - path: ND-OWS
+    bytes: 0
+    modified: 1987-05-22 13:36
+    directory: true
+  - path: ND-OWS/KEYBTABL.EN
+    bytes: 1333
+    modified: 1987-03-25 12:20
+    directory: false
+  - path: ND-OWS/PARAM.PAR
+    bytes: 20
+    modified: 1986-12-03 16:36
+    directory: false
+  - path: ND-OWS/KEYBTABL.DA
+    bytes: 1333
+    modified: 1987-03-25 12:21
+    directory: false
+  - path: ND-OWS/KEYBTABL.FR
+    bytes: 1333
+    modified: 1987-04-16 16:04
+    directory: false
+  - path: ND-OWS/KEYBTABL.GE
+    bytes: 1333
+    modified: 1987-04-16 16:48
+    directory: false
+  - path: ND-OWS/KEYBTABL.NO
+    bytes: 1333
+    modified: 1987-03-25 12:21
+    directory: false
+  - path: ND-OWS/KEYBTABL.SW
+    bytes: 1333
+    modified: 1987-03-25 12:21
+    directory: false
+  - path: ND-OWS/KEYBTABL.US
+    bytes: 1333
+    modified: 1987-03-25 12:20
+    directory: false
+  - path: ROOT
+    bytes: 0
+    modified: 1987-05-22 13:36
+    directory: true
+  - path: ROOT/PRESTART.COM
+    bytes: 633
+    modified: 1984-05-07 16:06
+    directory: false
+  - path: ROOT/PRESTART.SYS
+    bytes: 34
+    modified: 1986-11-05 10:07
+    directory: false
+  - path: ROOT/CONF.LST
+    bytes: 71
+    modified: 1986-04-25 09:12
+    directory: false
+  - path: ROOT/PARKDISK.EXE
+    bytes: 13208
+    modified: 1987-02-27 10:31
+    directory: false
+  - path: ROOT/AUTOEXEC.BAT
+    bytes: 142
+    modified: 1987-02-18 17:34
+    directory: false
+  - path: ROOT/CONFIG.SYS
+    bytes: 86
+    modified: 1987-03-19 15:44
+    directory: false
+  - path: RM-OLD.BAT
+    bytes: 1298
+    modified: 1987-02-19 14:54
+    directory: false
+  - path: CHECK.COM
+    bytes: 1479
+    modified: 1987-03-23 18:51
+    directory: false
+  - path: Y
+    bytes: 3
+    modified: 1986-12-11 22:02
+    directory: false
+  - path: AUTOEXEC.BAT
+    bytes: 45
+    modified: 1987-02-18 17:31
+    directory: false
+  - path: DISKPREP.SCR
+    bytes: 13
+    modified: 1987-02-20 16:26
+    directory: false
+  - path: INST.BAT
+    bytes: 5506
+    modified: 1987-05-22 13:19
+    directory: false
+  - path: INSTALL.BAT
+    bytes: 923
+    modified: 1987-05-22 13:20
+    directory: false
 provenance:
   contributor: gandalf
   originalPath: 200/ND-disk-00210.img

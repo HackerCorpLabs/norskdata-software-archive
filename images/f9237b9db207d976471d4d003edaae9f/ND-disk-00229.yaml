@@ -6,6 +6,27 @@ image:
   format: raw
   controller: floppy
 filesystem: dos
+dosFiles:
+  - path: STREAM.EXE
+    bytes: 106096
+    modified: 1988-11-06 12:01
+    directory: false
+  - path: MOUSE.COM
+    bytes: 5113
+    modified: 1988-05-19 15:28
+    directory: false
+  - path: STACK.ND
+    bytes: 280
+    modified: 1980-01-01 00:35
+    directory: false
+  - path: SWITCHER.BAT
+    bytes: 2600
+    modified: 1980-01-01 00:35
+    directory: false
+  - path: UE-SWC11.ERR
+    bytes: 130048
+    modified: 1988-10-21 15:24
+    directory: false
 provenance:
   contributor: gandalf
   originalPath: 200/ND-disk-00229.img

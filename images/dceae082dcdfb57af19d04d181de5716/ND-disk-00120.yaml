@@ -7,6 +7,199 @@ image:
   controller: floppy
 filesystem: dos
 volumeLabel: 30008XX1A01
+dosFiles:
+  - path: SETUP.LBL
+    bytes: 8
+    modified: 1986-08-11 11:59
+    directory: false
+  - path: SETUP0.EXE
+    bytes: 36676
+    modified: 1986-06-30 17:57
+    directory: false
+  - path: KERNEL.EXE
+    bytes: 34063
+    modified: 1986-08-06 14:59
+    directory: false
+  - path: SYSTEM.DRV
+    bytes: 2663
+    modified: 1986-07-09 15:15
+    directory: false
+  - path: USA.DRV
+    bytes: 5077
+    modified: 1987-09-14 17:16
+    directory: false
+  - path: GERMANY.DRV
+    bytes: 5615
+    modified: 1987-09-14 17:16
+    directory: false
+  - path: FRANCE.DRV
+    bytes: 5701
+    modified: 1987-09-14 17:16
+    directory: false
+  - path: ITALY.DRV
+    bytes: 4181
+    modified: 1986-09-30 12:00
+    directory: false
+  - path: SPAIN.DRV
+    bytes: 4784
+    modified: 1986-09-30 12:00
+    directory: false
+  - path: SWEDEN.DRV
+    bytes: 5612
+    modified: 1987-09-14 17:16
+    directory: false
+  - path: NORWAY.DRV
+    bytes: 5611
+    modified: 1987-09-14 17:17
+    directory: false
+  - path: DENMARK.DRV
+    bytes: 5612
+    modified: 1987-09-14 17:17
+    directory: false
+  - path: ATTKBD.DRV
+    bytes: 3903
+    modified: 1986-05-22 16:21
+    directory: false
+  - path: NOMOUSE.DRV
+    bytes: 1592
+    modified: 1986-05-22 10:42
+    directory: false
+  - path: MOUSE.DRV
+    bytes: 3358
+    modified: 1986-08-21 17:15
+    directory: false
+  - path: MSMOUSE1.DRV
+    bytes: 1966
+    modified: 1986-05-22 10:45
+    directory: false
+  - path: MSMOUSE2.DRV
+    bytes: 1966
+    modified: 1986-05-22 10:45
+    directory: false
+  - path: LMOUSE.DRV
+    bytes: 2661
+    modified: 1986-05-02 17:47
+    directory: false
+  - path: LPC.DRV
+    bytes: 2438
+    modified: 1986-05-22 10:41
+    directory: false
+  - path: FTG.DRV
+    bytes: 1961
+    modified: 1986-05-22 10:48
+    directory: false
+  - path: JOYMOUSE.DRV
+    bytes: 2114
+    modified: 1986-05-22 10:35
+    directory: false
+  - path: ATTMOUSE.DRV
+    bytes: 2305
+    modified: 1986-05-22 14:30
+    directory: false
+  - path: CGA.DRV
+    bytes: 13008
+    modified: 1986-06-24 20:39
+    directory: false
+  - path: HERCULES.DRV
+    bytes: 15776
+    modified: 1986-06-24 20:41
+    directory: false
+  - path: EGAMONO.DRV
+    bytes: 13952
+    modified: 1986-06-24 20:36
+    directory: false
+  - path: EGAHIBW.DRV
+    bytes: 13952
+    modified: 1986-06-24 20:35
+    directory: false
+  - path: EGALORES.DRV
+    bytes: 15648
+    modified: 1986-06-24 20:46
+    directory: false
+  - path: EGAHIRES.DRV
+    bytes: 17536
+    modified: 1986-06-24 20:47
+    directory: false
+  - path: ATTDC.DRV
+    bytes: 15776
+    modified: 1986-05-23 17:22
+    directory: false
+  - path: ATTDEB.DRV
+    bytes: 17824
+    modified: 1986-05-23 14:23
+    directory: false
+  - path: GENIUS.DRV
+    bytes: 15216
+    modified: 1985-12-19 22:25
+    directory: false
+  - path: SOUND.DRV
+    bytes: 5853
+    modified: 1986-05-22 11:49
+    directory: false
+  - path: COMM.DRV
+    bytes: 4863
+    modified: 1987-11-16 10:40
+    directory: false
+  - path: LASRHARD.TXT
+    bytes: 372
+    modified: 1986-06-11 11:23
+    directory: false
+  - path: LASRSOFT.TXT
+    bytes: 372
+    modified: 1986-06-11 11:22
+    directory: false
+  - path: LOFONTS.FON
+    bytes: 5552
+    modified: 1986-07-29 16:42
+    directory: false
+  - path: HIFONTSE.FON
+    bytes: 7472
+    modified: 1986-07-29 16:42
+    directory: false
+  - path: FONTS400.FON
+    bytes: 7952
+    modified: 1986-07-29 16:42
+    directory: false
+  - path: RAMDRIVE.SYS
+    bytes: 6680
+    modified: 1986-08-01 05:59
+    directory: false
+  - path: EMM.PC
+    bytes: 12898
+    modified: 1985-07-30 17:15
+    directory: false
+  - path: EMM.AT
+    bytes: 12874
+    modified: 1985-07-30 17:33
+    directory: false
+  - path: WRITE.DAT
+    bytes: 47
+    modified: 1986-08-11 12:02
+    directory: false
+  - path: UK.DRV
+    bytes: 5075
+    modified: 1987-09-14 17:16
+    directory: false
+  - path: NMOUSE.DRV
+    bytes: 2869
+    modified: 1987-01-22 13:17
+    directory: false
+  - path: WY700.DRV
+    bytes: 16528
+    modified: 1986-12-19 17:27
+    directory: false
+  - path: HIFONTSW.FON
+    bytes: 14992
+    modified: 1986-09-23 14:34
+    directory: false
+  - path: SETUP.BAT
+    bytes: 175
+    modified: 1987-09-15 09:36
+    directory: false
+  - path: HIFONTS.FON
+    bytes: 7472
+    modified: 1986-07-29 16:42
+    directory: false
 provenance:
   contributor: gandalf
   originalPath: 100/ND-disk-00120.img

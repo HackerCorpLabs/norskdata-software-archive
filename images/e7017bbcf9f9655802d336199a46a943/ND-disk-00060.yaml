@@ -6,6 +6,171 @@ image:
   format: raw
   controller: floppy
 filesystem: dos
+dosFiles:
+  - path: IBMBIO.COM
+    bytes: 16138
+    modified: 1986-12-22 12:35
+    directory: false
+  - path: IBMDOS.COM
+    bytes: 28480
+    modified: 1986-12-09 11:50
+    directory: false
+  - path: COMMAND.COM
+    bytes: 25696
+    modified: 1986-12-04 13:54
+    directory: false
+  - path: CONFIG.SYS
+    bytes: 66
+    modified: 1987-03-04 10:42
+    directory: false
+  - path: CONFIG.BAK
+    bytes: 652
+    modified: 1987-03-04 13:21
+    directory: false
+  - path: ANSI.SYS
+    bytes: 1651
+    modified: 1986-10-02 15:33
+    directory: false
+  - path: ASSIGN.COM
+    bytes: 1523
+    modified: 1986-10-02 15:35
+    directory: false
+  - path: ATTRIB.EXE
+    bytes: 8234
+    modified: 1986-10-02 16:07
+    directory: false
+  - path: BACKUP.COM
+    bytes: 23543
+    modified: 1986-12-10 15:09
+    directory: false
+  - path: CHKDSK.COM
+    bytes: 9819
+    modified: 1986-10-02 16:25
+    directory: false
+  - path: COMP.COM
+    bytes: 2371
+    modified: 1986-03-25 23:41
+    directory: false
+  - path: DISKCOMP.COM
+    bytes: 3947
+    modified: 1986-10-02 16:37
+    directory: false
+  - path: DISKCOPY.COM
+    bytes: 14475
+    modified: 1987-01-13 10:30
+    directory: false
+  - path: DRIVER.SYS
+    bytes: 1102
+    modified: 1986-10-02 16:37
+    directory: false
+  - path: GAMMA.COM
+    bytes: 23672
+    modified: 1980-01-01 00:02
+    directory: false
+  - path: FDISK.COM
+    bytes: 16969
+    modified: 1986-12-11 12:45
+    directory: false
+  - path: FIND.EXE
+    bytes: 6403
+    modified: 1986-10-02 16:54
+    directory: false
+  - path: FORMAT.COM
+    bytes: 11382
+    modified: 1987-01-15 14:58
+    directory: false
+  - path: ADICONF.COM
+    bytes: 19088
+    modified: 1985-11-15 14:00
+    directory: false
+  - path: GRAPHICS.COM
+    bytes: 13309
+    modified: 1986-10-02 17:03
+    directory: false
+  - path: JOIN.EXE
+    bytes: 9012
+    modified: 1986-07-07 12:00
+    directory: false
+  - path: CONFIGB.DAT
+    bytes: 58
+    modified: 1980-01-01 00:37
+    directory: false
+  - path: CONFIG.BAT
+    bytes: 47
+    modified: 1987-05-07 00:04
+    directory: false
+  - path: KEYBSV.COM
+    bytes: 4450
+    modified: 1987-02-11 13:41
+    directory: false
+  - path: KEYBUK.COM
+    bytes: 1882
+    modified: 1987-01-19 09:41
+    directory: false
+  - path: KEYBNO.COM
+    bytes: 2552
+    modified: 1987-01-19 09:30
+    directory: false
+  - path: KEYBGR.COM
+    bytes: 2289
+    modified: 1987-01-19 09:25
+    directory: false
+  - path: KEYBDA.COM
+    bytes: 2552
+    modified: 1987-01-19 09:19
+    directory: false
+  - path: LABEL.COM
+    bytes: 2889
+    modified: 1986-10-02 17:10
+    directory: false
+  - path: MODE.COM
+    bytes: 14067
+    modified: 1987-02-09 22:22
+    directory: false
+  - path: MORE.COM
+    bytes: 282
+    modified: 1986-10-02 17:18
+    directory: false
+  - path: PARK.COM
+    bytes: 348
+    modified: 1986-09-18 10:46
+    directory: false
+  - path: PRINT.COM
+    bytes: 8963
+    modified: 1986-10-02 17:21
+    directory: false
+  - path: RECOVER.COM
+    bytes: 4284
+    modified: 1986-10-02 17:23
+    directory: false
+  - path: REPLACE.EXE
+    bytes: 4852
+    modified: 1986-10-02 17:25
+    directory: false
+  - path: RESTORE.COM
+    bytes: 21889
+    modified: 1986-12-10 15:10
+    directory: false
+  - path: SELECT.COM
+    bytes: 1092
+    modified: 1986-11-05 13:34
+    directory: false
+  - path: SYS.COM
+    bytes: 4639
+    modified: 1986-11-05 15:18
+    directory: false
+  - path: DISKID
+    bytes: 7538
+    modified: 1987-01-21 01:03
+    directory: false
+  - path: DISKID.$$$
+    bytes: 7588
+    modified: 1987-01-23 00:12
+    directory: false
+  - path: KEYBSV.OLD
+    bytes: 2548
+    modified: 1986-04-10 13:45
+    directory: false
 provenance:
   contributor: gandalf
   originalPath: 000/ND-disk-00060.img

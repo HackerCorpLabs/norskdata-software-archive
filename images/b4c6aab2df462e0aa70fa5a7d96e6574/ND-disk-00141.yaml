@@ -6,6 +6,19 @@ image:
   format: raw
   controller: floppy
 filesystem: dos
+dosFiles:
+  - path: ANDEFIL.HIF
+    bytes: 4293
+    modified: 1986-08-11 12:33
+    directory: false
+  - path: KOLL.SND
+    bytes: 508
+    modified: 1989-02-02 11:49
+    directory: false
+  - path: LOATOTA.HIF
+    bytes: 8494
+    modified: 1988-05-03 09:23
+    directory: false
 provenance:
   contributor: gandalf
   originalPath: 100/ND-disk-00141.img

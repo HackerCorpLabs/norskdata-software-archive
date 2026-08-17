@@ -6,6 +6,79 @@ image:
   format: raw
   controller: floppy
 filesystem: dos
+dosFiles:
+  - path: ADICONF.COM
+    bytes: 19088
+    modified: 1985-11-15 14:00
+    directory: false
+  - path: ADIEXT.COM
+    bytes: 751
+    modified: 1985-10-14 15:48
+    directory: false
+  - path: BACKUP.COM
+    bytes: 23543
+    modified: 1986-12-10 15:09
+    directory: false
+  - path: GAMMA.COM
+    bytes: 24559
+    modified: 1988-01-21 09:25
+    directory: false
+  - path: TURBO.COM
+    bytes: 39680
+    modified: 1986-03-14 12:36
+    directory: false
+  - path: CONFIGB.DAT
+    bytes: 58
+    modified: 1980-01-01 00:37
+    directory: false
+  - path: GETMS.LIB
+    bytes: 528
+    modified: 1988-01-10 20:21
+    directory: false
+  - path: TURBO.MSG
+    bytes: 1664
+    modified: 1980-01-01 00:11
+    directory: false
+  - path: ADINI.PAS
+    bytes: 11293
+    modified: 1980-01-01 01:53
+    directory: false
+  - path: ANALOG.PAS
+    bytes: 5098
+    modified: 1980-01-01 00:03
+    directory: false
+  - path: DIGITAL.PAS
+    bytes: 8344
+    modified: 1985-11-15 16:20
+    directory: false
+  - path: EVENT.PAS
+    bytes: 5359
+    modified: 1985-11-15 16:21
+    directory: false
+  - path: FREQ.PAS
+    bytes: 9472
+    modified: 1985-11-18 11:12
+    directory: false
+  - path: GAMMA.PAS
+    bytes: 4631
+    modified: 1988-03-30 07:58
+    directory: false
+  - path: MENY.PAS
+    bytes: 17742
+    modified: 1988-01-22 17:14
+    directory: false
+  - path: PULSE.PAS
+    bytes: 5466
+    modified: 1985-11-15 16:22
+    directory: false
+  - path: SCAN.PAS
+    bytes: 7295
+    modified: 1985-12-04 13:31
+    directory: false
+  - path: STYR.PAS
+    bytes: 8670
+    modified: 1988-11-29 15:20
+    directory: false
 provenance:
   contributor: gandalf
   originalPath: 000/ND-disk-00059.img

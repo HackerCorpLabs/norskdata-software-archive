@@ -7,6 +7,91 @@ image:
   controller: floppy
 filesystem: dos
 volumeLabel: "#2310C61208"
+dosFiles:
+  - path: BACKUP.EXE
+    bytes: 21704
+    modified: 1986-04-15 11:06
+    directory: false
+  - path: BASIC.COM
+    bytes: 785
+    modified: 1984-09-10 14:48
+    directory: false
+  - path: BASICA.COM
+    bytes: 785
+    modified: 1984-09-10 14:48
+    directory: false
+  - path: DEBUG.COM
+    bytes: 15552
+    modified: 1985-05-14 00:02
+    directory: false
+  - path: EXE2BIN.EXE
+    bytes: 2816
+    modified: 1985-05-14 00:02
+    directory: false
+  - path: FDISK.EXE
+    bytes: 45703
+    modified: 1986-04-11 13:29
+    directory: false
+  - path: GWBASIC.EXE
+    bytes: 67936
+    modified: 1986-04-11 13:39
+    directory: false
+  - path: LINK.EXE
+    bytes: 38422
+    modified: 1985-05-14 00:02
+    directory: false
+  - path: RESTORE.EXE
+    bytes: 20140
+    modified: 1986-04-15 12:51
+    directory: false
+  - path: KEYBTFXX
+    bytes: 0
+    modified: 1986-12-08 14:32
+    directory: true
+  - path: KEYBTFXX/KEYBTFSF.COM
+    bytes: 3974
+    modified: 1986-12-03 12:32
+    directory: false
+  - path: KEYBTFXX/KEYBTFSP.COM
+    bytes: 3974
+    modified: 1986-12-03 12:34
+    directory: false
+  - path: KEYBTFXX/KEYBTFCH.COM
+    bytes: 3974
+    modified: 1986-12-03 12:44
+    directory: false
+  - path: KEYBTFXX/KEYBTFBE.COM
+    bytes: 3974
+    modified: 1986-12-03 12:33
+    directory: false
+  - path: KEYBTFXX/KEYBTFUS.COM
+    bytes: 3974
+    modified: 1986-12-03 12:36
+    directory: false
+  - path: KEYBTFXX/KEYBTFFR.COM
+    bytes: 3974
+    modified: 1986-12-03 12:37
+    directory: false
+  - path: KEYBTFXX/KEYBTFUK.COM
+    bytes: 3974
+    modified: 1986-12-03 12:38
+    directory: false
+  - path: KEYBTFXX/KEYBTFAG.COM
+    bytes: 3974
+    modified: 1986-12-03 12:39
+    directory: false
+  - path: KEYBTFXX/KEYBTFDK.COM
+    bytes: 3974
+    modified: 1986-12-03 12:40
+    directory: false
+  - path: KEYBTFXX/KEYBTFNO.COM
+    bytes: 3974
+    modified: 1986-12-03 12:42
+    directory: false
+  - path: KEYBTFXX/KEYBTFIT.COM
+    bytes: 3974
+    modified: 1986-12-03 12:43
+    directory: false
 provenance:
   contributor: gandalf
   originalPath: 100/ND-disk-00123.img

@@ -6,6 +6,31 @@ image:
   format: raw
   controller: floppy
 filesystem: dos
+dosFiles:
+  - path: IBMBIO.COM
+    bytes: 9468
+    modified: 1986-11-07 15:00
+    directory: false
+  - path: IBMDOS.COM
+    bytes: 27760
+    modified: 1986-03-24 14:53
+    directory: false
+  - path: COMMAND.COM
+    bytes: 23210
+    modified: 1985-05-14 00:02
+    directory: false
+  - path: STREAM.EXE
+    bytes: 106096
+    modified: 1988-11-06 12:01
+    directory: false
+  - path: AUTOEXEC.BAT
+    bytes: 303
+    modified: 1989-03-13 14:04
+    directory: false
+  - path: NDCONFIG
+    bytes: 1010
+    modified: 1988-12-22 12:33
+    directory: false
 provenance:
   contributor: gandalf
   originalPath: 200/ND-disk-00218.img

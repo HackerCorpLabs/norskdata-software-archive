@@ -7,6 +7,303 @@ image:
   controller: floppy
 filesystem: dos
 volumeLabel: 30001EN2A01
+dosFiles:
+  - path: IBMBIO.COM
+    bytes: 9468
+    modified: 1986-04-18 08:43
+    directory: false
+  - path: IBMDOS.COM
+    bytes: 27760
+    modified: 1986-03-24 14:53
+    directory: false
+  - path: COMMAND.COM
+    bytes: 23210
+    modified: 1985-05-14 00:02
+    directory: false
+  - path: BFLY-110
+    bytes: 0
+    modified: 1987-05-22 13:41
+    directory: true
+  - path: BFLY-110/DEMO
+    bytes: 0
+    modified: 1987-05-22 13:41
+    directory: true
+  - path: BFLY-110/DEMO/WORLD.CLP
+    bytes: 5935
+    modified: 1980-01-01 00:05
+    directory: false
+  - path: BFLY-110/DEMO/POINTER.CLP
+    bytes: 73
+    modified: 1980-01-01 01:24
+    directory: false
+  - path: BFLY-110/DEMO/FILE2.CLP
+    bytes: 702
+    modified: 1980-01-01 03:06
+    directory: false
+  - path: BFLY-110/DEMO/MALE3.CLP
+    bytes: 1042
+    modified: 1980-01-01 05:26
+    directory: false
+  - path: BFLY-110/DEMO/BASHFUL.CLP
+    bytes: 476
+    modified: 1980-01-01 05:26
+    directory: false
+  - path: BFLY-110/DEMO/FEMALE4.CLP
+    bytes: 1211
+    modified: 1980-01-01 05:27
+    directory: false
+  - path: BFLY-110/DEMO/DEVIOUS.CLP
+    bytes: 546
+    modified: 1980-01-01 05:27
+    directory: false
+  - path: BFLY-110/DEMO/MALE6.CLP
+    bytes: 957
+    modified: 1980-01-01 05:28
+    directory: false
+  - path: BFLY-110/DEMO/MALE7.CLP
+    bytes: 968
+    modified: 1980-01-01 05:28
+    directory: false
+  - path: BFLY-110/DEMO/FLY1.CLP
+    bytes: 738
+    modified: 1980-01-01 08:30
+    directory: false
+  - path: BFLY-110/DEMO/BUTTER.CLP
+    bytes: 3284
+    modified: 1980-01-01 16:20
+    directory: false
+  - path: BFLY-110/DEMO/UE2.CLP
+    bytes: 3344
+    modified: 1980-01-03 19:15
+    directory: false
+  - path: BFLY-110/DEMO/FEM1.CLP
+    bytes: 913
+    modified: 1980-01-03 20:17
+    directory: false
+  - path: BFLY-110/DEMO/FEM2.CLP
+    bytes: 1412
+    modified: 1980-01-03 20:40
+    directory: false
+  - path: BFLY-110/DEMO/UE3.CLP
+    bytes: 3805
+    modified: 1980-01-03 20:44
+    directory: false
+  - path: BFLY-110/DEMO/MAN1.CLP
+    bytes: 418
+    modified: 1980-01-03 20:50
+    directory: false
+  - path: BFLY-110/DEMO/MINI.CLP
+    bytes: 1229
+    modified: 1980-01-03 22:13
+    directory: false
+  - path: BFLY-110/DEMO/UNIT.CLP
+    bytes: 203
+    modified: 1980-01-04 16:14
+    directory: false
+  - path: BFLY-110/DEMO/MAN2.CLP
+    bytes: 1048
+    modified: 1980-01-04 16:41
+    directory: false
+  - path: BFLY-110/DEMO/DISPLAY.CLP
+    bytes: 387
+    modified: 1980-01-04 16:45
+    directory: false
+  - path: BFLY-110/DEMO/KBRD.CLP
+    bytes: 247
+    modified: 1980-01-04 16:45
+    directory: false
+  - path: BFLY-110/DEMO/SYSKEY.CLP
+    bytes: 43
+    modified: 1980-01-04 16:55
+    directory: false
+  - path: BFLY-110/DEMO/DISK.CLP
+    bytes: 43
+    modified: 1980-01-04 19:07
+    directory: false
+  - path: BFLY-110/DEMO/GIRL2.CLP
+    bytes: 991
+    modified: 1980-01-04 19:52
+    directory: false
+  - path: BFLY-110/DEMO/P18.CLP
+    bytes: 3635
+    modified: 1980-01-04 19:55
+    directory: false
+  - path: BFLY-110/DEMO/OPO3.CLP
+    bytes: 1459
+    modified: 1980-01-04 19:57
+    directory: false
+  - path: BFLY-110/DEMO/TEACH.CLP
+    bytes: 924
+    modified: 1980-01-04 20:12
+    directory: false
+  - path: BFLY-110/DEMO/SM1.CLP
+    bytes: 171
+    modified: 1980-01-04 21:13
+    directory: false
+  - path: BFLY-110/DEMO/UE1.CLP
+    bytes: 1720
+    modified: 1980-01-04 21:25
+    directory: false
+  - path: BFLY-110/DEMO/LOGIN.CLP
+    bytes: 1695
+    modified: 1980-01-04 21:50
+    directory: false
+  - path: BFLY-110/DEMO/PIC2.CLP
+    bytes: 6733
+    modified: 1980-01-04 22:19
+    directory: false
+  - path: BFLY-110/DEMO/WP1.CLP
+    bytes: 1860
+    modified: 1980-01-04 22:21
+    directory: false
+  - path: BFLY-110/DEMO/LARROW.CLP
+    bytes: 51
+    modified: 1980-01-04 22:23
+    directory: false
+  - path: BFLY-110/DEMO/GIRL2A.CLP
+    bytes: 433
+    modified: 1980-01-04 22:50
+    directory: false
+  - path: BFLY-110/DEMO/OPO1.CLP
+    bytes: 1048
+    modified: 1980-01-04 23:12
+    directory: false
+  - path: BFLY-110/DEMO/OPO2.CLP
+    bytes: 742
+    modified: 1980-01-04 23:13
+    directory: false
+  - path: BFLY-110/DEMO/RETURN.CLP
+    bytes: 140
+    modified: 1980-01-05 00:38
+    directory: false
+  - path: BFLY-110/DEMO/TOPLIN.CLP
+    bytes: 873
+    modified: 1980-01-05 17:20
+    directory: false
+  - path: BFLY-110/DEMO/CLASS.CLP
+    bytes: 4615
+    modified: 1980-01-05 18:10
+    directory: false
+  - path: BFLY-110/DEMO/RETKEY.CLP
+    bytes: 178
+    modified: 1980-01-05 19:34
+    directory: false
+  - path: BFLY-110/DEMO/HGDEVICE
+    bytes: 9061
+    modified: 1986-01-08 16:02
+    directory: false
+  - path: BFLY-110/DEMO/HGFONT
+    bytes: 1536
+    modified: 1986-06-10 11:19
+    directory: false
+  - path: BFLY-110/DEMO/DELIVER.EXE
+    bytes: 116060
+    modified: 1986-07-13 23:56
+    directory: false
+  - path: BFLY-110/DEMO/PLANEU.CLP
+    bytes: 447
+    modified: 1986-08-06 02:08
+    directory: false
+  - path: BFLY-110/DEMO/PLANER.CLP
+    bytes: 251
+    modified: 1986-08-06 19:44
+    directory: false
+  - path: BFLY-110/DEMO/KEYBOARD.CLP
+    bytes: 7369
+    modified: 1986-08-13 10:12
+    directory: false
+  - path: BFLY-110/DEMO/FLYS.CLP
+    bytes: 428
+    modified: 1986-08-13 14:15
+    directory: false
+  - path: BFLY-110/DEMO/WIN1.CLP
+    bytes: 5067
+    modified: 1986-09-11 01:01
+    directory: false
+  - path: BFLY-110/DEMO/CLOCK1.CLP
+    bytes: 1284
+    modified: 1986-09-12 00:12
+    directory: false
+  - path: BFLY-110/DEMO/TILT.CLP
+    bytes: 1421
+    modified: 1986-09-12 22:09
+    directory: false
+  - path: BFLY-110/DEMO/ENTER.CLP
+    bytes: 79
+    modified: 1986-09-13 01:41
+    directory: false
+  - path: BFLY-110/DEMO/HOME.CLP
+    bytes: 43
+    modified: 1986-09-13 02:13
+    directory: false
+  - path: BFLY-110/DEMO/CURSPAD.CLP
+    bytes: 254
+    modified: 1986-09-13 02:19
+    directory: false
+  - path: BFLY-110/DEMO/TOPNUMB.CLP
+    bytes: 549
+    modified: 1986-09-13 06:32
+    directory: false
+  - path: BFLY-110/DEMO/INTRO.BAT
+    bytes: 44
+    modified: 1987-02-19 13:12
+    directory: false
+  - path: BFLY-110/DEMO/TEXT.CLP
+    bytes: 5294
+    modified: 1986-09-16 00:13
+    directory: false
+  - path: BFLY-110/DEMO/BIGMOUSE.CLP
+    bytes: 622
+    modified: 1986-10-07 16:25
+    directory: false
+  - path: BFLY-110/DEMO/UMOUSE.CLP
+    bytes: 683
+    modified: 1986-10-07 16:36
+    directory: false
+  - path: BFLY-110/DEMO/SM3.CLP
+    bytes: 154
+    modified: 1986-10-07 18:54
+    directory: false
+  - path: BFLY-110/DEMO/P22.CLP
+    bytes: 5537
+    modified: 1986-10-07 19:02
+    directory: false
+  - path: BFLY-110/DEMO/H&M.CLP
+    bytes: 2340
+    modified: 1986-10-08 18:03
+    directory: false
+  - path: BFLY-110/DEMO/MARK.CLP
+    bytes: 109
+    modified: 1986-10-08 21:46
+    directory: false
+  - path: BFLY-110/DEMO/MANAGER.CLP
+    bytes: 2330
+    modified: 1986-10-08 22:18
+    directory: false
+  - path: BFLY-110/DEMO/MOUSE.CLP
+    bytes: 58
+    modified: 1986-10-09 00:24
+    directory: false
+  - path: BFLY-110/DEMO/SPACEBAR.CLP
+    bytes: 243
+    modified: 1986-12-15 17:30
+    directory: false
+  - path: BFLY-110/DEMO/NUMBPAD.CLP
+    bytes: 586
+    modified: 1986-12-15 17:44
+    directory: false
+  - path: BFLY-110/DEMO/BARSPACE.CLP
+    bytes: 275
+    modified: 1986-12-18 19:27
+    directory: false
+  - path: BFLY-110/DEMO/INTROD
+    bytes: 71474
+    modified: 1986-12-18 23:04
+    directory: false
+  - path: BFLY-110/DEMO/COURSES.DB
+    bytes: 2048
+    modified: 1986-12-18 23:06
+    directory: false
 provenance:
   contributor: gandalf
   originalPath: 100/ND-disk-00117.img

@@ -6,6 +6,135 @@ image:
   format: raw
   controller: floppy
 filesystem: dos
+dosFiles:
+  - path: DMALOAD.EXE
+    bytes: 1334
+    modified: 1987-03-05 16:45
+    directory: false
+  - path: ADITEST.EXE
+    bytes: 39288
+    modified: 1987-04-10 08:37
+    directory: false
+  - path: ADICONF.EXE
+    bytes: 31028
+    modified: 1987-03-30 07:33
+    directory: false
+  - path: CONFIGB.DAT
+    bytes: 459
+    modified: 1987-02-27 15:51
+    directory: false
+  - path: ADIMCS.LIB
+    bytes: 14848
+    modified: 1987-03-08 18:24
+    directory: false
+  - path: ADIMCC.LIB
+    bytes: 14848
+    modified: 1987-03-08 18:30
+    directory: false
+  - path: ADIMCM.LIB
+    bytes: 14848
+    modified: 1987-03-08 18:27
+    directory: false
+  - path: ADIMCL.LIB
+    bytes: 14848
+    modified: 1987-03-07 12:27
+    directory: false
+  - path: ADITEST.C
+    bytes: 22858
+    modified: 1987-04-09 12:28
+    directory: false
+  - path: SAMPL.BAT
+    bytes: 75
+    modified: 1987-03-05 20:46
+    directory: false
+  - path: ADISUBS.LIB
+    bytes: 14848
+    modified: 1987-03-08 18:35
+    directory: false
+  - path: RTI.LIB
+    bytes: 3584
+    modified: 1987-03-07 14:37
+    directory: false
+  - path: RTI802.LIB
+    bytes: 1024
+    modified: 1987-03-05 17:40
+    directory: false
+  - path: RTI800.LIB
+    bytes: 5632
+    modified: 1987-04-06 14:29
+    directory: false
+  - path: RTI815.LIB
+    bytes: 5632
+    modified: 1987-04-06 14:29
+    directory: false
+  - path: RTI817.LIB
+    bytes: 1536
+    modified: 1987-03-05 17:46
+    directory: false
+  - path: RTI820.LIB
+    bytes: 2048
+    modified: 1987-03-05 17:46
+    directory: false
+  - path: ADIPAS.LIB
+    bytes: 15872
+    modified: 1987-04-03 11:54
+    directory: false
+  - path: ADI.I
+    bytes: 5966
+    modified: 1987-02-28 17:14
+    directory: false
+  - path: ADIFOR.LIB
+    bytes: 15872
+    modified: 1987-03-08 18:35
+    directory: false
+  - path: ADIBAS.LIB
+    bytes: 16384
+    modified: 1987-03-08 18:34
+    directory: false
+  - path: BASLOAD.EXE
+    bytes: 22187
+    modified: 1987-04-06 14:48
+    directory: false
+  - path: BASL.BAT
+    bytes: 71
+    modified: 1987-02-14 12:07
+    directory: false
+  - path: JMPTAB.OBJ
+    bytes: 1365
+    modified: 1987-03-05 20:18
+    directory: false
+  - path: DLOAD.OBJ
+    bytes: 999
+    modified: 1987-03-05 16:29
+    directory: false
+  - path: ADIEXT.COM
+    bytes: 745
+    modified: 1987-03-05 17:36
+    directory: false
+  - path: ADI.PAS
+    bytes: 7282
+    modified: 1987-03-08 18:43
+    directory: false
+  - path: PASLOAD.EXE
+    bytes: 20955
+    modified: 1987-04-06 14:49
+    directory: false
+  - path: PASL.BAT
+    bytes: 70
+    modified: 1987-02-14 12:06
+    directory: false
+  - path: ADITP.LIB
+    bytes: 15872
+    modified: 1987-03-08 18:35
+    directory: false
+  - path: RTICAL.COM
+    bytes: 33425
+    modified: 1987-03-10 09:11
+    directory: false
+  - path: README.DOC
+    bytes: 628
+    modified: 1987-03-28 12:34
+    directory: false
 provenance:
   contributor: gandalf
   originalPath: 000/ND-disk-00057.img

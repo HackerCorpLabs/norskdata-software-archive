@@ -7,6 +7,139 @@ image:
   controller: floppy
 filesystem: dos
 volumeLabel: 30002EN1A00
+dosFiles:
+  - path: IBMBIO.COM
+    bytes: 9468
+    modified: 1986-04-18 08:43
+    directory: false
+  - path: IBMDOS.COM
+    bytes: 27760
+    modified: 1986-03-24 14:53
+    directory: false
+  - path: EIS
+    bytes: 0
+    modified: 1986-10-22 08:51
+    directory: true
+  - path: EIS/SETUP.EXE
+    bytes: 36314
+    modified: 1986-07-04 16:28
+    directory: false
+  - path: ND-OWS
+    bytes: 0
+    modified: 1987-01-27 11:56
+    directory: true
+  - path: ND-OWS/KEYBTABL.US
+    bytes: 1333
+    modified: 1987-03-09 14:51
+    directory: false
+  - path: ND-OWS/KEYBTABL.EN
+    bytes: 1333
+    modified: 1987-03-09 14:52
+    directory: false
+  - path: ND-OWS/KEYBTABL.NO
+    bytes: 1333
+    modified: 1987-03-13 16:33
+    directory: false
+  - path: ND-OWS/KEYBTABL.SW
+    bytes: 1333
+    modified: 1987-03-09 14:53
+    directory: false
+  - path: ND-OWS/KEYBTABL.DA
+    bytes: 1333
+    modified: 1987-03-13 16:36
+    directory: false
+  - path: ND-OWS/KEYBTABL.GE
+    bytes: 1333
+    modified: 1987-03-13 16:37
+    directory: false
+  - path: ND-OWS/KEYBTABL.FR
+    bytes: 1333
+    modified: 1987-03-13 16:41
+    directory: false
+  - path: CONFIG.SYS
+    bytes: 75
+    modified: 1980-01-01 00:06
+    directory: false
+  - path: GRAFCHAR.SYS
+    bytes: 5120
+    modified: 1985-01-17 09:02
+    directory: false
+  - path: ANSI.SYS
+    bytes: 1618
+    modified: 1985-10-11 07:56
+    directory: false
+  - path: TESTCONF.SYS
+    bytes: 582
+    modified: 1986-11-06 11:07
+    directory: false
+  - path: CLOCK.SYS
+    bytes: 1689
+    modified: 1985-11-01 10:48
+    directory: false
+  - path: COMMAND.COM
+    bytes: 23210
+    modified: 1985-05-14 00:02
+    directory: false
+  - path: PRESTART.COM
+    bytes: 633
+    modified: 1984-05-07 16:06
+    directory: false
+  - path: GRAFTABL.COM
+    bytes: 1198
+    modified: 1985-01-17 09:10
+    directory: false
+  - path: GRAPHICS.COM
+    bytes: 1945
+    modified: 1986-03-26 15:15
+    directory: false
+  - path: MODE.COM
+    bytes: 3128
+    modified: 1986-02-03 10:17
+    directory: false
+  - path: KEYBOARD.COM
+    bytes: 13857
+    modified: 1987-03-16 12:20
+    directory: false
+  - path: DIAG.EXE
+    bytes: 56108
+    modified: 1987-04-01 09:41
+    directory: false
+  - path: MAIN.EXE
+    bytes: 188678
+    modified: 1987-03-04 17:07
+    directory: false
+  - path: CONF.LST
+    bytes: 49
+    modified: 1987-03-16 15:49
+    directory: false
+  - path: PRESTART.SYS
+    bytes: 24
+    modified: 1986-11-06 11:47
+    directory: false
+  - path: COUNTRY.BAT
+    bytes: 977
+    modified: 1987-03-16 17:00
+    directory: false
+  - path: RESET.COM
+    bytes: 69
+    modified: 1986-11-05 09:04
+    directory: false
+  - path: CONFIG.BAK
+    bytes: 64
+    modified: 1980-01-01 00:43
+    directory: false
+  - path: 230002EN.A00
+    bytes: 3
+    modified: 1987-02-06 16:52
+    directory: false
+  - path: AUTOEXEC.BAK
+    bytes: 370
+    modified: 1980-01-01 00:26
+    directory: false
+  - path: AUTOEXEC.BAT
+    bytes: 238
+    modified: 1980-01-01 00:07
+    directory: false
 provenance:
   contributor: gandalf
   originalPath: 100/ND-disk-00118.img

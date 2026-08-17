@@ -6,6 +6,11 @@ image:
   format: raw
   controller: floppy
 filesystem: dos
+dosFiles:
+  - path: STREAM.EXE
+    bytes: 106096
+    modified: 1987-11-20 17:39
+    directory: false
 provenance:
   contributor: gandalf
   originalPath: 100/ND-disk-00129b.img

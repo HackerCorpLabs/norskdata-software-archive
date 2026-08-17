@@ -7,6 +7,39 @@ image:
   controller: floppy
 filesystem: dos
 volumeLabel: DOS5
+dosFiles:
+  - path: IO.SYS
+    bytes: 33430
+    modified: 1991-04-09 05:00
+    directory: false
+  - path: MSDOS.SYS
+    bytes: 37394
+    modified: 1991-04-09 05:00
+    directory: false
+  - path: COMMAND.COM
+    bytes: 47845
+    modified: 1991-04-09 05:00
+    directory: false
+  - path: SYS.COM
+    bytes: 13440
+    modified: 1991-04-09 05:00
+    directory: false
+  - path: FDISK.EXE
+    bytes: 57224
+    modified: 1991-04-09 05:00
+    directory: false
+  - path: FORMAT.COM
+    bytes: 32911
+    modified: 1991-04-09 05:00
+    directory: false
+  - path: EDLIN.EXE
+    bytes: 12642
+    modified: 1991-04-09 05:00
+    directory: false
+  - path: SETVER.EXE
+    bytes: 12007
+    modified: 1991-04-09 05:00
+    directory: false
 provenance:
   contributor: gandalf
   originalPath: 200/ND-disk-00230.img

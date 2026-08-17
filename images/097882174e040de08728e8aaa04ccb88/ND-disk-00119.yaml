@@ -7,6 +7,11 @@ image:
   controller: floppy
 filesystem: dos
 volumeLabel: 30003EN1A00
+dosFiles:
+  - path: SIGMAEGA.COM
+    bytes: 2806
+    modified: 1986-04-11 12:00
+    directory: false
 provenance:
   contributor: gandalf
   originalPath: 100/ND-disk-00119.img

@@ -7,6 +7,99 @@ image:
   controller: floppy
 filesystem: dos
 volumeLabel: 30021SV3B01
+dosFiles:
+  - path: NEWFON.EXE
+    bytes: 33231
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: PCLPFM.EXE
+    bytes: 26468
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: MODERN.FON
+    bytes: 7584
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: ROMAN.FON
+    bytes: 11120
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: SCRIPT.FON
+    bytes: 10304
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: COURB.FON
+    bytes: 19088
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: HELVB.FON
+    bytes: 50880
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: TMSRB.FON
+    bytes: 45936
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: COURE.FON
+    bytes: 23808
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: HELVE.FON
+    bytes: 64784
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: TMSRE.FON
+    bytes: 58304
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: COURA.FON
+    bytes: 14144
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: HELVA.FON
+    bytes: 36768
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: TMSRA.FON
+    bytes: 35392
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: COURC.FON
+    bytes: 13040
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: HELVC.FON
+    bytes: 38960
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: TMSRC.FON
+    bytes: 37824
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: COURD.FON
+    bytes: 21328
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: HELVD.FON
+    bytes: 58144
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: TMSRD.FON
+    bytes: 57184
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: RAMDRIVE.SYS
+    bytes: 8221
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: RAMDRIVE.TXT
+    bytes: 4115
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: NEC24PIN.DRV
+    bytes: 29088
+    modified: 1988-01-22 12:00
+    directory: false
 provenance:
   contributor: gandalf
   originalPath: 000/ND-disk-00066.img

@@ -7,6 +7,199 @@ image:
   controller: floppy
 filesystem: dos
 volumeLabel: 30006EN1A05
+dosFiles:
+  - path: IBMBIO.COM
+    bytes: 9468
+    modified: 1986-11-07 15:00
+    directory: false
+  - path: IBMDOS.COM
+    bytes: 27760
+    modified: 1986-03-24 14:53
+    directory: false
+  - path: COMMAND.COM
+    bytes: 23210
+    modified: 1987-09-22 13:23
+    directory: false
+  - path: DOS3.10
+    bytes: 0
+    modified: 1980-01-05 13:43
+    directory: true
+  - path: DOS3.10/CLOCK.SYS
+    bytes: 1689
+    modified: 1985-11-01 10:48
+    directory: false
+  - path: MAINT
+    bytes: 0
+    modified: 1980-01-05 13:44
+    directory: true
+  - path: MAINT/VERSION.EXE
+    bytes: 9086
+    modified: 1987-02-24 10:21
+    directory: false
+  - path: WINDOWS
+    bytes: 0
+    modified: 1980-01-05 13:44
+    directory: true
+  - path: WINDOWS/EPSON.DRV
+    bytes: 14352
+    modified: 1986-05-22 11:07
+    directory: false
+  - path: WINDOWS/WIN.COM
+    bytes: 4873
+    modified: 1986-08-06 14:59
+    directory: false
+  - path: WINDOWS/WIN.INI
+    bytes: 2283
+    modified: 1987-12-17 11:01
+    directory: false
+  - path: WINDOWS/WIN100.BIN
+    bytes: 185648
+    modified: 1986-08-06 14:59
+    directory: false
+  - path: WINDOWS/WIN100.OVL
+    bytes: 217808
+    modified: 1986-08-06 14:59
+    directory: false
+  - path: WINDOWS/WINOLDAP.GRB
+    bytes: 1266
+    modified: 1986-07-16 23:07
+    directory: false
+  - path: WINDOWS/WINOLDAP.MOD
+    bytes: 19824
+    modified: 1986-08-01 03:16
+    directory: false
+  - path: WINDOWS/COURA.FON
+    bytes: 8720
+    modified: 1986-07-29 16:43
+    directory: false
+  - path: WINDOWS/COURB.FON
+    bytes: 12304
+    modified: 1986-07-29 16:43
+    directory: false
+  - path: WINDOWS/HELVA.FON
+    bytes: 27056
+    modified: 1986-07-29 16:44
+    directory: false
+  - path: WINDOWS/HELVB.FON
+    bytes: 37680
+    modified: 1986-07-29 16:45
+    directory: false
+  - path: WINDOWS/MODERN.FON
+    bytes: 7584
+    modified: 1986-07-09 17:18
+    directory: false
+  - path: WINDOWS/ROMAN.FON
+    bytes: 11120
+    modified: 1986-07-09 17:19
+    directory: false
+  - path: WINDOWS/SCRIPT.FON
+    bytes: 10304
+    modified: 1986-07-09 17:18
+    directory: false
+  - path: WINDOWS/TMSRA.FON
+    bytes: 26256
+    modified: 1986-07-29 16:46
+    directory: false
+  - path: WINDOWS/TMSRB.FON
+    bytes: 36240
+    modified: 1986-07-29 16:46
+    directory: false
+  - path: WINDOWS/PIF
+    bytes: 0
+    modified: 1980-01-05 13:58
+    directory: true
+  - path: WINDOWS/PIF/WP.PIF
+    bytes: 369
+    modified: 1987-08-19 16:48
+    directory: false
+  - path: WINDOWS/MSDOS.EXE
+    bytes: 1
+    modified: 1987-06-30 13:42
+    directory: false
+  - path: ND-OWS
+    bytes: 0
+    modified: 1980-01-05 13:44
+    directory: true
+  - path: ND-OWS/DSACCB.EXE
+    bytes: 18014
+    modified: 1987-11-23 16:23
+    directory: false
+  - path: ND-OWS/230006EN.A05
+    bytes: 6
+    modified: 1987-07-31 10:03
+    directory: false
+  - path: ND-OWS/DTM.EXE
+    bytes: 74286
+    modified: 1988-01-20 02:34
+    directory: false
+  - path: ND-OWS/MOUSE.COM
+    bytes: 5107
+    modified: 1987-11-02 14:32
+    directory: false
+  - path: ND-OWS/ND.EXE
+    bytes: 35982
+    modified: 1988-01-20 10:38
+    directory: false
+  - path: ND-OWS/TDVEN15.FON
+    bytes: 5568
+    modified: 1987-07-10 10:36
+    directory: false
+  - path: ND-OWS/PRNSCA.COM
+    bytes: 144
+    modified: 1980-01-05 13:43
+    directory: false
+  - path: ND-OWS/EGAND.COM
+    bytes: 9736
+    modified: 1984-12-06 08:30
+    directory: false
+  - path: ND-OWS/KEYBOARD.COM
+    bytes: 14049
+    modified: 1987-11-06 14:14
+    directory: false
+  - path: ND-OWS/PUSHKEYS.PSH
+    bytes: 4324
+    modified: 1987-07-08 12:58
+    directory: false
+  - path: ND-OWS/$CURRCSD.PAR
+    bytes: 16
+    modified: 1987-04-29 11:14
+    directory: false
+  - path: ND-OWS/$NDCOMM.PAR
+    bytes: 12
+    modified: 1987-02-12 18:59
+    directory: false
+  - path: ND-OWS/$TDVEMUL.COL
+    bytes: 20
+    modified: 1987-09-02 12:05
+    directory: false
+  - path: ND-OWS/KEYBTABL.EN
+    bytes: 1333
+    modified: 1987-03-25 12:20
+    directory: false
+  - path: AUTOEXEC.BAT
+    bytes: 151
+    modified: 1987-11-30 14:07
+    directory: false
+  - path: CONFIG.SYS
+    bytes: 63
+    modified: 1987-07-31 09:23
+    directory: false
+  - path: INSTALL.EXE
+    bytes: 14300
+    modified: 1987-11-30 14:11
+    directory: false
+  - path: LANG.DAT
+    bytes: 1561
+    modified: 1987-10-19 10:37
+    directory: false
+  - path: HDEXEC.BAT
+    bytes: 147
+    modified: 1987-12-17 11:00
+    directory: false
+  - path: UE-ERR-C.ERR
+    bytes: 70912
+    modified: 1987-06-29 10:38
+    directory: false
 provenance:
   contributor: gandalf
   originalPath: 100/ND-disk-00126.img

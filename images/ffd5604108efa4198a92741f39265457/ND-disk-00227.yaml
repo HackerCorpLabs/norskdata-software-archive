@@ -7,6 +7,239 @@ image:
   controller: floppy
 filesystem: dos
 volumeLabel: 30021SV4B01
+dosFiles:
+  - path: OLIINFO.TXT
+    bytes: 13358
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: INFO.TXT
+    bytes: 6317
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: WRITE.EXE
+    bytes: 198496
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: VNING.WRI
+    bytes: 3200
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: PIFEDIT.EXE
+    bytes: 30320
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: URKLIPP.EXE
+    bytes: 10768
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: CVTPAINT.EXE
+    bytes: 5712
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: KALK.EXE
+    bytes: 28000
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: KALENDER.EXE
+    bytes: 39024
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: KARTOTEK.EXE
+    bytes: 39360
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: KLOCKA.EXE
+    bytes: 8960
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: KONTROLL.EXE
+    bytes: 57376
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: PAINT.EXE
+    bytes: 93392
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: TERMINAL.EXE
+    bytes: 48672
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: REVERSI.EXE
+    bytes: 15552
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: ANTECKN.EXE
+    bytes: 19120
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: ABC.TXT
+    bytes: 64
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: ATTGRA.TXT
+    bytes: 662
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: PIF
+    bytes: 0
+    modified: 1988-08-16 15:08
+    directory: true
+  - path: PIF/123.PIF
+    bytes: 369
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: PIF/ACCESS.PIF
+    bytes: 369
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: PIF/BASIC.PIF
+    bytes: 369
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: PIF/BASICA.PIF
+    bytes: 369
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: PIF/CHART.PIF
+    bytes: 369
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: PIF/CLOUT.PIF
+    bytes: 369
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: PIF/DBASE.PIF
+    bytes: 369
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: PIF/DW3PG.PIF
+    bytes: 369
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: PIF/EDITOR.PIF
+    bytes: 369
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: PIF/FILE.PIF
+    bytes: 369
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: PIF/FL.PIF
+    bytes: 369
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: PIF/FW.PIF
+    bytes: 369
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: PIF/GRAPH.PIF
+    bytes: 369
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: PIF/HTPM.PIF
+    bytes: 369
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: PIF/LOTUS.PIF
+    bytes: 369
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: PIF/MP.PIF
+    bytes: 369
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: PIF/MPWIN.PIF
+    bytes: 369
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: PIF/PCLPFM.PIF
+    bytes: 369
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: PIF/PE2.PIF
+    bytes: 369
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: PIF/PFSACCES.PIF
+    bytes: 369
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: PIF/PLAN.PIF
+    bytes: 369
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: PIF/PROEDIT.PIF
+    bytes: 369
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: PIF/PROJ.PIF
+    bytes: 369
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: PIF/QB.PIF
+    bytes: 369
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: PIF/RB5000.PIF
+    bytes: 369
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: PIF/RBASE.PIF
+    bytes: 369
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: PIF/REPORT.PIF
+    bytes: 369
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: PIF/SC4.PIF
+    bytes: 369
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: PIF/SCOM.PIF
+    bytes: 369
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: PIF/SPELL.PIF
+    bytes: 369
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: PIF/SYMPHONY.PIF
+    bytes: 369
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: PIF/TURBO.PIF
+    bytes: 369
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: PIF/VW3.PIF
+    bytes: 369
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: PIF/WORD.PIF
+    bytes: 369
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: PIF/WORKS.PIF
+    bytes: 369
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: PIF/WRDPERF.PIF
+    bytes: 369
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: PIF/WRITE.PIF
+    bytes: 369
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: PIF/WS2.PIF
+    bytes: 369
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: PIF/XTALK.PIF
+    bytes: 369
+    modified: 1988-01-22 12:00
+    directory: false
 provenance:
   contributor: gandalf
   originalPath: 200/ND-disk-00227.img

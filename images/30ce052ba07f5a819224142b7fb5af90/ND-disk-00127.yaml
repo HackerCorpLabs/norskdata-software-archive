@@ -7,6 +7,111 @@ image:
   controller: floppy
 filesystem: dos
 volumeLabel: 30006EN2A05
+dosFiles:
+  - path: WINDOWS
+    bytes: 0
+    modified: 1980-01-05 14:00
+    directory: true
+  - path: WINDOWS/CALC.EXE
+    bytes: 25008
+    modified: 1986-05-22 04:33
+    directory: false
+  - path: WINDOWS/CALENDAR.EXE
+    bytes: 37552
+    modified: 1986-05-22 07:55
+    directory: false
+  - path: WINDOWS/CARDFILE.EXE
+    bytes: 36992
+    modified: 1986-05-22 04:23
+    directory: false
+  - path: WINDOWS/CLIPBRD.EXE
+    bytes: 9712
+    modified: 1986-05-22 06:17
+    directory: false
+  - path: WINDOWS/CLOCK.EXE
+    bytes: 7984
+    modified: 1986-05-22 06:08
+    directory: false
+  - path: WINDOWS/CONTROL.EXE
+    bytes: 52704
+    modified: 1986-08-14 16:13
+    directory: false
+  - path: WINDOWS/EXAMPLE.TXT
+    bytes: 134
+    modified: 1987-02-06 15:00
+    directory: false
+  - path: WINDOWS/NOTEPAD.EXE
+    bytes: 18736
+    modified: 1986-05-22 06:28
+    directory: false
+  - path: WINDOWS/REVERSI.EXE
+    bytes: 14864
+    modified: 1986-05-22 04:28
+    directory: false
+  - path: WINDOWS/SPOOLER.EXE
+    bytes: 13264
+    modified: 1986-06-30 18:09
+    directory: false
+  - path: ND-OWS
+    bytes: 0
+    modified: 1980-01-05 14:01
+    directory: true
+  - path: ND-OWS/OWS-WP
+    bytes: 0
+    modified: 1980-01-05 14:01
+    directory: true
+  - path: ND-OWS/OWS-WP/WP.EXE
+    bytes: 126293
+    modified: 1987-11-23 17:27
+    directory: false
+  - path: ND-OWS/OWS-WP/WP_INIT.KEY
+    bytes: 5120
+    modified: 1980-01-01 02:18
+    directory: false
+  - path: ND-OWS/OWS-WP/WP_INIT.REC
+    bytes: 1028
+    modified: 1987-11-10 11:13
+    directory: false
+  - path: ND-OWS/OWS-WP/WP_CONV.DAT
+    bytes: 4096
+    modified: 1987-11-10 11:13
+    directory: false
+  - path: ND-OWS/OWS-WP/WP_HELP.DAT
+    bytes: 155538
+    modified: 1987-11-10 11:13
+    directory: false
+  - path: ND-OWS/OWS-WP/WP_PRN.DAT
+    bytes: 7190
+    modified: 1987-11-10 11:13
+    directory: false
+  - path: ND-OWS/OWS-WP/SETUP.COM
+    bytes: 18737
+    modified: 1987-11-10 11:13
+    directory: false
+  - path: ND-OWS/OWS-WP/SETPATH.COM
+    bytes: 12359
+    modified: 1987-11-10 11:13
+    directory: false
+  - path: ND-OWS/OWS-WP/WP.KEY
+    bytes: 6144
+    modified: 1988-01-19 17:07
+    directory: false
+  - path: ND-OWS/OWS-WP/WP.REC
+    bytes: 1028
+    modified: 1988-01-19 17:08
+    directory: false
+  - path: NORTEXT
+    bytes: 0
+    modified: 1980-01-05 14:01
+    directory: true
+  - path: NORTEXT/WP_CONV.DAT
+    bytes: 4096
+    modified: 1987-09-23 13:31
+    directory: false
+  - path: COMMAND.COM
+    bytes: 23210
+    modified: 1985-05-14 00:02
+    directory: false
 provenance:
   contributor: gandalf
   originalPath: 100/ND-disk-00127.img

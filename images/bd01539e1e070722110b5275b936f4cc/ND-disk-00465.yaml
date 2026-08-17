@@ -7,6 +7,383 @@ image:
   controller: floppy
 filesystem: dos
 volumeLabel: 30021SV1B01
+dosFiles:
+  - path: MSLOGO.LGD
+    bytes: 2570
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: INSTALL.EXE
+    bytes: 44277
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: INSTALL.INF
+    bytes: 28286
+    modified: 1988-08-16 14:19
+    directory: false
+  - path: KERNEL.EXE
+    bytes: 57072
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: SYSTEM.DRV
+    bytes: 2725
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: COMM.DRV
+    bytes: 4396
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: SOUND.DRV
+    bytes: 5309
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: KBDUS.DRV
+    bytes: 6835
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: KBDFR.DRV
+    bytes: 7429
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: KBDFS.DRV
+    bytes: 7253
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: KBDGR.DRV
+    bytes: 7429
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: KBDIT.DRV
+    bytes: 7069
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: KBDNE.DRV
+    bytes: 7253
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: KBDSP.DRV
+    bytes: 7595
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: KBDUK.DRV
+    bytes: 6979
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: USA.DRV
+    bytes: 3836
+    modified: 1987-11-12 13:28
+    directory: false
+  - path: MOUSE.DRV
+    bytes: 3667
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: NOMOUSE.DRV
+    bytes: 1245
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: EGAHIRES.DRV
+    bytes: 33040
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: FONTHI.FON
+    bytes: 4608
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: FONTHIUS.FON
+    bytes: 5056
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: WIN.CNF
+    bytes: 3984
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: WIN.INI
+    bytes: 2117
+    modified: 1988-08-11 12:06
+    directory: false
+  - path: IBMPS250.DRV
+    bytes: 32720
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: WINOLDAP.MOD
+    bytes: 60144
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: KBDDA.DRV
+    bytes: 7237
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: KBDNO.DRV
+    bytes: 7237
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: KBDPO.DRV
+    bytes: 6823
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: KBDCA.DRV
+    bytes: 7753
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: KBDES.DRV
+    bytes: 8155
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: KBDCW.DRV
+    bytes: 4695
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: EISHRM.DRV
+    bytes: 29680
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: EISHRC.DRV
+    bytes: 29680
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: EISHRR.DRV
+    bytes: 29680
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: EISHR.LGO
+    bytes: 447
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: EISOLDAP.MOD
+    bytes: 61168
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: FONTHIES.FON
+    bytes: 5072
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: FONTHINO.FON
+    bytes: 5072
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: FONTHIPO.FON
+    bytes: 5072
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: FONTHICA.FON
+    bytes: 5072
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: FONTSQES.FON
+    bytes: 5552
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: FONTSQNO.FON
+    bytes: 5552
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: FONTSQPO.FON
+    bytes: 5552
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: FONTSQCA.FON
+    bytes: 5552
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: FONTLOCA.FON
+    bytes: 4544
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: EGA.SYS
+    bytes: 2984
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: EMM.SYS
+    bytes: 54528
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: PS2EMM.SYS
+    bytes: 13008
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: PS2EMM.TXT
+    bytes: 5919
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: REMM.TXT
+    bytes: 1669
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: EMM.TXT
+    bytes: 11870
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: KBDBE.DRV
+    bytes: 7513
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: KBDSF.DRV
+    bytes: 7525
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: KBDSG.DRV
+    bytes: 7501
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: MSMOUSE1.DRV
+    bytes: 2014
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: MSMOUSE2.DRV
+    bytes: 2014
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: LMOUSE.DRV
+    bytes: 3298
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: FONTLO.FON
+    bytes: 4160
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: FONTLOUS.FON
+    bytes: 4528
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: FONTLONO.FON
+    bytes: 4544
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: FONTLOPO.FON
+    bytes: 4544
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: TANDYSND.DRV
+    bytes: 5856
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: TANDYKBD.DRV
+    bytes: 3401
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: TANDYDSP.DRV
+    bytes: 25840
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: TANDYDSP.LGO
+    bytes: 501
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: CGA.DRV
+    bytes: 24784
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: EGAHIBW.DRV
+    bytes: 26848
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: EGALORES.DRV
+    bytes: 30208
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: EGAMONO.DRV
+    bytes: 26960
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: EGAMONO.LGO
+    bytes: 446
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: HERCULES.DRV
+    bytes: 28272
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: HERCULES.LGO
+    bytes: 557
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: OLIMOUSE.DRV
+    bytes: 2086
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: OLIMONO.DRV
+    bytes: 28736
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: OLIMONO.LGO
+    bytes: 651
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: OLIEGC.DRV
+    bytes: 27920
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: OLIDOSD.EXE
+    bytes: 7120
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: OLISYS.DRV
+    bytes: 2794
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: COMPAQ.DRV
+    bytes: 28144
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: IBMPS230.DRV
+    bytes: 26496
+    modified: 1988-01-22 12:00
+    directory: false
+  - path: UK.DRV
+    bytes: 5501
+    modified: 1988-06-06 09:58
+    directory: false
+  - path: SDS.DRV
+    bytes: 6035
+    modified: 1988-06-06 09:59
+    directory: false
+  - path: FRANCE.DRV
+    bytes: 6119
+    modified: 1988-06-06 09:58
+    directory: false
+  - path: NORWAY.DRV
+    bytes: 6029
+    modified: 1988-06-06 09:58
+    directory: false
+  - path: SWEDEN.DRV
+    bytes: 6030
+    modified: 1988-06-06 09:58
+    directory: false
+  - path: DENMARK.DRV
+    bytes: 6031
+    modified: 1988-06-06 09:59
+    directory: false
+  - path: GERMANY.DRV
+    bytes: 6034
+    modified: 1988-06-06 09:58
+    directory: false
+  - path: US.DRV
+    bytes: 5502
+    modified: 1988-06-06 09:58
+    directory: false
+  - path: NMOUSE.DRV
+    bytes: 2919
+    modified: 1988-06-02 10:04
+    directory: false
+  - path: WY700.DRV
+    bytes: 33152
+    modified: 1988-05-26 16:14
+    directory: false
+  - path: WY700.LGO
+    bytes: 468
+    modified: 1988-01-18 16:38
+    directory: false
+  - path: WY700.GRB
+    bytes: 3573
+    modified: 1988-01-18 16:43
+    directory: false
+  - path: W700S.FON
+    bytes: 13120
+    modified: 1988-06-08 17:38
+    directory: false
+  - path: W700T.FON
+    bytes: 5536
+    modified: 1988-06-08 17:38
+    directory: false
 provenance:
   contributor: gandalf
   originalPath: 400/ND-disk-00465.img

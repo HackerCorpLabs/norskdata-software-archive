@@ -7,6 +7,103 @@ image:
   controller: floppy
 filesystem: dos
 volumeLabel: 30025SW2C00
+dosFiles:
+  - path: TD2EN15.FON
+    bytes: 0
+    modified: 1989-03-16 09:22
+    directory: false
+  - path: TD2EN70.FON
+    bytes: 75520
+    modified: 1988-07-20 14:21
+    directory: false
+  - path: TD2US15.FON
+    bytes: 24080
+    modified: 1988-07-21 16:32
+    directory: false
+  - path: TD2NO15.FON
+    bytes: 24080
+    modified: 1988-07-21 16:33
+    directory: false
+  - path: TD2DA15.FON
+    bytes: 24080
+    modified: 1988-07-21 16:34
+    directory: false
+  - path: TD2SW15.FON
+    bytes: 24080
+    modified: 1988-07-21 16:35
+    directory: false
+  - path: TD2GE15.FON
+    bytes: 24080
+    modified: 1988-07-21 16:36
+    directory: false
+  - path: TD2FR15.FON
+    bytes: 24080
+    modified: 1988-07-21 16:37
+    directory: false
+  - path: TD2SD15.FON
+    bytes: 24080
+    modified: 1988-07-21 16:35
+    directory: false
+  - path: TD2US70.FON
+    bytes: 75520
+    modified: 1988-07-20 14:26
+    directory: false
+  - path: TD2DA70.FON
+    bytes: 75520
+    modified: 1988-07-20 14:17
+    directory: false
+  - path: TD2FR70.FON
+    bytes: 75520
+    modified: 1988-07-20 14:22
+    directory: false
+  - path: TD2GE70.FON
+    bytes: 75520
+    modified: 1988-07-20 14:22
+    directory: false
+  - path: TD2NO70.FON
+    bytes: 75520
+    modified: 1988-07-20 13:11
+    directory: false
+  - path: TD2SW70.FON
+    bytes: 75520
+    modified: 1988-07-20 14:25
+    directory: false
+  - path: TD2SD70.FON
+    bytes: 75520
+    modified: 1988-07-20 14:24
+    directory: false
+  - path: TD2EN48.FON
+    bytes: 29200
+    modified: 1988-08-11 20:32
+    directory: false
+  - path: TD2US48.FON
+    bytes: 29200
+    modified: 1988-08-11 20:32
+    directory: false
+  - path: TD2NO48.FON
+    bytes: 29200
+    modified: 1988-08-11 20:33
+    directory: false
+  - path: TD2DA48.FON
+    bytes: 29200
+    modified: 1988-08-11 20:33
+    directory: false
+  - path: TD2SW48.FON
+    bytes: 29200
+    modified: 1988-08-11 20:33
+    directory: false
+  - path: TD2SD48.FON
+    bytes: 29200
+    modified: 1988-08-11 20:33
+    directory: false
+  - path: TD2GE48.FON
+    bytes: 29200
+    modified: 1988-08-11 20:34
+    directory: false
+  - path: TD2FR48.FON
+    bytes: 29200
+    modified: 1988-08-11 20:34
+    directory: false
 provenance:
   contributor: gandalf
   originalPath: 400/ND-disk-00470.img

@@ -6,6 +6,15 @@ image:
   format: raw
   controller: floppy
 filesystem: dos
+dosFiles:
+  - path: KBS402.001
+    bytes: 359766
+    modified: 1991-05-09 11:20
+    directory: false
+  - path: KBS403.001
+    bytes: 359766
+    modified: 1991-05-09 11:28
+    directory: false
 provenance:
   contributor: gandalf
   originalPath: 000/ND-disk-00001.img
