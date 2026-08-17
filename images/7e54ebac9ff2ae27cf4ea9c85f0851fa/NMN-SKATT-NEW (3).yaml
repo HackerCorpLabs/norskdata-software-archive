@@ -1,0 +1,130 @@
+id: img-7e54ebac9ff2
+volumeName: NMN-SKATT-NEW
+md5: 7e54ebac9ff2ae27cf4ea9c85f0851fa
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: GAMES
+      pagesUsed: 81
+  files:
+    - name: ADV-STAT:BRF
+      type: BRF
+      pages: 1
+      bytes: 52
+      userName: GAMES
+      dateCreated: 2105333662
+      lastDateRead: 2123944529
+      lastDateWritten: 2105333670
+      dateCreatedStr: 1981-05-30 13:30:30
+      lastDateReadStr: 1981-10-12 13:09:17
+      lastDateWrittenStr: 1981-05-30 13:30:38
+      bpunValid: null
+    - name: ADV-TR1-TR2:BRF
+      type: BRF
+      pages: 1
+      bytes: 609
+      userName: GAMES
+      dateCreated: 2105333677
+      lastDateRead: 2123944539
+      lastDateWritten: 2105333677
+      dateCreatedStr: 1981-05-30 13:30:45
+      lastDateReadStr: 1981-10-12 13:09:27
+      lastDateWrittenStr: 1981-05-30 13:30:45
+      bpunValid: null
+    - name: ADV-XOR:BRF
+      type: BRF
+      pages: 1
+      bytes: 110
+      userName: GAMES
+      dateCreated: 2105333684
+      lastDateRead: 2123944548
+      lastDateWritten: 2105333685
+      dateCreatedStr: 1981-05-30 13:30:52
+      lastDateReadStr: 1981-10-12 13:09:36
+      lastDateWrittenStr: 1981-05-30 13:30:53
+      bpunValid: null
+    - name: ADV-NORSK-GETIN:BRF
+      type: BRF
+      pages: 1
+      bytes: 1103
+      userName: GAMES
+      dateCreated: 2105333704
+      lastDateRead: 2123944557
+      lastDateWritten: 2105333705
+      dateCreatedStr: 1981-05-30 13:31:08
+      lastDateReadStr: 1981-10-12 13:09:45
+      lastDateWrittenStr: 1981-05-30 13:31:09
+      bpunValid: null
+    - name: ADV-OPEN:BRF
+      type: BRF
+      pages: 1
+      bytes: 451
+      userName: GAMES
+      dateCreated: 2105333715
+      lastDateRead: 2123944567
+      lastDateWritten: 2105333722
+      dateCreatedStr: 1981-05-30 13:31:19
+      lastDateReadStr: 1981-10-12 13:09:55
+      lastDateWrittenStr: 1981-05-30 13:31:26
+      bpunValid: null
+    - name: ADV-EXIT:BRF
+      type: BRF
+      pages: 1
+      bytes: 42
+      userName: GAMES
+      dateCreated: 2105333729
+      lastDateRead: 2123944580
+      lastDateWritten: 2105333730
+      dateCreatedStr: 1981-05-30 13:31:33
+      lastDateReadStr: 1981-10-12 13:10:04
+      lastDateWrittenStr: 1981-05-30 13:31:34
+      bpunValid: null
+    - name: ADV-8ERR:BRF
+      type: BRF
+      pages: 1
+      bytes: 637
+      userName: GAMES
+      dateCreated: 2105333736
+      lastDateRead: 2123944590
+      lastDateWritten: 2105333736
+      dateCreatedStr: 1981-05-30 13:31:40
+      lastDateReadStr: 1981-10-12 13:10:14
+      lastDateWrittenStr: 1981-05-30 13:31:40
+      bpunValid: null
+    - name: SKATTEJAKT:PROG
+      type: PROG
+      pages: 65
+      bytes: 131584
+      userName: GAMES
+      dateCreated: 2105333872
+      lastDateRead: 2388696032
+      lastDateWritten: 2118314290
+      dateCreatedStr: 1981-05-30 13:33:48
+      lastDateReadStr: 1985-09-16 09:47:32
+      lastDateWrittenStr: 1981-09-01 14:36:50
+      bpunValid: null
+provenance:
+  contributor: Frode
+  originalPath: Disk Images/NMN-SKATT-NEW (3).img
+  dateImaged: 2026-04-08
+  importedAt: 2026-08-17T14:19:49.716Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-7e54ebac9ff2
+  syncStatus: pending

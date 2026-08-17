@@ -1,0 +1,48 @@
+id: nd-10336-d-d1-0d88ddb1
+volumeName: ND-10336D
+md5: 0d88ddb1fa0b6e63d790b1d6f2b433e3
+product:
+  version: D
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: bpun
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 57
+  files:
+    - name: DEBUGGER:BPUN
+      type: BPUN
+      pages: 53
+      bytes: 107060
+      userName: FLOPPY-USER
+      dateCreated: 2265535225
+      lastDateRead: 2267581777
+      lastDateWritten: 2267581729
+      dateCreatedStr: 1983-12-04 21:11:57
+      lastDateReadStr: 1983-12-20 08:53:17
+      lastDateWrittenStr: 1983-12-20 08:52:33
+      bpunValid: true
+provenance:
+  contributor: Datormuseum
+  originalPath: DiskImages2/DISK33.img
+  dateImaged: 2023-10-02
+  importedAt: 2026-08-17T14:19:18.993Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10336-d-d1-0d88ddb1
+  syncStatus: pending

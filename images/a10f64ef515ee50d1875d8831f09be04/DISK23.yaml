@@ -1,0 +1,41 @@
+id: img-a10f64ef515e
+volumeName: null
+md5: a10f64ef515ee50d1875d8831f09be04
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+filesystem: ndfs
+condition:
+  status: damaged
+  parser: ndfs
+  parserError: Invalid NDFS master block
+  ndNamesFound: 11
+  ndNameSamples:
+    - PATCH-OUT:OUT
+    - SYMBOLS:FADM
+    - MACM-AREA:DATA
+    - SINTRAN:DATA
+    - REFERENCE:FADM
+    - MBOLS:FADM
+    - OUT:OUT
+    - PATCH-SINTRAN:SYST
+  recovery: null
+provenance:
+  contributor: Datormuseum
+  originalPath: broken/DISK23.IMG
+  dateImaged: 2022-08-15
+  importedAt: 2026-08-17T14:17:48.020Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-a10f64ef515e
+  syncStatus: pending

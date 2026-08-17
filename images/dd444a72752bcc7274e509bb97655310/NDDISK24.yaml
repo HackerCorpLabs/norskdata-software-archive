@@ -1,0 +1,46 @@
+id: img-dd444a72752b
+volumeName: ND
+md5: dd444a72752bcc7274e509bb97655310
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 4
+  files:
+    - name: PATCH-SPOOL-HEAD:MODE
+      type: MODE
+      pages: 2
+      bytes: 2320
+      userName: FLOPPY-USER
+      dateCreated: 2294484646
+      lastDateRead: 2299317707
+      lastDateWritten: 2294590830
+      dateCreatedStr: 1984-03-01 16:58:38
+      lastDateReadStr: 1984-04-06 12:55:11
+      lastDateWrittenStr: 1984-03-02 10:53:46
+      bpunValid: null
+provenance:
+  contributor: Datormuseum
+  originalPath: DiskImages/NDDISK24.img
+  dateImaged: 2023-10-02
+  importedAt: 2026-08-17T14:18:38.851Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-dd444a72752b
+  syncStatus: pending

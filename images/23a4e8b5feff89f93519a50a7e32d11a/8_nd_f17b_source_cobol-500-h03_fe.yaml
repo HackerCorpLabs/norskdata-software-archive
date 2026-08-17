@@ -1,0 +1,380 @@
+id: img-23a4e8b5feff
+volumeName: COBOL-500
+md5: 23a4e8b5feff89f93519a50a7e32d11a
+image:
+  sizeBytes: 1259520
+  format: raw
+  controller: floppy
+  totalPages: 615
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users: []
+  files:
+    - name: T1-XREF:SYMB
+      type: SYMB
+      pages: 4
+      bytes: 6291
+      userName: ""
+      dateCreated: 2373893081
+      lastDateRead: 2423179498
+      lastDateWritten: 2373893081
+      dateCreatedStr: 1985-05-31 11:47:25
+      lastDateReadStr: 1986-01-23 12:35:42
+      lastDateWrittenStr: 1985-05-31 11:47:25
+      bpunValid: null
+    - name: T1-ERRORS:SYMB
+      type: SYMB
+      pages: 9
+      bytes: 16479
+      userName: ""
+      dateCreated: 2373893088
+      lastDateRead: 2423179500
+      lastDateWritten: 2422397424
+      dateCreatedStr: 1985-05-31 11:47:32
+      lastDateReadStr: 1986-01-23 12:35:44
+      lastDateWrittenStr: 1986-01-17 13:39:48
+      bpunValid: null
+    - name: T1-TRAP:SYMB
+      type: SYMB
+      pages: 4
+      bytes: 6778
+      userName: ""
+      dateCreated: 2373893092
+      lastDateRead: 2423179502
+      lastDateWritten: 2373893092
+      dateCreatedStr: 1985-05-31 11:47:36
+      lastDateReadStr: 1986-01-23 12:35:46
+      lastDateWrittenStr: 1985-05-31 11:47:36
+      bpunValid: null
+    - name: T1-WORDS:SYMB
+      type: SYMB
+      pages: 10
+      bytes: 19537
+      userName: ""
+      dateCreated: 2373893095
+      lastDateRead: 2423179504
+      lastDateWritten: 2373893095
+      dateCreatedStr: 1985-05-31 11:47:39
+      lastDateReadStr: 1986-01-23 12:35:48
+      lastDateWrittenStr: 1985-05-31 11:47:39
+      bpunValid: null
+    - name: T1-STEXT:SYMB
+      type: SYMB
+      pages: 13
+      bytes: 25917
+      userName: ""
+      dateCreated: 2373893100
+      lastDateRead: 2423179508
+      lastDateWritten: 2421485613
+      dateCreatedStr: 1985-05-31 11:47:44
+      lastDateReadStr: 1986-01-23 12:35:52
+      lastDateWrittenStr: 1986-01-10 15:00:45
+      bpunValid: null
+    - name: T1-TABLES:SYMB
+      type: SYMB
+      pages: 10
+      bytes: 20210
+      userName: ""
+      dateCreated: 2373893105
+      lastDateRead: 2423179511
+      lastDateWritten: 2373893105
+      dateCreatedStr: 1985-05-31 11:47:49
+      lastDateReadStr: 1986-01-23 12:35:55
+      lastDateWrittenStr: 1985-05-31 11:47:49
+      bpunValid: null
+    - name: T1-500-FCB:SYMB
+      type: SYMB
+      pages: 3
+      bytes: 4615
+      userName: ""
+      dateCreated: 2373893125
+      lastDateRead: 2423179513
+      lastDateWritten: 2373893125
+      dateCreatedStr: 1985-05-31 11:48:05
+      lastDateReadStr: 1986-01-23 12:35:57
+      lastDateWrittenStr: 1985-05-31 11:48:05
+      bpunValid: null
+    - name: T1-500-OPERAND:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 165
+      userName: ""
+      dateCreated: 2373893128
+      lastDateRead: 2423179515
+      lastDateWritten: 2373893128
+      dateCreatedStr: 1985-05-31 11:48:08
+      lastDateReadStr: 1986-01-23 12:35:59
+      lastDateWrittenStr: 1985-05-31 11:48:08
+      bpunValid: null
+    - name: T1-TRUE:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 748
+      userName: ""
+      dateCreated: 2373893145
+      lastDateRead: 2423179529
+      lastDateWritten: 2373893145
+      dateCreatedStr: 1985-05-31 11:48:25
+      lastDateReadStr: 1986-01-23 12:36:09
+      lastDateWrittenStr: 1985-05-31 11:48:25
+      bpunValid: null
+    - name: T1-ERROR-NO:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 219
+      userName: ""
+      dateCreated: 2373893147
+      lastDateRead: 2423179533
+      lastDateWritten: 2373893147
+      dateCreatedStr: 1985-05-31 11:48:27
+      lastDateReadStr: 1986-01-23 12:36:13
+      lastDateWrittenStr: 1985-05-31 11:48:27
+      bpunValid: null
+    - name: T1-EXPONENT:SYMB
+      type: SYMB
+      pages: 6
+      bytes: 10501
+      userName: ""
+      dateCreated: 2373893150
+      lastDateRead: 2423179536
+      lastDateWritten: 2373893150
+      dateCreatedStr: 1985-05-31 11:48:30
+      lastDateReadStr: 1986-01-23 12:36:16
+      lastDateWrittenStr: 1985-05-31 11:48:30
+      bpunValid: null
+    - name: T1-SOFT-EXPONENT:SYMB
+      type: SYMB
+      pages: 6
+      bytes: 10792
+      userName: ""
+      dateCreated: 2373893153
+      lastDateRead: 2423179538
+      lastDateWritten: 2373893153
+      dateCreatedStr: 1985-05-31 11:48:33
+      lastDateReadStr: 1986-01-23 12:36:18
+      lastDateWrittenStr: 1985-05-31 11:48:33
+      bpunValid: null
+    - name: T1-MONITOR:SYMB
+      type: SYMB
+      pages: 3
+      bytes: 5783
+      userName: ""
+      dateCreated: 2373893166
+      lastDateRead: 2423179549
+      lastDateWritten: 2373893166
+      dateCreatedStr: 1985-05-31 11:48:46
+      lastDateReadStr: 1986-01-23 12:36:29
+      lastDateWrittenStr: 1985-05-31 11:48:46
+      bpunValid: null
+    - name: T2-COBOL:SYMB
+      type: SYMB
+      pages: 25
+      bytes: 49904
+      userName: ""
+      dateCreated: 2401541333
+      lastDateRead: 2423179554
+      lastDateWritten: 2422417257
+      dateCreatedStr: 1985-12-18 09:51:21
+      lastDateReadStr: 1986-01-23 12:36:34
+      lastDateWrittenStr: 1986-01-17 18:29:41
+      bpunValid: null
+    - name: T2-COMMON:SYMB
+      type: SYMB
+      pages: 7
+      bytes: 12967
+      userName: ""
+      dateCreated: 2401541381
+      lastDateRead: 2423179558
+      lastDateWritten: 2401541381
+      dateCreatedStr: 1985-12-18 09:52:05
+      lastDateReadStr: 1986-01-23 12:36:38
+      lastDateWrittenStr: 1985-12-18 09:52:05
+      bpunValid: null
+    - name: T2-SCREEN:SYMB
+      type: SYMB
+      pages: 24
+      bytes: 48706
+      userName: ""
+      dateCreated: 2373893464
+      lastDateRead: 2423179560
+      lastDateWritten: 2422405001
+      dateCreatedStr: 1985-05-31 11:53:24
+      lastDateReadStr: 1986-01-23 12:36:40
+      lastDateWrittenStr: 1986-01-17 15:30:09
+      bpunValid: null
+    - name: T2-GLOBAL:SYMB
+      type: SYMB
+      pages: 3
+      bytes: 4100
+      userName: ""
+      dateCreated: 2373893471
+      lastDateRead: 2423179563
+      lastDateWritten: 2401590216
+      dateCreatedStr: 1985-05-31 11:53:31
+      lastDateReadStr: 1986-01-23 12:36:43
+      lastDateWrittenStr: 1985-12-18 21:47:08
+      bpunValid: null
+    - name: T2-ENV-DATA:SYMB
+      type: SYMB
+      pages: 56
+      bytes: 113274
+      userName: ""
+      dateCreated: 2401541404
+      lastDateRead: 2423179565
+      lastDateWritten: 2401541404
+      dateCreatedStr: 1985-12-18 09:52:28
+      lastDateReadStr: 1986-01-23 12:36:45
+      lastDateWrittenStr: 1985-12-18 09:52:28
+      bpunValid: null
+    - name: T1-DISAM:SYMB
+      type: SYMB
+      pages: 49
+      bytes: 98553
+      userName: ""
+      dateCreated: 2374817074
+      lastDateRead: 2423179572
+      lastDateWritten: 2374817075
+      dateCreatedStr: 1985-06-06 13:20:50
+      lastDateReadStr: 1986-01-23 12:36:52
+      lastDateWrittenStr: 1985-06-06 13:20:51
+      bpunValid: null
+    - name: T2-PARSE:SYMB
+      type: SYMB
+      pages: 68
+      bytes: 138316
+      userName: ""
+      dateCreated: 2401541453
+      lastDateRead: 2423179577
+      lastDateWritten: 2422397243
+      dateCreatedStr: 1985-12-18 09:53:13
+      lastDateReadStr: 1986-01-23 12:36:57
+      lastDateWrittenStr: 1986-01-17 13:36:59
+      bpunValid: null
+    - name: T1-COBXX:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1850
+      userName: ""
+      dateCreated: 2382016885
+      lastDateRead: 2423179590
+      lastDateWritten: 2382017186
+      dateCreatedStr: 1985-07-29 11:05:53
+      lastDateReadStr: 1986-01-23 12:37:06
+      lastDateWrittenStr: 1985-07-29 11:10:34
+      bpunValid: null
+    - name: T2-GENERATE:SYMB
+      type: SYMB
+      pages: 81
+      bytes: 165448
+      userName: ""
+      dateCreated: 2401541505
+      lastDateRead: 2423179593
+      lastDateWritten: 2401541505
+      dateCreatedStr: 1985-12-18 09:54:01
+      lastDateReadStr: 1986-01-23 12:37:09
+      lastDateWrittenStr: 1985-12-18 09:54:01
+      bpunValid: null
+    - name: T2-CODE-GENERATE:SYMB
+      type: SYMB
+      pages: 85
+      bytes: 172495
+      userName: ""
+      dateCreated: 2401541563
+      lastDateRead: 2423179600
+      lastDateWritten: 2422416493
+      dateCreatedStr: 1985-12-18 09:54:59
+      lastDateReadStr: 1986-01-23 12:37:16
+      lastDateWrittenStr: 1986-01-17 18:17:45
+      bpunValid: null
+    - name: T2-LIBRARY:SYMB
+      type: SYMB
+      pages: 65
+      bytes: 131317
+      userName: ""
+      dateCreated: 2401543601
+      lastDateRead: 2423179609
+      lastDateWritten: 2401543601
+      dateCreatedStr: 1985-12-18 10:22:49
+      lastDateReadStr: 1986-01-23 12:37:25
+      lastDateWrittenStr: 1985-12-18 10:22:49
+      bpunValid: null
+    - name: T1-MON-NAMES:NRF
+      type: NRF
+      pages: 1
+      bytes: 912
+      userName: ""
+      dateCreated: 2373893169
+      lastDateRead: 2422417958
+      lastDateWritten: 2373893170
+      dateCreatedStr: 1985-05-31 11:48:49
+      lastDateReadStr: 1986-01-17 18:40:38
+      lastDateWrittenStr: 1985-05-31 11:48:50
+      bpunValid: null
+    - name: T2-SORT-MERGE-D:NRF
+      type: NRF
+      pages: 12
+      bytes: 23967
+      userName: ""
+      dateCreated: 2401543660
+      lastDateRead: 2422930164
+      lastDateWritten: 2401550793
+      dateCreatedStr: 1985-12-18 10:23:44
+      lastDateReadStr: 1986-01-21 15:43:52
+      lastDateWrittenStr: 1985-12-18 12:07:09
+      bpunValid: null
+    - name: T2-ISAM-LIBRARY:NRF
+      type: NRF
+      pages: 30
+      bytes: 60602
+      userName: ""
+      dateCreated: 2422417736
+      lastDateRead: 2422418465
+      lastDateWritten: 2422417736
+      dateCreatedStr: 1986-01-17 18:37:08
+      lastDateReadStr: 1986-01-17 18:48:33
+      lastDateWrittenStr: 1986-01-17 18:37:08
+      bpunValid: null
+    - name: T2-COBOL:GO
+      type: GO
+      pages: 1
+      bytes: 1006
+      userName: ""
+      dateCreated: 2401541778
+      lastDateRead: 2423606705
+      lastDateWritten: 2423606705
+      dateCreatedStr: 1985-12-18 09:58:18
+      lastDateReadStr: 1986-01-26 20:54:49
+      lastDateWrittenStr: 1986-01-26 20:54:49
+      bpunValid: null
+    - name: T2-LIBRARY:GO
+      type: GO
+      pages: 1
+      bytes: 1301
+      userName: ""
+      dateCreated: 2401544087
+      lastDateRead: 2423606731
+      lastDateWritten: 2422418329
+      dateCreatedStr: 1985-12-18 10:30:23
+      lastDateReadStr: 1986-01-26 20:55:11
+      lastDateWrittenStr: 1986-01-17 18:46:25
+      bpunValid: null
+provenance:
+  contributor: Paal
+  originalPath: bad/8_nd_f17b_source_cobol-500-h03_fe.img
+  dateImaged: 2023-10-20
+  importedAt: 2026-08-17T14:19:54.825Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-23a4e8b5feff
+  syncStatus: pending

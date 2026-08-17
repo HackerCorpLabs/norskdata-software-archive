@@ -1,0 +1,41 @@
+id: img-5b69130e5602
+volumeName: null
+md5: 5b69130e56024f3c21e4b252dd6e218c
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+filesystem: ndfs
+condition:
+  status: damaged
+  parser: ndfs
+  parserError: Invalid NDFS master block
+  ndNamesFound: 22
+  ndNameSamples:
+    - SYMBOL-1-LIST:SYMB
+    - SYMBOL-2-LIST:SYMB
+    - FILSYS-SYMBOLS:SYMB
+    - LIBRARY-MARKS:SYMB
+    - FMAC:PROG
+    - DMAC:BPUN
+    - F32-FMAC:PROG
+    - DMAC-1915E:BPUN
+  recovery: null
+provenance:
+  contributor: Datormuseum
+  originalPath: DiskImages/NDDISK12.img
+  dateImaged: 2023-10-02
+  importedAt: 2026-08-17T14:18:17.045Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-5b69130e5602
+  syncStatus: pending

@@ -1,0 +1,72 @@
+id: nd-10309-e-d1-20e7dc2b
+volumeName: ND-10309E
+md5: 20e7dc2b17480b35d321fefc30f60076
+product:
+  version: E
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 111
+  files:
+    - name: PLANC-100-C:PROG
+      type: PROG
+      pages: 80
+      bytes: 169984
+      userName: FLOPPY-USER
+      dateCreated: 2288450062
+      lastDateRead: 2290408074
+      lastDateWritten: 2288450067
+      dateCreatedStr: 1984-01-19 15:40:14
+      lastDateReadStr: 1984-02-02 13:42:10
+      lastDateWrittenStr: 1984-01-19 15:40:19
+      bpunValid: null
+    - name: PLANC-1BANK-E:BRF
+      type: BRF
+      pages: 13
+      bytes: 26326
+      userName: FLOPPY-USER
+      dateCreated: 2288450258
+      lastDateRead: 2290408140
+      lastDateWritten: 2288450259
+      dateCreatedStr: 1984-01-19 15:43:18
+      lastDateReadStr: 1984-02-02 13:43:12
+      lastDateWrittenStr: 1984-01-19 15:43:19
+      bpunValid: null
+    - name: PLANC-2BANK-E:BRF
+      type: BRF
+      pages: 14
+      bytes: 28519
+      userName: FLOPPY-USER
+      dateCreated: 2288450467
+      lastDateRead: 2290408184
+      lastDateWritten: 2288450469
+      dateCreatedStr: 1984-01-19 15:46:35
+      lastDateReadStr: 1984-02-02 13:43:56
+      lastDateWrittenStr: 1984-01-19 15:46:37
+      bpunValid: null
+provenance:
+  contributor: Datormuseum
+  originalPath: DiskImages/NDDISK20.img
+  dateImaged: 2023-10-02
+  importedAt: 2026-08-17T14:18:31.198Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10309-e-d1-20e7dc2b
+  syncStatus: pending

@@ -1,0 +1,168 @@
+id: nd-30007-b-d1-e5ab7fd1
+volumeName: ND-30007B
+md5: e5ab7fd132e1f7c9841b3b87fbb7a23b
+product:
+  version: B
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: flomon
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 128
+  files:
+    - name: INSTALL-GUIDE:SYMB
+      type: SYMB
+      pages: 5
+      bytes: 2827
+      userName: FLOPPY-USER
+      dateCreated: 2315701898
+      lastDateRead: 2318343049
+      lastDateWritten: 2318194565
+      dateCreatedStr: 1984-08-03 12:58:10
+      lastDateReadStr: 1984-08-23 17:46:09
+      lastDateWrittenStr: 1984-08-22 13:30:05
+      bpunValid: null
+    - name: INIT-HP-PLOTTER:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 905
+      userName: FLOPPY-USER
+      dateCreated: 2318050890
+      lastDateRead: 2318343057
+      lastDateWritten: 2318342151
+      dateCreatedStr: 1984-08-21 10:25:10
+      lastDateReadStr: 1984-08-23 17:46:17
+      lastDateWrittenStr: 1984-08-23 17:32:07
+      bpunValid: null
+    - name: SAMPLE-PROGRAM:SYMB
+      type: SYMB
+      pages: 3
+      bytes: 4499
+      userName: FLOPPY-USER
+      dateCreated: 2315701941
+      lastDateRead: 2318343060
+      lastDateWritten: 2318342084
+      dateCreatedStr: 1984-08-03 12:58:53
+      lastDateReadStr: 1984-08-23 17:46:20
+      lastDateWrittenStr: 1984-08-23 17:31:04
+      bpunValid: null
+    - name: HPLIB-48-1BANK:BRF
+      type: BRF
+      pages: 12
+      bytes: 22593
+      userName: FLOPPY-USER
+      dateCreated: 2318051011
+      lastDateRead: 2318343161
+      lastDateWritten: 2318182902
+      dateCreatedStr: 1984-08-21 10:27:03
+      lastDateReadStr: 1984-08-23 17:47:57
+      lastDateWrittenStr: 1984-08-22 10:39:54
+      bpunValid: null
+    - name: HPLIB-48-2BANK:BRF
+      type: BRF
+      pages: 12
+      bytes: 23479
+      userName: FLOPPY-USER
+      dateCreated: 2318051041
+      lastDateRead: 2318343177
+      lastDateWritten: 2318184604
+      dateCreatedStr: 1984-08-21 10:27:33
+      lastDateReadStr: 1984-08-23 17:48:09
+      lastDateWrittenStr: 1984-08-22 11:02:28
+      bpunValid: null
+    - name: HPLIB-48-FTN:BRF
+      type: BRF
+      pages: 16
+      bytes: 32568
+      userName: FLOPPY-USER
+      dateCreated: 2318051057
+      lastDateRead: 2318343189
+      lastDateWritten: 2318181851
+      dateCreatedStr: 1984-08-21 10:27:49
+      lastDateReadStr: 1984-08-23 17:48:21
+      lastDateWrittenStr: 1984-08-22 10:23:27
+      bpunValid: null
+    - name: HPLIB-32-1BANK:BRF
+      type: BRF
+      pages: 11
+      bytes: 22366
+      userName: FLOPPY-USER
+      dateCreated: 2318051112
+      lastDateRead: 2318343206
+      lastDateWritten: 2318183944
+      dateCreatedStr: 1984-08-21 10:28:40
+      lastDateReadStr: 1984-08-23 17:48:38
+      lastDateWrittenStr: 1984-08-22 10:56:08
+      bpunValid: null
+    - name: HPLIB-32-2BANK:BRF
+      type: BRF
+      pages: 12
+      bytes: 23251
+      userName: FLOPPY-USER
+      dateCreated: 2318051123
+      lastDateRead: 2318343218
+      lastDateWritten: 2318185107
+      dateCreatedStr: 1984-08-21 10:28:51
+      lastDateReadStr: 1984-08-23 17:48:50
+      lastDateWrittenStr: 1984-08-22 11:10:19
+      bpunValid: null
+    - name: HPLIB-32-FTN:BRF
+      type: BRF
+      pages: 16
+      bytes: 32565
+      userName: FLOPPY-USER
+      dateCreated: 2318051159
+      lastDateRead: 2318343236
+      lastDateWritten: 2318183635
+      dateCreatedStr: 1984-08-21 10:29:23
+      lastDateReadStr: 1984-08-23 17:49:04
+      lastDateWrittenStr: 1984-08-22 10:51:19
+      bpunValid: null
+    - name: SAMPLE-PROGRAM:BRF
+      type: BRF
+      pages: 1
+      bytes: 1258
+      userName: FLOPPY-USER
+      dateCreated: 2318051404
+      lastDateRead: 2318343254
+      lastDateWritten: 2318342359
+      dateCreatedStr: 1984-08-21 10:33:12
+      lastDateReadStr: 1984-08-23 17:49:22
+      lastDateWrittenStr: 1984-08-23 17:35:23
+      bpunValid: null
+    - name: SAMPLE-PROGRAM:PROG
+      type: PROG
+      pages: 27
+      bytes: 55296
+      userName: FLOPPY-USER
+      dateCreated: 2318342027
+      lastDateRead: 2318343258
+      lastDateWritten: 2318342347
+      dateCreatedStr: 1984-08-23 17:30:11
+      lastDateReadStr: 1984-08-23 17:49:26
+      lastDateWrittenStr: 1984-08-23 17:35:11
+      bpunValid: null
+provenance:
+  contributor: Datormuseum
+  originalPath: DiskImages/NDDISK23.img
+  dateImaged: 2023-10-02
+  importedAt: 2026-08-17T14:18:36.974Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-30007-b-d1-e5ab7fd1
+  syncStatus: pending

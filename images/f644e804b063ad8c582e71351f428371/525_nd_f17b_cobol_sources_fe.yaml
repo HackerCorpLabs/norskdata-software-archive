@@ -1,0 +1,250 @@
+id: img-f644e804b063
+volumeName: ND
+md5: f644e804b063ad8c582e71351f428371
+image:
+  sizeBytes: 1261568
+  format: raw
+  controller: floppy
+  totalPages: 616
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 571
+  files:
+    - name: CBM999:SYMB
+      type: SYMB
+      pages: 13
+      bytes: 12411
+      userName: FLOPPY-USER
+      dateCreated: 2450322080
+      lastDateRead: 2455936762
+      lastDateWritten: 2451349092
+      dateCreatedStr: 1986-08-06 15:10:32
+      lastDateReadStr: 1986-09-17 09:59:58
+      lastDateWrittenStr: 1986-08-14 09:57:36
+      bpunValid: null
+    - name: CBM99A:SYMB
+      type: SYMB
+      pages: 11
+      bytes: 20773
+      userName: FLOPPY-USER
+      dateCreated: 2450324462
+      lastDateRead: 2455937031
+      lastDateWritten: 2451349124
+      dateCreatedStr: 1986-08-06 15:47:46
+      lastDateReadStr: 1986-09-17 10:00:07
+      lastDateWrittenStr: 1986-08-14 09:58:04
+      bpunValid: null
+    - name: CB428D:SYMB
+      type: SYMB
+      pages: 75
+      bytes: 74232
+      userName: FLOPPY-USER
+      dateCreated: 2450171722
+      lastDateRead: 2455937043
+      lastDateWritten: 2451486565
+      dateCreatedStr: 1986-08-05 10:29:10
+      lastDateReadStr: 1986-09-17 10:00:19
+      lastDateWrittenStr: 1986-08-15 11:29:37
+      bpunValid: null
+    - name: CBM354:SYMB
+      type: SYMB
+      pages: 10
+      bytes: 9907
+      userName: FLOPPY-USER
+      dateCreated: 2450305979
+      lastDateRead: 2455937072
+      lastDateWritten: 2451486709
+      dateCreatedStr: 1986-08-06 11:14:59
+      lastDateReadStr: 1986-09-17 10:00:48
+      lastDateWrittenStr: 1986-08-15 11:31:53
+      bpunValid: null
+    - name: CBM002:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 1624
+      userName: FLOPPY-USER
+      dateCreated: 2450187726
+      lastDateRead: 2455937078
+      lastDateWritten: 2451348794
+      dateCreatedStr: 1986-08-05 14:23:14
+      lastDateReadStr: 1986-09-17 10:00:54
+      lastDateWrittenStr: 1986-08-14 09:52:58
+      bpunValid: null
+    - name: CBM040:SYMB
+      type: SYMB
+      pages: 5
+      bytes: 8881
+      userName: FLOPPY-USER
+      dateCreated: 2450192002
+      lastDateRead: 2455937082
+      lastDateWritten: 2451348911
+      dateCreatedStr: 1986-08-05 15:26:02
+      lastDateReadStr: 1986-09-17 10:00:58
+      lastDateWrittenStr: 1986-08-14 09:54:47
+      bpunValid: null
+    - name: CBM060:SYMB
+      type: SYMB
+      pages: 10
+      bytes: 18745
+      userName: FLOPPY-USER
+      dateCreated: 2450198772
+      lastDateRead: 2455937091
+      lastDateWritten: 2451348939
+      dateCreatedStr: 1986-08-05 17:03:52
+      lastDateReadStr: 1986-09-17 10:01:03
+      lastDateWrittenStr: 1986-08-14 09:55:11
+      bpunValid: null
+    - name: CBM089:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 3589
+      userName: FLOPPY-USER
+      dateCreated: 2450199914
+      lastDateRead: 2455937099
+      lastDateWritten: 2451348961
+      dateCreatedStr: 1986-08-05 17:21:42
+      lastDateReadStr: 1986-09-17 10:01:11
+      lastDateWrittenStr: 1986-08-14 09:55:33
+      bpunValid: null
+    - name: CBM097:SYMB
+      type: SYMB
+      pages: 4
+      bytes: 7441
+      userName: FLOPPY-USER
+      dateCreated: 2450200240
+      lastDateRead: 2455937103
+      lastDateWritten: 2451348980
+      dateCreatedStr: 1986-08-05 17:26:48
+      lastDateReadStr: 1986-09-17 10:01:15
+      lastDateWrittenStr: 1986-08-14 09:55:52
+      bpunValid: null
+    - name: CBM108:SYMB
+      type: SYMB
+      pages: 99
+      bytes: 200434
+      userName: FLOPPY-USER
+      dateCreated: 2450200643
+      lastDateRead: 2455937113
+      lastDateWritten: 2450301866
+      dateCreatedStr: 1986-08-05 17:33:03
+      lastDateReadStr: 1986-09-17 10:01:25
+      lastDateWrittenStr: 1986-08-06 10:14:42
+      bpunValid: null
+    - name: CBM136:SYMB
+      type: SYMB
+      pages: 5
+      bytes: 4446
+      userName: FLOPPY-USER
+      dateCreated: 2450302344
+      lastDateRead: 2455937147
+      lastDateWritten: 2451349007
+      dateCreatedStr: 1986-08-06 10:22:08
+      lastDateReadStr: 1986-09-17 10:01:59
+      lastDateWrittenStr: 1986-08-14 09:56:15
+      bpunValid: null
+    - name: CBM142:SYMB
+      type: SYMB
+      pages: 5
+      bytes: 8515
+      userName: FLOPPY-USER
+      dateCreated: 2450303214
+      lastDateRead: 2455937157
+      lastDateWritten: 2451349025
+      dateCreatedStr: 1986-08-06 10:35:46
+      lastDateReadStr: 1986-09-17 10:02:05
+      lastDateWrittenStr: 1986-08-14 09:56:33
+      bpunValid: null
+    - name: CBM998:SYMB
+      type: SYMB
+      pages: 11
+      bytes: 21632
+      userName: FLOPPY-USER
+      dateCreated: 2450317764
+      lastDateRead: 2455937166
+      lastDateWritten: 2451349073
+      dateCreatedStr: 1986-08-06 14:07:04
+      lastDateReadStr: 1986-09-17 10:02:14
+      lastDateWrittenStr: 1986-08-14 09:57:17
+      bpunValid: null
+    - name: CBM007:SYMB
+      type: SYMB
+      pages: 292
+      bytes: 331417
+      userName: FLOPPY-USER
+      dateCreated: 2450317918
+      lastDateRead: 2455937179
+      lastDateWritten: 2451348885
+      dateCreatedStr: 1986-08-06 14:09:30
+      lastDateReadStr: 1986-09-17 10:02:27
+      lastDateWrittenStr: 1986-08-14 09:54:21
+      bpunValid: null
+    - name: BENCH-19AUG:LOG
+      type: LOG
+      pages: 4
+      bytes: 6747
+      userName: FLOPPY-USER
+      dateCreated: 2452035782
+      lastDateRead: 2455937286
+      lastDateWritten: 2452036656
+      dateCreatedStr: 1986-08-19 17:35:06
+      lastDateReadStr: 1986-09-17 10:04:06
+      lastDateWrittenStr: 1986-08-19 17:48:48
+      bpunValid: null
+    - name: COMPALL:MODE
+      type: MODE
+      pages: 2
+      bytes: 2480
+      userName: FLOPPY-USER
+      dateCreated: 2450428202
+      lastDateRead: 2455937292
+      lastDateWritten: 2451348639
+      dateCreatedStr: 1986-08-07 09:04:42
+      lastDateReadStr: 1986-09-17 10:04:12
+      lastDateWrittenStr: 1986-08-14 09:50:31
+      bpunValid: null
+    - name: RUNJOB-1:MODE
+      type: MODE
+      pages: 1
+      bytes: 689
+      userName: FLOPPY-USER
+      dateCreated: 2450427340
+      lastDateRead: 2455937296
+      lastDateWritten: 2452167008
+      dateCreatedStr: 1986-08-07 08:55:12
+      lastDateReadStr: 1986-09-17 10:04:16
+      lastDateWrittenStr: 1986-08-20 17:37:32
+      bpunValid: null
+    - name: LOAD-CB428D:MODE
+      type: MODE
+      pages: 1
+      bytes: 475
+      userName: FLOPPY-USER
+      dateCreated: 2450579884
+      lastDateRead: 2455937298
+      lastDateWritten: 2452166625
+      dateCreatedStr: 1986-08-08 14:06:44
+      lastDateReadStr: 1986-09-17 10:04:18
+      lastDateWrittenStr: 1986-08-20 17:31:33
+      bpunValid: null
+provenance:
+  contributor: Paal
+  originalPath: good/525_nd_f17b_cobol_sources_fe.img
+  dateImaged: 2023-10-20
+  importedAt: 2026-08-17T14:19:55.246Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-f644e804b063
+  syncStatus: pending

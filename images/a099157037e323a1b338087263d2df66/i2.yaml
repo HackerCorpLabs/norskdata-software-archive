@@ -1,0 +1,111 @@
+id: img-a099157037e3
+volumeName: null
+md5: a099157037e323a1b338087263d2df66
+image:
+  sizeBytes: 737280
+  format: raw
+  controller: floppy
+filesystem: dos
+volumeLabel: 30210NO2A00
+dosFiles:
+  - path: BIN
+    bytes: 0
+    modified: 1990-11-01 17:13
+    directory: true
+  - path: BIN/DA
+    bytes: 0
+    modified: 1990-11-01 17:14
+    directory: true
+  - path: BIN/DA/TD2DA15.FON
+    bytes: 29184
+    modified: 1990-08-17 14:23
+    directory: false
+  - path: BIN/DA/TD2DA25.FON
+    bytes: 29184
+    modified: 1990-09-24 14:35
+    directory: false
+  - path: BIN/DA/TD2DA48.FON
+    bytes: 36864
+    modified: 1990-08-20 09:49
+    directory: false
+  - path: BIN/DA/TD2DA70.FON
+    bytes: 79360
+    modified: 1990-08-20 10:27
+    directory: false
+  - path: BIN/DA/TD2DA84.FON
+    bytes: 29184
+    modified: 1990-08-20 11:50
+    directory: false
+  - path: BIN/EN
+    bytes: 0
+    modified: 1990-11-01 17:14
+    directory: true
+  - path: BIN/EN/TD2EN15.FON
+    bytes: 29184
+    modified: 1990-08-17 14:22
+    directory: false
+  - path: BIN/EN/TD2EN25.FON
+    bytes: 29184
+    modified: 1990-08-17 15:09
+    directory: false
+  - path: BIN/EN/TD2EN48.FON
+    bytes: 36864
+    modified: 1990-08-20 09:49
+    directory: false
+  - path: BIN/EN/TD2EN70.FON
+    bytes: 79360
+    modified: 1990-08-20 10:26
+    directory: false
+  - path: BIN/EN/TD2EN84.FON
+    bytes: 29184
+    modified: 1990-08-20 11:49
+    directory: false
+  - path: BIN/SW
+    bytes: 0
+    modified: 1990-11-01 17:18
+    directory: true
+  - path: BIN/SW/TD2SW15.FON
+    bytes: 29184
+    modified: 1990-08-17 14:23
+    directory: false
+  - path: BIN/SW/TD2SW25.FON
+    bytes: 29184
+    modified: 1990-08-17 15:09
+    directory: false
+  - path: BIN/SW/TD2SW48.FON
+    bytes: 36864
+    modified: 1990-08-20 09:49
+    directory: false
+  - path: BIN/SW/TD2SW70.FON
+    bytes: 79360
+    modified: 1990-08-20 10:27
+    directory: false
+  - path: BIN/SW/TD2SW84.FON
+    bytes: 29184
+    modified: 1990-08-20 11:50
+    directory: false
+provenance:
+  contributor: Ronny Hansen
+  originalPath: winlink/i2.img
+  dateImaged: 2024-09-17
+  importedAt: 2026-08-17T14:22:45.897Z
+imagingLogs:
+  - i1.log
+  - i3.log
+  - i4.log
+  - i5.log
+  - i6.log
+  - i2.log
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-a099157037e3
+  syncStatus: pending

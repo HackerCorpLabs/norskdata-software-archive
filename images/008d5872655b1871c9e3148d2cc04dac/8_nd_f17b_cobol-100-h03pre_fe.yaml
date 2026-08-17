@@ -1,0 +1,82 @@
+id: img-008d5872655b
+volumeName: ND-COBOL
+md5: 008d5872655b1871c9e3148d2cc04dac
+image:
+  sizeBytes: 1261568
+  format: raw
+  controller: floppy
+  totalPages: 616
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 260
+  files:
+    - name: COBOL-100-H03PRE:PROG
+      type: PROG
+      pages: 106
+      bytes: 595968
+      userName: FLOPPY-USER
+      dateCreated: 2401825048
+      lastDateRead: 2420963952
+      lastDateWritten: 2401825048
+      dateCreatedStr: 1985-12-20 15:04:24
+      lastDateReadStr: 1986-01-06 15:41:48
+      lastDateWrittenStr: 1985-12-20 15:04:24
+      bpunValid: null
+    - name: COBOL-1B-H03PRE:BRF
+      type: BRF
+      pages: 72
+      bytes: 146260
+      userName: FLOPPY-USER
+      dateCreated: 2401804675
+      lastDateRead: 2420964007
+      lastDateWritten: 2401804918
+      dateCreatedStr: 1985-12-20 10:06:03
+      lastDateReadStr: 1986-01-06 15:42:39
+      lastDateWrittenStr: 1985-12-20 10:09:54
+      bpunValid: null
+    - name: COBOL-2B-H03PRE:BRF
+      type: BRF
+      pages: 74
+      bytes: 150145
+      userName: FLOPPY-USER
+      dateCreated: 2401804941
+      lastDateRead: 2423187813
+      lastDateWritten: 2401805173
+      dateCreatedStr: 1985-12-20 10:10:13
+      lastDateReadStr: 1986-01-23 14:37:37
+      lastDateWrittenStr: 1985-12-20 10:13:53
+      bpunValid: null
+    - name: COBOL-ERRORS-H03:DATA
+      type: DATA
+      pages: 5
+      bytes: 9864
+      userName: FLOPPY-USER
+      dateCreated: 2386876452
+      lastDateRead: 2420964067
+      lastDateWritten: 2386876480
+      dateCreatedStr: 1985-09-02 13:32:36
+      lastDateReadStr: 1986-01-06 15:43:35
+      lastDateWrittenStr: 1985-09-02 13:33:00
+      bpunValid: null
+provenance:
+  contributor: Paal
+  originalPath: good/8_nd_f17b_cobol-100-h03pre_fe.img
+  dateImaged: 2023-10-20
+  importedAt: 2026-08-17T14:19:56.964Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-008d5872655b
+  syncStatus: pending

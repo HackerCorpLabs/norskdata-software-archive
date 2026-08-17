@@ -1,0 +1,62 @@
+id: nd-210871-a00-d1-052a6ff0
+volumeName: 210871A00-XX-01S
+md5: 052a6ff0f328efa605222701af9530db
+product:
+  version: A00
+  diskNumber: 1
+  language: XX
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 95
+  files:
+    - name: UNIQUICK-A00:MCRO
+      type: MCRO
+      pages: 2
+      bytes: 1722
+      userName: FLOPPY-USER
+      dateCreated: 2436667237
+      lastDateRead: 2441914067
+      lastDateWritten: 2441912042
+      dateCreatedStr: 1986-04-30 09:29:37
+      lastDateReadStr: 1986-06-06 10:27:19
+      lastDateWrittenStr: 1986-06-06 09:59:42
+      bpunValid: null
+    - name: UNIQUICK-S-A00:BRF
+      type: BRF
+      pages: 90
+      bytes: 177546
+      userName: FLOPPY-USER
+      dateCreated: 2394737807
+      lastDateRead: 2439045698
+      lastDateWritten: 2438513232
+      dateCreatedStr: 1985-10-30 12:50:15
+      lastDateReadStr: 1986-05-16 14:09:02
+      lastDateWrittenStr: 1986-05-12 12:09:16
+      bpunValid: null
+provenance:
+  contributor: Datormuseum
+  originalPath: DiskImages/DISK4.img
+  dateImaged: 2023-10-02
+  importedAt: 2026-08-17T14:18:01.147Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-210871-a00-d1-052a6ff0
+  syncStatus: pending

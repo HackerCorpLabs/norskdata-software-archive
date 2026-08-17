@@ -1,0 +1,41 @@
+id: img-a64b8d1c2f0f
+volumeName: null
+md5: a64b8d1c2f0f646d0213c7aa34096dcd
+image:
+  sizeBytes: 307712
+  format: raw
+  controller: floppy
+filesystem: ndfs
+condition:
+  status: damaged
+  parser: ndfs
+  parserError: Block 152 out of range
+  ndNamesFound: 14
+  ndNameSamples:
+    - FIA:FIA
+    - BBG:DBK
+    - EBK:GBK
+    - IBL:JBM
+    - MBN:OBR
+    - PBR:RBR
+    - TBS:UBT
+    - WBT:YBT
+  recovery: null
+provenance:
+  contributor: Datormuseum
+  originalPath: DiskImages/DISK12.img
+  dateImaged: 2023-10-02
+  importedAt: 2026-08-17T14:17:54.242Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-a64b8d1c2f0f
+  syncStatus: pending

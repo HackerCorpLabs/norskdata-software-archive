@@ -1,0 +1,48 @@
+id: img-83eb937198c2
+volumeName: null
+md5: 83eb937198c26a304d482a69890c765b
+image:
+  sizeBytes: 1250304
+  format: raw
+  controller: floppy
+filesystem: ndfs
+condition:
+  status: damaged
+  parser: ndfs
+  parserError: Block 20545 out of range
+  ndNamesFound: 58
+  ndNameSamples:
+    - PACK-12-6030:NFS
+    - IN-MAIN-D00:PROG
+    - PROG:CXCO
+    - DESCRIPTION-FILE:DESC
+    - IN-MAIN-D00:XCOM
+    - X-COM-1079:MODE
+    - NFS-SERVICE:DOM
+    - NFS-FS:DOM
+  recovery: null
+provenance:
+  contributor: Carl-Victor
+  originalPath: Floppies/5.img
+  dateImaged: 2022-11-04
+  importedAt: 2026-08-17T14:17:47.584Z
+imagingLogs:
+  - readme.txt
+photos:
+  disk:
+    - 5.jpg
+  set:
+    - 1.jpg
+    - 2.jpg
+    - 3.jpg
+    - 4.jpg
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-83eb937198c2
+  syncStatus: pending

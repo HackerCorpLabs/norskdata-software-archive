@@ -1,0 +1,57 @@
+id: nd-10374-c-d3-74f5990f
+volumeName: ND-10374C-PART3
+md5: 74f5990ff38c66988456e1ca59a97091
+product:
+  version: C
+  diskNumber: 3
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: flomon
+filesystem: ndfs
+ndfs:
+  users:
+    - name: UTILITY
+      pagesUsed: 94
+  files:
+    - name: COS-FA-SERV-100:PROG
+      type: PROG
+      pages: 92
+      bytes: 238080
+      userName: UTILITY
+      dateCreated: 2326588663
+      lastDateRead: null
+      lastDateWritten: 2326588672
+      dateCreatedStr: 1984-10-22 14:51:55
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-10-22 14:52:00
+      bpunValid: null
+provenance:
+  contributor: Ronny Hansen
+  originalPath: ND-10374C COSMOS Basic Module/ND-10374C-PART3.img
+  dateImaged: 2024-09-17
+  importedAt: 2026-08-17T14:19:59.529Z
+imagingLogs:
+  - ND-10374C-PART2.log
+  - ND-10374C1-PART1.log
+  - README.txt
+  - ND-10374C-PART3.log
+photos:
+  disk: []
+  set:
+    - ND-10374C-PART2-PHOTO.png
+    - ND-10374C-PART3-PHOTO.png
+    - ND-10374C1-PART1-PHOTO.png
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10374-c-d3-74f5990f
+  syncStatus: pending

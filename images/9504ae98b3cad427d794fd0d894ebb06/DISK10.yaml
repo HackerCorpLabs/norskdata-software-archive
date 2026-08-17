@@ -1,0 +1,41 @@
+id: img-9504ae98b3ca
+volumeName: null
+md5: 9504ae98b3cad427d794fd0d894ebb06
+image:
+  sizeBytes: 313856
+  format: raw
+  controller: floppy
+filesystem: ndfs
+condition:
+  status: damaged
+  parser: ndfs
+  parserError: Block 1360 out of range
+  ndNamesFound: 16
+  ndNameSamples:
+    - PLANC-TEST:PLNC
+    - VHV:VHN
+    - AHA:AXAL
+    - USERS:LIST
+    - LX6VV:VK
+    - PJP:NJO
+    - LJN:JJM
+    - LJL:JJK
+  recovery: null
+provenance:
+  contributor: Datormuseum
+  originalPath: DiskImages/DISK10.img
+  dateImaged: 2023-10-02
+  importedAt: 2026-08-17T14:17:50.994Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-9504ae98b3ca
+  syncStatus: pending

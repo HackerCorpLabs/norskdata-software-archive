@@ -1,0 +1,85 @@
+id: nd-10188-e-d1-fb180612
+volumeName: ND-10188E-PART1
+md5: fb1806121d423570218bfeb3a4030eb3
+product:
+  version: E
+  diskNumber: 1
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 119
+  files:
+    - name: FOCUS-DEF-ENG-E:PROG
+      type: PROG
+      pages: 87
+      bytes: 188416
+      userName: FLOPPY-USER
+      dateCreated: 2292237741
+      lastDateRead: 2301008097
+      lastDateWritten: 2295911278
+      dateCreatedStr: 1984-02-16 12:22:45
+      lastDateReadStr: 1984-04-19 09:35:33
+      lastDateWrittenStr: 1984-03-12 13:13:46
+      bpunValid: null
+    - name: FOCUS-ENVIRON-EN:FORM
+      type: FORM
+      pages: 2
+      bytes: 4096
+      userName: FLOPPY-USER
+      dateCreated: 2286481745
+      lastDateRead: 2301008347
+      lastDateWritten: 2286482204
+      dateCreatedStr: 1984-01-04 15:05:17
+      lastDateReadStr: 1984-04-19 09:39:27
+      lastDateWrittenStr: 1984-01-04 15:12:28
+      bpunValid: null
+    - name: FOCUS-ENVIRON-NO:FORM
+      type: FORM
+      pages: 2
+      bytes: 4096
+      userName: FLOPPY-USER
+      dateCreated: 2286482257
+      lastDateRead: 2288034856
+      lastDateWritten: 2286482357
+      dateCreatedStr: 1984-01-04 15:13:17
+      lastDateReadStr: 1984-01-16 10:16:40
+      lastDateWrittenStr: 1984-01-04 15:14:53
+      bpunValid: null
+    - name: UE-ERMSG-ENG-A01:ERR
+      type: ERR
+      pages: 25
+      bytes: 49920
+      userName: FLOPPY-USER
+      dateCreated: 2291460104
+      lastDateRead: 2301008224
+      lastDateWritten: 2291460104
+      dateCreatedStr: 1984-02-10 14:32:08
+      lastDateReadStr: 1984-04-19 09:37:32
+      lastDateWrittenStr: 1984-02-10 14:32:08
+      bpunValid: null
+provenance:
+  contributor: Datormuseum
+  originalPath: DiskImages/NDDISK26.img
+  dateImaged: 2023-10-02
+  importedAt: 2026-08-17T14:18:42.275Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10188-e-d1-fb180612
+  syncStatus: pending

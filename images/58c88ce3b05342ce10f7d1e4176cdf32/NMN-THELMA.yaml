@@ -1,0 +1,82 @@
+id: img-58c88ce3b053
+volumeName: NMN-THELMA
+md5: 58c88ce3b05342ce10f7d1e4176cdf32
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: NILS-M-NILSSEN
+      pagesUsed: 47
+  files:
+    - name: RT-AVIS:SYMB
+      type: SYMB
+      pages: 12
+      bytes: 24407
+      userName: NILS-M-NILSSEN
+      dateCreated: 2233404023
+      lastDateRead: 2426834504
+      lastDateWritten: 2326733125
+      dateCreatedStr: 1983-04-15 16:41:55
+      lastDateReadStr: 1986-02-19 08:57:08
+      lastDateWrittenStr: 1984-10-23 18:05:05
+      bpunValid: null
+    - name: RT-COMMENTS-AVIS:SYMB
+      type: SYMB
+      pages: 13
+      bytes: 15733
+      userName: NILS-M-NILSSEN
+      dateCreated: 2187379193
+      lastDateRead: 2426834510
+      lastDateWritten: 2326712421
+      dateCreatedStr: 1982-09-16 12:07:57
+      lastDateReadStr: 1986-02-19 08:57:14
+      lastDateWrittenStr: 1984-10-23 13:01:37
+      bpunValid: null
+    - name: RT-CONVERT:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1374
+      userName: NILS-M-NILSSEN
+      dateCreated: 2226052069
+      lastDateRead: 2426834518
+      lastDateWritten: 2234046361
+      dateCreatedStr: 1983-02-23 13:47:37
+      lastDateReadStr: 1986-02-19 08:57:22
+      lastDateWrittenStr: 1983-04-20 13:30:25
+      bpunValid: null
+    - name: RT-EDIT:SYMB
+      type: SYMB
+      pages: 16
+      bytes: 31389
+      userName: NILS-M-NILSSEN
+      dateCreated: 2226063392
+      lastDateRead: 2426834521
+      lastDateWritten: 2330781892
+      dateCreatedStr: 1983-02-23 16:32:32
+      lastDateReadStr: 1986-02-19 08:57:25
+      lastDateWrittenStr: 1984-11-22 14:35:04
+      bpunValid: null
+provenance:
+  contributor: Frode
+  originalPath: Disk Images/NMN-THELMA.img
+  dateImaged: 2026-04-08
+  importedAt: 2026-08-17T14:19:49.854Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-58c88ce3b053
+  syncStatus: pending

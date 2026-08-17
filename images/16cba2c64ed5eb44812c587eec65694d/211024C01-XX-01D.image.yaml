@@ -1,0 +1,74 @@
+id: nd-211024-c01-d1-16cba2c6
+volumeName: 211024C01-XX-01D
+md5: 16cba2c64ed5eb44812c587eec65694d
+product:
+  version: C01
+  diskNumber: 1
+  language: XX
+image:
+  sizeBytes: 1261568
+  format: raw
+  controller: floppy
+  totalPages: 616
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 160
+  files:
+    - name: S3-CONFIG-C00:PROG
+      type: PROG
+      pages: 89
+      bytes: 184320
+      userName: FLOPPY-USER
+      dateCreated: 2523579080
+      lastDateRead: null
+      lastDateWritten: 2523579722
+      dateCreatedStr: 1987-09-21 12:11:08
+      lastDateReadStr: null
+      lastDateWrittenStr: 1987-09-21 12:21:10
+      bpunValid: null
+    - name: DDBTABLES-E07:VTM
+      type: VTM
+      pages: 16
+      bytes: 32448
+      userName: FLOPPY-USER
+      dateCreated: 2505490123
+      lastDateRead: 2524747702
+      lastDateWritten: 2506394059
+      dateCreatedStr: 1987-05-11 11:59:11
+      lastDateReadStr: 1987-09-30 09:30:54
+      lastDateWrittenStr: 1987-05-18 08:39:11
+      bpunValid: null
+    - name: NOTS-SERVICE-C00:PROG
+      type: PROG
+      pages: 51
+      bytes: 86016
+      userName: FLOPPY-USER
+      dateCreated: 2523579084
+      lastDateRead: null
+      lastDateWritten: 2523579739
+      dateCreatedStr: 1987-09-21 12:11:12
+      lastDateReadStr: null
+      lastDateWrittenStr: 1987-09-21 12:21:27
+      bpunValid: null
+provenance:
+  contributor: unknown
+  originalPath: SINTRAN III-VSX K-Version/211024C01-XX-01D.image
+  dateImaged: 2022-08-10
+  importedAt: 2026-08-17T14:22:52.694Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-211024-c01-d1-16cba2c6
+  syncStatus: pending

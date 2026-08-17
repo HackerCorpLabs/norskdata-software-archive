@@ -1,0 +1,83 @@
+id: img-ad61fff8b3ca
+volumeName: null
+md5: ad61fff8b3ca98c6eb265f31ae817198
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+filesystem: ndfs
+condition:
+  status: damaged
+  parser: ndfs
+  parserError: Invalid NDFS master block
+  ndNamesFound: 4
+  ndNameSamples:
+    - YHH:HHH
+    - UZR:IHI
+    - SIBINTER:DATA
+    - RXSIBINTER:DATA
+  recovery:
+    status: recovered
+    layout:
+      object: 150
+      user: 152
+      bit: 77
+    filesRecovered: 4
+    namesConfirmedInBytes: 4
+    confirmRatio: 1
+    acceptedBy: own-bytes
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 94
+  files:
+    - name: SIBAS-SERV-MX
+      type: BPUN
+      pages: 0
+      bytes: 0
+      userName: FLOPPY-USER
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: SIBINTER-MX
+      type: BPUN
+      pages: 0
+      bytes: 0
+      userName: FLOPPY-USER
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: SIBAS-BACKEND-B
+      type: BRF
+      pages: 0
+      bytes: 0
+      userName: FLOPPY-USER
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: SIBAS-BACKEND-B
+      type: LOAD
+      pages: 0
+      bytes: 0
+      userName: FLOPPY-USER
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+provenance:
+  contributor: Datormuseum
+  originalPath: broken/DISK29.IMG
+  dateImaged: 2022-08-15
+  importedAt: 2026-08-17T14:17:48.467Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-ad61fff8b3ca
+  syncStatus: pending

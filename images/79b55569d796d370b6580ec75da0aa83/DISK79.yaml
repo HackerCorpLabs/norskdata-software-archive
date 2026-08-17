@@ -1,0 +1,46 @@
+id: img-79b55569d796
+volumeName: null
+md5: 79b55569d796d370b6580ec75da0aa83
+image:
+  sizeBytes: 4096
+  format: raw
+  controller: floppy
+filesystem: backup
+backupSet:
+  kind: backup
+  name: PANG
+  label: BELI-UNIQUE
+  runDate: 1985-02-18
+  system: ""
+  fileCount: 1
+  staleCount: 0
+  firstFile: FIL-VIS-3:PROG
+  lastFile: FIL-VIS-3:PROG
+  endsMidFile: true
+  fileListHash: d1bf4aaf
+  imageBytes: 4096
+backupFiles:
+  - name: FIL-VIS-3:PROG
+    bytes: 3072
+    created: 1985-02-18
+    system: null
+    continued: true
+    stale: false
+provenance:
+  contributor: Datormuseum
+  originalPath: broken/DISK79.IMG
+  dateImaged: 2022-08-15
+  importedAt: 2026-08-17T14:17:49.134Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-79b55569d796
+  syncStatus: pending

@@ -1,0 +1,228 @@
+id: nd-10058-o-d1-9835fd23
+volumeName: ND-10058O
+md5: 9835fd230b057293aa95307064e70ce3
+product:
+  version: O
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: SYSTEM
+      pagesUsed: 140
+  files:
+    - name: N10-SIMULA-O:BPUN
+      type: BPUN
+      pages: 57
+      bytes: 115103
+      userName: SYSTEM
+      dateCreated: 2254097170
+      lastDateRead: 2257888531
+      lastDateWritten: 2254097189
+      dateCreatedStr: 1983-09-13 12:44:18
+      lastDateReadStr: 1983-10-10 10:20:19
+      lastDateWrittenStr: 1983-09-13 12:44:37
+      bpunValid: true
+    - name: SIMRT3-O:SIM
+      type: SIM
+      pages: 1
+      bytes: 2048
+      userName: SYSTEM
+      dateCreated: 2254097179
+      lastDateRead: 2257888566
+      lastDateWritten: 2254097372
+      dateCreatedStr: 1983-09-13 12:44:27
+      lastDateReadStr: 1983-10-10 10:20:54
+      lastDateWrittenStr: 1983-09-13 12:47:28
+      bpunValid: null
+    - name: SIMBASE3-O:SIM
+      type: SIM
+      pages: 3
+      bytes: 6144
+      userName: SYSTEM
+      dateCreated: 2254097179
+      lastDateRead: 2257888577
+      lastDateWritten: 2254097376
+      dateCreatedStr: 1983-09-13 12:44:27
+      lastDateReadStr: 1983-10-10 10:21:01
+      lastDateWrittenStr: 1983-09-13 12:47:32
+      bpunValid: null
+    - name: SIMSET3-O:SIM
+      type: SIM
+      pages: 2
+      bytes: 3072
+      userName: SYSTEM
+      dateCreated: 2254097180
+      lastDateRead: 2257888584
+      lastDateWritten: 2254097383
+      dateCreatedStr: 1983-09-13 12:44:28
+      lastDateReadStr: 1983-10-10 10:21:08
+      lastDateWrittenStr: 1983-09-13 12:47:39
+      bpunValid: null
+    - name: SIMULA3-O:SIM
+      type: SIM
+      pages: 3
+      bytes: 5632
+      userName: SYSTEM
+      dateCreated: 2254097180
+      lastDateRead: 2257888591
+      lastDateWritten: 2254097388
+      dateCreatedStr: 1983-09-13 12:44:28
+      lastDateReadStr: 1983-10-10 10:21:15
+      lastDateWrittenStr: 1983-09-13 12:47:44
+      bpunValid: null
+    - name: S-LOAD-O:PROG
+      type: PROG
+      pages: 1
+      bytes: 836
+      userName: SYSTEM
+      dateCreated: 2254097181
+      lastDateRead: 2257888599
+      lastDateWritten: 2254097402
+      dateCreatedStr: 1983-09-13 12:44:29
+      lastDateReadStr: 1983-10-10 10:21:23
+      lastDateWrittenStr: 1983-09-13 12:47:58
+      bpunValid: null
+    - name: SIMERR-O:DATA
+      type: DATA
+      pages: 2
+      bytes: 2585
+      userName: SYSTEM
+      dateCreated: 2254097182
+      lastDateRead: 2257888605
+      lastDateWritten: 2254097413
+      dateCreatedStr: 1983-09-13 12:44:30
+      lastDateReadStr: 1983-10-10 10:21:29
+      lastDateWrittenStr: 1983-09-13 12:48:05
+      bpunValid: null
+    - name: SIMRAND3-O:SIM
+      type: SIM
+      pages: 5
+      bytes: 9216
+      userName: SYSTEM
+      dateCreated: 2254097183
+      lastDateRead: 2257888612
+      lastDateWritten: 2254097419
+      dateCreatedStr: 1983-09-13 12:44:31
+      lastDateReadStr: 1983-10-10 10:21:36
+      lastDateWrittenStr: 1983-09-13 12:48:11
+      bpunValid: null
+    - name: SIMERC-O:DATA
+      type: DATA
+      pages: 3
+      bytes: 4674
+      userName: SYSTEM
+      dateCreated: 2254097184
+      lastDateRead: 2257888620
+      lastDateWritten: 2254097429
+      dateCreatedStr: 1983-09-13 12:44:32
+      lastDateReadStr: 1983-10-10 10:21:44
+      lastDateWrittenStr: 1983-09-13 12:48:21
+      bpunValid: null
+    - name: SIMMAT-O:SIM
+      type: SIM
+      pages: 3
+      bytes: 4958
+      userName: SYSTEM
+      dateCreated: 2254097185
+      lastDateRead: 2257888628
+      lastDateWritten: 2254097436
+      dateCreatedStr: 1983-09-13 12:44:33
+      lastDateReadStr: 1983-10-10 10:21:52
+      lastDateWrittenStr: 1983-09-13 12:48:28
+      bpunValid: null
+    - name: SIMDEBUG-O:PROG
+      type: PROG
+      pages: 29
+      bytes: 58378
+      userName: SYSTEM
+      dateCreated: 2254097185
+      lastDateRead: 2257888635
+      lastDateWritten: 2254097444
+      dateCreatedStr: 1983-09-13 12:44:33
+      lastDateReadStr: 1983-10-10 10:21:59
+      lastDateWrittenStr: 1983-09-13 12:48:36
+      bpunValid: null
+    - name: DRC-LOAD-O:MODE
+      type: MODE
+      pages: 1
+      bytes: 1596
+      userName: SYSTEM
+      dateCreated: 2254097186
+      lastDateRead: 2257888670
+      lastDateWritten: 2254097552
+      dateCreatedStr: 1983-09-13 12:44:34
+      lastDateReadStr: 1983-10-10 10:22:30
+      lastDateWrittenStr: 1983-09-13 12:50:16
+      bpunValid: null
+    - name: UTIL-SCREEN:SIM
+      type: SIM
+      pages: 10
+      bytes: 20480
+      userName: SYSTEM
+      dateCreated: 2254097186
+      lastDateRead: 2257888688
+      lastDateWritten: 2254097497
+      dateCreatedStr: 1983-09-13 12:44:34
+      lastDateReadStr: 1983-10-10 10:22:48
+      lastDateWrittenStr: 1983-09-13 12:49:25
+      bpunValid: null
+    - name: UTIL-SCREEN-ASM:SIM
+      type: SIM
+      pages: 1
+      bytes: 599
+      userName: SYSTEM
+      dateCreated: 2254097187
+      lastDateRead: 2257888708
+      lastDateWritten: 2254097519
+      dateCreatedStr: 1983-09-13 12:44:35
+      lastDateReadStr: 1983-10-10 10:23:04
+      lastDateWrittenStr: 1983-09-13 12:49:47
+      bpunValid: null
+    - name: UTIL-SCREEN-DEB:SIM
+      type: SIM
+      pages: 1
+      bytes: 617
+      userName: SYSTEM
+      dateCreated: 2254097187
+      lastDateRead: 2257888721
+      lastDateWritten: 2254097526
+      dateCreatedStr: 1983-09-13 12:44:35
+      lastDateReadStr: 1983-10-10 10:23:17
+      lastDateWrittenStr: 1983-09-13 12:49:54
+      bpunValid: null
+    - name: UTIL-OVERLAY:SIM
+      type: SIM
+      pages: 1
+      bytes: 653
+      userName: SYSTEM
+      dateCreated: 2254097188
+      lastDateRead: 2257888729
+      lastDateWritten: 2254097537
+      dateCreatedStr: 1983-09-13 12:44:36
+      lastDateReadStr: 1983-10-10 10:23:25
+      lastDateWrittenStr: 1983-09-13 12:50:01
+      bpunValid: null
+provenance:
+  contributor: Datormuseum
+  originalPath: DiskImages/NDDISK22.img
+  dateImaged: 2023-10-02
+  importedAt: 2026-08-17T14:18:34.829Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10058-o-d1-9835fd23
+  syncStatus: pending

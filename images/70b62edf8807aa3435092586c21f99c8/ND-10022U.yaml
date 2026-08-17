@@ -1,0 +1,146 @@
+id: nd-10022-u-d1-70b62edf
+volumeName: ND-10022U
+md5: 70b62edf8807aa3435092586c21f99c8
+product:
+  version: U
+image:
+  sizeBytes: 1182720
+  format: raw
+  controller: floppy
+  totalPages: 578
+  pageSize: 2048
+  bootFormat: flomon
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 128
+  files:
+    - name: COP-VERIFY-2035E:BPUN
+      type: BPUN
+      pages: 11
+      bytes: 20644
+      userName: FLOPPY-USER
+      dateCreated: 2258304346
+      lastDateRead: 2288056974
+      lastDateWritten: 2258304377
+      dateCreatedStr: 1983-10-13 15:53:26
+      lastDateReadStr: 1984-01-16 15:42:14
+      lastDateWrittenStr: 1983-10-13 15:53:57
+      bpunValid: true
+    - name: FLOPPY-MON-2010G:BPUN
+      type: BPUN
+      pages: 3
+      bytes: 4314
+      userName: FLOPPY-USER
+      dateCreated: 2169437832
+      lastDateRead: 2522526496
+      lastDateWritten: 2169437833
+      dateCreatedStr: 1982-05-07 15:58:08
+      lastDateReadStr: 1987-09-13 11:12:32
+      lastDateWrittenStr: 1982-05-07 15:58:09
+      bpunValid: true
+    - name: FILESYS-INV-K:BPUN
+      type: BPUN
+      pages: 31
+      bytes: 39492
+      userName: FLOPPY-USER
+      dateCreated: 2198902879
+      lastDateRead: 2289080093
+      lastDateWritten: 2258304217
+      dateCreatedStr: 1982-12-08 09:33:31
+      lastDateReadStr: 1984-01-24 09:28:29
+      lastDateWrittenStr: 1983-10-13 15:51:25
+      bpunValid: true
+    - name: MCOPY-HP-1650G:BPUN
+      type: BPUN
+      pages: 4
+      bytes: 6716
+      userName: FLOPPY-USER
+      dateCreated: 2107040640
+      lastDateRead: 2281724082
+      lastDateWritten: 2107040709
+      dateCreatedStr: 1981-06-11 14:14:00
+      lastDateReadStr: null
+      lastDateWrittenStr: 1981-06-11 14:15:05
+      bpunValid: true
+    - name: MCOPY-TANB-1649L:BPUN
+      type: BPUN
+      pages: 15
+      bytes: 30506
+      userName: FLOPPY-USER
+      dateCreated: 2252510038
+      lastDateRead: 2288057017
+      lastDateWritten: 2262088107
+      dateCreatedStr: 1983-09-01 09:13:22
+      lastDateReadStr: 1984-01-16 15:42:57
+      lastDateWrittenStr: 1983-11-10 11:38:43
+      bpunValid: true
+    - name: WINCH-TO-FLOPP-B:BPUN
+      type: BPUN
+      pages: 22
+      bytes: 43246
+      userName: FLOPPY-USER
+      dateCreated: 2288560288
+      lastDateRead: 2288561245
+      lastDateWritten: 2288561245
+      dateCreatedStr: 1984-01-20 10:34:32
+      lastDateReadStr: 1984-01-20 10:49:29
+      lastDateWrittenStr: 1984-01-20 10:49:29
+      bpunValid: true
+    - name: FLOPP-TO-WINCH-B:BPUN
+      type: BPUN
+      pages: 23
+      bytes: 47062
+      userName: FLOPPY-USER
+      dateCreated: 2288560497
+      lastDateRead: 2288560498
+      lastDateWritten: 2288560498
+      dateCreatedStr: 1984-01-20 10:37:49
+      lastDateReadStr: 1984-01-20 10:37:50
+      lastDateWrittenStr: 1984-01-20 10:37:50
+      bpunValid: true
+    - name: MEMTOF:BPUN
+      type: BPUN
+      pages: 2
+      bytes: 2612
+      userName: FLOPPY-USER
+      dateCreated: 2198263397
+      lastDateRead: 2281702864
+      lastDateWritten: 2261161700
+      dateCreatedStr: 1982-12-03 13:25:37
+      lastDateReadStr: null
+      lastDateWrittenStr: 1983-11-03 09:27:36
+      bpunValid: true
+    - name: DUMPFL:BPUN
+      type: BPUN
+      pages: 9
+      bytes: 16829
+      userName: FLOPPY-USER
+      dateCreated: 2198263598
+      lastDateRead: 2281702912
+      lastDateWritten: 2259858433
+      dateCreatedStr: 1982-12-03 13:28:46
+      lastDateReadStr: null
+      lastDateWrittenStr: 1983-10-25 11:16:01
+      bpunValid: true
+provenance:
+  contributor: Ronny Hansen
+  originalPath: ND-10022U/ND-10022U.img
+  dateImaged: 2024-09-17
+  importedAt: 2026-08-17T14:20:04.604Z
+imagingLogs:
+  - README.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10022-u-d1-70b62edf
+  syncStatus: pending

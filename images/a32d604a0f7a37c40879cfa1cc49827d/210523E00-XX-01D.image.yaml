@@ -1,0 +1,290 @@
+id: nd-210523-e00-d1-a32d604a
+volumeName: 210523E00-XX-01D
+md5: a32d604a0f7a37c40879cfa1cc49827d
+product:
+  version: E00
+  diskNumber: 1
+  language: XX
+image:
+  sizeBytes: 1261568
+  format: raw
+  controller: floppy
+  totalPages: 616
+  pageSize: 2048
+  bootFormat: flomon
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 387
+  files:
+    - name: TPE-MON-100-A02:BPUN
+      type: BPUN
+      pages: 28
+      bytes: 56182
+      userName: FLOPPY-USER
+      dateCreated: 2461850290
+      lastDateRead: 2467756486
+      lastDateWritten: 2461850290
+      dateCreatedStr: 1986-10-30 13:42:50
+      lastDateReadStr: 1986-12-11 15:39:06
+      lastDateWrittenStr: 1986-10-30 13:42:50
+      bpunValid: true
+    - name: CACHE-100-A00:TEST
+      type: TEST
+      pages: 11
+      bytes: 21504
+      userName: FLOPPY-USER
+      dateCreated: 2459910587
+      lastDateRead: 2467756501
+      lastDateWritten: 2459910592
+      dateCreatedStr: 1986-10-15 20:06:59
+      lastDateReadStr: 1986-12-11 15:39:21
+      lastDateWrittenStr: 1986-10-15 20:07:00
+      bpunValid: null
+    - name: CACHE-110-A00:TEST
+      type: TEST
+      pages: 22
+      bytes: 43520
+      userName: FLOPPY-USER
+      dateCreated: 2460001890
+      lastDateRead: 2467756507
+      lastDateWritten: 2460001891
+      dateCreatedStr: 1986-10-16 10:25:34
+      lastDateReadStr: 1986-12-11 15:39:27
+      lastDateWrittenStr: 1986-10-16 10:25:35
+      bpunValid: null
+    - name: COLOUR-TERM-A00:TEST
+      type: TEST
+      pages: 9
+      bytes: 17920
+      userName: FLOPPY-USER
+      dateCreated: 2461969551
+      lastDateRead: 2467756520
+      lastDateWritten: 2461969552
+      dateCreatedStr: 1986-10-31 10:50:15
+      lastDateReadStr: 1986-12-11 15:39:40
+      lastDateWrittenStr: 1986-10-31 10:50:16
+      bpunValid: null
+    - name: CONFIGURATIO-D00:TEST
+      type: TEST
+      pages: 18
+      bytes: 36864
+      userName: FLOPPY-USER
+      dateCreated: 2467763938
+      lastDateRead: 2467764017
+      lastDateWritten: 2467763940
+      dateCreatedStr: 1986-12-11 17:27:34
+      lastDateReadStr: 1986-12-11 17:28:49
+      lastDateWrittenStr: 1986-12-11 17:27:36
+      bpunValid: null
+    - name: DISC-TEMA-I11:TEST
+      type: TEST
+      pages: 35
+      bytes: 71680
+      userName: FLOPPY-USER
+      dateCreated: 2463542441
+      lastDateRead: 2467756544
+      lastDateWritten: 2463542441
+      dateCreatedStr: 1986-11-11 10:50:41
+      lastDateReadStr: 1986-12-11 15:40:00
+      lastDateWrittenStr: 1986-11-11 10:50:41
+      bpunValid: null
+    - name: FLOPPY-STREA-C00:TEST
+      type: TEST
+      pages: 23
+      bytes: 46592
+      userName: FLOPPY-USER
+      dateCreated: 2462639680
+      lastDateRead: 2467757362
+      lastDateWritten: 2462639680
+      dateCreatedStr: 1986-11-04 14:25:00
+      lastDateReadStr: 1986-12-11 15:52:50
+      lastDateWrittenStr: 1986-11-04 14:25:00
+      bpunValid: null
+    - name: GRAPHIC-TERM-B00:TEST
+      type: TEST
+      pages: 29
+      bytes: 58368
+      userName: FLOPPY-USER
+      dateCreated: 2460002660
+      lastDateRead: 2467756575
+      lastDateWritten: 2460002661
+      dateCreatedStr: 1986-10-16 10:37:36
+      lastDateReadStr: 1986-12-11 15:40:31
+      lastDateWrittenStr: 1986-10-16 10:37:37
+      bpunValid: null
+    - name: GRAPHIC-TERM-B00:FONT
+      type: FONT
+      pages: 2
+      bytes: 3082
+      userName: FLOPPY-USER
+      dateCreated: 2434984813
+      lastDateRead: 2467756594
+      lastDateWritten: 2434984903
+      dateCreatedStr: 1986-04-17 14:45:45
+      lastDateReadStr: 1986-12-11 15:40:50
+      lastDateWrittenStr: 1986-04-17 14:47:07
+      bpunValid: null
+    - name: HDLC-MEGALIN-D00:TEST
+      type: TEST
+      pages: 10
+      bytes: 19456
+      userName: FLOPPY-USER
+      dateCreated: 2461974683
+      lastDateRead: 2467756597
+      lastDateWritten: 2461974684
+      dateCreatedStr: 1986-10-31 12:02:27
+      lastDateReadStr: 1986-12-11 15:40:53
+      lastDateWrittenStr: 1986-10-31 12:02:28
+      bpunValid: null
+    - name: INSTRUCTION-C00:TEST
+      type: TEST
+      pages: 17
+      bytes: 33280
+      userName: FLOPPY-USER
+      dateCreated: 2461975629
+      lastDateRead: 2467756608
+      lastDateWritten: 2461975630
+      dateCreatedStr: 1986-10-31 12:17:13
+      lastDateReadStr: 1986-12-11 15:41:00
+      lastDateWrittenStr: 1986-10-31 12:17:14
+      bpunValid: null
+    - name: LP-TEST-E00:TEST
+      type: TEST
+      pages: 5
+      bytes: 10240
+      userName: FLOPPY-USER
+      dateCreated: 2461975900
+      lastDateRead: 2467756618
+      lastDateWritten: 2461975901
+      dateCreatedStr: 1986-10-31 12:21:28
+      lastDateReadStr: 1986-12-11 15:41:10
+      lastDateWrittenStr: 1986-10-31 12:21:29
+      bpunValid: null
+    - name: MAGTAPE-B00:TEST
+      type: TEST
+      pages: 7
+      bytes: 13824
+      userName: FLOPPY-USER
+      dateCreated: 2461976092
+      lastDateRead: 2467756623
+      lastDateWritten: 2461976092
+      dateCreatedStr: 1986-10-31 12:24:28
+      lastDateReadStr: 1986-12-11 15:41:15
+      lastDateWrittenStr: 1986-10-31 12:24:28
+      bpunValid: null
+    - name: MEMORY-D00:TEST
+      type: TEST
+      pages: 13
+      bytes: 25088
+      userName: FLOPPY-USER
+      dateCreated: 2461976489
+      lastDateRead: 2467756628
+      lastDateWritten: 2461976490
+      dateCreatedStr: 1986-10-31 12:30:41
+      lastDateReadStr: 1986-12-11 15:41:20
+      lastDateWrittenStr: 1986-10-31 12:30:42
+      bpunValid: null
+    - name: PAGING-C00:TEST
+      type: TEST
+      pages: 17
+      bytes: 33792
+      userName: FLOPPY-USER
+      dateCreated: 2460006138
+      lastDateRead: 2467756636
+      lastDateWritten: 2460006139
+      dateCreatedStr: 1986-10-16 11:27:58
+      lastDateReadStr: 1986-12-11 15:41:28
+      lastDateWrittenStr: 1986-10-16 11:27:59
+      bpunValid: null
+    - name: PIOC-ETHER-A00:TEST
+      type: TEST
+      pages: 37
+      bytes: 75776
+      userName: FLOPPY-USER
+      dateCreated: 2466824874
+      lastDateRead: 2467756648
+      lastDateWritten: 2466824874
+      dateCreatedStr: 1986-12-04 12:10:42
+      lastDateReadStr: 1986-12-11 15:41:40
+      lastDateWrittenStr: 1986-12-04 12:10:42
+      bpunValid: null
+    - name: POWER-FAIL-A00:TEST
+      type: TEST
+      pages: 4
+      bytes: 7680
+      userName: FLOPPY-USER
+      dateCreated: 2459907955
+      lastDateRead: 2467756678
+      lastDateWritten: 2459907955
+      dateCreatedStr: 1986-10-15 19:29:51
+      lastDateReadStr: 1986-12-11 15:42:06
+      lastDateWrittenStr: 1986-10-15 19:29:51
+      bpunValid: null
+    - name: PRINTERS-A00:TEST
+      type: TEST
+      pages: 37
+      bytes: 75264
+      userName: FLOPPY-USER
+      dateCreated: 2460001196
+      lastDateRead: 2467756682
+      lastDateWritten: 2460001196
+      dateCreatedStr: 1986-10-16 10:14:44
+      lastDateReadStr: 1986-12-11 15:42:10
+      lastDateWrittenStr: 1986-10-16 10:14:44
+      bpunValid: null
+    - name: SYNC-MODEM-B00:TEST
+      type: TEST
+      pages: 6
+      bytes: 12288
+      userName: FLOPPY-USER
+      dateCreated: 2461976782
+      lastDateRead: 2467756706
+      lastDateWritten: 2461976786
+      dateCreatedStr: 1986-10-31 12:35:14
+      lastDateReadStr: 1986-12-11 15:42:34
+      lastDateWrittenStr: 1986-10-31 12:35:18
+      bpunValid: null
+    - name: TERMINAL-ASY-F00:TEST
+      type: TEST
+      pages: 13
+      bytes: 25600
+      userName: FLOPPY-USER
+      dateCreated: 2461977507
+      lastDateRead: 2467756712
+      lastDateWritten: 2461977510
+      dateCreatedStr: 1986-10-31 12:46:35
+      lastDateReadStr: 1986-12-11 15:42:40
+      lastDateWrittenStr: 1986-10-31 12:46:38
+      bpunValid: null
+    - name: UNIVERS-DMA-C00:TEST
+      type: TEST
+      pages: 22
+      bytes: 44032
+      userName: FLOPPY-USER
+      dateCreated: 2461977997
+      lastDateRead: 2467756723
+      lastDateWritten: 2461977998
+      dateCreatedStr: 1986-10-31 12:54:13
+      lastDateReadStr: 1986-12-11 15:42:51
+      lastDateWrittenStr: 1986-10-31 12:54:14
+      bpunValid: null
+provenance:
+  contributor: Ronny Hansen
+  originalPath: ND-210523E00/210523E00-XX-01D.image
+  dateImaged: 2022-10-05
+  importedAt: 2026-08-17T14:22:49.708Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-210523-e00-d1-a32d604a
+  syncStatus: pending

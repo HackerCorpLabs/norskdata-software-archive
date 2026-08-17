@@ -1,0 +1,103 @@
+id: img-87732ea333d9
+volumeName: null
+md5: 87732ea333d91afdbef494029692eeff
+image:
+  sizeBytes: 737280
+  format: raw
+  controller: floppy
+filesystem: dos
+volumeLabel: CONNECTB00
+dosFiles:
+  - path: CONNECT.EXE
+    bytes: 26079
+    modified: 1991-04-04 02:00
+    directory: false
+  - path: NAALIBW.DLL
+    bytes: 37892
+    modified: 1991-04-03 02:00
+    directory: false
+  - path: INSTALL.EXE
+    bytes: 115756
+    modified: 1991-04-03 02:00
+    directory: false
+  - path: DISK.ID
+    bytes: 31
+    modified: 1990-12-03 02:00
+    directory: false
+  - path: 3OPEN.EXE
+    bytes: 11105
+    modified: 1991-03-05 02:00
+    directory: false
+  - path: DATACO.EXE
+    bytes: 6908
+    modified: 1991-03-05 02:00
+    directory: false
+  - path: FTPSW.EXE
+    bytes: 8341
+    modified: 1991-03-05 02:00
+    directory: false
+  - path: ILANA.EXE
+    bytes: 10784
+    modified: 1991-03-05 02:00
+    directory: false
+  - path: INTERLAN.EXE
+    bytes: 8530
+    modified: 1991-03-05 02:00
+    directory: false
+  - path: UB.EXE
+    bytes: 6207
+    modified: 1991-03-05 02:00
+    directory: false
+  - path: INT14.COM
+    bytes: 3271
+    modified: 1991-03-13 02:00
+    directory: false
+  - path: INSTALL.DAT
+    bytes: 5244
+    modified: 1991-04-03 02:00
+    directory: false
+  - path: LANCONN.EXE
+    bytes: 56624
+    modified: 1991-04-04 02:00
+    directory: false
+  - path: NDIS
+    bytes: 0
+    modified: 1991-03-08 12:36
+    directory: true
+  - path: NDIS/ELNKII.DOS
+    bytes: 10158
+    modified: 1990-10-06 07:35
+    directory: false
+  - path: SETINT.EXE
+    bytes: 21970
+    modified: 1990-08-13 02:00
+    directory: false
+  - path: SETTRACE.EXE
+    bytes: 11909
+    modified: 1991-04-03 02:00
+    directory: false
+provenance:
+  contributor: Ronny Hansen
+  originalPath: winlink/i6.img
+  dateImaged: 2024-09-17
+  importedAt: 2026-08-17T14:22:48.551Z
+imagingLogs:
+  - i1.log
+  - i2.log
+  - i3.log
+  - i4.log
+  - i5.log
+  - i6.log
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-87732ea333d9
+  syncStatus: pending

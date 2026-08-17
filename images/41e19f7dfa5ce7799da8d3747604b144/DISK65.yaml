@@ -1,0 +1,41 @@
+id: img-41e19f7dfa5c
+volumeName: null
+md5: 41e19f7dfa5ce7799da8d3747604b144
+image:
+  sizeBytes: 630784
+  format: raw
+  controller: floppy
+filesystem: ndfs
+condition:
+  status: damaged
+  parser: ndfs
+  parserError: Block 4210752 out of range
+  ndNamesFound: 10
+  ndNameSamples:
+    - II-2:II
+    - WP-PRINTERS-L:SYMB
+    - DDBTABLES-E:VTM
+    - TF-LIB-COMPRESS:PROG
+    - WP-EDITOR-M:PROG
+    - WP-UTIL-M:PROG
+    - WP-PRM-M:PROG
+    - WP-CMD-M:PROG
+  recovery: null
+provenance:
+  contributor: Datormuseum
+  originalPath: broken/DISK65.IMG
+  dateImaged: 2022-08-15
+  importedAt: 2026-08-17T14:17:48.831Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-41e19f7dfa5c
+  syncStatus: pending

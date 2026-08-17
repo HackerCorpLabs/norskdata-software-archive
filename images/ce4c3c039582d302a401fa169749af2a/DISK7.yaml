@@ -1,0 +1,118 @@
+id: img-ce4c3c039582
+volumeName: LIBRARY
+md5: ce4c3c039582d302a401fa169749af2a
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 120
+  files:
+    - name: COMP-TED:MODE
+      type: MODE
+      pages: 1
+      bytes: 566
+      userName: FLOPPY-USER
+      dateCreated: 2131292498
+      lastDateRead: 2281705498
+      lastDateWritten: 2131302505
+      dateCreatedStr: 1981-12-04 15:05:18
+      lastDateReadStr: null
+      lastDateWrittenStr: 1981-12-04 17:33:41
+      bpunValid: null
+    - name: COMP-PED:MODE
+      type: MODE
+      pages: 1
+      bytes: 567
+      userName: FLOPPY-USER
+      dateCreated: 2131292527
+      lastDateRead: 2281703432
+      lastDateWritten: 2131292528
+      dateCreatedStr: 1981-12-04 15:05:47
+      lastDateReadStr: null
+      lastDateWrittenStr: 1981-12-04 15:05:48
+      bpunValid: null
+    - name: CREATE-TANDBERG:MODE
+      type: MODE
+      pages: 1
+      bytes: 124
+      userName: FLOPPY-USER
+      dateCreated: 2131293478
+      lastDateRead: 2281703724
+      lastDateWritten: 2131293481
+      dateCreatedStr: 1981-12-04 15:20:38
+      lastDateReadStr: null
+      lastDateWrittenStr: 1981-12-04 15:20:41
+      bpunValid: null
+    - name: EDITOR-1:SYMB
+      type: SYMB
+      pages: 15
+      bytes: 28280
+      userName: FLOPPY-USER
+      dateCreated: 2131302793
+      lastDateRead: 2281703760
+      lastDateWritten: 2131302854
+      dateCreatedStr: 1981-12-04 17:38:09
+      lastDateReadStr: null
+      lastDateWrittenStr: 1981-12-04 17:39:06
+      bpunValid: null
+    - name: EDITOR-2-ENG:SYMB
+      type: SYMB
+      pages: 10
+      bytes: 16940
+      userName: FLOPPY-USER
+      dateCreated: 2131302821
+      lastDateRead: 2281703813
+      lastDateWritten: 2131302874
+      dateCreatedStr: 1981-12-04 17:38:37
+      lastDateReadStr: null
+      lastDateWrittenStr: 1981-12-04 17:39:26
+      bpunValid: null
+    - name: EDITOR-3:SYMB
+      type: SYMB
+      pages: 85
+      bytes: 171044
+      userName: FLOPPY-USER
+      dateCreated: 2131302915
+      lastDateRead: 2281703895
+      lastDateWritten: 2131302935
+      dateCreatedStr: 1981-12-04 17:40:03
+      lastDateReadStr: null
+      lastDateWrittenStr: 1981-12-04 17:40:23
+      bpunValid: null
+    - name: DEF-TERMINAL:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 3842
+      userName: FLOPPY-USER
+      dateCreated: 2131303152
+      lastDateRead: 2281704038
+      lastDateWritten: 2131303154
+      dateCreatedStr: 1981-12-04 17:43:48
+      lastDateReadStr: null
+      lastDateWrittenStr: 1981-12-04 17:43:50
+      bpunValid: null
+provenance:
+  contributor: Datormuseum
+  originalPath: DiskImages/DISK7.img
+  dateImaged: 2023-10-02
+  importedAt: 2026-08-17T14:18:06.481Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-ce4c3c039582
+  syncStatus: pending

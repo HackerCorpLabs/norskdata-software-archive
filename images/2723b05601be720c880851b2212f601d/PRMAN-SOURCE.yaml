@@ -1,0 +1,53 @@
+id: img-2723b05601be
+volumeName: PRMAN-SOURCE
+md5: 2723b05601be720c880851b2212f601d
+image:
+  sizeBytes: 1261568
+  format: raw
+  controller: floppy
+  totalPages: 616
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: PRMAN-SOURCE
+      pagesUsed: 110
+  files:
+    - name: PRMAN-100-5-C00:PROG
+      type: PROG
+      pages: 108
+      bytes: 401408
+      userName: PRMAN-SOURCE
+      dateCreated: 2530784644
+      lastDateRead: 2530914521
+      lastDateWritten: 2530784648
+      dateCreatedStr: 1987-11-12 11:22:04
+      lastDateReadStr: 1987-11-13 11:03:25
+      lastDateWrittenStr: 1987-11-12 11:22:08
+      bpunValid: null
+provenance:
+  contributor: Ronny Hansen
+  originalPath: ND-210943-PRMAN/PRMAN-SOURCE.img
+  dateImaged: 2024-09-17
+  importedAt: 2026-08-17T14:20:08.484Z
+imagingLogs:
+  - 210943A01-NO-01D.log
+  - 210943A01-NO-02D.log
+  - PRMAN-SOURCE.log
+photos:
+  disk: []
+  set:
+    - 210943A01-NO-01D-PHOTO.png
+    - 210943A01-NO-02D-PHOTO.png
+    - PRMAN-SOURCE-PHOTO.png
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-2723b05601be
+  syncStatus: pending

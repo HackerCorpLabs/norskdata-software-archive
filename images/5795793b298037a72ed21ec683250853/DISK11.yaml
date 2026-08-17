@@ -1,0 +1,118 @@
+id: img-5795793b2980
+volumeName: ND-10079K-1
+md5: 5795793b298037a72ed21ec683250853
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: flomon
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 86
+  files:
+    - name: DIRECTORY:TEST
+      type: TEST
+      pages: 0
+      bytes: 4294967296
+      userName: FLOPPY-USER
+      dateCreated: 2266033128
+      lastDateRead: null
+      lastDateWritten: null
+      dateCreatedStr: 1983-12-08 14:47:40
+      lastDateReadStr: null
+      lastDateWrittenStr: null
+      bpunValid: null
+    - name: INSTALL-WP:COM
+      type: COM
+      pages: 16
+      bytes: 30251
+      userName: FLOPPY-USER
+      dateCreated: 2262635686
+      lastDateRead: 2281702150
+      lastDateWritten: 2267075450
+      dateCreatedStr: 1983-11-14 17:18:38
+      lastDateReadStr: null
+      lastDateWrittenStr: 1983-12-16 13:13:58
+      bpunValid: null
+    - name: INSTALL-WP:PROG
+      type: PROG
+      pages: 2
+      bytes: 4096
+      userName: FLOPPY-USER
+      dateCreated: 2262635706
+      lastDateRead: 2281702132
+      lastDateWritten: 2262635715
+      dateCreatedStr: 1983-11-14 17:18:58
+      lastDateReadStr: null
+      lastDateWrittenStr: 1983-11-14 17:19:03
+      bpunValid: null
+    - name: XCOM:PROG
+      type: PROG
+      pages: 40
+      bytes: 288768
+      userName: FLOPPY-USER
+      dateCreated: 2262635720
+      lastDateRead: 2281702134
+      lastDateWritten: 2264478086
+      dateCreatedStr: 1983-11-14 17:19:08
+      lastDateReadStr: null
+      lastDateWrittenStr: 1983-11-28 19:06:06
+      bpunValid: null
+    - name: WP-PRINTERS-K:SYMB
+      type: SYMB
+      pages: 3
+      bytes: 3698
+      userName: FLOPPY-USER
+      dateCreated: 2262635767
+      lastDateRead: 2281702346
+      lastDateWritten: 2264453679
+      dateCreatedStr: 1983-11-14 17:19:55
+      lastDateReadStr: null
+      lastDateWrittenStr: 1983-11-28 13:08:47
+      bpunValid: null
+    - name: DDBTABLES-D-C:VTM
+      type: VTM
+      pages: 16
+      bytes: 9458
+      userName: FLOPPY-USER
+      dateCreated: 2262635782
+      lastDateRead: 2281702357
+      lastDateWritten: 2263918315
+      dateCreatedStr: 1983-11-14 17:20:06
+      lastDateReadStr: null
+      lastDateWrittenStr: 1983-11-24 10:27:43
+      bpunValid: null
+    - name: DITAP:PROG
+      type: PROG
+      pages: 2
+      bytes: 2088
+      userName: FLOPPY-USER
+      dateCreated: 2262635807
+      lastDateRead: 2281702353
+      lastDateWritten: 2264467707
+      dateCreatedStr: 1983-11-14 17:20:31
+      lastDateReadStr: null
+      lastDateWrittenStr: 1983-11-28 16:35:59
+      bpunValid: null
+provenance:
+  contributor: Datormuseum
+  originalPath: DiskImages/DISK11.img
+  dateImaged: 2023-10-02
+  importedAt: 2026-08-17T14:17:52.626Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-5795793b2980
+  syncStatus: pending

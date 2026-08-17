@@ -1,0 +1,156 @@
+id: nd-10530-b-d1-66f9a14c
+volumeName: ND-10530B
+md5: 66f9a14c35c1322d3f1786de800a8356
+product:
+  version: B
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 144
+  files:
+    - name: INST-100NC-H-B00:MODE
+      type: MODE
+      pages: 1
+      bytes: 347
+      userName: FLOPPY-USER
+      dateCreated: 2305470194
+      lastDateRead: 2305481730
+      lastDateWritten: 2305481703
+      dateCreatedStr: 1984-05-21 10:59:50
+      lastDateReadStr: 1984-05-21 13:48:02
+      lastDateWrittenStr: 1984-05-21 13:47:39
+      bpunValid: null
+    - name: INST-100NC-I-B00:MODE
+      type: MODE
+      pages: 1
+      bytes: 204
+      userName: FLOPPY-USER
+      dateCreated: 2305470465
+      lastDateRead: 2314522186
+      lastDateWritten: 2305470777
+      dateCreatedStr: 1984-05-21 11:00:01
+      lastDateReadStr: 1984-07-26 12:57:10
+      lastDateWrittenStr: 1984-05-21 11:04:57
+      bpunValid: null
+    - name: NOTIS-CALC-B00:PROG
+      type: PROG
+      pages: 76
+      bytes: 167936
+      userName: FLOPPY-USER
+      dateCreated: 2303631075
+      lastDateRead: 2314521923
+      lastDateWritten: 2303631076
+      dateCreatedStr: 1984-05-07 09:59:35
+      lastDateReadStr: 1984-07-26 12:53:03
+      lastDateWrittenStr: 1984-05-07 09:59:36
+      bpunValid: null
+    - name: INST-100NC-P-B00:MODE
+      type: MODE
+      pages: 1
+      bytes: 156
+      userName: FLOPPY-USER
+      dateCreated: 2303632475
+      lastDateRead: 2305476163
+      lastDateWritten: 2305471082
+      dateCreatedStr: 1984-05-07 10:17:27
+      lastDateReadStr: 1984-05-21 12:25:03
+      lastDateWrittenStr: 1984-05-21 11:09:42
+      bpunValid: null
+    - name: INST-NC-ENG-B00:MODE
+      type: MODE
+      pages: 1
+      bytes: 329
+      userName: FLOPPY-USER
+      dateCreated: 2303632478
+      lastDateRead: 2314522356
+      lastDateWritten: 2305470917
+      dateCreatedStr: 1984-05-07 10:17:30
+      lastDateReadStr: 1984-07-26 12:59:52
+      lastDateWrittenStr: 1984-05-21 11:07:05
+      bpunValid: null
+    - name: INST-NC-NOR-B00:MODE
+      type: MODE
+      pages: 1
+      bytes: 331
+      userName: FLOPPY-USER
+      dateCreated: 2303632473
+      lastDateRead: 2305481844
+      lastDateWritten: 2305470956
+      dateCreatedStr: 1984-05-07 10:17:25
+      lastDateReadStr: 1984-05-21 13:49:52
+      lastDateWrittenStr: 1984-05-21 11:07:44
+      bpunValid: null
+    - name: CONVERT-A-TO-B:PROG
+      type: PROG
+      pages: 15
+      bytes: 30720
+      userName: FLOPPY-USER
+      dateCreated: 2305476264
+      lastDateRead: 2314522357
+      lastDateWritten: 2305476266
+      dateCreatedStr: 1984-05-21 12:26:40
+      lastDateReadStr: 1984-07-26 12:59:53
+      lastDateWrittenStr: 1984-05-21 12:26:42
+      bpunValid: null
+    - name: DDBTABLES-D-C:VTM
+      type: VTM
+      pages: 5
+      bytes: 9458
+      userName: FLOPPY-USER
+      dateCreated: 2305477207
+      lastDateRead: 2314522357
+      lastDateWritten: 2305477227
+      dateCreatedStr: 1984-05-21 12:41:23
+      lastDateReadStr: 1984-07-26 12:59:53
+      lastDateWrittenStr: 1984-05-21 12:41:43
+      bpunValid: null
+    - name: NOTIS-CALC-E-B00:HELP
+      type: HELP
+      pages: 20
+      bytes: 39442
+      userName: FLOPPY-USER
+      dateCreated: 2305477353
+      lastDateRead: 2314522626
+      lastDateWritten: 2305477404
+      dateCreatedStr: 1984-05-21 12:43:41
+      lastDateReadStr: 1984-07-26 13:00:02
+      lastDateWrittenStr: 1984-05-21 12:44:28
+      bpunValid: null
+    - name: NOTIS-CALC-N-B00:HELP
+      type: HELP
+      pages: 20
+      bytes: 39442
+      userName: FLOPPY-USER
+      dateCreated: 2305477359
+      lastDateRead: 2305481861
+      lastDateWritten: 2305477424
+      dateCreatedStr: 1984-05-21 12:43:47
+      lastDateReadStr: 1984-05-21 13:50:05
+      lastDateWrittenStr: 1984-05-21 12:44:48
+      bpunValid: null
+provenance:
+  contributor: Datormuseum
+  originalPath: DiskImages/NDDISK33.img
+  dateImaged: 2023-10-02
+  importedAt: 2026-08-17T14:18:54.306Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10530-b-d1-66f9a14c
+  syncStatus: pending

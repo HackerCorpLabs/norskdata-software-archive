@@ -1,0 +1,118 @@
+id: patch-patch-sintran-e559fab2
+volumeName: PATCH-SINTRAN
+md5: e559fab2bcb8213653230dd418beb22e
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: SYSTEM
+      pagesUsed: 98
+  files:
+    - name: FILE-TEST-H:PROG
+      type: PROG
+      pages: 9
+      bytes: 18432
+      userName: SYSTEM
+      dateCreated: 2297626976
+      lastDateRead: 2664094517
+      lastDateWritten: 2297626981
+      dateCreatedStr: 1984-03-25 16:05:32
+      lastDateReadStr: 1989-11-05 13:44:53
+      lastDateWrittenStr: 1984-03-25 16:05:37
+      bpunValid: null
+    - name: CPU-TYPE:PROG
+      type: PROG
+      pages: 2
+      bytes: 133120
+      userName: SYSTEM
+      dateCreated: 2297626989
+      lastDateRead: 2297628550
+      lastDateWritten: 2297626990
+      dateCreatedStr: 1984-03-25 16:05:45
+      lastDateReadStr: 1984-03-25 16:30:06
+      lastDateWrittenStr: 1984-03-25 16:05:46
+      bpunValid: null
+    - name: PATCH-FILE-G:MODE
+      type: MODE
+      pages: 3
+      bytes: 5080
+      userName: SYSTEM
+      dateCreated: 2297626994
+      lastDateRead: 2664094499
+      lastDateWritten: 2297626995
+      dateCreatedStr: 1984-03-25 16:05:50
+      lastDateReadStr: 1989-11-05 13:44:35
+      lastDateWrittenStr: 1984-03-25 16:05:51
+      bpunValid: null
+    - name: PATCH-FILE:PATC
+      type: PATC
+      pages: 72
+      bytes: 147005
+      userName: SYSTEM
+      dateCreated: 2297626999
+      lastDateRead: 2315561561
+      lastDateWritten: 2315561561
+      dateCreatedStr: 1984-03-25 16:05:55
+      lastDateReadStr: 1984-08-02 10:41:25
+      lastDateWrittenStr: 1984-08-02 10:41:25
+      bpunValid: null
+    - name: REFERENCE:FADM
+      type: FADM
+      pages: 2
+      bytes: 2960
+      userName: SYSTEM
+      dateCreated: 2297627088
+      lastDateRead: 2307977488
+      lastDateWritten: 2307721786
+      dateCreatedStr: 1984-03-25 16:07:16
+      lastDateReadStr: 1984-06-08 15:04:16
+      lastDateWrittenStr: 1984-06-06 16:40:58
+      bpunValid: null
+    - name: SYMBOLS:FADM
+      type: FADM
+      pages: 1
+      bytes: 17
+      userName: SYSTEM
+      dateCreated: 2297627094
+      lastDateRead: 2664094503
+      lastDateWritten: 2315561680
+      dateCreatedStr: 1984-03-25 16:07:22
+      lastDateReadStr: 1989-11-05 13:44:39
+      lastDateWrittenStr: 1984-08-02 10:43:16
+      bpunValid: null
+    - name: PATCH-FILE:OUT
+      type: OUT
+      pages: 1
+      bytes: 2038
+      userName: SYSTEM
+      dateCreated: 2281713250
+      lastDateRead: 2664094570
+      lastDateWritten: 2664094500
+      dateCreatedStr: null
+      lastDateReadStr: 1989-11-05 13:45:42
+      lastDateWrittenStr: 1989-11-05 13:44:36
+      bpunValid: null
+provenance:
+  contributor: Datormuseum
+  originalPath: DiskImages/nddisk5.img
+  dateImaged: 2023-10-02
+  importedAt: 2026-08-17T14:19:09.676Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-patch-patch-sintran-e559fab2
+  syncStatus: pending

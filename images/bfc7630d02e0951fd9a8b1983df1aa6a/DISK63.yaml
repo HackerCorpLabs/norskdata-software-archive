@@ -1,0 +1,46 @@
+id: img-bfc7630d02e0
+volumeName: null
+md5: bfc7630d02e0951fd9a8b1983df1aa6a
+image:
+  sizeBytes: 4096
+  format: raw
+  controller: floppy
+filesystem: backup
+backupSet:
+  kind: backup
+  name: PANG
+  label: BELI-UNIQUE
+  runDate: 1985-02-18
+  system: ""
+  fileCount: 1
+  staleCount: 0
+  firstFile: FILE-A1:SYMB
+  lastFile: FILE-A1:SYMB
+  endsMidFile: true
+  fileListHash: b5e2c6d5
+  imageBytes: 4096
+backupFiles:
+  - name: FILE-A1:SYMB
+    bytes: 3072
+    created: 1985-02-18
+    system: null
+    continued: true
+    stale: false
+provenance:
+  contributor: Datormuseum
+  originalPath: broken/DISK63.IMG
+  dateImaged: 2022-08-15
+  importedAt: 2026-08-17T14:17:48.761Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-bfc7630d02e0
+  syncStatus: pending

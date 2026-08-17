@@ -1,0 +1,136 @@
+id: img-810aae2c7c42
+volumeName: null
+md5: 810aae2c7c421642d51ee72b1864eb47
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+filesystem: backup
+backupSet:
+  kind: backup
+  name: PANG
+  label: BELI-UNIQUE
+  runDate: 1985-02-18
+  system: ""
+  fileCount: 16
+  staleCount: 0
+  firstFile: FILE-A1:SYMB
+  lastFile: FIL-VIS-3:PROG
+  endsMidFile: true
+  fileListHash: 1d2d811f
+  imageBytes: 315392
+backupFiles:
+  - name: FILE-A1:SYMB
+    bytes: 5120
+    created: 1985-02-18
+    system: null
+    continued: false
+    stale: false
+  - name: FILE-A2:SYMB
+    bytes: 3072
+    created: 1985-02-18
+    system: null
+    continued: false
+    stale: false
+  - name: FILE-A3:SYMB
+    bytes: 5120
+    created: 1985-02-18
+    system: null
+    continued: false
+    stale: false
+  - name: NEW-PANGBAS:SYMB
+    bytes: 5120
+    created: 1985-02-18
+    system: null
+    continued: false
+    stale: false
+  - name: FIL-VIS-3:SYMB
+    bytes: 7168
+    created: 1985-02-18
+    system: null
+    continued: false
+    stale: false
+  - name: FIL-VIS-3:PROG
+    bytes: 111616
+    created: 1985-02-18
+    system: null
+    continued: false
+    stale: false
+  - name: FIL-VIS-3:BRF
+    bytes: 7168
+    created: 1985-02-18
+    system: null
+    continued: false
+    stale: false
+  - name: RESULTAT:UNIQ
+    bytes: 5120
+    created: 1985-02-18
+    system: null
+    continued: false
+    stale: false
+  - name: NEW-ANMELAN:UNIQ
+    bytes: 5120
+    created: 1985-02-18
+    system: null
+    continued: false
+    stale: false
+  - name: UNIQUE-ISAM-C:MENU
+    bytes: 3072
+    created: 1985-02-18
+    system: null
+    continued: false
+    stale: false
+  - name: SOEK:UNIQ
+    bytes: 3072
+    created: 1985-02-18
+    system: null
+    continued: false
+    stale: false
+  - name: ROHE-LIB:BRF
+    bytes: 11264
+    created: 1985-02-18
+    system: null
+    continued: false
+    stale: false
+  - name: MON-CALLS:TEXT
+    bytes: 33792
+    created: 1985-02-18
+    system: null
+    continued: false
+    stale: false
+  - name: FIL-VIS-3:BRF
+    bytes: 7168
+    created: 1985-02-18
+    system: null
+    continued: false
+    stale: false
+  - name: FIL-VIS:BRF
+    bytes: 5120
+    created: 1985-02-18
+    system: null
+    continued: false
+    stale: false
+  - name: FIL-VIS-3:PROG
+    bytes: 73216
+    created: 1985-02-18
+    system: null
+    continued: true
+    stale: false
+provenance:
+  contributor: Datormuseum
+  originalPath: DiskImages2/DISK63.img
+  dateImaged: 2023-10-02
+  importedAt: 2026-08-17T14:19:28.055Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-810aae2c7c42
+  syncStatus: pending

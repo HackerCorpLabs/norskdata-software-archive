@@ -1,0 +1,280 @@
+id: nd-250306-m06-d3-766242a2
+volumeName: 250306M06-XX-03D
+md5: 766242a29df6e9275589f90e586b7b15
+product:
+  version: M06
+  diskNumber: 3
+  language: XX
+image:
+  sizeBytes: 1261568
+  format: raw
+  controller: floppy
+  totalPages: 616
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: SYSTEM
+      pagesUsed: 558
+  files:
+    - name: NEW-SYSTEM:PROG
+      type: PROG
+      pages: 21
+      bytes: 43008
+      userName: SYSTEM
+      dateCreated: 3934390791
+      lastDateRead: 3934390804
+      lastDateWritten: 3934390804
+      dateCreatedStr: 2008-10-01 00:40:07
+      lastDateReadStr: 2008-10-01 00:40:20
+      lastDateWrittenStr: 2008-10-01 00:40:20
+      bpunValid: null
+    - name: DMAC-1915G:BPUN
+      type: BPUN
+      pages: 29
+      bytes: 57476
+      userName: SYSTEM
+      dateCreated: 3934390793
+      lastDateRead: 3934390810
+      lastDateWritten: 3934390810
+      dateCreatedStr: 2008-10-01 00:40:09
+      lastDateReadStr: 2008-10-01 00:40:26
+      lastDateWrittenStr: 2008-10-01 00:40:26
+      bpunValid: true
+    - name: F32-FMAC-1920C:PROG
+      type: PROG
+      pages: 15
+      bytes: 28791
+      userName: SYSTEM
+      dateCreated: 3934390793
+      lastDateRead: 3934390818
+      lastDateWritten: 3934390818
+      dateCreatedStr: 2008-10-01 00:40:09
+      lastDateReadStr: 2008-10-01 00:40:34
+      lastDateWrittenStr: 2008-10-01 00:40:34
+      bpunValid: null
+    - name: F48-FMAC-1408D:PROG
+      type: PROG
+      pages: 15
+      bytes: 28791
+      userName: SYSTEM
+      dateCreated: 3934390794
+      lastDateRead: 3934390823
+      lastDateWritten: 3934390823
+      dateCreatedStr: 2008-10-01 00:40:10
+      lastDateReadStr: 2008-10-01 00:40:39
+      lastDateWrittenStr: 2008-10-01 00:40:39
+      bpunValid: null
+    - name: FILSYS-SYMBOLS:SYMB
+      type: SYMB
+      pages: 31
+      bytes: 62902
+      userName: SYSTEM
+      dateCreated: 3934390794
+      lastDateRead: 3934390828
+      lastDateWritten: 3934390828
+      dateCreatedStr: 2008-10-01 00:40:10
+      lastDateReadStr: 2008-10-01 00:40:44
+      lastDateWrittenStr: 2008-10-01 00:40:44
+      bpunValid: null
+    - name: RTLO-SYMBOLS:SYMB
+      type: SYMB
+      pages: 28
+      bytes: 56986
+      userName: SYSTEM
+      dateCreated: 3934390795
+      lastDateRead: 3934390836
+      lastDateWritten: 3934390836
+      dateCreatedStr: 2008-10-01 00:40:11
+      lastDateReadStr: 2008-10-01 00:40:52
+      lastDateWrittenStr: 2008-10-01 00:40:52
+      bpunValid: null
+    - name: COS-TADADM:BPUN
+      type: BPUN
+      pages: 4
+      bytes: 7453
+      userName: SYSTEM
+      dateCreated: 3934390795
+      lastDateRead: 3934390848
+      lastDateWritten: 3934390848
+      dateCreatedStr: 2008-10-01 00:40:11
+      lastDateReadStr: 2008-10-01 00:41:00
+      lastDateWrittenStr: 2008-10-01 00:41:00
+      bpunValid: true
+    - name: XMSG-COMMAND:PROG
+      type: PROG
+      pages: 55
+      bytes: 111103
+      userName: SYSTEM
+      dateCreated: 3934390797
+      lastDateRead: 3934390849
+      lastDateWritten: 3934390849
+      dateCreatedStr: 2008-10-01 00:40:13
+      lastDateReadStr: 2008-10-01 00:41:01
+      lastDateWrittenStr: 2008-10-01 00:41:01
+      bpunValid: null
+    - name: XMSG-STARTEX:MODE
+      type: MODE
+      pages: 3
+      bytes: 4495
+      userName: SYSTEM
+      dateCreated: 3934390797
+      lastDateRead: 3934390863
+      lastDateWritten: 3934390863
+      dateCreatedStr: 2008-10-01 00:40:13
+      lastDateReadStr: 2008-10-01 00:41:15
+      lastDateWrittenStr: 2008-10-01 00:41:15
+      bpunValid: null
+    - name: XMSG-STARTEX:BATC
+      type: BATC
+      pages: 1
+      bytes: 880
+      userName: SYSTEM
+      dateCreated: 3934390798
+      lastDateRead: 3934390864
+      lastDateWritten: 3934390864
+      dateCreatedStr: 2008-10-01 00:40:14
+      lastDateReadStr: 2008-10-01 00:41:16
+      lastDateWrittenStr: 2008-10-01 00:41:16
+      bpunValid: null
+    - name: XMSG-SYMBOL-LIST:SYMB
+      type: SYMB
+      pages: 18
+      bytes: 35838
+      userName: SYSTEM
+      dateCreated: 3934390798
+      lastDateRead: 3934390865
+      lastDateWritten: 3934390865
+      dateCreatedStr: 2008-10-01 00:40:14
+      lastDateReadStr: 2008-10-01 00:41:17
+      lastDateWrittenStr: 2008-10-01 00:41:17
+      bpunValid: null
+    - name: N500-SYMBOLS:SYMB
+      type: SYMB
+      pages: 61
+      bytes: 123252
+      userName: SYSTEM
+      dateCreated: 3934390799
+      lastDateRead: 3934390871
+      lastDateWritten: 3934390871
+      dateCreatedStr: 2008-10-01 00:40:15
+      lastDateReadStr: 2008-10-01 00:41:23
+      lastDateWrittenStr: 2008-10-01 00:41:23
+      bpunValid: null
+    - name: N5000-SYMBOLS:SYMB
+      type: SYMB
+      pages: 61
+      bytes: 124323
+      userName: SYSTEM
+      dateCreated: 3934390799
+      lastDateRead: 3934390886
+      lastDateWritten: 3934390886
+      dateCreatedStr: 2008-10-01 00:40:15
+      lastDateReadStr: 2008-10-01 00:41:38
+      lastDateWrittenStr: 2008-10-01 00:41:38
+      bpunValid: null
+    - name: ND500-MONITOR:BPUN
+      type: BPUN
+      pages: 48
+      bytes: 98197
+      userName: SYSTEM
+      dateCreated: 3934390800
+      lastDateRead: 3934390901
+      lastDateWritten: 3934390901
+      dateCreatedStr: 2008-10-01 00:40:16
+      lastDateReadStr: 2008-10-01 00:41:53
+      lastDateWrittenStr: 2008-10-01 00:41:53
+      bpunValid: true
+    - name: ER-S3WD-DESC-D:EDAT
+      type: EDAT
+      pages: 40
+      bytes: 81505
+      userName: SYSTEM
+      dateCreated: 3934390801
+      lastDateRead: 3934390917
+      lastDateWritten: 3934390917
+      dateCreatedStr: 2008-10-01 00:40:17
+      lastDateReadStr: 2008-10-01 00:42:05
+      lastDateWrittenStr: 2008-10-01 00:42:05
+      bpunValid: null
+    - name: ER-S3WD-LOG-D:PROG
+      type: PROG
+      pages: 21
+      bytes: 43008
+      userName: SYSTEM
+      dateCreated: 3934390801
+      lastDateRead: 3934390928
+      lastDateWritten: 3934390928
+      dateCreatedStr: 2008-10-01 00:40:17
+      lastDateReadStr: 2008-10-01 00:42:16
+      lastDateWrittenStr: 2008-10-01 00:42:16
+      bpunValid: null
+    - name: ER-S3WD-MANA-D:PROG
+      type: PROG
+      pages: 12
+      bytes: 24576
+      userName: SYSTEM
+      dateCreated: 3934390802
+      lastDateRead: 3934390934
+      lastDateWritten: 3934390934
+      dateCreatedStr: 2008-10-01 00:40:18
+      lastDateReadStr: 2008-10-01 00:42:22
+      lastDateWrittenStr: 2008-10-01 00:42:22
+      bpunValid: null
+    - name: SYMBOL-1-LIST:SYMB
+      type: SYMB
+      pages: 52
+      bytes: 104920
+      userName: SYSTEM
+      dateCreated: 3934390802
+      lastDateRead: 3934390938
+      lastDateWritten: 3934390938
+      dateCreatedStr: 2008-10-01 00:40:18
+      lastDateReadStr: 2008-10-01 00:42:26
+      lastDateWrittenStr: 2008-10-01 00:42:26
+      bpunValid: null
+    - name: SYMBOL-2-LIST:SYMB
+      type: SYMB
+      pages: 35
+      bytes: 70622
+      userName: SYSTEM
+      dateCreated: 3934390803
+      lastDateRead: 3934390951
+      lastDateWritten: 3934390951
+      dateCreatedStr: 2008-10-01 00:40:19
+      lastDateReadStr: 2008-10-01 00:42:39
+      lastDateWrittenStr: 2008-10-01 00:42:39
+      bpunValid: null
+    - name: LIBRARY-MARKS:SYMB
+      type: SYMB
+      pages: 7
+      bytes: 14289
+      userName: SYSTEM
+      dateCreated: 3934390803
+      lastDateRead: 3934390960
+      lastDateWritten: 3934390960
+      dateCreatedStr: 2008-10-01 00:40:19
+      lastDateReadStr: 2008-10-01 00:42:48
+      lastDateWrittenStr: 2008-10-01 00:42:48
+      bpunValid: null
+provenance:
+  contributor: Ronny Hansen
+  originalPath: ND-250306M06/250306M06-XX-03D.image
+  dateImaged: 2022-09-24
+  importedAt: 2026-08-17T14:20:04.340Z
+imagingLogs:
+  - README.txt
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-250306-m06-d3-766242a2
+  syncStatus: pending

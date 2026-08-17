@@ -1,0 +1,56 @@
+id: img-8e13636b4b05
+volumeName: null
+md5: 8e13636b4b058f65b3868efbeec01951
+image:
+  sizeBytes: 1261568
+  format: raw
+  controller: floppy
+filesystem: backup
+backupSet:
+  kind: backup
+  name: N1292J
+  label: AUX-SINTRAN
+  runDate: 1985-10-09
+  system: SINTRAN III J
+  fileCount: 2
+  staleCount: 0
+  firstFile: S3VS-6:SYMB
+  lastFile: BOUT-6:SYMB
+  endsMidFile: false
+  fileListHash: 3e009c8c
+  imageBytes: 1261568
+backupFiles:
+  - name: S3VS-6:SYMB
+    bytes: 993280
+    created: 1985-10-09
+    system: SINTRAN III J
+    continued: false
+    stale: false
+  - name: BOUT-6:SYMB
+    bytes: 186368
+    created: 1985-10-09
+    system: SINTRAN III J
+    continued: false
+    stale: false
+provenance:
+  contributor: Ronny Hansen
+  originalPath: AUX-SINTRAN/AUX-SINTRAN.img
+  dateImaged: 2024-09-17
+  importedAt: 2026-08-17T14:20:01.081Z
+imagingLogs:
+  - README.txt
+  - AUX-SINTRAN.log
+photos:
+  disk: []
+  set:
+    - AUX-SINTRAN-PHOTO.png
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-8e13636b4b05
+  syncStatus: pending

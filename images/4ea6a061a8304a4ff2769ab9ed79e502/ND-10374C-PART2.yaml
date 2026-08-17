@@ -1,0 +1,129 @@
+id: nd-10374-c-d2-4ea6a061
+volumeName: ND-10374C-PART2
+md5: 4ea6a061a8304a4ff2769ab9ed79e502
+product:
+  version: C
+  diskNumber: 2
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: flomon
+filesystem: ndfs
+ndfs:
+  users:
+    - name: UTILITY
+      pagesUsed: 122
+  files:
+    - name: COS-FA-USER-1:BPUN
+      type: BPUN
+      pages: 23
+      bytes: 45430
+      userName: UTILITY
+      dateCreated: 2326588372
+      lastDateRead: 2327107095
+      lastDateWritten: 2326588377
+      dateCreatedStr: 1984-10-22 14:47:20
+      lastDateReadStr: 1984-10-26 13:24:23
+      lastDateWrittenStr: 1984-10-22 14:47:25
+      bpunValid: true
+    - name: COS-FA-USER-2:BPUN
+      type: BPUN
+      pages: 23
+      bytes: 45430
+      userName: UTILITY
+      dateCreated: 2326588395
+      lastDateRead: 2327107122
+      lastDateWritten: 2326588397
+      dateCreatedStr: 1984-10-22 14:47:43
+      lastDateReadStr: 1984-10-26 13:24:50
+      lastDateWrittenStr: 1984-10-22 14:47:45
+      bpunValid: true
+    - name: COS-FA-USER-LOAD:MODE
+      type: MODE
+      pages: 1
+      bytes: 226
+      userName: UTILITY
+      dateCreated: 2326588425
+      lastDateRead: 2327107155
+      lastDateWritten: 2326588426
+      dateCreatedStr: 1984-10-22 14:48:09
+      lastDateReadStr: 1984-10-26 13:25:19
+      lastDateWrittenStr: 1984-10-22 14:48:10
+      bpunValid: null
+    - name: COS-FS-ADMIN:PROG
+      type: PROG
+      pages: 37
+      bytes: 74752
+      userName: UTILITY
+      dateCreated: 2326588430
+      lastDateRead: 2327107161
+      lastDateWritten: 2326588431
+      dateCreatedStr: 1984-10-22 14:48:14
+      lastDateReadStr: 1984-10-26 13:25:25
+      lastDateWrittenStr: 1984-10-22 14:48:15
+      bpunValid: null
+    - name: COS-FSART:BPUN
+      type: BPUN
+      pages: 28
+      bytes: 56474
+      userName: UTILITY
+      dateCreated: 2326588483
+      lastDateRead: 2327107221
+      lastDateWritten: 2326588484
+      dateCreatedStr: 1984-10-22 14:49:03
+      lastDateReadStr: 1984-10-26 13:26:21
+      lastDateWrittenStr: 1984-10-22 14:49:04
+      bpunValid: true
+    - name: COS-FSART-LOAD:MODE
+      type: MODE
+      pages: 1
+      bytes: 230
+      userName: UTILITY
+      dateCreated: 2326588530
+      lastDateRead: 2327107279
+      lastDateWritten: 2326588531
+      dateCreatedStr: 1984-10-22 14:49:50
+      lastDateReadStr: 1984-10-26 13:27:15
+      lastDateWrittenStr: 1984-10-22 14:49:51
+      bpunValid: null
+    - name: COS-START-SERVER:MODE
+      type: MODE
+      pages: 1
+      bytes: 124
+      userName: UTILITY
+      dateCreated: 2326588536
+      lastDateRead: 2327107286
+      lastDateWritten: 2326588537
+      dateCreatedStr: 1984-10-22 14:49:56
+      lastDateReadStr: 1984-10-26 13:27:22
+      lastDateWrittenStr: 1984-10-22 14:49:57
+      bpunValid: null
+provenance:
+  contributor: Ronny Hansen
+  originalPath: ND-10374C COSMOS Basic Module/ND-10374C-PART2.img
+  dateImaged: 2024-09-17
+  importedAt: 2026-08-17T14:19:58.974Z
+imagingLogs:
+  - ND-10374C-PART3.log
+  - ND-10374C1-PART1.log
+  - README.txt
+  - ND-10374C-PART2.log
+photos:
+  disk: []
+  set:
+    - ND-10374C-PART2-PHOTO.png
+    - ND-10374C-PART3-PHOTO.png
+    - ND-10374C1-PART1-PHOTO.png
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10374-c-d2-4ea6a061
+  syncStatus: pending

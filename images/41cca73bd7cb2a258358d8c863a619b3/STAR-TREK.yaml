@@ -1,0 +1,106 @@
+id: img-41cca73bd7cb
+volumeName: STAR-TREK
+md5: 41cca73bd7cb2a258358d8c863a619b3
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: NILS-M-NILSSEN
+      pagesUsed: 132
+  files:
+    - name: STAR-CURS:BRF
+      type: BRF
+      pages: 13
+      bytes: 25242
+      userName: NILS-M-NILSSEN
+      dateCreated: 2117394811
+      lastDateRead: 2123937819
+      lastDateWritten: 2117394821
+      dateCreatedStr: 1981-08-26 14:05:59
+      lastDateReadStr: 1981-10-12 11:32:27
+      lastDateWrittenStr: 1981-08-26 14:06:05
+      bpunValid: null
+    - name: STAR-CPOS:BRF
+      type: BRF
+      pages: 1
+      bytes: 1308
+      userName: NILS-M-NILSSEN
+      dateCreated: 2117394835
+      lastDateRead: 2123937834
+      lastDateWritten: 2117394835
+      dateCreatedStr: 1981-08-26 14:06:19
+      lastDateReadStr: 1981-10-12 11:32:42
+      lastDateWrittenStr: 1981-08-26 14:06:19
+      bpunValid: null
+    - name: STAR-CPAR:BRF
+      type: BRF
+      pages: 1
+      bytes: 1554
+      userName: NILS-M-NILSSEN
+      dateCreated: 2117394841
+      lastDateRead: 2123937843
+      lastDateWritten: 2117394841
+      dateCreatedStr: 1981-08-26 14:06:25
+      lastDateReadStr: 1981-10-12 11:32:51
+      lastDateWrittenStr: 1981-08-26 14:06:25
+      bpunValid: null
+    - name: STAR-RUN:BRF
+      type: BRF
+      pages: 34
+      bytes: 68636
+      userName: NILS-M-NILSSEN
+      dateCreated: 2117394888
+      lastDateRead: 2123937856
+      lastDateWritten: 2117394889
+      dateCreatedStr: 1981-08-26 14:07:08
+      lastDateReadStr: 1981-10-12 11:33:00
+      lastDateWrittenStr: 1981-08-26 14:07:09
+      bpunValid: null
+    - name: STAR-TREK:PROG
+      type: PROG
+      pages: 65
+      bytes: 131584
+      userName: NILS-M-NILSSEN
+      dateCreated: 2117395053
+      lastDateRead: 2387934948
+      lastDateWritten: 2163404196
+      dateCreatedStr: 1981-08-26 14:09:45
+      lastDateReadStr: 1985-09-10 15:59:36
+      lastDateWrittenStr: 1982-03-25 14:54:36
+      bpunValid: null
+    - name: LIMERICKS:PROG
+      type: PROG
+      pages: 11
+      bytes: 21504
+      userName: NILS-M-NILSSEN
+      dateCreated: 2117395727
+      lastDateRead: 2388689290
+      lastDateWritten: 2117395727
+      dateCreatedStr: 1981-08-26 14:20:15
+      lastDateReadStr: 1985-09-16 08:06:10
+      lastDateWrittenStr: 1981-08-26 14:20:15
+      bpunValid: null
+provenance:
+  contributor: Frode
+  originalPath: Disk Images/STAR-TREK.img
+  dateImaged: 2026-04-08
+  importedAt: 2026-08-17T14:19:50.209Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-41cca73bd7cb
+  syncStatus: pending

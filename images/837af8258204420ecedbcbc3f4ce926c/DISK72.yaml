@@ -1,0 +1,157 @@
+id: nd-10522-b-d2-837af825
+volumeName: ND-10522B-PART2
+md5: 837af8258204420ecedbcbc3f4ce926c
+product:
+  version: B
+  diskNumber: 2
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: bpun
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 115
+  files:
+    - name: CONFIGURATION-B:BPUN
+      type: BPUN
+      pages: 22
+      bytes: 43700
+      userName: FLOPPY-USER
+      dateCreated: 2260941281
+      lastDateRead: 2262224032
+      lastDateWritten: 2262221323
+      dateCreatedStr: 1983-11-01 19:39:33
+      lastDateReadStr: 1983-11-11 12:50:32
+      lastDateWrittenStr: 1983-11-11 12:08:11
+      bpunValid: true
+    - name: DIMS-1453G:BPUN
+      type: BPUN
+      pages: 11
+      bytes: 17008
+      userName: FLOPPY-USER
+      dateCreated: 2261160194
+      lastDateRead: 2262224045
+      lastDateWritten: 2261160194
+      dateCreatedStr: 1983-11-03 09:04:02
+      lastDateReadStr: 1983-11-11 12:50:45
+      lastDateWrittenStr: 1983-11-03 09:04:02
+      bpunValid: true
+    - name: DISC-TEMA-F:BPUN
+      type: BPUN
+      pages: 25
+      bytes: 49626
+      userName: FLOPPY-USER
+      dateCreated: 2261160280
+      lastDateRead: 2262224054
+      lastDateWritten: 2261160280
+      dateCreatedStr: 1983-11-03 09:05:24
+      lastDateReadStr: 1983-11-11 12:50:54
+      lastDateWrittenStr: 1983-11-03 09:05:24
+      bpunValid: true
+    - name: FL-LOOPS-1996A:BPUN
+      type: BPUN
+      pages: 1
+      bytes: 1172
+      userName: FLOPPY-USER
+      dateCreated: 2171810187
+      lastDateRead: 2262224073
+      lastDateWritten: 2224483082
+      dateCreatedStr: 1982-05-25 19:06:11
+      lastDateReadStr: 1983-11-11 12:51:09
+      lastDateWrittenStr: 1983-02-11 14:44:10
+      bpunValid: true
+    - name: FLOPP-FORM-1990B:BPUN
+      type: BPUN
+      pages: 3
+      bytes: 5754
+      userName: FLOPPY-USER
+      dateCreated: 2153416671
+      lastDateRead: 2262224077
+      lastDateWritten: 2224469787
+      dateCreatedStr: 1982-01-13 08:31:31
+      lastDateReadStr: 1983-11-11 12:51:13
+      lastDateWrittenStr: 1983-02-11 11:28:27
+      bpunValid: true
+    - name: FLOPPY-FU-1986G:BPUN
+      type: BPUN
+      pages: 4
+      bytes: 6930
+      userName: FLOPPY-USER
+      dateCreated: 2260941220
+      lastDateRead: 2262224081
+      lastDateWritten: 2261052763
+      dateCreatedStr: 1983-11-01 19:38:36
+      lastDateReadStr: 1983-11-11 12:51:17
+      lastDateWrittenStr: 1983-11-02 14:53:27
+      bpunValid: true
+    - name: FLOPPY-RAN-1988B:BPUN
+      type: BPUN
+      pages: 5
+      bytes: 9526
+      userName: FLOPPY-USER
+      dateCreated: 2132864092
+      lastDateRead: 2262224086
+      lastDateWritten: 2224469806
+      dateCreatedStr: 1981-12-16 14:49:28
+      lastDateReadStr: 1983-11-11 12:51:22
+      lastDateWrittenStr: 1983-02-11 11:28:46
+      bpunValid: true
+    - name: MULTI-1820P:BPUN
+      type: BPUN
+      pages: 12
+      bytes: 22908
+      userName: FLOPPY-USER
+      dateCreated: 2185153041
+      lastDateRead: 2262224092
+      lastDateWritten: 2224470758
+      dateCreatedStr: 1982-08-31 12:40:17
+      lastDateReadStr: 1983-11-11 12:51:28
+      lastDateWrittenStr: 1983-02-11 11:43:38
+      bpunValid: true
+    - name: SUPER-RAND-2222D:BPUN
+      type: BPUN
+      pages: 6
+      bytes: 11392
+      userName: FLOPPY-USER
+      dateCreated: 2260941260
+      lastDateRead: 2262224101
+      lastDateWritten: 2261336960
+      dateCreatedStr: 1983-11-01 19:39:12
+      lastDateReadStr: 1983-11-11 12:51:37
+      lastDateWrittenStr: 1983-11-04 20:14:00
+      bpunValid: true
+    - name: TERMINAL-ASYNC-D:BPUN
+      type: BPUN
+      pages: 15
+      bytes: 30078
+      userName: FLOPPY-USER
+      dateCreated: 2260941268
+      lastDateRead: 2262224106
+      lastDateWritten: 2261064000
+      dateCreatedStr: 1983-11-01 19:39:20
+      lastDateReadStr: 1983-11-11 12:51:42
+      lastDateWrittenStr: 1983-11-02 17:37:00
+      bpunValid: true
+provenance:
+  contributor: Datormuseum
+  originalPath: DiskImages2/DISK72.img
+  dateImaged: 2023-10-02
+  importedAt: 2026-08-17T14:19:42.059Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10522-b-d2-837af825
+  syncStatus: pending

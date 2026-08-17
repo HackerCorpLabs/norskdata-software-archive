@@ -1,0 +1,205 @@
+id: nd-10188-e-d4-765b432a
+volumeName: ND-10188E-PART4
+md5: 765b432a583eabf585346a66002495b7
+product:
+  version: E
+  diskNumber: 4
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: flomon
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 89
+  files:
+    - name: FC-MAIN-2CODE:BRF
+      type: BRF
+      pages: 22
+      bytes: 44210
+      userName: FLOPPY-USER
+      dateCreated: 2294593681
+      lastDateRead: 2301010770
+      lastDateWritten: 2294593774
+      dateCreatedStr: 1984-03-02 11:34:17
+      lastDateReadStr: 1984-04-19 10:13:18
+      lastDateWrittenStr: 1984-03-02 11:35:46
+      bpunValid: null
+    - name: FC-MAIN-2DATA:BRF
+      type: BRF
+      pages: 2
+      bytes: 2257
+      userName: FLOPPY-USER
+      dateCreated: 2294593781
+      lastDateRead: 2301010779
+      lastDateWritten: 2294593784
+      dateCreatedStr: 1984-03-02 11:35:53
+      lastDateReadStr: 1984-04-19 10:13:27
+      lastDateWrittenStr: 1984-03-02 11:35:56
+      bpunValid: null
+    - name: FC-MVTM-2CODE:BRF
+      type: BRF
+      pages: 8
+      bytes: 14347
+      userName: FLOPPY-USER
+      dateCreated: 2294593786
+      lastDateRead: 2301010781
+      lastDateWritten: 2294593796
+      dateCreatedStr: 1984-03-02 11:35:58
+      lastDateReadStr: 1984-04-19 10:13:29
+      lastDateWrittenStr: 1984-03-02 11:36:04
+      bpunValid: null
+    - name: FC-MVTM-2DATA:BRF
+      type: BRF
+      pages: 1
+      bytes: 307
+      userName: FLOPPY-USER
+      dateCreated: 2294593800
+      lastDateRead: 2301010785
+      lastDateWritten: 2294593802
+      dateCreatedStr: 1984-03-02 11:36:08
+      lastDateReadStr: 1984-04-19 10:13:33
+      lastDateWrittenStr: 1984-03-02 11:36:10
+      bpunValid: null
+    - name: VTM-2B-R-D:BRF
+      type: BRF
+      pages: 14
+      bytes: 28649
+      userName: FLOPPY-USER
+      dateCreated: 2265228134
+      lastDateRead: 2301010787
+      lastDateWritten: 2265228219
+      dateCreatedStr: 1983-12-02 10:13:38
+      lastDateReadStr: 1984-04-19 10:13:35
+      lastDateWrittenStr: 1983-12-02 10:14:59
+      bpunValid: null
+    - name: VTM-2B-DATA-D:BRF
+      type: BRF
+      pages: 2
+      bytes: 3418
+      userName: FLOPPY-USER
+      dateCreated: 2265228135
+      lastDateRead: 2301010793
+      lastDateWritten: 2265228243
+      dateCreatedStr: 1983-12-02 10:13:39
+      lastDateReadStr: 1984-04-19 10:13:41
+      lastDateWrittenStr: 1983-12-02 10:15:19
+      bpunValid: null
+    - name: VTM-2B-CPOS-D:BRF
+      type: BRF
+      pages: 1
+      bytes: 703
+      userName: FLOPPY-USER
+      dateCreated: 2265228135
+      lastDateRead: 2301010796
+      lastDateWritten: 2265228248
+      dateCreatedStr: 1983-12-02 10:13:39
+      lastDateReadStr: 1984-04-19 10:13:44
+      lastDateWrittenStr: 1983-12-02 10:15:24
+      bpunValid: null
+    - name: VTM-2B-CPAR-D:BRF
+      type: BRF
+      pages: 1
+      bytes: 1334
+      userName: FLOPPY-USER
+      dateCreated: 2265228137
+      lastDateRead: 2301010799
+      lastDateWritten: 2265228249
+      dateCreatedStr: 1983-12-02 10:13:41
+      lastDateReadStr: 1984-04-19 10:13:47
+      lastDateWrittenStr: 1983-12-02 10:15:25
+      bpunValid: null
+    - name: PLANC-2BANK-E:BRF
+      type: BRF
+      pages: 14
+      bytes: 28524
+      userName: FLOPPY-USER
+      dateCreated: 2288468527
+      lastDateRead: 2301010802
+      lastDateWritten: 2290915507
+      dateCreatedStr: 1984-01-19 20:08:47
+      lastDateReadStr: 1984-04-19 10:13:50
+      lastDateWrittenStr: 1984-02-06 09:34:51
+      bpunValid: null
+    - name: FOCUS-2B-N:BUIL
+      type: BUIL
+      pages: 1
+      bytes: 298
+      userName: FLOPPY-USER
+      dateCreated: 2294596450
+      lastDateRead: 2301010808
+      lastDateWritten: 2294618535
+      dateCreatedStr: 1984-03-02 12:13:34
+      lastDateReadStr: 1984-04-19 10:13:56
+      lastDateWrittenStr: 1984-03-02 17:38:39
+      bpunValid: null
+    - name: FOCUS-2B-R:BUIL
+      type: BUIL
+      pages: 1
+      bytes: 420
+      userName: FLOPPY-USER
+      dateCreated: 2294597096
+      lastDateRead: 2301010811
+      lastDateWritten: 2294618577
+      dateCreatedStr: 1984-03-02 12:23:40
+      lastDateReadStr: 1984-04-19 10:13:59
+      lastDateWrittenStr: 1984-03-02 17:39:17
+      bpunValid: null
+    - name: MFOCUS-2B-N:BUIL
+      type: BUIL
+      pages: 1
+      bytes: 308
+      userName: FLOPPY-USER
+      dateCreated: 2294597583
+      lastDateRead: 2301010817
+      lastDateWritten: 2294618649
+      dateCreatedStr: 1984-03-02 12:31:15
+      lastDateReadStr: 1984-04-19 10:14:01
+      lastDateWrittenStr: 1984-03-02 17:40:25
+      bpunValid: null
+    - name: MFOCUS-2B-R:BUIL
+      type: BUIL
+      pages: 1
+      bytes: 432
+      userName: FLOPPY-USER
+      dateCreated: 2294597831
+      lastDateRead: 2301010820
+      lastDateWritten: 2294618624
+      dateCreatedStr: 1984-03-02 12:35:07
+      lastDateReadStr: 1984-04-19 10:14:04
+      lastDateWrittenStr: 1984-03-02 17:40:00
+      bpunValid: null
+    - name: VTM-2B-ARRAY-D-C:BRF
+      type: BRF
+      pages: 5
+      bytes: 9587
+      userName: FLOPPY-USER
+      dateCreated: 2263526292
+      lastDateRead: 2301010823
+      lastDateWritten: 2263933817
+      dateCreatedStr: 1983-11-21 10:46:20
+      lastDateReadStr: 1984-04-19 10:14:07
+      lastDateWrittenStr: 1983-11-24 14:13:57
+      bpunValid: null
+provenance:
+  contributor: Datormuseum
+  originalPath: DiskImages/NDDISK25.img
+  dateImaged: 2023-10-02
+  importedAt: 2026-08-17T14:18:40.562Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10188-e-d4-765b432a
+  syncStatus: pending

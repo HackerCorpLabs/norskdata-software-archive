@@ -1,0 +1,178 @@
+id: img-a67e7de13e4f
+volumeName: STAR-TREK-ND
+md5: a67e7de13e4f2e290faf2f2562f430dc
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: STAR-TREK
+      pagesUsed: 88
+  files:
+    - name: STAR-INCLUDE:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 2433
+      userName: STAR-TREK
+      dateCreated: 2103181740
+      lastDateRead: 2390037420
+      lastDateWritten: 2191310039
+      dateCreatedStr: 1981-05-14 00:06:44
+      lastDateReadStr: 1985-09-26 17:14:44
+      lastDateWrittenStr: 1982-10-14 11:51:23
+      bpunValid: null
+    - name: STAR-RAN:SYMB
+      type: SYMB
+      pages: 5
+      bytes: 353
+      userName: STAR-TREK
+      dateCreated: 2103181751
+      lastDateRead: 2390037422
+      lastDateWritten: 2105336044
+      dateCreatedStr: 1981-05-14 00:06:55
+      lastDateReadStr: 1985-09-26 17:14:46
+      lastDateWrittenStr: 1981-05-30 14:03:44
+      bpunValid: null
+    - name: STAR-SUBR:SYMB
+      type: SYMB
+      pages: 19
+      bytes: 37278
+      userName: STAR-TREK
+      dateCreated: 2103181764
+      lastDateRead: 2390037425
+      lastDateWritten: 2193814467
+      dateCreatedStr: 1981-05-14 00:07:04
+      lastDateReadStr: 1985-09-26 17:14:49
+      lastDateWrittenStr: 1982-11-01 15:15:03
+      bpunValid: null
+    - name: STAR-MAIN:SYMB
+      type: SYMB
+      pages: 28
+      bytes: 56957
+      userName: STAR-TREK
+      dateCreated: 2103181789
+      lastDateRead: 2390037433
+      lastDateWritten: 2193938798
+      dateCreatedStr: 1981-05-14 00:07:29
+      lastDateReadStr: 1985-09-26 17:14:57
+      lastDateWrittenStr: 1982-11-02 13:37:46
+      bpunValid: null
+    - name: STAR-NEW-RAN:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 146
+      userName: STAR-TREK
+      dateCreated: 2103181829
+      lastDateRead: 2390037449
+      lastDateWritten: 2105336082
+      dateCreatedStr: 1981-05-14 00:08:05
+      lastDateReadStr: 1985-09-26 17:15:09
+      lastDateWrittenStr: 1981-05-30 14:04:18
+      bpunValid: null
+    - name: SH-RAN3:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 2506
+      userName: STAR-TREK
+      dateCreated: 2103181991
+      lastDateRead: 2390037451
+      lastDateWritten: 2103181992
+      dateCreatedStr: 1981-05-14 00:10:39
+      lastDateReadStr: 1985-09-26 17:15:11
+      lastDateWrittenStr: 1981-05-14 00:10:40
+      bpunValid: null
+    - name: STAR-EXIT:BRF
+      type: BRF
+      pages: 1
+      bytes: 42
+      userName: STAR-TREK
+      dateCreated: 2103182047
+      lastDateRead: 2390037454
+      lastDateWritten: 2103182048
+      dateCreatedStr: 1981-05-14 00:11:31
+      lastDateReadStr: 1985-09-26 17:15:14
+      lastDateWrittenStr: 1981-05-14 00:11:32
+      bpunValid: null
+    - name: STAR-8ERR:BRF
+      type: BRF
+      pages: 1
+      bytes: 525
+      userName: STAR-TREK
+      dateCreated: 2103182084
+      lastDateRead: 2390037456
+      lastDateWritten: 2103182085
+      dateCreatedStr: 1981-05-14 00:12:04
+      lastDateReadStr: 1985-09-26 17:15:16
+      lastDateWrittenStr: 1981-05-14 00:12:05
+      bpunValid: null
+    - name: STAR-TREK:TEXT
+      type: TEXT
+      pages: 13
+      bytes: 17482
+      userName: STAR-TREK
+      dateCreated: 2104061985
+      lastDateRead: 2390037458
+      lastDateWritten: 2117393263
+      dateCreatedStr: 1981-05-20 23:00:33
+      lastDateReadStr: 1985-09-26 17:15:18
+      lastDateWrittenStr: 1981-08-26 13:45:47
+      bpunValid: null
+    - name: STAR:RUN
+      type: RUN
+      pages: 1
+      bytes: 450
+      userName: STAR-TREK
+      dateCreated: 2104062075
+      lastDateRead: 2390037465
+      lastDateWritten: 2194063393
+      dateCreatedStr: 1981-05-20 23:01:59
+      lastDateReadStr: 1985-09-26 17:15:25
+      lastDateWrittenStr: 1982-11-03 12:00:33
+      bpunValid: null
+    - name: STAR-ROBJE:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 312
+      userName: STAR-TREK
+      dateCreated: 2117393522
+      lastDateRead: 2390037467
+      lastDateWritten: 2117393523
+      dateCreatedStr: 1981-08-26 13:49:50
+      lastDateReadStr: 1985-09-26 17:15:27
+      lastDateWrittenStr: 1981-08-26 13:49:51
+      bpunValid: null
+    - name: STAR-GETNAME:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 738
+      userName: STAR-TREK
+      dateCreated: 2117393558
+      lastDateRead: 2390037470
+      lastDateWritten: 2117393559
+      dateCreatedStr: 1981-08-26 13:50:22
+      lastDateReadStr: 1985-09-26 17:15:30
+      lastDateWrittenStr: 1981-08-26 13:50:23
+      bpunValid: null
+provenance:
+  contributor: Frode
+  originalPath: Disk Images/STAR-TREK-ND.img
+  dateImaged: 2026-04-08
+  importedAt: 2026-08-17T14:19:50.099Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-a67e7de13e4f
+  syncStatus: pending

@@ -1,0 +1,38 @@
+id: img-80f61fa097ce
+volumeName: ND
+md5: 80f61fa097ce3981709de0e97dabdbb7
+image:
+  sizeBytes: 1261568
+  format: raw
+  controller: floppy
+  totalPages: 616
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 0
+  files: []
+provenance:
+  contributor: Paal
+  originalPath: 5.25/cob1.img
+  dateImaged: 2023-10-23
+  importedAt: 2026-08-17T14:19:53.321Z
+imagingLogs:
+  - sprint1.log
+  - sprint2.log
+  - cob1.log
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-80f61fa097ce
+  syncStatus: pending

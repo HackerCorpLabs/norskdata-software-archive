@@ -1,0 +1,308 @@
+id: img-c0cb709bf60c
+volumeName: null
+md5: c0cb709bf60ce9080291b945ce591ab4
+image:
+  sizeBytes: 1228800
+  format: raw
+  controller: floppy
+filesystem: dos
+volumeLabel: INSTALL4
+dosFiles:
+  - path: SV400A.DRV
+    bytes: 33056
+    modified: 1988-06-23 11:56
+    directory: false
+  - path: SV400A.GRB
+    bytes: 3658
+    modified: 1988-06-23 11:56
+    directory: false
+  - path: CITOH.DRV
+    bytes: 14192
+    modified: 1988-10-12 13:14
+    directory: false
+  - path: IBMCOLOR.DRV
+    bytes: 14368
+    modified: 1988-11-04 08:45
+    directory: false
+  - path: LBP8US.DRV
+    bytes: 65472
+    modified: 1988-10-26 17:11
+    directory: false
+  - path: NECP2.DRV
+    bytes: 14336
+    modified: 1988-10-12 13:15
+    directory: false
+  - path: TI850.DRV
+    bytes: 12800
+    modified: 1988-10-12 13:16
+    directory: false
+  - path: XER4020.DRV
+    bytes: 22016
+    modified: 1988-10-12 13:16
+    directory: false
+  - path: KALK.EXE
+    bytes: 28000
+    modified: 1988-10-12 09:10
+    directory: false
+  - path: KALENDER.EXE
+    bytes: 39104
+    modified: 1988-10-25 18:50
+    directory: false
+  - path: KARTOTEK.EXE
+    bytes: 39136
+    modified: 1988-11-08 09:54
+    directory: false
+  - path: UTKLIPP.EXE
+    bytes: 10560
+    modified: 1988-10-24 14:28
+    directory: false
+  - path: KLOKKE.EXE
+    bytes: 8944
+    modified: 1988-11-14 13:08
+    directory: false
+  - path: KONTROLL.EXE
+    bytes: 58352
+    modified: 1988-11-11 15:07
+    directory: false
+  - path: CVTPAINT.EXE
+    bytes: 5760
+    modified: 1988-10-12 09:28
+    directory: false
+  - path: NOTISBLK.EXE
+    bytes: 19376
+    modified: 1988-10-12 09:13
+    directory: false
+  - path: PAINT.EXE
+    bytes: 93648
+    modified: 1988-10-12 09:28
+    directory: false
+  - path: REVERSI.EXE
+    bytes: 15552
+    modified: 1988-10-12 09:13
+    directory: false
+  - path: SPOOLER.EXE
+    bytes: 14448
+    modified: 1988-10-12 09:14
+    directory: false
+  - path: TERMINAL.EXE
+    bytes: 48800
+    modified: 1988-10-24 10:11
+    directory: false
+  - path: WINOLDAP.MOD
+    bytes: 60640
+    modified: 1988-10-12 10:04
+    directory: false
+  - path: EISOLDAP.MOD
+    bytes: 61648
+    modified: 1988-10-12 10:04
+    directory: false
+  - path: ABC.TXT
+    bytes: 36
+    modified: 1988-10-17 13:21
+    directory: false
+  - path: HUSK.TXT
+    bytes: 494
+    modified: 1988-10-17 13:21
+    directory: false
+  - path: OLILES.TXT
+    bytes: 8442
+    modified: 1988-07-04 10:00
+    directory: false
+  - path: LESMEG.TXT
+    bytes: 15739
+    modified: 1988-11-17 15:40
+    directory: false
+  - path: WRITE.EXE
+    bytes: 198864
+    modified: 1988-11-11 15:11
+    directory: false
+  - path: TEST.WRI
+    bytes: 3200
+    modified: 1988-07-23 09:44
+    directory: false
+  - path: PIFRED.EXE
+    bytes: 30944
+    modified: 1988-10-26 17:33
+    directory: false
+  - path: PIF
+    bytes: 0
+    modified: 1988-11-15 11:54
+    directory: true
+  - path: PIF/123.PIF
+    bytes: 369
+    modified: 1988-05-06 09:01
+    directory: false
+  - path: PIF/ACCESS.PIF
+    bytes: 369
+    modified: 1988-04-26 16:47
+    directory: false
+  - path: PIF/BASIC.PIF
+    bytes: 369
+    modified: 1988-04-26 16:47
+    directory: false
+  - path: PIF/BASICA.PIF
+    bytes: 369
+    modified: 1988-05-05 14:11
+    directory: false
+  - path: PIF/CHART.PIF
+    bytes: 369
+    modified: 1988-05-06 09:01
+    directory: false
+  - path: PIF/CLOUT.PIF
+    bytes: 369
+    modified: 1987-11-12 13:11
+    directory: false
+  - path: PIF/DBASE.PIF
+    bytes: 369
+    modified: 1988-05-06 09:02
+    directory: false
+  - path: PIF/DW3PG.PIF
+    bytes: 369
+    modified: 1987-11-15 21:46
+    directory: false
+  - path: PIF/EDITOR.PIF
+    bytes: 369
+    modified: 1987-11-12 13:11
+    directory: false
+  - path: PIF/FILE.PIF
+    bytes: 369
+    modified: 1988-04-26 16:56
+    directory: false
+  - path: PIF/FL.PIF
+    bytes: 369
+    modified: 1987-11-12 13:11
+    directory: false
+  - path: PIF/FW.PIF
+    bytes: 369
+    modified: 1987-11-12 13:11
+    directory: false
+  - path: PIF/GRAPH.PIF
+    bytes: 369
+    modified: 1988-04-26 16:57
+    directory: false
+  - path: PIF/HTPM.PIF
+    bytes: 369
+    modified: 1987-11-12 13:11
+    directory: false
+  - path: PIF/LOTUS.PIF
+    bytes: 369
+    modified: 1987-11-12 13:11
+    directory: false
+  - path: PIF/MP.PIF
+    bytes: 369
+    modified: 1987-11-12 13:11
+    directory: false
+  - path: PIF/MPWIN.PIF
+    bytes: 369
+    modified: 1987-11-12 13:11
+    directory: false
+  - path: PIF/PE2.PIF
+    bytes: 369
+    modified: 1987-11-12 13:11
+    directory: false
+  - path: PIF/PFSACCES.PIF
+    bytes: 369
+    modified: 1987-11-12 13:11
+    directory: false
+  - path: PIF/PLAN.PIF
+    bytes: 369
+    modified: 1988-04-26 16:50
+    directory: false
+  - path: PIF/PROJ.PIF
+    bytes: 369
+    modified: 1988-05-30 16:55
+    directory: false
+  - path: PIF/QB.PIF
+    bytes: 369
+    modified: 1987-08-18 13:45
+    directory: false
+  - path: PIF/RB5000.PIF
+    bytes: 369
+    modified: 1987-11-12 13:11
+    directory: false
+  - path: PIF/RBASE.PIF
+    bytes: 369
+    modified: 1987-11-12 13:11
+    directory: false
+  - path: PIF/REPORT.PIF
+    bytes: 369
+    modified: 1988-04-26 16:55
+    directory: false
+  - path: PIF/SC4.PIF
+    bytes: 369
+    modified: 1987-11-12 13:11
+    directory: false
+  - path: PIF/SCOM.PIF
+    bytes: 369
+    modified: 1987-11-15 21:45
+    directory: false
+  - path: PIF/SPELL.PIF
+    bytes: 369
+    modified: 1987-11-12 13:11
+    directory: false
+  - path: PIF/SYMPHONY.PIF
+    bytes: 369
+    modified: 1987-11-12 13:11
+    directory: false
+  - path: PIF/TURBO.PIF
+    bytes: 369
+    modified: 1988-05-06 09:02
+    directory: false
+  - path: PIF/VW3.PIF
+    bytes: 369
+    modified: 1987-11-12 13:11
+    directory: false
+  - path: PIF/WORD.PIF
+    bytes: 369
+    modified: 1988-05-06 09:04
+    directory: false
+  - path: PIF/WORKS.PIF
+    bytes: 369
+    modified: 1987-11-12 13:11
+    directory: false
+  - path: PIF/WRDPERF.PIF
+    bytes: 369
+    modified: 1988-04-26 16:51
+    directory: false
+  - path: PIF/WRITE.PIF
+    bytes: 369
+    modified: 1988-04-26 16:52
+    directory: false
+  - path: PIF/WS2.PIF
+    bytes: 369
+    modified: 1987-11-12 13:11
+    directory: false
+  - path: PIF/XTALK.PIF
+    bytes: 369
+    modified: 1987-11-12 13:11
+    directory: false
+  - path: CONTROL.EXE
+    bytes: 58352
+    modified: 1988-11-11 15:07
+    directory: false
+  - path: CLIPBRD.EXE
+    bytes: 10560
+    modified: 1988-10-24 14:28
+    directory: false
+provenance:
+  contributor: Frode
+  originalPath: Windows 2.10/Windows 2.10, 4 Oppsett 4.img
+  dateImaged: 2025-07-17
+  importedAt: 2026-08-17T14:19:52.148Z
+imagingLogs:
+  - readme.txt
+photos:
+  disk: []
+  set:
+    - Windows 2.10 a.jpg
+    - Windows 2.10 b.jpg
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-c0cb709bf60c
+  syncStatus: pending

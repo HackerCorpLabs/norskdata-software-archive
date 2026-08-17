@@ -1,0 +1,84 @@
+id: nd-10023-k-d1-57957c86
+volumeName: ND-10023K
+md5: 57957c86f0b0ff21e386342d6ac57a07
+product:
+  version: K
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: binary
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 78
+  files:
+    - name: FTNLIBR-2091F:BRF
+      type: BRF
+      pages: 18
+      bytes: 35092
+      userName: FLOPPY-USER
+      dateCreated: 1977128645
+      lastDateRead: 2121968844
+      lastDateWritten: 2064183384
+      dateCreatedStr: 1979-07-12 09:27:05
+      lastDateReadStr: 1981-09-29 10:51:12
+      lastDateWrittenStr: 1980-12-04 15:01:24
+      bpunValid: null
+    - name: FTNRTLIBR-2092F:BRF
+      type: BRF
+      pages: 14
+      bytes: 26749
+      userName: FLOPPY-USER
+      dateCreated: 1977132258
+      lastDateRead: 2064193334
+      lastDateWritten: 2064183468
+      dateCreatedStr: 1979-07-12 10:19:34
+      lastDateReadStr: 1980-12-04 17:28:54
+      lastDateWrittenStr: 1980-12-04 15:02:44
+      bpunValid: null
+    - name: PRINT-FILE-2324B:BPUN
+      type: BPUN
+      pages: 9
+      bytes: 18337
+      userName: FLOPPY-USER
+      dateCreated: 1978983365
+      lastDateRead: 2027616416
+      lastDateWritten: 1983703888
+      dateCreatedStr: 1979-07-26 14:15:05
+      lastDateReadStr: 1980-03-13 15:34:32
+      lastDateWrittenStr: 1979-08-30 14:45:16
+      bpunValid: true
+    - name: FTN-2090I:BPUN
+      type: BPUN
+      pages: 32
+      bytes: 64550
+      userName: FLOPPY-USER
+      dateCreated: 1978983685
+      lastDateRead: 2121971176
+      lastDateWritten: 2121968373
+      dateCreatedStr: 1979-07-26 14:20:05
+      lastDateReadStr: 1981-09-29 11:23:40
+      lastDateWrittenStr: 1981-09-29 10:43:53
+      bpunValid: true
+provenance:
+  contributor: Datormuseum
+  originalPath: DiskImages2/DISK32.img
+  dateImaged: 2023-10-02
+  importedAt: 2026-08-17T14:19:16.843Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10023-k-d1-57957c86
+  syncStatus: pending

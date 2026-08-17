@@ -1,0 +1,61 @@
+id: nd-10166-e-d9-efcfb566
+volumeName: ND-10166E-PART9
+md5: efcfb56685a466561b0d708cf64fe166
+product:
+  version: E
+  diskNumber: 9
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 116
+  files:
+    - name: SIBINTER-MH-E00:PROG
+      type: PROG
+      pages: 107
+      bytes: 251904
+      userName: FLOPPY-USER
+      dateCreated: 2323032092
+      lastDateRead: 2377568351
+      lastDateWritten: 2323032097
+      dateCreatedStr: 1984-09-27 10:32:28
+      lastDateReadStr: 1985-06-27 13:01:31
+      lastDateWrittenStr: 1984-09-27 10:32:33
+      bpunValid: null
+    - name: UE-SIBINTER-E00:ERR
+      type: ERR
+      pages: 6
+      bytes: 11520
+      userName: FLOPPY-USER
+      dateCreated: 2323032232
+      lastDateRead: null
+      lastDateWritten: 2323032233
+      dateCreatedStr: 1984-09-27 10:34:40
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-09-27 10:34:41
+      bpunValid: null
+provenance:
+  contributor: Datormuseum
+  originalPath: DiskImages2/DISK61.img
+  dateImaged: 2023-10-02
+  importedAt: 2026-08-17T14:19:23.549Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10166-e-d9-efcfb566
+  syncStatus: pending

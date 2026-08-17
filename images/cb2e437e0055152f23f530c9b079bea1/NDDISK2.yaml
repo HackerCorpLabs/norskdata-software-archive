@@ -1,0 +1,118 @@
+id: patch-patch-sintran-cb2e437e
+volumeName: PATCH-SINTRAN
+md5: cb2e437e0055152f23f530c9b079bea1
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: SYSTEM
+      pagesUsed: 90
+  files:
+    - name: FILE-TEST:PROG
+      type: PROG
+      pages: 12
+      bytes: 2048
+      userName: SYSTEM
+      dateCreated: 2238114498
+      lastDateRead: 2281702759
+      lastDateWritten: 2238114504
+      dateCreatedStr: 1983-05-19 14:43:02
+      lastDateReadStr: null
+      lastDateWrittenStr: 1983-05-19 14:43:08
+      bpunValid: null
+    - name: FILE-TEST-32:PROG
+      type: PROG
+      pages: 12
+      bytes: 23552
+      userName: SYSTEM
+      dateCreated: 2238114516
+      lastDateRead: null
+      lastDateWritten: 2238114521
+      dateCreatedStr: 1983-05-19 14:43:20
+      lastDateReadStr: null
+      lastDateWrittenStr: 1983-05-19 14:43:25
+      bpunValid: null
+    - name: FILE-TEST-48:PROG
+      type: PROG
+      pages: 12
+      bytes: 23552
+      userName: SYSTEM
+      dateCreated: 2238114532
+      lastDateRead: 2281702761
+      lastDateWritten: 2238114536
+      dateCreatedStr: 1983-05-19 14:43:36
+      lastDateReadStr: null
+      lastDateWrittenStr: 1983-05-19 14:43:40
+      bpunValid: null
+    - name: RUN-USER-PATCH:MODE
+      type: MODE
+      pages: 3
+      bytes: 4174
+      userName: SYSTEM
+      dateCreated: 2238114549
+      lastDateRead: 2281702645
+      lastDateWritten: 2238114553
+      dateCreatedStr: 1983-05-19 14:43:53
+      lastDateReadStr: null
+      lastDateWrittenStr: 1983-05-19 14:43:57
+      bpunValid: null
+    - name: PATCH-FILE:PATC
+      type: PATC
+      pages: 41
+      bytes: 4689
+      userName: SYSTEM
+      dateCreated: 2238114562
+      lastDateRead: 2281702748
+      lastDateWritten: 2241919091
+      dateCreatedStr: 1983-05-19 14:44:02
+      lastDateReadStr: null
+      lastDateWrittenStr: 1983-06-16 15:33:51
+      bpunValid: null
+    - name: REFERENCE:FADM
+      type: FADM
+      pages: 1
+      bytes: 223
+      userName: SYSTEM
+      dateCreated: 2238114619
+      lastDateRead: 2281702711
+      lastDateWritten: 2238114628
+      dateCreatedStr: 1983-05-19 14:44:59
+      lastDateReadStr: null
+      lastDateWrittenStr: 1983-05-19 14:45:04
+      bpunValid: null
+    - name: SYMBOLS:FADM
+      type: FADM
+      pages: 1
+      bytes: 3
+      userName: SYSTEM
+      dateCreated: 2238114631
+      lastDateRead: 2281702713
+      lastDateWritten: 2238114635
+      dateCreatedStr: 1983-05-19 14:45:07
+      lastDateReadStr: null
+      lastDateWrittenStr: 1983-05-19 14:45:11
+      bpunValid: null
+provenance:
+  contributor: Datormuseum
+  originalPath: DiskImages/NDDISK2.img
+  dateImaged: 2023-10-02
+  importedAt: 2026-08-17T14:18:29.311Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-patch-patch-sintran-cb2e437e
+  syncStatus: pending

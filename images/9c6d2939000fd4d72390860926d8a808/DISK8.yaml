@@ -1,0 +1,70 @@
+id: img-9c6d2939000f
+volumeName: LIBRARY
+md5: 9c6d2939000fd4d72390860926d8a808
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: bpun
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 50
+  files:
+    - name: EDITOR-4:SYMB
+      type: SYMB
+      pages: 20
+      bytes: 35035
+      userName: FLOPPY-USER
+      dateCreated: 2131303530
+      lastDateRead: 2281704146
+      lastDateWritten: 2131303601
+      dateCreatedStr: 1981-12-04 17:49:42
+      lastDateReadStr: null
+      lastDateWrittenStr: 1981-12-04 17:50:49
+      bpunValid: null
+    - name: EDITOR-5:SYMB
+      type: SYMB
+      pages: 25
+      bytes: 34249
+      userName: FLOPPY-USER
+      dateCreated: 2131303554
+      lastDateRead: 2281704206
+      lastDateWritten: 2131303650
+      dateCreatedStr: 1981-12-04 17:50:02
+      lastDateReadStr: null
+      lastDateWrittenStr: 1981-12-04 17:51:34
+      bpunValid: null
+    - name: EDITOR-6:SYMB
+      type: SYMB
+      pages: 4
+      bytes: 3538
+      userName: FLOPPY-USER
+      dateCreated: 2131303576
+      lastDateRead: 2281704268
+      lastDateWritten: 2131303666
+      dateCreatedStr: 1981-12-04 17:50:24
+      lastDateReadStr: null
+      lastDateWrittenStr: 1981-12-04 17:51:50
+      bpunValid: null
+provenance:
+  contributor: Datormuseum
+  originalPath: DiskImages/DISK8.img
+  dateImaged: 2023-10-02
+  importedAt: 2026-08-17T14:18:08.190Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-9c6d2939000f
+  syncStatus: pending

@@ -1,0 +1,127 @@
+id: img-ecd07e677fca
+volumeName: null
+md5: ecd07e677fca13de40311f22e3864773
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+filesystem: ndfs
+condition:
+  status: damaged
+  parser: ndfs
+  parserError: Block 606544961 out of range
+  ndNamesFound: 24
+  ndNameSamples:
+    - SYNC-MODEM:NPL
+    - SYNC-MODEM:NMAC
+    - TEST-MON-H:NMAC
+    - SYNC-MODEM:BPUN
+    - SYNC-MODEM:LIST
+    - MON-LIBR-H:NMAC
+    - SYNC-MODEM:CMPR
+    - VHV:VHN
+  recovery:
+    status: recovered
+    layout:
+      object: 150
+      user: 152
+      bit: 77
+    filesRecovered: 9
+    namesConfirmedInBytes: 9
+    confirmRatio: 1
+    acceptedBy: own-bytes
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 110
+  files:
+    - name: CACHE-2063D
+      type: BPUN
+      pages: 0
+      bytes: 0
+      userName: FLOPPY-USER
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: HDLC-MEGALINK-B
+      type: BPUN
+      pages: 0
+      bytes: 0
+      userName: FLOPPY-USER
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: LP-TEST-1878D
+      type: BPUN
+      pages: 0
+      bytes: 0
+      userName: FLOPPY-USER
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: MEMORY-C
+      type: BPUN
+      pages: 0
+      bytes: 0
+      userName: FLOPPY-USER
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: MOVER-1863C
+      type: BPUN
+      pages: 0
+      bytes: 0
+      userName: FLOPPY-USER
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: PAGING-B
+      type: BPUN
+      pages: 0
+      bytes: 0
+      userName: FLOPPY-USER
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: PFAIL-1355G
+      type: BPUN
+      pages: 0
+      bytes: 0
+      userName: FLOPPY-USER
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: SMALL-RAND-2448A
+      type: BPUN
+      pages: 0
+      bytes: 0
+      userName: FLOPPY-USER
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: SYNC-MODEM-A
+      type: BPUN
+      pages: 0
+      bytes: 0
+      userName: FLOPPY-USER
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+provenance:
+  contributor: Datormuseum
+  originalPath: DiskImages2/DISK76.img
+  dateImaged: 2023-10-02
+  importedAt: 2026-08-17T14:19:44.254Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-ecd07e677fca
+  syncStatus: pending

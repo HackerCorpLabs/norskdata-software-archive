@@ -1,0 +1,37 @@
+id: img-4cd534c63010
+volumeName: null
+md5: 4cd534c6301071f5c413387756d40eba
+image:
+  sizeBytes: 314368
+  format: raw
+  controller: floppy
+filesystem: ndfs
+condition:
+  status: damaged
+  parser: ndfs
+  parserError: Block 268456777 out of range
+  ndNamesFound: 4
+  ndNameSamples:
+    - SIBINTER:SYNT
+    - UE-SIBINTER:ERR
+    - LOK:KO
+    - OS-CONNECT-TO:PROG
+  recovery: null
+provenance:
+  contributor: Datormuseum
+  originalPath: DiskImages2/DISK62.img
+  dateImaged: 2023-10-02
+  importedAt: 2026-08-17T14:19:25.855Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-4cd534c63010
+  syncStatus: pending

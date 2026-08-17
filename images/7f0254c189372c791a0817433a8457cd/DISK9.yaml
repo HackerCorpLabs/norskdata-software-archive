@@ -1,0 +1,73 @@
+id: nd-10152-d-d1-7f0254c1
+volumeName: ND-10152D-PART1
+md5: 7f0254c189372c791a0817433a8457cd
+product:
+  version: D
+  diskNumber: 1
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 125
+  files:
+    - name: DB-SEGMENT-D:BPUN
+      type: BPUN
+      pages: 56
+      bytes: 112172
+      userName: FLOPPY-USER
+      dateCreated: 2255272073
+      lastDateRead: null
+      lastDateWritten: 2255272075
+      dateCreatedStr: 1983-09-22 11:34:09
+      lastDateReadStr: null
+      lastDateWrittenStr: 1983-09-22 11:34:11
+      bpunValid: true
+    - name: PATCH-SEGMENT-D:MODE
+      type: MODE
+      pages: 1
+      bytes: 187
+      userName: FLOPPY-USER
+      dateCreated: 2255272168
+      lastDateRead: 2256190468
+      lastDateWritten: 2255272169
+      dateCreatedStr: 1983-09-22 11:35:40
+      lastDateReadStr: 1983-09-29 11:48:04
+      lastDateWrittenStr: 1983-09-22 11:35:41
+      bpunValid: null
+    - name: MAIN-SEGMENT-D:BPUN
+      type: BPUN
+      pages: 64
+      bytes: 130220
+      userName: FLOPPY-USER
+      dateCreated: 2255271984
+      lastDateRead: 2292905346
+      lastDateWritten: 2292903506
+      dateCreatedStr: 1983-09-22 11:32:48
+      lastDateReadStr: 1984-02-21 15:22:02
+      lastDateWrittenStr: 1984-02-21 14:57:18
+      bpunValid: true
+provenance:
+  contributor: Datormuseum
+  originalPath: DiskImages/DISK9.img
+  dateImaged: 2023-10-02
+  importedAt: 2026-08-17T14:18:10.034Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10152-d-d1-7f0254c1
+  syncStatus: pending

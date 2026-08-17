@@ -1,0 +1,61 @@
+id: nd-10188-e-d2-3f86cbad
+volumeName: ND-10188E-PART2
+md5: 3f86cbade284b0e31c875fcf7cc43f01
+product:
+  version: E
+  diskNumber: 2
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 139
+  files:
+    - name: FOCUS-COMPILE-E:PROG
+      type: PROG
+      pages: 55
+      bytes: 112640
+      userName: FLOPPY-USER
+      dateCreated: 2294484694
+      lastDateRead: 2301009626
+      lastDateWritten: 2294485998
+      dateCreatedStr: 1984-03-01 16:59:22
+      lastDateReadStr: 1984-04-19 09:59:26
+      lastDateWrittenStr: 1984-03-01 17:15:46
+      bpunValid: null
+    - name: FOCUS-CONVERT:PROG
+      type: PROG
+      pages: 81
+      bytes: 190464
+      userName: FLOPPY-USER
+      dateCreated: 2288387292
+      lastDateRead: 2301010453
+      lastDateWritten: 2288387293
+      dateCreatedStr: 1984-01-19 00:19:28
+      lastDateReadStr: 1984-04-19 10:08:21
+      lastDateWrittenStr: 1984-01-19 00:19:29
+      bpunValid: null
+provenance:
+  contributor: Datormuseum
+  originalPath: DiskImages/NDDISK27.img
+  dateImaged: 2023-10-02
+  importedAt: 2026-08-17T14:18:44.087Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10188-e-d2-3f86cbad
+  syncStatus: pending

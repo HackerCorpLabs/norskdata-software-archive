@@ -1,0 +1,61 @@
+id: nd-10152-d-d5-0e3b29c8
+volumeName: ND-10152D-PART5
+md5: 0e3b29c8021bbf6a3d277c0c1ee76f29
+product:
+  version: D
+  diskNumber: 5
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 69
+  files:
+    - name: VTM-SEGMENT-S-D:BPUN
+      type: BPUN
+      pages: 65
+      bytes: 131326
+      userName: FLOPPY-USER
+      dateCreated: 2254239711
+      lastDateRead: null
+      lastDateWritten: 2254239716
+      dateCreatedStr: 1983-09-14 15:31:31
+      lastDateReadStr: null
+      lastDateWrittenStr: 1983-09-14 15:31:36
+      bpunValid: true
+    - name: DUMP-IR-S-D:MODE
+      type: MODE
+      pages: 1
+      bytes: 352
+      userName: FLOPPY-USER
+      dateCreated: 2254239791
+      lastDateRead: null
+      lastDateWritten: 2254239793
+      dateCreatedStr: 1983-09-14 15:32:47
+      lastDateReadStr: null
+      lastDateWrittenStr: 1983-09-14 15:32:49
+      bpunValid: null
+provenance:
+  contributor: Datormuseum
+  originalPath: DiskImages/NDDISK21.img
+  dateImaged: 2023-10-02
+  importedAt: 2026-08-17T14:18:33.013Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10152-d-d5-0e3b29c8
+  syncStatus: pending

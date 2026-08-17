@@ -1,0 +1,41 @@
+id: img-35984434f254
+volumeName: null
+md5: 35984434f254794d7dc58ef743a11b42
+image:
+  sizeBytes: 314880
+  format: raw
+  controller: floppy
+filesystem: ndfs
+condition:
+  status: damaged
+  parser: ndfs
+  parserError: Block 18770 out of range
+  ndNamesFound: 8
+  ndNameSamples:
+    - SPADOK-MESSAGE:DATA
+    - DATA:DATA
+    - DB-HLPFILE:TEMP
+    - SMTXPTDILO:LOGG
+    - DIR-NAME:DATA
+    - IR-PAGE:DATA
+    - IR-FORM:DATA
+    - IR-REPORT:DATA
+  recovery: null
+provenance:
+  contributor: Datormuseum
+  originalPath: DiskImages/DISK14.img
+  dateImaged: 2023-10-02
+  importedAt: 2026-08-17T14:17:57.510Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-35984434f254
+  syncStatus: pending

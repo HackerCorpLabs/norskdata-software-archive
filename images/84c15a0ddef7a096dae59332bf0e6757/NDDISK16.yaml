@@ -1,0 +1,61 @@
+id: nd-10191-d-d3-84c15a0d
+volumeName: ND-10191D-PART3
+md5: 84c15a0ddef7a096dae59332bf0e6757
+product:
+  version: D
+  diskNumber: 3
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 111
+  files:
+    - name: FORT32-1BANK-D00:BRF
+      type: BRF
+      pages: 53
+      bytes: 107734
+      userName: FLOPPY-USER
+      dateCreated: 2297729460
+      lastDateRead: null
+      lastDateWritten: 2302058041
+      dateCreatedStr: 1984-03-26 09:06:52
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-04-27 09:56:57
+      bpunValid: null
+    - name: FORT32-2BANK-D00:BRF
+      type: BRF
+      pages: 55
+      bytes: 111796
+      userName: FLOPPY-USER
+      dateCreated: 2297729542
+      lastDateRead: null
+      lastDateWritten: 2302058065
+      dateCreatedStr: 1984-03-26 09:08:06
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-04-27 09:57:17
+      bpunValid: null
+provenance:
+  contributor: Datormuseum
+  originalPath: DiskImages/NDDISK16.img
+  dateImaged: 2023-10-02
+  importedAt: 2026-08-17T14:18:24.184Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10191-d-d3-84c15a0d
+  syncStatus: pending

@@ -1,0 +1,41 @@
+id: img-cae63a8396b3
+volumeName: null
+md5: cae63a8396b3c663f8cf921ecff44ef8
+image:
+  sizeBytes: 294912
+  format: raw
+  controller: floppy
+filesystem: ndfs
+condition:
+  status: damaged
+  parser: ndfs
+  parserError: Block 151 out of range
+  ndNamesFound: 26
+  ndNameSamples:
+    - PACK-ONE:IBM
+    - PACK-ONE:KAY
+    - PACK-ONE:GUES
+    - UXK:KHKW
+    - SYMBOLS:FADM
+    - REFERENCE:FADM
+    - SINTRAN:DATA
+    - SG03FFERENCE:FAD
+  recovery: null
+provenance:
+  contributor: Datormuseum
+  originalPath: broken/DISK18.IMG
+  dateImaged: 2022-08-15
+  importedAt: 2026-08-17T14:17:47.779Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-cae63a8396b3
+  syncStatus: pending

@@ -1,0 +1,202 @@
+id: img-3a57dff65f72
+volumeName: NMN-DUNGEON-3
+md5: 3a57dff65f727d81254c6b3984986eaf
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: DUNGEON
+      pagesUsed: 136
+  files:
+    - name: DSUB:FTN
+      type: FTN
+      pages: 14
+      bytes: 23569
+      userName: DUNGEON
+      dateCreated: 2328835522
+      lastDateRead: 2622002914
+      lastDateWritten: 2328835527
+      dateCreatedStr: 1984-11-07 19:23:02
+      lastDateReadStr: 1989-01-04 09:27:34
+      lastDateWrittenStr: 1984-11-07 19:23:07
+      bpunValid: null
+    - name: DVERB1:FTN
+      type: FTN
+      pages: 14
+      bytes: 14794
+      userName: DUNGEON
+      dateCreated: 2328835539
+      lastDateRead: 2622002919
+      lastDateWritten: 2328835541
+      dateCreatedStr: 1984-11-07 19:23:19
+      lastDateReadStr: 1989-01-04 09:27:39
+      lastDateWrittenStr: 1984-11-07 19:23:21
+      bpunValid: null
+    - name: GDT:FTN
+      type: FTN
+      pages: 14
+      bytes: 17124
+      userName: DUNGEON
+      dateCreated: 2328835557
+      lastDateRead: 2622002924
+      lastDateWritten: 2328835558
+      dateCreatedStr: 1984-11-07 19:23:37
+      lastDateReadStr: 1989-01-04 09:27:44
+      lastDateWrittenStr: 1984-11-07 19:23:38
+      bpunValid: null
+    - name: OBJCTS:FTN
+      type: FTN
+      pages: 14
+      bytes: 25596
+      userName: DUNGEON
+      dateCreated: 2328835575
+      lastDateRead: 2622002929
+      lastDateWritten: 2328835576
+      dateCreatedStr: 1984-11-07 19:23:55
+      lastDateReadStr: 1989-01-04 09:27:49
+      lastDateWrittenStr: 1984-11-07 19:23:56
+      bpunValid: null
+    - name: SVERBS:FTN
+      type: FTN
+      pages: 14
+      bytes: 23035
+      userName: DUNGEON
+      dateCreated: 2328835598
+      lastDateRead: 2622002934
+      lastDateWritten: 2328835599
+      dateCreatedStr: 1984-11-07 19:24:14
+      lastDateReadStr: 1989-01-04 09:27:54
+      lastDateWrittenStr: 1984-11-07 19:24:15
+      bpunValid: null
+    - name: VERBS:FTN
+      type: FTN
+      pages: 14
+      bytes: 26052
+      userName: DUNGEON
+      dateCreated: 2328835623
+      lastDateRead: 2622002944
+      lastDateWritten: 2328835624
+      dateCreatedStr: 1984-11-07 19:24:39
+      lastDateReadStr: 1989-01-04 09:28:00
+      lastDateWrittenStr: 1984-11-07 19:24:40
+      bpunValid: null
+    - name: DVERB2:FTN
+      type: FTN
+      pages: 14
+      bytes: 22192
+      userName: DUNGEON
+      dateCreated: 2328835661
+      lastDateRead: 2622002950
+      lastDateWritten: 2328835663
+      dateCreatedStr: 1984-11-07 19:25:13
+      lastDateReadStr: 1989-01-04 09:28:06
+      lastDateWrittenStr: 1984-11-07 19:25:15
+      bpunValid: null
+    - name: RANDOM:FTN
+      type: FTN
+      pages: 4
+      bytes: 6350
+      userName: DUNGEON
+      dateCreated: 2328836228
+      lastDateRead: 2622002956
+      lastDateWritten: 2328836229
+      dateCreatedStr: 1984-11-07 19:34:04
+      lastDateReadStr: 1989-01-04 09:28:12
+      lastDateWrittenStr: 1984-11-07 19:34:05
+      bpunValid: null
+    - name: PLTEST:PLNC
+      type: PLNC
+      pages: 3
+      bytes: 4758
+      userName: DUNGEON
+      dateCreated: 2328836279
+      lastDateRead: 2622002959
+      lastDateWritten: 2328836280
+      dateCreatedStr: 1984-11-07 19:34:55
+      lastDateReadStr: 1989-01-04 09:28:15
+      lastDateWrittenStr: 1984-11-07 19:34:56
+      bpunValid: null
+    - name: FILE-DATA:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1657
+      userName: DUNGEON
+      dateCreated: 2328836313
+      lastDateRead: 2622002962
+      lastDateWritten: 2328837278
+      dateCreatedStr: 1984-11-07 19:35:25
+      lastDateReadStr: 1989-01-04 09:28:18
+      lastDateWrittenStr: 1984-11-07 19:50:30
+      bpunValid: null
+    - name: DUNGEON:DOC
+      type: DOC
+      pages: 11
+      bytes: 22181
+      userName: DUNGEON
+      dateCreated: 2328836716
+      lastDateRead: 2622003206
+      lastDateWritten: 2328836717
+      dateCreatedStr: 1984-11-07 19:41:44
+      lastDateReadStr: 1989-01-04 09:32:06
+      lastDateWrittenStr: 1984-11-07 19:41:45
+      bpunValid: null
+    - name: PERFORM-LIBRARY:MCRO
+      type: MCRO
+      pages: 1
+      bytes: 824
+      userName: DUNGEON
+      dateCreated: 2328837121
+      lastDateRead: 2622003211
+      lastDateWritten: 2328837123
+      dateCreatedStr: 1984-11-07 19:48:01
+      lastDateReadStr: 1989-01-04 09:32:11
+      lastDateWrittenStr: 1984-11-07 19:48:03
+      bpunValid: null
+    - name: LOAD-DUNGEON:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 488
+      userName: DUNGEON
+      dateCreated: 2328837167
+      lastDateRead: 2622003214
+      lastDateWritten: 2328837168
+      dateCreatedStr: 1984-11-07 19:48:47
+      lastDateReadStr: 1989-01-04 09:32:14
+      lastDateWrittenStr: 1984-11-07 19:48:48
+      bpunValid: null
+    - name: PLTEST:BRF
+      type: BRF
+      pages: 1
+      bytes: 858
+      userName: DUNGEON
+      dateCreated: 2328837261
+      lastDateRead: 2622003217
+      lastDateWritten: 2328837262
+      dateCreatedStr: 1984-11-07 19:50:13
+      lastDateReadStr: 1989-01-04 09:32:17
+      lastDateWrittenStr: 1984-11-07 19:50:14
+      bpunValid: null
+provenance:
+  contributor: Frode
+  originalPath: Disk Images/NMN-DUNGEON-3.img
+  dateImaged: 2026-04-08
+  importedAt: 2026-08-17T14:19:49.111Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-3a57dff65f72
+  syncStatus: pending

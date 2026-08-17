@@ -1,0 +1,197 @@
+id: img-05977338010b
+volumeName: null
+md5: 05977338010b0c47cbea29abd34ddb2b
+image:
+  sizeBytes: 1228800
+  format: raw
+  controller: floppy
+filesystem: dos
+volumeLabel: 380952XXA0
+dosFiles:
+  - path: ND-OWS
+    bytes: 0
+    modified: 1990-11-14 11:11
+    directory: true
+  - path: ND-OWS/DRIVERS
+    bytes: 0
+    modified: 1990-11-14 11:11
+    directory: true
+  - path: ND-OWS/DRIVERS/KEYBOARD.COM
+    bytes: 11847
+    modified: 1988-11-11 11:59
+    directory: false
+  - path: ND-OWS/DRIVERS/NDKEYB.COM
+    bytes: 4800
+    modified: 1990-02-06 12:11
+    directory: false
+  - path: ND-OWS/DRIVERS/NTXKEYB.COM
+    bytes: 3333
+    modified: 1990-05-14 16:18
+    directory: false
+  - path: ND-OWS/DRIVERS/KEYBTABL.EN
+    bytes: 1333
+    modified: 1988-11-30 11:04
+    directory: false
+  - path: ND-OWS/DRIVERS/KEYBTABL.DA
+    bytes: 1333
+    modified: 1988-11-30 11:04
+    directory: false
+  - path: ND-OWS/DRIVERS/KEYBTABL.FR
+    bytes: 1333
+    modified: 1988-11-30 11:04
+    directory: false
+  - path: ND-OWS/DRIVERS/KEYBTABL.GE
+    bytes: 1333
+    modified: 1988-11-30 11:04
+    directory: false
+  - path: ND-OWS/DRIVERS/KEYBTABL.NO
+    bytes: 1333
+    modified: 1988-11-30 11:04
+    directory: false
+  - path: ND-OWS/DRIVERS/KEYBTABL.SD
+    bytes: 1333
+    modified: 1988-11-30 11:04
+    directory: false
+  - path: ND-OWS/DRIVERS/KEYBTABL.SW
+    bytes: 1333
+    modified: 1988-11-30 11:04
+    directory: false
+  - path: ND-OWS/DRIVERS/KEYBTABL.US
+    bytes: 1333
+    modified: 1988-11-30 11:04
+    directory: false
+  - path: ND-OWS/DRIVERS/VKMLOAD.EXE
+    bytes: 29888
+    modified: 1990-09-28 10:25
+    directory: false
+  - path: ND-OWS/DRIVERS/DOSVKM00.COM
+    bytes: 2686
+    modified: 1990-01-19 13:29
+    directory: false
+  - path: ND-OWS/DRIVERS/DOSVKM01.COM
+    bytes: 2988
+    modified: 1990-01-19 13:29
+    directory: false
+  - path: ND-OWS/DRIVERS/DOSVKM03.COM
+    bytes: 2458
+    modified: 1990-06-12 11:34
+    directory: false
+  - path: ND-OWS/DRIVERS/DOSVKM04.COM
+    bytes: 2841
+    modified: 1990-10-17 11:00
+    directory: false
+  - path: ND-OWS/DRIVERS/DOSVKM10.COM
+    bytes: 2260
+    modified: 1990-08-08 10:27
+    directory: false
+  - path: ND-OWS/DRIVERS/DOSVKM13.COM
+    bytes: 2160
+    modified: 1990-10-16 11:36
+    directory: false
+  - path: ND-OWS/DRIVERS/DOSVKM14.COM
+    bytes: 2857
+    modified: 1990-01-19 13:32
+    directory: false
+  - path: ND-OWS/DRIVERS/WINVKM00.EXE
+    bytes: 4072
+    modified: 1988-12-08 21:31
+    directory: false
+  - path: ND-OWS/DRIVERS/WINVKM01.EXE
+    bytes: 4022
+    modified: 1988-12-08 21:31
+    directory: false
+  - path: ND-OWS/DRIVERS/WINVKM03.EXE
+    bytes: 4040
+    modified: 1990-01-19 13:40
+    directory: false
+  - path: ND-OWS/DRIVERS/WINVKM04.EXE
+    bytes: 4568
+    modified: 1990-09-26 11:31
+    directory: false
+  - path: ND-OWS/DRIVERS/WINVKM10.EXE
+    bytes: 3962
+    modified: 1990-01-19 13:40
+    directory: false
+  - path: ND-OWS/DRIVERS/WINVKM13.EXE
+    bytes: 3954
+    modified: 1990-01-19 13:40
+    directory: false
+  - path: ND-OWS/DRIVERS/WINVKM14.EXE
+    bytes: 3960
+    modified: 1990-01-19 13:40
+    directory: false
+  - path: ND-OWS/DRIVERS/WINVKM00.DLL
+    bytes: 3584
+    modified: 1990-10-03 10:00
+    directory: false
+  - path: ND-OWS/DRIVERS/WINVKM01.DLL
+    bytes: 3584
+    modified: 1990-10-03 10:01
+    directory: false
+  - path: ND-OWS/DRIVERS/WINVKM03.DLL
+    bytes: 3584
+    modified: 1990-10-03 10:03
+    directory: false
+  - path: ND-OWS/DRIVERS/WINVKM04.DLL
+    bytes: 4608
+    modified: 1990-10-03 10:04
+    directory: false
+  - path: ND-OWS/DRIVERS/WINVKM10.DLL
+    bytes: 3584
+    modified: 1990-10-03 10:10
+    directory: false
+  - path: ND-OWS/DRIVERS/WINVKM13.DLL
+    bytes: 3584
+    modified: 1990-10-03 10:13
+    directory: false
+  - path: ND-OWS/NDCONFIG
+    bytes: 161
+    modified: 1990-02-04 16:25
+    directory: false
+  - path: KEYBINST.EXE
+    bytes: 58689
+    modified: 1990-10-23 15:32
+    directory: false
+  - path: INSTALL.TXT
+    bytes: 60249
+    modified: 1990-10-19 16:31
+    directory: false
+  - path: INSTKEY.EXE
+    bytes: 50561
+    modified: 1990-10-18 17:07
+    directory: false
+  - path: INSTVKM.EXE
+    bytes: 30079
+    modified: 1990-10-23 15:33
+    directory: false
+  - path: CONFIG.SYS
+    bytes: 24
+    modified: 1989-08-15 14:52
+    directory: false
+  - path: INSTALL.BAT
+    bytes: 436
+    modified: 1990-10-21 14:54
+    directory: false
+  - path: README.TXT
+    bytes: 17606
+    modified: 1990-10-21 14:51
+    directory: false
+provenance:
+  contributor: Frode
+  originalPath: ND Keyboard Drivers for DOS & VKM/ND Keyboard Drivers for DOS & VKM.img
+  dateImaged: 2024-11-15
+  importedAt: 2026-08-17T14:19:48.026Z
+photos:
+  disk:
+    - ND Keyboard Drivers for DOS & VKM.jpg
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-05977338010b
+  syncStatus: pending

@@ -1,0 +1,113 @@
+id: nd-10534-b00-d1-dc7f97ab
+volumeName: 10534B00-1S
+md5: dc7f97ab26d7fc2dcc15a4551a0396cf
+product:
+  version: B00
+  diskNumber: 1
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 148
+  files:
+    - name: JEC-B00:PROG
+      type: PROG
+      pages: 43
+      bytes: 88064
+      userName: FLOPPY-USER
+      dateCreated: 2365753782
+      lastDateRead: 2366806584
+      lastDateWritten: 2365753783
+      dateCreatedStr: 1985-04-01 08:38:54
+      lastDateReadStr: 1985-04-09 09:40:56
+      lastDateWrittenStr: 1985-04-01 08:38:55
+      bpunValid: null
+    - name: JEC-1BANK-B00:BRF
+      type: BRF
+      pages: 4
+      bytes: 6414
+      userName: FLOPPY-USER
+      dateCreated: 2365753347
+      lastDateRead: null
+      lastDateWritten: 2365753348
+      dateCreatedStr: 1985-04-01 08:32:03
+      lastDateReadStr: null
+      lastDateWrittenStr: 1985-04-01 08:32:04
+      bpunValid: null
+    - name: JEC-2BANK-B00:BRF
+      type: BRF
+      pages: 4
+      bytes: 6416
+      userName: FLOPPY-USER
+      dateCreated: 2365753366
+      lastDateRead: null
+      lastDateWritten: 2365753368
+      dateCreatedStr: 1985-04-01 08:32:22
+      lastDateReadStr: null
+      lastDateWrittenStr: 1985-04-01 08:32:24
+      bpunValid: null
+    - name: JEC-LIB-500-B:NRF
+      type: NRF
+      pages: 1
+      bytes: 1040
+      userName: FLOPPY-USER
+      dateCreated: 2365753868
+      lastDateRead: null
+      lastDateWritten: 2365753869
+      dateCreatedStr: 1985-04-01 08:40:12
+      lastDateReadStr: null
+      lastDateWrittenStr: 1985-04-01 08:40:13
+      bpunValid: null
+    - name: INSTALL-JEC-B00:PROG
+      type: PROG
+      pages: 42
+      bytes: 156130
+      userName: FLOPPY-USER
+      dateCreated: 2370883318
+      lastDateRead: 2371010261
+      lastDateWritten: 2371009959
+      dateCreatedStr: 1985-05-08 12:59:54
+      lastDateReadStr: 1985-05-09 11:59:21
+      lastDateWrittenStr: 1985-05-09 11:54:39
+      bpunValid: null
+    - name: UE-ERMSG-EN-B02:ERR
+      type: ERR
+      pages: 47
+      bytes: 95232
+      userName: FLOPPY-USER
+      dateCreated: 2375867802
+      lastDateRead: 2376398981
+      lastDateWritten: 2375867802
+      dateCreatedStr: 1985-06-14 13:54:26
+      lastDateReadStr: 1985-06-18 15:34:05
+      lastDateWrittenStr: 1985-06-14 13:54:26
+      bpunValid: null
+provenance:
+  contributor: Ronny Hansen
+  originalPath: ND-10534-Job Execution Control/10534B00-1S.img
+  dateImaged: 2024-09-17
+  importedAt: 2026-08-17T14:20:05.057Z
+imagingLogs:
+  - README.txt
+  - 10534B00-1S.log
+photos:
+  disk: []
+  set:
+    - 10534B00-PHOTO.png
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10534-b00-d1-dc7f97ab
+  syncStatus: pending

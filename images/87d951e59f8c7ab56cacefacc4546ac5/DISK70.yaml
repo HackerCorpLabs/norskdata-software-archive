@@ -1,0 +1,145 @@
+id: nd-10522-b-d3-87d951e5
+volumeName: ND-10522B-PART3
+md5: 87d951e59f8c7ab56cacefacc4546ac5
+product:
+  version: B
+  diskNumber: 3
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: bpun
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 110
+  files:
+    - name: CACHE-2063D:BPUN
+      type: BPUN
+      pages: 20
+      bytes: 39314
+      userName: FLOPPY-USER
+      dateCreated: 2174156327
+      lastDateRead: 2261174938
+      lastDateWritten: 2224476591
+      dateCreatedStr: 1982-06-11 15:56:39
+      lastDateReadStr: 1983-11-03 12:42:26
+      lastDateWrittenStr: 1983-02-11 13:06:47
+      bpunValid: true
+    - name: HDLC-MEGALINK-B:BPUN
+      type: BPUN
+      pages: 14
+      bytes: 28350
+      userName: FLOPPY-USER
+      dateCreated: 2223168602
+      lastDateRead: 2261174989
+      lastDateWritten: 2224469930
+      dateCreatedStr: 1983-02-01 13:49:26
+      lastDateReadStr: 1983-11-03 12:43:13
+      lastDateWrittenStr: 1983-02-11 11:30:42
+      bpunValid: true
+    - name: LP-TEST-1878D:BPUN
+      type: BPUN
+      pages: 10
+      bytes: 19238
+      userName: FLOPPY-USER
+      dateCreated: 2260941230
+      lastDateRead: 2261174996
+      lastDateWritten: 2261052955
+      dateCreatedStr: 1983-11-01 19:38:46
+      lastDateReadStr: 1983-11-03 12:43:20
+      lastDateWrittenStr: 1983-11-02 14:56:27
+      bpunValid: true
+    - name: MEMORY-C:BPUN
+      type: BPUN
+      pages: 18
+      bytes: 36864
+      userName: FLOPPY-USER
+      dateCreated: 2163118710
+      lastDateRead: 2261175002
+      lastDateWritten: 2224470436
+      dateCreatedStr: 1982-03-23 09:09:54
+      lastDateReadStr: 1983-11-03 12:43:26
+      lastDateWrittenStr: 1983-02-11 11:38:36
+      bpunValid: true
+    - name: MOVER-1863C:BPUN
+      type: BPUN
+      pages: 2
+      bytes: 3572
+      userName: FLOPPY-USER
+      dateCreated: 2171000280
+      lastDateRead: 2261175008
+      lastDateWritten: 2224470673
+      dateCreatedStr: 1982-05-19 13:23:24
+      lastDateReadStr: 1983-11-03 12:43:32
+      lastDateWrittenStr: 1983-02-11 11:42:17
+      bpunValid: true
+    - name: PAGING-B:BPUN
+      type: BPUN
+      pages: 13
+      bytes: 25740
+      userName: FLOPPY-USER
+      dateCreated: 2174157648
+      lastDateRead: 2261175019
+      lastDateWritten: 2224477142
+      dateCreatedStr: 1982-06-11 16:13:16
+      lastDateReadStr: 1983-11-03 12:43:43
+      lastDateWrittenStr: 1983-02-11 13:15:22
+      bpunValid: true
+    - name: PFAIL-1355G:BPUN
+      type: BPUN
+      pages: 2
+      bytes: 3108
+      userName: FLOPPY-USER
+      dateCreated: 2174157625
+      lastDateRead: 2261175033
+      lastDateWritten: 2224477367
+      dateCreatedStr: 1982-06-11 16:12:57
+      lastDateReadStr: 1983-11-03 12:43:57
+      lastDateWrittenStr: 1983-02-11 13:18:55
+      bpunValid: true
+    - name: SMALL-RAND-2448A:BPUN
+      type: BPUN
+      pages: 9
+      bytes: 16842
+      userName: FLOPPY-USER
+      dateCreated: 2174157261
+      lastDateRead: 2261175046
+      lastDateWritten: 2224477435
+      dateCreatedStr: 1982-06-11 16:07:13
+      lastDateReadStr: 1983-11-03 12:44:06
+      lastDateWrittenStr: 1983-02-11 13:19:59
+      bpunValid: true
+    - name: SYNC-MODEM-A:BPUN
+      type: BPUN
+      pages: 12
+      bytes: 22618
+      userName: FLOPPY-USER
+      dateCreated: 2260941185
+      lastDateRead: 2262211078
+      lastDateWritten: 2262210911
+      dateCreatedStr: 1983-11-01 19:38:01
+      lastDateReadStr: 1983-11-11 09:40:06
+      lastDateWrittenStr: 1983-11-11 09:37:31
+      bpunValid: true
+provenance:
+  contributor: Datormuseum
+  originalPath: DiskImages2/DISK70.img
+  dateImaged: 2023-10-02
+  importedAt: 2026-08-17T14:19:34.477Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10522-b-d3-87d951e5
+  syncStatus: pending

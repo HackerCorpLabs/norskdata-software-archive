@@ -1,0 +1,61 @@
+id: nd-10193-a-d3-46cdb23a
+volumeName: ND-10193A-PART3
+md5: 46cdb23aceae060ef66fff65705ea17a
+product:
+  version: A
+  diskNumber: 3
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 25
+  files:
+    - name: LIBRARY:RPRT
+      type: RPRT
+      pages: 20
+      bytes: 40960
+      userName: FLOPPY-USER
+      dateCreated: 2248724050
+      lastDateRead: 2254229027
+      lastDateWritten: 2254242205
+      dateCreatedStr: 1983-08-04 12:57:18
+      lastDateReadStr: 1983-09-14 12:56:35
+      lastDateWrittenStr: 1983-09-14 16:06:29
+      bpunValid: null
+    - name: COMPANY:TEXT
+      type: TEXT
+      pages: 1
+      bytes: 220
+      userName: FLOPPY-USER
+      dateCreated: 2248724595
+      lastDateRead: 2252666395
+      lastDateWritten: 2248724596
+      dateCreatedStr: 1983-08-04 13:01:51
+      lastDateReadStr: 1983-09-02 15:24:27
+      lastDateWrittenStr: 1983-08-04 13:01:52
+      bpunValid: null
+provenance:
+  contributor: Datormuseum
+  originalPath: DiskImages/DISK6.img
+  dateImaged: 2023-10-02
+  importedAt: 2026-08-17T14:18:04.750Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10193-a-d3-46cdb23a
+  syncStatus: pending
