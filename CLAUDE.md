@@ -42,6 +42,7 @@ Two proof scripts under `tools/scripts/` are the closest thing to tests, and the
 ```bash
 node tools/scripts/roundtrip-proof.mjs        # every YAML field survives write -> reload
 bash tools/scripts/persistence-proof.sh       # needs the dev server on :3000 (make import)
+node tools/scripts/ndfs-recovery-proof.mjs    # what lib/ndfsrecover reads off the damaged floppies
 ```
 
 `roundtrip-proof.mjs` sets a sentinel on every field of a real entry, writes YAML, reloads it, and asserts each sentinel came back — a field that does not come back is a read-without-write gap. `persistence-proof.sh` injects a field straight into `floppies.json` and proves a regenerate wipes it (JSON is a pure projection of YAML), then proves every mutation endpoint's change survives the same regenerate, and statically asserts no `saveCatalog()` call is reachable from live code.
@@ -85,7 +86,8 @@ Detection runs at import and is re-runnable afterwards: `POST /api/detect-filesy
 - `mcp/server.ts` — read-only MCP server (stdio) exposing the catalog to LLMs; see below.
 - `migrate*.ts`, `extract-legacy.ts`, `merge-legacy.ts` — one-off data migration scripts; not part of normal flow.
 - `api/filesystem-detect.ts` — what a raw image holds; `api/identify.ts` — the summary the `identify` CLI prints.
-- `lib/dosfs/` — FAT12/16 reader; `lib/ndbackup/` — BACKUP-SYSTEM and WINCH-TO-FLOPP readers. Both are dependency-free and browser-safe, so they can be bundled for the static site the way the NDFS parser is.
+- `lib/dosfs/` — FAT12/16 reader; `lib/ndbackup/` — BACKUP-SYSTEM and WINCH-TO-FLOPP readers; `lib/backupsets/` — groups the volumes of a backup set; `lib/ndfsalign/` — pads an image up to a whole NDFS page before parsing; `lib/ndfsrecover/` — reads a floppy whose master block is damaged. All are dependency-free and browser-safe, so they can be bundled for the static site the way the NDFS parser is.
+- **Recovery** (`lib/ndfsrecover/`): the master block at offset 2016 of page 0 holds the pointers to the object, user and bit files, and if those 32 bytes are damaged the parser refuses the image even when the object file is intact. The pointers are not arbitrary — SINTRAN lays out a given geometry the same way (154/156-page floppies use object 150, user 152, bit 77; 616/640-page ones use 508/510/306) — so they can be reconstructed from floppies that read cleanly. A reconstruction is only accepted when the file names it produces are confirmed by the strings actually present in that image (default 80%); a wrong pointer lands on the wrong page and yields names found nowhere, which is what keeps recovery from becoming invention. The module writes nothing and never modifies an image; it takes the parser as an injected `probe` so it stays free of the NDFS dependency.
 - `types.ts` — shared types; `zod` is used for schema validation.
 
 **MCP server** (`mcp/server.ts`): a stdio MCP server, **read-only**, that loads `catalog/floppies.json` + `catalog/products.json` and exposes 10 tools (`search_floppies`, `get_floppy`, `list_product_floppies`, `list_products`, `download_floppy`, `list_floppy_files`, `get_archive_stats`, `list_product_documents`, `read_document`, `search_documents`). It reads `ARCHIVE_ROOT` (defaults to repo root). MCP clients launch it themselves via the repo's `.mcp.json`; `make mcp` is only for manually testing that it boots. It has no write tools — imports/edits stay in the web UI.
