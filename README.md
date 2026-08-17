@@ -237,7 +237,33 @@ ND-disk-00131.img  backup  1232 KB  BACK  owner AGNETA, 52 file(s), 8 stale labe
 
 Note on BACKUP-SYSTEM volumes: the media is not erased before use, so labels from an **older** backup survive in areas the new run did not overwrite. Those are flagged as stale rather than mixed in with the current run.
 
-The catalog lists ND floppies by default; the other kinds are one click away (`#/catalog?filesystem=dos`, `backup`, `winch`, `none`, `all`).
+The catalog lists ND floppies by default; the other kinds are one click away (`#/catalog?filesystem=dos`, `backup`, `winch`, `none`, `all`). The public site filters the same material with a **Media** and a **Condition** dropdown, and its dashboard links straight into them — a contributor row opens that contributor's floppies, the Unmatched count opens the floppies with no product assigned.
+
+### The file list is recorded, whatever the filesystem
+
+Every floppy carries its contents in its YAML, so the catalog can list and search them without opening an image:
+
+| filesystem | field | what is in it |
+|---|---|---|
+| `ndfs` | `ndfs.files`, `ndfs.users` | ND file list with types, pages, BPUN validation |
+| `dos` | `dosFiles` | the whole FAT tree — path (subdirectories included), size, timestamp |
+| `backup` | `backupFiles` | every file the ANSI labels name, with the stale ones flagged |
+| `winch` | *(none possible)* | WINCH-TO-FLOPP stores no file names on the media |
+
+Searching a file name therefore finds the floppy in either front-end: `COMMAND.COM` finds MS-DOS disks, `TIDPLAN-INV` finds the BACKUP-SYSTEM volumes holding it, `DMAC` finds ND floppies. Search also matches the name the imaging gave a disk (`ND-disk-00283`), which for a floppy with no readable volume name is the only name it has.
+
+### Backup sets: many floppies, one backup
+
+Both backup formats spread one backup over several floppies, and `lib/backupsets` puts a set back together from the catalog — no image is opened:
+
+- **WINCH-TO-FLOPP** numbers its volumes in the header, so a set is exact: `PACK-ONE` is 13 volumes, 9 held across 27 images, 6/8/9/12 missing. Each image is graded — complete, incomplete, or `side 0 only` for the one-sided read of a double-sided 8 inch disk that most of this archive's WINCH images turned out to be.
+- **BACKUP-SYSTEM** has no volume number at all, so a run is ordered by following the file that runs off the end of one floppy onto the next (`ND-disk-00355` ends mid-file with `BAS-EDITOR:C`, `ND-disk-00356` starts with it). Where nothing continues a cut file, the chain has a break and the run is incomplete.
+
+Repeat reads of one floppy are told from genuinely different volumes by how much their listings share: measured here, reads of one disk share 74–100% of the shorter listing while different volumes of a run share at most 33%.
+
+### Reads of one physical floppy
+
+A floppy that reads badly was read again and again, so the archive holds several images of one disk (`ND-disk-00426`, `-00426b`, `-00426c`, `-00426d` are four attempts at disk 426). `lib/readgroups` groups them and grades each attempt — reads clean, recovered, other filesystem, damaged, no filesystem — so a bad floppy is visible as what it is: four attempts and nothing readable. The disk page in both front-ends shows the reads of that floppy; the importer UI additionally has a **Reads** page (`#/reads`) that lists them by physical disk and can remove a single read, every read of a disk that produced nothing, or just the failed attempts beside a good read. Removal exists only in the importer UI, never in the public catalog, and always shows the exact file list before it happens.
 
 ## Web UI (localhost:3000)
 
@@ -257,7 +283,9 @@ Which viewer a disk offers depends on what it holds. All three share the same fi
 
 - **NDFS viewer** — ND floppies
 - **MS-DOS viewer** — FAT disks: browse into directories with breadcrumbs, extract files
-- **HEX viewer** — any image at all, including ones with no filesystem: 7-bit/parity-stripped ASCII column, go-to-offset
+- **Backup viewer** — BACKUP-SYSTEM volumes (files from the labels) and WINCH-TO-FLOPP volumes (the page map), both with the whole set listed beside them: every volume, its status, and which images are repeat reads
+- **HEX viewer** — any image at all, including ones with no filesystem: 7-bit/parity-stripped ASCII column, go-to-offset. In the public catalog every row of the listing has a Hex button and the viewer walks the filtered set, which is how 76 unidentified images can be looked at one after another
+- A floppy whose file list was **recovered** also offers *Download repaired .img* — the original bytes with the master block pointers rebuilt, made on request. Only the original is ever stored; see [docs/media-condition.md](docs/media-condition.md)
 
 ### NDFS Viewer
 
@@ -431,6 +459,12 @@ make mcp            Start the MCP server
 
 make import-folder  Non-interactive folder import (scripted)
 make import-file    Non-interactive single file import (scripted)
+
+node tools/scripts/scan-external.mjs <folder> [folder...] [--max-mb 2] [--out report.txt] [--json found.json]
+                    What a disk holds that the archive does not: hashes every
+                    image and compares against the catalog, grouped by folder
+node tools/scripts/ndfs-recovery-proof.mjs
+                    What the master-block recovery reads off the damaged floppies
 
 make ia-sync        Incremental sync to Internet Archive
 make ia-verify      Verify IA checksums

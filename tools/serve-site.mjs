@@ -40,7 +40,18 @@ function resolve(urlPath) {
 }
 
 createServer(async (req, res) => {
-  let file = resolve(req.url || '/');
+  const url = req.url || '/';
+
+  // A page loaded at a /docs/... address resolves the app's relative links
+  // against that folder, so docs/X.html becomes /docs/docs/X.html. Rather than
+  // fail, collapse the repetition and send the browser to the real page.
+  if (/\/docs\/(docs\/)+/.test(url)) {
+    res.writeHead(302, { Location: url.replace(/\/docs\/(docs\/)+/, '/docs/') });
+    res.end();
+    return;
+  }
+
+  let file = resolve(url);
   try {
     const s = await stat(file);
     if (s.isDirectory()) file = join(file, 'index.html');
@@ -52,8 +63,18 @@ createServer(async (req, res) => {
     if (!/\.[a-z0-9]+$/i.test(file)) {
       try { await stat(file + '.html'); file += '.html'; served = true; } catch { /* not a page */ }
     }
-    // Anything else falls back to the single-page app, which routes on the hash.
-    if (!served) file = join(siteRoot, 'index.html');
+    // Anything else falls back to the single-page app, which routes on the hash -
+    // except under /docs/. The app's own links are relative (docs/X.html), so
+    // rendering it at a /docs/... URL turns every one of them into
+    // /docs/docs/X.html. A document that is not there is a 404, not the app.
+    if (!served) {
+      if (/^\/docs\//.test(url)) {
+        res.writeHead(404, { 'Content-Type': 'text/plain' });
+        res.end('No such document. Documents live at /docs/<id>.html');
+        return;
+      }
+      file = join(siteRoot, 'index.html');
+    }
   }
   try {
     const s = await stat(file);
