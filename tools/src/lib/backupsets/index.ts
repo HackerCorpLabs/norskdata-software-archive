@@ -18,11 +18,21 @@ export interface SetMemberInput {
   /** shown in the list; the image id is used when there is no name */
   volumeName?: string | null;
   imageSizeBytes?: number | null;
+  /** BACKUP-SYSTEM: the files the labels name, used to compare two images */
+  backupFiles?: { name: string; stale?: boolean }[] | null;
   backupSet?: {
     kind: string; name: string; label: string;
-    volumeNumber: number; totalVolumes: number;
-    pageCount: number; listedPages?: number; imageBytes?: number;
-    pageFirst: number | null; pageLast: number | null;
+    // WINCH-TO-FLOPP: the header numbers the volumes and lists the pages
+    volumeNumber?: number; totalVolumes?: number;
+    pageCount?: number; listedPages?: number;
+    pageFirst?: number | null; pageLast?: number | null;
+    // BACKUP-SYSTEM: no volume number at all, so a run is ordered by following
+    // the file that runs off the end of one volume onto the next
+    runDate?: string | null; system?: string | null;
+    fileCount?: number; staleCount?: number;
+    firstFile?: string | null; lastFile?: string | null;
+    endsMidFile?: boolean; fileListHash?: string;
+    imageBytes?: number;
   } | null;
 }
 
@@ -53,6 +63,16 @@ export interface SetMember {
   best: boolean;
   /** how many pages this read holds beyond the worst read of the same volume */
   pagesOverWorst: number;
+  // BACKUP-SYSTEM only
+  fileCount?: number;
+  staleCount?: number;
+  firstFile?: string | null;
+  lastFile?: string | null;
+  endsMidFile?: boolean;
+  /** the volume this one runs on to, when a floppy holding the rest is here */
+  continuesTo?: string | null;
+  /** the file that runs off the end with nowhere to continue */
+  brokenAt?: string | null;
 }
 
 export interface SetSlot {
@@ -99,12 +119,26 @@ export interface BackupSet {
    * complete. Anything less and the NDFS structures have holes.
    */
   reassemblable: boolean;
+  /** 'winch' sets are numbered by their header; 'backup' runs are chained by file continuation */
+  ordering: 'numbered' | 'chained';
+  /** BACKUP-SYSTEM: the run that wrote the volumes */
+  runDate?: string | null;
+  system?: string | null;
+  /** BACKUP-SYSTEM: files named across the whole run, repeat reads counted once */
+  fileCount?: number;
+  /** BACKUP-SYSTEM: a file runs off the end of a volume and no floppy here continues it */
+  breaks?: { after: string; file: string }[];
 }
 
 /** The set key an entry belongs to, or null when it is not part of a set. */
 export function setKeyOf(entry: SetMemberInput): string | null {
   const s = entry.backupSet;
   if (!s || !s.name) return null;
+  if (s.kind === 'backup') {
+    // One BACKUP-SYSTEM run: same volume id, owner, date and SINTRAN version.
+    // The date matters - the same floppies were reused for later backups.
+    return ['backup', s.name, s.label || '', s.runDate || '', s.system || ''].join(':');
+  }
   return s.kind + ':' + s.name + ':' + (s.label || '');
 }
 
@@ -121,29 +155,56 @@ export function groupBackupSets(entries: SetMemberInput[]): Map<string, BackupSe
   const out = new Map<string, BackupSet>();
   for (const [key, members] of byKey) {
     const first = members[0].backupSet!;
+
+    if (first.kind === 'backup') {
+      const { slots, breaks } = chainAnsiRun(members);
+      const fileCount = slots.reduce((n, sl) => n + (sl.best?.fileCount ?? 0), 0);
+      out.set(key, {
+        key, kind: 'backup', name: first.name, label: first.label,
+        totalVolumes: slots.length,
+        slots,
+        present: slots.map(sl => sl.volumeNumber),
+        missing: [],
+        imageCount: members.length,
+        complete: breaks.length === 0,
+        pagesHeld: 0, pagesExpected: 0,
+        partialVolumes: [],
+        allOneSided: false,
+        reassemblable: breaks.length === 0,
+        ordering: 'chained',
+        runDate: first.runDate ?? null,
+        system: first.system ?? null,
+        fileCount,
+        breaks,
+      });
+      continue;
+    }
+
     // A damaged header could disagree about the size of the set; the largest
     // count wins, so no volume is dropped off the end of the list.
-    const totalVolumes = members.reduce((n, m) => Math.max(n, m.backupSet!.totalVolumes), 0);
+    const totalVolumes = members.reduce((n, m) => Math.max(n, m.backupSet!.totalVolumes ?? 0), 0);
 
     const byVolume = new Map<number, SetMember[]>();
     for (const m of members) {
       const s = m.backupSet!;
+      const pageCount = s.pageCount ?? 0;
+      const volumeNumber = s.volumeNumber ?? 0;
       const listed = typeof s.listedPages === 'number' && s.listedPages > 0 ? s.listedPages : null;
-      const coverage = listed ? s.pageCount / listed : null;
+      const coverage = listed ? pageCount / listed : null;
       // An 8 inch WINCH-TO-FLOPP volume is double sided. Reading side 0 only
       // yields close to half the pages, which is what most of this archive's
       // images turned out to be - so it gets named rather than lumped in with
       // any other short read.
       const sideOne = coverage !== null && coverage > 0.4 && coverage < 0.6;
-      const status: ReadStatus = listed === null ? 'unknown' : (s.pageCount >= listed ? 'complete' : 'partial');
-      if (!byVolume.has(s.volumeNumber)) byVolume.set(s.volumeNumber, []);
-      byVolume.get(s.volumeNumber)!.push({
+      const status: ReadStatus = listed === null ? 'unknown' : (pageCount >= listed ? 'complete' : 'partial');
+      if (!byVolume.has(volumeNumber)) byVolume.set(volumeNumber, []);
+      byVolume.get(volumeNumber)!.push({
         id: m.id,
         name: m.volumeName || m.id,
-        pageCount: s.pageCount,
+        pageCount,
         listedPages: listed,
         imageBytes: typeof s.imageBytes === 'number' ? s.imageBytes : (m.imageSizeBytes ?? null),
-        pageFirst: s.pageFirst, pageLast: s.pageLast,
+        pageFirst: s.pageFirst ?? null, pageLast: s.pageLast ?? null,
         status, sideOne, coverage,
         best: false, pagesOverWorst: 0,
       });
@@ -188,6 +249,7 @@ export function groupBackupSets(entries: SetMemberInput[]): Map<string, BackupSe
       pagesHeld, pagesExpected, partialVolumes,
       allOneSided: presentBest.length > 0 && presentBest.every(b => b.sideOne),
       reassemblable: missing.length === 0 && partialVolumes.length === 0,
+      ordering: 'numbered',
     });
   }
   return out;
@@ -204,6 +266,12 @@ export function backupSetFor(entryId: string, entries: SetMemberInput[]): Backup
 
 /** "9 of 13 volumes, missing 6, 8, 9, 12" - the one-line volume summary. */
 export function describeSet(set: BackupSet): string {
+  if (set.ordering === 'chained') {
+    const head = set.totalVolumes + (set.totalVolumes === 1 ? ' volume' : ' volumes in the chain');
+    const extra = set.imageCount - set.totalVolumes;
+    return head + (extra > 0 ? ', ' + extra + ' repeat read(s)' : '') +
+      (set.breaks && set.breaks.length ? ', ' + set.breaks.length + ' break(s)' : ', chain unbroken');
+  }
   const head = set.present.length + ' of ' + set.totalVolumes + ' volumes';
   return set.complete ? head + ', complete' : head + ', missing ' + set.missing.join(', ');
 }
@@ -214,6 +282,16 @@ export function describeSet(set: BackupSet): string {
  * only appear once every volume is held AND every read is complete.
  */
 export function setVerdict(set: BackupSet): string {
+  if (set.ordering === 'chained') {
+    const named = (set.fileCount ?? 0) + ' file(s) named across the run';
+    if (!set.breaks || set.breaks.length === 0) {
+      return named + ', and every file that runs off the end of a volume is continued by another volume held here: ' +
+        'the run is whole as far as its own labels can show.';
+    }
+    return named + ', but ' + set.breaks.length + ' file(s) run off the end of a volume with no floppy here to continue them (' +
+      set.breaks.map(b => b.file + ' after ' + b.after).join('; ') +
+      '), so those files are truncated and at least one volume of the run is missing.';
+  }
   if (set.reassemblable) {
     return 'Every volume is held and every read is complete: the pages can be reassembled into a directory image and read as NDFS.';
   }
@@ -228,4 +306,116 @@ export function setVerdict(set: BackupSet): string {
   }
   return 'No file names can be recovered yet: ' + parts.join('; ') +
     '. This format stores no file names on the media - they appear only after the whole directory is reassembled.';
+}
+
+// ── BACKUP-SYSTEM: chaining a run ────────────────────────────
+
+/**
+ * Order one BACKUP-SYSTEM run.
+ *
+ * The labels carry no volume number, so the order is recovered from the data
+ * itself: BACKUP-SYSTEM fills a floppy, cuts the file it is writing, and starts
+ * the next floppy with the rest of that same file. A volume whose last file is
+ * marked continued is therefore followed by the volume whose first file has that
+ * name. Volumes with the same file fingerprint are reads of the same floppy and
+ * are collapsed into one place in the chain.
+ *
+ * Where no floppy continues a cut file, the chain has a break and the rest of
+ * that file is missing from the archive.
+ */
+function chainAnsiRun(members: SetMemberInput[]): { slots: SetSlot[]; breaks: { after: string; file: string }[] } {
+  const toMember = (m: SetMemberInput): SetMember => {
+    const s = m.backupSet!;
+    return {
+      id: m.id,
+      name: m.volumeName || m.id,
+      pageCount: 0, listedPages: null,
+      imageBytes: typeof s.imageBytes === 'number' ? s.imageBytes : (m.imageSizeBytes ?? null),
+      pageFirst: null, pageLast: null,
+      status: 'unknown', sideOne: false, coverage: null,
+      best: false, pagesOverWorst: 0,
+      fileCount: s.fileCount ?? 0,
+      staleCount: s.staleCount ?? 0,
+      firstFile: s.firstFile ?? null,
+      lastFile: s.lastFile ?? null,
+      endsMidFile: !!s.endsMidFile,
+      continuesTo: null, brokenAt: null,
+    };
+  };
+
+  // Which images are reads of the same floppy. A marginal disk read twice does
+  // not give the same file list twice - labels are lost or gained - so the test
+  // is how much the two listings share, not whether they are identical.
+  // Measured on this archive: reads of one floppy share 74-100% of the shorter
+  // listing, different volumes of a run share at most 33%.
+  const SAME_FLOPPY = 0.6;
+  const namesOf = (m: SetMemberInput): Set<string> =>
+    new Set((m.backupFiles ?? []).filter(f => !f.stale).map(f => f.name));
+
+  const groups: SetMemberInput[][] = [];
+  for (const m of members) {
+    const mine = namesOf(m);
+    let placed = false;
+    for (const g of groups) {
+      const theirs = namesOf(g[0]);
+      let shared = 0;
+      for (const n of mine) if (theirs.has(n)) shared++;
+      const smaller = Math.min(mine.size, theirs.size);
+      const sameByNames = smaller > 0 && shared / smaller >= SAME_FLOPPY;
+      // no listings recorded: fall back to the fingerprint of the labels
+      const sameByPrint = smaller === 0 && !!m.backupSet!.fileListHash &&
+        m.backupSet!.fileListHash === g[0].backupSet!.fileListHash;
+      if (sameByNames || sameByPrint) { g.push(m); placed = true; break; }
+    }
+    if (!placed) groups.push([m]);
+  }
+
+  // one node per distinct floppy: the read naming most files leads
+  const nodes = groups.map(reads => {
+    const sorted = reads.slice().sort((a, b) =>
+      (b.backupSet!.fileCount ?? 0) - (a.backupSet!.fileCount ?? 0) || a.id.localeCompare(b.id));
+    const mapped = sorted.map(toMember);
+    mapped[0].best = true;
+    return { facts: sorted[0].backupSet!, reads: mapped };
+  });
+
+  // A continues to B when A's last file is cut and B starts with that file.
+  const byFirstFile = new Map<string, typeof nodes[number]>();
+  for (const n of nodes) if (n.facts.firstFile) {
+    if (!byFirstFile.has(n.facts.firstFile)) byFirstFile.set(n.facts.firstFile, n);
+  }
+  const next = new Map<typeof nodes[number], typeof nodes[number]>();
+  const hasPredecessor = new Set<typeof nodes[number]>();
+  const breaks: { after: string; file: string }[] = [];
+  for (const n of nodes) {
+    if (!n.facts.endsMidFile || !n.facts.lastFile) continue;
+    const target = byFirstFile.get(n.facts.lastFile);
+    if (target && target !== n) {
+      next.set(n, target);
+      hasPredecessor.add(target);
+      n.reads[0].continuesTo = target.reads[0].id;
+    } else {
+      n.reads[0].brokenAt = n.facts.lastFile;
+      breaks.push({ after: n.reads[0].name, file: n.facts.lastFile });
+    }
+  }
+
+  // walk each chain from a volume nothing continues into
+  const ordered: typeof nodes = [];
+  const seen = new Set<typeof nodes[number]>();
+  for (const start of nodes.filter(n => !hasPredecessor.has(n))) {
+    let cur: typeof nodes[number] | undefined = start;
+    while (cur && !seen.has(cur)) { seen.add(cur); ordered.push(cur); cur = next.get(cur); }
+  }
+  for (const n of nodes) if (!seen.has(n)) ordered.push(n);   // a cycle, should not happen
+
+  const slots: SetSlot[] = ordered.map((n, i) => ({
+    volumeNumber: i + 1,
+    best: n.reads[0],
+    others: n.reads.slice(1),
+    reads: n.reads,
+    present: true,
+    status: 'unknown',
+  }));
+  return { slots, breaks };
 }

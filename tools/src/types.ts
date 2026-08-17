@@ -166,25 +166,50 @@ export interface CatalogEntry {
    */
   backupSet?: {
     /** the format the set belongs to */
-    kind: 'winch';
-    /** name of the directory that was backed up, e.g. PACK-ONE */
+    kind: 'winch' | 'backup';
+    /** WINCH: the directory that was backed up (PACK-ONE). BACKUP-SYSTEM: the VOL1 volume id. */
     name: string;
-    /** free text written when the backup was made, e.g. 90-03-04 */
+    /** WINCH: the free text label (90-03-04). BACKUP-SYSTEM: the VOL1 owner. */
     label: string;
-    /** this volume's number in the set, 1-based */
-    volumeNumber: number;
-    /** how many volumes the set has */
-    totalVolumes: number;
-    /** pages of the original directory stored on this volume */
-    pageCount: number;
-    /** pages the header says the volume holds; more than pageCount means the image is an incomplete read */
-    listedPages: number;
-    /** size of the raw image, so an incomplete read is visible without opening it */
+    /** WINCH only: this volume's number in the set, 1-based */
+    volumeNumber?: number;
+    /** WINCH only: how many volumes the set has */
+    totalVolumes?: number;
+    /** WINCH only: pages of the original directory stored on this volume */
+    pageCount?: number;
+    /** WINCH only: pages the header names; more than pageCount means an incomplete read */
+    listedPages?: number;
+    /** WINCH only: lowest and highest page number stored here */
+    pageFirst?: number | null;
+    pageLast?: number | null;
+    /** BACKUP-SYSTEM: the run that wrote this volume */
+    runDate?: string | null;
+    system?: string | null;
+    /** BACKUP-SYSTEM: files named by the labels, leftovers from an older backup excluded */
+    fileCount?: number;
+    staleCount?: number;
+    firstFile?: string | null;
+    lastFile?: string | null;
+    /** BACKUP-SYSTEM: the last file has no EOF1, so it continues on the next volume */
+    endsMidFile?: boolean;
+    /** BACKUP-SYSTEM: fingerprint of the file names, so repeat reads can be told from distinct volumes */
+    fileListHash?: string;
+    /** size of the raw image */
     imageBytes: number;
-    /** lowest and highest page number stored here */
-    pageFirst: number | null;
-    pageLast: number | null;
   } | null;
+  /**
+   * Files named by the ANSI labels of a SINTRAN III BACKUP-SYSTEM volume. The
+   * labels are the only listing this format has - there is no directory - so
+   * they are recorded here to be listed, searched, and compared between images.
+   */
+  backupFiles?: {
+    name: string;
+    bytes: number;
+    created: string | null;
+    system: string | null;
+    continued: boolean;
+    stale: boolean;
+  }[] | null;
   directoryContentRaw?: string | null;
   /** References to related documentation */
   docs: {

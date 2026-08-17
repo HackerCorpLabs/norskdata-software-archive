@@ -528,21 +528,22 @@
         "object",
         "null"
       ],
-      "description": "Which backup set this image is one volume of, read from the volume header. A WINCH-TO-FLOPP backup spreads one ND directory over a set of floppies.",
+      "description": "Which backup set this image is one volume of, read from the volume header or the ANSI labels. WINCH-TO-FLOPP spreads one ND directory over a set of floppies; SINTRAN III BACKUP-SYSTEM writes a run of labelled volumes with no volume number.",
       "properties": {
         "kind": {
           "type": "string",
           "enum": [
-            "winch"
+            "winch",
+            "backup"
           ]
         },
         "name": {
           "type": "string",
-          "description": "Directory that was backed up, e.g. PACK-ONE"
+          "description": "WINCH: directory backed up. BACKUP-SYSTEM: VOL1 volume id."
         },
         "label": {
           "type": "string",
-          "description": "Free text written when the backup was made, e.g. 90-03-04"
+          "description": "WINCH: free text label. BACKUP-SYSTEM: VOL1 owner."
         },
         "volumeNumber": {
           "type": "integer",
@@ -577,14 +578,99 @@
           "type": "integer",
           "minimum": 0,
           "description": "Size of the raw image the header was read from"
+        },
+        "runDate": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "BACKUP-SYSTEM: date of the run that wrote this volume"
+        },
+        "system": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "BACKUP-SYSTEM: system code from the labels, e.g. SINTRAN III L"
+        },
+        "fileCount": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "BACKUP-SYSTEM: files named by the labels, leftovers excluded"
+        },
+        "staleCount": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "BACKUP-SYSTEM: labels left over from an older backup on the same media"
+        },
+        "firstFile": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "lastFile": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "endsMidFile": {
+          "type": "boolean",
+          "description": "BACKUP-SYSTEM: the last file has no EOF1 and continues on the next volume"
+        },
+        "fileListHash": {
+          "type": "string",
+          "description": "BACKUP-SYSTEM: fingerprint of the file names, so repeat reads can be told from distinct volumes"
         }
       },
       "required": [
         "kind",
-        "name",
-        "volumeNumber",
-        "totalVolumes"
+        "name"
       ]
+    },
+    "backupFiles": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "description": "Files named by the ANSI labels of a SINTRAN III BACKUP-SYSTEM volume. The labels are the only listing this format has.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "NAME:TYPE as SINTRAN writes it"
+          },
+          "bytes": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "created": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "system": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "continued": {
+            "type": "boolean",
+            "description": "the file runs on to the next volume of the run"
+          },
+          "stale": {
+            "type": "boolean",
+            "description": "label left over from an older backup on the same media"
+          }
+        },
+        "required": [
+          "name"
+        ]
+      }
     }
   },
   "additionalProperties": false

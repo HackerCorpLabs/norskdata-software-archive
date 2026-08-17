@@ -12,7 +12,7 @@
  */
 
 import { DosVolume } from '../lib/dosfs/index.js';
-import { isWinchVolume, readWinchVolume } from '../lib/ndbackup/index.js';
+import { isWinchVolume, readWinchVolume, isBackupVolume, readBackupVolume } from '../lib/ndbackup/index.js';
 
 export type FilesystemKind = 'ndfs' | 'dos' | 'tar' | 'backup' | 'winch' | 'none';
 
@@ -174,22 +174,88 @@ export function readDosLabel(buf: Buffer | Uint8Array): string | null {
   }
 }
 
+/** What is recorded per floppy so a set can be rebuilt from the catalog alone. */
+export interface BackupSetFacts {
+  kind: 'winch' | 'backup';
+  /** WINCH: the directory name. BACKUP-SYSTEM: the VOL1 volume id. */
+  name: string;
+  /** WINCH: the free text label. BACKUP-SYSTEM: the VOL1 owner. */
+  label: string;
+  /** WINCH only: this volume's place in the set. BACKUP-SYSTEM labels carry no volume number. */
+  volumeNumber?: number;
+  totalVolumes?: number;
+  pageCount?: number;
+  listedPages?: number;
+  pageFirst?: number | null;
+  pageLast?: number | null;
+  /** BACKUP-SYSTEM: the run this volume was written by */
+  runDate?: string | null;
+  system?: string | null;
+  /** BACKUP-SYSTEM: files named by the labels, leftovers from an older backup excluded */
+  fileCount?: number;
+  staleCount?: number;
+  firstFile?: string | null;
+  lastFile?: string | null;
+  /** BACKUP-SYSTEM: the last file has no EOF1, so it runs on to the next volume */
+  endsMidFile?: boolean;
+  /**
+   * BACKUP-SYSTEM: fingerprint of the file names on the volume. Two images with
+   * the same fingerprint are reads of the same floppy; different fingerprints in
+   * one run are different volumes of it.
+   */
+  fileListHash?: string;
+  imageBytes: number;
+}
+
+/** FNV-1a over the file names - small, stable, and enough to compare volumes. */
+function hashNames(names: string[]): string {
+  let h = 0x811c9dc5;
+  const text = names.join('\n');
+  for (let i = 0; i < text.length; i++) {
+    h ^= text.charCodeAt(i);
+    h = Math.imul(h, 0x01000193) >>> 0;
+  }
+  return h.toString(16).padStart(8, '0');
+}
+
+/**
+ * A SINTRAN III BACKUP-SYSTEM volume. Its ANSI labels name every file but carry
+ * no volume number - HDR1's section and sequence fields are 0001 on the first
+ * file of every volume - so a multi-volume backup can only be ordered later by
+ * following the file that runs off the end of one volume onto the next.
+ */
+function readAnsiBackupSet(bytes: Uint8Array): BackupSetFacts | null {
+  try {
+    const vol = readBackupVolume(bytes);
+    const live = vol.files.filter(f => !f.stale);
+    return {
+      kind: 'backup',
+      name: vol.volumeId,
+      label: vol.owner,
+      runDate: live[0]?.created ?? null,
+      system: live[0]?.system ?? null,
+      fileCount: live.length,
+      staleCount: vol.files.length - live.length,
+      firstFile: live[0]?.fullName ?? null,
+      lastFile: live.length ? live[live.length - 1].fullName : null,
+      endsMidFile: live.length ? live[live.length - 1].continued : false,
+      fileListHash: hashNames(live.map(f => f.fullName)),
+      imageBytes: bytes.length,
+    };
+  } catch {
+    return null;
+  }
+}
+
 /**
  * Which backup set the image is one volume of, or null when it is not part of
  * one. A WINCH-TO-FLOPP backup spreads one ND directory over a set of floppies
  * and each volume's header names the directory, its own number and the size of
  * the set, so the whole set can be reconstructed without opening every image.
- *
- * BACKUP-SYSTEM volumes are not covered: their ANSI labels carry no set name
- * and no volume count, only a file that may continue on the next volume.
  */
-export function readBackupSet(buf: Buffer | Uint8Array): {
-  kind: 'winch'; name: string; label: string;
-  volumeNumber: number; totalVolumes: number;
-  pageCount: number; listedPages: number; imageBytes: number;
-  pageFirst: number | null; pageLast: number | null;
-} | null {
+export function readBackupSet(buf: Buffer | Uint8Array): BackupSetFacts | null {
   const bytes = buf instanceof Uint8Array ? buf : new Uint8Array(buf);
+  if (isBackupVolume(bytes)) return readAnsiBackupSet(bytes);
   if (!isWinchVolume(bytes)) return null;
   try {
     const vol = readWinchVolume(bytes);
@@ -206,6 +272,42 @@ export function readBackupSet(buf: Buffer | Uint8Array): {
       pageFirst: numbers.length ? Math.min(...numbers) : null,
       pageLast: numbers.length ? Math.max(...numbers) : null,
     };
+  } catch {
+    return null;
+  }
+}
+
+/** One file named by the ANSI labels of a BACKUP-SYSTEM volume. */
+export interface BackupFileFacts {
+  /** NAME:TYPE as SINTRAN writes it */
+  name: string;
+  bytes: number;
+  created: string | null;
+  system: string | null;
+  /** the file runs on to the next volume of the run */
+  continued: boolean;
+  /** the label is left over from an older backup on the same media */
+  stale: boolean;
+}
+
+/**
+ * The files a BACKUP-SYSTEM volume names, or null when the image is not one.
+ * Recorded per floppy so the catalog can list and search them, and so two
+ * images can be compared: reads of the same floppy name nearly the same files,
+ * different volumes of a run name almost none in common.
+ */
+export function readBackupFiles(buf: Buffer | Uint8Array): BackupFileFacts[] | null {
+  const bytes = buf instanceof Uint8Array ? buf : new Uint8Array(buf);
+  if (!isBackupVolume(bytes)) return null;
+  try {
+    return readBackupVolume(bytes).files.map(f => ({
+      name: f.fullName,
+      bytes: f.dataLength,
+      created: f.created,
+      system: f.system || null,
+      continued: f.continued,
+      stale: f.stale,
+    }));
   } catch {
     return null;
   }

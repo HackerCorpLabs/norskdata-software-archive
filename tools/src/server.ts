@@ -2255,6 +2255,7 @@ app.get('/api/backup-set', async (req, res) => {
       id: e.id,
       volumeName: e.volumeName,
       imageSizeBytes: e.imageSizeBytes,
+      backupFiles: e.backupFiles,
       backupSet: e.backupSet,
     }));
 
@@ -2346,7 +2347,7 @@ app.post('/api/detect-filesystem', async (req, res) => {
     const entryId = String(req.query.id ?? '');
     const scope = String(req.query.scope ?? '');
     const cat = await getCatalog();
-    const { detectFilesystem, readDosLabel, readBackupSet } = await import('./api/filesystem-detect.js');
+    const { detectFilesystem, readDosLabel, readBackupSet, readBackupFiles } = await import('./api/filesystem-detect.js');
     const { gunzipSync } = await import('zlib');
 
     let targets = cat.entries;
@@ -2369,20 +2370,24 @@ app.post('/api/detect-filesystem', async (req, res) => {
       let kind: string;
       let label: string | null = null;
       let set: ReturnType<typeof readBackupSet> = null;
+      let files: ReturnType<typeof readBackupFiles> = null;
       try {
         const raw = gunzipSync(await readFile(abs));
         const ndfsParsed = !!(e.volumeName || e.ndfs?.files?.length || e.ndfs?.users?.length);
         kind = detectFilesystem(raw, ndfsParsed);
         if (kind === 'dos') label = readDosLabel(raw);
-        if (kind === 'winch') set = readBackupSet(raw);
+        if (kind === 'winch' || kind === 'backup') set = readBackupSet(raw);
+        if (kind === 'backup') files = readBackupFiles(raw);
       } catch { failed++; continue; }
       scanned++;
       counts[kind] = (counts[kind] ?? 0) + 1;
-      const setChanged = JSON.stringify(set ?? null) !== JSON.stringify(e.backupSet ?? null);
+      const setChanged = JSON.stringify(set ?? null) !== JSON.stringify(e.backupSet ?? null) ||
+                         JSON.stringify(files ?? null) !== JSON.stringify(e.backupFiles ?? null);
       if (e.filesystem !== kind || (label && e.volumeLabel !== label) || setChanged) {
         e.filesystem = kind as any;
         if (label) e.volumeLabel = label;
         e.backupSet = set;
+        e.backupFiles = files;
         if (e.storage?.git?.yamlPath) await saveFloppyYaml(ROOT_DIR, e);
         changed++;
       }

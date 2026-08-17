@@ -1778,7 +1778,7 @@ function getAppJS(): string {
   }
 
   // ── Catalog ──────────────────────────────────────────────────
-  var catalogState = { query: '', page: 0, sortCol: null, sortDir: 'asc' };
+  var catalogState = { query: '', media: 'all', page: 0, sortCol: null, sortDir: 'asc' };
 
   var catalogDebounce;
 
@@ -1789,6 +1789,22 @@ function getAppJS(): string {
    * reads "unmatched" with nothing saying why.
    */
   var MEDIA_LABEL = { ndfs: 'NDFS', dos: 'DOS', backup: 'BACKUP', winch: 'WINCH', tar: 'TAR', none: 'none' };
+  var MEDIA_FILTERS = [
+    ['all', 'All media'], ['ndfs', 'ND filesystem'], ['dos', 'MS-DOS'],
+    ['backup', 'BACKUP-SYSTEM'], ['winch', 'WINCH-TO-FLOPP'], ['tar', 'tar archive'], ['none', 'no filesystem'],
+  ];
+  /** What an image counts as when the filter runs: undetected images count as ND. */
+  function mediaOf(e) {
+    return e.filesystem || (e.ndfs && (e.ndfs.files || e.ndfs.users) ? 'ndfs' : 'none');
+  }
+  var mediaCounts = { all: CATALOG.length };
+  for (var mi = 0; mi < CATALOG.length; mi++) {
+    var mk = mediaOf(CATALOG[mi]);
+    mediaCounts[mk] = (mediaCounts[mk] || 0) + 1;
+  }
+  for (var mf = 0; mf < MEDIA_FILTERS.length; mf++) {
+    if (mediaCounts[MEDIA_FILTERS[mf][0]] === undefined) mediaCounts[MEDIA_FILTERS[mf][0]] = 0;
+  }
   function mediaCell(e) {
     var fs = e.filesystem || (e.ndfs && (e.ndfs.files || e.ndfs.users) ? 'ndfs' : null);
     if (!fs) return '<span style="color:var(--text-muted)">-</span>';
@@ -1801,12 +1817,26 @@ function getAppJS(): string {
   function renderCatalog() {
     // Only build the shell once; updateCatalogResults rebuilds just the table
     var shell = '<h2>Full Catalog (' + CATALOG.length + ' images)</h2>';
-    shell += '<div class="nd-search-bar"><input class="nd-input" type="text" id="cat-search" placeholder="Search by volume, product, MD5, tags..." value="' + esc(catalogState.query) + '"></div>';
+    shell += '<div class="nd-search-bar" style="display:flex;gap:0.5rem;align-items:center;flex-wrap:wrap">' +
+      '<input class="nd-input" type="text" id="cat-search" style="flex:1 1 18rem" placeholder="Search by volume, product, file name, MD5, tags..." value="' + esc(catalogState.query) + '">' +
+      '<label style="font-size:0.85rem;white-space:nowrap">Media <select class="nd-input" id="cat-media" style="width:auto">' +
+        MEDIA_FILTERS.map(function(m) {
+          return '<option value="' + m[0] + '"' + (catalogState.media === m[0] ? ' selected' : '') + '>' + m[1] +
+            ' (' + mediaCounts[m[0]] + ')</option>';
+        }).join('') +
+      '</select></label></div>';
     shell += '<p id="cat-count" style="font-size:0.85rem;color:var(--text-muted);margin-bottom:0.5rem"></p>';
     shell += '<div id="cat-results" style="overflow-x:auto"></div>';
     shell += '<div class="nd-pagination" id="cat-pager"></div>';
 
     view.innerHTML = shell;
+
+    var mediaSelect = document.getElementById('cat-media');
+    mediaSelect.addEventListener('change', function() {
+      catalogState.media = this.value;
+      catalogState.page = 0;
+      updateCatalogResults();
+    });
 
     var searchInput = document.getElementById('cat-search');
     searchInput.addEventListener('input', function() {
@@ -1895,9 +1925,12 @@ function getAppJS(): string {
   }
 
   function filterCatalog(query) {
-    if (!query) return CATALOG.slice();
+    var base = catalogState.media === 'all'
+      ? CATALOG.slice()
+      : CATALOG.filter(function(e) { return mediaOf(e) === catalogState.media; });
+    if (!query) return base;
     var q = query.toLowerCase();
-    return CATALOG.filter(function(e) {
+    return base.filter(function(e) {
       if (e.id && e.id.toLowerCase().indexOf(q) >= 0) return true;
       if (e.volumeName && e.volumeName.toLowerCase().indexOf(q) >= 0) return true;
       if (e.volumeLabel && e.volumeLabel.toLowerCase().indexOf(q) >= 0) return true;
@@ -1918,6 +1951,13 @@ function getAppJS(): string {
           if (e.ndfs.files[nf].name.toLowerCase().indexOf(q) >= 0) return true;
         }
       }
+      // BACKUP-SYSTEM volumes have no directory - the ANSI labels are the listing
+      if (e.backupFiles) {
+        for (var bf = 0; bf < e.backupFiles.length; bf++) {
+          if (e.backupFiles[bf].name.toLowerCase().indexOf(q) >= 0) return true;
+        }
+      }
+      if (e.backupSet && e.backupSet.name && e.backupSet.name.toLowerCase().indexOf(q) >= 0) return true;
       return false;
     });
   }
@@ -2732,16 +2772,24 @@ function getAppJS(): string {
     if (!key) { box.innerHTML = ''; return; }
     var set = groupBackupSets(CATALOG).get(key);
     if (!set) { box.innerHTML = ''; return; }
+    var chained = set.ordering === 'chained';
     var pct = set.pagesExpected ? Math.round(set.pagesHeld * 100 / set.pagesExpected) : 0;
     var h = '<div style="border:1px solid var(--border);border-radius:6px;margin:0.75rem 0;padding:0.75rem 1rem">';
-    h += '<h4 style="margin:0 0 0.25rem">Backup set <code>' + esc(set.name) + '</code>' +
-      (set.label ? ' <span class="nd-text-muted" style="font-weight:normal">' + esc(set.label) + '</span>' : '') + '</h4>';
+    h += '<h4 style="margin:0 0 0.25rem">' + (chained ? 'Backup run' : 'Backup set') + ' <code>' + esc(set.name) + '</code>' +
+      (set.label ? ' <span class="nd-text-muted" style="font-weight:normal">' + esc(set.label) + '</span>' : '') +
+      (chained && set.runDate ? ' <span class="nd-text-muted" style="font-weight:normal">&middot; ' + esc(set.runDate) +
+        (set.system ? ' &middot; ' + esc(set.system) : '') + '</span>' : '') + '</h4>';
     h += '<p style="margin:0 0 0.5rem"><span class="nd-badge ' + (set.complete ? 'nd-badge-ok' : 'nd-badge-warn') + '">' +
-      esc(describeSet(set)) + '</span> <span class="nd-text-muted">' + set.imageCount + ' image(s) &middot; ' +
-      set.pagesHeld.toLocaleString() + ' of ' + set.pagesExpected.toLocaleString() + ' pages of the volumes held (' + pct + '%)</span></p>';
+      esc(describeSet(set)) + '</span> <span class="nd-text-muted">' + set.imageCount + ' image(s)' +
+      (chained ? ' &middot; ' + (set.fileCount || 0) + ' file(s) named across the run'
+               : ' &middot; ' + set.pagesHeld.toLocaleString() + ' of ' + set.pagesExpected.toLocaleString() +
+                 ' pages of the volumes held (' + pct + '%)') + '</span></p>';
     h += '<p class="nd-text-muted" style="margin:0 0 0.6rem;font-size:0.85rem">' + esc(setVerdict(set)) + '</p>';
-    h += '<div style="overflow-x:auto"><table class="nd-table nd-table-compact"><thead><tr><th>Volume</th><th>Image</th>' +
-      '<th>Status</th><th style="text-align:right">Pages</th><th>Original pages</th><th></th></tr></thead><tbody>';
+    h += chained
+      ? '<div style="overflow-x:auto"><table class="nd-table nd-table-compact"><thead><tr><th>Volume</th><th>Image</th>' +
+        '<th style="text-align:right">Files</th><th>First file</th><th>Ends</th><th></th></tr></thead><tbody>'
+      : '<div style="overflow-x:auto"><table class="nd-table nd-table-compact"><thead><tr><th>Volume</th><th>Image</th>' +
+        '<th>Status</th><th style="text-align:right">Pages</th><th>Original pages</th><th></th></tr></thead><tbody>';
     set.slots.forEach(function(sl) {
       if (!sl.present) {
         h += '<tr><td><strong>' + sl.volumeNumber + '</strong></td><td colspan="4" class="nd-text-muted">not in the archive</td>' +
@@ -2755,6 +2803,19 @@ function getAppJS(): string {
         h += '<td><a href="#/disks/' + encodeURIComponent(rd.id) + '"><code>' + esc(rd.name) + '</code></a>' +
           (i === 0 ? '' : ' <span class="nd-text-muted" style="font-size:0.75rem">alternate read</span>') +
           (isCurrent ? ' <span class="nd-badge nd-badge-info" style="font-size:0.65rem">open</span>' : '') + '</td>';
+        if (chained) {
+          h += '<td style="text-align:right">' + (rd.fileCount || 0) +
+            (rd.staleCount ? ' <span class="nd-text-muted" style="font-size:0.75rem">+' + rd.staleCount + ' stale</span>' : '') + '</td>';
+          h += '<td><code style="font-size:0.8rem">' + esc(rd.firstFile || '-') + '</code></td>';
+          h += '<td>' + (!rd.endsMidFile
+            ? '<span class="nd-badge nd-badge-ok">ends clean</span>'
+            : !rd.best
+              ? '<span class="nd-badge">ends mid-file</span> <code style="font-size:0.75rem">' + esc(rd.lastFile || '') + '</code>'
+              : rd.continuesTo
+                ? '<span class="nd-badge nd-badge-info">continues</span> <code style="font-size:0.75rem">' + esc(rd.lastFile || '') + '</code>'
+                : '<span class="nd-badge nd-badge-warn">cut off</span> <code style="font-size:0.75rem">' + esc(rd.brokenAt || rd.lastFile || '') +
+                  '</code> <span class="nd-text-muted" style="font-size:0.75rem">no floppy here continues it</span>') + '</td>';
+        } else {
         var badge = rd.status === 'complete' ? '<span class="nd-badge nd-badge-ok">complete</span>'
           : rd.status === 'partial'
             ? '<span class="nd-badge nd-badge-warn">' + (rd.sideOne ? 'side 0 only' : 'incomplete read') + '</span>'
@@ -2764,6 +2825,7 @@ function getAppJS(): string {
         h += '<td style="text-align:right">' + rd.pageCount.toLocaleString() +
           (rd.listedPages ? '<span class="nd-text-muted"> / ' + rd.listedPages.toLocaleString() + '</span>' : '') + '</td>';
         h += '<td class="nd-text-muted">' + (rd.pageFirst === null ? '-' : rd.pageFirst + '-' + rd.pageLast) + '</td>';
+        }
         h += '<td style="white-space:nowrap"><button class="nd-btn nd-btn-sm" data-bk-open="' + esc(rd.id) + '"' +
           (isCurrent ? ' disabled' : '') + '>Open</button> <button class="nd-btn nd-btn-sm nd-badge-info" data-bk-hex="' +
           esc(rd.id) + '" data-bk-name="' + esc(rd.name) + '">Hex</button></td>';
@@ -2816,6 +2878,7 @@ function getAppJS(): string {
         var h = '<p class="nd-text-muted"><strong>SINTRAN BACKUP-SYSTEM</strong> &middot; volume <code>' + esc(v.volumeId) +
           '</code> &middot; owner <code>' + esc(v.owner) + '</code> &middot; ' + live + ' file(s)' +
           (v.files.length - live ? ', ' + (v.files.length - live) + ' stale label(s)' : '') + '</p>';
+        h += '<div id="bk-set"></div>';
         h += '<div style="max-height:50vh;overflow:auto"><table class="nd-table nd-table-compact"><thead><tr>' +
           '<th>File</th><th style="text-align:right">Bytes</th><th>Created</th><th>System</th></tr></thead><tbody>';
         v.files.forEach(function(f, i) {
@@ -2837,6 +2900,7 @@ function getAppJS(): string {
           '<button class="nd-btn nd-btn-sm nd-badge-patch" data-act="text"' + (f ? '' : ' disabled') + '>View as text</button>' +
           '</div>';
         box.innerHTML = h;
+        renderBackupSetPanel(entryId, document.getElementById('bk-set'));
         box.querySelectorAll('[data-idx]').forEach(function(tr) {
           tr.addEventListener('click', function() { selected = parseInt(this.getAttribute('data-idx'), 10); render(); });
         });

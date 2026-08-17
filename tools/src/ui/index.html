@@ -5772,7 +5772,8 @@ tr.ndfs-file-selected,
     }
 
     function renderFiles() {
-      var html = '<table class="nd-table nd-table-compact"><thead><tr>' +
+      var html = '<div id="bk-set"></div>' +
+        '<table class="nd-table nd-table-compact"><thead><tr>' +
         '<th>File</th><th style="width:6rem;text-align:right">Bytes</th><th style="width:5rem;text-align:right">Seq</th>' +
         '<th style="width:8rem">Created</th><th style="width:10rem">System</th></tr></thead><tbody>';
       files.forEach(function(f, i) {
@@ -5787,6 +5788,7 @@ tr.ndfs-file-selected,
       });
       html += '</tbody></table>';
       body.innerHTML = html;
+      renderBackupSetPanel(entryId, document.getElementById('bk-set'));
       body.querySelectorAll('tr[data-idx]').forEach(function(tr) {
         tr.addEventListener('click', function() { setSelected(parseInt(this.getAttribute('data-idx'), 10)); });
       });
@@ -5890,25 +5892,41 @@ tr.ndfs-file-selected,
   // volume of the set - held, missing, or held only as an incomplete read - so
   // one disk page answers what the whole set looks like. Each volume can still
   // be opened on its own or dumped as hex.
+  var backupSetCache = {};
   window.renderBackupSetPanel = function(entryId, box) {
     if (!box) return;
+    if (backupSetCache[entryId]) { paintBackupSet(backupSetCache[entryId], entryId, box); return; }
     fetch('/api/backup-set?id=' + encodeURIComponent(entryId))
       .then(function(r) { return r.json(); })
       .then(function(res) {
-        var set = res.set;
+        if (res.set) backupSetCache[entryId] = res.set;
+        paintBackupSet(res.set, entryId, box);
+      })
+      .catch(function(err) { box.innerHTML = '<p class="nd-text-muted">Could not load the set: ' + esc(String(err)) + '</p>'; });
+  };
+
+  function paintBackupSet(set, entryId, box) {
+    (function() {
         if (!set) { box.innerHTML = ''; return; }
+        var chained = set.ordering === 'chained';
         var pct = set.pagesExpected ? Math.round(set.pagesHeld * 100 / set.pagesExpected) : 0;
         var h = '<div class="nd-card" style="margin:0.75rem 0;padding:0.75rem 1rem">';
-        h += '<h4 style="margin:0 0 0.25rem">Backup set <code>' + esc(set.name) + '</code>' +
-          (set.label ? ' <span class="nd-text-muted" style="font-weight:normal">' + esc(set.label) + '</span>' : '') + '</h4>';
+        h += '<h4 style="margin:0 0 0.25rem">' + (chained ? 'Backup run' : 'Backup set') + ' <code>' + esc(set.name) + '</code>' +
+          (set.label ? ' <span class="nd-text-muted" style="font-weight:normal">' + esc(set.label) + '</span>' : '') +
+          (chained && set.runDate ? ' <span class="nd-text-muted" style="font-weight:normal">&middot; ' + esc(set.runDate) +
+            (set.system ? ' &middot; ' + esc(set.system) : '') + '</span>' : '') + '</h4>';
         h += '<p style="margin:0 0 0.5rem"><span class="nd-badge ' + (set.complete ? 'nd-badge-ok' : 'nd-badge-warn') + '">' +
-          esc(set.summary) + '</span> <span class="nd-text-muted">' + set.imageCount + ' image(s) &middot; ' +
-          set.pagesHeld.toLocaleString() + ' of ' + set.pagesExpected.toLocaleString() +
-          ' pages of the volumes held (' + pct + '%)</span></p>';
+          esc(set.summary) + '</span> <span class="nd-text-muted">' + set.imageCount + ' image(s)' +
+          (chained ? ' &middot; ' + (set.fileCount || 0) + ' file(s) named across the run'
+                   : ' &middot; ' + set.pagesHeld.toLocaleString() + ' of ' + set.pagesExpected.toLocaleString() +
+                     ' pages of the volumes held (' + pct + '%)') + '</span></p>';
         h += '<p class="nd-text-muted" style="margin:0 0 0.6rem;font-size:0.85rem">' + esc(set.verdict) + '</p>';
-        h += '<table class="nd-table nd-table-compact"><thead><tr><th style="width:4rem">Volume</th><th>Image</th>' +
-          '<th>Status</th><th style="text-align:right">Pages</th><th>Original pages</th><th style="width:11rem"></th>' +
-          '</tr></thead><tbody>';
+        h += chained
+          ? '<table class="nd-table nd-table-compact"><thead><tr><th style="width:4rem">Volume</th><th>Image</th>' +
+            '<th style="text-align:right">Files</th><th>First file</th><th>Ends</th><th style="width:11rem"></th></tr></thead><tbody>'
+          : '<table class="nd-table nd-table-compact"><thead><tr><th style="width:4rem">Volume</th><th>Image</th>' +
+            '<th>Status</th><th style="text-align:right">Pages</th><th>Original pages</th><th style="width:11rem"></th>' +
+            '</tr></thead><tbody>';
         set.slots.forEach(function(sl) {
           if (!sl.present) {
             h += '<tr><td><strong>' + sl.volumeNumber + '</strong></td>' +
@@ -5923,6 +5941,25 @@ tr.ndfs-file-selected,
             h += '<td><a href="#/disks/' + encodeURIComponent(rd.id) + '"><code>' + esc(rd.name) + '</code></a>' +
               (i === 0 ? '' : ' <span class="nd-text-muted" style="font-size:0.75rem">alternate read</span>') +
               (isCurrent ? ' <span class="nd-badge nd-badge-info" style="font-size:0.65rem">open</span>' : '') + '</td>';
+            if (chained) {
+              // A BACKUP-SYSTEM volume has no number of its own: what it holds,
+              // where it starts, and whether the file it was writing when the
+              // floppy filled up is continued by another floppy here.
+              h += '<td style="text-align:right">' + (rd.fileCount || 0) +
+                (rd.staleCount ? ' <span class="nd-text-muted" style="font-size:0.75rem" title="labels left over from an older backup">+' +
+                  rd.staleCount + ' stale</span>' : '') + '</td>';
+              h += '<td><code style="font-size:0.8rem">' + esc(rd.firstFile || '-') + '</code></td>';
+              // Only the read that stands for the volume carries the chain
+              // decision; an alternate read just says where it stopped.
+              h += '<td>' + (!rd.endsMidFile
+                ? '<span class="nd-badge nd-badge-ok">ends clean</span>'
+                : !rd.best
+                  ? '<span class="nd-badge">ends mid-file</span> <code style="font-size:0.75rem">' + esc(rd.lastFile || '') + '</code>'
+                  : rd.continuesTo
+                    ? '<span class="nd-badge nd-badge-info">continues</span> <code style="font-size:0.75rem">' + esc(rd.lastFile || '') + '</code>'
+                    : '<span class="nd-badge nd-badge-warn">cut off</span> <code style="font-size:0.75rem">' + esc(rd.brokenAt || rd.lastFile || '') +
+                      '</code> <span class="nd-text-muted" style="font-size:0.75rem">no floppy here continues it</span>') + '</td>';
+            } else {
             var badge = rd.status === 'complete' ? '<span class="nd-badge nd-badge-ok">complete</span>'
               : rd.status === 'partial'
                 ? '<span class="nd-badge nd-badge-warn">' + (rd.sideOne ? 'side 0 only' : 'incomplete read') + '</span>'
@@ -5932,6 +5969,7 @@ tr.ndfs-file-selected,
             h += '<td style="text-align:right">' + rd.pageCount.toLocaleString() +
               (rd.listedPages ? '<span class="nd-text-muted"> / ' + rd.listedPages.toLocaleString() + '</span>' : '') + '</td>';
             h += '<td class="nd-text-muted">' + (rd.pageFirst === null ? '-' : rd.pageFirst + '-' + rd.pageLast) + '</td>';
+            }
             h += '<td><button class="nd-btn nd-btn-sm" data-bk-open="' + esc(rd.id) + '"' + (isCurrent ? ' disabled' : '') + '>Open</button> ' +
               '<button class="nd-btn nd-btn-sm nd-badge-info" data-bk-hex="' + esc(rd.id) + '" data-bk-name="' + esc(rd.name) + '">Hex</button></td>';
             h += '</tr>';
@@ -5945,9 +5983,8 @@ tr.ndfs-file-selected,
         box.querySelectorAll('[data-bk-hex]').forEach(function(b) {
           b.addEventListener('click', function() { openHexViewer(this.getAttribute('data-bk-hex'), this.getAttribute('data-bk-name')); });
         });
-      })
-      .catch(function(err) { box.innerHTML = '<p class="nd-text-muted">Could not load the set: ' + esc(String(err)) + '</p>'; });
-  };
+    })();
+  }
 
   // ==============================================================
   // Raw image hex viewer
