@@ -19,7 +19,7 @@ import { checkDuplicate } from './dedup.js';
 import { matchProduct } from './product-matcher.js';
 import { detectFilesystem } from './filesystem-detect.js';
 import { pageAlign } from '../lib/ndfsalign/index.js';
-import { readDosLabel, readBackupSet, readBackupFiles } from './filesystem-detect.js';
+import { readDosLabel, readBackupSet, readBackupFiles, readDosFiles } from './filesystem-detect.js';
 
 /** Maximum raw image size for in-git storage (roughly 700 NDFS pages) */
 const FLOPPY_SIZE_LIMIT = 1_400_000;
@@ -549,6 +549,7 @@ export async function importImage(
     volumeLabel: readDosLabel(buffer),
     backupSet: readBackupSet(buffer),
     backupFiles: readBackupFiles(buffer),
+    dosFiles: readDosFiles(buffer),
     docs: null,
     provenance: {
       contributor: options?.contributor ?? 'unknown',

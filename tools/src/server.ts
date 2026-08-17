@@ -719,8 +719,10 @@ app.get('/api/floppies', async (req, res) => {
         if (e.tags?.some(t => t.toLowerCase().includes(filterQ))) return true;
         // Search product name
         if (e.productId && pMap2.get(e.productId)?.includes(filterQ)) return true;
-        // Search NDFS file names
+        // Search file names, whatever filesystem holds them
         if (e.ndfs?.files?.some(f => f.name.toLowerCase().includes(filterQ))) return true;
+        if (e.backupFiles?.some(f => f.name.toLowerCase().includes(filterQ))) return true;
+        if (e.dosFiles?.some(f => f.path.toLowerCase().includes(filterQ))) return true;
         // Search directory content raw (legacy)
         if (e.directoryContentRaw?.toLowerCase().includes(filterQ)) return true;
         return false;
@@ -761,6 +763,7 @@ app.get('/api/floppies', async (req, res) => {
         volumeLabel: e.volumeLabel ?? null,
         filesystem: e.filesystem ?? null,
         backupSet: e.backupSet ?? null,
+        dosFiles: e.dosFiles ?? null,
         condition: e.condition ?? null,
         productId: e.productId,
         productName: resolveProdName(e.productId),
@@ -2378,7 +2381,7 @@ app.post('/api/detect-filesystem', async (req, res) => {
     const entryId = String(req.query.id ?? '');
     const scope = String(req.query.scope ?? '');
     const cat = await getCatalog();
-    const { detectFilesystem, readDosLabel, readBackupSet, readBackupFiles } = await import('./api/filesystem-detect.js');
+    const { detectFilesystem, readDosLabel, readBackupSet, readBackupFiles, readDosFiles } = await import('./api/filesystem-detect.js');
     const { gunzipSync } = await import('zlib');
 
     let targets = cat.entries;
@@ -2402,6 +2405,7 @@ app.post('/api/detect-filesystem', async (req, res) => {
       let label: string | null = null;
       let set: ReturnType<typeof readBackupSet> = null;
       let files: ReturnType<typeof readBackupFiles> = null;
+      let dosFiles: ReturnType<typeof readDosFiles> = null;
       let recovered: DamagedAssessment | null = null;
       try {
         const raw = gunzipSync(await readFile(abs));
@@ -2410,17 +2414,20 @@ app.post('/api/detect-filesystem', async (req, res) => {
         if (kind === 'dos') label = readDosLabel(raw);
         if (kind === 'winch' || kind === 'backup') set = readBackupSet(raw);
         if (kind === 'backup') files = readBackupFiles(raw);
+        if (kind === 'dos') dosFiles = readDosFiles(raw);
         if (kind === 'none') recovered = await tryRecoverDamaged(raw, siblingFileNames(cat.entries, e));
       } catch { failed++; continue; }
       scanned++;
       counts[kind] = (counts[kind] ?? 0) + 1;
       const setChanged = JSON.stringify(set ?? null) !== JSON.stringify(e.backupSet ?? null) ||
-                         JSON.stringify(files ?? null) !== JSON.stringify(e.backupFiles ?? null);
+                         JSON.stringify(files ?? null) !== JSON.stringify(e.backupFiles ?? null) ||
+                         JSON.stringify(dosFiles ?? null) !== JSON.stringify(e.dosFiles ?? null);
       if (e.filesystem !== kind || (label && e.volumeLabel !== label) || setChanged) {
         e.filesystem = kind as any;
         if (label) e.volumeLabel = label;
         e.backupSet = set;
         e.backupFiles = files;
+        e.dosFiles = dosFiles;
         if (recovered) {
           // ND material that the parser refuses: filed as the ND floppy it is,
           // with what could be read off it and how far that can be trusted.

@@ -180,6 +180,7 @@ function entryToYamlDoc(entry: CatalogEntry, rootDir: string): Record<string, un
   if (entry.backupSet) doc.backupSet = { ...entry.backupSet };
   if (entry.backupFiles?.length) doc.backupFiles = entry.backupFiles.map(f => ({ ...f }));
   if (entry.condition) doc.condition = { ...entry.condition };
+  if (entry.dosFiles?.length) doc.dosFiles = entry.dosFiles.map(f => ({ ...f }));
   if (entry.cpuTarget) doc.cpuTarget = entry.cpuTarget;
   if (entry.osRequirement) doc.osRequirement = entry.osRequirement;
 
@@ -322,6 +323,7 @@ function yamlDocToEntry(doc: Record<string, unknown>, yamlRelPath: string, rootD
     backupSet: (doc.backupSet as CatalogEntry['backupSet']) ?? null,
     backupFiles: (doc.backupFiles as CatalogEntry['backupFiles']) ?? null,
     condition: (doc.condition as CatalogEntry['condition']) ?? null,
+    dosFiles: (doc.dosFiles as CatalogEntry['dosFiles']) ?? null,
     docs: docsObj ? {
       piDocId: docsObj.piDocId as string | null ?? null,
       pdDocId: docsObj.pdDocId as string | null ?? null,

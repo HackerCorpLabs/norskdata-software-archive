@@ -336,3 +336,32 @@ export function ndNameEvidence(buf: Buffer | Uint8Array): { count: number; sampl
 
 /** How many ND-style names must be present before an image counts as ND material. */
 export const ND_NAME_EVIDENCE_MIN = 3;
+
+/** One entry of an MS-DOS floppy, path included so subdirectories are visible. */
+export interface DosFileFacts {
+  /** full path from the root, e.g. ND-OWS/SETUP.EXE */
+  path: string;
+  bytes: number;
+  /** "YYYY-MM-DD HH:MM" from the directory entry */
+  modified: string | null;
+  directory: boolean;
+}
+
+/**
+ * The directory tree of an MS-DOS floppy, root and all subdirectories, or null
+ * when the image is not FAT.
+ *
+ * Recorded per floppy so the catalog can list and search the contents without
+ * opening the image - the same reason the NDFS file list is recorded.
+ */
+export function readDosFiles(buf: Buffer | Uint8Array, maxEntries = 3000): DosFileFacts[] | null {
+  const bytes = buf instanceof Uint8Array ? buf : new Uint8Array(buf);
+  try {
+    const vol = DosVolume.open(bytes);
+    return vol.listAll(maxEntries)
+      .filter(e => !e.isVolumeLabel)
+      .map(e => ({ path: e.path, bytes: e.size, modified: e.modified, directory: e.isDirectory }));
+  } catch {
+    return null;
+  }
+}

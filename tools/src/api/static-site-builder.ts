@@ -2011,6 +2011,12 @@ function getAppJS(): string {
           if (e.ndfs.files[nf].name.toLowerCase().indexOf(q) >= 0) return true;
         }
       }
+      // MS-DOS floppies: the whole tree, subdirectories included
+      if (e.dosFiles) {
+        for (var df = 0; df < e.dosFiles.length; df++) {
+          if (e.dosFiles[df].path.toLowerCase().indexOf(q) >= 0) return true;
+        }
+      }
       // BACKUP-SYSTEM volumes have no directory - the ANSI labels are the listing
       if (e.backupFiles) {
         for (var bf = 0; bf < e.backupFiles.length; bf++) {
@@ -2549,6 +2555,30 @@ function getAppJS(): string {
         html += '<button class="nd-btn nd-btn-sm" onclick="openHexViewer(\\'' + idArg + '\\', \\'' + hexLabel + '\\')">Open in HEX viewer</button>';
       }
       html += '</div>';
+    }
+
+    // ── MS-DOS directory tree ──
+    // Recorded at import, so the listing is here without fetching the image.
+    if (full && e.dosFiles && e.dosFiles.length) {
+      var dosDirs = 0, dosBytes = 0;
+      for (var dfi = 0; dfi < e.dosFiles.length; dfi++) {
+        if (e.dosFiles[dfi].directory) dosDirs++; else dosBytes += e.dosFiles[dfi].bytes || 0;
+      }
+      html += '<h3 style="margin:1rem 0 0.35rem">Files on this disk</h3>';
+      html += '<p class="nd-text-muted" style="margin:0 0 0.5rem;font-size:0.85rem">' +
+        (e.dosFiles.length - dosDirs) + ' file(s) in ' + (dosDirs + 1) + ' director' + (dosDirs ? 'ies' : 'y') +
+        ', ' + formatBytes(dosBytes) + ' in total.</p>';
+      html += '<div style="overflow-x:auto;max-height:60vh"><table class="nd-table nd-table-compact"><thead><tr>' +
+        '<th>Name</th><th style="text-align:right">Size</th><th>Modified</th></tr></thead><tbody>';
+      e.dosFiles.forEach(function(f) {
+        var depth = f.path.split('/').length - 1;
+        var leaf = f.path.split('/').pop();
+        html += '<tr><td style="padding-left:' + (0.5 + depth * 1.2) + 'rem"><code>' +
+          (f.directory ? '&#128193; ' : '') + esc(leaf) + '</code></td>' +
+          '<td style="text-align:right">' + (f.directory ? '<span class="nd-text-muted">&lt;DIR&gt;</span>' : f.bytes.toLocaleString()) + '</td>' +
+          '<td class="nd-text-muted">' + esc(f.modified || '') + '</td></tr>';
+      });
+      html += '</tbody></table></div>';
     }
 
     // ── Other reads of the same physical floppy ──

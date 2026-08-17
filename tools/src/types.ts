@@ -253,6 +253,11 @@ export interface CatalogEntry {
       corroboratedBySibling?: number;
     } | null;
   } | null;
+  /**
+   * Directory tree of an MS-DOS floppy, root and subdirectories, recorded so
+   * the catalog can list and search it without opening the image.
+   */
+  dosFiles?: { path: string; bytes: number; modified: string | null; directory: boolean }[] | null;
   directoryContentRaw?: string | null;
   /** References to related documentation */
   docs: {

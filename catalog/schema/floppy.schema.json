@@ -768,6 +768,38 @@
       "required": [
         "status"
       ]
+    },
+    "dosFiles": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "description": "Directory tree of an MS-DOS floppy, root and subdirectories, so the catalog can list and search it without opening the image.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "full path from the root, e.g. ND-OWS/SETUP.EXE"
+          },
+          "bytes": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "modified": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "directory": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "path"
+        ]
+      }
     }
   },
   "additionalProperties": false
