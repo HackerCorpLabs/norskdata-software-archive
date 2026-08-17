@@ -5072,6 +5072,36 @@ tr.ndfs-file-selected,
         // MS-DOS disk: its directory is not an NDFS listing, so show the real
         // one. Filled in after render, from /api/dosfs/info.
         html += '<div class="nd-card" id="dos-listing"><p class="nd-text-muted">Reading MS-DOS directory...</p></div>';
+      } else if (e.filesystem === 'backup' && e.backupFiles && e.backupFiles.length) {
+        // BACKUP-SYSTEM has no directory: the ANSI labels are the listing, and
+        // they were recorded at import, so this needs no request.
+        var liveB = e.backupFiles.filter(function(f) { return !f.stale; });
+        var staleB = e.backupFiles.length - liveB.length;
+        html += '<div class="nd-card" style="padding:0"><div style="padding:0.6rem 1rem;border-bottom:1px solid var(--border)">' +
+          '<strong>SINTRAN III BACKUP-SYSTEM</strong> <span class="nd-text-muted">' + liveB.length + ' file(s)' +
+          (staleB ? ', ' + staleB + ' label(s) left from an older backup' : '') +
+          (e.backupSet && e.backupSet.runDate ? ' &middot; ' + esc(e.backupSet.runDate) : '') +
+          (e.backupSet && e.backupSet.system ? ' &middot; ' + esc(e.backupSet.system) : '') + '</span>' +
+          ' <button class="nd-btn nd-btn-ghost nd-btn-sm" style="float:right;font-size:0.75rem" onclick="openBackupViewer(\'' +
+          esc(e.id) + '\')">Browse</button></div>' +
+          '<table class="nd-ndfs-table"><thead><tr><th>File</th><th style="text-align:right">Bytes</th><th>Created</th></tr></thead><tbody>';
+        e.backupFiles.forEach(function(f) {
+          html += '<tr' + (f.stale ? ' class="nd-text-muted"' : '') + '><td><code style="font-size:0.82rem">' + esc(f.name) + '</code>' +
+            (f.continued ? ' <span class="nd-badge nd-badge-warn" style="font-size:0.65rem">continues</span>' : '') +
+            (f.stale ? ' <span style="font-size:0.7rem">stale</span>' : '') + '</td>' +
+            '<td style="text-align:right">' + (f.bytes || 0).toLocaleString() + '</td>' +
+            '<td class="nd-text-muted">' + esc(f.created || '') + '</td></tr>';
+        });
+        html += '</tbody></table></div>';
+      } else if (e.filesystem === 'winch' && e.backupSet) {
+        // A page dump: there are no file names on the media at all.
+        html += '<div class="nd-card"><p class="nd-text-muted">WINCH-TO-FLOPP backup of directory <code>' +
+          esc(e.backupSet.name) + '</code>, volume ' + e.backupSet.volumeNumber + ' of ' + e.backupSet.totalVolumes +
+          ', ' + (e.backupSet.pageCount || 0) + ' page(s) stored' +
+          (e.backupSet.pageFirst !== null && e.backupSet.pageFirst !== undefined
+            ? ' (original pages ' + e.backupSet.pageFirst + '-' + e.backupSet.pageLast + ')' : '') + '. ' +
+          'This format stores no file names - open the backup viewer to see the page map and the rest of the set.</p>' +
+          '<button class="nd-btn nd-btn-sm" onclick="openBackupViewer(\'' + esc(e.id) + '\')">Open in backup viewer</button></div>';
       } else if (e.filesystem === 'tar') {
         html += '<div class="nd-card"><p class="nd-text-muted">This image is a tar archive written straight to the media, not a filesystem. ' +
           'Use the HEX viewer, or extract it with <code>tar -xf</code>.</p></div>';

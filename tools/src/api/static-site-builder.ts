@@ -2581,6 +2581,43 @@ function getAppJS(): string {
       html += '</tbody></table></div>';
     }
 
+    // ── BACKUP-SYSTEM listing ──
+    // The ANSI labels are the only listing this format has, and they were
+    // recorded at import - so the files show here without fetching the image.
+    if (full && e.backupFiles && e.backupFiles.length) {
+      var liveB = e.backupFiles.filter(function(f) { return !f.stale; });
+      var staleB = e.backupFiles.length - liveB.length;
+      html += '<h3 style="margin:1rem 0 0.35rem">Files on this volume</h3>';
+      html += '<p class="nd-text-muted" style="margin:0 0 0.5rem;font-size:0.85rem">' +
+        'SINTRAN III BACKUP-SYSTEM &middot; ' + liveB.length + ' file(s)' +
+        (staleB ? ', ' + staleB + ' label(s) left from an older backup on the same media' : '') +
+        (e.backupSet && e.backupSet.runDate ? ' &middot; ' + esc(e.backupSet.runDate) : '') +
+        (e.backupSet && e.backupSet.system ? ' &middot; ' + esc(e.backupSet.system) : '') + '</p>';
+      html += '<div style="overflow-x:auto;max-height:60vh"><table class="nd-table nd-table-compact"><thead><tr>' +
+        '<th>File</th><th style="text-align:right">Bytes</th><th>Created</th></tr></thead><tbody>';
+      e.backupFiles.forEach(function(f) {
+        html += '<tr' + (f.stale ? ' class="nd-text-muted"' : '') + '><td><code>' + esc(f.name) + '</code>' +
+          (f.continued ? ' <span class="nd-badge nd-badge-warn" style="font-size:0.65rem">continues on the next volume</span>' : '') +
+          (f.stale ? ' <span style="font-size:0.7rem">stale</span>' : '') + '</td>' +
+          '<td style="text-align:right">' + (f.bytes || 0).toLocaleString() + '</td>' +
+          '<td class="nd-text-muted">' + esc(f.created || '') + '</td></tr>';
+      });
+      html += '</tbody></table></div>';
+    }
+
+    // ── WINCH-TO-FLOPP: no file names exist on the media ──
+    if (full && e.filesystem === 'winch' && e.backupSet) {
+      html += '<h3 style="margin:1rem 0 0.35rem">What is on this volume</h3>';
+      html += '<p class="nd-text-muted" style="margin:0 0 0.5rem;font-size:0.85rem">' +
+        'WINCH-TO-FLOPP backup of directory <code>' + esc(e.backupSet.name) + '</code>, volume ' +
+        e.backupSet.volumeNumber + ' of ' + e.backupSet.totalVolumes + ', ' + (e.backupSet.pageCount || 0) +
+        ' page(s) stored' +
+        (e.backupSet.pageFirst !== null && e.backupSet.pageFirst !== undefined
+          ? ' (original pages ' + e.backupSet.pageFirst + ' to ' + e.backupSet.pageLast + ')' : '') +
+        '. This format stores no file names on the media: they appear only when every volume of the set is ' +
+        'reassembled. The backup viewer shows the page map and the state of the whole set.</p>';
+    }
+
     // ── Other reads of the same physical floppy ──
     // A floppy that read badly was read again, so the archive can hold several
     // images of one disk. Showing them together says which attempt is the one
