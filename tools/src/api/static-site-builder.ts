@@ -1867,7 +1867,7 @@ function getAppJS(): string {
     document.getElementById('cat-count').textContent = filtered.length + ' results';
 
     var html = '<table class="nd-table" id="cat-table">';
-    html += '<colgroup><col style="width:22%"><col style="width:8%"><col style="width:28%"><col style="width:7%"><col style="width:9%"><col style="width:13%"><col style="width:13%"></colgroup>';
+    html += '<colgroup><col style="width:21%"><col style="width:7%"><col style="width:26%"><col style="width:6%"><col style="width:9%"><col style="width:12%"><col style="width:12%"><col style="width:7%"></colgroup>';
     html += '<thead><tr>';
     var cols = ['Volume Name', 'Media', 'Product', 'Version', 'Size', 'Boot Format', 'Files'];
     for (var c = 0; c < cols.length; c++) {
@@ -1875,6 +1875,7 @@ function getAppJS(): string {
       if (catalogState.sortCol === c) arrow = catalogState.sortDir === 'asc' ? ' \\u25B2' : ' \\u25BC';
       html += '<th data-col="' + c + '">' + cols[c] + arrow + '</th>';
     }
+    html += '<th></th>';
     html += '</tr></thead><tbody>';
 
     for (var i = 0; i < pageEntries.length; i++) {
@@ -1890,10 +1891,24 @@ function getAppJS(): string {
       html += '<td>' + formatBytes(e.imageSizeBytes) + '</td>';
       html += '<td><span class="nd-badge nd-badge-os">' + esc(e.bootFormat || '-') + '</span></td>';
       html += '<td>' + (e.ndfs && e.ndfs.files ? e.ndfs.files.length : '-') + '</td>';
+      // Looking at the bytes is the only way to identify an image the detectors
+      // cannot place, so the listing offers it directly rather than by way of
+      // the disk page.
+      html += '<td style="text-align:right"><button class="nd-btn nd-btn-sm" data-hex="' + esc(e.id) + '">Hex</button></td>';
       html += '</tr>';
     }
     html += '</tbody></table>';
     document.getElementById('cat-results').innerHTML = html;
+
+    // the viewer walks whatever the listing is currently showing
+    setHexNavList(filtered.map(function(x) { return x.id; }));
+    var hexButtons = document.querySelectorAll('#cat-table [data-hex]');
+    for (var hb = 0; hb < hexButtons.length; hb++) {
+      hexButtons[hb].addEventListener('click', function(ev) {
+        ev.stopPropagation();
+        openHexViewer(this.getAttribute('data-hex'));
+      });
+    }
 
     // Pagination
     var pagerHtml = '<button class="nd-btn" id="cat-prev" ' + (catalogState.page <= 0 ? 'disabled' : '') + '>Prev</button>';
@@ -2712,11 +2727,18 @@ function getAppJS(): string {
   // including the volumes of a backup set, which carry no file names. Rendered
   // one 32 KB window at a time: a whole 1.2 MB image at 16 bytes per row is
   // 76 800 rows, which no browser lays out smoothly.
+  // hexNav is the list the viewer can walk: whatever the catalog is showing.
+  var hexNav = { ids: [], index: -1 };
+  window.setHexNavList = function(ids) { hexNav.ids = ids || []; };
+
   window.openHexViewer = function(entryId, label) {
     var WINDOW_BYTES = 32768, ROW = 16;
     var entry = catalogMap[entryId] || {};
+    hexNav.index = hexNav.ids.indexOf(entryId);
+    var place = hexNav.index >= 0 ? ' <span class="nd-text-muted" style="font-weight:normal">(' +
+      (hexNav.index + 1) + ' of ' + hexNav.ids.length + ')</span>' : '';
     ndModal.open('<div class="nd-modal-header"><h3>Hex view - <code>' + esc(label || entry.volumeName || entryId) +
-      '</code></h3><button class="nd-modal-close" onclick="ndModal.close()">&times;</button></div>' +
+      '</code>' + place + '</h3><button class="nd-modal-close" onclick="ndModal.close()">&times;</button></div>' +
       '<div class="nd-modal-body" id="hexbody">Reading image...</div>', { wide: true });
     loadImageBytes(entryId).then(function(bytes) {
       var box = document.getElementById('hexbody');
@@ -2740,10 +2762,16 @@ function getAppJS(): string {
           lines.push(('0000000' + off.toString(16)).slice(-8) + '  ' + hex + ' |' + txt + '|');
         }
         var h = '<div style="display:flex;gap:0.75rem;align-items:center;flex-wrap:wrap;margin-bottom:0.5rem">' +
+          (hexNav.index >= 0
+            ? '<button class="nd-btn nd-btn-sm nd-btn-primary" id="hex-img-prev"' + (hexNav.index <= 0 ? ' disabled' : '') +
+              '>&larr; Previous image</button>' +
+              '<button class="nd-btn nd-btn-sm nd-btn-primary" id="hex-img-next"' +
+              (hexNav.index >= hexNav.ids.length - 1 ? ' disabled' : '') + '>Next image &rarr;</button>'
+            : '') +
           '<span class="nd-text-muted">' + bytes.length.toLocaleString() + ' bytes &middot; showing 0x' +
           start.toString(16) + ' - 0x' + (end - 1).toString(16) + '</span>' +
-          '<button class="nd-btn nd-btn-sm" id="hex-prev"' + (start <= 0 ? ' disabled' : '') + '>Previous</button>' +
-          '<button class="nd-btn nd-btn-sm" id="hex-next"' + (end >= bytes.length ? ' disabled' : '') + '>Next</button>' +
+          '<button class="nd-btn nd-btn-sm" id="hex-prev"' + (start <= 0 ? ' disabled' : '') + '>Previous 32K</button>' +
+          '<button class="nd-btn nd-btn-sm" id="hex-next"' + (end >= bytes.length ? ' disabled' : '') + '>Next 32K</button>' +
           '<label style="font-size:0.85rem">go to <input class="nd-input" id="hex-goto" style="width:9rem;font-size:0.8rem" placeholder="0x2000 or 8192"></label>' +
           '<label style="font-size:0.85rem;cursor:pointer" title="ND text is written with the parity bit set"><input type="checkbox" id="hex-strip"' +
           (strip ? ' checked' : '') + '> strip parity</label></div>';
@@ -2752,6 +2780,9 @@ function getAppJS(): string {
         var prev = document.getElementById('hex-prev'), next = document.getElementById('hex-next');
         prev.addEventListener('click', function() { start -= WINDOW_BYTES; render(); });
         next.addEventListener('click', function() { start += WINDOW_BYTES; render(); });
+        var ip = document.getElementById('hex-img-prev'), inx = document.getElementById('hex-img-next');
+        if (ip) ip.addEventListener('click', function() { openHexViewer(hexNav.ids[hexNav.index - 1]); });
+        if (inx) inx.addEventListener('click', function() { openHexViewer(hexNav.ids[hexNav.index + 1]); });
         document.getElementById('hex-strip').addEventListener('change', function() { strip = this.checked; render(); });
         document.getElementById('hex-goto').addEventListener('change', function() {
           var v = this.value.trim();
