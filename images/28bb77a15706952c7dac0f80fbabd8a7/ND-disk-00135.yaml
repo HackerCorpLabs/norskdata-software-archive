@@ -6,6 +6,128 @@ image:
   format: raw
   controller: floppy
 filesystem: backup
+backupSet:
+  kind: backup
+  name: BASDA
+  label: AGNETA
+  runDate: 1989-01-17
+  system: SINTRAN III K
+  fileCount: 18
+  staleCount: 0
+  firstFile: GBILDER:FORM
+  lastFile: REKNA:MODE
+  endsMidFile: false
+  fileListHash: 29f8ea61
+  imageBytes: 1310720
+backupFiles:
+  - name: GBILDER:FORM
+    bytes: 43008
+    created: 1989-01-17
+    system: SINTRAN III K
+    continued: false
+    stale: false
+  - name: GRLB0102U:UNIQ
+    bytes: 6144
+    created: 1989-01-17
+    system: SINTRAN III K
+    continued: false
+    stale: false
+  - name: GT-SCHEMA:SYMB
+    bytes: 18432
+    created: 1989-01-17
+    system: SINTRAN III K
+    continued: false
+    stale: false
+  - name: RKN:LINK
+    bytes: 26624
+    created: 1989-01-17
+    system: SINTRAN III K
+    continued: false
+    stale: false
+  - name: KOMP-LADDA:SYMB
+    bytes: 4096
+    created: 1989-01-17
+    system: SINTRAN III K
+    continued: false
+    stale: false
+  - name: KOMP-LADDA:MODE
+    bytes: 4096
+    created: 1989-01-17
+    system: SINTRAN III K
+    continued: false
+    stale: false
+  - name: SCRATCH-SEG-01:LINK
+    bytes: 2048
+    created: 1989-01-17
+    system: SINTRAN III K
+    continued: false
+    stale: false
+  - name: RKN:DSEG
+    bytes: 104448
+    created: 1989-01-17
+    system: SINTRAN III K
+    continued: false
+    stale: false
+  - name: REKNA:LINK
+    bytes: 26624
+    created: 1989-01-17
+    system: SINTRAN III K
+    continued: false
+    stale: false
+  - name: REKNA:DSEG
+    bytes: 104448
+    created: 1989-01-17
+    system: SINTRAN III K
+    continued: false
+    stale: false
+  - name: KOMP-BILD:MODE
+    bytes: 4096
+    created: 1989-01-17
+    system: SINTRAN III K
+    continued: false
+    stale: false
+  - name: FOCUS-ENV-EN-G00:FORM
+    bytes: 6144
+    created: 1989-01-17
+    system: SINTRAN III K
+    continued: false
+    stale: false
+  - name: FOCUS-COB-LOAD:MODE
+    bytes: 4096
+    created: 1989-01-17
+    system: SINTRAN III K
+    continued: false
+    stale: false
+  - name: FCUCONT:NRF
+    bytes: 4096
+    created: 1989-01-17
+    system: SINTRAN III K
+    continued: false
+    stale: false
+  - name: REKNA:PSEG
+    bytes: 88064
+    created: 1989-01-17
+    system: SINTRAN III K
+    continued: false
+    stale: false
+  - name: FOCUS-KURS:FORM
+    bytes: 53248
+    created: 1989-01-17
+    system: SINTRAN III K
+    continued: false
+    stale: false
+  - name: REKNA:SYMB
+    bytes: 10240
+    created: 1989-01-17
+    system: SINTRAN III K
+    continued: false
+    stale: false
+  - name: REKNA:MODE
+    bytes: 4096
+    created: 1989-01-17
+    system: SINTRAN III K
+    continued: false
+    stale: false
 provenance:
   contributor: gandalf
   originalPath: 100/ND-disk-00135.img

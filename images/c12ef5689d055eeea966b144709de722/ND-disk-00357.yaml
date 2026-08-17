@@ -6,6 +6,134 @@ image:
   format: raw
   controller: floppy
 filesystem: backup
+backupSet:
+  kind: backup
+  name: F
+  label: SKOL-BAS
+  runDate: 1914-11-21
+  system: ""
+  fileCount: 19
+  staleCount: 0
+  firstFile: SERVER:H
+  lastFile: C-FUNC:C
+  endsMidFile: true
+  fileListHash: 4224e80f
+  imageBytes: 319488
+backupFiles:
+  - name: SERVER:H
+    bytes: 9216
+    created: 1914-11-21
+    system: null
+    continued: false
+    stale: false
+  - name: SEARCH:SYMB
+    bytes: 3072
+    created: 1914-11-21
+    system: null
+    continued: false
+    stale: false
+  - name: OVERLAY:H
+    bytes: 3072
+    created: 1914-11-21
+    system: null
+    continued: false
+    stale: false
+  - name: USER-SUPPORT:C
+    bytes: 21504
+    created: 1914-11-21
+    system: null
+    continued: false
+    stale: false
+  - name: BAS-ERRORS:H
+    bytes: 7168
+    created: 1914-11-21
+    system: null
+    continued: false
+    stale: false
+  - name: BAS-EDITOR:C
+    bytes: 17408
+    created: 1914-11-21
+    system: null
+    continued: false
+    stale: false
+  - name: OPTIMIZER:C
+    bytes: 41984
+    created: 1914-11-21
+    system: null
+    continued: false
+    stale: false
+  - name: LIST-OUTPUTS:C
+    bytes: 7168
+    created: 1914-11-21
+    system: null
+    continued: false
+    stale: false
+  - name: BBX:C
+    bytes: 58368
+    created: 1914-11-21
+    system: null
+    continued: false
+    stale: false
+  - name: MSG-SUPPORT:C
+    bytes: 23552
+    created: 1914-11-21
+    system: null
+    continued: false
+    stale: false
+  - name: BAS-STR:C
+    bytes: 23552
+    created: 1914-11-21
+    system: null
+    continued: false
+    stale: false
+  - name: UUCP:H
+    bytes: 5120
+    created: 1914-11-21
+    system: null
+    continued: false
+    stale: false
+  - name: BAS-GETCH:C
+    bytes: 23552
+    created: 1914-11-21
+    system: null
+    continued: false
+    stale: false
+  - name: BBS:TEXT
+    bytes: 1024
+    created: 1914-11-21
+    system: null
+    continued: false
+    stale: false
+  - name: OLD-BASFILREQ:C
+    bytes: 3072
+    created: 1914-11-21
+    system: null
+    continued: false
+    stale: false
+  - name: BAS-LOGIN:C
+    bytes: 21504
+    created: 1914-11-21
+    system: null
+    continued: false
+    stale: false
+  - name: MACRO2:MODE
+    bytes: 3072
+    created: 1914-11-21
+    system: null
+    continued: false
+    stale: false
+  - name: MULTI-TASK:C
+    bytes: 7168
+    created: 1914-11-21
+    system: null
+    continued: false
+    stale: false
+  - name: C-FUNC:C
+    bytes: 10240
+    created: 1914-11-21
+    system: null
+    continued: true
+    stale: false
 provenance:
   contributor: gandalf
   originalPath: 300/ND-disk-00357.img

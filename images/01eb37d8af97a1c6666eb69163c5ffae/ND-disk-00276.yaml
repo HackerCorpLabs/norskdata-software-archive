@@ -6,6 +6,134 @@ image:
   format: raw
   controller: floppy
 filesystem: backup
+backupSet:
+  kind: backup
+  name: F
+  label: SKOL-BAS
+  runDate: 1990-01-14
+  system: ""
+  fileCount: 19
+  staleCount: 0
+  firstFile: CALL-SERVER:C
+  lastFile: OLD-SAVE-MSG:C
+  endsMidFile: true
+  fileListHash: 6430ef3b
+  imageBytes: 319488
+backupFiles:
+  - name: CALL-SERVER:C
+    bytes: 31744
+    created: 1990-01-14
+    system: null
+    continued: false
+    stale: false
+  - name: CALL-SERVER:H
+    bytes: 9216
+    created: 1990-01-14
+    system: null
+    continued: false
+    stale: false
+  - name: EX-SETUP:C
+    bytes: 44032
+    created: 1990-01-14
+    system: null
+    continued: false
+    stale: false
+  - name: WR-MSG:C
+    bytes: 9216
+    created: 1990-01-14
+    system: null
+    continued: false
+    stale: false
+  - name: RAM-BUFF:C
+    bytes: 5120
+    created: 1990-01-14
+    system: null
+    continued: false
+    stale: false
+  - name: MAKEFILE:SYMB
+    bytes: 5120
+    created: 1990-01-14
+    system: null
+    continued: false
+    stale: false
+  - name: TEST:TEXT
+    bytes: 3072
+    created: 1990-01-14
+    system: null
+    continued: false
+    stale: false
+  - name: XTEST:PRNT
+    bytes: 1024
+    created: 1990-01-14
+    system: null
+    continued: false
+    stale: false
+  - name: AUTOLOGIN-BBS:PROG
+    bytes: 117760
+    created: 1990-01-14
+    system: null
+    continued: false
+    stale: false
+  - name: MOTE-SUPPORT:H
+    bytes: 3072
+    created: 1990-01-14
+    system: null
+    continued: false
+    stale: false
+  - name: SEARCH:C
+    bytes: 3072
+    created: 1990-01-14
+    system: null
+    continued: false
+    stale: false
+  - name: 02:LINT
+    bytes: 1024
+    created: 1990-01-14
+    system: null
+    continued: false
+    stale: false
+  - name: EVENT-HANDLER:SYMB
+    bytes: 29696
+    created: 1990-01-14
+    system: null
+    continued: false
+    stale: false
+  - name: MACRO3:MODE
+    bytes: 3072
+    created: 1990-01-14
+    system: null
+    continued: false
+    stale: false
+  - name: UNIX:H
+    bytes: 3072
+    created: 1990-01-14
+    system: null
+    continued: false
+    stale: false
+  - name: CHTEST:SYMB
+    bytes: 3072
+    created: 1990-01-14
+    system: null
+    continued: false
+    stale: false
+  - name: OLD-DEBUG:C
+    bytes: 3072
+    created: 1990-01-14
+    system: null
+    continued: false
+    stale: false
+  - name: HUBBA:SYMB
+    bytes: 1024
+    created: 1990-01-14
+    system: null
+    continued: false
+    stale: false
+  - name: OLD-SAVE-MSG:C
+    bytes: 14336
+    created: 1990-01-14
+    system: null
+    continued: true
+    stale: false
 provenance:
   contributor: gandalf
   originalPath: 200/ND-disk-00276.img

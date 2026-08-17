@@ -6,6 +6,290 @@ image:
   format: raw
   controller: floppy
 filesystem: backup
+backupSet:
+  kind: backup
+  name: "900318"
+  label: RUNNING-POSTM
+  runDate: 1990-03-18
+  system: SINTRAN III I
+  fileCount: 45
+  staleCount: 0
+  firstFile: BAS-STR:H
+  lastFile: CONFIG-BBS:SYMB
+  endsMidFile: true
+  fileListHash: 5ce324c9
+  imageBytes: 630784
+backupFiles:
+  - name: BAS-STR:H
+    bytes: 10240
+    created: 1990-03-18
+    system: SINTRAN III I
+    continued: false
+    stale: false
+  - name: MAIN:C
+    bytes: 11264
+    created: 1990-03-18
+    system: SINTRAN III I
+    continued: false
+    stale: false
+  - name: BAS-MORE:H
+    bytes: 10240
+    created: 1990-03-18
+    system: SINTRAN III I
+    continued: false
+    stale: false
+  - name: MACRO1:MODE
+    bytes: 4096
+    created: 1990-03-18
+    system: SINTRAN III I
+    continued: false
+    stale: false
+  - name: BAS-GRAFIK:C
+    bytes: 2048
+    created: 1990-03-18
+    system: SINTRAN III I
+    continued: false
+    stale: false
+  - name: COUNT-ROWS:SYMB
+    bytes: 11264
+    created: 1990-03-18
+    system: SINTRAN III I
+    continued: true
+    stale: false
+  - name: BAS-SELECTOR:C
+    bytes: 8192
+    created: 1990-03-18
+    system: SINTRAN III I
+    continued: true
+    stale: false
+  - name: MSG-SUPPORT:H
+    bytes: 7168
+    created: 1990-03-18
+    system: SINTRAN III I
+    continued: false
+    stale: false
+  - name: BAS-MORE:C
+    bytes: 10240
+    created: 1990-03-18
+    system: SINTRAN III I
+    continued: false
+    stale: false
+  - name: BBS-MSG:C
+    bytes: 12288
+    created: 1990-03-18
+    system: SINTRAN III I
+    continued: false
+    stale: false
+  - name: TEST:GPM
+    bytes: 3072
+    created: 1990-03-18
+    system: SINTRAN III I
+    continued: false
+    stale: false
+  - name: SERVER:H
+    bytes: 4096
+    created: 1990-03-18
+    system: SINTRAN III I
+    continued: true
+    stale: false
+  - name: SEARCH:SYMB
+    bytes: 4096
+    created: 1990-03-18
+    system: SINTRAN III I
+    continued: false
+    stale: false
+  - name: USER-SUPPORT:C
+    bytes: 8192
+    created: 1990-03-18
+    system: SINTRAN III I
+    continued: true
+    stale: false
+  - name: BAS-ERRORS:H
+    bytes: 15360
+    created: 1990-03-18
+    system: SINTRAN III I
+    continued: true
+    stale: false
+  - name: OPTIMIZER:C
+    bytes: 29696
+    created: 1990-03-18
+    system: SINTRAN III I
+    continued: false
+    stale: false
+  - name: MSG-SUPPORT:C
+    bytes: 10240
+    created: 1990-03-18
+    system: SINTRAN III I
+    continued: true
+    stale: false
+  - name: BAS-STR:C
+    bytes: 17408
+    created: 1990-03-18
+    system: SINTRAN III I
+    continued: false
+    stale: false
+  - name: BAS-GETCH:C
+    bytes: 25600
+    created: 1990-03-18
+    system: SINTRAN III I
+    continued: false
+    stale: false
+  - name: NETS:H
+    bytes: 11264
+    created: 1990-03-18
+    system: SINTRAN III I
+    continued: true
+    stale: false
+  - name: BAS-IO:C
+    bytes: 12288
+    created: 1990-03-18
+    system: SINTRAN III I
+    continued: false
+    stale: false
+  - name: OS-INTER:C
+    bytes: 0
+    created: 1990-03-18
+    system: SINTRAN III I
+    continued: true
+    stale: false
+  - name: FILE-FUNC:C
+    bytes: 10240
+    created: 1990-03-18
+    system: SINTRAN III I
+    continued: false
+    stale: false
+  - name: PERFORM-LIBRARY:MCRO
+    bytes: 4096
+    created: 1990-03-18
+    system: SINTRAN III I
+    continued: false
+    stale: false
+  - name: CHAT:C
+    bytes: 4096
+    created: 1990-03-18
+    system: SINTRAN III I
+    continued: true
+    stale: false
+  - name: UE-LOGIN:SYMB
+    bytes: 4096
+    created: 1990-03-18
+    system: SINTRAN III I
+    continued: false
+    stale: false
+  - name: OVERLAY:C
+    bytes: 7168
+    created: 1990-03-18
+    system: SINTRAN III I
+    continued: false
+    stale: false
+  - name: ARPA-TIME:C
+    bytes: 2048
+    created: 1990-03-18
+    system: SINTRAN III I
+    continued: true
+    stale: false
+  - name: TCAP:H
+    bytes: 4096
+    created: 1990-03-18
+    system: SINTRAN III I
+    continued: false
+    stale: false
+  - name: KONV:C
+    bytes: 3072
+    created: 1990-03-18
+    system: SINTRAN III I
+    continued: false
+    stale: false
+  - name: EXT-BBS:C
+    bytes: 10240
+    created: 1990-03-18
+    system: SINTRAN III I
+    continued: false
+    stale: false
+  - name: TCAP:C
+    bytes: 14336
+    created: 1990-03-18
+    system: SINTRAN III I
+    continued: true
+    stale: false
+  - name: NET-SUPPORT:C
+    bytes: 7168
+    created: 1990-03-18
+    system: SINTRAN III I
+    continued: true
+    stale: false
+  - name: SERVER:C
+    bytes: 50176
+    created: 1990-03-18
+    system: SINTRAN III I
+    continued: false
+    stale: false
+  - name: MOTE-SUPPORT:C
+    bytes: 14336
+    created: 1990-03-18
+    system: SINTRAN III I
+    continued: false
+    stale: false
+  - name: SYS-ROUTIN:C
+    bytes: 12288
+    created: 1990-03-18
+    system: SINTRAN III I
+    continued: false
+    stale: false
+  - name: HELP-COMPILE:C
+    bytes: 2048
+    created: 1990-03-18
+    system: SINTRAN III I
+    continued: true
+    stale: false
+  - name: BASSTRUCT:H
+    bytes: 12288
+    created: 1990-03-18
+    system: SINTRAN III I
+    continued: false
+    stale: false
+  - name: OLD-MAKEFILE:SYMB
+    bytes: 0
+    created: 1990-03-18
+    system: SINTRAN III I
+    continued: true
+    stale: false
+  - name: USER-SUPPORT:H
+    bytes: 12288
+    created: 1990-03-18
+    system: SINTRAN III I
+    continued: false
+    stale: false
+  - name: MAPP-HANDLE:C
+    bytes: 0
+    created: 1990-03-18
+    system: SINTRAN III I
+    continued: true
+    stale: false
+  - name: UE-SUPPORT:C
+    bytes: 4096
+    created: 1990-03-18
+    system: SINTRAN III I
+    continued: false
+    stale: false
+  - name: UTKONV:SYMB
+    bytes: 0
+    created: 1990-03-18
+    system: SINTRAN III I
+    continued: false
+    stale: false
+  - name: WHO-IS-ON:C
+    bytes: 14336
+    created: 1990-03-18
+    system: SINTRAN III I
+    continued: true
+    stale: false
+  - name: CONFIG-BBS:SYMB
+    bytes: 6144
+    created: 1990-03-18
+    system: SINTRAN III I
+    continued: true
+    stale: false
 provenance:
   contributor: gandalf
   originalPath: 300/ND-disk-00313.img

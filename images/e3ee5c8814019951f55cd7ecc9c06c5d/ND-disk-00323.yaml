@@ -6,6 +6,110 @@ image:
   format: raw
   controller: floppy
 filesystem: backup
+backupSet:
+  kind: backup
+  name: FSK-1
+  label: SKOL-BAS
+  runDate: 1989-09-17
+  system: ""
+  fileCount: 15
+  staleCount: 0
+  firstFile: BBX:C
+  lastFile: PREP-65:C
+  endsMidFile: true
+  fileListHash: 4d45bf42
+  imageBytes: 319488
+backupFiles:
+  - name: BBX:C
+    bytes: 52224
+    created: 1989-09-17
+    system: null
+    continued: false
+    stale: false
+  - name: MSG-SUPPORT:C
+    bytes: 11264
+    created: 1989-09-17
+    system: null
+    continued: false
+    stale: false
+  - name: BAS-STR:C
+    bytes: 21504
+    created: 1989-09-17
+    system: null
+    continued: false
+    stale: false
+  - name: BAS-GETCH:C
+    bytes: 23552
+    created: 1989-09-17
+    system: null
+    continued: false
+    stale: false
+  - name: BAS-FILREQ:C
+    bytes: 3072
+    created: 1989-09-17
+    system: null
+    continued: false
+    stale: false
+  - name: BAS-LOGIN:C
+    bytes: 21504
+    created: 1989-09-17
+    system: null
+    continued: false
+    stale: false
+  - name: IMPORT:C
+    bytes: 3072
+    created: 1989-09-17
+    system: null
+    continued: false
+    stale: false
+  - name: C-FUNC:C
+    bytes: 19456
+    created: 1989-09-17
+    system: null
+    continued: false
+    stale: false
+  - name: PREP-55:C
+    bytes: 48128
+    created: 1989-09-17
+    system: null
+    continued: false
+    stale: false
+  - name: BAS-IO:C
+    bytes: 19456
+    created: 1989-09-17
+    system: null
+    continued: false
+    stale: false
+  - name: OS-INTER:C
+    bytes: 5120
+    created: 1989-09-17
+    system: null
+    continued: false
+    stale: false
+  - name: FILE-FUNC:C
+    bytes: 17408
+    created: 1989-09-17
+    system: null
+    continued: false
+    stale: false
+  - name: CHAT:C
+    bytes: 7168
+    created: 1989-09-17
+    system: null
+    continued: false
+    stale: false
+  - name: WHO-SUPPORT:C
+    bytes: 5120
+    created: 1989-09-17
+    system: null
+    continued: false
+    stale: false
+  - name: PREP-65:C
+    bytes: 38912
+    created: 1989-09-17
+    system: null
+    continued: true
+    stale: false
 provenance:
   contributor: gandalf
   originalPath: 300/ND-disk-00323.img

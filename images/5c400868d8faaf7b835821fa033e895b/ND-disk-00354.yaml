@@ -6,6 +6,26 @@ image:
   format: raw
   controller: floppy
 filesystem: backup
+backupSet:
+  kind: backup
+  name: FL
+  label: SYSTEM
+  runDate: 1986-10-24
+  system: SINTRAN III K
+  fileCount: 1
+  staleCount: 0
+  firstFile: JEC-B00:PROG
+  lastFile: JEC-B00:PROG
+  endsMidFile: false
+  fileListHash: 887cb5ec
+  imageBytes: 319488
+backupFiles:
+  - name: JEC-B00:PROG
+    bytes: 89088
+    created: 1986-10-24
+    system: SINTRAN III K
+    continued: false
+    stale: false
 provenance:
   contributor: gandalf
   originalPath: 300/ND-disk-00354.img

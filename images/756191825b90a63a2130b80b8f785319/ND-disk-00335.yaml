@@ -6,6 +6,146 @@ image:
   format: raw
   controller: floppy
 filesystem: backup
+backupSet:
+  kind: backup
+  name: F
+  label: SKOL-BAS
+  runDate: 1914-11-21
+  system: ""
+  fileCount: 21
+  staleCount: 0
+  firstFile: BAS-STR:H
+  lastFile: SERVER:H
+  endsMidFile: true
+  fileListHash: 0cf89e89
+  imageBytes: 319488
+backupFiles:
+  - name: BAS-STR:H
+    bytes: 17408
+    created: 1914-11-21
+    system: null
+    continued: false
+    stale: false
+  - name: MAIN:C
+    bytes: 21504
+    created: 1914-11-21
+    system: null
+    continued: false
+    stale: false
+  - name: REMAKE:MODE
+    bytes: 5120
+    created: 1914-11-21
+    system: null
+    continued: false
+    stale: false
+  - name: BAS-MORE:H
+    bytes: 17408
+    created: 1914-11-21
+    system: null
+    continued: false
+    stale: false
+  - name: INST:MODE
+    bytes: 3072
+    created: 1914-11-21
+    system: null
+    continued: false
+    stale: false
+  - name: MACRO1:MODE
+    bytes: 3072
+    created: 1914-11-21
+    system: null
+    continued: false
+    stale: false
+  - name: UTREM:SYMB
+    bytes: 25600
+    created: 1914-11-21
+    system: null
+    continued: false
+    stale: false
+  - name: BAS-GRAFIK:C
+    bytes: 7168
+    created: 1914-11-21
+    system: null
+    continued: false
+    stale: false
+  - name: COUNT-ROWS:SYMB
+    bytes: 3072
+    created: 1914-11-21
+    system: null
+    continued: false
+    stale: false
+  - name: C-FUNC:H
+    bytes: 17408
+    created: 1914-11-21
+    system: null
+    continued: false
+    stale: false
+  - name: BAS-SELECTOR:C
+    bytes: 13312
+    created: 1914-11-21
+    system: null
+    continued: false
+    stale: false
+  - name: MSG-SUPPORT:H
+    bytes: 5120
+    created: 1914-11-21
+    system: null
+    continued: false
+    stale: false
+  - name: ADRESS-HANDLE:C
+    bytes: 5120
+    created: 1914-11-21
+    system: null
+    continued: false
+    stale: false
+  - name: BAS-MORE:C
+    bytes: 17408
+    created: 1914-11-21
+    system: null
+    continued: false
+    stale: false
+  - name: UUCP:C
+    bytes: 68608
+    created: 1914-11-21
+    system: null
+    continued: false
+    stale: false
+  - name: MCALL:SYMB
+    bytes: 3072
+    created: 1914-11-21
+    system: null
+    continued: false
+    stale: false
+  - name: BBS-MSG:C
+    bytes: 27648
+    created: 1914-11-21
+    system: null
+    continued: false
+    stale: false
+  - name: TEST:GPM
+    bytes: 3072
+    created: 1914-11-21
+    system: null
+    continued: false
+    stale: false
+  - name: UTBBCOMP:SYMB
+    bytes: 5120
+    created: 1914-11-21
+    system: null
+    continued: false
+    stale: false
+  - name: OLDMAKE:SYMB
+    bytes: 5120
+    created: 1914-11-21
+    system: null
+    continued: false
+    stale: false
+  - name: SERVER:H
+    bytes: 13312
+    created: 1914-11-21
+    system: null
+    continued: true
+    stale: false
 provenance:
   contributor: gandalf
   originalPath: 300/ND-disk-00335.img

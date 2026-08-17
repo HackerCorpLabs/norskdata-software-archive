@@ -6,6 +6,62 @@ image:
   format: raw
   controller: floppy
 filesystem: backup
+backupSet:
+  kind: backup
+  name: INVENT
+  label: AGNETA
+  runDate: 1989-12-15
+  system: SINTRAN III L
+  fileCount: 7
+  staleCount: 0
+  firstFile: LO01:DATA
+  lastFile: LIN0207U:UNIQ
+  endsMidFile: false
+  fileListHash: 0c67a60a
+  imageBytes: 1261568
+backupFiles:
+  - name: LO01:DATA
+    bytes: 190464
+    created: 1989-12-15
+    system: SINTRAN III L
+    continued: false
+    stale: false
+  - name: UNIQUE:ULIB
+    bytes: 0
+    created: 1989-12-15
+    system: SINTRAN III L
+    continued: false
+    stale: false
+  - name: LIN0115F:UNIQ
+    bytes: 6144
+    created: 1989-12-15
+    system: SINTRAN III L
+    continued: false
+    stale: false
+  - name: LIN0104U:UNIQ
+    bytes: 14336
+    created: 1989-12-15
+    system: SINTRAN III L
+    continued: false
+    stale: false
+  - name: LIN0204U:UNIQ
+    bytes: 10240
+    created: 1989-12-15
+    system: SINTRAN III L
+    continued: false
+    stale: false
+  - name: LIN0205U:UNIQ
+    bytes: 18432
+    created: 1989-12-15
+    system: SINTRAN III L
+    continued: false
+    stale: false
+  - name: LIN0207U:UNIQ
+    bytes: 18432
+    created: 1989-12-15
+    system: SINTRAN III L
+    continued: false
+    stale: false
 provenance:
   contributor: gandalf
   originalPath: 100/ND-disk-00137b.img

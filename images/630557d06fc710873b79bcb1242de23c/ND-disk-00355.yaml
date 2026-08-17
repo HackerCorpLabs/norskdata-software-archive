@@ -6,6 +6,158 @@ image:
   format: raw
   controller: floppy
 filesystem: backup
+backupSet:
+  kind: backup
+  name: "900318"
+  label: RUNNING-POSTM
+  runDate: 1990-03-18
+  system: SINTRAN III I
+  fileCount: 23
+  staleCount: 0
+  firstFile: BAS-STR:H
+  lastFile: BAS-EDITOR:C
+  endsMidFile: true
+  fileListHash: b098f507
+  imageBytes: 319488
+backupFiles:
+  - name: BAS-STR:H
+    bytes: 17408
+    created: 1990-03-18
+    system: SINTRAN III I
+    continued: false
+    stale: false
+  - name: MAIN:C
+    bytes: 21504
+    created: 1990-03-18
+    system: SINTRAN III I
+    continued: false
+    stale: false
+  - name: UTREM:SYMB
+    bytes: 1024
+    created: 1990-03-18
+    system: SINTRAN III I
+    continued: false
+    stale: false
+  - name: BAS-MORE:H
+    bytes: 17408
+    created: 1990-03-18
+    system: SINTRAN III I
+    continued: false
+    stale: false
+  - name: INST:MODE
+    bytes: 3072
+    created: 1990-03-18
+    system: SINTRAN III I
+    continued: false
+    stale: false
+  - name: MACRO1:MODE
+    bytes: 3072
+    created: 1990-03-18
+    system: SINTRAN III I
+    continued: false
+    stale: false
+  - name: BAS-GRAFIK:C
+    bytes: 9216
+    created: 1990-03-18
+    system: SINTRAN III I
+    continued: false
+    stale: false
+  - name: COUNT-ROWS:SYMB
+    bytes: 3072
+    created: 1990-03-18
+    system: SINTRAN III I
+    continued: false
+    stale: false
+  - name: C-FUNC:H
+    bytes: 17408
+    created: 1990-03-18
+    system: SINTRAN III I
+    continued: false
+    stale: false
+  - name: BAS-SELECTOR:C
+    bytes: 13312
+    created: 1990-03-18
+    system: SINTRAN III I
+    continued: false
+    stale: false
+  - name: MSG-SUPPORT:H
+    bytes: 5120
+    created: 1990-03-18
+    system: SINTRAN III I
+    continued: false
+    stale: false
+  - name: ADRESS-HANDLE:C
+    bytes: 5120
+    created: 1990-03-18
+    system: SINTRAN III I
+    continued: false
+    stale: false
+  - name: BAS-MORE:C
+    bytes: 17408
+    created: 1990-03-18
+    system: SINTRAN III I
+    continued: false
+    stale: false
+  - name: UUCP:C
+    bytes: 68608
+    created: 1990-03-18
+    system: SINTRAN III I
+    continued: false
+    stale: false
+  - name: MCALL:SYMB
+    bytes: 3072
+    created: 1990-03-18
+    system: SINTRAN III I
+    continued: false
+    stale: false
+  - name: BBS-MSG:C
+    bytes: 27648
+    created: 1990-03-18
+    system: SINTRAN III I
+    continued: false
+    stale: false
+  - name: TEST:GPM
+    bytes: 3072
+    created: 1990-03-18
+    system: SINTRAN III I
+    continued: false
+    stale: false
+  - name: DEPEND:C
+    bytes: 3072
+    created: 1990-03-18
+    system: SINTRAN III I
+    continued: false
+    stale: false
+  - name: SERVER:H
+    bytes: 9216
+    created: 1990-03-18
+    system: SINTRAN III I
+    continued: false
+    stale: false
+  - name: SEARCH:SYMB
+    bytes: 3072
+    created: 1990-03-18
+    system: SINTRAN III I
+    continued: false
+    stale: false
+  - name: USER-SUPPORT:C
+    bytes: 21504
+    created: 1990-03-18
+    system: SINTRAN III I
+    continued: false
+    stale: false
+  - name: BAS-ERRORS:H
+    bytes: 7168
+    created: 1990-03-18
+    system: SINTRAN III I
+    continued: false
+    stale: false
+  - name: BAS-EDITOR:C
+    bytes: 4096
+    created: 1990-03-18
+    system: SINTRAN III I
+    continued: true
+    stale: false
 provenance:
   contributor: gandalf
   originalPath: 300/ND-disk-00355.img

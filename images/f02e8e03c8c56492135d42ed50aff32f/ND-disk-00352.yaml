@@ -6,6 +6,170 @@ image:
   format: raw
   controller: floppy
 filesystem: backup
+backupSet:
+  kind: backup
+  name: F
+  label: SKOL-BAS
+  runDate: 1990-01-15
+  system: ""
+  fileCount: 10
+  staleCount: 15
+  firstFile: BAS-STR:H
+  lastFile: BBS:PROG
+  endsMidFile: false
+  fileListHash: 71216b60
+  imageBytes: 315392
+backupFiles:
+  - name: BAS-STR:H
+    bytes: 17408
+    created: 1990-01-15
+    system: null
+    continued: false
+    stale: false
+  - name: BBS:C
+    bytes: 21504
+    created: 1990-01-15
+    system: null
+    continued: false
+    stale: false
+  - name: REMAKE:MODE
+    bytes: 5120
+    created: 1990-01-15
+    system: null
+    continued: false
+    stale: false
+  - name: BAS-MORE:H
+    bytes: 17408
+    created: 1990-01-15
+    system: null
+    continued: false
+    stale: false
+  - name: INST:MODE
+    bytes: 3072
+    created: 1990-01-15
+    system: null
+    continued: false
+    stale: false
+  - name: MACRO1:MODE
+    bytes: 3072
+    created: 1990-01-15
+    system: null
+    continued: false
+    stale: false
+  - name: BAS-GRAFIK:C
+    bytes: 0
+    created: 1990-01-15
+    system: null
+    continued: false
+    stale: false
+  - name: SERVER:PROG
+    bytes: 103936
+    created: 1990-01-15
+    system: null
+    continued: false
+    stale: false
+  - name: COUNT-ROWS:SYMB
+    bytes: 3072
+    created: 1990-01-15
+    system: null
+    continued: false
+    stale: false
+  - name: BBS:PROG
+    bytes: 4608
+    created: 1990-01-15
+    system: null
+    continued: false
+    stale: false
+  - name: LOC-HOST:C
+    bytes: 3072
+    created: 1990-01-11
+    system: null
+    continued: false
+    stale: true
+  - name: LOC-SIO:C
+    bytes: 9216
+    created: 1990-01-11
+    system: null
+    continued: false
+    stale: true
+  - name: PROFILE:SYMB
+    bytes: 3072
+    created: 1990-01-11
+    system: null
+    continued: false
+    stale: true
+  - name: LINKFILE:SYMB
+    bytes: 3072
+    created: 1990-01-11
+    system: null
+    continued: false
+    stale: true
+  - name: COMPFILE:SYMB
+    bytes: 3072
+    created: 1990-01-11
+    system: null
+    continued: false
+    stale: true
+  - name: UTCOMP:SYMB
+    bytes: 0
+    created: 1990-01-03
+    system: null
+    continued: true
+    stale: true
+  - name: BAS-EDITOR:C
+    bytes: 2560
+    created: 1990-01-03
+    system: null
+    continued: false
+    stale: true
+  - name: CHECK:C
+    bytes: 3072
+    created: 1990-01-03
+    system: null
+    continued: false
+    stale: true
+  - name: EVENT-HANDLER:C
+    bytes: 21504
+    created: 1990-01-03
+    system: null
+    continued: false
+    stale: true
+  - name: CHECK:BRF
+    bytes: 3072
+    created: 1990-01-03
+    system: null
+    continued: false
+    stale: true
+  - name: CHECK:PROG
+    bytes: 22016
+    created: 1990-01-03
+    system: null
+    continued: false
+    stale: true
+  - name: CHECK:MODE
+    bytes: 3072
+    created: 1990-01-03
+    system: null
+    continued: false
+    stale: true
+  - name: CLEAN:C
+    bytes: 1024
+    created: 1990-01-03
+    system: null
+    continued: false
+    stale: true
+  - name: EVENT-HANDLER:JOB
+    bytes: 0
+    created: 1990-01-03
+    system: null
+    continued: true
+    stale: true
+  - name: RAM-BUFF:C
+    bytes: 3072
+    created: 1989-12-21
+    system: null
+    continued: true
+    stale: true
 provenance:
   contributor: gandalf
   originalPath: 300/ND-disk-00352.img

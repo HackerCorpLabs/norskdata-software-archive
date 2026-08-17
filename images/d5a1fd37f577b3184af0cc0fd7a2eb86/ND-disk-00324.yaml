@@ -6,6 +6,74 @@ image:
   format: raw
   controller: floppy
 filesystem: backup
+backupSet:
+  kind: backup
+  name: FSK-1
+  label: SKOL-BAS
+  runDate: 1989-09-17
+  system: ""
+  fileCount: 9
+  staleCount: 0
+  firstFile: BAS-STR:H
+  lastFile: NEW-USERS:H
+  endsMidFile: false
+  fileListHash: e6faa77e
+  imageBytes: 319488
+backupFiles:
+  - name: BAS-STR:H
+    bytes: 17408
+    created: 1989-09-17
+    system: null
+    continued: false
+    stale: false
+  - name: BAS-MORE:H
+    bytes: 17408
+    created: 1989-09-17
+    system: null
+    continued: false
+    stale: false
+  - name: WHO-SUPPORT:H
+    bytes: 15360
+    created: 1989-09-17
+    system: null
+    continued: false
+    stale: false
+  - name: C-FUNC:H
+    bytes: 17408
+    created: 1989-09-17
+    system: null
+    continued: false
+    stale: false
+  - name: MSG-SUPPORT:H
+    bytes: 3072
+    created: 1989-09-17
+    system: null
+    continued: false
+    stale: false
+  - name: OS-INTER:H
+    bytes: 3072
+    created: 1989-09-17
+    system: null
+    continued: false
+    stale: false
+  - name: BASSTRUCT:H
+    bytes: 17408
+    created: 1989-09-17
+    system: null
+    continued: false
+    stale: false
+  - name: MOTE-SUPPORT:H
+    bytes: 3072
+    created: 1989-09-17
+    system: null
+    continued: false
+    stale: false
+  - name: NEW-USERS:H
+    bytes: 15360
+    created: 1989-09-17
+    system: null
+    continued: false
+    stale: false
 provenance:
   contributor: gandalf
   originalPath: 300/ND-disk-00324.img

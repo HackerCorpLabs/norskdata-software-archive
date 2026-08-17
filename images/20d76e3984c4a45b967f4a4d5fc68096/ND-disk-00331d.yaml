@@ -6,6 +6,296 @@ image:
   format: raw
   controller: floppy
 filesystem: backup
+backupSet:
+  kind: backup
+  name: "900311"
+  label: RUNNING-POSTM
+  runDate: 1990-03-11
+  system: SINTRAN III I
+  fileCount: 30
+  staleCount: 16
+  firstFile: TERMCAP:DATA
+  lastFile: INSTALLATION:SYMB
+  endsMidFile: false
+  fileListHash: 97f484d2
+  imageBytes: 638464
+backupFiles:
+  - name: TERMCAP:DATA
+    bytes: 15360
+    created: 1990-03-11
+    system: SINTRAN III I
+    continued: false
+    stale: false
+  - name: TEST:BRF
+    bytes: 0
+    created: 1990-03-11
+    system: SINTRAN III I
+    continued: true
+    stale: false
+  - name: FATAL-BREAK:SYMB
+    bytes: 20480
+    created: 1990-03-08
+    system: SINTRAN III I
+    continued: true
+    stale: true
+  - name: UU-MAILER:C
+    bytes: 4096
+    created: 1990-03-11
+    system: SINTRAN III I
+    continued: false
+    stale: false
+  - name: CALL-SERVER:C
+    bytes: 16384
+    created: 1990-03-11
+    system: SINTRAN III I
+    continued: false
+    stale: false
+  - name: CALL-SERVER:H
+    bytes: 2048
+    created: 1990-03-11
+    system: SINTRAN III I
+    continued: false
+    stale: false
+  - name: EX-SETUP:C
+    bytes: 22528
+    created: 1990-03-11
+    system: SINTRAN III I
+    continued: true
+    stale: false
+  - name: WR-MSG:C
+    bytes: 11264
+    created: 1990-03-11
+    system: SINTRAN III I
+    continued: false
+    stale: false
+  - name: MAKEFILE:SYMB
+    bytes: 0
+    created: 1990-03-11
+    system: SINTRAN III I
+    continued: true
+    stale: false
+  - name: TEST:TEXT
+    bytes: 4096
+    created: 1990-03-11
+    system: SINTRAN III I
+    continued: false
+    stale: false
+  - name: XTEST:PRNT
+    bytes: 1024
+    created: 1990-03-11
+    system: SINTRAN III I
+    continued: false
+    stale: false
+  - name: SEARCH:C
+    bytes: 0
+    created: 1990-03-11
+    system: SINTRAN III I
+    continued: true
+    stale: false
+  - name: XTEST:PRNT
+    bytes: 13312
+    created: 1990-03-08
+    system: SINTRAN III I
+    continued: false
+    stale: true
+  - name: MACRO3:MODE
+    bytes: 0
+    created: 1990-03-11
+    system: SINTRAN III I
+    continued: true
+    stale: false
+  - name: UNIX:H
+    bytes: 2048
+    created: 1990-03-08
+    system: SINTRAN III I
+    continued: false
+    stale: true
+  - name: MAIL-BUNDLE:C
+    bytes: 7168
+    created: 1990-03-11
+    system: SINTRAN III I
+    continued: false
+    stale: false
+  - name: NET-HANDLE:C
+    bytes: 0
+    created: 1990-03-11
+    system: SINTRAN III I
+    continued: false
+    stale: false
+  - name: SERVER-NET:C
+    bytes: 4096
+    created: 1990-03-11
+    system: SINTRAN III I
+    continued: false
+    stale: false
+  - name: UU-SCANOUT:C
+    bytes: 11264
+    created: 1990-03-11
+    system: SINTRAN III I
+    continued: false
+    stale: false
+  - name: INIT-FILES:C
+    bytes: 0
+    created: 1990-03-11
+    system: SINTRAN III I
+    continued: false
+    stale: false
+  - name: PROJ-BESK:TEXT
+    bytes: 7168
+    created: 1990-03-11
+    system: SINTRAN III I
+    continued: false
+    stale: false
+  - name: VIRTUAL-BUFF:C
+    bytes: 0
+    created: 1990-03-11
+    system: SINTRAN III I
+    continued: true
+    stale: false
+  - name: CR-INL:C
+    bytes: 11264
+    created: 1990-03-08
+    system: SINTRAN III I
+    continued: true
+    stale: true
+  - name: PAR:C
+    bytes: 11264
+    created: 1990-03-11
+    system: SINTRAN III I
+    continued: false
+    stale: false
+  - name: PAR:BRF
+    bytes: 0
+    created: 1990-03-11
+    system: SINTRAN III I
+    continued: true
+    stale: false
+  - name: CR-INL:C
+    bytes: 8192
+    created: 1990-03-11
+    system: SINTRAN III I
+    continued: false
+    stale: false
+  - name: REGISTRERA:H
+    bytes: 8192
+    created: 1990-03-11
+    system: SINTRAN III I
+    continued: false
+    stale: false
+  - name: BESK:TEXT
+    bytes: 3072
+    created: 1990-03-11
+    system: SINTRAN III I
+    continued: false
+    stale: false
+  - name: KRAV-SPEC:TEXT
+    bytes: 4096
+    created: 1990-03-11
+    system: SINTRAN III I
+    continued: true
+    stale: false
+  - name: PAR:MODE
+    bytes: 4096
+    created: 1990-03-11
+    system: SINTRAN III I
+    continued: false
+    stale: false
+  - name: SMAIL:C
+    bytes: 6144
+    created: 1990-03-11
+    system: SINTRAN III I
+    continued: false
+    stale: false
+  - name: SETUP:C
+    bytes: 10240
+    created: 1990-03-11
+    system: SINTRAN III I
+    continued: true
+    stale: false
+  - name: TEST:C
+    bytes: 4096
+    created: 1990-03-11
+    system: SINTRAN III I
+    continued: false
+    stale: false
+  - name: INSTALLATION:SYMB
+    bytes: 22528
+    created: 1990-03-11
+    system: SINTRAN III I
+    continued: false
+    stale: false
+  - name: UE-LOGIN:SYMB
+    bytes: 7168
+    created: 1990-03-05
+    system: SINTRAN III I
+    continued: false
+    stale: true
+  - name: OS-INTER:H
+    bytes: 0
+    created: 1990-03-05
+    system: SINTRAN III I
+    continued: false
+    stale: true
+  - name: TCAP:H
+    bytes: 0
+    created: 1990-03-05
+    system: SINTRAN III I
+    continued: false
+    stale: true
+  - name: TERMINATE-TERM:C
+    bytes: 0
+    created: 1990-03-05
+    system: SINTRAN III I
+    continued: false
+    stale: true
+  - name: NET-SUPPORT:C
+    bytes: 0
+    created: 1990-03-05
+    system: SINTRAN III I
+    continued: true
+    stale: true
+  - name: STYR-TANGENT:SYMB
+    bytes: 0
+    created: 1990-03-05
+    system: SINTRAN III I
+    continued: false
+    stale: true
+  - name: SERVER:C
+    bytes: 43008
+    created: 1990-03-05
+    system: SINTRAN III I
+    continued: false
+    stale: true
+  - name: KORTHJELP:TEXT
+    bytes: 0
+    created: 1990-03-05
+    system: SINTRAN III I
+    continued: false
+    stale: true
+  - name: PED-ENG-J:INIT
+    bytes: 0
+    created: 1990-03-05
+    system: SINTRAN III I
+    continued: false
+    stale: true
+  - name: BASSTRUCT:H
+    bytes: 13312
+    created: 1990-03-05
+    system: SINTRAN III I
+    continued: false
+    stale: true
+  - name: USER-SUPPORT:H
+    bytes: 13312
+    created: 1990-03-05
+    system: SINTRAN III I
+    continued: false
+    stale: true
+  - name: UE-SUPPORT:C
+    bytes: 0
+    created: 1990-03-05
+    system: SINTRAN III I
+    continued: false
+    stale: true
 provenance:
   contributor: gandalf
   originalPath: 300/ND-disk-00331d.img

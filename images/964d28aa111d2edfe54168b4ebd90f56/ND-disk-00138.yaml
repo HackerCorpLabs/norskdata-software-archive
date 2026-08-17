@@ -6,6 +6,26 @@ image:
   format: raw
   controller: floppy
 filesystem: backup
+backupSet:
+  kind: backup
+  name: INVENT
+  label: AGNETA
+  runDate: 1989-12-15
+  system: SINTRAN III L
+  fileCount: 1
+  staleCount: 0
+  firstFile: LT:DATA
+  lastFile: LT:DATA
+  endsMidFile: true
+  fileListHash: f38202b5
+  imageBytes: 1261568
+backupFiles:
+  - name: LT:DATA
+    bytes: 1259520
+    created: 1989-12-15
+    system: SINTRAN III L
+    continued: true
+    stale: false
 provenance:
   contributor: gandalf
   originalPath: 100/ND-disk-00138.img

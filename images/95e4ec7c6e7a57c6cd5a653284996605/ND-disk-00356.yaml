@@ -6,6 +6,116 @@ image:
   format: raw
   controller: floppy
 filesystem: backup
+backupSet:
+  kind: backup
+  name: "900318"
+  label: RUNNING-POSTM
+  runDate: 1990-03-18
+  system: SINTRAN III I
+  fileCount: 16
+  staleCount: 0
+  firstFile: BAS-EDITOR:C
+  lastFile: BAS-IO:C
+  endsMidFile: true
+  fileListHash: c4163547
+  imageBytes: 315392
+backupFiles:
+  - name: BAS-EDITOR:C
+    bytes: 17408
+    created: 1990-03-18
+    system: SINTRAN III I
+    continued: false
+    stale: false
+  - name: OPTIMIZER:C
+    bytes: 41984
+    created: 1990-03-18
+    system: SINTRAN III I
+    continued: false
+    stale: false
+  - name: LIST-OUTPUTS:C
+    bytes: 7168
+    created: 1990-03-18
+    system: SINTRAN III I
+    continued: false
+    stale: false
+  - name: BBX:C
+    bytes: 58368
+    created: 1990-03-18
+    system: SINTRAN III I
+    continued: false
+    stale: false
+  - name: MSG-SUPPORT:C
+    bytes: 0
+    created: 1990-03-18
+    system: SINTRAN III I
+    continued: false
+    stale: false
+  - name: BAS-STR:C
+    bytes: 23552
+    created: 1990-03-18
+    system: SINTRAN III I
+    continued: false
+    stale: false
+  - name: UUCP:H
+    bytes: 5120
+    created: 1990-03-18
+    system: SINTRAN III I
+    continued: false
+    stale: false
+  - name: BAS-GETCH:C
+    bytes: 23552
+    created: 1990-03-18
+    system: SINTRAN III I
+    continued: false
+    stale: false
+  - name: BBS:TEXT
+    bytes: 1024
+    created: 1990-03-18
+    system: SINTRAN III I
+    continued: false
+    stale: false
+  - name: BAS-LOGIN:C
+    bytes: 21504
+    created: 1990-03-18
+    system: SINTRAN III I
+    continued: false
+    stale: false
+  - name: MACRO2:MODE
+    bytes: 3072
+    created: 1990-03-18
+    system: SINTRAN III I
+    continued: false
+    stale: false
+  - name: MULTI-TASK:C
+    bytes: 7168
+    created: 1990-03-18
+    system: SINTRAN III I
+    continued: false
+    stale: false
+  - name: C-FUNC:C
+    bytes: 23552
+    created: 1990-03-18
+    system: SINTRAN III I
+    continued: false
+    stale: false
+  - name: NETS:H
+    bytes: 5120
+    created: 1990-03-18
+    system: SINTRAN III I
+    continued: false
+    stale: false
+  - name: PELARE:C
+    bytes: 15360
+    created: 1990-03-18
+    system: SINTRAN III I
+    continued: false
+    stale: false
+  - name: BAS-IO:C
+    bytes: 13824
+    created: 1990-03-18
+    system: SINTRAN III I
+    continued: true
+    stale: false
 provenance:
   contributor: gandalf
   originalPath: 300/ND-disk-00356.img

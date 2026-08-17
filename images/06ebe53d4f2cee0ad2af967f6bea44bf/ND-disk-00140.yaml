@@ -6,6 +6,104 @@ image:
   format: raw
   controller: floppy
 filesystem: backup
+backupSet:
+  kind: backup
+  name: TESTIR
+  label: TESTIR
+  runDate: 1989-04-27
+  system: SINTRAN III L
+  fileCount: 14
+  staleCount: 0
+  firstFile: IR-FIELD:DATA
+  lastFile: FORKORTN-IR:TEXT
+  endsMidFile: false
+  fileListHash: f15dfb85
+  imageBytes: 1310720
+backupFiles:
+  - name: IR-FIELD:DATA
+    bytes: 24576
+    created: 1989-04-27
+    system: SINTRAN III L
+    continued: false
+    stale: false
+  - name: IR-REPORT:DATA
+    bytes: 6144
+    created: 1989-04-27
+    system: SINTRAN III L
+    continued: false
+    stale: false
+  - name: IR-PAGE:DATA
+    bytes: 147456
+    created: 1989-04-27
+    system: SINTRAN III L
+    continued: false
+    stale: false
+  - name: IR-NAME:DATA
+    bytes: 30720
+    created: 1989-04-27
+    system: SINTRAN III L
+    continued: false
+    stale: false
+  - name: IR-FORM:DATA
+    bytes: 4096
+    created: 1989-04-27
+    system: SINTRAN III L
+    continued: false
+    stale: false
+  - name: IR-SDB-TX:DATA
+    bytes: 206848
+    created: 1989-04-27
+    system: SINTRAN III L
+    continued: false
+    stale: false
+  - name: IR-SDB-PT:DATA
+    bytes: 206848
+    created: 1989-04-27
+    system: SINTRAN III L
+    continued: false
+    stale: false
+  - name: IR-SDB-IX:DATA
+    bytes: 2048
+    created: 1989-04-27
+    system: SINTRAN III L
+    continued: false
+    stale: false
+  - name: IR-SDB-LO:DATA
+    bytes: 22528
+    created: 1989-04-27
+    system: SINTRAN III L
+    continued: false
+    stale: false
+  - name: IR-SDB-DI:DATA
+    bytes: 2048
+    created: 1989-04-27
+    system: SINTRAN III L
+    continued: false
+    stale: false
+  - name: IR-SDB-SM:DATA
+    bytes: 4096
+    created: 1989-04-27
+    system: SINTRAN III L
+    continued: false
+    stale: false
+  - name: IR-SDB-069:LOGG
+    bytes: 104448
+    created: 1989-04-27
+    system: SINTRAN III L
+    continued: false
+    stale: false
+  - name: EC-TRANSFER:TEXT
+    bytes: 22528
+    created: 1989-04-27
+    system: SINTRAN III L
+    continued: false
+    stale: false
+  - name: FORKORTN-IR:TEXT
+    bytes: 4096
+    created: 1989-04-27
+    system: SINTRAN III L
+    continued: false
+    stale: false
 provenance:
   contributor: gandalf
   originalPath: 100/ND-disk-00140.img

@@ -6,6 +6,140 @@ image:
   format: raw
   controller: floppy
 filesystem: backup
+backupSet:
+  kind: backup
+  name: F
+  label: SKOL-BAS
+  runDate: 1990-01-15
+  system: ""
+  fileCount: 19
+  staleCount: 1
+  firstFile: TERMINATE-TERM:C
+  lastFile: UU-SUP:C
+  endsMidFile: true
+  fileListHash: fed2c176
+  imageBytes: 315392
+backupFiles:
+  - name: TERMINATE-TERM:C
+    bytes: 3072
+    created: 1990-01-15
+    system: null
+    continued: false
+    stale: false
+  - name: EXT-BBS:C
+    bytes: 25600
+    created: 1990-01-15
+    system: null
+    continued: false
+    stale: false
+  - name: TCAP:C
+    bytes: 27648
+    created: 1990-01-15
+    system: null
+    continued: false
+    stale: false
+  - name: STYR-TANGENT:SYMB
+    bytes: 3072
+    created: 1990-01-15
+    system: null
+    continued: false
+    stale: false
+  - name: SERVER:C
+    bytes: 91136
+    created: 1990-01-15
+    system: null
+    continued: false
+    stale: false
+  - name: KORTHJELP:TEXT
+    bytes: 3072
+    created: 1990-01-15
+    system: null
+    continued: false
+    stale: false
+  - name: MOTE-SUPPORT:C
+    bytes: 29696
+    created: 1990-01-15
+    system: null
+    continued: false
+    stale: false
+  - name: SERVICE-ROUTINES:C
+    bytes: 27648
+    created: 1990-01-15
+    system: null
+    continued: false
+    stale: false
+  - name: HELP-COMPILE:C
+    bytes: 7168
+    created: 1990-01-15
+    system: null
+    continued: false
+    stale: false
+  - name: RAKNA:SYMB
+    bytes: 3072
+    created: 1990-01-15
+    system: null
+    continued: false
+    stale: false
+  - name: BASSTRUCT:H
+    bytes: 19456
+    created: 1990-01-15
+    system: null
+    continued: false
+    stale: false
+  - name: OLD-SETUP:XXX
+    bytes: 11264
+    created: 1990-01-15
+    system: null
+    continued: false
+    stale: false
+  - name: 01:LINT
+    bytes: 1024
+    created: 1990-01-15
+    system: null
+    continued: false
+    stale: false
+  - name: UE-SUPPORT:C
+    bytes: 3072
+    created: 1990-01-15
+    system: null
+    continued: false
+    stale: false
+  - name: OLD-MESSAGE:C
+    bytes: 13312
+    created: 1990-01-15
+    system: null
+    continued: false
+    stale: false
+  - name: UU-MAIN:C
+    bytes: 7168
+    created: 1990-01-15
+    system: null
+    continued: false
+    stale: false
+  - name: 00051:TEMP
+    bytes: 3072
+    created: 1990-01-15
+    system: null
+    continued: false
+    stale: false
+  - name: TERMCAP:DATA
+    bytes: 5120
+    created: 1990-01-15
+    system: null
+    continued: false
+    stale: false
+  - name: UU-SUP:C
+    bytes: 0
+    created: 1990-01-15
+    system: null
+    continued: true
+    stale: false
+  - name: LOC-SIO:C
+    bytes: 1536
+    created: 1985-11-23
+    system: null
+    continued: true
+    stale: true
 provenance:
   contributor: gandalf
   originalPath: 300/ND-disk-00353.img

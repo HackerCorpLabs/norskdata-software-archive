@@ -6,6 +6,278 @@ image:
   format: raw
   controller: floppy
 filesystem: backup
+backupSet:
+  kind: backup
+  name: BACK
+  label: AGNETA
+  runDate: 1989-06-30
+  system: SINTRAN III L
+  fileCount: 40
+  staleCount: 3
+  firstFile: BA-LO01:DATA
+  lastFile: FUNG-KALKYL-XX:XTRA
+  endsMidFile: true
+  fileListHash: 6a25a808
+  imageBytes: 1261568
+backupFiles:
+  - name: BA-LO01:DATA
+    bytes: 92160
+    created: 1989-06-30
+    system: SINTRAN III L
+    continued: false
+    stale: false
+  - name: SIBR-DBM-OUT:DUMP
+    bytes: 0
+    created: 1989-06-30
+    system: SINTRAN III L
+    continued: false
+    stale: false
+  - name: FYLL-INL:UNIQ
+    bytes: 6144
+    created: 1989-06-30
+    system: SINTRAN III L
+    continued: true
+    stale: false
+  - name: LIN0101M:UNIQ
+    bytes: 6144
+    created: 1989-06-30
+    system: SINTRAN III L
+    continued: false
+    stale: false
+  - name: LIN0105M:UNIQ
+    bytes: 6144
+    created: 1989-06-30
+    system: SINTRAN III L
+    continued: false
+    stale: false
+  - name: LIN0101M:UCOM
+    bytes: 0
+    created: 1989-06-30
+    system: SINTRAN III L
+    continued: true
+    stale: false
+  - name: INL:ISAM
+    bytes: 7168
+    created: 1988-07-15
+    system: SINTRAN III K
+    continued: false
+    stale: true
+  - name: FYLLLOL:UCOM
+    bytes: 6144
+    created: 1989-06-30
+    system: SINTRAN III L
+    continued: false
+    stale: false
+  - name: LIN0103M:UNIQ
+    bytes: 0
+    created: 1989-06-30
+    system: SINTRAN III L
+    continued: false
+    stale: false
+  - name: LIN0103M:UCOM
+    bytes: 8192
+    created: 1989-06-30
+    system: SINTRAN III L
+    continued: false
+    stale: false
+  - name: REDEF-LT:MODE
+    bytes: 6144
+    created: 1989-06-30
+    system: SINTRAN III L
+    continued: true
+    stale: false
+  - name: LISTA:SYMB
+    bytes: 8192
+    created: 1989-06-30
+    system: SINTRAN III L
+    continued: false
+    stale: false
+  - name: LIN0102M:UNIQ
+    bytes: 6144
+    created: 1989-06-30
+    system: SINTRAN III L
+    continued: false
+    stale: false
+  - name: A-MOTE:TEXT
+    bytes: 0
+    created: 1989-06-30
+    system: SINTRAN III L
+    continued: true
+    stale: false
+  - name: BILD-STANDARD:STXT
+    bytes: 3072
+    created: 1988-07-15
+    system: SINTRAN III K
+    continued: false
+    stale: true
+  - name: KLADD:UNIQ
+    bytes: 12288
+    created: 1989-06-30
+    system: SINTRAN III L
+    continued: true
+    stale: false
+  - name: DBM-RUL:DATA
+    bytes: 6144
+    created: 1989-06-30
+    system: SINTRAN III L
+    continued: false
+    stale: false
+  - name: DBM-MYL:DATA
+    bytes: 6144
+    created: 1989-06-30
+    system: SINTRAN III L
+    continued: false
+    stale: false
+  - name: DBM-LSL:DATA
+    bytes: 5120
+    created: 1989-06-30
+    system: SINTRAN III L
+    continued: false
+    stale: false
+  - name: SCRATCH:DATA
+    bytes: 6144
+    created: 1989-06-30
+    system: SINTRAN III L
+    continued: false
+    stale: false
+  - name: DBM-STL:DATA
+    bytes: 8192
+    created: 1989-06-30
+    system: SINTRAN III L
+    continued: true
+    stale: false
+  - name: LIN0109U:UNIQ
+    bytes: 8192
+    created: 1989-06-30
+    system: SINTRAN III L
+    continued: true
+    stale: false
+  - name: FYLLRUL:UNIQ
+    bytes: 4096
+    created: 1989-06-30
+    system: SINTRAN III L
+    continued: false
+    stale: false
+  - name: FYLLRUL:UCOM
+    bytes: 8192
+    created: 1989-06-30
+    system: SINTRAN III L
+    continued: false
+    stale: false
+  - name: UNIQUE-0052:TEMP
+    bytes: 14336
+    created: 1989-06-30
+    system: SINTRAN III L
+    continued: false
+    stale: false
+  - name: KLADD:UCOM
+    bytes: 10240
+    created: 1989-06-30
+    system: SINTRAN III L
+    continued: false
+    stale: false
+  - name: BILD-STANDARD:STXT
+    bytes: 8192
+    created: 1989-06-30
+    system: SINTRAN III L
+    continued: false
+    stale: false
+  - name: LOKAL-RAP:TEXT
+    bytes: 4096
+    created: 1989-06-30
+    system: SINTRAN III L
+    continued: false
+    stale: false
+  - name: RP-BATC-FIL(GG@DH:HOO
+    bytes: 2048
+    created: 1989-06-30
+    system: SINTRAN III L
+    continued: false
+    stale: false
+  - name: LIN0112F:UCOM
+    bytes: 10240
+    created: 1989-06-30
+    system: SINTRAN III L
+    continued: false
+    stale: false
+  - name: ABM-REPORT:ABRP
+    bytes: 83968
+    created: 1989-06-30
+    system: SINTRAN III L
+    continued: true
+    stale: false
+  - name: LT-SCHEMA:SYMB
+    bytes: 28672
+    created: 1989-06-30
+    system: SINTRAN III L
+    continued: true
+    stale: false
+  - name: LH:UNIQ
+    bytes: 15360
+    created: 1989-06-30
+    system: SINTRAN III L
+    continued: false
+    stale: false
+  - name: LO01:DATA
+    bytes: 92160
+    created: 1989-06-30
+    system: SINTRAN III L
+    continued: false
+    stale: false
+  - name: INVENTARIER:ULIB
+    bytes: 51200
+    created: 1989-06-30
+    system: SINTRAN III L
+    continued: false
+    stale: false
+  - name: UNIQUE:ULIB
+    bytes: 94208
+    created: 1989-06-30
+    system: SINTRAN III L
+    continued: false
+    stale: false
+  - name: KLADD01F:UNIQ
+    bytes: 21504
+    created: null
+    system: "$!  <! $$$ #"
+    continued: false
+    stale: true
+  - name: LIN0115F:UNIQ
+    bytes: 6144
+    created: 1989-06-30
+    system: SINTRAN III L
+    continued: false
+    stale: false
+  - name: LIN0115F:UCOM
+    bytes: 21504
+    created: 1989-06-30
+    system: SINTRAN III L
+    continued: true
+    stale: false
+  - name: KLADD03F:UNIQ
+    bytes: 15360
+    created: 1989-06-30
+    system: SINTRAN III L
+    continued: false
+    stale: false
+  - name: KALKYL:XTRA
+    bytes: 30720
+    created: 1989-06-30
+    system: SINTRAN III L
+    continued: false
+    stale: false
+  - name: MT:DATA
+    bytes: 4096
+    created: 1989-06-30
+    system: SINTRAN III L
+    continued: true
+    stale: false
+  - name: FUNG-KALKYL-XX:XTRA
+    bytes: 44032
+    created: 1989-06-30
+    system: SINTRAN III L
+    continued: true
+    stale: false
 provenance:
   contributor: gandalf
   originalPath: 100/ND-disk-00132.img
