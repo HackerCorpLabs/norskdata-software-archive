@@ -2,6 +2,7 @@ id: nd-210943-a01-d2-b3fb7d17
 volumeName: 210943A01-NO-02D
 md5: b3fb7d17265ce00a2baa138ee312e093
 product:
+  id: ND-210943
   version: A01
   diskNumber: 2
   language: NO
@@ -55,7 +56,7 @@ ndfs:
       lastDateWrittenStr: 1986-11-15 10:59:14
       bpunValid: null
 provenance:
-  contributor: Ronny Hansen
+  contributor: ronny
   originalPath: ND-210943-PRMAN/210943A01-NO-02D.img
   dateImaged: 2024-09-17
   importedAt: 2026-08-17T14:20:07.907Z
@@ -65,10 +66,7 @@ imagingLogs:
   - 210943A01-NO-02D.log
 photos:
   disk: []
-  set:
-    - 210943A01-NO-01D-PHOTO.png
-    - 210943A01-NO-02D-PHOTO.png
-    - PRMAN-SOURCE-PHOTO.png
+  set: []
 tags: []
 docs:
   piDocId: null

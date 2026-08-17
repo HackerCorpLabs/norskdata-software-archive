@@ -2,6 +2,7 @@ id: nd-10536-c00-d1-674e0780
 volumeName: 10536C00-1D
 md5: 674e0780a9837536110ee3775a2987bd
 product:
+  id: ND-10536
   version: C00
   diskNumber: 1
 image:
@@ -54,7 +55,7 @@ ndfs:
       lastDateWrittenStr: 1985-04-02 20:32:26
       bpunValid: null
 provenance:
-  contributor: Paal
+  contributor: paal
   originalPath: good/8_nd_f17b_10535c00-xx-1d_fe.img
   dateImaged: 2023-10-20
   importedAt: 2026-08-17T14:19:56.746Z

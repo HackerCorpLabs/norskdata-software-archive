@@ -2,6 +2,7 @@ id: nd-210400-b00-d1-5a63e100
 volumeName: 210400B00-XX-01D
 md5: 5a63e100fa90e6e58ca6655d614ff3ae
 product:
+  id: ND-210400
   version: B00
   diskNumber: 1
   language: XX
@@ -103,7 +104,7 @@ ndfs:
       lastDateWrittenStr: 1980-03-28 15:41:48
       bpunValid: true
 provenance:
-  contributor: Ronny Hansen
+  contributor: ronny
   originalPath: ND-210400B-Subsystem package II/210400B00-XX-01D.image
   dateImaged: 2022-08-16
   importedAt: 2026-08-17T14:20:06.233Z

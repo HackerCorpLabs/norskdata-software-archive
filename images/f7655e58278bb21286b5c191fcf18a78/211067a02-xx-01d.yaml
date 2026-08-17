@@ -2,6 +2,7 @@ id: nd-211067-a02-d1-f7655e58
 volumeName: 211067A02-XX-01D
 md5: f7655e58278bb21286b5c191fcf18a78
 product:
+  id: ND-211067
   version: A02
   diskNumber: 1
   language: XX
@@ -43,7 +44,7 @@ ndfs:
       lastDateWrittenStr: 1986-11-11 10:50:41
       bpunValid: null
 provenance:
-  contributor: Ronny Hansen
+  contributor: ronny
   originalPath: ND-211067-Mass Storage Utilities/211067a02-xx-01d.img
   dateImaged: 2020-02-16
   importedAt: 2026-08-17T14:22:50.215Z

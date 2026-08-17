@@ -2,6 +2,7 @@ id: nd-10177-h00-d1-687fb037
 volumeName: 10177H00-1S
 md5: 687fb0375b19b9badbe05ef29e49be86
 product:
+  id: ND-10177
   version: H00
   diskNumber: 1
 image:
@@ -102,7 +103,7 @@ ndfs:
       lastDateWrittenStr: 1985-05-07 12:58:46
       bpunValid: null
 provenance:
-  contributor: Paal
+  contributor: paal
   originalPath: good/8_nd_f0b_10177h00-1s_fe.img
   dateImaged: 2023-10-20
   importedAt: 2026-08-17T14:19:55.667Z

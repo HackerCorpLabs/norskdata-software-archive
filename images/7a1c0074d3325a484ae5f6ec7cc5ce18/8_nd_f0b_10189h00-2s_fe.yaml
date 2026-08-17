@@ -2,6 +2,7 @@ id: nd-10189-h00-d2-7a1c0074
 volumeName: 10189H00-2S
 md5: 7a1c0074d3325a484ae5f6ec7cc5ce18
 product:
+  id: ND-10189
   version: H00
   diskNumber: 2
 image:
@@ -66,7 +67,7 @@ ndfs:
       lastDateWrittenStr: 1985-04-30 15:31:23
       bpunValid: null
 provenance:
-  contributor: Paal
+  contributor: paal
   originalPath: good/8_nd_f0b_10189h00-2s_fe.img
   dateImaged: 2023-10-20
   importedAt: 2026-08-17T14:19:55.976Z

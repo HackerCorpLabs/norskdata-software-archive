@@ -2,6 +2,7 @@ id: nd-10176-h00-d4-1fa7ef2d
 volumeName: 10176H00-4S
 md5: 1fa7ef2dd854abd3c426226e58dbeb1b
 product:
+  id: ND-10176
   version: H00
   diskNumber: 4
 image:
@@ -66,7 +67,7 @@ ndfs:
       lastDateWrittenStr: 1985-05-06 16:40:13
       bpunValid: null
 provenance:
-  contributor: Paal
+  contributor: paal
   originalPath: good/8_nd_f0b_10176h00-4s_fe.img
   dateImaged: 2023-10-20
   importedAt: 2026-08-17T14:19:55.518Z

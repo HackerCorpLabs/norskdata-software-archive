@@ -2,6 +2,7 @@ id: nd-10373-j00-d1-d9b97479
 volumeName: 10373J00
 md5: d9b9747967469f72e47381448a7b0b93
 product:
+  id: ND-10373
   version: J00
 image:
   sizeBytes: 1261568
@@ -257,7 +258,7 @@ ndfs:
       lastDateWrittenStr: 1985-04-14 11:43:25
       bpunValid: null
 provenance:
-  contributor: Ronny Hansen
+  contributor: ronny
   originalPath: ND-10373J  X-Message (Inter system)/ND-10373J.img
   dateImaged: 2024-09-17
   importedAt: 2026-08-17T14:19:57.944Z
@@ -265,8 +266,7 @@ imagingLogs:
   - ND-10373J.log
 photos:
   disk: []
-  set:
-    - ND-10373J-PHOTO.png
+  set: []
 tags: []
 docs:
   piDocId: null

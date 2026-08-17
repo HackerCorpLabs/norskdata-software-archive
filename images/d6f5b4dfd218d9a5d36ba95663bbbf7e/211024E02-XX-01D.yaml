@@ -2,6 +2,7 @@ id: nd-211024-e02-d1-d6f5b4df
 volumeName: 211024E02-XX-01D
 md5: d6f5b4dfd218d9a5d36ba95663bbbf7e
 product:
+  id: ND-211024
   version: E02
   diskNumber: 1
   language: XX
@@ -55,7 +56,7 @@ ndfs:
       lastDateWrittenStr: 1988-03-02 08:18:05
       bpunValid: null
 provenance:
-  contributor: Ronny Hansen
+  contributor: ronny
   originalPath: 211024E02 SINTRAN III Configuration program/211024E02-XX-01D.IMG
   dateImaged: 2023-10-03
   importedAt: 2026-08-17T14:20:00.305Z

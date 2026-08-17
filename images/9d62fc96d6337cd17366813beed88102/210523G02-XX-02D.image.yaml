@@ -2,6 +2,7 @@ id: nd-210523-g02-d2-9d62fc96
 volumeName: 210523G02-XX-02D
 md5: 9d62fc96d6337cd17366813beed88102
 product:
+  id: ND-210523
   version: G02
   diskNumber: 2
   language: XX
@@ -103,7 +104,7 @@ ndfs:
       lastDateWrittenStr: 1988-06-15 08:33:38
       bpunValid: null
 provenance:
-  contributor: Ronny Hansen
+  contributor: ronny
   originalPath: ND-210523G02/210523G02-XX-02D.image
   dateImaged: 2016-07-22
   importedAt: 2026-08-17T14:22:49.845Z

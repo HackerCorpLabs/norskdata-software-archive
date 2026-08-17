@@ -2,6 +2,7 @@ id: nd-10374-c-d2-4ea6a061
 volumeName: ND-10374C-PART2
 md5: 4ea6a061a8304a4ff2769ab9ed79e502
 product:
+  id: ND-10374
   version: C
   diskNumber: 2
 image:
@@ -102,7 +103,7 @@ ndfs:
       lastDateWrittenStr: 1984-10-22 14:49:57
       bpunValid: null
 provenance:
-  contributor: Ronny Hansen
+  contributor: ronny
   originalPath: ND-10374C COSMOS Basic Module/ND-10374C-PART2.img
   dateImaged: 2024-09-17
   importedAt: 2026-08-17T14:19:58.974Z
@@ -110,10 +111,7 @@ imagingLogs:
   - ND-10374C-PART2.log
 photos:
   disk: []
-  set:
-    - ND-10374C-PART2-PHOTO.png
-    - ND-10374C-PART3-PHOTO.png
-    - ND-10374C1-PART1-PHOTO.png
+  set: []
 tags: []
 docs:
   piDocId: null

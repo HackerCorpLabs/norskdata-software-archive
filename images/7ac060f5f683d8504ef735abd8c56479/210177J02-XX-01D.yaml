@@ -2,6 +2,7 @@ id: nd-210177-j02-d1-7ac060f5
 volumeName: 210177J02-XX-01D
 md5: 7ac060f5f683d8504ef735abd8c56479
 product:
+  id: ND-210177
   version: J02
   diskNumber: 1
   language: XX
@@ -175,7 +176,7 @@ ndfs:
       lastDateWrittenStr: 1987-12-21 22:33:42
       bpunValid: null
 provenance:
-  contributor: Paal
+  contributor: paal
   originalPath: 5.25/210177J02-XX-01D.img
   dateImaged: 2023-10-23
   importedAt: 2026-08-17T14:19:53.070Z

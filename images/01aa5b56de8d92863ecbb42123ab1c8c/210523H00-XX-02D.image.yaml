@@ -2,6 +2,7 @@ id: nd-210523-h00-d2-01aa5b56
 volumeName: 210523H00-XX-02D
 md5: 01aa5b56de8d92863ecbb42123ab1c8c
 product:
+  id: ND-210523
   version: H00
   diskNumber: 2
   language: XX
@@ -175,7 +176,7 @@ ndfs:
       lastDateWrittenStr: 1988-12-08 16:10:21
       bpunValid: null
 provenance:
-  contributor: Ronny Hansen
+  contributor: ronny
   originalPath: ND-210523H00/210523H00-XX-02D.image
   dateImaged: 2016-07-23
   importedAt: 2026-08-17T14:22:49.988Z

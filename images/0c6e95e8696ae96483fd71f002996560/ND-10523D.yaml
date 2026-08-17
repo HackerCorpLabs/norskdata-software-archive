@@ -2,6 +2,7 @@ id: nd-10523-d-d1-0c6e95e8
 volumeName: ND-10523D
 md5: 0c6e95e8696ae96483fd71f002996560
 product:
+  id: ND-10523
   version: D
 image:
   sizeBytes: 1261568
@@ -461,7 +462,7 @@ ndfs:
       lastDateWrittenStr: 1985-02-21 13:56:53
       bpunValid: true
 provenance:
-  contributor: Ronny Hansen
+  contributor: ronny
   originalPath: ND-10523D/ND-10523D.img
   dateImaged: 2024-09-17
   importedAt: 2026-08-17T14:22:49.539Z
@@ -469,8 +470,7 @@ imagingLogs:
   - ND-10523D.log
 photos:
   disk: []
-  set:
-    - ND-10523D-PHOTO.png
+  set: []
 tags: []
 docs:
   piDocId: null

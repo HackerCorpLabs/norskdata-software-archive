@@ -2,6 +2,7 @@ id: nd-210943-a01-d1-f511479b
 volumeName: 210943A01-NO-01D
 md5: f511479b7d2e440a642abba04f2a1a9e
 product:
+  id: ND-210943
   version: A01
   diskNumber: 1
   language: NO
@@ -127,7 +128,7 @@ ndfs:
       lastDateWrittenStr: 1986-11-15 10:48:43
       bpunValid: null
 provenance:
-  contributor: Ronny Hansen
+  contributor: ronny
   originalPath: ND-210943-PRMAN/210943A01-NO-01D.img
   dateImaged: 2024-09-17
   importedAt: 2026-08-17T14:20:07.269Z
@@ -137,10 +138,7 @@ imagingLogs:
   - 210943A01-NO-01D.log
 photos:
   disk: []
-  set:
-    - 210943A01-NO-01D-PHOTO.png
-    - 210943A01-NO-02D-PHOTO.png
-    - PRMAN-SOURCE-PHOTO.png
+  set: []
 tags: []
 docs:
   piDocId: null

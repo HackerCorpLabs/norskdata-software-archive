@@ -2,6 +2,7 @@ id: nd-250306-m06-d2-67300ae3
 volumeName: 250306M06-XX-02D
 md5: 67300ae3c3ff5001e6d1105388deb7ef
 product:
+  id: ND-250306
   version: M06
   diskNumber: 2
   language: XX
@@ -31,7 +32,7 @@ ndfs:
       lastDateWrittenStr: 2008-10-01 00:35:28
       bpunValid: null
 provenance:
-  contributor: Ronny Hansen
+  contributor: ronny
   originalPath: ND-250306M06/250306M06-XX-02D.image
   dateImaged: 2022-09-24
   importedAt: 2026-08-17T14:20:04.024Z

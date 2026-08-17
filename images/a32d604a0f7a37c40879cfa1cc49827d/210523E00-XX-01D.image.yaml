@@ -2,6 +2,7 @@ id: nd-210523-e00-d1-a32d604a
 volumeName: 210523E00-XX-01D
 md5: a32d604a0f7a37c40879cfa1cc49827d
 product:
+  id: ND-210523
   version: E00
   diskNumber: 1
   language: XX
@@ -271,7 +272,7 @@ ndfs:
       lastDateWrittenStr: 1986-10-31 12:54:14
       bpunValid: null
 provenance:
-  contributor: Ronny Hansen
+  contributor: ronny
   originalPath: ND-210523E00/210523E00-XX-01D.image
   dateImaged: 2022-10-05
   importedAt: 2026-08-17T14:22:49.708Z
