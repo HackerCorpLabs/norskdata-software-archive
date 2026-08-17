@@ -5,7 +5,21 @@ image:
   sizeBytes: 315392
   format: raw
   controller: floppy
-filesystem: none
+filesystem: ndfs
+condition:
+  status: damaged
+  parser: ndfs
+  parserError: Invalid NDFS master block
+  ndNamesFound: 24
+  ndNameSamples:
+    - PACK-ONE:IBM
+    - PACK-ONE:KAY
+    - PACK-ONE:GUES
+    - UXK:KHKW
+    - CHA:CHAR
+    - RST:BOOL
+    - PNLE:MQ
+    - PMLE:LQ
 provenance:
   contributor: gandalf
   originalPath: 200/ND-disk-288-track2-77.img

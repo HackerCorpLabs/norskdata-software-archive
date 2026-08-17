@@ -5,7 +5,18 @@ image:
   sizeBytes: 319488
   format: raw
   controller: floppy
-filesystem: none
+filesystem: ndfs
+condition:
+  status: damaged
+  parser: ndfs
+  parserError: Invalid NDFS master block
+  ndNamesFound: 5
+  ndNameSamples:
+    - SIG-E:DA
+    - CORNY:DATO
+    - SLA:INTE
+    - MONSC:REAL
+    - KOL:INTE
 provenance:
   contributor: gandalf
   originalPath: 300/ND-disk-00302d.img

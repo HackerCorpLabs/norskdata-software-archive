@@ -5,7 +5,21 @@ image:
   sizeBytes: 587776
   format: raw
   controller: floppy
-filesystem: none
+filesystem: ndfs
+condition:
+  status: damaged
+  parser: ndfs
+  parserError: Invalid NDFS master block
+  ndNamesFound: 9
+  ndNameSamples:
+    - BACKUP-SYSTEM-D:BPUN
+    - DIRECTORY:USER
+    - MAIN-DIRECTORY:ENTE
+    - PASSWORD:ACCO
+    - BACKUP-E:BPUN
+    - BACKUP-E00:BPUN
+    - NAME:USER
+    - DIRECTORY:REMO
 provenance:
   contributor: gandalf
   originalPath: 200/ND-disk-00277.img

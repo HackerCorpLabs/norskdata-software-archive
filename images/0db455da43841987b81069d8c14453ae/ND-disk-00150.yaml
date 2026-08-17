@@ -5,7 +5,21 @@ image:
   sizeBytes: 1310720
   format: raw
   controller: floppy
-filesystem: none
+filesystem: ndfs
+condition:
+  status: damaged
+  parser: ndfs
+  parserError: Invalid NDFS master block
+  ndNamesFound: 26
+  ndNameSamples:
+    - VTM-EMBD:BRF
+    - DDBTABLES:VTM
+    - ISAM-DUMP:DUMP
+    - X21NS-X21:LOGS
+    - INSTALL-JEC-B00:PROG
+    - JEC-B00:PROG
+    - EC-B00:PROG
+    - JEC:BPUN
 provenance:
   contributor: gandalf
   originalPath: 100/ND-disk-00150.img

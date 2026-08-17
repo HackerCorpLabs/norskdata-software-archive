@@ -5,7 +5,21 @@ image:
   sizeBytes: 1310720
   format: raw
   controller: floppy
-filesystem: none
+filesystem: ndfs
+condition:
+  status: damaged
+  parser: ndfs
+  parserError: Block 33204906 out of range
+  ndNamesFound: 71
+  ndNameSamples:
+    - LOAD-MODE:MODE
+    - XMSG-START:MODE
+    - CP-DISC-NEW:PRO
+    - HTVDHSVD:RL
+    - XQ9:WJWB
+    - HENT-MODE:MODE
+    - ND500-HENT:MODE
+    - AD-MODE:MODE
 provenance:
   contributor: gandalf
   originalPath: 000/ND-disk-00070.img

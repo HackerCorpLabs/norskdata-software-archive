@@ -5,7 +5,21 @@ image:
   sizeBytes: 315392
   format: raw
   controller: floppy
-filesystem: none
+filesystem: ndfs
+condition:
+  status: damaged
+  parser: ndfs
+  parserError: Block 134217727 out of range
+  ndNamesFound: 15
+  ndNameSamples:
+    - REMOTE-USER-NAME:REMO
+    - TE-PASSWORD:REMO
+    - EJE:CJD
+    - CHC:CLE
+    - FHL:FH
+    - BHB:BH
+    - KHCXA:IH
+    - W2W:WBWJ
 provenance:
   contributor: gandalf
   originalPath: 500/ND-disk-00505b.img

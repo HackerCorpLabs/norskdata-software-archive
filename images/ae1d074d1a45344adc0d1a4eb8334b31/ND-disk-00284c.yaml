@@ -5,7 +5,21 @@ image:
   sizeBytes: 225280
   format: raw
   controller: floppy
-filesystem: none
+filesystem: ndfs
+condition:
+  status: damaged
+  parser: ndfs
+  parserError: Block 152 out of range
+  ndNamesFound: 10
+  ndNameSamples:
+    - MAI-SYS-MJ:DATA
+    - MAIL-SYSTEM-MJ:DATA
+    - T-O:DA
+    - TERM:INTE
+    - KEYWT:CHAR
+    - STRANG:STRI
+    - TALL-SHIP-MJ:DATA
+    - KNYCK-REGLER-MJ:DATA
 provenance:
   contributor: gandalf
   originalPath: 200/ND-disk-00284c.img
