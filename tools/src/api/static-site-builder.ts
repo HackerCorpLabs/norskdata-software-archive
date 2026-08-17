@@ -1616,7 +1616,24 @@ function getAppJS(): string {
   function getRoute() {
     var h = location.hash || '#/';
     if (h === '#' || h === '') h = '#/';
-    return h.substring(1); // strip '#'
+    var raw = h.substring(1);                 // strip '#'
+    var q = raw.indexOf('?');
+    return q < 0 ? raw : raw.substring(0, q);
+  }
+
+  /** The query string of the current hash, as an object. */
+  function getRouteParams() {
+    var h = location.hash || '';
+    var q = h.indexOf('?');
+    var out = {};
+    if (q < 0) return out;
+    h.substring(q + 1).split('&').forEach(function(pair) {
+      if (!pair) return;
+      var eq = pair.indexOf('=');
+      if (eq < 0) out[decodeURIComponent(pair)] = '';
+      else out[decodeURIComponent(pair.substring(0, eq))] = decodeURIComponent(pair.substring(eq + 1));
+    });
+    return out;
   }
 
   function navigate() {
@@ -1644,7 +1661,18 @@ function getAppJS(): string {
     }
 
     if (route === '/') return renderDashboard();
-    if (route === '/catalog') return renderCatalog();
+    if (route === '/catalog') {
+      // Links from the dashboard arrive as #/catalog?contributor=fvdm or
+      // ?product=unmatched, so the filters have to come from the hash.
+      var p = getRouteParams();
+      catalogState.contributor = p.contributor || '';
+      catalogState.unmatched = p.product === 'unmatched';
+      if (p.media) catalogState.media = p.media;
+      if (p.condition) catalogState.condition = p.condition;
+      if (p.q !== undefined) catalogState.query = p.q;
+      catalogState.page = 0;
+      return renderCatalog();
+    }
     if (route === '/products') return renderProducts();
     if (route === '/about') return renderAbout();
     if (route.indexOf('/products/') === 0) {
@@ -1722,7 +1750,9 @@ function getAppJS(): string {
     html += statCard(PRODUCTS.length, 'Products Known');
     html += statCard(totalFiles, 'NDFS Files');
     html += statCard(storageClasses['floppy-in-git'] || 0, 'In Git');
-    html += statCard(unmatchedCount, 'Unmatched', unmatchedCount > 0 ? 'nd-stat-warn' : '');
+    // Floppies with no product assigned yet - clicking shows exactly those.
+    html += '<a href="#/catalog?product=unmatched" style="text-decoration:none;color:inherit">' +
+      statCard(unmatchedCount, 'Unmatched', unmatchedCount > 0 ? 'nd-stat-warn' : '') + '</a>';
     html += '</div>';
 
     // Grid
@@ -1762,8 +1792,9 @@ function getAppJS(): string {
       html += '<div class="nd-card"><h3>Contributors</h3>';
       html += '<table class="nd-table"><thead><tr><th>Name</th><th>Images</th></tr></thead><tbody>';
       for (var i = 0; i < contribList.length; i++) {
-        html += '<tr><td>' + esc(contribList[i].name) + '</td>';
-        html += '<td>' + contribList[i].count + '</td></tr>';
+        var link = '#/catalog?contributor=' + encodeURIComponent(contribList[i].name);
+        html += '<tr><td><a href="' + link + '">' + esc(contribList[i].name) + '</a></td>';
+        html += '<td><a href="' + link + '" style="color:inherit">' + contribList[i].count + '</a></td></tr>';
       }
       html += '</tbody></table></div>';
     }
@@ -1780,7 +1811,7 @@ function getAppJS(): string {
   }
 
   // ── Catalog ──────────────────────────────────────────────────
-  var catalogState = { query: '', media: 'all', condition: 'all', page: 0, sortCol: null, sortDir: 'asc' };
+  var catalogState = { query: '', media: 'all', condition: 'all', contributor: '', unmatched: false, page: 0, sortCol: null, sortDir: 'asc' };
 
   var catalogDebounce;
 
@@ -1855,6 +1886,16 @@ function getAppJS(): string {
             ' (' + conditionCounts[cf[0]] + ')</option>';
         }).join('') +
       '</select></label></div>';
+    if (catalogState.contributor || catalogState.unmatched) {
+      shell += '<p style="margin:0.25rem 0 0.5rem">';
+      if (catalogState.contributor) {
+        shell += '<span class="nd-badge nd-badge-info">contributed by ' + esc(catalogState.contributor) + '</span> ';
+      }
+      if (catalogState.unmatched) {
+        shell += '<span class="nd-badge nd-badge-warn">no product assigned</span> ';
+      }
+      shell += '<a href="#/catalog" style="font-size:0.85rem">show everything</a></p>';
+    }
     shell += '<p id="cat-count" style="font-size:0.85rem;color:var(--text-muted);margin-bottom:0.5rem"></p>';
     shell += '<div id="cat-results" style="overflow-x:auto"></div>';
     shell += '<div class="nd-pagination" id="cat-pager"></div>';
@@ -1982,6 +2023,12 @@ function getAppJS(): string {
       : CATALOG.filter(function(e) { return mediaOf(e) === catalogState.media; });
     if (catalogState.condition === 'ok') base = base.filter(function(e) { return !isDamaged(e); });
     else if (catalogState.condition === 'damaged') base = base.filter(isDamaged);
+    if (catalogState.contributor) {
+      base = base.filter(function(e) {
+        return e.provenance && e.provenance.contributor === catalogState.contributor;
+      });
+    }
+    if (catalogState.unmatched) base = base.filter(function(e) { return !e.productId; });
     if (!query) return base;
     var q = query.toLowerCase();
     return base.filter(function(e) {

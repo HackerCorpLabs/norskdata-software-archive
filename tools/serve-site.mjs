@@ -45,8 +45,15 @@ createServer(async (req, res) => {
     const s = await stat(file);
     if (s.isDirectory()) file = join(file, 'index.html');
   } catch {
-    // Unknown paths fall back to the single-page app, which routes on the hash.
-    file = join(siteRoot, 'index.html');
+    // A document asked for without its extension - /docs/ND-10007-A2-EN - is a
+    // real page, and falling straight back to the app rendered the dashboard
+    // instead, which looks exactly like the link being broken.
+    let served = false;
+    if (!/\.[a-z0-9]+$/i.test(file)) {
+      try { await stat(file + '.html'); file += '.html'; served = true; } catch { /* not a page */ }
+    }
+    // Anything else falls back to the single-page app, which routes on the hash.
+    if (!served) file = join(siteRoot, 'index.html');
   }
   try {
     const s = await stat(file);

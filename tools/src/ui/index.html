@@ -2024,7 +2024,10 @@ tr.ndfs-file-selected,
       var contribHtml = '<h3>Contributors</h3><table class="nd-table nd-table-compact"><thead><tr><th>Name</th><th style="text-align:right">Images</th><th></th></tr></thead><tbody>';
       contribSorted.forEach(function(pair) {
         var pct = stats.totalFloppies > 0 ? Math.round(pair[1] * 100 / stats.totalFloppies) : 0;
-        contribHtml += '<tr><td>' + esc(pair[0]) + '</td><td style="text-align:right">' + pair[1] + '</td><td><div class="nd-bar" style="width:' + pct + '%;"></div></td></tr>';
+        contribHtml += '<tr class="nd-clickable" onclick="location.hash=\'#/catalog?contributor=' +
+          encodeURIComponent(pair[0]) + '\'" title="Show the floppies contributed by ' + esc(pair[0]) + '">' +
+          '<td>' + esc(pair[0]) + '</td><td style="text-align:right">' + pair[1] + '</td>' +
+          '<td><div class="nd-bar" style="width:' + pct + '%;"></div></td></tr>';
       });
       contribHtml += '</tbody></table>';
       document.getElementById('dash-contributors').innerHTML = contribHtml;
