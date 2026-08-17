@@ -2443,6 +2443,31 @@ app.post('/api/detect-filesystem', async (req, res) => {
 // committed (a tracked floppy shows as a git deletion; an uncommitted import is
 // simply gone). Safety: never delete outside images/; if more than one floppy
 // shares the md5 folder, delete only this entry's own files, not the folder.
+/**
+ * The reads of every physical floppy, graded, worst disks first.
+ *
+ * ?filter=bad       disks where no read produced anything
+ *        =semibad   disks rescued by one read, with failed attempts beside it
+ *        =all       every disk that was read more than once
+ */
+app.get('/api/read-groups', async (req, res) => {
+  try {
+    const filter = String(req.query.filter ?? 'bad');
+    const cat = await getCatalog();
+    const { groupReads, describeGroup } = await import('./lib/readgroups/index.js');
+    let groups = groupReads(cat.entries as any);
+    if (filter === 'bad') groups = groups.filter(g => g.bad);
+    else if (filter === 'semibad') groups = groups.filter(g => g.semiBad);
+    else if (filter === 'multi') groups = groups.filter(g => g.reads.length > 1);
+    res.json({
+      total: groups.length,
+      groups: groups.map(g => ({ ...g, summary: describeGroup(g) })),
+    });
+  } catch (err) {
+    res.status(500).json({ error: String(err) });
+  }
+});
+
 app.delete('/api/catalog-entry', async (req, res) => {
   try {
     const entryId = String(req.query.id ?? '');

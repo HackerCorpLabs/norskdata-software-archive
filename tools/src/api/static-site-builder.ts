@@ -105,6 +105,7 @@ export async function buildStaticSite(rootDir: string): Promise<void> {
     ['src/lib/ndbackup/index.ts', ['isBackupVolume', 'readBackupVolume', 'readBackupFile', 'isWinchVolume', 'readWinchVolume', 'readWinchPage']],
     ['src/lib/backupsets/index.ts', ['groupBackupSets', 'backupSetFor', 'setKeyOf', 'describeSet', 'setVerdict']],
     ['src/lib/ndfsrecover/index.ts', ['applyLayout', 'readLayout', 'recoverNdfs', 'rawNameSet', 'describeRecovery']],
+    ['src/lib/readgroups/index.ts', ['groupReads', 'gradeRead', 'diskOf', 'describeGroup']],
   ] as [string, string[]][]) {
     try {
       const tsSource = await readFile(join(rootDir, 'tools', rel), 'utf-8');
@@ -122,7 +123,7 @@ export async function buildStaticSite(rootDir: string): Promise<void> {
       console.warn(`WARNING: ${rel} not found -- its viewer will be disabled in the static site`);
     }
   }
-  console.log(`Media libraries inlined: ${(mediaLibsJS.length / 1024).toFixed(1)} KB (dosfs + ndbackup + backupsets + ndfsrecover)`);
+  console.log(`Media libraries inlined: ${(mediaLibsJS.length / 1024).toFixed(1)} KB (dosfs + ndbackup + backupsets + ndfsrecover + readgroups)`);
 
   console.log(`Loaded ${entries.length} catalog entries, ${products.length} products, ${categoriesRaw.length} categories.`);
 
@@ -2433,6 +2434,9 @@ function getAppJS(): string {
 
     view.innerHTML = html;
     bindRepairedDownload(view);
+    view.querySelectorAll('[data-hex-read]').forEach(function(b) {
+      b.addEventListener('click', function() { openHexViewer(this.getAttribute('data-hex-read')); });
+    });
   }
 
   /**
@@ -2539,6 +2543,40 @@ function getAppJS(): string {
         html += '<button class="nd-btn nd-btn-sm" onclick="openHexViewer(\\'' + idArg + '\\', \\'' + hexLabel + '\\')">Open in HEX viewer</button>';
       }
       html += '</div>';
+    }
+
+    // ── Other reads of the same physical floppy ──
+    // A floppy that read badly was read again, so the archive can hold several
+    // images of one disk. Showing them together says which attempt is the one
+    // worth looking at, and that a disk was troublesome to read at all.
+    if (typeof groupReads !== 'undefined' && full) {
+      var mine = diskOf(e);
+      var sameDisk = CATALOG.filter(function(x) { return diskOf(x) === mine; });
+      if (sameDisk.length > 1) {
+        var grp = groupReads(sameDisk)[0];
+        var GR = { clean: ['nd-badge-ok', 'reads clean'], recovered: ['nd-badge-info', 'recovered'],
+                   other: ['nd-badge', 'other filesystem'], damaged: ['nd-badge-warn', 'damaged'],
+                   empty: ['nd-badge-warn', 'no filesystem'] };
+        html += '<h3 style="margin:1rem 0 0.35rem">Reads of this floppy</h3>';
+        html += '<p class="nd-text-muted" style="margin:0 0 0.5rem;font-size:0.85rem">' +
+          'This physical disk was read ' + grp.reads.length + ' times' +
+          (grp.bad ? ' and no attempt produced a readable filesystem' : '') + '. ' + esc(describeGroup(grp)) + '.</p>';
+        html += '<div style="overflow-x:auto"><table class="nd-table nd-table-compact"><tbody>';
+        grp.reads.forEach(function(r) {
+          var badge = GR[r.grade] || ['nd-badge', r.grade];
+          var isThis = r.id === e.id;
+          html += '<tr>' +
+            '<td><a href="#/disks/' + encodeURIComponent(r.id) + '"><code>' + esc(r.name) + '</code></a>' +
+            (isThis ? ' <span class="nd-badge nd-badge-info" style="font-size:0.65rem">this one</span>' : '') +
+            (r.best ? ' <span class="nd-text-muted" style="font-size:0.75rem">best read</span>' : '') + '</td>' +
+            '<td><span class="nd-badge ' + badge[0] + '">' + badge[1] + '</span></td>' +
+            '<td style="text-align:right">' + (r.files || '-') + ' files</td>' +
+            '<td style="text-align:right" class="nd-text-muted">' + (r.imageSizeBytes ? Math.round(r.imageSizeBytes / 1024) + ' KB' : '-') + '</td>' +
+            '<td style="text-align:right"><button class="nd-btn nd-btn-sm" data-hex-read="' + esc(r.id) + '">Hex</button></td>' +
+            '</tr>';
+        });
+        html += '</tbody></table></div>';
+      }
     }
 
     // ── NDFS file table (THE MAIN CONTENT) ──

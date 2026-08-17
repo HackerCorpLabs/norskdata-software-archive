@@ -1788,6 +1788,7 @@ tr.ndfs-file-selected,
     <span class="nd-nav-sep nd-write-only"></span>
     <a href="#/import"    class="nd-nav-link nd-write-only" data-route="import"><span class="nd-nav-label">Import</span><small>Add images</small></a>
     <a href="#/match"     class="nd-nav-link nd-write-only" data-route="match"><span class="nd-nav-label">Matcher</span><small>Assign products</small></a>
+    <a href="#/reads"     class="nd-nav-link nd-write-only" data-route="reads"><span class="nd-nav-label">Reads</span><small>Bad floppies</small></a>
     <a href="#/changes"   class="nd-nav-link nd-write-only" data-route="changes"><span class="nd-nav-label">Changes</span><small>Review &amp; commit</small></a>
     <a href="#/help"      class="nd-nav-link" data-route="help"><span class="nd-nav-label">Help</span><small>How-to guide</small></a>
   </nav>
@@ -1863,7 +1864,8 @@ tr.ndfs-file-selected,
       'categories':   { title: 'Categories', render: renderCategories },
       'match':        { title: 'Matcher',    render: renderMatcher },
       'import':       { title: 'Import',     render: renderImport },
-      'changes':      { title: 'Changes',    render: renderActions }
+      'changes':      { title: 'Changes',    render: renderActions },
+      'reads':        { title: 'Reads',      render: renderReadGroups }
     }
   };
 
@@ -5888,6 +5890,144 @@ tr.ndfs-file-selected,
       })
       .catch(function(err) { body.innerHTML = '<p class="nd-text-muted">' + esc(String(err)) + '</p>'; });
   };
+
+  // ==============================================================
+  // Read groups - the reads of one physical floppy
+  // ==============================================================
+  // A floppy that reads badly gets read again and again, so the archive holds
+  // several images of one disk (ND-disk-00426, -00426b, -00426c, -00426d are
+  // four tries at disk 426). Listed separately they look like four floppies and
+  // it is impossible to see which attempt is worth keeping. Grouped by the disk
+  // they came off, a bad floppy is obvious: four attempts, nothing readable.
+  //
+  // Deleting lives here in the importer UI, never in the catalog the public
+  // sees, and always as a dry run with the exact file list before it happens.
+  var readsState = { filter: 'bad' };
+
+  function renderReadGroups(el) {
+    var filters = [['bad', 'Nothing readable'], ['semibad', 'Failed attempts beside a good read'], ['multi', 'Every disk read more than once'], ['all', 'All disks']];
+    var html = '<h2>Reads of each physical floppy</h2>';
+    html += '<p class="nd-text-muted">Reads of the same disk are grouped by the name the imaging gave them: ' +
+      '<code>ND-disk-00426b</code> is the second attempt at disk <code>ND-disk-00426</code>. ' +
+      'A disk where no attempt produced anything is a bad floppy; the failed attempts beside a good read are only clutter.</p>';
+    html += '<div class="nd-search-bar" style="display:flex;gap:0.5rem;align-items:center;flex-wrap:wrap">Show ' +
+      '<select class="nd-input" id="reads-filter" style="width:auto">' +
+      filters.map(function(f) {
+        return '<option value="' + f[0] + '"' + (readsState.filter === f[0] ? ' selected' : '') + '>' + f[1] + '</option>';
+      }).join('') + '</select><span id="reads-count" class="nd-text-muted"></span></div>';
+    html += '<div id="reads-body">Loading...</div>';
+    el.innerHTML = html;
+    document.getElementById('reads-filter').addEventListener('change', function() {
+      readsState.filter = this.value;
+      loadReadGroups();
+    });
+    loadReadGroups();
+  }
+
+  function loadReadGroups() {
+    var box = document.getElementById('reads-body');
+    box.innerHTML = 'Loading...';
+    fetch('/api/read-groups?filter=' + encodeURIComponent(readsState.filter))
+      .then(function(r) { return r.json(); })
+      .then(function(res) {
+        if (res.error) { box.innerHTML = '<p class="nd-text-muted">' + esc(res.error) + '</p>'; return; }
+        document.getElementById('reads-count').textContent = res.total + ' disk(s)';
+        if (!res.groups.length) { box.innerHTML = '<p class="nd-text-muted">Nothing matches this filter.</p>'; return; }
+        var GRADE = {
+          clean: ['nd-badge-ok', 'reads clean'], recovered: ['nd-badge-info', 'recovered'],
+          other: ['nd-badge', 'other filesystem'], damaged: ['nd-badge-warn', 'damaged'],
+          empty: ['nd-badge-warn', 'no filesystem'],
+        };
+        var h = '';
+        res.groups.forEach(function(g) {
+          h += '<div class="nd-card" style="margin-bottom:0.75rem;padding:0.75rem 1rem">';
+          h += '<div style="display:flex;gap:0.75rem;align-items:center;flex-wrap:wrap;margin-bottom:0.5rem">' +
+            '<strong><code>' + esc(g.disk) + '</code></strong> ' +
+            '<span class="nd-badge ' + (g.bad ? 'nd-badge-warn' : 'nd-badge-ok') + '">' + esc(g.summary) + '</span>' +
+            '<span style="flex:1"></span>';
+          if (g.bad) {
+            h += '<button class="nd-btn nd-btn-danger nd-btn-sm" data-del-group="' + esc(g.disk) + '" data-ids="' +
+              esc(g.reads.map(function(r) { return r.id; }).join(',')) + '">Delete disk and all ' + g.reads.length + ' read(s)</button>';
+          } else if (g.redundant.length) {
+            h += '<button class="nd-btn nd-btn-danger nd-btn-sm" data-del-group="' + esc(g.disk) + '" data-ids="' +
+              esc(g.redundant.map(function(r) { return r.id; }).join(',')) + '">Delete ' + g.redundant.length + ' failed attempt(s)</button>';
+          }
+          h += '</div>';
+          h += '<table class="nd-table nd-table-compact"><tbody>';
+          g.reads.forEach(function(r) {
+            var badge = GRADE[r.grade] || ['nd-badge', r.grade];
+            h += '<tr><td style="width:16rem"><a href="#/disks/' + encodeURIComponent(r.id) + '"><code>' + esc(r.name) + '</code></a>' +
+              (r.best ? ' <span class="nd-text-muted" style="font-size:0.75rem">best read</span>' : '') + '</td>' +
+              '<td style="width:11rem"><span class="nd-badge ' + badge[0] + '">' + badge[1] + '</span></td>' +
+              '<td style="width:6rem;text-align:right">' + (r.files || '-') + ' files</td>' +
+              '<td style="width:7rem;text-align:right" class="nd-text-muted">' +
+              (r.imageSizeBytes ? (r.imageSizeBytes / 1024).toFixed(0) + ' KB' : '-') + '</td>' +
+              '<td class="nd-text-muted">' + (r.productId ? esc(r.productId) : '') + '</td>' +
+              '<td style="text-align:right"><button class="nd-btn nd-btn-sm" data-hex-read="' + esc(r.id) + '" data-name="' + esc(r.name) + '">Hex</button> ' +
+              '<button class="nd-btn nd-btn-danger nd-btn-sm" data-del-read="' + esc(r.id) + '" data-name="' + esc(r.name) + '">Delete</button></td></tr>';
+          });
+          h += '</tbody></table></div>';
+        });
+        box.innerHTML = h;
+        box.querySelectorAll('[data-hex-read]').forEach(function(b) {
+          b.addEventListener('click', function() { openHexViewer(this.getAttribute('data-hex-read'), this.getAttribute('data-name')); });
+        });
+        box.querySelectorAll('[data-del-read]').forEach(function(b) {
+          b.addEventListener('click', function() { deleteReads([this.getAttribute('data-del-read')], this.getAttribute('data-name'), this); });
+        });
+        box.querySelectorAll('[data-del-group]').forEach(function(b) {
+          b.addEventListener('click', function() {
+            deleteReads(this.getAttribute('data-ids').split(','), this.getAttribute('data-del-group'), this);
+          });
+        });
+      })
+      .catch(function(err) { box.innerHTML = '<p class="nd-text-muted">' + esc(String(err)) + '</p>'; });
+  }
+
+  /**
+   * Delete one read or a whole group: ask the server what each entry would
+   * remove, show the complete file list, and only then apply. Same dry run and
+   * approval as deleting a single floppy from its own page.
+   */
+  function deleteReads(ids, label, btn) {
+    var was = btn.textContent;
+    btn.disabled = true; btn.textContent = 'Checking...';
+    function fmt(b) { return b >= 1048576 ? (b / 1048576).toFixed(1) + ' MB' : Math.max(1, Math.round(b / 1024)) + ' KB'; }
+    Promise.all(ids.map(function(id) {
+      return fetch('/api/catalog-entry?id=' + encodeURIComponent(id) + '&dryRun=1', { method: 'DELETE' })
+        .then(function(r) { return r.json(); });
+    })).then(function(plans) {
+      btn.disabled = false; btn.textContent = was;
+      var files = [], bytes = 0;
+      for (var i = 0; i < plans.length; i++) {
+        if (plans[i].error) { alert('Error: ' + plans[i].error); return; }
+        (plans[i].files || []).forEach(function(f) { files.push(f); bytes += f.bytes || 0; });
+      }
+      if (!files.length) { alert('Nothing on disk to delete.'); return; }
+      var list = files.map(function(f) { return '  - ' + f.path + '  (' + fmt(f.bytes) + ')'; }).join('\n');
+      var msg = 'Delete ' + ids.length + ' read(s) of "' + label + '"?\n\n' +
+        'These ' + files.length + ' file(s) (' + fmt(bytes) + ') will be PERMANENTLY deleted:\n\n' + list +
+        '\n\nThe images are dropped from the catalog. Shared set photos are kept. ' +
+        'Commit the change on the Changes page afterwards.';
+      ndModal.open('<div class="nd-modal-header"><h3>Delete reads</h3>' +
+        '<button class="nd-modal-close" onclick="ndModal.close()">&times;</button></div>' +
+        '<div class="nd-modal-body"><pre style="user-select:text;white-space:pre-wrap;font-size:0.8rem">' + esc(msg) + '</pre>' +
+        '<div style="display:flex;gap:0.5rem;justify-content:flex-end">' +
+        '<button class="nd-btn nd-btn-sm" onclick="ndModal.close()">Cancel</button>' +
+        '<button class="nd-btn nd-btn-danger nd-btn-sm" id="reads-del-confirm">Delete permanently</button></div></div>');
+      document.getElementById('reads-del-confirm').addEventListener('click', function() {
+        var b2 = this; b2.disabled = true; b2.textContent = 'Deleting...';
+        Promise.all(ids.map(function(id) {
+          return fetch('/api/catalog-entry?id=' + encodeURIComponent(id), { method: 'DELETE' }).then(function(r) { return r.json(); });
+        })).then(function(results) {
+          var failed = results.filter(function(r) { return r.error; });
+          ndModal.close();
+          if (failed.length) alert('Some deletions failed: ' + failed.map(function(f) { return f.error; }).join('; '));
+          loadReadGroups();
+        }).catch(function(err) { ndModal.close(); alert('Error: ' + String(err)); });
+      });
+    }).catch(function(err) { btn.disabled = false; btn.textContent = was; alert('Error: ' + String(err)); });
+  }
 
   // ==============================================================
   // Backup set panel
