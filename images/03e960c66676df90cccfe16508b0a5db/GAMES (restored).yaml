@@ -1,0 +1,142 @@
+id: img-03e960c66676
+volumeName: GAMES
+md5: 03e960c66676df90cccfe16508b0a5db
+image:
+  sizeBytes: 1261568
+  format: raw
+  controller: floppy
+  totalPages: 616
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: GAMES
+      pagesUsed: 197
+  files:
+    - name: DUNGEON:PROG
+      type: PROG
+      pages: 71
+      bytes: 186368
+      userName: GAMES
+      dateCreated: 2328842701
+      lastDateRead: 2399581750
+      lastDateWritten: 2330780744
+      dateCreatedStr: 1984-11-07 21:07:13
+      lastDateReadStr: 1985-12-03 11:24:54
+      lastDateWrittenStr: 1984-11-22 14:17:08
+      bpunValid: null
+    - name: DINDX:DAT
+      type: DAT
+      pages: 7
+      bytes: 12418
+      userName: GAMES
+      dateCreated: 2330780851
+      lastDateRead: 2399581792
+      lastDateWritten: 2392652249
+      dateCreatedStr: 1984-11-22 14:18:51
+      lastDateReadStr: 1985-12-03 11:25:32
+      lastDateWrittenStr: 1985-10-14 15:39:25
+      bpunValid: null
+    - name: DTEXT:DAT
+      type: DAT
+      pages: 111
+      bytes: 226024
+      userName: GAMES
+      dateCreated: 2388686898
+      lastDateRead: 2399581799
+      lastDateWritten: 2388687001
+      dateCreatedStr: 1985-09-16 07:32:50
+      lastDateReadStr: 1985-12-03 11:25:39
+      lastDateWrittenStr: 1985-09-16 07:34:25
+      bpunValid: null
+    - name: DUNGEON:LOG
+      type: LOG
+      pages: 1
+      bytes: 182
+      userName: GAMES
+      dateCreated: 2388688580
+      lastDateRead: 2399581848
+      lastDateWritten: 2393550502
+      dateCreatedStr: 1985-09-16 07:59:04
+      lastDateReadStr: 1985-12-03 11:26:24
+      lastDateWrittenStr: 1985-10-21 10:58:38
+      bpunValid: null
+    - name: TIDER:DUN
+      type: DUN
+      pages: 1
+      bytes: 309
+      userName: GAMES
+      dateCreated: 2330781465
+      lastDateRead: 2399581852
+      lastDateWritten: 2392652249
+      dateCreatedStr: 1984-11-22 14:28:25
+      lastDateReadStr: 1985-12-03 11:26:28
+      lastDateWrittenStr: 1985-10-14 15:39:25
+      bpunValid: null
+    - name: SKATTEJAKT:PROG
+      type: PROG
+      pages: 65
+      bytes: 131584
+      userName: GAMES
+      dateCreated: 2388705280
+      lastDateRead: 2399581868
+      lastDateWritten: 2388705344
+      dateCreatedStr: 1985-09-16 12:00:00
+      lastDateReadStr: 1985-12-03 11:26:44
+      lastDateWrittenStr: 1985-09-16 12:01:00
+      bpunValid: null
+    - name: LIMERICKS:PROG
+      type: PROG
+      pages: 11
+      bytes: 21504
+      userName: GAMES
+      dateCreated: 2117386240
+      lastDateRead: 2399581896
+      lastDateWritten: 2117386304
+      dateCreatedStr: 1981-08-26 12:00:00
+      lastDateReadStr: 1985-12-03 11:27:08
+      lastDateWrittenStr: 1981-08-26 12:01:00
+      bpunValid: null
+    - name: VALLEY:PROG
+      type: PROG
+      pages: 49
+      bytes: 98816
+      userName: GAMES
+      dateCreated: 2387918848
+      lastDateRead: 2399581909
+      lastDateWritten: 2387918912
+      dateCreatedStr: 1985-09-10 12:00:00
+      lastDateReadStr: 1985-12-03 11:27:21
+      lastDateWrittenStr: 1985-09-10 12:01:00
+      bpunValid: null
+    - name: INVADERS:PROG
+      type: PROG
+      pages: 54
+      bytes: 109056
+      userName: GAMES
+      dateCreated: 2390016000
+      lastDateRead: 2399581924
+      lastDateWritten: 2390016064
+      dateCreatedStr: 1985-09-26 12:00:00
+      lastDateReadStr: 1985-12-03 11:27:36
+      lastDateWrittenStr: 1985-09-26 12:01:00
+      bpunValid: null
+provenance:
+  contributor: fvdm
+  originalPath: Disk Images/GAMES (restored).img
+  dateImaged: 2026-04-09
+  importedAt: 2026-08-17T14:19:48.577Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-03e960c66676
+  syncStatus: pending

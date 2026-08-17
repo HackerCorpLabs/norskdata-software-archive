@@ -1,0 +1,51 @@
+id: nd-10721-a-d1-044e459b
+volumeName: ND-10721A
+md5: 044e459b89e32467e6f5548f27bc3da1
+product:
+  id: ND-10721
+  version: A
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 41
+  files:
+    - name: BRF-LINKER-A00:PROG
+      type: PROG
+      pages: 39
+      bytes: 153600
+      userName: FLOPPY-USER
+      dateCreated: 2319363074
+      lastDateRead: 2320281655
+      lastDateWritten: 2320280583
+      dateCreatedStr: 1984-08-31 10:48:02
+      lastDateReadStr: 1984-09-06 11:00:55
+      lastDateWrittenStr: 1984-09-06 10:48:07
+      bpunValid: null
+provenance:
+  contributor: ronny
+  originalPath: ND-10721A BRF-LINKER/ND-10721A.img
+  dateImaged: 2024-09-17
+  importedAt: 2026-08-17T14:20:05.468Z
+imagingLogs:
+  - ND-10721A.log
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10721-a-d1-044e459b
+  syncStatus: pending

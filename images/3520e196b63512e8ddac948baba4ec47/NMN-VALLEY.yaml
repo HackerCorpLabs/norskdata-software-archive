@@ -1,0 +1,346 @@
+id: img-3520e196b635
+volumeName: NMN-VALLEY
+md5: 3520e196b63512e8ddac948baba4ec47
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: NILS-M-NILSSEN
+      pagesUsed: 123
+  files:
+    - name: VALLEY-VALLEY:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 2425
+      userName: NILS-M-NILSSEN
+      dateCreated: 2166279122
+      lastDateRead: 2387935512
+      lastDateWritten: 2171655082
+      dateCreatedStr: 1982-04-15 12:47:18
+      lastDateReadStr: 1985-09-10 16:04:24
+      lastDateWrittenStr: 1982-05-24 13:14:42
+      bpunValid: null
+    - name: VALLEY-INCLUDE:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1779
+      userName: NILS-M-NILSSEN
+      dateCreated: 2166281221
+      lastDateRead: 2387935514
+      lastDateWritten: 2171414790
+      dateCreatedStr: 1982-04-15 13:16:05
+      lastDateReadStr: 1985-09-10 16:04:26
+      lastDateWrittenStr: 1982-05-22 18:36:06
+      bpunValid: null
+    - name: VALLEY-FOREST:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 2426
+      userName: NILS-M-NILSSEN
+      dateCreated: 2166281828
+      lastDateRead: 2387935516
+      lastDateWritten: 2171785907
+      dateCreatedStr: 1982-04-15 13:25:36
+      lastDateReadStr: 1985-09-10 16:04:28
+      lastDateWrittenStr: 1982-05-25 13:10:51
+      bpunValid: null
+    - name: VALLEY-SAVRES:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1974
+      userName: NILS-M-NILSSEN
+      dateCreated: 2169032002
+      lastDateRead: 2387935518
+      lastDateWritten: 2170616820
+      dateCreatedStr: 1982-05-04 12:53:02
+      lastDateReadStr: 1985-09-10 16:04:30
+      lastDateWrittenStr: 1982-05-16 15:47:52
+      bpunValid: null
+    - name: VALLEY-DIV:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 1758
+      userName: NILS-M-NILSSEN
+      dateCreated: 2166283682
+      lastDateRead: 2387935519
+      lastDateWritten: 2171665487
+      dateCreatedStr: 1982-04-15 13:54:34
+      lastDateReadStr: 1985-09-10 16:04:31
+      lastDateWrittenStr: 1982-05-24 15:49:15
+      bpunValid: null
+    - name: VALLEY-PLOT:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1482
+      userName: NILS-M-NILSSEN
+      dateCreated: 2166284425
+      lastDateRead: 2387935522
+      lastDateWritten: 2171785947
+      dateCreatedStr: 1982-04-15 14:02:09
+      lastDateReadStr: 1985-09-10 16:04:34
+      lastDateWrittenStr: 1982-05-25 13:11:27
+      bpunValid: null
+    - name: VALLEY-MAIN:SYMB
+      type: SYMB
+      pages: 3
+      bytes: 4193
+      userName: NILS-M-NILSSEN
+      dateCreated: 2166287814
+      lastDateRead: 2387935523
+      lastDateWritten: 2171657551
+      dateCreatedStr: 1982-04-15 14:55:06
+      lastDateReadStr: 1985-09-10 16:04:35
+      lastDateWrittenStr: 1982-05-24 13:53:15
+      bpunValid: null
+    - name: VALLEY-VTM:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1456
+      userName: NILS-M-NILSSEN
+      dateCreated: 2169032140
+      lastDateRead: 2389799290
+      lastDateWritten: 2387938526
+      dateCreatedStr: 1982-05-04 12:55:12
+      lastDateReadStr: 1985-09-24 23:05:58
+      lastDateWrittenStr: 1985-09-10 16:51:30
+      bpunValid: null
+    - name: VALLEY-MOVE:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 2967
+      userName: NILS-M-NILSSEN
+      dateCreated: 2166291791
+      lastDateRead: 2387935528
+      lastDateWritten: 2168242747
+      dateCreatedStr: 1982-04-15 15:53:15
+      lastDateReadStr: 1985-09-10 16:04:40
+      lastDateWrittenStr: 1982-04-30 12:08:59
+      bpunValid: null
+    - name: VALLEY-SCENE:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 2630
+      userName: NILS-M-NILSSEN
+      dateCreated: 2166295345
+      lastDateRead: 2387935530
+      lastDateWritten: 2171653435
+      dateCreatedStr: 1982-04-15 16:44:49
+      lastDateReadStr: 1985-09-10 16:04:42
+      lastDateWrittenStr: 1982-05-24 12:52:59
+      bpunValid: null
+    - name: VALLEY-TOWER:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 3009
+      userName: NILS-M-NILSSEN
+      dateCreated: 2166298443
+      lastDateRead: 2387935533
+      lastDateWritten: 2171662364
+      dateCreatedStr: 1982-04-15 17:29:11
+      lastDateReadStr: 1985-09-10 16:04:45
+      lastDateWrittenStr: 1982-05-24 15:00:28
+      bpunValid: null
+    - name: VALLEY-UPDAT:SYMB
+      type: SYMB
+      pages: 3
+      bytes: 6047
+      userName: NILS-M-NILSSEN
+      dateCreated: 2166409108
+      lastDateRead: 2387935535
+      lastDateWritten: 2171403984
+      dateCreatedStr: 1982-04-16 12:30:20
+      lastDateReadStr: 1985-09-10 16:04:47
+      lastDateWrittenStr: 1982-05-22 15:59:16
+      bpunValid: null
+    - name: VALLEY-FIND:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 2306
+      userName: NILS-M-NILSSEN
+      dateCreated: 2166429710
+      lastDateRead: 2387935538
+      lastDateWritten: 2171404742
+      dateCreatedStr: 1982-04-16 17:32:14
+      lastDateReadStr: 1985-09-10 16:04:50
+      lastDateWrittenStr: 1982-05-22 16:07:06
+      bpunValid: null
+    - name: VALLEY-FIGHT:SYMB
+      type: SYMB
+      pages: 8
+      bytes: 14406
+      userName: NILS-M-NILSSEN
+      dateCreated: 2166433942
+      lastDateRead: 2387935541
+      lastDateWritten: 2171415315
+      dateCreatedStr: 1982-04-16 18:34:22
+      lastDateReadStr: 1985-09-10 16:04:53
+      lastDateWrittenStr: 1982-05-22 18:44:19
+      bpunValid: null
+    - name: VALLEY:COMP
+      type: COMP
+      pages: 1
+      bytes: 805
+      userName: NILS-M-NILSSEN
+      dateCreated: 2166282119
+      lastDateRead: 2389799274
+      lastDateWritten: 2389799270
+      dateCreatedStr: 1982-04-15 13:30:07
+      lastDateReadStr: 1985-09-24 23:05:42
+      lastDateWrittenStr: 1985-09-24 23:05:38
+      bpunValid: null
+    - name: VALLEY:LOAD
+      type: LOAD
+      pages: 1
+      bytes: 379
+      userName: NILS-M-NILSSEN
+      dateCreated: 2166971562
+      lastDateRead: 2389799403
+      lastDateWritten: 2387936953
+      dateCreatedStr: 1982-04-20 21:50:42
+      lastDateReadStr: 1985-09-24 23:07:43
+      lastDateWrittenStr: 1985-09-10 16:26:57
+      bpunValid: null
+    - name: VALLEY-EXIT:BRF
+      type: BRF
+      pages: 1
+      bytes: 42
+      userName: NILS-M-NILSSEN
+      dateCreated: 2169035152
+      lastDateRead: 2389799390
+      lastDateWritten: 2169035152
+      dateCreatedStr: 1982-05-04 13:38:16
+      lastDateReadStr: 1985-09-24 23:07:30
+      lastDateWrittenStr: 1982-05-04 13:38:16
+      bpunValid: null
+    - name: VALLEY-ROBJE:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 312
+      userName: NILS-M-NILSSEN
+      dateCreated: 2169035239
+      lastDateRead: 2387935556
+      lastDateWritten: 2169035239
+      dateCreatedStr: 1982-05-04 13:39:39
+      lastDateReadStr: 1985-09-10 16:05:04
+      lastDateWrittenStr: 1982-05-04 13:39:39
+      bpunValid: null
+    - name: VALLEY-GETOPD:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 250
+      userName: NILS-M-NILSSEN
+      dateCreated: 2169970744
+      lastDateRead: 2387935558
+      lastDateWritten: 2170386610
+      dateCreatedStr: 1982-05-11 18:00:56
+      lastDateReadStr: 1985-09-10 16:05:06
+      lastDateWrittenStr: 1982-05-14 23:34:50
+      bpunValid: null
+    - name: VALLEY-ROB-FOR:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 712
+      userName: NILS-M-NILSSEN
+      dateCreated: 2170380456
+      lastDateRead: 2387935560
+      lastDateWritten: 2170421856
+      dateCreatedStr: 1982-05-14 22:02:40
+      lastDateReadStr: 1985-09-10 16:05:08
+      lastDateWrittenStr: 1982-05-15 00:09:32
+      bpunValid: null
+    - name: VALLEY-ROBJE:BRF
+      type: BRF
+      pages: 1
+      bytes: 466
+      userName: NILS-M-NILSSEN
+      dateCreated: 2170382787
+      lastDateRead: 2387935562
+      lastDateWritten: 2170382787
+      dateCreatedStr: 1982-05-14 22:39:03
+      lastDateReadStr: 1985-09-10 16:05:10
+      lastDateWrittenStr: 1982-05-14 22:39:03
+      bpunValid: null
+    - name: VALLEY-REPAIR:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 815
+      userName: NILS-M-NILSSEN
+      dateCreated: 2170364761
+      lastDateRead: 2387935564
+      lastDateWritten: 2170387849
+      dateCreatedStr: 1982-05-14 18:13:25
+      lastDateReadStr: 1985-09-10 16:05:12
+      lastDateWrittenStr: 1982-05-14 23:54:09
+      bpunValid: null
+    - name: SH-RAN3:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 2506
+      userName: NILS-M-NILSSEN
+      dateCreated: 2103181991
+      lastDateRead: 2387935566
+      lastDateWritten: 2103181992
+      dateCreatedStr: 1981-05-14 00:10:39
+      lastDateReadStr: 1985-09-10 16:05:14
+      lastDateWrittenStr: 1981-05-14 00:10:40
+      bpunValid: null
+    - name: SH-RAN4:SYMB
+      type: SYMB
+      pages: 4
+      bytes: 7298
+      userName: NILS-M-NILSSEN
+      dateCreated: 2169700818
+      lastDateRead: 2387935569
+      lastDateWritten: 2171259830
+      dateCreatedStr: 1982-05-09 16:07:18
+      lastDateReadStr: 1985-09-10 16:05:17
+      lastDateWrittenStr: 1982-05-21 12:46:54
+      bpunValid: null
+    - name: VALLEY:PROG
+      type: PROG
+      pages: 49
+      bytes: 98816
+      userName: NILS-M-NILSSEN
+      dateCreated: 2171802092
+      lastDateRead: 2387935573
+      lastDateWritten: 2171802097
+      dateCreatedStr: 1982-05-25 17:07:44
+      lastDateReadStr: 1985-09-10 16:05:21
+      lastDateWrittenStr: 1982-05-25 17:07:49
+      bpunValid: null
+    - name: TEST:VALY
+      type: VALY
+      pages: 1
+      bytes: 56
+      userName: NILS-M-NILSSEN
+      dateCreated: 2171802398
+      lastDateRead: 2387935590
+      lastDateWritten: 2171802400
+      dateCreatedStr: 1982-05-25 17:12:30
+      lastDateReadStr: 1985-09-10 16:05:38
+      lastDateWrittenStr: 1982-05-25 17:12:32
+      bpunValid: null
+provenance:
+  contributor: fvdm
+  originalPath: Disk Images/NMN-VALLEY.img
+  dateImaged: 2026-04-08
+  importedAt: 2026-08-17T14:19:49.985Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-3520e196b635
+  syncStatus: pending

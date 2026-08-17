@@ -1,0 +1,62 @@
+id: nd-10191-d-d2-8abbcc51
+volumeName: ND-10191D-PART2
+md5: 8abbcc51ffbe7f45e6a8c297cf3c2e99
+product:
+  id: ND-10191
+  version: D
+  diskNumber: 2
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: flomon
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 111
+  files:
+    - name: FORT48-1BANK-D00:BRF
+      type: BRF
+      pages: 53
+      bytes: 108118
+      userName: FLOPPY-USER
+      dateCreated: 2297728623
+      lastDateRead: 83846017
+      lastDateWritten: 2302057873
+      dateCreatedStr: 1984-03-26 08:57:47
+      lastDateReadStr: 1951-03-31 22:14:01
+      lastDateWrittenStr: 1984-04-27 09:54:17
+      bpunValid: null
+    - name: FORT48-2BANK-D00:BRF
+      type: BRF
+      pages: 55
+      bytes: 112180
+      userName: FLOPPY-USER
+      dateCreated: 2297728698
+      lastDateRead: 83846033
+      lastDateWritten: 2302057896
+      dateCreatedStr: 1984-03-26 08:58:58
+      lastDateReadStr: 1951-03-31 22:14:17
+      lastDateWrittenStr: 1984-04-27 09:54:40
+      bpunValid: null
+provenance:
+  contributor: Datormuseum
+  originalPath: DiskImages/NDDISK17.img
+  dateImaged: 2023-10-02
+  importedAt: 2026-08-17T14:18:25.880Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10191-d-d2-8abbcc51
+  syncStatus: pending

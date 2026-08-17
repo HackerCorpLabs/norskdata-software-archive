@@ -1,0 +1,115 @@
+id: img-9cbc9658afc6
+volumeName: null
+md5: 9cbc9658afc65694379bd803e21273f7
+product:
+  id: ND-30210
+  version: A00
+  diskNumber: 4
+image:
+  sizeBytes: 737280
+  format: raw
+  controller: floppy
+filesystem: dos
+volumeLabel: 30210NO4A00
+dosFiles:
+  - path: BIN
+    bytes: 0
+    modified: 1990-11-01 17:42
+    directory: true
+  - path: BIN/FI
+    bytes: 0
+    modified: 1990-11-01 17:42
+    directory: true
+  - path: BIN/FI/TD2FI15.FON
+    bytes: 29184
+    modified: 1990-08-17 14:23
+    directory: false
+  - path: BIN/FI/TD2FI25.FON
+    bytes: 29184
+    modified: 1990-08-17 15:10
+    directory: false
+  - path: BIN/FI/TD2FI48.FON
+    bytes: 36864
+    modified: 1990-08-20 09:50
+    directory: false
+  - path: BIN/FI/TD2FI70.FON
+    bytes: 79360
+    modified: 1990-08-20 10:28
+    directory: false
+  - path: BIN/FI/TD2FI84.FON
+    bytes: 29184
+    modified: 1990-08-20 11:51
+    directory: false
+  - path: BIN/GE
+    bytes: 0
+    modified: 1990-11-01 17:44
+    directory: true
+  - path: BIN/GE/TD2GE15.FON
+    bytes: 29184
+    modified: 1990-08-17 14:23
+    directory: false
+  - path: BIN/GE/TD2GE25.FON
+    bytes: 29184
+    modified: 1990-08-17 15:09
+    directory: false
+  - path: BIN/GE/TD2GE48.FON
+    bytes: 36864
+    modified: 1990-08-20 09:49
+    directory: false
+  - path: BIN/GE/TD2GE70.FON
+    bytes: 79360
+    modified: 1990-08-20 10:27
+    directory: false
+  - path: BIN/GE/TD2GE84.FON
+    bytes: 29184
+    modified: 1990-08-20 11:50
+    directory: false
+  - path: BIN/IS
+    bytes: 0
+    modified: 1990-11-02 14:23
+    directory: true
+  - path: BIN/IS/TD2IS15.FON
+    bytes: 29184
+    modified: 1990-08-17 14:24
+    directory: false
+  - path: BIN/IS/TD2IS25.FON
+    bytes: 29184
+    modified: 1990-08-17 15:10
+    directory: false
+  - path: BIN/IS/TD2IS48.FON
+    bytes: 36864
+    modified: 1990-08-20 09:50
+    directory: false
+  - path: BIN/IS/TD2IS70.FON
+    bytes: 79360
+    modified: 1990-08-20 10:28
+    directory: false
+  - path: BIN/IS/TD2IS84.FON
+    bytes: 29184
+    modified: 1990-08-20 11:51
+    directory: false
+provenance:
+  contributor: ronny
+  originalPath: winlink/i4.img
+  dateImaged: 2024-09-17
+  importedAt: 2026-08-17T14:22:47.218Z
+imagingLogs:
+  - i1.log
+  - i2.log
+  - i3.log
+  - i5.log
+  - i6.log
+  - i4.log
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-9cbc9658afc6
+  syncStatus: pending

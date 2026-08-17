@@ -1,0 +1,310 @@
+id: img-bd4432b4286b
+volumeName: null
+md5: bd4432b4286bfa167d14c96552fafa67
+product:
+  id: ND-30021
+image:
+  sizeBytes: 1228800
+  format: raw
+  controller: floppy
+filesystem: dos
+volumeLabel: INSTALL1
+dosFiles:
+  - path: OPPSETT.INF
+    bytes: 23764
+    modified: 1988-12-13 12:34
+    directory: false
+  - path: HIMEM.SYS
+    bytes: 6326
+    modified: 1988-10-26 18:37
+    directory: false
+  - path: MSLOGO.LGD
+    bytes: 2573
+    modified: 1988-05-12 11:55
+    directory: false
+  - path: WIN.CNF
+    bytes: 2496
+    modified: 1988-10-20 15:26
+    directory: false
+  - path: WIN.INI
+    bytes: 2173
+    modified: 1988-11-23 12:40
+    directory: false
+  - path: GDI.EXE
+    bytes: 101770
+    modified: 1988-06-19 12:42
+    directory: false
+  - path: KERNEL.EXE
+    bytes: 58864
+    modified: 1988-10-20 15:26
+    directory: false
+  - path: MSDOS.EXE
+    bytes: 46640
+    modified: 1988-11-11 15:47
+    directory: false
+  - path: MSDOSD.EXE
+    bytes: 6586
+    modified: 1988-06-21 09:00
+    directory: false
+  - path: USERF.EXE
+    bytes: 154544
+    modified: 1988-10-26 16:56
+    directory: false
+  - path: USERS.EXE
+    bytes: 156080
+    modified: 1988-10-26 16:54
+    directory: false
+  - path: COMM.DRV
+    bytes: 4396
+    modified: 1988-05-27 00:00
+    directory: false
+  - path: SOUND.DRV
+    bytes: 5309
+    modified: 1987-11-12 13:25
+    directory: false
+  - path: SYSTEM.DRV
+    bytes: 2945
+    modified: 1988-06-23 06:13
+    directory: false
+  - path: ATTSYS.DRV
+    bytes: 3012
+    modified: 1988-06-29 14:42
+    directory: false
+  - path: HPSYSTEM.DRV
+    bytes: 9390
+    modified: 1988-06-28 17:31
+    directory: false
+  - path: KBDBE.DRV
+    bytes: 8782
+    modified: 1988-06-23 05:35
+    directory: false
+  - path: KBDCA.DRV
+    bytes: 9022
+    modified: 1988-06-23 05:35
+    directory: false
+  - path: KBDDA.DRV
+    bytes: 8490
+    modified: 1988-06-23 05:35
+    directory: false
+  - path: KBDES.DRV
+    bytes: 9460
+    modified: 1988-06-23 05:35
+    directory: false
+  - path: KBDFR.DRV
+    bytes: 8698
+    modified: 1988-06-23 05:35
+    directory: false
+  - path: KBDFS.DRV
+    bytes: 8522
+    modified: 1988-06-23 05:35
+    directory: false
+  - path: KBDGR.DRV
+    bytes: 8682
+    modified: 1988-06-23 05:35
+    directory: false
+  - path: KBDIT.DRV
+    bytes: 8322
+    modified: 1988-06-23 05:35
+    directory: false
+  - path: KBDLA.DRV
+    bytes: 8816
+    modified: 1988-06-23 05:35
+    directory: false
+  - path: KBDNE.DRV
+    bytes: 8522
+    modified: 1988-06-23 05:35
+    directory: false
+  - path: KBDNO.DRV
+    bytes: 8506
+    modified: 1988-06-23 05:36
+    directory: false
+  - path: KBDPO.DRV
+    bytes: 8108
+    modified: 1988-06-23 05:35
+    directory: false
+  - path: KBDSF.DRV
+    bytes: 8778
+    modified: 1988-06-23 05:35
+    directory: false
+  - path: KBDSG.DRV
+    bytes: 8754
+    modified: 1988-06-23 05:35
+    directory: false
+  - path: KBDSP.DRV
+    bytes: 8848
+    modified: 1988-06-23 05:35
+    directory: false
+  - path: KBDUK.DRV
+    bytes: 8264
+    modified: 1988-06-23 05:35
+    directory: false
+  - path: KBDUS.DRV
+    bytes: 8088
+    modified: 1988-06-23 05:35
+    directory: false
+  - path: FONTHI.FON
+    bytes: 4608
+    modified: 1987-11-12 13:25
+    directory: false
+  - path: FONTHIUS.FON
+    bytes: 4528
+    modified: 1987-11-12 13:25
+    directory: false
+  - path: FONTLO.FON
+    bytes: 4160
+    modified: 1987-11-12 13:21
+    directory: false
+  - path: FONTLOUS.FON
+    bytes: 4528
+    modified: 1987-11-12 13:21
+    directory: false
+  - path: FONTSQ.FON
+    bytes: 5728
+    modified: 1987-11-12 13:25
+    directory: false
+  - path: FONTSQUS.FON
+    bytes: 5536
+    modified: 1987-11-12 13:25
+    directory: false
+  - path: FONTSQCA.FON
+    bytes: 5552
+    modified: 1987-11-05 13:45
+    directory: false
+  - path: FONTSQES.FON
+    bytes: 5552
+    modified: 1987-11-05 13:57
+    directory: false
+  - path: FONTSQNO.FON
+    bytes: 5552
+    modified: 1987-11-05 13:57
+    directory: false
+  - path: FONTSQPO.FON
+    bytes: 5552
+    modified: 1987-11-05 13:57
+    directory: false
+  - path: MOUSE.DRV
+    bytes: 3667
+    modified: 1987-11-12 13:24
+    directory: false
+  - path: HPMOUSE.DRV
+    bytes: 4410
+    modified: 1988-06-17 12:02
+    directory: false
+  - path: MSMOUSE1.DRV
+    bytes: 2014
+    modified: 1987-11-12 13:09
+    directory: false
+  - path: MSMOUSE2.DRV
+    bytes: 2014
+    modified: 1987-11-12 13:10
+    directory: false
+  - path: NOMOUSE.DRV
+    bytes: 1245
+    modified: 1987-11-12 13:24
+    directory: false
+  - path: CGA.DRV
+    bytes: 24784
+    modified: 1988-06-10 08:47
+    directory: false
+  - path: CGA.GRB
+    bytes: 2672
+    modified: 1988-05-20 10:08
+    directory: false
+  - path: CGA.LGO
+    bytes: 468
+    modified: 1987-11-12 13:12
+    directory: false
+  - path: ATTDEB.DRV
+    bytes: 27920
+    modified: 1987-11-12 13:10
+    directory: false
+  - path: ATTDC.DRV
+    bytes: 28736
+    modified: 1987-11-12 13:12
+    directory: false
+  - path: ATTDC.LGO
+    bytes: 651
+    modified: 1987-11-12 13:23
+    directory: false
+  - path: ATTDC.GRB
+    bytes: 3407
+    modified: 1987-11-12 13:10
+    directory: false
+  - path: EGA.SYS
+    bytes: 3328
+    modified: 1988-04-22 18:02
+    directory: false
+  - path: EGAHIBW.DRV
+    bytes: 26848
+    modified: 1987-11-12 13:10
+    directory: false
+  - path: EGAHIRES.DRV
+    bytes: 33040
+    modified: 1988-06-17 08:51
+    directory: false
+  - path: EGAHIRES.GRB
+    bytes: 3574
+    modified: 1988-05-20 10:09
+    directory: false
+  - path: EGALORES.DRV
+    bytes: 30208
+    modified: 1988-06-17 08:55
+    directory: false
+  - path: EGAMONO.DRV
+    bytes: 26960
+    modified: 1987-11-12 13:09
+    directory: false
+  - path: EGAMONO.GRB
+    bytes: 3407
+    modified: 1988-05-20 10:09
+    directory: false
+  - path: EGAMONO.LGO
+    bytes: 446
+    modified: 1987-11-12 13:23
+    directory: false
+  - path: 8514.DRV
+    bytes: 37328
+    modified: 1988-06-14 12:28
+    directory: false
+  - path: 8514.FON
+    bytes: 11360
+    modified: 1988-06-14 12:28
+    directory: false
+  - path: 8514US.FON
+    bytes: 12672
+    modified: 1988-06-14 12:28
+    directory: false
+  - path: HERCULES.DRV
+    bytes: 28272
+    modified: 1988-06-10 08:50
+    directory: false
+  - path: HERCULES.GRB
+    bytes: 2615
+    modified: 1988-05-20 10:08
+    directory: false
+  - path: HERCULES.LGO
+    bytes: 557
+    modified: 1987-11-12 13:10
+    directory: false
+  - path: OPPSETT.EXE
+    bytes: 68063
+    modified: 1988-11-11 15:08
+    directory: false
+provenance:
+  contributor: fvdm
+  originalPath: Windows 2.10/Windows 2.10, 1 Oppsett 1.img
+  dateImaged: 2025-07-17
+  importedAt: 2026-08-17T14:19:50.928Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-bd4432b4286b
+  syncStatus: pending

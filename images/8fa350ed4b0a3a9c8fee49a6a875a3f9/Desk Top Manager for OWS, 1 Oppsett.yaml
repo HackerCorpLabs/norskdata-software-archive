@@ -1,0 +1,308 @@
+id: img-8fa350ed4b0a
+volumeName: null
+md5: 8fa350ed4b0a3a9c8fee49a6a875a3f9
+product:
+  id: ND-30025
+  version: C02
+  diskNumber: 1
+image:
+  sizeBytes: 1228800
+  format: raw
+  controller: floppy
+filesystem: dos
+volumeLabel: 30025NO1C02
+dosFiles:
+  - path: ND-OWS
+    bytes: 0
+    modified: 1988-04-27 10:41
+    directory: true
+  - path: ND-OWS/COMMS
+    bytes: 0
+    modified: 1980-04-13 01:24
+    directory: true
+  - path: ND-OWS/COMMS/CONNECT.EXE
+    bytes: 31398
+    modified: 1989-01-31 09:37
+    directory: false
+  - path: ND-OWS/DRIVERS
+    bytes: 0
+    modified: 1980-04-13 01:22
+    directory: true
+  - path: ND-OWS/DRIVERS/DOSVKM00.COM
+    bytes: 2562
+    modified: 1989-01-24 02:26
+    directory: false
+  - path: ND-OWS/DRIVERS/DOSVKM01.COM
+    bytes: 2864
+    modified: 1989-01-24 02:26
+    directory: false
+  - path: ND-OWS/DRIVERS/DOSVKM10.COM
+    bytes: 2770
+    modified: 1989-01-24 02:26
+    directory: false
+  - path: ND-OWS/DRIVERS/DOSVKM13.COM
+    bytes: 2707
+    modified: 1989-01-24 02:26
+    directory: false
+  - path: ND-OWS/DRIVERS/DOSVKM14.COM
+    bytes: 2712
+    modified: 1989-01-18 22:40
+    directory: false
+  - path: ND-OWS/DRIVERS/EGAFONT.COM
+    bytes: 4982
+    modified: 1988-06-07 13:46
+    directory: false
+  - path: ND-OWS/DRIVERS/KEYBOARD.COM
+    bytes: 11847
+    modified: 1988-11-11 11:59
+    directory: false
+  - path: ND-OWS/DRIVERS/KEYBTABL.DA
+    bytes: 1333
+    modified: 1988-11-30 11:04
+    directory: false
+  - path: ND-OWS/DRIVERS/KEYBTABL.EN
+    bytes: 1333
+    modified: 1988-11-30 11:04
+    directory: false
+  - path: ND-OWS/DRIVERS/KEYBTABL.FR
+    bytes: 1333
+    modified: 1988-11-30 11:04
+    directory: false
+  - path: ND-OWS/DRIVERS/KEYBTABL.GE
+    bytes: 1333
+    modified: 1988-11-30 11:04
+    directory: false
+  - path: ND-OWS/DRIVERS/KEYBTABL.NO
+    bytes: 1333
+    modified: 1988-11-30 11:04
+    directory: false
+  - path: ND-OWS/DRIVERS/KEYBTABL.SD
+    bytes: 1333
+    modified: 1988-11-30 11:04
+    directory: false
+  - path: ND-OWS/DRIVERS/KEYBTABL.SW
+    bytes: 1333
+    modified: 1988-11-30 11:04
+    directory: false
+  - path: ND-OWS/DRIVERS/KEYBTABL.US
+    bytes: 1333
+    modified: 1988-11-30 11:04
+    directory: false
+  - path: ND-OWS/DRIVERS/NDKEYB.COM
+    bytes: 4788
+    modified: 1989-01-23 02:19
+    directory: false
+  - path: ND-OWS/DRIVERS/PRNSCA.COM
+    bytes: 2120
+    modified: 1988-12-06 10:15
+    directory: false
+  - path: ND-OWS/DRIVERS/VKMLOAD.EXE
+    bytes: 30461
+    modified: 1988-12-08 21:14
+    directory: false
+  - path: ND-OWS/DRIVERS/WINVKM00.EXE
+    bytes: 4072
+    modified: 1988-12-08 21:31
+    directory: false
+  - path: ND-OWS/DRIVERS/WINVKM01.EXE
+    bytes: 4022
+    modified: 1988-12-08 21:31
+    directory: false
+  - path: ND-OWS/DRIVERS/WINVKM10.EXE
+    bytes: 3436
+    modified: 1988-12-08 21:31
+    directory: false
+  - path: ND-OWS/DRIVERS/WINVKM13.EXE
+    bytes: 3436
+    modified: 1988-12-08 21:31
+    directory: false
+  - path: ND-OWS/DRIVERS/WINVKM14.EXE
+    bytes: 3436
+    modified: 1988-12-08 21:32
+    directory: false
+  - path: ND-OWS/MAINT
+    bytes: 0
+    modified: 1980-04-13 01:17
+    directory: true
+  - path: ND-OWS/MAINT/CHKPORT.EXE
+    bytes: 34648
+    modified: 1988-10-16 12:02
+    directory: false
+  - path: ND-OWS/MAINT/CHKPORT.PIF
+    bytes: 369
+    modified: 1988-07-08 13:57
+    directory: false
+  - path: ND-OWS/MAINT/CLSPORT.EXE
+    bytes: 10162
+    modified: 1988-10-19 14:37
+    directory: false
+  - path: ND-OWS/MAINT/CLSPORT.PIF
+    bytes: 369
+    modified: 1988-07-08 13:57
+    directory: false
+  - path: ND-OWS/MAINT/FND.EXE
+    bytes: 8582
+    modified: 1987-08-21 17:48
+    directory: false
+  - path: ND-OWS/MAINT/NDCONFIG.EXE
+    bytes: 57018
+    modified: 1988-11-07 10:24
+    directory: false
+  - path: ND-OWS/MAINT/NDCONFIG.PIF
+    bytes: 369
+    modified: 1988-11-11 10:59
+    directory: false
+  - path: ND-OWS/MAINT/NDMAP.COM
+    bytes: 5894
+    modified: 1988-11-15 20:58
+    directory: false
+  - path: ND-OWS/MAINT/NDMAP.PIF
+    bytes: 369
+    modified: 1988-11-15 20:16
+    directory: false
+  - path: ND-OWS/MAINT/PRITRAC.EXE
+    bytes: 71313
+    modified: 1988-11-11 15:47
+    directory: false
+  - path: ND-OWS/MAINT/PRITRAC.PIF
+    bytes: 369
+    modified: 1988-07-08 13:59
+    directory: false
+  - path: ND-OWS/MAINT/SETTRACE.EXE
+    bytes: 9470
+    modified: 1988-10-14 16:14
+    directory: false
+  - path: ND-OWS/MAINT/SETTRACE.PIF
+    bytes: 369
+    modified: 1988-07-08 13:59
+    directory: false
+  - path: ND-OWS/MAINT/VERSION.EXE
+    bytes: 15441
+    modified: 1988-06-01 11:47
+    directory: false
+  - path: ND-OWS/MAINT/VERSION.PIF
+    bytes: 369
+    modified: 1988-05-21 15:49
+    directory: false
+  - path: ND-OWS/MAINT/WINVERS.EXE
+    bytes: 16079
+    modified: 1988-06-01 11:44
+    directory: false
+  - path: ND-OWS/MAINT/WINVERS.PIF
+    bytes: 369
+    modified: 1980-04-23 06:00
+    directory: false
+  - path: ND-OWS/SWITCHER
+    bytes: 0
+    modified: 1980-04-13 01:27
+    directory: true
+  - path: ND-OWS/SWITCHER/CLEARUP.COM
+    bytes: 631
+    modified: 1988-07-19 13:17
+    directory: false
+  - path: ND-OWS/SWITCHER/CTRLC.COM
+    bytes: 951
+    modified: 1988-09-15 14:08
+    directory: false
+  - path: ND-OWS/SWITCHER/NDMSG.EXE
+    bytes: 21636
+    modified: 1988-07-11 19:35
+    directory: false
+  - path: ND-OWS/SWITCHER/POPSTK.EXE
+    bytes: 17581
+    modified: 1988-05-05 12:05
+    directory: false
+  - path: ND-OWS/SWITCHER/PREPARE.COM
+    bytes: 1359
+    modified: 1988-07-26 18:39
+    directory: false
+  - path: ND-OWS/SWITCHER/STACK.CLD
+    bytes: 420
+    modified: 1988-06-01 15:17
+    directory: false
+  - path: ND-OWS/SWITCHER/SWITCHER.CLD
+    bytes: 2600
+    modified: 1988-07-26 08:53
+    directory: false
+  - path: ND-OWS/TERMINAL
+    bytes: 0
+    modified: 1980-04-13 01:15
+    directory: true
+  - path: ND-OWS/TERMINAL/ND.EXE
+    bytes: 92068
+    modified: 1989-01-02 11:24
+    directory: false
+  - path: ND-OWS/DTM.EXE
+    bytes: 106948
+    modified: 1989-01-02 11:23
+    directory: false
+  - path: ND-OWS/PORT.EXE
+    bytes: 12984
+    modified: 1988-11-16 11:51
+    directory: false
+  - path: ND-OWS/UE-NOC14.ERR
+    bytes: 153088
+    modified: 1989-01-09 14:21
+    directory: false
+  - path: TEMPLATE
+    bytes: 0
+    modified: 1980-04-13 01:10
+    directory: true
+  - path: TEMPLATE/AUTOEXEC.BAT
+    bytes: 517
+    modified: 1988-07-13 09:49
+    directory: false
+  - path: TEMPLATE/CONFIG.SYS
+    bytes: 35
+    modified: 1988-06-13 11:44
+    directory: false
+  - path: TEMPLATE/NDCONFIG
+    bytes: 873
+    modified: 1988-07-12 09:45
+    directory: false
+  - path: WINDOWS
+    bytes: 0
+    modified: 1988-05-17 14:03
+    directory: true
+  - path: WINDOWS/NDPRINT.EXE
+    bytes: 34004
+    modified: 1989-01-02 11:24
+    directory: false
+  - path: INSTALL.EXE
+    bytes: 80881
+    modified: 1988-12-13 15:05
+    directory: false
+  - path: LANG-NO.DAT
+    bytes: 15711
+    modified: 1989-01-11 14:06
+    directory: false
+  - path: MOUSE.COM
+    bytes: 14394
+    modified: 1988-11-11 17:07
+    directory: false
+  - path: ND-MOUSE.COM
+    bytes: 5113
+    modified: 1988-11-11 14:47
+    directory: false
+  - path: LES.MEG
+    bytes: 7061
+    modified: 1988-12-23 11:50
+    directory: false
+provenance:
+  contributor: fvdm
+  originalPath: Desk Top Manager For OWS/Desk Top Manager for OWS, 1 Oppsett.img
+  dateImaged: 2025-07-17
+  importedAt: 2026-08-17T14:19:47.205Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-8fa350ed4b0a
+  syncStatus: pending

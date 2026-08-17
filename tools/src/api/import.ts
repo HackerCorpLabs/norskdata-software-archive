@@ -22,7 +22,15 @@ import { pageAlign } from '../lib/ndfsalign/index.js';
 import { readDosLabel, readBackupSet, readBackupFiles, readDosFiles } from './filesystem-detect.js';
 
 /** Maximum raw image size for in-git storage (roughly 700 NDFS pages) */
-const FLOPPY_SIZE_LIMIT = 1_400_000;
+/**
+ * Largest image kept in git as a floppy.
+ *
+ * Covers every floppy format this archive sees, up to a 3.5 inch HD disk and
+ * the slightly-over-size reads of one: 1,491,456 bytes for winlink/3.img. The
+ * old ceiling of 1,400,000 sat just under a 1.44 MB floppy, so those were
+ * classified as ia-only and - because nothing wrote them - disappeared.
+ */
+const FLOPPY_SIZE_LIMIT = 2_000_000;
 
 /**
  * Reduce a source path to "<parent folder>/<filename>" for provenance.
@@ -318,12 +326,23 @@ export async function scanFolderArtifacts(
 
 /**
  * Copy set-level artifacts flat into {targetDir}/. Deduplicates (skips if exists).
+ *
+ * `alreadyPlaced` is how a folder import avoids the mistake this used to make:
+ * a document that belongs to the whole folder - a readme, an install note, a
+ * read log whose disk was never imported - was copied into EVERY image folder of
+ * the batch, so one readme became five files and one batch of read logs became
+ * thousands. Such a document is copied once, for the first image of the import,
+ * and the callers after it are told to leave it alone.
+ *
+ * Photos and the label transcription are not affected: a set photo is
+ * consolidated into collections/ afterwards, and labels.txt belongs to the disk.
  */
 export async function copySetArtifacts(
   rootDir: string,
   sourceDir: string,
   targetDir: string,
-  artifacts: { setPhotos: string[]; transcription: string | null; imagingLogs: string[] }
+  artifacts: { setPhotos: string[]; transcription: string | null; imagingLogs: string[] },
+  alreadyPlaced?: Set<string>,
 ): Promise<{ setPhotos: string[]; labelTranscription: string | null; imagingLogs: string[] }> {
   const absTargetDir = join(rootDir, targetDir);
   await mkdir(absTargetDir, { recursive: true });
@@ -343,10 +362,13 @@ export async function copySetArtifacts(
     labelTranscription = join(targetDir, fname);
   }
 
+  // Documents belonging to the folder rather than to this disk: copy each once.
   const imagingLogs: string[] = [];
   for (const logFile of artifacts.imagingLogs) {
+    if (alreadyPlaced?.has(logFile)) continue;
     const dst = join(absTargetDir, logFile);
     try { await stat(dst); } catch { await copyFile(join(sourceDir, logFile), dst); }
+    alreadyPlaced?.add(logFile);
     imagingLogs.push(join(targetDir, logFile));
   }
 
@@ -450,10 +472,18 @@ export async function importImage(
       gitLabelTranscription = options.setArtifacts.labelTranscription;
       gitImagingLogs = options.setArtifacts.imagingLogs;
     } else {
-      // Standalone import - scan and copy artifacts
+      // Standalone import - scan and copy artifacts.
+      //
+      // Only what belongs to THIS image is taken. A document the scan could not
+      // match to it - a readme for the folder, a read log of a disk that was
+      // never imported, notes about other disks - belongs to the folder, and a
+      // single-file import knows nothing about the rest of that folder. Copying
+      // it here is how one readme ended up in five image folders: every call
+      // scanned the same folder and claimed the same document.
       const sourceDir = options?.sourceDir ?? dirname(filePath);
       const artifacts = await scanFolderArtifacts(sourceDir, [filename], [volumeName]);
-      const setResult = await copySetArtifacts(rootDir, sourceDir, targetDir, artifacts);
+      const setResult = await copySetArtifacts(rootDir, sourceDir, targetDir,
+        { ...artifacts, imagingLogs: [] });
       gitSetPhotos = setResult.setPhotos;
       gitLabelTranscription = setResult.labelTranscription;
       gitImagingLogs = setResult.imagingLogs;
@@ -582,6 +612,18 @@ export async function importImage(
 
   // Write YAML file next to the image
   if (gitYamlPath && rootDir) {
+    await saveFloppyYaml(rootDir, entry);
+  } else if (rootDir && !isFloppy) {
+    // Too large for git: the image belongs on Internet Archive, but the entry
+    // still has to exist. Writing nothing lost the floppy silently and told the
+    // caller it had been imported - which is how winlink/3.img vanished.
+    const targetDir = options?.targetDir ?? classifyTargetPath(md5);
+    await mkdir(join(rootDir, targetDir), { recursive: true });
+    const yamlName = basename(filePath).replace(/\.(img|image|ima|dsk)$/i, '') + '.yaml';
+    entry.storage = {
+      ...(entry.storage ?? {}),
+      git: { imagePath: null as any, yamlPath: join(targetDir, yamlName), labelPhotos: [], labelTranscription: null, imagingLogs: [] } as any,
+    } as any;
     await saveFloppyYaml(rootDir, entry);
   }
 

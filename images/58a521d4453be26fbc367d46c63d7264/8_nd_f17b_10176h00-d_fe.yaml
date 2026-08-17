@@ -1,0 +1,180 @@
+id: nd-10176-h00-d1-58a521d4
+volumeName: 10176H00-D
+md5: 58a521d4453be26fbc367d46c63d7264
+product:
+  version: H00
+image:
+  sizeBytes: 1261568
+  format: raw
+  controller: floppy
+  totalPages: 616
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 472
+  files:
+    - name: COBOL-100-H00:PROG
+      type: PROG
+      pages: 105
+      bytes: 593920
+      userName: FLOPPY-USER
+      dateCreated: 2371132009
+      lastDateRead: 2371132324
+      lastDateWritten: 2371132324
+      dateCreatedStr: 1985-05-10 09:41:41
+      lastDateReadStr: 1985-05-10 09:46:36
+      lastDateWrittenStr: 1985-05-10 09:46:36
+      bpunValid: null
+    - name: COBOL-1BANK-H00:BRF
+      type: BRF
+      pages: 72
+      bytes: 145732
+      userName: FLOPPY-USER
+      dateCreated: 2370612870
+      lastDateRead: 2370620042
+      lastDateWritten: 2370612941
+      dateCreatedStr: 1985-05-06 10:58:06
+      lastDateReadStr: 1985-05-06 12:42:10
+      lastDateWrittenStr: 1985-05-06 10:59:13
+      bpunValid: null
+    - name: COBOL-2BANK-H00:BRF
+      type: BRF
+      pages: 74
+      bytes: 149685
+      userName: FLOPPY-USER
+      dateCreated: 2370612889
+      lastDateRead: 2370620071
+      lastDateWritten: 2370612979
+      dateCreatedStr: 1985-05-06 10:58:25
+      lastDateReadStr: 1985-05-06 12:42:39
+      lastDateWrittenStr: 1985-05-06 10:59:51
+      bpunValid: null
+    - name: COBOL-ERRORS-H00:DATA
+      type: DATA
+      pages: 5
+      bytes: 9864
+      userName: FLOPPY-USER
+      dateCreated: 2323952516
+      lastDateRead: 2370620102
+      lastDateWritten: 2360526023
+      dateCreatedStr: 1984-10-02 11:14:04
+      lastDateReadStr: 1985-05-06 12:43:06
+      lastDateWrittenStr: 1985-02-25 12:19:07
+      bpunValid: null
+    - name: ISAMRT-I00:BRF
+      type: BRF
+      pages: 14
+      bytes: 28443
+      userName: FLOPPY-USER
+      dateCreated: 2369447781
+      lastDateRead: 2370620105
+      lastDateWritten: 2369447972
+      dateCreatedStr: 1985-04-29 14:29:37
+      lastDateReadStr: 1985-05-06 12:43:09
+      lastDateWrittenStr: 1985-04-29 14:32:36
+      bpunValid: null
+    - name: ISAMRT-I00:MODE
+      type: MODE
+      pages: 3
+      bytes: 2802
+      userName: FLOPPY-USER
+      dateCreated: 2320025031
+      lastDateRead: 2370620109
+      lastDateWritten: 2369585749
+      dateCreatedStr: 1984-09-04 12:23:07
+      lastDateReadStr: 1985-05-06 12:43:13
+      lastDateWrittenStr: 1985-04-30 16:09:21
+      bpunValid: null
+    - name: ISAM-SERVICE-I00:PROG
+      type: PROG
+      pages: 65
+      bytes: 133120
+      userName: FLOPPY-USER
+      dateCreated: 2369578403
+      lastDateRead: 2370620111
+      lastDateWritten: 2369578970
+      dateCreatedStr: 1985-04-30 14:22:35
+      lastDateReadStr: 1985-05-06 12:43:15
+      lastDateWrittenStr: 1985-04-30 14:31:26
+      bpunValid: null
+    - name: ISAM-INTER-I00:PROG
+      type: PROG
+      pages: 50
+      bytes: 100864
+      userName: FLOPPY-USER
+      dateCreated: 2369582659
+      lastDateRead: 2370620160
+      lastDateWritten: 2369583063
+      dateCreatedStr: 1985-04-30 15:25:03
+      lastDateReadStr: 1985-05-06 12:44:00
+      lastDateWrittenStr: 1985-04-30 15:31:23
+      bpunValid: null
+    - name: VTM-BRIDGE-1-H00:BRF
+      type: BRF
+      pages: 35
+      bytes: 70395
+      userName: FLOPPY-USER
+      dateCreated: 2370613748
+      lastDateRead: 2370620215
+      lastDateWritten: 2370613819
+      dateCreatedStr: 1985-05-06 11:07:52
+      lastDateReadStr: 1985-05-06 12:44:55
+      lastDateWrittenStr: 1985-05-06 11:08:59
+      bpunValid: null
+    - name: VTM-BRIDGE-2-H00:BRF
+      type: BRF
+      pages: 36
+      bytes: 73363
+      userName: FLOPPY-USER
+      dateCreated: 2370613765
+      lastDateRead: 2370620239
+      lastDateWritten: 2370613856
+      dateCreatedStr: 1985-05-06 11:08:05
+      lastDateReadStr: 1985-05-06 12:45:15
+      lastDateWrittenStr: 1985-05-06 11:09:32
+      bpunValid: null
+    - name: VTM-BRIDGE-1-H00:MODE
+      type: MODE
+      pages: 1
+      bytes: 527
+      userName: FLOPPY-USER
+      dateCreated: 2370613775
+      lastDateRead: 2370636616
+      lastDateWritten: 2370636063
+      dateCreatedStr: 1985-05-06 11:08:15
+      lastDateReadStr: 1985-05-06 16:45:08
+      lastDateWrittenStr: 1985-05-06 16:36:31
+      bpunValid: null
+    - name: VTM-BRIDGE-2-H00:MODE
+      type: MODE
+      pages: 1
+      bytes: 527
+      userName: FLOPPY-USER
+      dateCreated: 2370613779
+      lastDateRead: 2370637158
+      lastDateWritten: 2370636301
+      dateCreatedStr: 1985-05-06 11:08:19
+      lastDateReadStr: 1985-05-06 16:53:38
+      lastDateWrittenStr: 1985-05-06 16:40:13
+      bpunValid: null
+provenance:
+  contributor: paal
+  originalPath: good/8_nd_f17b_10176h00-d_fe.img
+  dateImaged: 2023-10-20
+  importedAt: 2026-08-17T14:19:56.507Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10176-h00-d1-58a521d4
+  syncStatus: pending

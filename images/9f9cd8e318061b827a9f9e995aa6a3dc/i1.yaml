@@ -1,0 +1,74 @@
+id: img-9f9cd8e31806
+volumeName: null
+md5: 9f9cd8e318061b827a9f9e995aa6a3dc
+product:
+  id: ND-30211
+  version: A00
+  diskNumber: 1
+image:
+  sizeBytes: 737280
+  format: raw
+  controller: floppy
+filesystem: dos
+volumeLabel: 30211NO1A00
+dosFiles:
+  - path: INSTALL.EXE
+    bytes: 51600
+    modified: 1990-11-13 10:26
+    directory: false
+  - path: BIN
+    bytes: 0
+    modified: 1990-11-14 20:05
+    directory: true
+  - path: BIN/LPT2SPR.SYS
+    bytes: 688
+    modified: 1990-11-15 16:46
+    directory: false
+  - path: BIN/SPRINT.SYS
+    bytes: 3077
+    modified: 1990-11-15 16:46
+    directory: false
+  - path: BIN/SETUP.BIN
+    bytes: 68736
+    modified: 1990-11-13 10:28
+    directory: false
+  - path: BIN/SPRINT.EXE
+    bytes: 53248
+    modified: 1990-11-14 13:14
+    directory: false
+  - path: BIN/NDSELSPR.EXE
+    bytes: 26736
+    modified: 1990-11-14 14:24
+    directory: false
+  - path: BIN/INSTMAIN.EXE
+    bytes: 48160
+    modified: 1990-11-13 10:27
+    directory: false
+  - path: BIN/INFO.TXT
+    bytes: 79
+    modified: 1990-10-10 12:35
+    directory: false
+  - path: BIN/INFOPRIV.TXT
+    bytes: 569
+    modified: 1990-10-10 12:39
+    directory: false
+provenance:
+  contributor: ronny
+  originalPath: winprint/i1.img
+  dateImaged: 2024-09-17
+  importedAt: 2026-08-17T14:22:48.847Z
+imagingLogs:
+  - i1.log
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-9f9cd8e31806
+  syncStatus: pending

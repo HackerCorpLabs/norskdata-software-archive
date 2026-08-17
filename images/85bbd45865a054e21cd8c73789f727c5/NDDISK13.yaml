@@ -1,0 +1,41 @@
+id: img-85bbd45865a0
+volumeName: null
+md5: 85bbd45865a054e21cd8c73789f727c5
+image:
+  sizeBytes: 61440
+  format: raw
+  controller: floppy
+filesystem: ndfs
+condition:
+  status: damaged
+  parser: ndfs
+  parserError: Block 151 out of range
+  ndNamesFound: 15
+  ndNameSamples:
+    - SYMBOL-1-LIST:SYMB
+    - SYMBOL-2-LIST:SYMB
+    - FILSYS-SYMBOLS:SYMB
+    - LIBRARY-MARKS:SYMB
+    - FMAC:PROG
+    - DMAC:BPUN
+    - F32-FMAC:PROG
+    - DMAC-1915E:BPUN
+  recovery: null
+provenance:
+  contributor: Datormuseum
+  originalPath: DiskImages/NDDISK13.img
+  dateImaged: 2023-10-02
+  importedAt: 2026-08-17T14:18:18.746Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-85bbd45865a0
+  syncStatus: pending

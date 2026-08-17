@@ -1,0 +1,74 @@
+id: nd-10536-c00-d1-674e0780
+volumeName: 10536C00-1D
+md5: 674e0780a9837536110ee3775a2987bd
+product:
+  id: ND-10536
+  version: C00
+  diskNumber: 1
+image:
+  sizeBytes: 1261568
+  format: raw
+  controller: floppy
+  totalPages: 616
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 100
+  files:
+    - name: COB-GEN-C00:PROG
+      type: PROG
+      pages: 38
+      bytes: 155648
+      userName: FLOPPY-USER
+      dateCreated: 2371139673
+      lastDateRead: 2371148130
+      lastDateWritten: 2371140264
+      dateCreatedStr: 1985-05-10 11:33:25
+      lastDateReadStr: 1985-05-10 13:37:34
+      lastDateWrittenStr: 1985-05-10 11:42:40
+      bpunValid: null
+    - name: UE-ERMSG-EN-B00:ERR
+      type: ERR
+      pages: 41
+      bytes: 82688
+      userName: FLOPPY-USER
+      dateCreated: 2355027998
+      lastDateRead: 2371147585
+      lastDateWritten: 2355028001
+      dateCreatedStr: 1985-01-15 14:00:30
+      lastDateReadStr: 1985-05-10 13:29:01
+      lastDateWrittenStr: 1985-01-15 14:00:33
+      bpunValid: null
+    - name: DDBTABLES-E00:VTM
+      type: VTM
+      pages: 17
+      bytes: 19020
+      userName: FLOPPY-USER
+      dateCreated: 2355028136
+      lastDateRead: 2371147636
+      lastDateWritten: 2365933594
+      dateCreatedStr: 1985-01-15 14:02:40
+      lastDateReadStr: 1985-05-10 13:29:52
+      lastDateWrittenStr: 1985-04-02 20:32:26
+      bpunValid: null
+provenance:
+  contributor: paal
+  originalPath: good/8_nd_f17b_10535c00-xx-1d_fe.img
+  dateImaged: 2023-10-20
+  importedAt: 2026-08-17T14:19:56.746Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10536-c00-d1-674e0780
+  syncStatus: pending

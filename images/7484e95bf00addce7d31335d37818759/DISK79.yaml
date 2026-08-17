@@ -1,0 +1,88 @@
+id: img-7484e95bf00a
+volumeName: null
+md5: 7484e95bf00addce7d31335d37818759
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+filesystem: backup
+backupSet:
+  kind: backup
+  name: PANG
+  label: BELI-UNIQUE
+  runDate: 1985-02-18
+  system: ""
+  fileCount: 8
+  staleCount: 0
+  firstFile: FIL-VIS-3:PROG
+  lastFile: PANGBAS:LOGG
+  endsMidFile: true
+  fileListHash: 5bdd44c9
+  imageBytes: 315392
+backupFiles:
+  - name: FIL-VIS-3:PROG
+    bytes: 111616
+    created: 1985-02-18
+    system: null
+    continued: false
+    stale: false
+  - name: FIL-VIS:PROG
+    bytes: 62464
+    created: 1985-02-18
+    system: null
+    continued: false
+    stale: false
+  - name: PANGBAS:SYMB
+    bytes: 5120
+    created: 1985-02-18
+    system: null
+    continued: false
+    stale: false
+  - name: PANGBAS:LIST
+    bytes: 17408
+    created: 1985-02-18
+    system: null
+    continued: false
+    stale: false
+  - name: PANGBAS:DATA
+    bytes: 28160
+    created: 1985-02-18
+    system: null
+    continued: false
+    stale: false
+  - name: PANGDATA:DATA
+    bytes: 43008
+    created: 1985-02-18
+    system: null
+    continued: false
+    stale: false
+  - name: PANGBAS:RPRT
+    bytes: 21504
+    created: 1985-02-18
+    system: null
+    continued: false
+    stale: false
+  - name: PANGBAS:LOGG
+    bytes: 14336
+    created: 1985-02-18
+    system: null
+    continued: true
+    stale: false
+provenance:
+  contributor: Datormuseum
+  originalPath: DiskImages2/DISK79.img
+  dateImaged: 2023-10-02
+  importedAt: 2026-08-17T14:19:46.608Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-7484e95bf00a
+  syncStatus: pending

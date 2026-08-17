@@ -1,0 +1,41 @@
+id: img-0afe82b547b6
+volumeName: null
+md5: 0afe82b547b68bc2e12ec4cf3a6aa401
+image:
+  sizeBytes: 1253376
+  format: raw
+  controller: floppy
+filesystem: ndfs
+condition:
+  status: damaged
+  parser: ndfs
+  parserError: Block 134154311 out of range
+  ndNamesFound: 27
+  ndNameSamples:
+    - V00A-FOR:SCRA
+    - ISAM-DUMP:DUMP
+    - RXWX90ISAMRT90:ISAM
+    - PHP:PHP
+    - ISAM-INTER-K:COMM
+    - OS-CONNECT-TO:PROG
+    - UHU:PHT
+    - JHN:EHM
+  recovery: null
+provenance:
+  contributor: paal
+  originalPath: bad/8_nd_f17b_210176-j01-xx-01d_fe.img
+  dateImaged: 2023-10-20
+  importedAt: 2026-08-17T14:19:53.775Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-0afe82b547b6
+  syncStatus: pending

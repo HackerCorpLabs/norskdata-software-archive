@@ -1,0 +1,166 @@
+id: img-e47e944e1fb1
+volumeName: N-220046K03--02D
+md5: e47e944e1fb155f9b555da5511031dd1
+image:
+  sizeBytes: 1261568
+  format: raw
+  controller: floppy
+  totalPages: 616
+  pageSize: 2048
+  bootFormat: flomon
+filesystem: ndfs
+ndfs:
+  users:
+    - name: SYSTEM
+      pagesUsed: 223
+  files:
+    - name: NEW-SYSTEM:PROG
+      type: PROG
+      pages: 21
+      bytes: 43008
+      userName: SYSTEM
+      dateCreated: 2521876708
+      lastDateRead: 2521876716
+      lastDateWritten: 2521876716
+      dateCreatedStr: 1987-09-08 12:35:36
+      lastDateReadStr: 1987-09-08 12:35:44
+      lastDateWrittenStr: 1987-09-08 12:35:44
+      bpunValid: null
+    - name: DMAC-1915F:BPUN
+      type: BPUN
+      pages: 19
+      bytes: 37000
+      userName: SYSTEM
+      dateCreated: 2521876712
+      lastDateRead: 2521876721
+      lastDateWritten: 2521876721
+      dateCreatedStr: 1987-09-08 12:35:40
+      lastDateReadStr: 1987-09-08 12:35:49
+      lastDateWrittenStr: 1987-09-08 12:35:49
+      bpunValid: true
+    - name: F32-FMAC-1920C:PROG
+      type: PROG
+      pages: 15
+      bytes: 28791
+      userName: SYSTEM
+      dateCreated: 2521876712
+      lastDateRead: 2521876725
+      lastDateWritten: 2521876725
+      dateCreatedStr: 1987-09-08 12:35:40
+      lastDateReadStr: 1987-09-08 12:35:53
+      lastDateWrittenStr: 1987-09-08 12:35:53
+      bpunValid: null
+    - name: F48-FMAC-1408D:PROG
+      type: PROG
+      pages: 15
+      bytes: 28791
+      userName: SYSTEM
+      dateCreated: 2521876713
+      lastDateRead: 2521876729
+      lastDateWritten: 2521876729
+      dateCreatedStr: 1987-09-08 12:35:41
+      lastDateReadStr: 1987-09-08 12:35:57
+      lastDateWrittenStr: 1987-09-08 12:35:57
+      bpunValid: null
+    - name: FILSYS-SYMBOLS:SYMB
+      type: SYMB
+      pages: 21
+      bytes: 41192
+      userName: SYSTEM
+      dateCreated: 2521876713
+      lastDateRead: 2521876736
+      lastDateWritten: 2521876736
+      dateCreatedStr: 1987-09-08 12:35:41
+      lastDateReadStr: 1987-09-08 12:36:00
+      lastDateWrittenStr: 1987-09-08 12:36:00
+      bpunValid: null
+    - name: RTLO-SYMBOLS:SYMB
+      type: SYMB
+      pages: 24
+      bytes: 47898
+      userName: SYSTEM
+      dateCreated: 2521876714
+      lastDateRead: 2521876741
+      lastDateWritten: 2521876741
+      dateCreatedStr: 1987-09-08 12:35:42
+      lastDateReadStr: 1987-09-08 12:36:05
+      lastDateWrittenStr: 1987-09-08 12:36:05
+      bpunValid: null
+    - name: COS-TADADM:BPUN
+      type: BPUN
+      pages: 4
+      bytes: 8035
+      userName: SYSTEM
+      dateCreated: 2521876715
+      lastDateRead: 2521876747
+      lastDateWritten: 2521876747
+      dateCreatedStr: 1987-09-08 12:35:43
+      lastDateReadStr: 1987-09-08 12:36:11
+      lastDateWrittenStr: 1987-09-08 12:36:11
+      bpunValid: true
+    - name: LIBRARY-MARKS:SYMB
+      type: SYMB
+      pages: 7
+      bytes: 12856
+      userName: SYSTEM
+      dateCreated: 2521876749
+      lastDateRead: 2521876752
+      lastDateWritten: 2521876752
+      dateCreatedStr: 1987-09-08 12:36:13
+      lastDateReadStr: 1987-09-08 12:36:16
+      lastDateWrittenStr: 1987-09-08 12:36:16
+      bpunValid: null
+    - name: SYMBOL-1-LIST:SYMB
+      type: SYMB
+      pages: 38
+      bytes: 75980
+      userName: SYSTEM
+      dateCreated: 2521876750
+      lastDateRead: 2521876754
+      lastDateWritten: 2521876754
+      dateCreatedStr: 1987-09-08 12:36:14
+      lastDateReadStr: 1987-09-08 12:36:18
+      lastDateWrittenStr: 1987-09-08 12:36:18
+      bpunValid: null
+    - name: SYMBOL-2-LIST:SYMB
+      type: SYMB
+      pages: 26
+      bytes: 52756
+      userName: SYSTEM
+      dateCreated: 2521876750
+      lastDateRead: 2521876763
+      lastDateWritten: 2521876763
+      dateCreatedStr: 1987-09-08 12:36:14
+      lastDateReadStr: 1987-09-08 12:36:27
+      lastDateWrittenStr: 1987-09-08 12:36:27
+      bpunValid: null
+    - name: N500-SYMBOLS:SYMB
+      type: SYMB
+      pages: 32
+      bytes: 63970
+      userName: SYSTEM
+      dateCreated: 2521876751
+      lastDateRead: 2521876770
+      lastDateWritten: 2521876770
+      dateCreatedStr: 1987-09-08 12:36:15
+      lastDateReadStr: 1987-09-08 12:36:34
+      lastDateWrittenStr: 1987-09-08 12:36:34
+      bpunValid: null
+provenance:
+  contributor: ronny
+  originalPath: ND-220046K03/n-220046k03--02d.img
+  dateImaged: 2022-09-24
+  importedAt: 2026-08-17T14:20:03.465Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-e47e944e1fb1
+  syncStatus: pending

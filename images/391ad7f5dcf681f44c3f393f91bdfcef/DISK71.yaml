@@ -1,0 +1,135 @@
+id: img-391ad7f5dcf6
+volumeName: null
+md5: 391ad7f5dcf681f44c3f393f91bdfcef
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+filesystem: ndfs
+condition:
+  status: damaged
+  parser: ndfs
+  parserError: Invalid NDFS master block
+  ndNamesFound: 16
+  ndNameSamples:
+    - PLANC-TEST:PLNC
+    - VHV:VHN
+    - AHA:AXAL
+    - USERS:LIST
+    - LX6VV:VK
+    - PJP:NJO
+    - LJN:JJM
+    - LJL:JJK
+  recovery:
+    status: recovered
+    layout:
+      object: 150
+      user: 152
+      bit: 77
+    filesRecovered: 10
+    namesConfirmedInBytes: 10
+    confirmRatio: 1
+    acceptedBy: own-bytes
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 115
+  files:
+    - name: CONFIGURATION-B
+      type: BPUN
+      pages: 0
+      bytes: 0
+      userName: FLOPPY-USER
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: DIMS-1453G
+      type: BPUN
+      pages: 0
+      bytes: 0
+      userName: FLOPPY-USER
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: DISC-TEMA-F
+      type: BPUN
+      pages: 0
+      bytes: 0
+      userName: FLOPPY-USER
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: FL-LOOPS-1996A
+      type: BPUN
+      pages: 0
+      bytes: 0
+      userName: FLOPPY-USER
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: FLOPP-FORM-1990B
+      type: BPUN
+      pages: 0
+      bytes: 0
+      userName: FLOPPY-USER
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: FLOPPY-FU-1986G
+      type: BPUN
+      pages: 0
+      bytes: 0
+      userName: FLOPPY-USER
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: FLOPPY-RAN-1988B
+      type: BPUN
+      pages: 0
+      bytes: 0
+      userName: FLOPPY-USER
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: MULTI-1820P
+      type: BPUN
+      pages: 0
+      bytes: 0
+      userName: FLOPPY-USER
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: SUPER-RAND-2222D
+      type: BPUN
+      pages: 0
+      bytes: 0
+      userName: FLOPPY-USER
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: TERMINAL-ASYNC-D
+      type: BPUN
+      pages: 0
+      bytes: 0
+      userName: FLOPPY-USER
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+provenance:
+  contributor: Datormuseum
+  originalPath: DiskImages2/DISK71.img
+  dateImaged: 2023-10-02
+  importedAt: 2026-08-17T14:19:39.278Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-391ad7f5dcf6
+  syncStatus: pending

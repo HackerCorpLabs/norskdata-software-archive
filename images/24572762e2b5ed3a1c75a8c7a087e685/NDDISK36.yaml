@@ -1,0 +1,70 @@
+id: img-24572762e2b5
+volumeName: ND-10079K-SWE-2
+md5: 24572762e2b5ed3a1c75a8c7a087e685
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: flomon
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 73
+  files:
+    - name: NOTIS-TF-SWE-K:BPUN
+      type: BPUN
+      pages: 49
+      bytes: 98678
+      userName: FLOPPY-USER
+      dateCreated: 2295141092
+      lastDateRead: 2281702701
+      lastDateWritten: 2295141092
+      dateCreatedStr: 1984-03-06 17:11:36
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-03-06 17:11:36
+      bpunValid: true
+    - name: NOTIS-TF-SWE-K:LIB
+      type: LIB
+      pages: 21
+      bytes: 34141
+      userName: FLOPPY-USER
+      dateCreated: 2292747962
+      lastDateRead: 2281702726
+      lastDateWritten: 2293561810
+      dateCreatedStr: 1984-02-20 08:58:58
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-02-26 15:39:18
+      bpunValid: null
+    - name: DIRECTORY:TEST
+      type: TEST
+      pages: 0
+      bytes: 4294967296
+      userName: FLOPPY-USER
+      dateCreated: 2292781639
+      lastDateRead: 2281702699
+      lastDateWritten: null
+      dateCreatedStr: 1984-02-20 17:09:07
+      lastDateReadStr: null
+      lastDateWrittenStr: null
+      bpunValid: null
+provenance:
+  contributor: Datormuseum
+  originalPath: DiskImages/NDDISK36.img
+  dateImaged: 2023-10-02
+  importedAt: 2026-08-17T14:18:59.305Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-24572762e2b5
+  syncStatus: pending

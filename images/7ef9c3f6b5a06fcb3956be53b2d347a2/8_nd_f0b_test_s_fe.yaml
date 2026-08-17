@@ -1,0 +1,46 @@
+id: img-7ef9c3f6b5a0
+volumeName: ND
+md5: 7ef9c3f6b5a06fcb3956be53b2d347a2
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 123
+  files:
+    - name: COBOL-LIB-H02:NRF
+      type: NRF
+      pages: 121
+      bytes: 246838
+      userName: FLOPPY-USER
+      dateCreated: 2377579439
+      lastDateRead: 2377702879
+      lastDateWritten: 2377579672
+      dateCreatedStr: 1985-06-27 15:46:47
+      lastDateReadStr: 1985-06-28 13:55:31
+      lastDateWrittenStr: 1985-06-27 15:50:24
+      bpunValid: null
+provenance:
+  contributor: paal
+  originalPath: good/8_nd_f0b_test_s_fe.img
+  dateImaged: 2023-10-20
+  importedAt: 2026-08-17T14:19:56.292Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-7ef9c3f6b5a0
+  syncStatus: pending

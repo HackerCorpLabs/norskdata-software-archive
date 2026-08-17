@@ -1,0 +1,45 @@
+id: img-a02f0304dd0d
+volumeName: null
+md5: a02f0304dd0dcf3346a23d3ff898ff96
+image:
+  sizeBytes: 1260544
+  format: raw
+  controller: floppy
+filesystem: ndfs
+condition:
+  status: damaged
+  parser: ndfs
+  parserError: Block 268456018 out of range
+  ndNamesFound: 60
+  ndNameSamples:
+    - II-2:II
+    - PACK-ONE:SETE
+    - COM-LEXICAL-B:SYMB
+    - DOKUMENT-NAVN:PICT
+    - MINE-TASTER:BDT
+    - NOTIS-WP-NO-N:HELP
+    - NOTIS-TF-NO-N:LIB
+    - FIL-NAVN:OUT
+  recovery: null
+provenance:
+  contributor: paal
+  originalPath: 5.25/sprint1.img
+  dateImaged: 2023-10-23
+  importedAt: 2026-08-17T14:19:53.615Z
+imagingLogs:
+  - cob1.log
+  - sprint2.log
+  - sprint1.log
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-a02f0304dd0d
+  syncStatus: pending

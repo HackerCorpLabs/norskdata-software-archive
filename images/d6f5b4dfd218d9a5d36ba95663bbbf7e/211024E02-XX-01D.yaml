@@ -1,0 +1,75 @@
+id: nd-211024-e02-d1-d6f5b4df
+volumeName: 211024E02-XX-01D
+md5: d6f5b4dfd218d9a5d36ba95663bbbf7e
+product:
+  id: ND-211024
+  version: E02
+  diskNumber: 1
+  language: XX
+image:
+  sizeBytes: 1261568
+  format: raw
+  controller: floppy
+  totalPages: 616
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 152
+  files:
+    - name: S3-CONFIG-E01:PROG
+      type: PROG
+      pages: 89
+      bytes: 202752
+      userName: FLOPPY-USER
+      dateCreated: 2567767626
+      lastDateRead: 2630013396
+      lastDateWritten: 2587162343
+      dateCreatedStr: 1988-04-06 16:25:10
+      lastDateReadStr: 1989-03-01 13:07:20
+      lastDateWrittenStr: 1988-08-26 15:27:39
+      bpunValid: null
+    - name: NOTS-SERVICE-C01:PROG
+      type: PROG
+      pages: 43
+      bytes: 88064
+      userName: FLOPPY-USER
+      dateCreated: 2626762199
+      lastDateRead: 2627011193
+      lastDateWritten: 2626762199
+      dateCreatedStr: 1989-02-08 19:23:23
+      lastDateReadStr: 1989-02-10 16:09:57
+      lastDateWrittenStr: 1989-02-08 19:23:23
+      bpunValid: null
+    - name: DDBTABLES-E09:VTM
+      type: VTM
+      pages: 16
+      bytes: 32598
+      userName: FLOPPY-USER
+      dateCreated: 2557914459
+      lastDateRead: 2628988514
+      lastDateWritten: 2563015813
+      dateCreatedStr: 1988-01-27 10:53:27
+      lastDateReadStr: 1989-02-25 18:57:34
+      lastDateWrittenStr: 1988-03-02 08:18:05
+      bpunValid: null
+provenance:
+  contributor: ronny
+  originalPath: 211024E02 SINTRAN III Configuration program/211024E02-XX-01D.IMG
+  dateImaged: 2023-10-03
+  importedAt: 2026-08-17T14:20:00.305Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-211024-e02-d1-d6f5b4df
+  syncStatus: pending

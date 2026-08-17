@@ -1,0 +1,122 @@
+id: nd-10177-h00-d1-687fb037
+volumeName: 10177H00-1S
+md5: 687fb0375b19b9badbe05ef29e49be86
+product:
+  id: ND-10177
+  version: H00
+  diskNumber: 1
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 147
+  files:
+    - name: COBOL-500-H00:PSEG
+      type: PSEG
+      pages: 85
+      bytes: 172735
+      userName: FLOPPY-USER
+      dateCreated: 2370751964
+      lastDateRead: 2370755079
+      lastDateWritten: 2370752116
+      dateCreatedStr: 1985-05-07 12:55:28
+      lastDateReadStr: 1985-05-07 13:40:07
+      lastDateWrittenStr: 1985-05-07 12:57:52
+      bpunValid: null
+    - name: COBOL-500-H00:DSEG
+      type: DSEG
+      pages: 43
+      bytes: 343997
+      userName: FLOPPY-USER
+      dateCreated: 2370751978
+      lastDateRead: 2370755080
+      lastDateWritten: 2370752116
+      dateCreatedStr: 1985-05-07 12:55:42
+      lastDateReadStr: 1985-05-07 13:40:08
+      lastDateWrittenStr: 1985-05-07 12:57:52
+      bpunValid: null
+    - name: COBOL-500-H00:LINK
+      type: LINK
+      pages: 6
+      bytes: 11361
+      userName: FLOPPY-USER
+      dateCreated: 2370751987
+      lastDateRead: 2370755080
+      lastDateWritten: 2370752116
+      dateCreatedStr: 1985-05-07 12:55:51
+      lastDateReadStr: 1985-05-07 13:40:08
+      lastDateWrittenStr: 1985-05-07 12:57:52
+      bpunValid: null
+    - name: SCRATCH-SEG-01:PSEG
+      type: PSEG
+      pages: 1
+      bytes: 5
+      userName: FLOPPY-USER
+      dateCreated: 2370752011
+      lastDateRead: 2370752086
+      lastDateWritten: 2370752086
+      dateCreatedStr: 1985-05-07 12:56:11
+      lastDateReadStr: 1985-05-07 12:57:22
+      lastDateWrittenStr: 1985-05-07 12:57:22
+      bpunValid: null
+    - name: SCRATCH-SEG-01:DSEG
+      type: DSEG
+      pages: 1
+      bytes: 1029
+      userName: FLOPPY-USER
+      dateCreated: 2370752019
+      lastDateRead: 2370752100
+      lastDateWritten: 2370752086
+      dateCreatedStr: 1985-05-07 12:56:19
+      lastDateReadStr: 1985-05-07 12:57:36
+      lastDateWrittenStr: 1985-05-07 12:57:22
+      bpunValid: null
+    - name: SCRATCH-SEG-01:LINK
+      type: LINK
+      pages: 1
+      bytes: 1
+      userName: FLOPPY-USER
+      dateCreated: 2370752028
+      lastDateRead: 2370752085
+      lastDateWritten: 2370752085
+      dateCreatedStr: 1985-05-07 12:56:28
+      lastDateReadStr: 1985-05-07 12:57:21
+      lastDateWrittenStr: 1985-05-07 12:57:21
+      bpunValid: null
+    - name: DESCRIPTION-FILE:DESC
+      type: DESC
+      pages: 8
+      bytes: 22528
+      userName: FLOPPY-USER
+      dateCreated: 2370752067
+      lastDateRead: 2370755053
+      lastDateWritten: 2370752174
+      dateCreatedStr: 1985-05-07 12:57:03
+      lastDateReadStr: 1985-05-07 13:39:45
+      lastDateWrittenStr: 1985-05-07 12:58:46
+      bpunValid: null
+provenance:
+  contributor: paal
+  originalPath: good/8_nd_f0b_10177h00-1s_fe.img
+  dateImaged: 2023-10-20
+  importedAt: 2026-08-17T14:19:55.667Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10177-h00-d1-687fb037
+  syncStatus: pending

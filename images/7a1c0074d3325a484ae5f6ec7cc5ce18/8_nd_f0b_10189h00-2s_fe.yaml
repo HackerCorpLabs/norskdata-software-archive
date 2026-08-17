@@ -1,0 +1,86 @@
+id: nd-10189-h00-d2-7a1c0074
+volumeName: 10189H00-2S
+md5: 7a1c0074d3325a484ae5f6ec7cc5ce18
+product:
+  id: ND-10189
+  version: H00
+  diskNumber: 2
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 137
+  files:
+    - name: ISAMRT-I00:MODE
+      type: MODE
+      pages: 3
+      bytes: 2802
+      userName: FLOPPY-USER
+      dateCreated: 2320025031
+      lastDateRead: 2371529224
+      lastDateWritten: 2369585749
+      dateCreatedStr: 1984-09-04 12:23:07
+      lastDateReadStr: 1985-05-13 10:40:08
+      lastDateWrittenStr: 1985-04-30 16:09:21
+      bpunValid: null
+    - name: ISAMRT-I00:BRF
+      type: BRF
+      pages: 14
+      bytes: 28443
+      userName: FLOPPY-USER
+      dateCreated: 2369447781
+      lastDateRead: 2371529235
+      lastDateWritten: 2369447972
+      dateCreatedStr: 1985-04-29 14:29:37
+      lastDateReadStr: 1985-05-13 10:40:19
+      lastDateWrittenStr: 1985-04-29 14:32:36
+      bpunValid: null
+    - name: ISAM-SERVICE-I00:PROG
+      type: PROG
+      pages: 65
+      bytes: 133120
+      userName: FLOPPY-USER
+      dateCreated: 2369578403
+      lastDateRead: 2371530898
+      lastDateWritten: 2369578970
+      dateCreatedStr: 1985-04-30 14:22:35
+      lastDateReadStr: 1985-05-13 11:02:18
+      lastDateWrittenStr: 1985-04-30 14:31:26
+      bpunValid: null
+    - name: ISAM-INTER-I00:PROG
+      type: PROG
+      pages: 50
+      bytes: 100864
+      userName: FLOPPY-USER
+      dateCreated: 2369582659
+      lastDateRead: 2371529345
+      lastDateWritten: 2369583063
+      dateCreatedStr: 1985-04-30 15:25:03
+      lastDateReadStr: 1985-05-13 10:42:01
+      lastDateWrittenStr: 1985-04-30 15:31:23
+      bpunValid: null
+provenance:
+  contributor: paal
+  originalPath: good/8_nd_f0b_10189h00-2s_fe.img
+  dateImaged: 2023-10-20
+  importedAt: 2026-08-17T14:19:55.976Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10189-h00-d2-7a1c0074
+  syncStatus: pending

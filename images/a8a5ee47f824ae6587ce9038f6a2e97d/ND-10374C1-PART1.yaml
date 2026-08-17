@@ -1,0 +1,114 @@
+id: nd-10374-c1-d1-a8a5ee47
+volumeName: ND-10374C1-PART1
+md5: a8a5ee47f824ae6587ce9038f6a2e97d
+product:
+  version: C1
+  diskNumber: 1
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: SYSTEM
+      pagesUsed: 139
+  files:
+    - name: COS-CONNECT-TO:PROG
+      type: PROG
+      pages: 64
+      bytes: 313344
+      userName: SYSTEM
+      dateCreated: 2324336132
+      lastDateRead: 2326846540
+      lastDateWritten: 2326846409
+      dateCreatedStr: 1984-10-05 08:56:04
+      lastDateReadStr: 1984-10-24 13:49:12
+      lastDateWrittenStr: 1984-10-24 13:47:09
+      bpunValid: null
+    - name: COS-FILE-TRANS:PROG
+      type: PROG
+      pages: 37
+      bytes: 74752
+      userName: SYSTEM
+      dateCreated: 2324336136
+      lastDateRead: 2324336345
+      lastDateWritten: 2324336138
+      dateCreatedStr: 1984-10-05 08:56:08
+      lastDateReadStr: 1984-10-05 08:59:25
+      lastDateWrittenStr: 1984-10-05 08:56:10
+      bpunValid: null
+    - name: COS-COSPO-C01:BPUN
+      type: BPUN
+      pages: 19
+      bytes: 29046
+      userName: SYSTEM
+      dateCreated: 2324336169
+      lastDateRead: null
+      lastDateWritten: 2356734285
+      dateCreatedStr: 1984-10-05 08:56:41
+      lastDateReadStr: null
+      lastDateWrittenStr: 1985-01-28 14:37:13
+      bpunValid: true
+    - name: COS-SPOOL-SERVIC:PROG
+      type: PROG
+      pages: 10
+      bytes: 19968
+      userName: SYSTEM
+      dateCreated: 2324336196
+      lastDateRead: 2324336230
+      lastDateWritten: 2324336198
+      dateCreatedStr: 1984-10-05 08:57:04
+      lastDateReadStr: 1984-10-05 08:57:38
+      lastDateWrittenStr: 1984-10-05 08:57:06
+      bpunValid: null
+    - name: COS-LOAD-COSPO:MODE
+      type: MODE
+      pages: 1
+      bytes: 602
+      userName: SYSTEM
+      dateCreated: 2324336213
+      lastDateRead: null
+      lastDateWritten: 2324336214
+      dateCreatedStr: 1984-10-05 08:57:21
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-10-05 08:57:22
+      bpunValid: null
+    - name: COS-DEFINE-PRINT:MODE
+      type: MODE
+      pages: 1
+      bytes: 1251
+      userName: SYSTEM
+      dateCreated: 2324339393
+      lastDateRead: null
+      lastDateWritten: 2324339394
+      dateCreatedStr: 1984-10-05 09:43:01
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-10-05 09:43:02
+      bpunValid: null
+provenance:
+  contributor: ronny
+  originalPath: ND-10374C COSMOS Basic Module/ND-10374C1-PART1.img
+  dateImaged: 2024-09-17
+  importedAt: 2026-08-17T14:20:00.096Z
+imagingLogs:
+  - ND-10374C1-PART1.log
+photos:
+  disk: []
+  set:
+    - ND-10374C-PART2-PHOTO.png
+    - ND-10374C-PART3-PHOTO.png
+    - ND-10374C1-PART1-PHOTO.png
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10374-c1-d1-a8a5ee47
+  syncStatus: pending

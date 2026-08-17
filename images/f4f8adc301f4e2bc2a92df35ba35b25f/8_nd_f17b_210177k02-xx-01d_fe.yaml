@@ -1,0 +1,46 @@
+id: img-f4f8adc301f4
+volumeName: null
+md5: f4f8adc301f4e2bc2a92df35ba35b25f
+image:
+  sizeBytes: 1261568
+  format: raw
+  controller: floppy
+filesystem: backup
+backupSet:
+  kind: backup
+  name: KON
+  label: SYSTEM
+  runDate: 1986-06-13
+  system: SINTRAN III J
+  fileCount: 1
+  staleCount: 0
+  firstFile: OPPHOLD:DATA
+  lastFile: OPPHOLD:DATA
+  endsMidFile: false
+  fileListHash: 6bddd877
+  imageBytes: 1261568
+backupFiles:
+  - name: OPPHOLD:DATA
+    bytes: 960512
+    created: 1986-06-13
+    system: SINTRAN III J
+    continued: false
+    stale: false
+provenance:
+  contributor: paal
+  originalPath: bad/8_nd_f17b_210177k02-xx-01d_fe.img
+  dateImaged: 2023-10-20
+  importedAt: 2026-08-17T14:19:54.262Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-f4f8adc301f4
+  syncStatus: pending

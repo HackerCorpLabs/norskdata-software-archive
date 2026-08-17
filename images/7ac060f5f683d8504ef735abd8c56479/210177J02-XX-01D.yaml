@@ -1,0 +1,199 @@
+id: nd-210177-j02-d1-7ac060f5
+volumeName: 210177J02-XX-01D
+md5: 7ac060f5f683d8504ef735abd8c56479
+product:
+  id: ND-210177
+  version: J02
+  diskNumber: 1
+  language: XX
+image:
+  sizeBytes: 1260544
+  format: raw
+  controller: floppy
+  totalPages: 616
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 453
+  files:
+    - name: DESCRIPTION-FILE:DESC
+      type: DESC
+      pages: 8
+      bytes: 22528
+      userName: FLOPPY-USER
+      dateCreated: 2536204014
+      lastDateRead: 2562361554
+      lastDateWritten: 2560167522
+      dateCreatedStr: 1987-12-21 22:27:46
+      lastDateReadStr: 1988-02-29 08:35:18
+      lastDateWrittenStr: 1988-02-12 16:57:34
+      bpunValid: null
+    - name: SCRATCH-SEG-01:LINK
+      type: LINK
+      pages: 0
+      bytes: 4294967296
+      userName: FLOPPY-USER
+      dateCreated: 2536204022
+      lastDateRead: 2536204024
+      lastDateWritten: 2536204024
+      dateCreatedStr: 1987-12-21 22:27:54
+      lastDateReadStr: 1987-12-21 22:27:56
+      lastDateWrittenStr: 1987-12-21 22:27:56
+      bpunValid: null
+    - name: SCRATCH-SEG-01:DSEG
+      type: DSEG
+      pages: 1
+      bytes: 1029
+      userName: FLOPPY-USER
+      dateCreated: 2536204024
+      lastDateRead: 2536204043
+      lastDateWritten: 2536204026
+      dateCreatedStr: 1987-12-21 22:27:56
+      lastDateReadStr: 1987-12-21 22:28:11
+      lastDateWrittenStr: 1987-12-21 22:27:58
+      bpunValid: null
+    - name: SCRATCH-SEG-01:PSEG
+      type: PSEG
+      pages: 1
+      bytes: 5
+      userName: FLOPPY-USER
+      dateCreated: 2536204026
+      lastDateRead: 2536204027
+      lastDateWritten: 2536204027
+      dateCreatedStr: 1987-12-21 22:27:58
+      lastDateReadStr: 1987-12-21 22:27:59
+      lastDateWrittenStr: 1987-12-21 22:27:59
+      bpunValid: null
+    - name: COBOL-500-J02:LINK
+      type: LINK
+      pages: 8
+      bytes: 14529
+      userName: FLOPPY-USER
+      dateCreated: 2536204049
+      lastDateRead: 2562361560
+      lastDateWritten: 2536204050
+      dateCreatedStr: 1987-12-21 22:28:17
+      lastDateReadStr: 1988-02-29 08:35:24
+      lastDateWrittenStr: 1987-12-21 22:28:18
+      bpunValid: null
+    - name: COBOL-500-J02:DSEG
+      type: DSEG
+      pages: 49
+      bytes: 612853
+      userName: FLOPPY-USER
+      dateCreated: 2536204051
+      lastDateRead: 2562361560
+      lastDateWritten: 2536204052
+      dateCreatedStr: 1987-12-21 22:28:19
+      lastDateReadStr: 1988-02-29 08:35:24
+      lastDateWrittenStr: 1987-12-21 22:28:20
+      bpunValid: null
+    - name: COBOL-500-J02:PSEG
+      type: PSEG
+      pages: 92
+      bytes: 187113
+      userName: FLOPPY-USER
+      dateCreated: 2536204053
+      lastDateRead: 2562361559
+      lastDateWritten: 2536204054
+      dateCreatedStr: 1987-12-21 22:28:21
+      lastDateReadStr: 1988-02-29 08:35:23
+      lastDateWrittenStr: 1987-12-21 22:28:22
+      bpunValid: null
+    - name: COBOL-LIB-J02:NRF
+      type: NRF
+      pages: 139
+      bytes: 284432
+      userName: FLOPPY-USER
+      dateCreated: 2536155426
+      lastDateRead: 2555054950
+      lastDateWritten: 2536156208
+      dateCreatedStr: 1987-12-21 10:36:34
+      lastDateReadStr: 1988-01-05 16:45:38
+      lastDateWrittenStr: 1987-12-21 10:48:48
+      bpunValid: null
+    - name: IS-MULTI-K00:NRF
+      type: NRF
+      pages: 1
+      bytes: 131
+      userName: FLOPPY-USER
+      dateCreated: 2514057992
+      lastDateRead: 2555054998
+      lastDateWritten: 2514058360
+      dateCreatedStr: 1987-07-12 23:44:08
+      lastDateReadStr: 1988-01-05 16:46:22
+      lastDateWrittenStr: 1987-07-12 23:49:56
+      bpunValid: null
+    - name: IS-MULTI-K00:MODE
+      type: MODE
+      pages: 1
+      bytes: 646
+      userName: FLOPPY-USER
+      dateCreated: 2500808849
+      lastDateRead: 2555055006
+      lastDateWritten: 2500808925
+      dateCreatedStr: 1987-04-07 21:02:17
+      lastDateReadStr: 1988-01-05 16:46:30
+      lastDateWrittenStr: 1987-04-07 21:03:29
+      bpunValid: null
+    - name: ISAM-SERVICE-K01:PROG
+      type: PROG
+      pages: 81
+      bytes: 210944
+      userName: FLOPPY-USER
+      dateCreated: 2521107924
+      lastDateRead: 2555055014
+      lastDateWritten: 2521108099
+      dateCreatedStr: 1987-09-02 16:55:20
+      lastDateReadStr: 1988-01-05 16:46:38
+      lastDateWrittenStr: 1987-09-02 16:58:03
+      bpunValid: null
+    - name: ISAM-INTER-K01:PROG
+      type: PROG
+      pages: 58
+      bytes: 118784
+      userName: FLOPPY-USER
+      dateCreated: 2521105208
+      lastDateRead: 2555055034
+      lastDateWritten: 2521105352
+      dateCreatedStr: 1987-09-02 16:12:56
+      lastDateReadStr: 1988-01-05 16:46:58
+      lastDateWrittenStr: 1987-09-02 16:15:08
+      bpunValid: null
+    - name: COBOL-LIB-J02:MODE
+      type: MODE
+      pages: 1
+      bytes: 1147
+      userName: FLOPPY-USER
+      dateCreated: 2536204387
+      lastDateRead: 2555414050
+      lastDateWritten: 2536204394
+      dateCreatedStr: 1987-12-21 22:33:35
+      lastDateReadStr: 1988-01-08 08:24:34
+      lastDateWrittenStr: 1987-12-21 22:33:42
+      bpunValid: null
+provenance:
+  contributor: paal
+  originalPath: 5.25/210177J02-XX-01D.img
+  dateImaged: 2023-10-23
+  importedAt: 2026-08-17T14:19:53.070Z
+imagingLogs:
+  - cob1.log
+  - sprint1.log
+  - sprint2.log
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-210177-j02-d1-7ac060f5
+  syncStatus: pending

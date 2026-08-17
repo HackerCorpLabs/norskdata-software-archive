@@ -1,11 +1,31 @@
 [
   {
+    "Id": "ANALOG-DEVICES-ADI",
+    "Name": "Analog Devices ADI data-acquisition toolkit"
+  },
+  {
+    "Id": "DIAB-BASIC-II",
+    "Name": "Basic II/PC Rel 1.20 (DataIndustrier DIAB AB)"
+  },
+  {
+    "Id": "ERICSSON-PC-DIAG",
+    "Name": "Ericsson Information Systems PC diagnostics"
+  },
+  {
+    "Id": "ERICSSON-PC-SYSTEM",
+    "Name": "Ericsson PC system diskette (MS-DOS with GW-BASIC 3.11A)"
+  },
+  {
     "Id": "GRAFS",
     "Name": "GRAFS"
   },
   {
     "Id": "KERMIT",
     "Name": "Kermit file transfer program (university port)"
+  },
+  {
+    "Id": "MS-DOS",
+    "Name": "Microsoft MS-DOS (boot and utility diskette)"
   },
   {
     "Id": "ND-10004",
@@ -660,6 +680,10 @@
     "Name": "PC-LINK for APPLE II"
   },
   {
+    "Id": "ND-10721",
+    "Name": "BRF-Linker for ND-100"
+  },
+  {
     "Id": "ND-10724",
     "Name": "NOTIS-BG for ND-100 (Business Graphics) 48 bits floating format"
   },
@@ -922,6 +946,10 @@
   {
     "Id": "ND-210455",
     "Name": "VTM terminal tables (Standard)"
+  },
+  {
+    "Id": "ND-210459",
+    "Name": "VTM terminal tables (DEC VT100)"
   },
   {
     "Id": "ND-210507",
@@ -1286,6 +1314,10 @@
   {
     "Id": "ND-210938",
     "Name": "BIM for ND-500/ND-5000"
+  },
+  {
+    "Id": "ND-210943",
+    "Name": "PRMAN production management (Norwegian)"
   },
   {
     "Id": "ND-210953",
@@ -2084,6 +2116,10 @@
     "Name": "SIBAS/R Library for OWS"
   },
   {
+    "Id": "ND-230033",
+    "Name": "PC-ET Communications SW"
+  },
+  {
     "Id": "ND-230036",
     "Name": "MS-DOS Printer Driver for ND Applications"
   },
@@ -2144,6 +2180,14 @@
     "Name": "Nortext Software Distribution (NSD)"
   },
   {
+    "Id": "ND-230118",
+    "Name": "WinStart - MS-Windows starter for WinLink"
+  },
+  {
+    "Id": "ND-230119",
+    "Name": "WinSMX - MS-Windows starter for WinLink"
+  },
+  {
     "Id": "ND-230123",
     "Name": "ND PC Starter Kit A01 or newer"
   },
@@ -2202,6 +2246,10 @@
   {
     "Id": "ND-230206",
     "Name": "Operating System Customization for Uniline x0 for SCO UNIX 386"
+  },
+  {
+    "Id": "ND-230210",
+    "Name": "WinLink - MS-Windows terminal emulation and file transfer to SINTRAN"
   },
   {
     "Id": "ND-250004",
@@ -2296,6 +2344,54 @@
     "Name": "Y for ND-500/5000"
   },
   {
+    "Id": "ND-30001",
+    "Name": "ND-OWS system diskette - MS-DOS with ND Butterfly software"
+  },
+  {
+    "Id": "ND-30002",
+    "Name": "ND-OWS system diskette - MS-DOS with ND-OWS drivers and setup"
+  },
+  {
+    "Id": "ND-30003",
+    "Name": "ND-OWS diskette - SIGMA EGA display driver"
+  },
+  {
+    "Id": "ND-30006",
+    "Name": "ND-OWS diskette - MS-Windows accessories"
+  },
+  {
+    "Id": "ND-30007",
+    "Name": "HP-PLOT-PACK FORTRAN plotter library"
+  },
+  {
+    "Id": "ND-30008",
+    "Name": "ND-OWS diskette - MS-Windows setup and drivers"
+  },
+  {
+    "Id": "ND-30021",
+    "Name": "MS-Windows 2.10 for ND-OWS, with ND drivers"
+  },
+  {
+    "Id": "ND-30022",
+    "Name": "NOTIS-WP for MS-DOS (PC-NOTIS WP media)"
+  },
+  {
+    "Id": "ND-30025",
+    "Name": "Desk Top Manager for OWS (media)"
+  },
+  {
+    "Id": "ND-30210",
+    "Name": "WinLink - MS-Windows terminal emulation and file transfer to SINTRAN"
+  },
+  {
+    "Id": "ND-30211",
+    "Name": "WinPrint - print from MS-Windows on a SINTRAN SPRINT printer"
+  },
+  {
+    "Id": "ND-30212",
+    "Name": "WinSMX - MS-Windows starter for WinLink"
+  },
+  {
     "Id": "ND-380349",
     "Name": "ND OSI transport service"
   },
@@ -2356,6 +2452,10 @@
     "Name": "SIBAS/R Softkey"
   },
   {
+    "Id": "ND-38095",
+    "Name": "ND keyboard drivers for MS-DOS and VKM"
+  },
+  {
     "Id": "ND-38230",
     "Name": "ND tpServer Platform Upgrade version C01 to C02"
   },
@@ -2372,8 +2472,20 @@
     "Name": "Publisher 19 Display Unit w/Adapter Card ND PC and OWS"
   },
   {
+    "Id": "ND-BFLY-STREAMER",
+    "Name": "Butterfly Streamer Program (tape backup for the ND Butterfly PC)"
+  },
+  {
+    "Id": "ON-WORD",
+    "Name": "ON-Word for MS Windows 3.00"
+  },
+  {
     "Id": "PLANC-SCREEN",
     "Name": "PLANC Screen Handling"
+  },
+  {
+    "Id": "PROGRAMMABLE-LOGIC-GUIDE",
+    "Name": "Programmable Logic User's Guide (interactive guide on PC-DOS)"
   },
   {
     "Id": "UNIQUE-KEY",

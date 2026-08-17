@@ -1,0 +1,58 @@
+id: img-7b03f2bcc39c
+volumeName: N-220046K03--01D
+md5: 7b03f2bcc39c5ebed998dffdda4284a6
+image:
+  sizeBytes: 1261568
+  format: raw
+  controller: floppy
+  totalPages: 616
+  pageSize: 2048
+  bootFormat: flomon
+filesystem: ndfs
+ndfs:
+  users:
+    - name: SYSTEM
+      pagesUsed: 595
+  files:
+    - name: MACM-1718L:BPUN
+      type: BPUN
+      pages: 20
+      bytes: 39110
+      userName: SYSTEM
+      dateCreated: 2521876450
+      lastDateRead: 2533797908
+      lastDateWritten: 2533797913
+      dateCreatedStr: 1987-09-08 12:31:34
+      lastDateReadStr: 1987-12-03 11:00:20
+      lastDateWrittenStr: 1987-12-03 11:00:25
+      bpunValid: true
+    - name: SINTRAN:DATA
+      type: DATA
+      pages: 574
+      bytes: 699199
+      userName: SYSTEM
+      dateCreated: 2521876453
+      lastDateRead: 2521876462
+      lastDateWritten: 2521876462
+      dateCreatedStr: 1987-09-08 12:31:37
+      lastDateReadStr: 1987-09-08 12:31:46
+      lastDateWrittenStr: 1987-09-08 12:31:46
+      bpunValid: null
+provenance:
+  contributor: ronny
+  originalPath: ND-220046K03/n-220046k03--01d.img
+  dateImaged: 2022-09-24
+  importedAt: 2026-08-17T14:20:03.231Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-7b03f2bcc39c
+  syncStatus: pending

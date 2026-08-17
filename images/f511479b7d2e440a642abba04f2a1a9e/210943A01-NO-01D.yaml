@@ -1,0 +1,151 @@
+id: nd-210943-a01-d1-f511479b
+volumeName: 210943A01-NO-01D
+md5: f511479b7d2e440a642abba04f2a1a9e
+product:
+  id: ND-210943
+  version: A01
+  diskNumber: 1
+  language: NO
+image:
+  sizeBytes: 1261568
+  format: raw
+  controller: floppy
+  totalPages: 616
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 576
+  files:
+    - name: PRMAN-NO-A01:FORM
+      type: FORM
+      pages: 250
+      bytes: 512000
+      userName: FLOPPY-USER
+      dateCreated: 2464066310
+      lastDateRead: 2464449887
+      lastDateWritten: 2464066370
+      dateCreatedStr: 1986-11-15 10:44:06
+      lastDateReadStr: 1986-11-18 08:21:31
+      lastDateWrittenStr: 1986-11-15 10:45:02
+      bpunValid: null
+    - name: PRMAN-REP-NO-A01:RPRT
+      type: RPRT
+      pages: 140
+      bytes: 286720
+      userName: FLOPPY-USER
+      dateCreated: 2464066315
+      lastDateRead: 2489751526
+      lastDateWritten: 2464066335
+      dateCreatedStr: 1986-11-15 10:44:11
+      lastDateReadStr: 1987-01-19 09:31:38
+      lastDateWrittenStr: 1986-11-15 10:44:31
+      bpunValid: null
+    - name: PRMAN-DB-A01:SYMB
+      type: SYMB
+      pages: 14
+      bytes: 28500
+      userName: FLOPPY-USER
+      dateCreated: 2464066316
+      lastDateRead: 2464449988
+      lastDateWritten: 2464066319
+      dateCreatedStr: 1986-11-15 10:44:12
+      lastDateReadStr: 1986-11-18 08:23:04
+      lastDateWrittenStr: 1986-11-15 10:44:15
+      bpunValid: null
+    - name: PRMAN-DB-A01:MODE
+      type: MODE
+      pages: 1
+      bytes: 143
+      userName: FLOPPY-USER
+      dateCreated: 2464066316
+      lastDateRead: 2464449992
+      lastDateWritten: 2464066331
+      dateCreatedStr: 1986-11-15 10:44:12
+      lastDateReadStr: 1986-11-18 08:23:08
+      lastDateWrittenStr: 1986-11-15 10:44:27
+      bpunValid: null
+    - name: PRMAN-DD-A01:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1199
+      userName: FLOPPY-USER
+      dateCreated: 2464066317
+      lastDateRead: 2464449994
+      lastDateWritten: 2464066333
+      dateCreatedStr: 1986-11-15 10:44:13
+      lastDateReadStr: 1986-11-18 08:23:10
+      lastDateWrittenStr: 1986-11-15 10:44:29
+      bpunValid: null
+    - name: PRMAN-INFO-A01:PROG
+      type: PROG
+      pages: 80
+      bytes: 219136
+      userName: FLOPPY-USER
+      dateCreated: 2464066317
+      lastDateRead: 2464449996
+      lastDateWritten: 2464066425
+      dateCreatedStr: 1986-11-15 10:44:13
+      lastDateReadStr: 1986-11-18 08:23:12
+      lastDateWrittenStr: 1986-11-15 10:45:57
+      bpunValid: null
+    - name: PRMAN-INFO-A01:DATA
+      type: DATA
+      pages: 1
+      bytes: 512
+      userName: FLOPPY-USER
+      dateCreated: 2464066317
+      lastDateRead: 2464450009
+      lastDateWritten: 2464066527
+      dateCreatedStr: 1986-11-15 10:44:13
+      lastDateReadStr: 1986-11-18 08:23:25
+      lastDateWrittenStr: 1986-11-15 10:47:31
+      bpunValid: null
+    - name: PRMAN-KONTER-A01:PROG
+      type: PROG
+      pages: 75
+      bytes: 239616
+      userName: FLOPPY-USER
+      dateCreated: 2464066317
+      lastDateRead: 2464450012
+      lastDateWritten: 2464066531
+      dateCreatedStr: 1986-11-15 10:44:13
+      lastDateReadStr: 1986-11-18 08:23:28
+      lastDateWrittenStr: 1986-11-15 10:47:35
+      bpunValid: null
+    - name: DDBTABLES-E02:VTM
+      type: VTM
+      pages: 7
+      bytes: 13628
+      userName: FLOPPY-USER
+      dateCreated: 2464066317
+      lastDateRead: 2464450027
+      lastDateWritten: 2464066603
+      dateCreatedStr: 1986-11-15 10:44:13
+      lastDateReadStr: 1986-11-18 08:23:43
+      lastDateWrittenStr: 1986-11-15 10:48:43
+      bpunValid: null
+provenance:
+  contributor: ronny
+  originalPath: ND-210943-PRMAN/210943A01-NO-01D.img
+  dateImaged: 2024-09-17
+  importedAt: 2026-08-17T14:20:07.269Z
+imagingLogs:
+  - 210943A01-NO-02D.log
+  - PRMAN-SOURCE.log
+  - 210943A01-NO-01D.log
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-210943-a01-d1-f511479b
+  syncStatus: pending

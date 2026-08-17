@@ -1,0 +1,134 @@
+id: img-ad120dd91377
+volumeName: null
+md5: ad120dd9137731245735f0be163c7bb8
+product:
+  id: ND-30021
+image:
+  sizeBytes: 1228800
+  format: raw
+  controller: floppy
+filesystem: dos
+volumeLabel: ND-DRIVERE
+dosFiles:
+  - path: FONTDPUS.FON
+    bytes: 11648
+    modified: 1988-03-24 12:29
+    directory: false
+  - path: NDEUS.DRV
+    bytes: 4045
+    modified: 1988-12-01 18:11
+    directory: false
+  - path: NDEEN.DRV
+    bytes: 4073
+    modified: 1988-12-01 18:09
+    directory: false
+  - path: NDENO.DRV
+    bytes: 4359
+    modified: 1988-12-01 18:10
+    directory: false
+  - path: NDESW.DRV
+    bytes: 4359
+    modified: 1988-12-02 13:05
+    directory: false
+  - path: NDEDE.DRV
+    bytes: 4360
+    modified: 1988-12-02 13:05
+    directory: false
+  - path: NDEGE.DRV
+    bytes: 4353
+    modified: 1988-12-02 13:06
+    directory: false
+  - path: NDEFR.DRV
+    bytes: 4378
+    modified: 1988-12-02 13:06
+    directory: false
+  - path: NDEFI.DRV
+    bytes: 4369
+    modified: 1988-12-02 13:04
+    directory: false
+  - path: NDEFN.DRV
+    bytes: 4301
+    modified: 1988-12-01 18:39
+    directory: false
+  - path: DP1600.DRV
+    bytes: 30304
+    modified: 1988-06-09 14:11
+    directory: false
+  - path: NORWAY.DRV
+    bytes: 6029
+    modified: 1988-06-06 09:58
+    directory: false
+  - path: DP1600.LGO
+    bytes: 5624
+    modified: 1988-07-08 08:46
+    directory: false
+  - path: DP1600.GRB
+    bytes: 2693
+    modified: 1988-04-14 16:34
+    directory: false
+  - path: FONTDP.FON
+    bytes: 10448
+    modified: 1988-03-24 12:29
+    directory: false
+  - path: NMOUSE.DRV
+    bytes: 2919
+    modified: 1988-06-02 10:04
+    directory: false
+  - path: DENMARK.DRV
+    bytes: 6031
+    modified: 1988-06-06 09:59
+    directory: false
+  - path: SDS.DRV
+    bytes: 6035
+    modified: 1988-06-06 09:59
+    directory: false
+  - path: UK.DRV
+    bytes: 5501
+    modified: 1988-06-06 09:58
+    directory: false
+  - path: FRANCE.DRV
+    bytes: 6119
+    modified: 1988-06-06 09:58
+    directory: false
+  - path: GERMANY.DRV
+    bytes: 6034
+    modified: 1988-06-06 09:58
+    directory: false
+  - path: SWEDEN.DRV
+    bytes: 6030
+    modified: 1988-06-06 09:58
+    directory: false
+  - path: US.DRV
+    bytes: 5502
+    modified: 1988-06-06 09:58
+    directory: false
+  - path: NDENL.DRV
+    bytes: 4390
+    modified: 1988-12-01 18:39
+    directory: false
+  - path: NDESF.DRV
+    bytes: 4381
+    modified: 1988-12-01 18:38
+    directory: false
+  - path: NDESG.DRV
+    bytes: 4399
+    modified: 1988-12-01 18:37
+    directory: false
+provenance:
+  contributor: fvdm
+  originalPath: Windows 2.10/Windows 2.10, 5 ND-Drivere.img
+  dateImaged: 2025-07-17
+  importedAt: 2026-08-17T14:19:52.482Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-ad120dd91377
+  syncStatus: pending

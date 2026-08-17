@@ -1,0 +1,86 @@
+id: nd-10152-d-d2-7f3c0e6e
+volumeName: ND-10152D-PART2
+md5: 7f3c0e6eab507043d98b9740697dfded
+product:
+  id: ND-10152
+  version: D
+  diskNumber: 2
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 137
+  files:
+    - name: VTM-SEGMENT-N-D:BPUN
+      type: BPUN
+      pages: 65
+      bytes: 131326
+      userName: FLOPPY-USER
+      dateCreated: 2254238683
+      lastDateRead: null
+      lastDateWritten: 2254238688
+      dateCreatedStr: 1983-09-14 15:15:27
+      lastDateReadStr: null
+      lastDateWrittenStr: 1983-09-14 15:15:32
+      bpunValid: false
+    - name: DUMP-IR-N-D:MODE
+      type: MODE
+      pages: 1
+      bytes: 352
+      userName: FLOPPY-USER
+      dateCreated: 2254238754
+      lastDateRead: null
+      lastDateWritten: 2254238755
+      dateCreatedStr: 1983-09-14 15:16:34
+      lastDateReadStr: null
+      lastDateWrittenStr: 1983-09-14 15:16:35
+      bpunValid: null
+    - name: VTM-SEGMENT-E-D:BPUN
+      type: BPUN
+      pages: 65
+      bytes: 131326
+      userName: FLOPPY-USER
+      dateCreated: 2254238760
+      lastDateRead: null
+      lastDateWritten: 2254238761
+      dateCreatedStr: 1983-09-14 15:16:40
+      lastDateReadStr: null
+      lastDateWrittenStr: 1983-09-14 15:16:41
+      bpunValid: true
+    - name: DUMP-IR-E-D:MODE
+      type: MODE
+      pages: 1
+      bytes: 352
+      userName: FLOPPY-USER
+      dateCreated: 2254238875
+      lastDateRead: null
+      lastDateWritten: 2254238877
+      dateCreatedStr: 1983-09-14 15:18:27
+      lastDateReadStr: null
+      lastDateWrittenStr: 1983-09-14 15:18:29
+      bpunValid: null
+provenance:
+  contributor: Datormuseum
+  originalPath: DiskImages/DISK13.img
+  dateImaged: 2023-10-02
+  importedAt: 2026-08-17T14:17:55.926Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10152-d-d2-7f3c0e6e
+  syncStatus: pending

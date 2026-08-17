@@ -1,0 +1,65 @@
+id: nd-211067-a02-d1-f7655e58
+volumeName: 211067A02-XX-01D
+md5: f7655e58278bb21286b5c191fcf18a78
+product:
+  id: ND-211067
+  version: A02
+  diskNumber: 1
+  language: XX
+image:
+  sizeBytes: 1261568
+  format: raw
+  controller: floppy
+  totalPages: 616
+  pageSize: 2048
+  bootFormat: flomon
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 66
+  files:
+    - name: TPE-MON-100-A01:BPUN
+      type: BPUN
+      pages: 28
+      bytes: 56182
+      userName: FLOPPY-USER
+      dateCreated: 2458871602
+      lastDateRead: 2696472246
+      lastDateWritten: 2458871602
+      dateCreatedStr: 1986-10-07 22:28:50
+      lastDateReadStr: 1990-02-28 14:26:54
+      lastDateWrittenStr: 1986-10-07 22:28:50
+      bpunValid: true
+    - name: DISC-TEMA-I11:TEST
+      type: TEST
+      pages: 35
+      bytes: 71680
+      userName: FLOPPY-USER
+      dateCreated: 2463542441
+      lastDateRead: 2696472279
+      lastDateWritten: 2463542441
+      dateCreatedStr: 1986-11-11 10:50:41
+      lastDateReadStr: 1990-02-28 14:27:23
+      lastDateWrittenStr: 1986-11-11 10:50:41
+      bpunValid: null
+provenance:
+  contributor: ronny
+  originalPath: ND-211067-Mass Storage Utilities/211067a02-xx-01d.img
+  dateImaged: 2020-02-16
+  importedAt: 2026-08-17T14:22:50.215Z
+imagingLogs:
+  - 211067A_Mass_Storage_Utilities.pdf
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-211067-a02-d1-f7655e58
+  syncStatus: pending

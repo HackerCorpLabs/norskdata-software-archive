@@ -1,0 +1,75 @@
+id: nd-210518-c01-d1-7b702305
+volumeName: 210518C01-NO-01S
+md5: 7b702305be59d587abf07941b313e367
+product:
+  id: ND-210518
+  version: C01
+  diskNumber: 1
+  language: NO
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 94
+  files:
+    - name: UE-INSTALL-C01:PROG
+      type: PROG
+      pages: 45
+      bytes: 151062
+      userName: FLOPPY-USER
+      dateCreated: 2458713760
+      lastDateRead: 2533131451
+      lastDateWritten: 2458713765
+      dateCreatedStr: 1986-10-06 15:58:32
+      lastDateReadStr: 1987-11-30 08:18:59
+      lastDateWrittenStr: 1986-10-06 15:58:37
+      bpunValid: null
+    - name: UE-INSTAL-NO-C01:COM
+      type: COM
+      pages: 40
+      bytes: 81773
+      userName: FLOPPY-USER
+      dateCreated: 2458713812
+      lastDateRead: 2533131469
+      lastDateWritten: 2458713814
+      dateCreatedStr: 1986-10-06 15:59:20
+      lastDateReadStr: 1987-11-30 08:19:13
+      lastDateWrittenStr: 1986-10-06 15:59:22
+      bpunValid: null
+    - name: UE-CH-LAMU-C00:PROG
+      type: PROG
+      pages: 5
+      bytes: 8192
+      userName: FLOPPY-USER
+      dateCreated: 2458714128
+      lastDateRead: 2533131587
+      lastDateWritten: 2458714130
+      dateCreatedStr: 1986-10-06 16:00:16
+      lastDateReadStr: 1987-11-30 08:21:03
+      lastDateWrittenStr: 1986-10-06 16:00:18
+      bpunValid: null
+provenance:
+  contributor: Tingo
+  originalPath: 210518C USER-ENVIRONMENT/210518C01-NO-01S.image
+  dateImaged: 2022-09-24
+  importedAt: 2026-08-17T14:22:50.756Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-210518-c01-d1-7b702305
+  syncStatus: pending

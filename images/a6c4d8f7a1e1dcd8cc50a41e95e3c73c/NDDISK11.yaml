@@ -1,0 +1,41 @@
+id: img-a6c4d8f7a1e1
+volumeName: null
+md5: a6c4d8f7a1e1dcd8cc50a41e95e3c73c
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+filesystem: ndfs
+condition:
+  status: damaged
+  parser: ndfs
+  parserError: Invalid NDFS master block
+  ndNamesFound: 11
+  ndNameSamples:
+    - FTNRTLIBR:BRF
+    - FTNLIBR:BRF
+    - RTFIL:DATA
+    - GI42B:GI
+    - SINTRAN:DATA
+    - MACM-AREA:DATA
+    - MAILBOX:DATA
+    - PROJNAM:DATA
+  recovery: null
+provenance:
+  contributor: Datormuseum
+  originalPath: DiskImages/NDDISK11.img
+  dateImaged: 2023-10-02
+  importedAt: 2026-08-17T14:18:15.306Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-a6c4d8f7a1e1
+  syncStatus: pending

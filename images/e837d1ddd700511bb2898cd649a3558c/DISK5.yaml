@@ -1,0 +1,86 @@
+id: nd-10193-a-d2-e837d1dd
+volumeName: ND-10193A-PART2
+md5: e837d1ddd700511bb2898cd649a3558c
+product:
+  id: ND-10193
+  version: A
+  diskNumber: 2
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 23
+  files:
+    - name: UE-ERRORS-ENG-A:ERR
+      type: ERR
+      pages: 10
+      bytes: 18688
+      userName: FLOPPY-USER
+      dateCreated: 2256205899
+      lastDateRead: null
+      lastDateWritten: 2256205904
+      dateCreatedStr: 1983-09-29 15:33:11
+      lastDateReadStr: null
+      lastDateWrittenStr: 1983-09-29 15:33:16
+      bpunValid: null
+    - name: DDBTABLES-C-B:VTM
+      type: VTM
+      pages: 6
+      bytes: 11482
+      userName: FLOPPY-USER
+      dateCreated: 2256205913
+      lastDateRead: null
+      lastDateWritten: 2256205914
+      dateCreatedStr: 1983-09-29 15:33:25
+      lastDateReadStr: null
+      lastDateWrittenStr: 1983-09-29 15:33:26
+      bpunValid: null
+    - name: RG-PATCH-ENG:MODE
+      type: MODE
+      pages: 1
+      bytes: 1164
+      userName: FLOPPY-USER
+      dateCreated: 2256205922
+      lastDateRead: null
+      lastDateWritten: 2256205923
+      dateCreatedStr: 1983-09-29 15:33:34
+      lastDateReadStr: null
+      lastDateWrittenStr: 1983-09-29 15:33:35
+      bpunValid: null
+    - name: RG-DUMP-ENG:MODE
+      type: MODE
+      pages: 1
+      bytes: 1039
+      userName: FLOPPY-USER
+      dateCreated: 2256205928
+      lastDateRead: null
+      lastDateWritten: 2256205929
+      dateCreatedStr: 1983-09-29 15:33:40
+      lastDateReadStr: null
+      lastDateWrittenStr: 1983-09-29 15:33:41
+      bpunValid: null
+provenance:
+  contributor: Datormuseum
+  originalPath: DiskImages/DISK5.img
+  dateImaged: 2023-10-02
+  importedAt: 2026-08-17T14:18:02.962Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10193-a-d2-e837d1dd
+  syncStatus: pending

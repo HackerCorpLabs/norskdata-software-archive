@@ -1,0 +1,51 @@
+id: nd-250306-m06-d2-67300ae3
+volumeName: 250306M06-XX-02D
+md5: 67300ae3c3ff5001e6d1105388deb7ef
+product:
+  id: ND-250306
+  version: M06
+  diskNumber: 2
+  language: XX
+image:
+  sizeBytes: 1261568
+  format: raw
+  controller: floppy
+  totalPages: 616
+  pageSize: 2048
+  bootFormat: flomon
+filesystem: ndfs
+ndfs:
+  users:
+    - name: SYSTEM
+      pagesUsed: 590
+  files:
+    - name: SINTRAN-M-2:DATA
+      type: DATA
+      pages: 589
+      bytes: 690015
+      userName: SYSTEM
+      dateCreated: 3934390490
+      lastDateRead: 3934390492
+      lastDateWritten: 3934390492
+      dateCreatedStr: 2008-10-01 00:35:26
+      lastDateReadStr: 2008-10-01 00:35:28
+      lastDateWrittenStr: 2008-10-01 00:35:28
+      bpunValid: null
+provenance:
+  contributor: ronny
+  originalPath: ND-250306M06/250306M06-XX-02D.image
+  dateImaged: 2022-09-24
+  importedAt: 2026-08-17T14:20:04.024Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-250306-m06-d2-67300ae3
+  syncStatus: pending

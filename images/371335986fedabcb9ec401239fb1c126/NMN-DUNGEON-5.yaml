@@ -1,0 +1,94 @@
+id: img-371335986fed
+volumeName: NMN-DUNGEON-5
+md5: 371335986fedabcb9ec401239fb1c126
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: binary
+filesystem: ndfs
+ndfs:
+  users:
+    - name: NILS-M-NILSSEN
+      pagesUsed: 148
+  files:
+    - name: DUNGEON:PROG
+      type: PROG
+      pages: 71
+      bytes: 186368
+      userName: NILS-M-NILSSEN
+      dateCreated: 2328842701
+      lastDateRead: 2622003503
+      lastDateWritten: 2330780744
+      dateCreatedStr: 1984-11-07 21:07:13
+      lastDateReadStr: 1989-01-04 09:36:47
+      lastDateWrittenStr: 1984-11-22 14:17:08
+      bpunValid: null
+    - name: MAKE-DUNGEON:PROG
+      type: PROG
+      pages: 65
+      bytes: 133120
+      userName: NILS-M-NILSSEN
+      dateCreated: 2328843174
+      lastDateRead: 2622003531
+      lastDateWritten: 2330780593
+      dateCreatedStr: 1984-11-07 21:14:38
+      lastDateReadStr: 1989-01-04 09:37:11
+      lastDateWrittenStr: 1984-11-22 14:14:49
+      bpunValid: null
+    - name: FILE-DATA:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 927
+      userName: NILS-M-NILSSEN
+      dateCreated: 2328843707
+      lastDateRead: 2622003551
+      lastDateWritten: 2330781504
+      dateCreatedStr: 1984-11-07 21:22:59
+      lastDateReadStr: 1989-01-04 09:37:31
+      lastDateWrittenStr: 1984-11-22 14:29:00
+      bpunValid: null
+    - name: INNHOLD:SYMB
+      type: SYMB
+      pages: 4
+      bytes: 6997
+      userName: NILS-M-NILSSEN
+      dateCreated: 2328843869
+      lastDateRead: 2622003554
+      lastDateWritten: 2330781661
+      dateCreatedStr: 1984-11-07 21:25:29
+      lastDateReadStr: 1989-01-04 09:37:34
+      lastDateWrittenStr: 1984-11-22 14:31:29
+      bpunValid: null
+    - name: TIDER:DUN
+      type: DUN
+      pages: 1
+      bytes: 309
+      userName: NILS-M-NILSSEN
+      dateCreated: 2330781465
+      lastDateRead: 2622003557
+      lastDateWritten: 2330781467
+      dateCreatedStr: 1984-11-22 14:28:25
+      lastDateReadStr: 1989-01-04 09:37:37
+      lastDateWrittenStr: 1984-11-22 14:28:27
+      bpunValid: null
+provenance:
+  contributor: fvdm
+  originalPath: Disk Images/NMN-DUNGEON-5.img
+  dateImaged: 2026-04-08
+  importedAt: 2026-08-17T14:19:49.338Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-371335986fed
+  syncStatus: pending

@@ -1,0 +1,41 @@
+id: img-d952459437f2
+volumeName: null
+md5: d952459437f2388ff2252da857f1db8f
+image:
+  sizeBytes: 630784
+  format: raw
+  controller: floppy
+filesystem: ndfs
+condition:
+  status: damaged
+  parser: ndfs
+  parserError: Block 4210752 out of range
+  ndNamesFound: 16
+  ndNameSamples:
+    - PACK-ONE:IBM
+    - PACK-ONE:GUES
+    - PLLE:KQ
+    - RJN:QL
+    - KJI:LL
+    - BJL:OIBQ
+    - V4JV:MI
+    - IHP:PRAY
+  recovery: null
+provenance:
+  contributor: Datormuseum
+  originalPath: broken/DISK25.IMG
+  dateImaged: 2022-08-15
+  importedAt: 2026-08-17T14:17:48.181Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-d952459437f2
+  syncStatus: pending

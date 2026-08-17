@@ -1,0 +1,518 @@
+id: img-c617dfb8c9b2
+volumeName: OSM
+md5: c617dfb8c9b275fc4d50f0e0038143f7
+image:
+  sizeBytes: 1261568
+  format: raw
+  controller: floppy
+  totalPages: 616
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 3
+    - name: SYSTEM
+      pagesUsed: 0
+    - name: GAMES
+      pagesUsed: 443
+  files:
+    - name: TULL:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 22
+      userName: FLOPPY-USER
+      dateCreated: 2689907178
+      lastDateRead: 2689911577
+      lastDateWritten: 2689907192
+      dateCreatedStr: 1990-01-10 11:39:42
+      lastDateReadStr: 1990-01-10 12:44:25
+      lastDateWrittenStr: 1990-01-10 11:39:56
+      bpunValid: null
+    - name: INFO-SPILL:TEXT
+      type: TEXT
+      pages: 13
+      bytes: 26151
+      userName: GAMES
+      dateCreated: 2300093659
+      lastDateRead: 2689927595
+      lastDateWritten: 2300093661
+      dateCreatedStr: 1984-04-12 10:19:27
+      lastDateReadStr: 1990-01-10 16:38:43
+      lastDateWrittenStr: 1984-04-12 10:19:29
+      bpunValid: null
+    - name: DIGGER-48-NO:PROG
+      type: PROG
+      pages: 15
+      bytes: 29184
+      userName: GAMES
+      dateCreated: 2300093671
+      lastDateRead: 2689927601
+      lastDateWritten: 2300093673
+      dateCreatedStr: 1984-04-12 10:19:39
+      lastDateReadStr: 1990-01-10 16:38:49
+      lastDateWrittenStr: 1984-04-12 10:19:41
+      bpunValid: null
+    - name: DIGGER-BUILDING:SYMB
+      type: SYMB
+      pages: 5
+      bytes: 9256
+      userName: GAMES
+      dateCreated: 2300093680
+      lastDateRead: 2689927605
+      lastDateWritten: 2300093681
+      dateCreatedStr: 1984-04-12 10:19:48
+      lastDateReadStr: 1990-01-10 16:38:53
+      lastDateWrittenStr: 1984-04-12 10:19:49
+      bpunValid: null
+    - name: DIGGER-DATA:DATA
+      type: DATA
+      pages: 1
+      bytes: 800
+      userName: GAMES
+      dateCreated: 2300093685
+      lastDateRead: 2689927607
+      lastDateWritten: 2309270365
+      dateCreatedStr: 1984-04-12 10:19:53
+      lastDateReadStr: 1990-01-10 16:38:55
+      lastDateWrittenStr: 1984-06-18 10:45:29
+      bpunValid: null
+    - name: FIDO-48-NO:PROG
+      type: PROG
+      pages: 14
+      bytes: 27136
+      userName: GAMES
+      dateCreated: 2300093697
+      lastDateRead: 2689927609
+      lastDateWritten: 2300093697
+      dateCreatedStr: 1984-04-12 10:20:01
+      lastDateReadStr: 1990-01-10 16:38:57
+      lastDateWrittenStr: 1984-04-12 10:20:01
+      bpunValid: null
+    - name: FIDO-KART:DATA
+      type: DATA
+      pages: 13
+      bytes: 25202
+      userName: GAMES
+      dateCreated: 2300093705
+      lastDateRead: 2689927617
+      lastDateWritten: 2300093706
+      dateCreatedStr: 1984-04-12 10:20:09
+      lastDateReadStr: 1990-01-10 16:39:01
+      lastDateWrittenStr: 1984-04-12 10:20:10
+      bpunValid: null
+    - name: FIDO-LISTE:DATA
+      type: DATA
+      pages: 1
+      bytes: 588
+      userName: GAMES
+      dateCreated: 2300093714
+      lastDateRead: 2689927620
+      lastDateWritten: 2309270408
+      dateCreatedStr: 1984-04-12 10:20:18
+      lastDateReadStr: 1990-01-10 16:39:04
+      lastDateWrittenStr: 1984-06-18 10:46:08
+      bpunValid: null
+    - name: MACMAN-48-NO:PROG
+      type: PROG
+      pages: 11
+      bytes: 22016
+      userName: GAMES
+      dateCreated: 2300093719
+      lastDateRead: 2689927622
+      lastDateWritten: 2300093719
+      dateCreatedStr: 1984-04-12 10:20:23
+      lastDateReadStr: 1990-01-10 16:39:06
+      lastDateWrittenStr: 1984-04-12 10:20:23
+      bpunValid: null
+    - name: MACMAN-DATA:DATA
+      type: DATA
+      pages: 1
+      bytes: 768
+      userName: GAMES
+      dateCreated: 2300093726
+      lastDateRead: 2689927629
+      lastDateWritten: 2309270488
+      dateCreatedStr: 1984-04-12 10:20:30
+      lastDateReadStr: 1990-01-10 16:39:13
+      lastDateWrittenStr: 1984-06-18 10:47:24
+      bpunValid: null
+    - name: MACMAN-LABS:SYMB
+      type: SYMB
+      pages: 5
+      bytes: 9567
+      userName: GAMES
+      dateCreated: 2300093729
+      lastDateRead: 2689927630
+      lastDateWritten: 2300093729
+      dateCreatedStr: 1984-04-12 10:20:33
+      lastDateReadStr: 1990-01-10 16:39:14
+      lastDateWrittenStr: 1984-04-12 10:20:33
+      bpunValid: null
+    - name: TERRANOVA-48-NO:PROG
+      type: PROG
+      pages: 12
+      bytes: 23552
+      userName: GAMES
+      dateCreated: 2300093768
+      lastDateRead: 2689927632
+      lastDateWritten: 2300093769
+      dateCreatedStr: 1984-04-12 10:21:08
+      lastDateReadStr: 1990-01-10 16:39:16
+      lastDateWrittenStr: 1984-04-12 10:21:09
+      bpunValid: null
+    - name: TERRA-BOARD:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1541
+      userName: GAMES
+      dateCreated: 2300093775
+      lastDateRead: 2689927635
+      lastDateWritten: 2300093776
+      dateCreatedStr: 1984-04-12 10:21:15
+      lastDateReadStr: 1990-01-10 16:39:19
+      lastDateWrittenStr: 1984-04-12 10:21:16
+      bpunValid: null
+    - name: TERRA-DATA:DATA
+      type: DATA
+      pages: 1
+      bytes: 768
+      userName: GAMES
+      dateCreated: 2300093778
+      lastDateRead: 2689927637
+      lastDateWritten: 2356714122
+      dateCreatedStr: 1984-04-12 10:21:18
+      lastDateReadStr: 1990-01-10 16:39:21
+      lastDateWrittenStr: 1985-01-28 09:42:10
+      bpunValid: null
+    - name: TRON-48-NO:PROG
+      type: PROG
+      pages: 12
+      bytes: 23040
+      userName: GAMES
+      dateCreated: 2300093840
+      lastDateRead: 2689927638
+      lastDateWritten: 2300093841
+      dateCreatedStr: 1984-04-12 10:22:16
+      lastDateReadStr: 1990-01-10 16:39:22
+      lastDateWrittenStr: 1984-04-12 10:22:17
+      bpunValid: null
+    - name: MASTERMIND-48-NO:PROG
+      type: PROG
+      pages: 21
+      bytes: 41984
+      userName: GAMES
+      dateCreated: 2300093849
+      lastDateRead: 2689927642
+      lastDateWritten: 2300093851
+      dateCreatedStr: 1984-04-12 10:22:25
+      lastDateReadStr: 1990-01-10 16:39:26
+      lastDateWrittenStr: 1984-04-12 10:22:27
+      bpunValid: null
+    - name: MASTERMIND-BRETT:DATA
+      type: DATA
+      pages: 1
+      bytes: 1944
+      userName: GAMES
+      dateCreated: 2300093861
+      lastDateRead: 2689927647
+      lastDateWritten: 2300093862
+      dateCreatedStr: 1984-04-12 10:22:37
+      lastDateReadStr: 1990-01-10 16:39:31
+      lastDateWrittenStr: 1984-04-12 10:22:38
+      bpunValid: null
+    - name: SPILL-48:PROG
+      type: PROG
+      pages: 39
+      bytes: 79360
+      userName: GAMES
+      dateCreated: 2300093783
+      lastDateRead: 2689927648
+      lastDateWritten: 2300093784
+      dateCreatedStr: 1984-04-12 10:21:23
+      lastDateReadStr: 1990-01-10 16:39:32
+      lastDateWrittenStr: 1984-04-12 10:21:24
+      bpunValid: null
+    - name: SPILL-BRUKSANV:DATA
+      type: DATA
+      pages: 11
+      bytes: 22314
+      userName: GAMES
+      dateCreated: 2300093802
+      lastDateRead: 2689927657
+      lastDateWritten: 2300093803
+      dateCreatedStr: 1984-04-12 10:21:42
+      lastDateReadStr: 1990-01-10 16:39:41
+      lastDateWrittenStr: 1984-04-12 10:21:43
+      bpunValid: null
+    - name: SPILL-HANGMAN:DATA
+      type: DATA
+      pages: 2
+      bytes: 2173
+      userName: GAMES
+      dateCreated: 2300093809
+      lastDateRead: 2689927661
+      lastDateWritten: 2300093810
+      dateCreatedStr: 1984-04-12 10:21:49
+      lastDateReadStr: 1990-01-10 16:39:45
+      lastDateWrittenStr: 1984-04-12 10:21:50
+      bpunValid: null
+    - name: ORM:PROG
+      type: PROG
+      pages: 35
+      bytes: 70144
+      userName: GAMES
+      dateCreated: 2300093866
+      lastDateRead: 2689927666
+      lastDateWritten: 2300093866
+      dateCreatedStr: 1984-04-12 10:22:42
+      lastDateReadStr: 1990-01-10 16:39:50
+      lastDateWrittenStr: 1984-04-12 10:22:42
+      bpunValid: null
+    - name: ORM-INTRO:TEXT
+      type: TEXT
+      pages: 1
+      bytes: 1088
+      userName: GAMES
+      dateCreated: 2300093883
+      lastDateRead: 2689927675
+      lastDateWritten: 2300093888
+      dateCreatedStr: 1984-04-12 10:22:59
+      lastDateReadStr: 1990-01-10 16:39:59
+      lastDateWrittenStr: 1984-04-12 10:23:00
+      bpunValid: null
+    - name: ORM-RESULTATER:DATA
+      type: DATA
+      pages: 1
+      bytes: 506
+      userName: GAMES
+      dateCreated: 2300097763
+      lastDateRead: 2689927680
+      lastDateWritten: 2688881500
+      dateCreatedStr: 1984-04-12 11:19:35
+      lastDateReadStr: 1990-01-10 16:40:00
+      lastDateWrittenStr: 1990-01-02 17:13:28
+      bpunValid: null
+    - name: ORM-KONTOER:DATA
+      type: DATA
+      pages: 2
+      bytes: 2928
+      userName: GAMES
+      dateCreated: 2300097763
+      lastDateRead: 2689927682
+      lastDateWritten: 2688881434
+      dateCreatedStr: 1984-04-12 11:19:35
+      lastDateReadStr: 1990-01-10 16:40:02
+      lastDateWrittenStr: 1990-01-02 17:12:26
+      bpunValid: null
+    - name: KALENDER:PROG
+      type: PROG
+      pages: 38
+      bytes: 77312
+      userName: GAMES
+      dateCreated: 2324087186
+      lastDateRead: 2689927684
+      lastDateWritten: 2332756521
+      dateCreatedStr: 1984-10-03 12:06:18
+      lastDateReadStr: 1990-01-10 16:40:04
+      lastDateWrittenStr: 1984-12-05 16:40:41
+      bpunValid: null
+    - name: KALENDER:SYMB
+      type: SYMB
+      pages: 5
+      bytes: 9312
+      userName: GAMES
+      dateCreated: 2323167758
+      lastDateRead: 2689927693
+      lastDateWritten: 2332756426
+      dateCreatedStr: 1984-09-28 11:40:14
+      lastDateReadStr: 1990-01-10 16:40:13
+      lastDateWrittenStr: 1984-12-05 16:39:10
+      bpunValid: null
+    - name: KALENDER:BRF
+      type: BRF
+      pages: 12
+      bytes: 24552
+      userName: GAMES
+      dateCreated: 2356715788
+      lastDateRead: 2689927696
+      lastDateWritten: 2356715803
+      dateCreatedStr: 1985-01-28 10:04:12
+      lastDateReadStr: 1990-01-10 16:40:16
+      lastDateWrittenStr: 1985-01-28 10:04:27
+      bpunValid: null
+    - name: YATZY:PROG
+      type: PROG
+      pages: 27
+      bytes: 55296
+      userName: GAMES
+      dateCreated: 2356724608
+      lastDateRead: 2689927700
+      lastDateWritten: 2356724608
+      dateCreatedStr: 1985-01-28 12:14:00
+      lastDateReadStr: 1990-01-10 16:40:20
+      lastDateWrittenStr: 1985-01-28 12:14:00
+      bpunValid: null
+    - name: TULL:DATA
+      type: DATA
+      pages: 1
+      bytes: 1320
+      userName: GAMES
+      dateCreated: 2356724639
+      lastDateRead: 2689927708
+      lastDateWritten: 2358169649
+      dateCreatedStr: 1985-01-28 12:14:31
+      lastDateReadStr: 1990-01-10 16:40:28
+      lastDateWrittenStr: 1985-02-07 13:00:49
+      bpunValid: null
+    - name: LIST-RANKING:PROG
+      type: PROG
+      pages: 8
+      bytes: 3072
+      userName: GAMES
+      dateCreated: 2356724674
+      lastDateRead: 2689927710
+      lastDateWritten: 2356724674
+      dateCreatedStr: 1985-01-28 12:15:02
+      lastDateReadStr: 1990-01-10 16:40:30
+      lastDateWrittenStr: 1985-01-28 12:15:02
+      bpunValid: null
+    - name: LABYRINT:PROG
+      type: PROG
+      pages: 16
+      bytes: 266240
+      userName: GAMES
+      dateCreated: 2317543854
+      lastDateRead: 2689927713
+      lastDateWritten: 2317544009
+      dateCreatedStr: 1984-08-17 14:38:46
+      lastDateReadStr: 1990-01-10 16:40:33
+      lastDateWrittenStr: 1984-08-17 14:41:09
+      bpunValid: null
+    - name: LABYRINT:DATA
+      type: DATA
+      pages: 1
+      bytes: 1024
+      userName: GAMES
+      dateCreated: 2317543812
+      lastDateRead: 2689927717
+      lastDateWritten: 2356717849
+      dateCreatedStr: 1984-08-17 14:38:04
+      lastDateReadStr: 1990-01-10 16:40:37
+      lastDateWrittenStr: 1985-01-28 10:36:25
+      bpunValid: null
+    - name: CASTLE:PROG
+      type: PROG
+      pages: 16
+      bytes: 31744
+      userName: GAMES
+      dateCreated: 2356724962
+      lastDateRead: 2689927726
+      lastDateWritten: 2356724963
+      dateCreatedStr: 1985-01-28 12:19:34
+      lastDateReadStr: 1990-01-10 16:40:46
+      lastDateWrittenStr: 1985-01-28 12:19:35
+      bpunValid: null
+    - name: BONDESJAKK:PROG
+      type: PROG
+      pages: 13
+      bytes: 24840
+      userName: GAMES
+      dateCreated: 2356724980
+      lastDateRead: 2689927734
+      lastDateWritten: 2356724980
+      dateCreatedStr: 1985-01-28 12:19:52
+      lastDateReadStr: 1990-01-10 16:40:54
+      lastDateWrittenStr: 1985-01-28 12:19:52
+      bpunValid: null
+    - name: FYR-LAUS:DATA
+      type: DATA
+      pages: 1
+      bytes: 1024
+      userName: GAMES
+      dateCreated: 2317543819
+      lastDateRead: 2689927738
+      lastDateWritten: 2325788508
+      dateCreatedStr: 1984-08-17 14:38:11
+      lastDateReadStr: 1990-01-10 16:40:58
+      lastDateWrittenStr: 1984-10-16 11:29:28
+      bpunValid: null
+    - name: FYR-LAUS:PROG
+      type: PROG
+      pages: 22
+      bytes: 268288
+      userName: GAMES
+      dateCreated: 2317543894
+      lastDateRead: 2689927746
+      lastDateWritten: 2319003946
+      dateCreatedStr: 1984-08-17 14:39:22
+      lastDateReadStr: 1990-01-10 16:41:02
+      lastDateWrittenStr: 1984-08-28 19:04:42
+      bpunValid: null
+    - name: BREAKOUT:PROG
+      type: PROG
+      pages: 10
+      bytes: 20480
+      userName: GAMES
+      dateCreated: 2356725529
+      lastDateRead: 2689927752
+      lastDateWritten: 2356725529
+      dateCreatedStr: 1985-01-28 12:28:25
+      lastDateReadStr: 1990-01-10 16:41:08
+      lastDateWrittenStr: 1985-01-28 12:28:25
+      bpunValid: null
+    - name: YATZYTOP:DATA
+      type: DATA
+      pages: 1
+      bytes: 1322
+      userName: GAMES
+      dateCreated: 2358170036
+      lastDateRead: 2689927755
+      lastDateWritten: 2358170036
+      dateCreatedStr: 1985-02-07 13:06:52
+      lastDateReadStr: 1990-01-10 16:41:11
+      lastDateWrittenStr: 1985-02-07 13:06:52
+      bpunValid: null
+    - name: BACKGAMMON:PROG
+      type: PROG
+      pages: 16
+      bytes: 31232
+      userName: GAMES
+      dateCreated: 2353433762
+      lastDateRead: 2689927756
+      lastDateWritten: 2353433762
+      dateCreatedStr: 1985-01-03 08:50:34
+      lastDateReadStr: 1990-01-10 16:41:12
+      lastDateWrittenStr: 1985-01-03 08:50:34
+      bpunValid: null
+    - name: DISABLE-LINK:SYMB
+      type: SYMB
+      pages: 0
+      bytes: 4294967296
+      userName: GAMES
+      dateCreated: 2600216288
+      lastDateRead: null
+      lastDateWritten: null
+      dateCreatedStr: 1988-11-30 02:27:32
+      lastDateReadStr: null
+      lastDateWrittenStr: null
+      bpunValid: null
+provenance:
+  contributor: ndwiki
+  originalPath: ND-GAMES/ND-GAMES.image
+  dateImaged: 2023-06-29
+  importedAt: 2026-08-17T14:19:52.669Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-c617dfb8c9b2
+  syncStatus: pending

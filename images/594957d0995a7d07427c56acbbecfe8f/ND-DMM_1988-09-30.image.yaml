@@ -1,0 +1,142 @@
+id: img-594957d0995a
+volumeName: DMM
+md5: 594957d0995a7d07427c56acbbecfe8f
+image:
+  sizeBytes: 1261568
+  format: raw
+  controller: floppy
+  totalPages: 616
+  pageSize: 2048
+  bootFormat: flomon
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 138
+  files:
+    - name: TPE-MON-100-B00:PROG
+      type: PROG
+      pages: 28
+      bytes: 56320
+      userName: FLOPPY-USER
+      dateCreated: 2591871885
+      lastDateRead: 2591879915
+      lastDateWritten: 2591872224
+      dateCreatedStr: 1988-09-30 13:14:13
+      lastDateReadStr: 1988-09-30 15:11:43
+      lastDateWrittenStr: 1988-09-30 13:19:32
+      bpunValid: null
+    - name: DMM-05C00:TEST
+      type: TEST
+      pages: 38
+      bytes: 77824
+      userName: FLOPPY-USER
+      dateCreated: 2593729733
+      lastDateRead: 2594348679
+      lastDateWritten: 2593729737
+      dateCreatedStr: 1988-10-12 18:51:05
+      lastDateReadStr: 1988-10-17 09:58:07
+      lastDateWrittenStr: 1988-10-12 18:51:09
+      bpunValid: null
+    - name: DMM-E1-05C00:NEXT
+      type: NEXT
+      pages: 11
+      bytes: 22528
+      userName: FLOPPY-USER
+      dateCreated: 2593729733
+      lastDateRead: 2594348688
+      lastDateWritten: 2593729746
+      dateCreatedStr: 1988-10-12 18:51:05
+      lastDateReadStr: 1988-10-17 09:58:16
+      lastDateWrittenStr: 1988-10-12 18:51:18
+      bpunValid: null
+    - name: DMM-E2-05C00:NEXT
+      type: NEXT
+      pages: 11
+      bytes: 22528
+      userName: FLOPPY-USER
+      dateCreated: 2593729734
+      lastDateRead: 2594348692
+      lastDateWritten: 2593729749
+      dateCreatedStr: 1988-10-12 18:51:06
+      lastDateReadStr: 1988-10-17 09:58:20
+      lastDateWrittenStr: 1988-10-12 18:51:21
+      bpunValid: null
+    - name: DMM-C1-05C00:NEXT
+      type: NEXT
+      pages: 6
+      bytes: 12288
+      userName: FLOPPY-USER
+      dateCreated: 2593729734
+      lastDateRead: 2594348696
+      lastDateWritten: 2593729752
+      dateCreatedStr: 1988-10-12 18:51:06
+      lastDateReadStr: 1988-10-17 09:58:24
+      lastDateWrittenStr: 1988-10-12 18:51:24
+      bpunValid: null
+    - name: DMM-C2-05C00:NEXT
+      type: NEXT
+      pages: 6
+      bytes: 12288
+      userName: FLOPPY-USER
+      dateCreated: 2593729735
+      lastDateRead: 2594348699
+      lastDateWritten: 2593729754
+      dateCreatedStr: 1988-10-12 18:51:07
+      lastDateReadStr: 1988-10-17 09:58:27
+      lastDateWrittenStr: 1988-10-12 18:51:26
+      bpunValid: null
+    - name: DMM-C3-05C00:NEXT
+      type: NEXT
+      pages: 6
+      bytes: 12288
+      userName: FLOPPY-USER
+      dateCreated: 2593729736
+      lastDateRead: 2594348703
+      lastDateWritten: 2593729756
+      dateCreatedStr: 1988-10-12 18:51:08
+      lastDateReadStr: 1988-10-17 09:58:31
+      lastDateWrittenStr: 1988-10-12 18:51:28
+      bpunValid: null
+    - name: DMM-C4-05C00:NEXT
+      type: NEXT
+      pages: 6
+      bytes: 12288
+      userName: FLOPPY-USER
+      dateCreated: 2593729736
+      lastDateRead: 2594348707
+      lastDateWritten: 2593729758
+      dateCreatedStr: 1988-10-12 18:51:08
+      lastDateReadStr: 1988-10-17 09:58:35
+      lastDateWrittenStr: 1988-10-12 18:51:30
+      bpunValid: null
+    - name: BDIO-DUMP:OUT
+      type: OUT
+      pages: 16
+      bytes: 31086
+      userName: FLOPPY-USER
+      dateCreated: 2769859270
+      lastDateRead: 2769860472
+      lastDateWritten: 2769859987
+      dateCreatedStr: 1991-04-12 11:11:06
+      lastDateReadStr: 1991-04-12 11:29:56
+      lastDateWrittenStr: 1991-04-12 11:22:19
+      bpunValid: null
+provenance:
+  contributor: unknown
+  originalPath: S/ND-DMM_1988-09-30.image
+  dateImaged: 2019-04-09
+  importedAt: 2026-08-17T14:22:53.469Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-594957d0995a
+  syncStatus: pending

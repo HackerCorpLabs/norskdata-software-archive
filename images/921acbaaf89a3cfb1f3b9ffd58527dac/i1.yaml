@@ -1,0 +1,107 @@
+id: img-921acbaaf89a
+volumeName: null
+md5: 921acbaaf89a3cfb1f3b9ffd58527dac
+product:
+  id: ND-30210
+  version: A00
+  diskNumber: 1
+image:
+  sizeBytes: 737280
+  format: raw
+  controller: floppy
+filesystem: dos
+volumeLabel: 30210NO1A00
+dosFiles:
+  - path: BIN
+    bytes: 0
+    modified: 1990-11-14 19:37
+    directory: true
+  - path: BIN/NO
+    bytes: 0
+    modified: 1990-11-14 19:38
+    directory: true
+  - path: BIN/NO/TD2NO15.FON
+    bytes: 29184
+    modified: 1990-08-17 14:23
+    directory: false
+  - path: BIN/NO/TD2NO25.FON
+    bytes: 29184
+    modified: 1990-09-24 14:35
+    directory: false
+  - path: BIN/NO/TD2NO48.FON
+    bytes: 36864
+    modified: 1990-08-20 09:49
+    directory: false
+  - path: BIN/NO/TD2NO70.FON
+    bytes: 79360
+    modified: 1990-08-20 10:27
+    directory: false
+  - path: BIN/NO/TD2NO84.FON
+    bytes: 29184
+    modified: 1990-08-20 11:50
+    directory: false
+  - path: BIN/NDTERM.EXE
+    bytes: 112144
+    modified: 1990-11-14 14:23
+    directory: false
+  - path: BIN/NDETHSEL.EXE
+    bytes: 24400
+    modified: 1990-11-14 14:26
+    directory: false
+  - path: BIN/NDSERSET.EXE
+    bytes: 26720
+    modified: 1990-11-14 14:25
+    directory: false
+  - path: BIN/NDTERM-S.EXE
+    bytes: 36688
+    modified: 1990-11-14 14:28
+    directory: false
+  - path: BIN/INFO.TXT
+    bytes: 469
+    modified: 1990-11-02 14:20
+    directory: false
+  - path: BIN/INFOPRIV.TXT
+    bytes: 1642
+    modified: 1990-09-14 08:51
+    directory: false
+  - path: BIN/INSTMAIN.EXE
+    bytes: 55200
+    modified: 1990-11-13 10:16
+    directory: false
+  - path: BIN/SETUP.BIN
+    bytes: 66160
+    modified: 1990-11-13 10:17
+    directory: false
+  - path: BIN/EASYLINK.EXE
+    bytes: 83552
+    modified: 1990-11-13 11:46
+    directory: false
+  - path: INSTALL.EXE
+    bytes: 51920
+    modified: 1990-11-13 10:15
+    directory: false
+provenance:
+  contributor: ronny
+  originalPath: winlink/i1.img
+  dateImaged: 2024-09-17
+  importedAt: 2026-08-17T14:22:45.251Z
+imagingLogs:
+  - i2.log
+  - i3.log
+  - i4.log
+  - i5.log
+  - i6.log
+  - i1.log
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-921acbaaf89a
+  syncStatus: pending

@@ -1,0 +1,195 @@
+id: nd-211068-a00-d2-c3e0f721
+volumeName: 211068A00-XX-02D
+md5: c3e0f721dbffca2c7ccc79169adcf686
+product:
+  id: ND-211068
+  version: A00
+  diskNumber: 2
+  language: XX
+image:
+  sizeBytes: 1261568
+  format: raw
+  controller: floppy
+  totalPages: 616
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 507
+  files:
+    - name: OEP-PERFO-A00:PROG
+      type: PROG
+      pages: 120
+      bytes: 245760
+      userName: FLOPPY-USER
+      dateCreated: 2499985134
+      lastDateRead: 2501029044
+      lastDateWritten: 2500122454
+      dateCreatedStr: 1987-04-01 11:59:46
+      lastDateReadStr: 1987-04-09 10:50:52
+      lastDateWrittenStr: 1987-04-02 13:29:22
+      bpunValid: null
+    - name: OEP-PARAM-A00:DATA
+      type: DATA
+      pages: 2
+      bytes: 2335
+      userName: FLOPPY-USER
+      dateCreated: 2494910739
+      lastDateRead: 2501029097
+      lastDateWritten: 2497112130
+      dateCreatedStr: 1987-02-26 21:04:19
+      lastDateReadStr: 1987-04-09 10:51:41
+      lastDateWrittenStr: 1987-03-11 14:33:02
+      bpunValid: null
+    - name: OEP-STRUC-A00:DATA
+      type: DATA
+      pages: 3
+      bytes: 5466
+      userName: FLOPPY-USER
+      dateCreated: 2494910734
+      lastDateRead: 2501029090
+      lastDateWritten: 2499209803
+      dateCreatedStr: 1987-02-26 21:04:14
+      lastDateReadStr: 1987-04-09 10:51:34
+      lastDateWrittenStr: 1987-03-27 14:41:11
+      bpunValid: null
+    - name: OES-MAIN-A00:PROG
+      type: PROG
+      pages: 101
+      bytes: 399360
+      userName: FLOPPY-USER
+      dateCreated: 2498798536
+      lastDateRead: 2501029104
+      lastDateWritten: 2498798693
+      dateCreatedStr: 1987-03-24 10:15:08
+      lastDateReadStr: 1987-04-09 10:51:48
+      lastDateWrittenStr: 1987-03-24 10:17:37
+      bpunValid: null
+    - name: OES-NEXT-A00:PROG
+      type: PROG
+      pages: 35
+      bytes: 397312
+      userName: FLOPPY-USER
+      dateCreated: 2498798537
+      lastDateRead: 2501029145
+      lastDateWritten: 2498798614
+      dateCreatedStr: 1987-03-24 10:15:09
+      lastDateReadStr: 1987-04-09 10:52:25
+      lastDateWrittenStr: 1987-03-24 10:16:22
+      bpunValid: null
+    - name: OEV-VERIF-A00:PROG
+      type: PROG
+      pages: 116
+      bytes: 249856
+      userName: FLOPPY-USER
+      dateCreated: 2498793886
+      lastDateRead: 2501029162
+      lastDateWritten: 2498794701
+      dateCreatedStr: 1987-03-24 09:06:30
+      lastDateReadStr: 1987-04-09 10:52:42
+      lastDateWrittenStr: 1987-03-24 09:19:13
+      bpunValid: null
+    - name: OEF-FUNCT-A00:PROG
+      type: PROG
+      pages: 76
+      bytes: 161792
+      userName: FLOPPY-USER
+      dateCreated: 2498795533
+      lastDateRead: 2501029208
+      lastDateWritten: 2498795627
+      dateCreatedStr: 1987-03-24 09:32:13
+      lastDateReadStr: 1987-04-09 10:53:24
+      lastDateWrittenStr: 1987-03-24 09:33:43
+      bpunValid: null
+    - name: OEC-SYS-A00:DATA
+      type: DATA
+      pages: 3
+      bytes: 207620
+      userName: FLOPPY-USER
+      dateCreated: 2496046147
+      lastDateRead: 2501029242
+      lastDateWritten: 2496320080
+      dateCreatedStr: 1987-03-03 10:17:03
+      lastDateReadStr: 1987-04-09 10:53:58
+      lastDateWrittenStr: 1987-03-05 13:09:16
+      bpunValid: null
+    - name: OEC-DATA-A00:DATA
+      type: DATA
+      pages: 7
+      bytes: 215102
+      userName: FLOPPY-USER
+      dateCreated: 2496046153
+      lastDateRead: 2501029256
+      lastDateWritten: 2496320080
+      dateCreatedStr: 1987-03-03 10:17:09
+      lastDateReadStr: 1987-04-09 10:54:08
+      lastDateWrittenStr: 1987-03-05 13:09:16
+      bpunValid: null
+    - name: OEC-LIB-1B-A00:BRF
+      type: BRF
+      pages: 5
+      bytes: 9910
+      userName: FLOPPY-USER
+      dateCreated: 2496183389
+      lastDateRead: 2501029266
+      lastDateWritten: 2496183390
+      dateCreatedStr: 1987-03-04 11:49:29
+      lastDateReadStr: 1987-04-09 10:54:18
+      lastDateWrittenStr: 1987-03-04 11:49:30
+      bpunValid: null
+    - name: OEC-LIB-2B-A00:BRF
+      type: BRF
+      pages: 5
+      bytes: 9819
+      userName: FLOPPY-USER
+      dateCreated: 2496183351
+      lastDateRead: 2501029276
+      lastDateWritten: 2496183354
+      dateCreatedStr: 1987-03-04 11:48:55
+      lastDateReadStr: 1987-04-09 10:54:28
+      lastDateWrittenStr: 1987-03-04 11:48:58
+      bpunValid: null
+    - name: TRUE-TRMH-OE-A00:PROG
+      type: PROG
+      pages: 5
+      bytes: 135168
+      userName: FLOPPY-USER
+      dateCreated: 2497356024
+      lastDateRead: 2501029035
+      lastDateWritten: 2497356024
+      dateCreatedStr: 1987-03-13 10:03:56
+      lastDateReadStr: 1987-04-09 10:50:43
+      lastDateWrittenStr: 1987-03-13 10:03:56
+      bpunValid: null
+    - name: DDBTABLES-E06:VTM
+      type: VTM
+      pages: 15
+      bytes: 29870
+      userName: FLOPPY-USER
+      dateCreated: 2494613346
+      lastDateRead: 2500122423
+      lastDateWritten: 2494613346
+      dateCreatedStr: 1987-02-24 12:29:34
+      lastDateReadStr: 1987-04-02 13:28:55
+      lastDateWrittenStr: 1987-02-24 12:29:34
+      bpunValid: null
+provenance:
+  contributor: Tingo
+  originalPath: 211068a00/211068A00-XX-02D.image
+  dateImaged: 2023-10-22
+  importedAt: 2026-08-17T14:22:51.622Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-211068-a00-d2-c3e0f721
+  syncStatus: pending

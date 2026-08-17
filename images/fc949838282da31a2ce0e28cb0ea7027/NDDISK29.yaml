@@ -1,0 +1,82 @@
+id: img-fc949838282d
+volumeName: ND
+md5: fc949838282da31a2ce0e28cb0ea7027
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 130
+  files:
+    - name: SPELL:MAC
+      type: MAC
+      pages: 37
+      bytes: 75477
+      userName: FLOPPY-USER
+      dateCreated: 2439717677
+      lastDateRead: 2439717682
+      lastDateWritten: 2439717682
+      dateCreatedStr: 1986-05-21 18:12:45
+      lastDateReadStr: 1986-05-21 18:12:50
+      lastDateWrittenStr: 1986-05-21 18:12:50
+      bpunValid: null
+    - name: SPELL0:MAC
+      type: MAC
+      pages: 3
+      bytes: 5357
+      userName: FLOPPY-USER
+      dateCreated: 2439718381
+      lastDateRead: 2439718382
+      lastDateWritten: 2439718382
+      dateCreatedStr: 1986-05-21 18:23:45
+      lastDateReadStr: 1986-05-21 18:23:46
+      lastDateWrittenStr: 1986-05-21 18:23:46
+      bpunValid: null
+    - name: DICCRE:MAC
+      type: MAC
+      pages: 51
+      bytes: 27726
+      userName: FLOPPY-USER
+      dateCreated: 2439718097
+      lastDateRead: 2439718418
+      lastDateWritten: 2439718418
+      dateCreatedStr: 1986-05-21 18:19:17
+      lastDateReadStr: 1986-05-21 18:24:18
+      lastDateWrittenStr: 1986-05-21 18:24:18
+      bpunValid: null
+    - name: SPELL:DCT
+      type: DCT
+      pages: 34
+      bytes: 68543
+      userName: FLOPPY-USER
+      dateCreated: 2439718470
+      lastDateRead: 2439718471
+      lastDateWritten: 2439718471
+      dateCreatedStr: 1986-05-21 18:25:06
+      lastDateReadStr: 1986-05-21 18:25:07
+      lastDateWrittenStr: 1986-05-21 18:25:07
+      bpunValid: null
+provenance:
+  contributor: Datormuseum
+  originalPath: DiskImages/NDDISK29.img
+  dateImaged: 2023-10-02
+  importedAt: 2026-08-17T14:18:47.360Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-fc949838282d
+  syncStatus: pending

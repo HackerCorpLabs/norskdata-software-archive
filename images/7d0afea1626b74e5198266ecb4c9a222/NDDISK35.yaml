@@ -1,0 +1,70 @@
+id: img-7d0afea1626b
+volumeName: ND-10079K-2
+md5: 7d0afea1626b74e5198266ecb4c9a222
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: flomon
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 132
+  files:
+    - name: DIRECTORY:TEST
+      type: TEST
+      pages: 0
+      bytes: 4294967296
+      userName: FLOPPY-USER
+      dateCreated: 2262635678
+      lastDateRead: 2281702424
+      lastDateWritten: 2262635683
+      dateCreatedStr: 1983-11-14 17:18:30
+      lastDateReadStr: null
+      lastDateWrittenStr: 1983-11-14 17:18:35
+      bpunValid: null
+    - name: WP-PRINT-K:BPUN
+      type: BPUN
+      pages: 64
+      bytes: 129450
+      userName: FLOPPY-USER
+      dateCreated: 2262640161
+      lastDateRead: 2281702425
+      lastDateWritten: 2265910005
+      dateCreatedStr: 1983-11-14 18:24:33
+      lastDateReadStr: null
+      lastDateWrittenStr: 1983-12-07 16:43:53
+      bpunValid: true
+    - name: WP-EDITOR-K:BPUN
+      type: BPUN
+      pages: 65
+      bytes: 126996
+      userName: FLOPPY-USER
+      dateCreated: 2262635888
+      lastDateRead: 2281702452
+      lastDateWritten: 2265910033
+      dateCreatedStr: 1983-11-14 17:21:48
+      lastDateReadStr: null
+      lastDateWrittenStr: 1983-12-07 16:44:17
+      bpunValid: true
+provenance:
+  contributor: Datormuseum
+  originalPath: DiskImages/NDDISK35.img
+  dateImaged: 2023-10-02
+  importedAt: 2026-08-17T14:18:57.601Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-7d0afea1626b
+  syncStatus: pending

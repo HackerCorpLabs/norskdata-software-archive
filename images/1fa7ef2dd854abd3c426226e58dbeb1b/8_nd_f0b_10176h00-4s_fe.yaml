@@ -1,0 +1,86 @@
+id: nd-10176-h00-d4-1fa7ef2d
+volumeName: 10176H00-4S
+md5: 1fa7ef2dd854abd3c426226e58dbeb1b
+product:
+  id: ND-10176
+  version: H00
+  diskNumber: 4
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 78
+  files:
+    - name: VTM-BRIDGE-1-H00:BRF
+      type: BRF
+      pages: 35
+      bytes: 70395
+      userName: FLOPPY-USER
+      dateCreated: 2370613748
+      lastDateRead: 2370744483
+      lastDateWritten: 2370613819
+      dateCreatedStr: 1985-05-06 11:07:52
+      lastDateReadStr: 1985-05-07 11:02:35
+      lastDateWrittenStr: 1985-05-06 11:08:59
+      bpunValid: null
+    - name: VTM-BRIDGE-2-H00:BRF
+      type: BRF
+      pages: 36
+      bytes: 73363
+      userName: FLOPPY-USER
+      dateCreated: 2370613765
+      lastDateRead: 2370744496
+      lastDateWritten: 2370613856
+      dateCreatedStr: 1985-05-06 11:08:05
+      lastDateReadStr: 1985-05-07 11:02:48
+      lastDateWrittenStr: 1985-05-06 11:09:32
+      bpunValid: null
+    - name: VTM-BRIDGE-1-H00:MODE
+      type: MODE
+      pages: 1
+      bytes: 527
+      userName: FLOPPY-USER
+      dateCreated: 2370613775
+      lastDateRead: 2424649369
+      lastDateWritten: 2370636063
+      dateCreatedStr: 1985-05-06 11:08:15
+      lastDateReadStr: 1986-02-02 19:26:25
+      lastDateWrittenStr: 1985-05-06 16:36:31
+      bpunValid: null
+    - name: VTM-BRIDGE-2-H00:MODE
+      type: MODE
+      pages: 1
+      bytes: 527
+      userName: FLOPPY-USER
+      dateCreated: 2370613779
+      lastDateRead: 2370744515
+      lastDateWritten: 2370636301
+      dateCreatedStr: 1985-05-06 11:08:19
+      lastDateReadStr: 1985-05-07 11:03:03
+      lastDateWrittenStr: 1985-05-06 16:40:13
+      bpunValid: null
+provenance:
+  contributor: paal
+  originalPath: good/8_nd_f0b_10176h00-4s_fe.img
+  dateImaged: 2023-10-20
+  importedAt: 2026-08-17T14:19:55.518Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10176-h00-d4-1fa7ef2d
+  syncStatus: pending

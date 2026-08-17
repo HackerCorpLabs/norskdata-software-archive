@@ -1,0 +1,190 @@
+id: img-93c1a2458895
+volumeName: NMN-SKATT-NEW
+md5: 93c1a2458895e2410c78cfc783feb3ad
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: UKA-83
+      pagesUsed: 146
+  files:
+    - name: ADV-EXIT:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 259
+      userName: UKA-83
+      dateCreated: 2089883986
+      lastDateRead: 2123941334
+      lastDateWritten: 2118315575
+      dateCreatedStr: 1981-02-08 17:37:18
+      lastDateReadStr: 1981-10-12 12:23:22
+      lastDateWrittenStr: 1981-09-01 14:56:55
+      bpunValid: null
+    - name: ADV-SUBR:SYMB
+      type: SYMB
+      pages: 22
+      bytes: 44398
+      userName: UKA-83
+      dateCreated: 2089883997
+      lastDateRead: 2123941343
+      lastDateWritten: 2089883997
+      dateCreatedStr: 1981-02-08 17:37:29
+      lastDateReadStr: 1981-10-12 12:23:31
+      lastDateWrittenStr: 1981-02-08 17:37:29
+      bpunValid: null
+    - name: ADV-DATA:SYMB
+      type: SYMB
+      pages: 47
+      bytes: 94711
+      userName: UKA-83
+      dateCreated: 2089884026
+      lastDateRead: 2123941361
+      lastDateWritten: 2118315578
+      dateCreatedStr: 1981-02-08 17:37:58
+      lastDateReadStr: 1981-10-12 12:23:49
+      lastDateWrittenStr: 1981-09-01 14:56:58
+      bpunValid: null
+    - name: ADV-MESSAGE:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 465
+      userName: UKA-83
+      dateCreated: 2089884089
+      lastDateRead: 2123941396
+      lastDateWritten: 2118315605
+      dateCreatedStr: 1981-02-08 17:38:57
+      lastDateReadStr: 1981-10-12 12:24:20
+      lastDateWrittenStr: 1981-09-01 14:57:21
+      bpunValid: null
+    - name: ADV-STAT:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 833
+      userName: UKA-83
+      dateCreated: 2089884099
+      lastDateRead: 2123941406
+      lastDateWritten: 2118315612
+      dateCreatedStr: 1981-02-08 17:39:03
+      lastDateReadStr: 1981-10-12 12:24:30
+      lastDateWrittenStr: 1981-09-01 14:57:28
+      bpunValid: null
+    - name: ADV-INIT:SYMB
+      type: SYMB
+      pages: 16
+      bytes: 32312
+      userName: UKA-83
+      dateCreated: 2089884105
+      lastDateRead: 2123941415
+      lastDateWritten: 2089884106
+      dateCreatedStr: 1981-02-08 17:39:09
+      lastDateReadStr: 1981-10-12 12:24:39
+      lastDateWrittenStr: 1981-02-08 17:39:10
+      bpunValid: null
+    - name: ADV-8ERR:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 2284
+      userName: UKA-83
+      dateCreated: 2089884138
+      lastDateRead: 2123941431
+      lastDateWritten: 2118315623
+      dateCreatedStr: 1981-02-08 17:39:42
+      lastDateReadStr: 1981-10-12 12:24:55
+      lastDateWrittenStr: 1981-09-01 14:57:39
+      bpunValid: null
+    - name: ADV-HOVED:SYMB
+      type: SYMB
+      pages: 36
+      bytes: 72079
+      userName: UKA-83
+      dateCreated: 2089884145
+      lastDateRead: 2123941445
+      lastDateWritten: 2089884146
+      dateCreatedStr: 1981-02-08 17:39:49
+      lastDateReadStr: 1981-10-12 12:25:05
+      lastDateWrittenStr: 1981-02-08 17:39:50
+      bpunValid: null
+    - name: ADV-OPEN:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 547
+      userName: UKA-83
+      dateCreated: 2089884215
+      lastDateRead: 2123941472
+      lastDateWritten: 2118315629
+      dateCreatedStr: 1981-02-08 17:40:55
+      lastDateReadStr: 1981-10-12 12:25:32
+      lastDateWrittenStr: 1981-09-01 14:57:45
+      bpunValid: null
+    - name: ADV-GETIN:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 2436
+      userName: UKA-83
+      dateCreated: 2089884226
+      lastDateRead: 2123941482
+      lastDateWritten: 2118315636
+      dateCreatedStr: 1981-02-08 17:41:02
+      lastDateReadStr: 1981-10-12 12:25:42
+      lastDateWrittenStr: 1981-09-01 14:57:52
+      bpunValid: null
+    - name: ADV-TR1-TR2:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 768
+      userName: UKA-83
+      dateCreated: 2089884234
+      lastDateRead: 2123941492
+      lastDateWritten: 2118315641
+      dateCreatedStr: 1981-02-08 17:41:10
+      lastDateReadStr: 1981-10-12 12:25:52
+      lastDateWrittenStr: 1981-09-01 14:57:57
+      bpunValid: null
+    - name: ADV-XOR:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 711
+      userName: UKA-83
+      dateCreated: 2089884241
+      lastDateRead: 2123941506
+      lastDateWritten: 2118315650
+      dateCreatedStr: 1981-02-08 17:41:17
+      lastDateReadStr: 1981-10-12 12:26:02
+      lastDateWrittenStr: 1981-09-01 14:58:02
+      bpunValid: null
+    - name: ADV-COMP:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1049
+      userName: UKA-83
+      dateCreated: 2118315661
+      lastDateRead: 2123941516
+      lastDateWritten: 2118315748
+      dateCreatedStr: 1981-09-01 14:58:13
+      lastDateReadStr: 1981-10-12 12:26:12
+      lastDateWrittenStr: 1981-09-01 14:59:36
+      bpunValid: null
+provenance:
+  contributor: fvdm
+  originalPath: Disk Images/NMN-SKATT-NEW (2).img
+  dateImaged: 2026-04-08
+  importedAt: 2026-08-17T14:19:49.595Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-93c1a2458895
+  syncStatus: pending

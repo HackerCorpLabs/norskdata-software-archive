@@ -1,0 +1,375 @@
+id: img-095ac911f95c
+volumeName: null
+md5: 095ac911f95ce9ec0701b04aceebc01b
+image:
+  sizeBytes: 1261568
+  format: raw
+  controller: floppy
+filesystem: ndfs
+condition:
+  status: damaged
+  parser: ndfs
+  parserError: Invalid NDFS master block
+  ndNamesFound: 333
+  ndNameSamples:
+    - VOID:WRTS
+    - INTEGER4:QA
+    - OVLAP:DUMM
+    - BEFORE:SIGN
+    - SHIF:XS
+    - LOW:HIGH
+    - ODD:ODD
+    - VOID:RESE
+  recovery:
+    status: recovered
+    layout:
+      object: 508
+      user: 510
+      bit: 306
+    filesRecovered: 40
+    namesConfirmedInBytes: 40
+    confirmRatio: 1
+    acceptedBy: own-bytes
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 591
+  files:
+    - name: C1-MONITOR
+      type: SYMB
+      pages: 0
+      bytes: 0
+      userName: FLOPPY-USER
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: C1-EXPONENT
+      type: SYMB
+      pages: 0
+      bytes: 0
+      userName: FLOPPY-USER
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: C1-CREATE-ERRORS
+      type: SYMB
+      pages: 0
+      bytes: 0
+      userName: FLOPPY-USER
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: C1-ERROR-NO
+      type: SYMB
+      pages: 0
+      bytes: 0
+      userName: FLOPPY-USER
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: C1-MOVE-BYTE
+      type: SYMB
+      pages: 0
+      bytes: 0
+      userName: FLOPPY-USER
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: C1-LAYOUT-FCB100
+      type: SYMB
+      pages: 0
+      bytes: 0
+      userName: FLOPPY-USER
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: C1-PED-ERRORS
+      type: SYMB
+      pages: 0
+      bytes: 0
+      userName: FLOPPY-USER
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: C1-ERRORS
+      type: SYMB
+      pages: 0
+      bytes: 0
+      userName: FLOPPY-USER
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: C1-TRUE
+      type: SYMB
+      pages: 0
+      bytes: 0
+      userName: FLOPPY-USER
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: C1-TABLES
+      type: SYMB
+      pages: 0
+      bytes: 0
+      userName: FLOPPY-USER
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: C1-FCB-100
+      type: SYMB
+      pages: 0
+      bytes: 0
+      userName: FLOPPY-USER
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: C1-RESVALUE
+      type: SYMB
+      pages: 0
+      bytes: 0
+      userName: FLOPPY-USER
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: C1-STEXT
+      type: SYMB
+      pages: 0
+      bytes: 0
+      userName: FLOPPY-USER
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: C1-COBXX
+      type: SYMB
+      pages: 0
+      bytes: 0
+      userName: FLOPPY-USER
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: C1-COMMON
+      type: SYMB
+      pages: 0
+      bytes: 0
+      userName: FLOPPY-USER
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: C1-XREF
+      type: SYMB
+      pages: 0
+      bytes: 0
+      userName: FLOPPY-USER
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: C1-WORDS
+      type: SYMB
+      pages: 0
+      bytes: 0
+      userName: FLOPPY-USER
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: C1-CALL5
+      type: SYMB
+      pages: 0
+      bytes: 0
+      userName: FLOPPY-USER
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: C1-GLOBAL
+      type: SYMB
+      pages: 0
+      bytes: 0
+      userName: FLOPPY-USER
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: C1-CLOSE
+      type: SYMB
+      pages: 0
+      bytes: 0
+      userName: FLOPPY-USER
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: C2-ISAM-1
+      type: BRF
+      pages: 0
+      bytes: 0
+      userName: FLOPPY-USER
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: C2-COBOL
+      type: SYMB
+      pages: 0
+      bytes: 0
+      userName: FLOPPY-USER
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: C2-ENV-DATA
+      type: SYMB
+      pages: 0
+      bytes: 0
+      userName: FLOPPY-USER
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: C2-CODE-GENERATE
+      type: SYMB
+      pages: 0
+      bytes: 0
+      userName: FLOPPY-USER
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: C2-PARSE
+      type: SYMB
+      pages: 0
+      bytes: 0
+      userName: FLOPPY-USER
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: C2-GENERATE
+      type: SYMB
+      pages: 0
+      bytes: 0
+      userName: FLOPPY-USER
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: C2-SCREEN
+      type: SYMB
+      pages: 0
+      bytes: 0
+      userName: FLOPPY-USER
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: C2-LIBRARY
+      type: SYMB
+      pages: 0
+      bytes: 0
+      userName: FLOPPY-USER
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: C2-CALL5
+      type: SYMB
+      pages: 0
+      bytes: 0
+      userName: FLOPPY-USER
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: C1-MINI-NRL
+      type: BRF
+      pages: 0
+      bytes: 0
+      userName: FLOPPY-USER
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: C1-N100-DISAM
+      type: BRF
+      pages: 0
+      bytes: 0
+      userName: FLOPPY-USER
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: C1-OVERLAY-1
+      type: BRF
+      pages: 0
+      bytes: 0
+      userName: FLOPPY-USER
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: C1-OVERLAY-2
+      type: BRF
+      pages: 0
+      bytes: 0
+      userName: FLOPPY-USER
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: C2-SORT-MERGE-1F
+      type: BRF
+      pages: 0
+      bytes: 0
+      userName: FLOPPY-USER
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: C2-SORT-MERGE-2F
+      type: BRF
+      pages: 0
+      bytes: 0
+      userName: FLOPPY-USER
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: C1-MON-NAMES
+      type: BRF
+      pages: 0
+      bytes: 0
+      userName: FLOPPY-USER
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: C1-MAKE-VTM
+      type: GO
+      pages: 0
+      bytes: 0
+      userName: FLOPPY-USER
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: C2-COBOL
+      type: GO
+      pages: 0
+      bytes: 0
+      userName: FLOPPY-USER
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: C2-LIBRARY
+      type: GO
+      pages: 0
+      bytes: 0
+      userName: FLOPPY-USER
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: C2-ISAM-2
+      type: BRF
+      pages: 0
+      bytes: 0
+      userName: FLOPPY-USER
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+provenance:
+  contributor: paal
+  originalPath: bad/8_nd_f17b_source_cobol-100-h03_fe.img
+  dateImaged: 2023-10-20
+  importedAt: 2026-08-17T14:19:54.631Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-095ac911f95c
+  syncStatus: pending

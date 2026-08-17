@@ -1,0 +1,106 @@
+id: img-5a1f47afeac0
+volumeName: null
+md5: 5a1f47afeac0bca6355feb05d6d53608
+product:
+  id: ON-WORD
+image:
+  sizeBytes: 1228800
+  format: raw
+  controller: floppy
+filesystem: dos
+dosFiles:
+  - path: ACTOVKD.386
+    bytes: 12553
+    modified: 1991-05-21 01:00
+    directory: false
+  - path: INSTALL.DLL
+    bytes: 2560
+    modified: 1991-07-13 11:52
+    directory: false
+  - path: INSTALL.EXE
+    bytes: 56832
+    modified: 1991-07-12 16:38
+    directory: false
+  - path: INSTALL.HLP
+    bytes: 7693
+    modified: 1991-07-16 15:09
+    directory: false
+  - path: INSTALL.INE
+    bytes: 3541
+    modified: 1991-07-13 11:55
+    directory: false
+  - path: KBDTD.DRV
+    bytes: 7169
+    modified: 1991-05-21 01:00
+    directory: false
+  - path: ON-WORD.EXE
+    bytes: 197632
+    modified: 1991-07-22 09:43
+    directory: false
+  - path: ON-WORD.HLP
+    bytes: 137408
+    modified: 1991-06-26 00:07
+    directory: false
+  - path: WINSPR.DAT
+    bytes: 4915
+    modified: 1991-05-06 11:17
+    directory: false
+  - path: WINSPR.DLL
+    bytes: 15872
+    modified: 1991-07-12 10:44
+    directory: false
+  - path: WINWP.CNT
+    bytes: 504
+    modified: 1991-07-04 11:14
+    directory: false
+  - path: WP_8X14.DAT
+    bytes: 11732
+    modified: 1990-06-27 13:19
+    directory: false
+  - path: WP_CONV.DAT
+    bytes: 10240
+    modified: 1990-05-15 09:20
+    directory: false
+  - path: WP_INIT.KEY
+    bytes: 6144
+    modified: 1990-08-13 11:14
+    directory: false
+  - path: WP_INIT.REC
+    bytes: 1028
+    modified: 1990-07-24 12:24
+    directory: false
+  - path: WP_MSG.DAT
+    bytes: 28351
+    modified: 1991-07-17 16:16
+    directory: false
+  - path: ZWINWP.EXE
+    bytes: 15360
+    modified: 1991-07-04 10:53
+    directory: false
+  - path: INSTALL.INN
+    bytes: 4119
+    modified: 1991-07-17 07:56
+    directory: false
+  - path: INSTALL.INI
+    bytes: 542
+    modified: 1991-07-15 14:22
+    directory: false
+provenance:
+  contributor: fvdm
+  originalPath: ON-Word Win. 1.0/ON-Word Win. 1.0.img
+  dateImaged: 2024-11-15
+  importedAt: 2026-08-17T14:19:48.407Z
+photos:
+  disk:
+    - ON-Word Win. 1.0.jpg
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-5a1f47afeac0
+  syncStatus: pending

@@ -1,0 +1,166 @@
+id: img-4226aaeee30c
+volumeName: NMN-DUNGEON-2
+md5: 4226aaeee30c710b24651f943e231912
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: bpun
+filesystem: ndfs
+ndfs:
+  users:
+    - name: DUNGEON
+      pagesUsed: 145
+  files:
+    - name: SOBJS:FOR
+      type: FOR
+      pages: 14
+      bytes: 22212
+      userName: DUNGEON
+      dateCreated: 2328832086
+      lastDateRead: 2622002423
+      lastDateWritten: 2328832091
+      dateCreatedStr: 1984-11-07 18:33:22
+      lastDateReadStr: 1989-01-04 09:19:55
+      lastDateWrittenStr: 1984-11-07 18:33:27
+      bpunValid: null
+    - name: VILLNS:FOR
+      type: FOR
+      pages: 14
+      bytes: 22037
+      userName: DUNGEON
+      dateCreated: 2328832104
+      lastDateRead: 2622002432
+      lastDateWritten: 2328832105
+      dateCreatedStr: 1984-11-07 18:33:40
+      lastDateReadStr: 1989-01-04 09:20:00
+      lastDateWrittenStr: 1984-11-07 18:33:41
+      bpunValid: null
+    - name: VMSTIM:FOR
+      type: FOR
+      pages: 1
+      bytes: 424
+      userName: DUNGEON
+      dateCreated: 2328832119
+      lastDateRead: 2622002437
+      lastDateWritten: 2328832121
+      dateCreatedStr: 1984-11-07 18:33:55
+      lastDateReadStr: 1989-01-04 09:20:05
+      lastDateWrittenStr: 1984-11-07 18:33:57
+      bpunValid: null
+    - name: NP1:FOR
+      type: FOR
+      pages: 22
+      bytes: 42607
+      userName: DUNGEON
+      dateCreated: 2328832129
+      lastDateRead: 2622002438
+      lastDateWritten: 2328832130
+      dateCreatedStr: 1984-11-07 18:34:01
+      lastDateReadStr: 1989-01-04 09:20:06
+      lastDateWrittenStr: 1984-11-07 18:34:02
+      bpunValid: null
+    - name: ACTORS:FTN
+      type: FTN
+      pages: 14
+      bytes: 18207
+      userName: DUNGEON
+      dateCreated: 2328832516
+      lastDateRead: 2622002445
+      lastDateWritten: 2328832517
+      dateCreatedStr: 1984-11-07 18:40:04
+      lastDateReadStr: 1989-01-04 09:20:13
+      lastDateWrittenStr: 1984-11-07 18:40:05
+      bpunValid: null
+    - name: DEMONS:FTN
+      type: FTN
+      pages: 14
+      bytes: 22570
+      userName: DUNGEON
+      dateCreated: 2328832537
+      lastDateRead: 2622002451
+      lastDateWritten: 2328832538
+      dateCreatedStr: 1984-11-07 18:40:25
+      lastDateReadStr: 1989-01-04 09:20:19
+      lastDateWrittenStr: 1984-11-07 18:40:26
+      bpunValid: null
+    - name: DGAME:FTN
+      type: FTN
+      pages: 14
+      bytes: 11593
+      userName: DUNGEON
+      dateCreated: 2328832558
+      lastDateRead: 2622002456
+      lastDateWritten: 2328832560
+      dateCreatedStr: 1984-11-07 18:40:46
+      lastDateReadStr: 1989-01-04 09:20:24
+      lastDateWrittenStr: 1984-11-07 18:40:48
+      bpunValid: null
+    - name: DINIT:FTN
+      type: FTN
+      pages: 14
+      bytes: 15021
+      userName: DUNGEON
+      dateCreated: 2328832586
+      lastDateRead: 2622002462
+      lastDateWritten: 2330781254
+      dateCreatedStr: 1984-11-07 18:41:10
+      lastDateReadStr: 1989-01-04 09:20:30
+      lastDateWrittenStr: 1984-11-22 14:25:06
+      bpunValid: null
+    - name: DMAIN:FTN
+      type: FTN
+      pages: 14
+      bytes: 14341
+      userName: DUNGEON
+      dateCreated: 2328832612
+      lastDateRead: 2622002467
+      lastDateWritten: 2328832614
+      dateCreatedStr: 1984-11-07 18:41:36
+      lastDateReadStr: 1989-01-04 09:20:35
+      lastDateWrittenStr: 1984-11-07 18:41:38
+      bpunValid: null
+    - name: CLOCKR:FTN
+      type: FTN
+      pages: 11
+      bytes: 20901
+      userName: DUNGEON
+      dateCreated: 2328832644
+      lastDateRead: 2622002473
+      lastDateWritten: 2328832645
+      dateCreatedStr: 1984-11-07 18:42:04
+      lastDateReadStr: 1989-01-04 09:20:41
+      lastDateWrittenStr: 1984-11-07 18:42:05
+      bpunValid: null
+    - name: FILE-DATA:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1414
+      userName: DUNGEON
+      dateCreated: 2328833064
+      lastDateRead: 2622002479
+      lastDateWritten: 2330781440
+      dateCreatedStr: 1984-11-07 18:48:40
+      lastDateReadStr: 1989-01-04 09:20:47
+      lastDateWrittenStr: 1984-11-22 14:28:00
+      bpunValid: null
+provenance:
+  contributor: fvdm
+  originalPath: Disk Images/NMN-DUNGEON-2.img
+  dateImaged: 2026-04-08
+  importedAt: 2026-08-17T14:19:48.995Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-4226aaeee30c
+  syncStatus: pending

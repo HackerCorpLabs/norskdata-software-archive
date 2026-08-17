@@ -1,0 +1,106 @@
+id: patch-nd-patch-sin-k-d6ec146f
+volumeName: ND-PATCH-SIN-K
+md5: d6ec146f577a31dee88b74c9c76646af
+image:
+  sizeBytes: 1261568
+  format: raw
+  controller: floppy
+  totalPages: 616
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: SYSTEM
+      pagesUsed: 140
+  files:
+    - name: NEW-SYSTEM:PROG
+      type: PROG
+      pages: 21
+      bytes: 43008
+      userName: SYSTEM
+      dateCreated: 2531853414
+      lastDateRead: 2531853429
+      lastDateWritten: 2531853429
+      dateCreatedStr: 1987-11-20 16:17:38
+      lastDateReadStr: 1987-11-20 16:17:53
+      lastDateWrittenStr: 1987-11-20 16:17:53
+      bpunValid: null
+    - name: START-PATCH-FILE:MODE
+      type: MODE
+      pages: 2
+      bytes: 1771
+      userName: SYSTEM
+      dateCreated: 2531853418
+      lastDateRead: 2531853449
+      lastDateWritten: 2531853449
+      dateCreatedStr: 1987-11-20 16:17:42
+      lastDateReadStr: 1987-11-20 16:18:09
+      lastDateWrittenStr: 1987-11-20 16:18:09
+      bpunValid: null
+    - name: PATCH-FILE:MODE
+      type: MODE
+      pages: 3
+      bytes: 4639
+      userName: SYSTEM
+      dateCreated: 2531853458
+      lastDateRead: 2531853459
+      lastDateWritten: 2531853459
+      dateCreatedStr: 1987-11-20 16:18:18
+      lastDateReadStr: 1987-11-20 16:18:19
+      lastDateWrittenStr: 1987-11-20 16:18:19
+      bpunValid: null
+    - name: PATCHES:PATC
+      type: PATC
+      pages: 104
+      bytes: 211921
+      userName: SYSTEM
+      dateCreated: 2531853463
+      lastDateRead: 2531853465
+      lastDateWritten: 2531853465
+      dateCreatedStr: 1987-11-20 16:18:23
+      lastDateReadStr: 1987-11-20 16:18:25
+      lastDateWrittenStr: 1987-11-20 16:18:25
+      bpunValid: null
+    - name: REFERENCE:FADM
+      type: FADM
+      pages: 4
+      bytes: 7215
+      userName: SYSTEM
+      dateCreated: 2531853533
+      lastDateRead: 2531853534
+      lastDateWritten: 2531853534
+      dateCreatedStr: 1987-11-20 16:19:29
+      lastDateReadStr: 1987-11-20 16:19:30
+      lastDateWrittenStr: 1987-11-20 16:19:30
+      bpunValid: null
+    - name: SYMBOLS:FADM
+      type: FADM
+      pages: 1
+      bytes: 27
+      userName: SYSTEM
+      dateCreated: 2531853540
+      lastDateRead: 2531853616
+      lastDateWritten: 2531853609
+      dateCreatedStr: 1987-11-20 16:19:36
+      lastDateReadStr: 1987-11-20 16:20:48
+      lastDateWrittenStr: 1987-11-20 16:20:41
+      bpunValid: null
+provenance:
+  contributor: unknown
+  originalPath: SINTRAN III-VSX K-Version/ND-PATCH-SIN-K.image
+  dateImaged: 2022-08-10
+  importedAt: 2026-08-17T14:22:52.967Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-patch-nd-patch-sin-k-d6ec146f
+  syncStatus: pending

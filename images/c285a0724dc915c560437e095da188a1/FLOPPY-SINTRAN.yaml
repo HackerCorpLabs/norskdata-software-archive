@@ -1,0 +1,364 @@
+id: img-c285a0724dc9
+volumeName: FLOPPY-SINTRAN
+md5: c285a0724dc915c560437e095da188a1
+image:
+  sizeBytes: 1261568
+  format: raw
+  controller: floppy
+  totalPages: 616
+  pageSize: 2048
+  bootFormat: flomon
+filesystem: ndfs
+ndfs:
+  users:
+    - name: SYSTEM
+      pagesUsed: 588
+    - name: RT
+      pagesUsed: 0
+    - name: SCRATCH
+      pagesUsed: 1
+  files:
+    - name: SEGFIL0:DATA
+      type: DATA
+      pages: 63
+      bytes: 129024
+      userName: SYSTEM
+      dateCreated: 2385158941
+      lastDateRead: 2385160832
+      lastDateWritten: 2385160832
+      dateCreatedStr: 1985-08-21 10:12:29
+      lastDateReadStr: 1985-08-21 10:42:00
+      lastDateWrittenStr: 1985-08-21 10:42:00
+      bpunValid: null
+    - name: SEGMENT-03:SEGM
+      type: SEGM
+      pages: 26
+      bytes: 53248
+      userName: SYSTEM
+      dateCreated: 2385158945
+      lastDateRead: 2385160807
+      lastDateWritten: 2385160807
+      dateCreatedStr: 1985-08-21 10:12:33
+      lastDateReadStr: 1985-08-21 10:41:39
+      lastDateWrittenStr: 1985-08-21 10:41:39
+      bpunValid: null
+    - name: SEGMENT-04:SEGM
+      type: SEGM
+      pages: 16
+      bytes: 32768
+      userName: SYSTEM
+      dateCreated: 2385158947
+      lastDateRead: 2385159475
+      lastDateWritten: 2385159475
+      dateCreatedStr: 1985-08-21 10:12:35
+      lastDateReadStr: 1985-08-21 10:20:51
+      lastDateWrittenStr: 1985-08-21 10:20:51
+      bpunValid: null
+    - name: SEGMENT-05:SEGM
+      type: SEGM
+      pages: 2
+      bytes: 4096
+      userName: SYSTEM
+      dateCreated: 2385158948
+      lastDateRead: 2385159527
+      lastDateWritten: 2385159527
+      dateCreatedStr: 1985-08-21 10:12:36
+      lastDateReadStr: 1985-08-21 10:21:39
+      lastDateWrittenStr: 1985-08-21 10:21:39
+      bpunValid: null
+    - name: SEGMENT-06:SEGM
+      type: SEGM
+      pages: 12
+      bytes: 24576
+      userName: SYSTEM
+      dateCreated: 2385158950
+      lastDateRead: 2385160841
+      lastDateWritten: 2385160841
+      dateCreatedStr: 1985-08-21 10:12:38
+      lastDateReadStr: 1985-08-21 10:42:09
+      lastDateWrittenStr: 1985-08-21 10:42:09
+      bpunValid: null
+    - name: SEGMENT-10:SEGM
+      type: SEGM
+      pages: 8
+      bytes: 16384
+      userName: SYSTEM
+      dateCreated: 2385158951
+      lastDateRead: 2385159669
+      lastDateWritten: 2385159669
+      dateCreatedStr: 1985-08-21 10:12:39
+      lastDateReadStr: 1985-08-21 10:23:53
+      lastDateWrittenStr: 1985-08-21 10:23:53
+      bpunValid: null
+    - name: SEGMENT-14:SEGM
+      type: SEGM
+      pages: 6
+      bytes: 12288
+      userName: SYSTEM
+      dateCreated: 2385158952
+      lastDateRead: 2385160799
+      lastDateWritten: 2385160799
+      dateCreatedStr: 1985-08-21 10:12:40
+      lastDateReadStr: 1985-08-21 10:41:31
+      lastDateWrittenStr: 1985-08-21 10:41:31
+      bpunValid: null
+    - name: SEGMENT-23:SEGM
+      type: SEGM
+      pages: 26
+      bytes: 53248
+      userName: SYSTEM
+      dateCreated: 2385158954
+      lastDateRead: 2385160804
+      lastDateWritten: 2385160804
+      dateCreatedStr: 1985-08-21 10:12:42
+      lastDateReadStr: 1985-08-21 10:41:36
+      lastDateWrittenStr: 1985-08-21 10:41:36
+      bpunValid: null
+    - name: SEGMENT-24:SEGM
+      type: SEGM
+      pages: 14
+      bytes: 28672
+      userName: SYSTEM
+      dateCreated: 2385158955
+      lastDateRead: 2385159978
+      lastDateWritten: 2385159978
+      dateCreatedStr: 1985-08-21 10:12:43
+      lastDateReadStr: 1985-08-21 10:28:42
+      lastDateWrittenStr: 1985-08-21 10:28:42
+      bpunValid: null
+    - name: SEGMENT-25:SEGM
+      type: SEGM
+      pages: 14
+      bytes: 28672
+      userName: SYSTEM
+      dateCreated: 2385158956
+      lastDateRead: 2385160090
+      lastDateWritten: 2385160090
+      dateCreatedStr: 1985-08-21 10:12:44
+      lastDateReadStr: 1985-08-21 10:30:26
+      lastDateWrittenStr: 1985-08-21 10:30:26
+      bpunValid: null
+    - name: SEGMENT-33:SEGM
+      type: SEGM
+      pages: 12
+      bytes: 24576
+      userName: SYSTEM
+      dateCreated: 2385158957
+      lastDateRead: 2385160196
+      lastDateWritten: 2385160196
+      dateCreatedStr: 1985-08-21 10:12:45
+      lastDateReadStr: 1985-08-21 10:32:04
+      lastDateWrittenStr: 1985-08-21 10:32:04
+      bpunValid: null
+    - name: SEGMENT-34:SEGM
+      type: SEGM
+      pages: 42
+      bytes: 86016
+      userName: SYSTEM
+      dateCreated: 2385158958
+      lastDateRead: 2385160489
+      lastDateWritten: 2385160489
+      dateCreatedStr: 1985-08-21 10:12:46
+      lastDateReadStr: 1985-08-21 10:36:41
+      lastDateWrittenStr: 1985-08-21 10:36:41
+      bpunValid: null
+    - name: SEGMENT-35:SEGM
+      type: SEGM
+      pages: 32
+      bytes: 4294967296
+      userName: SYSTEM
+      dateCreated: 2385158959
+      lastDateRead: null
+      lastDateWritten: null
+      dateCreatedStr: 1985-08-21 10:12:47
+      lastDateReadStr: null
+      lastDateWrittenStr: null
+      bpunValid: null
+    - name: SEGMENT-37:SEGM
+      type: SEGM
+      pages: 32
+      bytes: 11776
+      userName: SYSTEM
+      dateCreated: 2385158961
+      lastDateRead: 2385160560
+      lastDateWritten: 2385160560
+      dateCreatedStr: 1985-08-21 10:12:49
+      lastDateReadStr: 1985-08-21 10:37:48
+      lastDateWrittenStr: 1985-08-21 10:37:48
+      bpunValid: null
+    - name: SEGMENT-41:SEGM
+      type: SEGM
+      pages: 12
+      bytes: 18432
+      userName: SYSTEM
+      dateCreated: 2385158962
+      lastDateRead: 2385160628
+      lastDateWritten: 2385160628
+      dateCreatedStr: 1985-08-21 10:12:50
+      lastDateReadStr: 1985-08-21 10:38:52
+      lastDateWrittenStr: 1985-08-21 10:38:52
+      bpunValid: null
+    - name: SYSTEM-SEGMENT:SEGM
+      type: SEGM
+      pages: 5
+      bytes: 10240
+      userName: SYSTEM
+      dateCreated: 2385158963
+      lastDateRead: 2385160802
+      lastDateWritten: 2385160802
+      dateCreatedStr: 1985-08-21 10:12:51
+      lastDateReadStr: 1985-08-21 10:41:34
+      lastDateWrittenStr: 1985-08-21 10:41:34
+      bpunValid: null
+    - name: BACKGROUND-SEGM:SEGM
+      type: SEGM
+      pages: 128
+      bytes: 261888
+      userName: SYSTEM
+      dateCreated: 2385158964
+      lastDateRead: 2385160661
+      lastDateWritten: 2385160661
+      dateCreatedStr: 1985-08-21 10:12:52
+      lastDateReadStr: 1985-08-21 10:39:21
+      lastDateWrittenStr: 1985-08-21 10:39:21
+      bpunValid: null
+    - name: DMAC-SEGMENT:SEGM
+      type: SEGM
+      pages: 18
+      bytes: 36864
+      userName: SYSTEM
+      dateCreated: 2385158965
+      lastDateRead: 2385160730
+      lastDateWritten: 2385160730
+      dateCreatedStr: 1985-08-21 10:12:53
+      lastDateReadStr: 1985-08-21 10:40:26
+      lastDateWrittenStr: 1985-08-21 10:40:26
+      bpunValid: null
+    - name: DMA-SERVER:SEGM
+      type: SEGM
+      pages: 64
+      bytes: 130048
+      userName: SYSTEM
+      dateCreated: 2385158966
+      lastDateRead: 2385160757
+      lastDateWritten: 2385160757
+      dateCreatedStr: 1985-08-21 10:12:54
+      lastDateReadStr: 1985-08-21 10:40:53
+      lastDateWrittenStr: 1985-08-21 10:40:53
+      bpunValid: null
+    - name: MINI-LOAD:BPUN
+      type: BPUN
+      pages: 1
+      bytes: 1492
+      userName: SYSTEM
+      dateCreated: 2386217930
+      lastDateRead: null
+      lastDateWritten: 2386217930
+      dateCreatedStr: 1985-08-29 12:47:10
+      lastDateReadStr: null
+      lastDateWrittenStr: 1985-08-29 12:47:10
+      bpunValid: true
+    - name: UE-ERMSG-EN-B02:ERR
+      type: ERR
+      pages: 47
+      bytes: 95232
+      userName: SYSTEM
+      dateCreated: 2386218245
+      lastDateRead: 2385157709
+      lastDateWritten: 2386218245
+      dateCreatedStr: 1985-08-29 12:52:05
+      lastDateReadStr: 1985-08-21 09:57:13
+      lastDateWrittenStr: 1985-08-29 12:52:05
+      bpunValid: null
+    - name: START-UP:MODE
+      type: MODE
+      pages: 1
+      bytes: 82
+      userName: SYSTEM
+      dateCreated: 2386217929
+      lastDateRead: 2385154597
+      lastDateWritten: 2386217929
+      dateCreatedStr: 1985-08-29 12:47:09
+      lastDateReadStr: 1985-08-21 09:08:37
+      lastDateWrittenStr: 1985-08-29 12:47:09
+      bpunValid: null
+    - name: START-UP:OUT
+      type: OUT
+      pages: 1
+      bytes: 195
+      userName: SYSTEM
+      dateCreated: 2385159008
+      lastDateRead: null
+      lastDateWritten: 2385154598
+      dateCreatedStr: 1985-08-21 10:13:32
+      lastDateReadStr: null
+      lastDateWrittenStr: 1985-08-21 09:08:38
+      bpunValid: null
+    - name: FLOPPY-SINTRAN:GLOB
+      type: GLOB
+      pages: 1
+      bytes: 299
+      userName: SYSTEM
+      dateCreated: 2385159009
+      lastDateRead: 2385160782
+      lastDateWritten: 2385160755
+      dateCreatedStr: 1985-08-21 10:13:33
+      lastDateReadStr: 1985-08-21 10:41:14
+      lastDateWrittenStr: 1985-08-21 10:40:51
+      bpunValid: null
+    - name: FLOPPY-1
+      type: ""
+      pages: 0
+      bytes: 4294967296
+      userName: SYSTEM
+      dateCreated: 2385159009
+      lastDateRead: null
+      lastDateWritten: null
+      dateCreatedStr: 1985-08-21 10:13:33
+      lastDateReadStr: null
+      lastDateWrittenStr: null
+      bpunValid: null
+    - name: TERMINAL
+      type: ""
+      pages: 0
+      bytes: 4294967296
+      userName: SYSTEM
+      dateCreated: 2385159011
+      lastDateRead: null
+      lastDateWritten: null
+      dateCreatedStr: 1985-08-21 10:13:35
+      lastDateReadStr: null
+      lastDateWrittenStr: null
+      bpunValid: null
+    - name: SCRATCH01:DATA
+      type: DATA
+      pages: 0
+      bytes: 4294967296
+      userName: SCRATCH
+      dateCreated: 2385159015
+      lastDateRead: 2385157709
+      lastDateWritten: 2385157709
+      dateCreatedStr: 1985-08-21 10:13:39
+      lastDateReadStr: 1985-08-21 09:57:13
+      lastDateWrittenStr: 1985-08-21 09:57:13
+      bpunValid: null
+provenance:
+  contributor: ronny
+  originalPath: FLOPPY-SINTRAN-J/FLOPPY-SINTRAN.img
+  dateImaged: 2024-09-17
+  importedAt: 2026-08-17T14:20:01.495Z
+imagingLogs:
+  - FLOPPY-SINTRAN.log
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-c285a0724dc9
+  syncStatus: pending

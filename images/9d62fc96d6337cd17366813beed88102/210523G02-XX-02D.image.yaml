@@ -1,0 +1,123 @@
+id: nd-210523-g02-d2-9d62fc96
+volumeName: 210523G02-XX-02D
+md5: 9d62fc96d6337cd17366813beed88102
+product:
+  id: ND-210523
+  version: G02
+  diskNumber: 2
+  language: XX
+image:
+  sizeBytes: 1261568
+  format: raw
+  controller: floppy
+  totalPages: 616
+  pageSize: 2048
+  bootFormat: flomon
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 180
+  files:
+    - name: TPE-MON-100-B00:BPUN
+      type: BPUN
+      pages: 28
+      bytes: 56182
+      userName: FLOPPY-USER
+      dateCreated: 2563326833
+      lastDateRead: 2576282328
+      lastDateWritten: 2563326833
+      dateCreatedStr: 1988-03-04 20:13:49
+      lastDateReadStr: 1988-06-07 15:11:24
+      lastDateWrittenStr: 1988-03-04 20:13:49
+      bpunValid: true
+    - name: DISK-MM-B00:TEST
+      type: TEST
+      pages: 36
+      bytes: 72192
+      userName: FLOPPY-USER
+      dateCreated: 2576407026
+      lastDateRead: 2577317961
+      lastDateWritten: 2576528494
+      dateCreatedStr: 1988-06-08 13:39:50
+      lastDateReadStr: 1988-06-15 12:01:09
+      lastDateWrittenStr: 1988-06-09 11:17:46
+      bpunValid: null
+    - name: SCSI-TV-B00:TEST
+      type: TEST
+      pages: 36
+      bytes: 72704
+      userName: FLOPPY-USER
+      dateCreated: 2577303646
+      lastDateRead: 2577303948
+      lastDateWritten: 2577303647
+      dateCreatedStr: 1988-06-15 08:33:30
+      lastDateReadStr: 1988-06-15 08:38:12
+      lastDateWrittenStr: 1988-06-15 08:33:31
+      bpunValid: null
+    - name: SCSI-TV-OVL1-B00:NEXT
+      type: NEXT
+      pages: 19
+      bytes: 37376
+      userName: FLOPPY-USER
+      dateCreated: 2577303646
+      lastDateRead: 2577303959
+      lastDateWritten: 2577303649
+      dateCreatedStr: 1988-06-15 08:33:30
+      lastDateReadStr: 1988-06-15 08:38:23
+      lastDateWrittenStr: 1988-06-15 08:33:33
+      bpunValid: null
+    - name: SCSI-TV-OVL2-B00:NEXT
+      type: NEXT
+      pages: 16
+      bytes: 31232
+      userName: FLOPPY-USER
+      dateCreated: 2577303646
+      lastDateRead: null
+      lastDateWritten: 2577303652
+      dateCreatedStr: 1988-06-15 08:33:30
+      lastDateReadStr: null
+      lastDateWrittenStr: 1988-06-15 08:33:36
+      bpunValid: null
+    - name: SCSI-TV-OVL3-B00:NEXT
+      type: NEXT
+      pages: 19
+      bytes: 37376
+      userName: FLOPPY-USER
+      dateCreated: 2577303646
+      lastDateRead: null
+      lastDateWritten: 2577303653
+      dateCreatedStr: 1988-06-15 08:33:30
+      lastDateReadStr: null
+      lastDateWrittenStr: 1988-06-15 08:33:37
+      bpunValid: null
+    - name: SCSI-TV-OVL4-B00:NEXT
+      type: NEXT
+      pages: 18
+      bytes: 36352
+      userName: FLOPPY-USER
+      dateCreated: 2577303646
+      lastDateRead: null
+      lastDateWritten: 2577303654
+      dateCreatedStr: 1988-06-15 08:33:30
+      lastDateReadStr: null
+      lastDateWrittenStr: 1988-06-15 08:33:38
+      bpunValid: null
+provenance:
+  contributor: ronny
+  originalPath: ND-210523G02/210523G02-XX-02D.image
+  dateImaged: 2016-07-22
+  importedAt: 2026-08-17T14:22:49.845Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-210523-g02-d2-9d62fc96
+  syncStatus: pending

@@ -1,0 +1,219 @@
+id: nd-10324-e-d1-60e6a2fa
+volumeName: ND-10324E
+md5: 60e6a2fa65c8881b38ec9388573c77bf
+product:
+  id: ND-10324
+  version: E
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: flomon
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 144
+  files:
+    - name: BIG-RAND-1876C:BPUN
+      type: BPUN
+      pages: 3
+      bytes: 4662
+      userName: FLOPPY-USER
+      dateCreated: 2185420922
+      lastDateRead: 2198009333
+      lastDateWritten: 2185421077
+      dateCreatedStr: 1982-09-01 14:01:58
+      lastDateReadStr: 1982-12-01 15:23:53
+      lastDateWrittenStr: 1982-09-01 14:04:21
+      bpunValid: true
+    - name: CONFI-INV-1672N:BPUN
+      type: BPUN
+      pages: 17
+      bytes: 34100
+      userName: FLOPPY-USER
+      dateCreated: 2185420939
+      lastDateRead: 2198009335
+      lastDateWritten: 2185421085
+      dateCreatedStr: 1982-09-01 14:02:11
+      lastDateReadStr: 1982-12-01 15:23:55
+      lastDateWrittenStr: 1982-09-01 14:04:29
+      bpunValid: true
+    - name: DIMS-1453F:BPUN
+      type: BPUN
+      pages: 9
+      bytes: 17004
+      userName: FLOPPY-USER
+      dateCreated: 2185420947
+      lastDateRead: 2198009336
+      lastDateWritten: 2185421098
+      dateCreatedStr: 1982-09-01 14:02:19
+      lastDateReadStr: 1982-12-01 15:23:56
+      lastDateWrittenStr: 1982-09-01 14:04:42
+      bpunValid: true
+    - name: DISC-TEMA-D:BPUN
+      type: BPUN
+      pages: 23
+      bytes: 46796
+      userName: FLOPPY-USER
+      dateCreated: 2196954760
+      lastDateRead: 2198009337
+      lastDateWritten: 2196957478
+      dateCreatedStr: 1982-11-25 13:58:08
+      lastDateReadStr: 1982-12-01 15:23:57
+      lastDateWrittenStr: 1982-11-25 14:36:38
+      bpunValid: true
+    - name: EXTEN-ONE-1519B:BPUN
+      type: BPUN
+      pages: 3
+      bytes: 4768
+      userName: FLOPPY-USER
+      dateCreated: 2185420975
+      lastDateRead: 2198009338
+      lastDateWritten: 2281972504
+      dateCreatedStr: 1982-09-01 14:02:47
+      lastDateReadStr: 1982-12-01 15:23:58
+      lastDateWrittenStr: null
+      bpunValid: true
+    - name: FLOPP-FORM-1990B:BPUN
+      type: BPUN
+      pages: 3
+      bytes: 5754
+      userName: FLOPPY-USER
+      dateCreated: 2185420980
+      lastDateRead: 2198009339
+      lastDateWritten: 2185421143
+      dateCreatedStr: 1982-09-01 14:02:52
+      lastDateReadStr: 1982-12-01 15:23:59
+      lastDateWrittenStr: 1982-09-01 14:05:23
+      bpunValid: true
+    - name: FLOPPY-RAN-1988B:BPUN
+      type: BPUN
+      pages: 5
+      bytes: 9526
+      userName: FLOPPY-USER
+      dateCreated: 2185420986
+      lastDateRead: 2198009344
+      lastDateWritten: 2185421162
+      dateCreatedStr: 1982-09-01 14:02:58
+      lastDateReadStr: 1982-12-01 15:24:00
+      lastDateWrittenStr: 1982-09-01 14:05:42
+      bpunValid: true
+    - name: HDLC-MEGALINK-A:BPUN
+      type: BPUN
+      pages: 14
+      bytes: 27154
+      userName: FLOPPY-USER
+      dateCreated: 2185420996
+      lastDateRead: null
+      lastDateWritten: 2185421173
+      dateCreatedStr: 1982-09-01 14:03:04
+      lastDateReadStr: null
+      lastDateWrittenStr: 1982-09-01 14:05:53
+      bpunValid: true
+    - name: LP-TEST-1878C:BPUN
+      type: BPUN
+      pages: 9
+      bytes: 18392
+      userName: FLOPPY-USER
+      dateCreated: 2185421007
+      lastDateRead: null
+      lastDateWritten: 2185421198
+      dateCreatedStr: 1982-09-01 14:03:15
+      lastDateReadStr: null
+      lastDateWrittenStr: 1982-09-01 14:06:14
+      bpunValid: true
+    - name: MEMORY-B:BPUN
+      type: BPUN
+      pages: 17
+      bytes: 34666
+      userName: FLOPPY-USER
+      dateCreated: 2185421012
+      lastDateRead: null
+      lastDateWritten: 2185421232
+      dateCreatedStr: 1982-09-01 14:03:20
+      lastDateReadStr: null
+      lastDateWrittenStr: 1982-09-01 14:06:48
+      bpunValid: true
+    - name: MOVER-1863C:BPUN
+      type: BPUN
+      pages: 2
+      bytes: 3572
+      userName: FLOPPY-USER
+      dateCreated: 2185421020
+      lastDateRead: null
+      lastDateWritten: 2185421252
+      dateCreatedStr: 1982-09-01 14:03:28
+      lastDateReadStr: null
+      lastDateWrittenStr: 1982-09-01 14:07:04
+      bpunValid: true
+    - name: MULTI-1820P:BPUN
+      type: BPUN
+      pages: 12
+      bytes: 22908
+      userName: FLOPPY-USER
+      dateCreated: 2185421033
+      lastDateRead: null
+      lastDateWritten: 2185421262
+      dateCreatedStr: 1982-09-01 14:03:41
+      lastDateReadStr: null
+      lastDateWrittenStr: 1982-09-01 14:07:14
+      bpunValid: true
+    - name: SUPER-RAND-2222C:BPUN
+      type: BPUN
+      pages: 6
+      bytes: 12210
+      userName: FLOPPY-USER
+      dateCreated: 2185421044
+      lastDateRead: null
+      lastDateWritten: 2185421275
+      dateCreatedStr: 1982-09-01 14:03:52
+      lastDateReadStr: null
+      lastDateWrittenStr: 1982-09-01 14:07:27
+      bpunValid: true
+    - name: TANB-MAG-1559G:BPUN
+      type: BPUN
+      pages: 5
+      bytes: 8484
+      userName: FLOPPY-USER
+      dateCreated: 2185421056
+      lastDateRead: null
+      lastDateWritten: 2185421287
+      dateCreatedStr: 1982-09-01 14:04:00
+      lastDateReadStr: null
+      lastDateWrittenStr: 1982-09-01 14:07:39
+      bpunValid: true
+    - name: TERMINAL-ASYNC-B:BPUN
+      type: BPUN
+      pages: 14
+      bytes: 28196
+      userName: FLOPPY-USER
+      dateCreated: 2185421065
+      lastDateRead: null
+      lastDateWritten: 2185421301
+      dateCreatedStr: 1982-09-01 14:04:09
+      lastDateReadStr: null
+      lastDateWrittenStr: 1982-09-01 14:07:53
+      bpunValid: true
+provenance:
+  contributor: unknown
+  originalPath: ND-10324 - Test Programs/ND-10324E.image
+  dateImaged: 2022-09-24
+  importedAt: 2026-08-17T14:22:51.817Z
+imagingLogs:
+  - 10324F_Test_Programs_No1_for_NORD-10_NORD-12_ND-100.pdf
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10324-e-d1-60e6a2fa
+  syncStatus: pending

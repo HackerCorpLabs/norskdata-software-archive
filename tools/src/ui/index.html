@@ -2024,7 +2024,10 @@ tr.ndfs-file-selected,
       var contribHtml = '<h3>Contributors</h3><table class="nd-table nd-table-compact"><thead><tr><th>Name</th><th style="text-align:right">Images</th><th></th></tr></thead><tbody>';
       contribSorted.forEach(function(pair) {
         var pct = stats.totalFloppies > 0 ? Math.round(pair[1] * 100 / stats.totalFloppies) : 0;
-        contribHtml += '<tr><td>' + esc(pair[0]) + '</td><td style="text-align:right">' + pair[1] + '</td><td><div class="nd-bar" style="width:' + pct + '%;"></div></td></tr>';
+        contribHtml += '<tr class="nd-clickable" onclick="location.hash=\'#/catalog?contributor=' +
+          encodeURIComponent(pair[0]) + '\'" title="Show the floppies contributed by ' + esc(pair[0]) + '">' +
+          '<td>' + esc(pair[0]) + '</td><td style="text-align:right">' + pair[1] + '</td>' +
+          '<td><div class="nd-bar" style="width:' + pct + '%;"></div></td></tr>';
       });
       contribHtml += '</tbody></table>';
       document.getElementById('dash-contributors').innerHTML = contribHtml;
@@ -5986,8 +5989,10 @@ tr.ndfs-file-selected,
           h += '<table class="nd-table nd-table-compact"><tbody>';
           g.reads.forEach(function(r) {
             var badge = GRADE[r.grade] || ['nd-badge', r.grade];
-            h += '<tr><td style="width:16rem"><a href="#/disks/' + encodeURIComponent(r.id) + '"><code>' + esc(r.name) + '</code></a>' +
-              (r.best ? ' <span class="nd-text-muted" style="font-size:0.75rem">best read</span>' : '') + '</td>' +
+            h += '<tr><td style="width:20rem"><a href="#/disks/' + encodeURIComponent(r.id) + '"><code>' + esc(r.name) + '</code></a>' +
+              (r.best ? ' <span class="nd-text-muted" style="font-size:0.75rem">best read</span>' : '') +
+              '<div class="nd-text-muted" style="font-size:0.75rem"><code>' + esc(r.md5 || '') + '</code>' +
+              (r.source ? ' &middot; from <code>' + esc(r.source) + '</code>' : '') + '</div></td>' +
               '<td style="width:11rem"><span class="nd-badge ' + badge[0] + '">' + badge[1] + '</span></td>' +
               '<td style="width:6rem;text-align:right">' + (r.files || '-') + ' files</td>' +
               '<td style="width:7rem;text-align:right" class="nd-text-muted">' +

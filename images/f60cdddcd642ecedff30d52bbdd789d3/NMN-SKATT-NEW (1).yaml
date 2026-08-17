@@ -1,0 +1,118 @@
+id: img-f60cdddcd642
+volumeName: NMN-SKATT-NEW
+md5: f60cdddcd642ecedff30d52bbdd789d3
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: UKA-83
+      pagesUsed: 132
+  files:
+    - name: SKATT-LOAD:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 248
+      userName: UKA-83
+      dateCreated: 2105332458
+      lastDateRead: 2123940808
+      lastDateWritten: 2118315124
+      dateCreatedStr: 1981-05-30 13:11:42
+      lastDateReadStr: 1981-10-12 12:15:08
+      lastDateWrittenStr: 1981-09-01 14:49:52
+      bpunValid: null
+    - name: SKATT-DATABASEN:SYMB
+      type: SYMB
+      pages: 48
+      bytes: 97296
+      userName: UKA-83
+      dateCreated: 2105332469
+      lastDateRead: 2123940818
+      lastDateWritten: 2118315170
+      dateCreatedStr: 1981-05-30 13:11:53
+      lastDateReadStr: 1981-10-12 12:15:18
+      lastDateWrittenStr: 1981-09-01 14:50:34
+      bpunValid: null
+    - name: SKATT-HOVED:SYMB
+      type: SYMB
+      pages: 35
+      bytes: 70218
+      userName: UKA-83
+      dateCreated: 2105332534
+      lastDateRead: 2123940859
+      lastDateWritten: 2118315127
+      dateCreatedStr: 1981-05-30 13:12:54
+      lastDateReadStr: 1981-10-12 12:15:59
+      lastDateWrittenStr: 1981-09-01 14:49:55
+      bpunValid: null
+    - name: SKATT-INIT:SYMB
+      type: SYMB
+      pages: 16
+      bytes: 32428
+      userName: UKA-83
+      dateCreated: 2105332594
+      lastDateRead: 2123940896
+      lastDateWritten: 2118315147
+      dateCreatedStr: 1981-05-30 13:13:50
+      lastDateReadStr: 1981-10-12 12:16:32
+      lastDateWrittenStr: 1981-09-01 14:50:11
+      bpunValid: null
+    - name: SKATT-SUBR:SYMB
+      type: SYMB
+      pages: 22
+      bytes: 44495
+      userName: UKA-83
+      dateCreated: 2105332629
+      lastDateRead: 2123940916
+      lastDateWritten: 2118315157
+      dateCreatedStr: 1981-05-30 13:14:21
+      lastDateReadStr: 1981-10-12 12:16:52
+      lastDateWrittenStr: 1981-09-01 14:50:21
+      bpunValid: null
+    - name: SKATT-COMP:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 124
+      userName: UKA-83
+      dateCreated: 2105332674
+      lastDateRead: 2123940944
+      lastDateWritten: 2118315194
+      dateCreatedStr: 1981-05-30 13:15:02
+      lastDateReadStr: 1981-10-12 12:17:16
+      lastDateWrittenStr: 1981-09-01 14:50:58
+      bpunValid: null
+    - name: SKATT-MESSAGE:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 467
+      userName: UKA-83
+      dateCreated: 2105333036
+      lastDateRead: 2123940955
+      lastDateWritten: 2118315202
+      dateCreatedStr: 1981-05-30 13:20:44
+      lastDateReadStr: 1981-10-12 12:17:27
+      lastDateWrittenStr: 1981-09-01 14:51:02
+      bpunValid: null
+provenance:
+  contributor: fvdm
+  originalPath: Disk Images/NMN-SKATT-NEW (1).img
+  dateImaged: 2026-04-08
+  importedAt: 2026-08-17T14:19:49.468Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-f60cdddcd642
+  syncStatus: pending

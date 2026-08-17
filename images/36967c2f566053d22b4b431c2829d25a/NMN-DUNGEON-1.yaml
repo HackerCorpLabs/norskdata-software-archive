@@ -1,0 +1,226 @@
+id: img-36967c2f5660
+volumeName: NMN-DUNGEON-1
+md5: 36967c2f566053d22b4b431c2829d25a
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: DUNGEON
+      pagesUsed: 146
+  files:
+    - name: BALLOP:FOR
+      type: FOR
+      pages: 4
+      bytes: 7346
+      userName: DUNGEON
+      dateCreated: 2328830343
+      lastDateRead: 2622002275
+      lastDateWritten: 2328830348
+      dateCreatedStr: 1984-11-07 18:06:07
+      lastDateReadStr: 1989-01-04 09:17:35
+      lastDateWrittenStr: 1984-11-07 18:06:12
+      bpunValid: null
+    - name: DSO1:FOR
+      type: FOR
+      pages: 7
+      bytes: 6516
+      userName: DUNGEON
+      dateCreated: 2328830353
+      lastDateRead: 2622002278
+      lastDateWritten: 2328830354
+      dateCreatedStr: 1984-11-07 18:06:17
+      lastDateReadStr: 1989-01-04 09:17:38
+      lastDateWrittenStr: 1984-11-07 18:06:18
+      bpunValid: null
+    - name: DSO2:FOR
+      type: FOR
+      pages: 7
+      bytes: 9123
+      userName: DUNGEON
+      dateCreated: 2328830362
+      lastDateRead: 2622002281
+      lastDateWritten: 2328830363
+      dateCreatedStr: 1984-11-07 18:06:26
+      lastDateReadStr: 1989-01-04 09:17:41
+      lastDateWrittenStr: 1984-11-07 18:06:27
+      bpunValid: null
+    - name: DSO3:FOR
+      type: FOR
+      pages: 7
+      bytes: 4652
+      userName: DUNGEON
+      dateCreated: 2328830370
+      lastDateRead: 2622002284
+      lastDateWritten: 2328830371
+      dateCreatedStr: 1984-11-07 18:06:34
+      lastDateReadStr: 1989-01-04 09:17:44
+      lastDateWrittenStr: 1984-11-07 18:06:35
+      bpunValid: null
+    - name: DSO4:FOR
+      type: FOR
+      pages: 7
+      bytes: 7636
+      userName: DUNGEON
+      dateCreated: 2328830380
+      lastDateRead: 2622002287
+      lastDateWritten: 2328830381
+      dateCreatedStr: 1984-11-07 18:06:44
+      lastDateReadStr: 1989-01-04 09:17:47
+      lastDateWrittenStr: 1984-11-07 18:06:45
+      bpunValid: null
+    - name: DSO5:FOR
+      type: FOR
+      pages: 7
+      bytes: 5649
+      userName: DUNGEON
+      dateCreated: 2328830390
+      lastDateRead: 2622002291
+      lastDateWritten: 2328830391
+      dateCreatedStr: 1984-11-07 18:06:54
+      lastDateReadStr: 1989-01-04 09:17:51
+      lastDateWrittenStr: 1984-11-07 18:06:55
+      bpunValid: null
+    - name: DSO6:FOR
+      type: FOR
+      pages: 3
+      bytes: 6043
+      userName: DUNGEON
+      dateCreated: 2328830404
+      lastDateRead: 2622002295
+      lastDateWritten: 2328830405
+      dateCreatedStr: 1984-11-07 18:07:04
+      lastDateReadStr: 1989-01-04 09:17:55
+      lastDateWrittenStr: 1984-11-07 18:07:05
+      bpunValid: null
+    - name: DSO7:FOR
+      type: FOR
+      pages: 4
+      bytes: 7315
+      userName: DUNGEON
+      dateCreated: 2328830411
+      lastDateRead: 2622002297
+      lastDateWritten: 2328830413
+      dateCreatedStr: 1984-11-07 18:07:11
+      lastDateReadStr: 1989-01-04 09:17:57
+      lastDateWrittenStr: 1984-11-07 18:07:13
+      bpunValid: null
+    - name: LIGHTP:FOR
+      type: FOR
+      pages: 4
+      bytes: 7126
+      userName: DUNGEON
+      dateCreated: 2328830419
+      lastDateRead: 2622002304
+      lastDateWritten: 2328830421
+      dateCreatedStr: 1984-11-07 18:07:19
+      lastDateReadStr: 1989-01-04 09:18:00
+      lastDateWrittenStr: 1984-11-07 18:07:21
+      bpunValid: null
+    - name: NOBJS:FOR
+      type: FOR
+      pages: 12
+      bytes: 24192
+      userName: DUNGEON
+      dateCreated: 2328830428
+      lastDateRead: 2622002307
+      lastDateWritten: 2328830429
+      dateCreatedStr: 1984-11-07 18:07:28
+      lastDateReadStr: 1989-01-04 09:18:03
+      lastDateWrittenStr: 1984-11-07 18:07:29
+      bpunValid: null
+    - name: NP:FOR
+      type: FOR
+      pages: 12
+      bytes: 6216
+      userName: DUNGEON
+      dateCreated: 2328830451
+      lastDateRead: 2622002312
+      lastDateWritten: 2328830453
+      dateCreatedStr: 1984-11-07 18:07:51
+      lastDateReadStr: 1989-01-04 09:18:08
+      lastDateWrittenStr: 1984-11-07 18:07:53
+      bpunValid: null
+    - name: NP2:FOR
+      type: FOR
+      pages: 14
+      bytes: 7134
+      userName: DUNGEON
+      dateCreated: 2328830485
+      lastDateRead: 2622002317
+      lastDateWritten: 2328830488
+      dateCreatedStr: 1984-11-07 18:08:21
+      lastDateReadStr: 1989-01-04 09:18:13
+      lastDateWrittenStr: 1984-11-07 18:08:24
+      bpunValid: null
+    - name: NP3:FOR
+      type: FOR
+      pages: 14
+      bytes: 12016
+      userName: DUNGEON
+      dateCreated: 2328830523
+      lastDateRead: 2622002322
+      lastDateWritten: 2328830530
+      dateCreatedStr: 1984-11-07 18:08:59
+      lastDateReadStr: 1989-01-04 09:18:18
+      lastDateWrittenStr: 1984-11-07 18:09:02
+      bpunValid: null
+    - name: NROOMS:FOR
+      type: FOR
+      pages: 14
+      bytes: 17260
+      userName: DUNGEON
+      dateCreated: 2328830565
+      lastDateRead: 2622002329
+      lastDateWritten: 2328830566
+      dateCreatedStr: 1984-11-07 18:09:37
+      lastDateReadStr: 1989-01-04 09:18:25
+      lastDateWrittenStr: 1984-11-07 18:09:38
+      bpunValid: null
+    - name: ROOMS:FOR
+      type: FOR
+      pages: 12
+      bytes: 22837
+      userName: DUNGEON
+      dateCreated: 2328830597
+      lastDateRead: 2622002337
+      lastDateWritten: 2328830599
+      dateCreatedStr: 1984-11-07 18:10:05
+      lastDateReadStr: 1989-01-04 09:18:33
+      lastDateWrittenStr: 1984-11-07 18:10:07
+      bpunValid: null
+    - name: FILE-DATA:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1819
+      userName: DUNGEON
+      dateCreated: 2328831265
+      lastDateRead: 2622002343
+      lastDateWritten: 2328831321
+      dateCreatedStr: 1984-11-07 18:20:33
+      lastDateReadStr: 1989-01-04 09:18:39
+      lastDateWrittenStr: 1984-11-07 18:21:25
+      bpunValid: null
+provenance:
+  contributor: fvdm
+  originalPath: Disk Images/NMN-DUNGEON-1.img
+  dateImaged: 2026-04-08
+  importedAt: 2026-08-17T14:19:48.865Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-36967c2f5660
+  syncStatus: pending

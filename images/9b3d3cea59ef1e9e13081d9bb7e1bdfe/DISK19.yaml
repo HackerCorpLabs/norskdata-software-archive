@@ -1,0 +1,46 @@
+id: os-n-10-102-i-9b3d3cea
+volumeName: N-10-102-II
+md5: 9b3d3cea59ef1e9e13081d9bb7e1bdfe
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: SYSTEM
+      pagesUsed: 148
+  files:
+    - name: SINTRAN-II:DATA
+      type: DATA
+      pages: 147
+      bytes: 169966
+      userName: SYSTEM
+      dateCreated: 2326172806
+      lastDateRead: 2326172810
+      lastDateWritten: 2326172810
+      dateCreatedStr: 1984-10-19 09:18:06
+      lastDateReadStr: 1984-10-19 09:18:10
+      lastDateWrittenStr: 1984-10-19 09:18:10
+      bpunValid: null
+provenance:
+  contributor: Datormuseum
+  originalPath: DiskImages2/DISK19.img
+  dateImaged: 2023-10-02
+  importedAt: 2026-08-17T14:19:14.618Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-os-n-10-102-i-9b3d3cea
+  syncStatus: pending

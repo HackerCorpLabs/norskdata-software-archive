@@ -1,0 +1,79 @@
+id: nd-210943-a01-d2-b3fb7d17
+volumeName: 210943A01-NO-02D
+md5: b3fb7d17265ce00a2baa138ee312e093
+product:
+  id: ND-210943
+  version: A01
+  diskNumber: 2
+  language: NO
+image:
+  sizeBytes: 1261568
+  format: raw
+  controller: floppy
+  totalPages: 616
+  pageSize: 2048
+  bootFormat: binary
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 222
+  files:
+    - name: PRMAN-100-1-A01:PROG
+      type: PROG
+      pages: 92
+      bytes: 401408
+      userName: FLOPPY-USER
+      dateCreated: 2464067114
+      lastDateRead: 2464450073
+      lastDateWritten: 2464067119
+      dateCreatedStr: 1986-11-15 10:56:42
+      lastDateReadStr: 1986-11-18 08:24:25
+      lastDateWrittenStr: 1986-11-15 10:56:47
+      bpunValid: null
+    - name: PRMAN-100-2-A01:PROG
+      type: PROG
+      pages: 125
+      bytes: 403456
+      userName: FLOPPY-USER
+      dateCreated: 2464067117
+      lastDateRead: 2464450088
+      lastDateWritten: 2464067174
+      dateCreatedStr: 1986-11-15 10:56:45
+      lastDateReadStr: 1986-11-18 08:24:40
+      lastDateWrittenStr: 1986-11-15 10:57:38
+      bpunValid: null
+    - name: PRMAN-DUMP-A01:MODE
+      type: MODE
+      pages: 1
+      bytes: 267
+      userName: FLOPPY-USER
+      dateCreated: 2464067119
+      lastDateRead: 2464450119
+      lastDateWritten: 2464067278
+      dateCreatedStr: 1986-11-15 10:56:47
+      lastDateReadStr: 1986-11-18 08:25:07
+      lastDateWrittenStr: 1986-11-15 10:59:14
+      bpunValid: null
+provenance:
+  contributor: ronny
+  originalPath: ND-210943-PRMAN/210943A01-NO-02D.img
+  dateImaged: 2024-09-17
+  importedAt: 2026-08-17T14:20:07.907Z
+imagingLogs:
+  - 210943A01-NO-01D.log
+  - PRMAN-SOURCE.log
+  - 210943A01-NO-02D.log
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-210943-a01-d2-b3fb7d17
+  syncStatus: pending

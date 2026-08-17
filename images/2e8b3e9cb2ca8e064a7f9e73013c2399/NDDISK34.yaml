@@ -1,0 +1,94 @@
+id: img-2e8b3e9cb2ca
+volumeName: ND-10079K-SWE-1
+md5: 2e8b3e9cb2ca8e064a7f9e73013c2399
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: flomon
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 144
+  files:
+    - name: NOTIS-WP-SWE-K:ERR
+      type: ERR
+      pages: 21
+      bytes: 41216
+      userName: FLOPPY-USER
+      dateCreated: 2292242980
+      lastDateRead: 2281702633
+      lastDateWritten: 2292242980
+      dateCreatedStr: 1984-02-16 13:40:36
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-02-16 13:40:36
+      bpunValid: null
+    - name: NOTIS-WP-SWE-K:HELP
+      type: HELP
+      pages: 101
+      bytes: 206848
+      userName: FLOPPY-USER
+      dateCreated: 2295139742
+      lastDateRead: 2281702583
+      lastDateWritten: 2295139743
+      dateCreatedStr: 1984-03-06 16:54:30
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-03-06 16:54:31
+      bpunValid: null
+    - name: WP-MAIN-SWE-K:BPUN
+      type: BPUN
+      pages: 16
+      bytes: 30879
+      userName: FLOPPY-USER
+      dateCreated: 2292748984
+      lastDateRead: 2281702569
+      lastDateWritten: 2295142130
+      dateCreatedStr: 1984-02-20 09:10:56
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-03-06 17:27:50
+      bpunValid: true
+    - name: NOTIS-WP-SWE-K:INIT
+      type: INIT
+      pages: 1
+      bytes: 212
+      userName: FLOPPY-USER
+      dateCreated: 2292749067
+      lastDateRead: 2281702579
+      lastDateWritten: 2292749068
+      dateCreatedStr: 1984-02-20 09:12:11
+      lastDateReadStr: null
+      lastDateWrittenStr: 1984-02-20 09:12:12
+      bpunValid: null
+    - name: DIRECTORY:TEST
+      type: TEST
+      pages: 0
+      bytes: 4294967296
+      userName: FLOPPY-USER
+      dateCreated: 2292781570
+      lastDateRead: 2281702567
+      lastDateWritten: null
+      dateCreatedStr: 1984-02-20 17:08:02
+      lastDateReadStr: null
+      lastDateWrittenStr: null
+      bpunValid: null
+provenance:
+  contributor: Datormuseum
+  originalPath: DiskImages/NDDISK34.img
+  dateImaged: 2023-10-02
+  importedAt: 2026-08-17T14:18:55.979Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-2e8b3e9cb2ca
+  syncStatus: pending

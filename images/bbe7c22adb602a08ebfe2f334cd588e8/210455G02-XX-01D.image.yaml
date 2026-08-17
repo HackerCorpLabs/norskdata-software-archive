@@ -1,0 +1,497 @@
+id: nd-210455-g02-d1-bbe7c22a
+volumeName: 210455G02-XX-01D
+md5: bbe7c22adb602a08ebfe2f334cd588e8
+product:
+  id: ND-210455
+  version: G02
+  diskNumber: 1
+  language: XX
+image:
+  sizeBytes: 1261568
+  format: raw
+  controller: floppy
+  totalPages: 616
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 365
+  files:
+    - name: DDB002-7S-G02:VTM
+      type: VTM
+      pages: 3
+      bytes: 602
+      userName: FLOPPY-USER
+      dateCreated: 2465778981
+      lastDateRead: 2501032230
+      lastDateWritten: 2501025323
+      dateCreatedStr: 1986-11-28 12:52:37
+      lastDateReadStr: 1987-04-09 11:36:38
+      lastDateWrittenStr: 1987-04-09 09:56:43
+      bpunValid: null
+    - name: DDB003-7S-G02:VTM
+      type: VTM
+      pages: 3
+      bytes: 632
+      userName: FLOPPY-USER
+      dateCreated: 2465779238
+      lastDateRead: 2498695578
+      lastDateWritten: 2497768935
+      dateCreatedStr: 1986-11-28 12:56:38
+      lastDateReadStr: 1987-03-23 17:06:26
+      lastDateWrittenStr: 1987-03-16 14:55:39
+      bpunValid: null
+    - name: DDB011-7S-G02:VTM
+      type: VTM
+      pages: 1
+      bytes: 602
+      userName: FLOPPY-USER
+      dateCreated: 2496455482
+      lastDateRead: 2498800267
+      lastDateWritten: 2497768855
+      dateCreatedStr: 1987-03-06 14:12:58
+      lastDateReadStr: 1987-03-24 10:42:11
+      lastDateWrittenStr: 1987-03-16 14:54:23
+      bpunValid: null
+    - name: DDB036-7S-G02:VTM
+      type: VTM
+      pages: 1
+      bytes: 887
+      userName: FLOPPY-USER
+      dateCreated: 2497760624
+      lastDateRead: 2498695578
+      lastDateWritten: 2497760631
+      dateCreatedStr: 1987-03-16 12:53:48
+      lastDateReadStr: 1987-03-23 17:06:26
+      lastDateWrittenStr: 1987-03-16 12:53:55
+      bpunValid: null
+    - name: DDB057-7S-G02:VTM
+      type: VTM
+      pages: 1
+      bytes: 1093
+      userName: FLOPPY-USER
+      dateCreated: 2498298049
+      lastDateRead: 2498695579
+      lastDateWritten: 2501811652
+      dateCreatedStr: 1987-03-20 16:03:01
+      lastDateReadStr: 1987-03-23 17:06:27
+      lastDateWrittenStr: 1987-04-15 09:55:04
+      bpunValid: null
+    - name: DDB052-7S-G02:VTM
+      type: VTM
+      pages: 3
+      bytes: 977
+      userName: FLOPPY-USER
+      dateCreated: 2465779712
+      lastDateRead: 2498695578
+      lastDateWritten: 2465779713
+      dateCreatedStr: 1986-11-28 13:00:00
+      lastDateReadStr: 1987-03-23 17:06:26
+      lastDateWrittenStr: 1986-11-28 13:00:01
+      bpunValid: null
+    - name: DDB053-7S-G02:VTM
+      type: VTM
+      pages: 2
+      bytes: 2100
+      userName: FLOPPY-USER
+      dateCreated: 2502618244
+      lastDateRead: 2505884537
+      lastDateWritten: 2505883971
+      dateCreatedStr: 1987-04-21 14:50:04
+      lastDateReadStr: 1987-05-14 12:13:57
+      lastDateWrittenStr: 1987-05-14 12:05:03
+      bpunValid: null
+    - name: DDB079-7S-G02:VTM
+      type: VTM
+      pages: 1
+      bytes: 1088
+      userName: FLOPPY-USER
+      dateCreated: 2492648069
+      lastDateRead: 2498695579
+      lastDateWritten: 2492648168
+      dateCreatedStr: 1987-02-09 12:42:05
+      lastDateReadStr: 1987-03-23 17:06:27
+      lastDateWrittenStr: 1987-02-09 12:43:40
+      bpunValid: null
+    - name: DDB080-7S-G02:VTM
+      type: VTM
+      pages: 2
+      bytes: 2166
+      userName: FLOPPY-USER
+      dateCreated: 2501811794
+      lastDateRead: 2505742366
+      lastDateWritten: 2505741159
+      dateCreatedStr: 1987-04-15 09:57:18
+      lastDateReadStr: 1987-05-13 09:32:30
+      lastDateWrittenStr: 1987-05-13 09:13:39
+      bpunValid: null
+    - name: DDB083-7S-G02:VTM
+      type: VTM
+      pages: 2
+      bytes: 2118
+      userName: FLOPPY-USER
+      dateCreated: 2498298193
+      lastDateRead: 2505884538
+      lastDateWritten: 2505883907
+      dateCreatedStr: 1987-03-20 16:05:17
+      lastDateReadStr: 1987-05-14 12:13:58
+      lastDateWrittenStr: 1987-05-14 12:04:03
+      bpunValid: null
+    - name: DDB090-7B-G02:VTM
+      type: VTM
+      pages: 2
+      bytes: 3674
+      userName: FLOPPY-USER
+      dateCreated: 2501812441
+      lastDateRead: null
+      lastDateWritten: 2501812505
+      dateCreatedStr: 1987-04-15 10:03:25
+      lastDateReadStr: null
+      lastDateWrittenStr: 1987-04-15 10:04:25
+      bpunValid: null
+    - name: DDB092-7S-G02:VTM
+      type: VTM
+      pages: 2
+      bytes: 2190
+      userName: FLOPPY-USER
+      dateCreated: 2501814308
+      lastDateRead: 2504968470
+      lastDateWritten: 2504968225
+      dateCreatedStr: 1987-04-15 10:32:36
+      lastDateReadStr: 1987-05-07 12:36:22
+      lastDateWrittenStr: 1987-05-07 12:32:33
+      bpunValid: null
+    - name: DDB099-7S-G02:VTM
+      type: VTM
+      pages: 3
+      bytes: 1568
+      userName: FLOPPY-USER
+      dateCreated: 2468805385
+      lastDateRead: 2498695582
+      lastDateWritten: 2497358095
+      dateCreatedStr: 1986-12-19 15:44:09
+      lastDateReadStr: 1987-03-23 17:06:30
+      lastDateWrittenStr: 1987-03-13 10:36:15
+      bpunValid: null
+    - name: DDB090-7S-G02:VTM
+      type: VTM
+      pages: 2
+      bytes: 2188
+      userName: FLOPPY-USER
+      dateCreated: 2502619202
+      lastDateRead: 2505483803
+      lastDateWritten: 2505483778
+      dateCreatedStr: 1987-04-21 15:01:02
+      lastDateReadStr: 1987-05-11 10:24:27
+      lastDateWrittenStr: 1987-05-11 10:24:02
+      bpunValid: null
+    - name: DDB093-7S-G02:VTM
+      type: VTM
+      pages: 2
+      bytes: 2138
+      userName: FLOPPY-USER
+      dateCreated: 2494598740
+      lastDateRead: 2498298281
+      lastDateWritten: 2501815555
+      dateCreatedStr: 1987-02-24 08:57:20
+      lastDateReadStr: 1987-03-20 16:06:41
+      lastDateWrittenStr: 1987-04-15 10:52:03
+      bpunValid: null
+    - name: DDB091-7S-G02:VTM
+      type: VTM
+      pages: 2
+      bytes: 2190
+      userName: FLOPPY-USER
+      dateCreated: 2501813845
+      lastDateRead: 2504968076
+      lastDateWritten: 2504967984
+      dateCreatedStr: 1987-04-15 10:25:21
+      lastDateReadStr: 1987-05-07 12:30:12
+      lastDateWrittenStr: 1987-05-07 12:28:48
+      bpunValid: null
+    - name: DDB093-7B-G02:VTM
+      type: VTM
+      pages: 2
+      bytes: 3718
+      userName: FLOPPY-USER
+      dateCreated: 2501815655
+      lastDateRead: 2504976344
+      lastDateWritten: 2504976221
+      dateCreatedStr: 1987-04-15 10:53:39
+      lastDateReadStr: 1987-05-07 14:31:24
+      lastDateWrittenStr: 1987-05-07 14:29:29
+      bpunValid: null
+    - name: DDB100-7B-G02:VTM
+      type: VTM
+      pages: 3
+      bytes: 3678
+      userName: FLOPPY-USER
+      dateCreated: 2497361394
+      lastDateRead: 2498298284
+      lastDateWritten: 2501815872
+      dateCreatedStr: 1987-03-13 11:23:50
+      lastDateReadStr: 1987-03-20 16:06:44
+      lastDateWrittenStr: 1987-04-15 10:57:00
+      bpunValid: null
+    - name: DDB100-8S-G02:VTM
+      type: VTM
+      pages: 2
+      bytes: 2128
+      userName: FLOPPY-USER
+      dateCreated: 2501815927
+      lastDateRead: 2505626142
+      lastDateWritten: 2501815931
+      dateCreatedStr: 1987-04-15 10:57:55
+      lastDateReadStr: 1987-05-12 13:08:30
+      lastDateWrittenStr: 1987-04-15 10:57:59
+      bpunValid: null
+    - name: DDB100-8B-G02:VTM
+      type: VTM
+      pages: 2
+      bytes: 3654
+      userName: FLOPPY-USER
+      dateCreated: 2501816014
+      lastDateRead: null
+      lastDateWritten: 2501816017
+      dateCreatedStr: 1987-04-15 10:59:14
+      lastDateReadStr: null
+      lastDateWrittenStr: 1987-04-15 10:59:17
+      bpunValid: null
+    - name: DDB100-7S-G02:VTM
+      type: VTM
+      pages: 3
+      bytes: 2042
+      userName: FLOPPY-USER
+      dateCreated: 2498795012
+      lastDateRead: 2501677432
+      lastDateWritten: 2501815808
+      dateCreatedStr: 1987-03-24 09:24:04
+      lastDateReadStr: 1987-04-14 09:05:56
+      lastDateWrittenStr: 1987-04-15 10:56:00
+      bpunValid: null
+    - name: DDB103-8S-G02:VTM
+      type: VTM
+      pages: 1
+      bytes: 2014
+      userName: FLOPPY-USER
+      dateCreated: 2501816540
+      lastDateRead: null
+      lastDateWritten: 2501816544
+      dateCreatedStr: 1987-04-15 11:03:28
+      lastDateReadStr: null
+      lastDateWrittenStr: 1987-04-15 11:03:32
+      bpunValid: null
+    - name: DDB103-7B-G02:VTM
+      type: VTM
+      pages: 3
+      bytes: 3724
+      userName: FLOPPY-USER
+      dateCreated: 2501821307
+      lastDateRead: null
+      lastDateWritten: 2501821312
+      dateCreatedStr: 1987-04-15 12:13:59
+      lastDateReadStr: null
+      lastDateWrittenStr: 1987-04-15 12:14:00
+      bpunValid: null
+    - name: DDB103-7S-G02:VTM
+      type: VTM
+      pages: 3
+      bytes: 2138
+      userName: FLOPPY-USER
+      dateCreated: 2501821447
+      lastDateRead: null
+      lastDateWritten: 2501821448
+      dateCreatedStr: 1987-04-15 12:16:07
+      lastDateReadStr: null
+      lastDateWrittenStr: 1987-04-15 12:16:08
+      bpunValid: null
+    - name: DDB103-8B-G02:VTM
+      type: VTM
+      pages: 2
+      bytes: 3530
+      userName: FLOPPY-USER
+      dateCreated: 2501816366
+      lastDateRead: null
+      lastDateWritten: 2501816370
+      dateCreatedStr: 1987-04-15 11:00:46
+      lastDateReadStr: null
+      lastDateWrittenStr: 1987-04-15 11:00:50
+      bpunValid: null
+    - name: DDB105-7S-G02:VTM
+      type: VTM
+      pages: 1
+      bytes: 1457
+      userName: FLOPPY-USER
+      dateCreated: 2491864154
+      lastDateRead: 2494473236
+      lastDateWritten: 2491864154
+      dateCreatedStr: 1987-02-03 13:17:26
+      lastDateReadStr: 1987-02-23 10:16:20
+      lastDateWrittenStr: 1987-02-03 13:17:26
+      bpunValid: null
+    - name: DDB113-7S-G02:VTM
+      type: VTM
+      pages: 3
+      bytes: 1968
+      userName: FLOPPY-USER
+      dateCreated: 2504834143
+      lastDateRead: 2504957605
+      lastDateWritten: 2504834144
+      dateCreatedStr: 1987-05-06 11:49:31
+      lastDateReadStr: 1987-05-07 09:58:37
+      lastDateWrittenStr: 1987-05-06 11:49:32
+      bpunValid: null
+    - name: DDB113-7B-G02:VTM
+      type: VTM
+      pages: 3
+      bytes: 3724
+      userName: FLOPPY-USER
+      dateCreated: 2504833879
+      lastDateRead: 2504958375
+      lastDateWritten: 2504833881
+      dateCreatedStr: 1987-05-06 11:45:23
+      lastDateReadStr: 1987-05-07 10:06:39
+      lastDateWrittenStr: 1987-05-06 11:45:25
+      bpunValid: null
+    - name: DDB110-7B-G02:VTM
+      type: VTM
+      pages: 3
+      bytes: 3750
+      userName: FLOPPY-USER
+      dateCreated: 2504834266
+      lastDateRead: 2504957611
+      lastDateWritten: 2504834267
+      dateCreatedStr: 1987-05-06 11:51:26
+      lastDateReadStr: 1987-05-07 09:58:43
+      lastDateWrittenStr: 1987-05-06 11:51:27
+      bpunValid: null
+    - name: DDB110-7S-G02:VTM
+      type: VTM
+      pages: 3
+      bytes: 2196
+      userName: FLOPPY-USER
+      dateCreated: 2504834375
+      lastDateRead: 2504957614
+      lastDateWritten: 2504834376
+      dateCreatedStr: 1987-05-06 11:53:07
+      lastDateReadStr: 1987-05-07 09:58:46
+      lastDateWrittenStr: 1987-05-06 11:53:08
+      bpunValid: null
+    - name: VTM-COMPOUND-G02:PROG
+      type: PROG
+      pages: 104
+      bytes: 292864
+      userName: FLOPPY-USER
+      dateCreated: 2504955681
+      lastDateRead: 2504957206
+      lastDateWritten: 2504955681
+      dateCreatedStr: 1987-05-07 09:28:33
+      lastDateReadStr: 1987-05-07 09:52:22
+      lastDateWrittenStr: 1987-05-07 09:28:33
+      bpunValid: null
+    - name: VTM-ALL-TYPES:VTM
+      type: VTM
+      pages: 2
+      bytes: 3545
+      userName: FLOPPY-USER
+      dateCreated: 48976640
+      lastDateRead: 2504958567
+      lastDateWritten: 2504585336
+      dateCreatedStr: 1950-11-21 21:12:00
+      lastDateReadStr: 1987-05-07 10:09:39
+      lastDateWrittenStr: 1987-05-04 15:01:56
+      bpunValid: null
+    - name: INST-TABLES-G02:PROG
+      type: PROG
+      pages: 17
+      bytes: 266240
+      userName: FLOPPY-USER
+      dateCreated: 2505500194
+      lastDateRead: 2556080286
+      lastDateWritten: 2506663836
+      dateCreatedStr: 1987-05-11 14:24:34
+      lastDateReadStr: 1988-01-13 11:02:30
+      lastDateWrittenStr: 1987-05-20 10:30:28
+      bpunValid: null
+    - name: DDB999-G02:VTM
+      type: VTM
+      pages: 2
+      bytes: 3546
+      userName: FLOPPY-USER
+      dateCreated: 2502869760
+      lastDateRead: 2502869974
+      lastDateWritten: 2502869974
+      dateCreatedStr: 1987-04-23 12:12:00
+      lastDateReadStr: 1987-04-23 12:15:22
+      lastDateWrittenStr: 1987-04-23 12:15:22
+      bpunValid: null
+    - name: DDBTABLES-G02:VTM
+      type: VTM
+      pages: 34
+      bytes: 68696
+      userName: FLOPPY-USER
+      dateCreated: 2498949732
+      lastDateRead: 2556080291
+      lastDateWritten: 2505884578
+      dateCreatedStr: 1987-03-25 15:09:36
+      lastDateReadStr: 1988-01-13 11:02:35
+      lastDateWrittenStr: 1987-05-14 12:14:34
+      bpunValid: null
+    - name: VTM-ARRAYS-G02:NRF
+      type: NRF
+      pages: 42
+      bytes: 85884
+      userName: FLOPPY-USER
+      dateCreated: 2498953741
+      lastDateRead: 2505884564
+      lastDateWritten: 2505884564
+      dateCreatedStr: 1987-03-25 16:08:13
+      lastDateReadStr: 1987-05-14 12:14:20
+      lastDateWrittenStr: 1987-05-14 12:14:20
+      bpunValid: null
+    - name: VTM-2B-ARRAY-G02:BRF
+      type: BRF
+      pages: 34
+      bytes: 69530
+      userName: FLOPPY-USER
+      dateCreated: 2498681990
+      lastDateRead: 2505884555
+      lastDateWritten: 2505884555
+      dateCreatedStr: 1987-03-23 13:50:06
+      lastDateReadStr: 1987-05-14 12:14:11
+      lastDateWrittenStr: 1987-05-14 12:14:11
+      bpunValid: null
+    - name: VTM-1B-ARRAY-G02:BRF
+      type: BRF
+      pages: 34
+      bytes: 69528
+      userName: FLOPPY-USER
+      dateCreated: 2498953636
+      lastDateRead: 2505884547
+      lastDateWritten: 2505884547
+      dateCreatedStr: 1987-03-25 16:06:36
+      lastDateReadStr: 1987-05-14 12:14:03
+      lastDateWrittenStr: 1987-05-14 12:14:03
+      bpunValid: null
+provenance:
+  contributor: Tingo
+  originalPath: 210455/210455G02-XX-01D.image
+  dateImaged: 2013-02-14
+  importedAt: 2026-08-17T14:22:50.496Z
+imagingLogs:
+  - 210455G_VTM_terminal_tables_Standard.pdf
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-210455-g02-d1-bbe7c22a
+  syncStatus: pending
