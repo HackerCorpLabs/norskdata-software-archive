@@ -50,6 +50,42 @@ bytes are all there is, so the hex viewer is the way in - the file names in
 disk was. A damaged floppy stays in the matcher's unreadable queue, because
 there is no name to match a product on.
 
+**Recovered listings.** When the file list could be rebuilt, the `condition`
+block carries a `recovery` block as well and the `ndfs` file list exists:
+
+```yaml
+condition:
+  status: damaged
+  parserError: Invalid NDFS master block
+  recovery:
+    status: recovered
+    layout: {object: 150, user: 152, bit: 77}
+    filesRecovered: 16
+    namesConfirmedInBytes: 16      # 100%
+    confirmRatio: 1
+```
+
+The master block at offset 2016 of page 0 holds the pointers to the object,
+user and bit files, and SINTRAN lays out a given geometry the same way - 154 and
+156 page floppies use object 150, user 152, bit 77; 616 and 640 page floppies
+use 508, 510, 306 - so the pointers can be taken from floppies that read
+cleanly. A reconstruction is accepted only when the names it produces are
+confirmed by the strings actually present in that image (80% by default, and
+the nine accepted so far came back at 96-100%); a pointer landing on the wrong
+page produces names found nowhere, and is refused. The rule and the proof are in
+`tools/src/lib/ndfsrecover/` and `tools/scripts/ndfs-recovery-proof.mjs`.
+
+Such a listing is marked **recovered** in the catalog and on the disk page, and
+the file sizes and dates that come with it are not to be trusted the way a clean
+read is - only the names are backed by evidence.
+
+**The stored image is never modified.** Recovery happens on a copy in memory.
+The disk page offers a second download, *Download repaired .img*, which is built
+on request from the original by writing back the reconstructed pointers - 15
+bytes inside the master block, nothing else - so an emulator or the NDFS viewer
+can read it. That file is not kept anywhere: the archive holds only what came
+off the physical floppy.
+
 **What would change it.** A better read of the same physical disk. Several of
 these are one of a set of repeat reads where every attempt failed differently,
 so a fresh read - or reading the other side, for the 8 inch double-sided disks -

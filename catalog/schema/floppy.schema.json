@@ -705,6 +705,52 @@
           "items": {
             "type": "string"
           }
+        },
+        "recovery": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "description": "Set when the file list was recovered by reconstructing the master block pointers from what healthy floppies of the same geometry use. The list in ndfs then exists but was not read from an intact filesystem.",
+          "properties": {
+            "status": {
+              "type": "string",
+              "enum": [
+                "recovered"
+              ]
+            },
+            "layout": {
+              "type": "object",
+              "properties": {
+                "object": {
+                  "type": "integer"
+                },
+                "user": {
+                  "type": "integer"
+                },
+                "bit": {
+                  "type": "integer"
+                }
+              }
+            },
+            "filesRecovered": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "namesConfirmedInBytes": {
+              "type": "integer",
+              "minimum": 0,
+              "description": "how many recovered names occur in the image's own bytes"
+            },
+            "confirmRatio": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            }
+          },
+          "required": [
+            "status"
+          ]
         }
       },
       "required": [

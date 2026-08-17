@@ -227,6 +227,22 @@ export interface CatalogEntry {
     ndNamesFound: number;
     /** a few of them, as evidence */
     ndNameSamples: string[];
+    /**
+     * Set when the file list was recovered by reconstructing the master block
+     * pointers from what healthy floppies of the same geometry use. The list in
+     * `ndfs` then exists, but it was not read from an intact filesystem: it is
+     * only as good as `namesConfirmedInBytes` says, which counts how many of
+     * the recovered names occur in the image's own bytes.
+     */
+    recovery?: {
+      status: 'recovered';
+      /** page numbers the reconstruction used */
+      layout: { object: number; user: number; bit: number };
+      filesRecovered: number;
+      namesConfirmedInBytes: number;
+      /** namesConfirmedInBytes / filesRecovered, 0..1 */
+      confirmRatio: number;
+    } | null;
   } | null;
   directoryContentRaw?: string | null;
   /** References to related documentation */

@@ -4962,6 +4962,11 @@ tr.ndfs-file-selected,
           html += '<button class="nd-btn nd-btn-primary nd-btn-sm" onclick="openNdfsViewer(\'' + esc(e.id) + '\')">Open in NDFS Viewer</button> ';
         }
         html += '<button class="nd-btn nd-btn-ghost nd-btn-sm" onclick="openHexViewer(\'' + esc(e.id) + '\', \'' + vLabel + '\')">Open in HEX viewer</button>';
+        if (e.condition && e.condition.recovery) {
+          // The archive stores the original only; this copy is built per request.
+          html += ' <a class="nd-btn nd-btn-ghost nd-btn-sm" href="/api/ndfs/repaired?id=' + encodeURIComponent(e.id) +
+            '" download title="The original bytes with the master block pointers rebuilt, so an emulator or the NDFS viewer can read it. Built on request - only the original is stored.">Download repaired .img</a>';
+        }
         html += '</div>';
       }
 

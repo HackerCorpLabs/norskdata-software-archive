@@ -5,6 +5,7 @@
 
 import express from 'express';
 import { pageAlign } from './lib/ndfsalign/index.js';
+import { tryRecoverDamaged, type DamagedAssessment } from './api/damaged.js';
 import multer from 'multer';
 import { readFile, readdir, stat, writeFile, rename, copyFile, rm } from 'fs/promises';
 import { join, resolve, extname, basename, sep } from 'path';
@@ -2376,6 +2377,7 @@ app.post('/api/detect-filesystem', async (req, res) => {
       let label: string | null = null;
       let set: ReturnType<typeof readBackupSet> = null;
       let files: ReturnType<typeof readBackupFiles> = null;
+      let recovered: DamagedAssessment | null = null;
       try {
         const raw = gunzipSync(await readFile(abs));
         const ndfsParsed = !!(e.volumeName || e.ndfs?.files?.length || e.ndfs?.users?.length);
@@ -2383,6 +2385,7 @@ app.post('/api/detect-filesystem', async (req, res) => {
         if (kind === 'dos') label = readDosLabel(raw);
         if (kind === 'winch' || kind === 'backup') set = readBackupSet(raw);
         if (kind === 'backup') files = readBackupFiles(raw);
+        if (kind === 'none') recovered = await tryRecoverDamaged(raw);
       } catch { failed++; continue; }
       scanned++;
       counts[kind] = (counts[kind] ?? 0) + 1;
@@ -2393,6 +2396,15 @@ app.post('/api/detect-filesystem', async (req, res) => {
         if (label) e.volumeLabel = label;
         e.backupSet = set;
         e.backupFiles = files;
+        if (recovered) {
+          // ND material that the parser refuses: filed as the ND floppy it is,
+          // with what could be read off it and how far that can be trusted.
+          e.filesystem = 'ndfs';
+          e.condition = recovered.condition;
+          if (recovered.ndfs) e.ndfs = recovered.ndfs;
+        } else if (kind !== 'none') {
+          e.condition = null;
+        }
         if (e.storage?.git?.yamlPath) await saveFloppyYaml(ROOT_DIR, e);
         changed++;
       }
@@ -2640,6 +2652,43 @@ app.post('/api/catalog-entry/upload', upload.single('file'), async (req, res) =>
 // ============================================================
 // NDFS viewer endpoints
 // ============================================================
+
+/**
+ * A readable copy of a damaged floppy: the original bytes with the master block
+ * pointers written back as the recovery worked them out.
+ *
+ * Built on the fly and never stored. The archive keeps only what came off the
+ * physical disk, so the repaired image exists for as long as this response
+ * takes and no longer.
+ */
+app.get('/api/ndfs/repaired', async (req, res) => {
+  try {
+    const entryId = String(req.query.id ?? '');
+    const cat = await getCatalog();
+    const entry = cat.entries.find(e => e.id === entryId);
+    const rec = entry?.condition?.recovery;
+    const imagePath = entry?.storage?.git?.imagePath;
+    if (!entry || !imagePath) { res.status(404).json({ error: 'Entry or image not found' }); return; }
+    if (!rec) { res.status(400).json({ error: 'No recovered layout for this image' }); return; }
+    const abs = resolve(ROOT_DIR, imagePath);
+    if (!abs.startsWith(ROOT_DIR)) { res.status(403).json({ error: 'Access denied' }); return; }
+
+    const { applyLayout } = await import('./lib/ndfsrecover/index.js');
+    const { gunzipSync } = await import('zlib');
+    const raw = pageAlign(new Uint8Array(gunzipSync(await readFile(abs))));
+    const repaired = applyLayout(raw, {
+      object: { blockId: rec.layout.object, type: 1 },
+      user: { blockId: rec.layout.user, type: 1 },
+      bit: { blockId: rec.layout.bit, type: 0 },
+    });
+    const base = imagePath.split('/').pop()!.replace(/\.img\.gz$/, '').replace(/\.img$/, '');
+    res.setHeader('Content-Type', 'application/octet-stream');
+    res.setHeader('Content-Disposition', `attachment; filename="${base}-repaired.img"`);
+    res.send(Buffer.from(repaired));
+  } catch (err) {
+    res.status(500).json({ error: String(err) });
+  }
+});
 
 app.get('/api/ndfs/raw', async (req, res) => {
   try {

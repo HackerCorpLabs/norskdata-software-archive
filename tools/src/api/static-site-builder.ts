@@ -104,6 +104,7 @@ export async function buildStaticSite(rootDir: string): Promise<void> {
     ['src/lib/dosfs/index.ts', ['DosVolume', 'NotFatError']],
     ['src/lib/ndbackup/index.ts', ['isBackupVolume', 'readBackupVolume', 'readBackupFile', 'isWinchVolume', 'readWinchVolume', 'readWinchPage']],
     ['src/lib/backupsets/index.ts', ['groupBackupSets', 'backupSetFor', 'setKeyOf', 'describeSet', 'setVerdict']],
+    ['src/lib/ndfsrecover/index.ts', ['applyLayout', 'readLayout', 'recoverNdfs', 'rawNameSet', 'describeRecovery']],
   ] as [string, string[]][]) {
     try {
       const tsSource = await readFile(join(rootDir, 'tools', rel), 'utf-8');
@@ -121,7 +122,7 @@ export async function buildStaticSite(rootDir: string): Promise<void> {
       console.warn(`WARNING: ${rel} not found -- its viewer will be disabled in the static site`);
     }
   }
-  console.log(`Media libraries inlined: ${(mediaLibsJS.length / 1024).toFixed(1)} KB (dosfs + ndbackup + backupsets)`);
+  console.log(`Media libraries inlined: ${(mediaLibsJS.length / 1024).toFixed(1)} KB (dosfs + ndbackup + backupsets + ndfsrecover)`);
 
   console.log(`Loaded ${entries.length} catalog entries, ${products.length} products, ${categoriesRaw.length} categories.`);
 
@@ -1815,6 +1816,13 @@ function getAppJS(): string {
     var fs = e.filesystem || (e.ndfs && (e.ndfs.files || e.ndfs.users) ? 'ndfs' : null);
     if (!fs) return '<span style="color:var(--text-muted)">-</span>';
     var label = MEDIA_LABEL[fs] || fs;
+    if (e.condition && e.condition.status === 'damaged' && e.condition.recovery) {
+      return '<span style="color:var(--text-muted);font-size:0.8rem">' + label + '</span> ' +
+        '<span class="nd-badge nd-badge-warn" style="font-size:0.68rem" title="' +
+        esc('The master block is damaged; this file list was recovered by rebuilding the pointers, and ' +
+            e.condition.recovery.namesConfirmedInBytes + ' of ' + e.condition.recovery.filesRecovered +
+            ' names are confirmed by the image itself') + '">recovered</span>';
+    }
     if (e.condition && e.condition.status === 'damaged') {
       // Recorded as the ND floppy it is, but nothing can be read off it - say so
       // in the listing rather than letting it pass as a complete disk.
@@ -2424,6 +2432,46 @@ function getAppJS(): string {
     html += renderImageCard(entry, true);
 
     view.innerHTML = html;
+    bindRepairedDownload(view);
+  }
+
+  /**
+   * Build a readable copy of a damaged floppy and hand it to the browser.
+   *
+   * The archive stores only what came off the physical disk, so the repaired
+   * image does not exist anywhere: it is made here, from the original, by
+   * writing back the master block pointers the recovery worked out.
+   */
+  function bindRepairedDownload(root) {
+    var buttons = root.querySelectorAll('[data-recover-dl]');
+    for (var i = 0; i < buttons.length; i++) {
+      buttons[i].addEventListener('click', function() {
+        var id = this.getAttribute('data-recover-dl');
+        var entry = catalogMap[id];
+        var rec = entry && entry.condition && entry.condition.recovery;
+        if (!rec || typeof applyLayout === 'undefined') { alert('Recovery data not available in this build'); return; }
+        var btn = this;
+        btn.disabled = true;
+        var was = btn.textContent;
+        btn.textContent = 'Building...';
+        loadImageBytes(id).then(function(bytes) {
+          var aligned = bytes.length % 2048 === 0 ? bytes
+            : (function() { var b = new Uint8Array(Math.ceil(bytes.length / 2048) * 2048); b.set(bytes); return b; })();
+          var repaired = applyLayout(aligned, {
+            object: { blockId: rec.layout.object, type: 1 },
+            user: { blockId: rec.layout.user, type: 1 },
+            bit: { blockId: rec.layout.bit, type: 0 },
+          });
+          var base = (entry.storage && entry.storage.git && entry.storage.git.imagePath || id)
+            .split('/').pop().replace(/\\.img\\.gz$/, '').replace(/\\.img$/, '');
+          downloadBytes(repaired, base + '-repaired.img');
+          btn.disabled = false; btn.textContent = was;
+        }).catch(function(err) {
+          alert('Could not build the repaired image: ' + err);
+          btn.disabled = false; btn.textContent = was;
+        });
+      });
+    }
   }
 
   // ── Image Card (shared) ──────────────────────────────────────
@@ -2466,6 +2514,13 @@ function getAppJS(): string {
     if (full && e.storage && e.storage.git && e.storage.git.imagePath) {
       html += '<div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:1rem">';
       html += '<a href="' + esc(rawUrl(e.storage.git.imagePath)) + '" class="nd-btn nd-btn-sm" download>Download .img.gz</a>';
+      if (e.condition && e.condition.recovery) {
+        // The archive keeps only what came off the physical floppy. A readable
+        // copy is built here in the browser when someone asks for one.
+        html += '<button class="nd-btn nd-btn-sm" data-recover-dl="' + esc(e.id) +
+          '" title="The original image with the master block pointers rebuilt, so an emulator or the NDFS viewer can read it. Built now from the original - the archive stores only the original.">' +
+          'Download repaired .img</button>';
+      }
       if (e.storageClass === 'floppy-in-git') {
         // Offer the viewer that suits what the image actually holds. Opening the
         // NDFS viewer on a DOS disk or a backup volume only produces an error.
@@ -2487,6 +2542,16 @@ function getAppJS(): string {
     }
 
     // ── NDFS file table (THE MAIN CONTENT) ──
+    if (e.condition && e.condition.recovery && e.ndfs && e.ndfs.files && e.ndfs.files.length) {
+      var rc = e.condition.recovery;
+      html += '<p style="margin:0 0 0.75rem;padding:0.6rem 0.8rem;border:1px solid var(--border);border-radius:6px;font-size:0.85rem">' +
+        '<span class="nd-badge nd-badge-warn">recovered listing</span> ' +
+        'The master block on this floppy is damaged (' + esc(e.condition.parserError || '') + '). The file list below was not read ' +
+        'from an intact filesystem: it comes from rebuilding the master block pointers (object ' + rc.layout.object +
+        ', user ' + rc.layout.user + ', bit ' + rc.layout.bit + ') from what readable floppies of this size use. ' +
+        rc.namesConfirmedInBytes + ' of ' + rc.filesRecovered + ' names (' + Math.round(rc.confirmRatio * 100) +
+        '%) occur in the bytes of the image itself, which is why it is shown at all. Sizes and dates may be wrong.</p>';
+    }
     if (e.ndfs && e.ndfs.files && e.ndfs.files.length > 0) {
       var hasAnyDate = false;
       for (var fd = 0; fd < e.ndfs.files.length; fd++) {
