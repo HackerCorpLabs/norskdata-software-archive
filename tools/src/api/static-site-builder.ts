@@ -2989,7 +2989,11 @@ function getAppJS(): string {
       })
       .then(function(rawData) {
         document.querySelector('#nd-modal-content .ndfs-loading div:last-child').textContent = 'Parsing NDFS...';
-        var fs = new NdfsLib.NdfsFileSystem(rawData, true);
+        // A read that stops a fraction of a page short is still a readable ND
+        // floppy; the parser refuses anything not a whole number of pages.
+        var aligned = rawData.length % 2048 === 0 ? rawData
+          : (function() { var b = new Uint8Array(Math.ceil(rawData.length / 2048) * 2048); b.set(rawData); return b; })();
+        var fs = new NdfsLib.NdfsFileSystem(aligned, true);
         ndfsViewerState.fs = fs;
 
         // Extract file list using getObjectEntries (same API as server)

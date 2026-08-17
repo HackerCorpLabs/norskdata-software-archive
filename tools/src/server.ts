@@ -4,6 +4,7 @@
  */
 
 import express from 'express';
+import { pageAlign } from './lib/ndfsalign/index.js';
 import multer from 'multer';
 import { readFile, readdir, stat, writeFile, rename, copyFile, rm } from 'fs/promises';
 import { join, resolve, extname, basename, sep } from 'path';
@@ -2710,7 +2711,7 @@ app.get('/api/ndfs/info', async (req, res) => {
     const raw = gunzipSync(compressed);
 
     const { NdfsFileSystem } = await import('../../externals/norskdata-ndfs/ndfs-ts/dist/index.js');
-    const fs = new NdfsFileSystem(new Uint8Array(raw.buffer, raw.byteOffset, raw.byteLength), true);
+    const fs = new NdfsFileSystem(pageAlign(new Uint8Array(raw.buffer, raw.byteOffset, raw.byteLength)), true);
 
     const mb = fs.getMasterBlock();
     const users = fs.getUsers().map((u: any) => ({
@@ -2768,7 +2769,7 @@ app.get('/api/ndfs/files', async (req, res) => {
 
     const { NdfsFileSystem } = await import('../../externals/norskdata-ndfs/ndfs-ts/dist/index.js');
     const { ndTimeToDate } = await import('../../externals/norskdata-ndfs/ndfs-ts/dist/nd-time.js');
-    const fs = new NdfsFileSystem(new Uint8Array(raw.buffer, raw.byteOffset, raw.byteLength), true);
+    const fs = new NdfsFileSystem(pageAlign(new Uint8Array(raw.buffer, raw.byteOffset, raw.byteLength)), true);
 
     const objects = fs.getObjectEntries();
     const files = objects
@@ -2873,7 +2874,7 @@ app.get('/api/ndfs/read-file', async (req, res) => {
     const raw = gunzipSync(compressed);
 
     const { NdfsFileSystem } = await import('../../externals/norskdata-ndfs/ndfs-ts/dist/index.js');
-    const fs = new NdfsFileSystem(new Uint8Array(raw.buffer, raw.byteOffset, raw.byteLength), true);
+    const fs = new NdfsFileSystem(pageAlign(new Uint8Array(raw.buffer, raw.byteOffset, raw.byteLength)), true);
 
     const parityMode = parity === 'strip' ? 'strip' : 'none';
     const data = fs.readFile(filePath2, parityMode as any);
@@ -2920,7 +2921,7 @@ app.get('/api/ndfs/hex', async (req, res) => {
     const raw = gunzipSync(compressed);
 
     const { NdfsFileSystem } = await import('../../externals/norskdata-ndfs/ndfs-ts/dist/index.js');
-    const fs = new NdfsFileSystem(new Uint8Array(raw.buffer, raw.byteOffset, raw.byteLength), true);
+    const fs = new NdfsFileSystem(pageAlign(new Uint8Array(raw.buffer, raw.byteOffset, raw.byteLength)), true);
 
     const data = fs.readFile(filePath2);
     const totalSize = data.length;

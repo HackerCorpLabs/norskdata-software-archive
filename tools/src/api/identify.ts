@@ -10,6 +10,7 @@ import { readFile } from 'fs/promises';
 import { gunzipSync } from 'zlib';
 import { extname } from 'path';
 import { detectFilesystem, type FilesystemKind } from './filesystem-detect.js';
+import { pageAlign } from '../lib/ndfsalign/index.js';
 import { DosVolume } from '../lib/dosfs/index.js';
 import { readBackupVolume, readWinchVolume } from '../lib/ndbackup/index.js';
 
@@ -50,7 +51,7 @@ async function ndfsSummary(buf: Buffer): Promise<{ name: string | null; files: n
   try {
     const { NdfsFileSystem } = await import('norskdata-ndfs');
     if (!NdfsFileSystem) return null;
-    const fs = new (NdfsFileSystem as any)(new Uint8Array(buf), true);
+    const fs = new (NdfsFileSystem as any)(pageAlign(new Uint8Array(buf)), true);
     const name = fs.getDirectoryName?.() ?? null;
     const users: any[] = fs.getUsers?.() ?? [];
     const objects: any[] = fs.getObjectEntries?.() ?? [];

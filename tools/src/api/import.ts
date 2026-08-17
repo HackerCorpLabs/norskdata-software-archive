@@ -18,6 +18,7 @@ import { generateId, saveFloppyYaml } from './catalog.js';
 import { checkDuplicate } from './dedup.js';
 import { matchProduct } from './product-matcher.js';
 import { detectFilesystem } from './filesystem-detect.js';
+import { pageAlign } from '../lib/ndfsalign/index.js';
 import { readDosLabel, readBackupSet, readBackupFiles } from './filesystem-detect.js';
 
 /** Maximum raw image size for in-git storage (roughly 700 NDFS pages) */
@@ -72,7 +73,9 @@ async function tryParseNdfs(buffer: Buffer): Promise<NdfsParseResult | null> {
     const NdfsFileSystem = ndfsModule.NdfsFileSystem;
     if (!NdfsFileSystem) return null;
 
-    const fs = new NdfsFileSystem(new Uint8Array(buffer), true);
+    // padded to a whole number of pages: a read that stops a fraction of a
+    // page short is still a readable ND floppy
+    const fs = new NdfsFileSystem(pageAlign(new Uint8Array(buffer)), true);
     const volumeName = fs.getDirectoryName?.() ?? null;
     const masterBlock = fs.getMasterBlock?.();
     const totalPages = masterBlock?.imageSize ?? (buffer.length / 2048);

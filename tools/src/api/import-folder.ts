@@ -9,6 +9,7 @@
  */
 
 import { readdir, stat, readFile, mkdir } from 'fs/promises';
+import { pageAlign } from '../lib/ndfsalign/index.js';
 import { join, extname, basename } from 'path';
 import { createHash } from 'crypto';
 import type { Catalog, CatalogEntry } from '../types.js';
@@ -103,7 +104,7 @@ export async function importFolder(
     let volName: string | null = null;
     try {
       const ndfs = await import('norskdata-ndfs');
-      const fs = new ndfs.NdfsFileSystem(new Uint8Array(img.buffer), true);
+      const fs = new ndfs.NdfsFileSystem(pageAlign(new Uint8Array(img.buffer)), true);
       volName = fs.getDirectoryName?.() ?? null;
     } catch { /* ignore */ }
     volumeNames.push(volName);
