@@ -135,11 +135,27 @@ export function applyLayout(image: Uint8Array, layout: Layout, directoryName = '
   writeU32(copy, OBJECT_PTR_OFFSET, pointerTo(layout.object));
   writeU32(copy, USER_PTR_OFFSET, pointerTo(layout.user));
   writeU32(copy, BIT_PTR_OFFSET, pointerTo(layout.bit));
-  if (copy[MASTER_BLOCK_OFFSET] === 0) {
+  // The parser also refuses a master block whose directory name is not
+  // printable, and on a badly damaged floppy those 16 bytes are as likely to be
+  // rubbish as the pointers - so a name that cannot be read is replaced as
+  // well. A readable name, however odd, is the disk's own and is left alone.
+  if (!directoryNameIsReadable(copy)) {
     const name = directoryName + "'";
-    for (let i = 0; i < name.length && i < 16; i++) copy[MASTER_BLOCK_OFFSET + i] = name.charCodeAt(i);
+    for (let i = 0; i < 16; i++) copy[MASTER_BLOCK_OFFSET + i] = i < name.length ? name.charCodeAt(i) : 0;
   }
   return copy;
+}
+
+/** True when the 16 name bytes read as text the parser will accept. */
+export function directoryNameIsReadable(image: Uint8Array): boolean {
+  let length = 0;
+  for (let i = 0; i < 16; i++) {
+    const c = image[MASTER_BLOCK_OFFSET + i];
+    if (c === 0x27 || c === 0) break;            // apostrophe or padding ends it
+    if (c < 0x20 || c > 0x7e) return false;      // note: not parity stripped - the parser does not strip either
+    length++;
+  }
+  return length > 0;
 }
 
 // ── layout tables ────────────────────────────────────────────
@@ -211,6 +227,110 @@ export function confirmAgainstBytes(files: ProbeResult['files'], names: Set<stri
   return { confirmed, ratio: confirmed / files.length };
 }
 
+// ── finding the structures by their shape ────────────────────
+
+const ENTRY_SIZE = 64;
+const OBJECT_ENTRY_IN_USE = 0x80;
+const USER_ENTRY_FLAG = 0x81;
+const NAME_OFFSET = 2;
+const NAME_MAX = 16;
+
+/** An ND name is printable, apostrophe-terminated, and not empty. */
+function looksLikeNdName(image: Uint8Array, at: number, max: number): boolean {
+  let length = 0;
+  let solid = 0;
+  for (let i = 0; i < max; i++) {
+    const c = image[at + i] & 0x7f;
+    if (c === 0x27) break;                       // apostrophe ends the name
+    if (c === 0) break;                          // zero padded
+    if (c < 0x20 || c > 0x7e) return false;
+    // A run of spaces passes every printable test and is not a name: pages of
+    // text padded with 0xA0 were being read as file lists because of it.
+    if (c !== 0x20) solid++;
+    length++;
+  }
+  return length > 0 && solid >= 2;
+}
+
+/**
+ * Pages that look like a file list, best first.
+ *
+ * The object file is an array of 64-byte entries: the top bit of byte 0 marks
+ * an entry in use, the name sits at byte 2 and the type at byte 18. A page full
+ * of those is the object file, wherever the master block claims it is - which
+ * is what makes a floppy readable again when the pointer itself is the damaged
+ * part.
+ */
+export function scanForObjectFile(image: Uint8Array): { page: number; entries: number }[] {
+  const found: { page: number; entries: number }[] = [];
+  const pages = Math.floor(image.length / NDFS_PAGE_SIZE);
+  for (let page = 1; page < pages; page++) {
+    const base = page * NDFS_PAGE_SIZE;
+    let entries = 0;
+    const names = new Set<string>();
+    for (let off = base; off + ENTRY_SIZE <= base + NDFS_PAGE_SIZE; off += ENTRY_SIZE) {
+      if ((image[off] & OBJECT_ENTRY_IN_USE) === 0) continue;
+      if (!looksLikeNdName(image, off + NAME_OFFSET, NAME_MAX)) continue;
+      // an object entry also carries a type at byte 18
+      if (!looksLikeNdName(image, off + 18, 4)) continue;
+      let name = '';
+      for (let i = 0; i < NAME_MAX; i++) {
+        const c = image[off + NAME_OFFSET + i] & 0x7f;
+        if (c === 0x27 || c === 0) break;
+        name += String.fromCharCode(c);
+      }
+      names.add(name);
+      entries++;
+    }
+    // distinct names: a real file list does not repeat the same string down the page
+    if (entries >= 2 && names.size >= 2) found.push({ page, entries: names.size });
+  }
+  return found.sort((a, b) => b.entries - a.entries);
+}
+
+/** Pages that look like a user list, best first. Same idea, flag 0x81. */
+export function scanForUserFile(image: Uint8Array): { page: number; entries: number }[] {
+  const found: { page: number; entries: number }[] = [];
+  const pages = Math.floor(image.length / NDFS_PAGE_SIZE);
+  for (let page = 1; page < pages; page++) {
+    const base = page * NDFS_PAGE_SIZE;
+    let entries = 0;
+    for (let off = base; off + ENTRY_SIZE <= base + NDFS_PAGE_SIZE; off += ENTRY_SIZE) {
+      if ((image[off] & USER_ENTRY_FLAG) !== USER_ENTRY_FLAG) continue;
+      if (!looksLikeNdName(image, off + NAME_OFFSET, NAME_MAX)) continue;
+      entries++;
+    }
+    if (entries >= 1) found.push({ page, entries });
+  }
+  return found.sort((a, b) => b.entries - a.entries);
+}
+
+/**
+ * Layouts worked out from the image itself rather than from other floppies.
+ *
+ * Used when no standard layout fits - a geometry nobody else in the collection
+ * has, or a floppy whose structures were moved. The bit file cannot be found
+ * this way (it has no distinctive shape), so the bit pointers of the known
+ * layouts are reused, and failing that the page after the user file.
+ */
+export function layoutsFromScan(image: Uint8Array, fallbackBits: number[] = []): Layout[] {
+  const objects = scanForObjectFile(image).slice(0, 4);
+  const users = scanForUserFile(image).slice(0, 4);
+  const pages = Math.floor(image.length / NDFS_PAGE_SIZE);
+  const out: Layout[] = [];
+  for (const o of objects) {
+    for (const u of users) {
+      if (u.page === o.page) continue;
+      const bits = fallbackBits.length ? fallbackBits : [Math.max(1, u.page + 1)];
+      for (const bit of bits) {
+        if (bit < 1 || bit >= pages) continue;
+        out.push({ object: { blockId: o.page, type: 1 }, user: { blockId: u.page, type: 1 }, bit: { blockId: bit, type: 0 } });
+      }
+    }
+  }
+  return out;
+}
+
 // ── recovery ─────────────────────────────────────────────────
 
 export interface RecoverOptions {
@@ -222,6 +342,20 @@ export interface RecoverOptions {
   minConfirm?: number;
   /** how many layouts to try at most (default 8) */
   maxCandidates?: number;
+  /**
+   * Also look for the object and user files in the image itself, instead of
+   * only trying the layouts other floppies use. Slower - it walks every page -
+   * and only worth it when the standard layouts have already failed.
+   */
+  deep?: boolean;
+  /**
+   * Last resort: try every page in the image as the object file, against a
+   * handful of user and bit candidates. Hundreds of parses, so seconds per
+   * floppy - but if the file list survived anywhere on the disk this finds it.
+   * The confirmation test is what keeps a sweep this wide honest: a page that
+   * is not a file list produces names the image does not contain.
+   */
+  sweep?: boolean;
 }
 
 /**
@@ -234,7 +368,7 @@ export interface RecoverOptions {
  */
 export function recoverNdfs(image: Uint8Array, opts: RecoverOptions): RecoveryResult {
   const minConfirm = opts.minConfirm ?? 0.8;
-  const maxCandidates = opts.maxCandidates ?? 8;
+  const maxCandidates = opts.maxCandidates ?? (opts.sweep ? 20000 : opts.deep ? 64 : 8);
   const table = opts.layouts ?? DEFAULT_LAYOUTS;
   const pages = Math.floor(image.length / NDFS_PAGE_SIZE);
 
@@ -253,6 +387,36 @@ export function recoverNdfs(image: Uint8Array, opts: RecoverOptions): RecoveryRe
     }
   }
 
+  if (opts.deep) {
+    // the bit pointers the known layouts use are still the best guesses
+    const bits: number[] = [];
+    for (const list of table.values()) for (const l of list) if (!bits.includes(l.bit.blockId)) bits.push(l.bit.blockId);
+    for (const scanned of layoutsFromScan(image, bits)) {
+      const already = toTry.some(l =>
+        l.object.blockId === scanned.object.blockId &&
+        l.user.blockId === scanned.user.blockId &&
+        l.bit.blockId === scanned.bit.blockId);
+      if (!already) toTry.push(scanned);
+    }
+  }
+
+  if (opts.sweep) {
+    const userCandidates: number[] = [];
+    for (const list of table.values()) for (const l of list) if (!userCandidates.includes(l.user.blockId)) userCandidates.push(l.user.blockId);
+    for (const u of scanForUserFile(image).slice(0, 2)) if (!userCandidates.includes(u.page)) userCandidates.push(u.page);
+    const bitCandidates: number[] = [];
+    for (const list of table.values()) for (const l of list) if (!bitCandidates.includes(l.bit.blockId)) bitCandidates.push(l.bit.blockId);
+    for (let page = 1; page < pages; page++) {
+      for (const user of userCandidates) {
+        if (user >= pages || user === page) continue;
+        for (const bit of bitCandidates) {
+          if (bit >= pages) continue;
+          toTry.push({ object: { blockId: page, type: 1 }, user: { blockId: user, type: 1 }, bit: { blockId: bit, type: 0 } });
+        }
+      }
+    }
+  }
+
   const names = rawNameSet(image);
   const candidates: RecoveryCandidate[] = [];
   let tried = 0;
@@ -267,12 +431,17 @@ export function recoverNdfs(image: Uint8Array, opts: RecoverOptions): RecoveryRe
       directoryName: parsed.directoryName, confirmed, ratio,
     });
   }
-  candidates.sort((a, b) => b.ratio - a.ratio || b.files.length - a.files.length);
+  // Rank by how many names the image itself backs, not by the share of them.
+  // A candidate naming one file that happens to exist scores 100% and tells us
+  // nothing; one naming 25 files of which 24 are in the bytes is the real
+  // listing. Ratio decides between candidates with equal evidence.
+  candidates.sort((a, b) => b.confirmed - a.confirmed || b.ratio - a.ratio || b.files.length - a.files.length);
 
-  const best = candidates[0] ?? null;
+  const accepted = candidates.filter(c => c.ratio >= minConfirm);
+  const best = accepted[0] ?? null;
   const status: RecoveryResult['status'] =
-    !best ? 'failed' : best.ratio >= minConfirm ? 'recovered' : 'unconfirmed';
-  return { status, best: status === 'recovered' ? best : null, candidates, tried, minConfirm };
+    best ? 'recovered' : candidates.length ? 'unconfirmed' : 'failed';
+  return { status, best, candidates, tried, minConfirm };
 }
 
 /** One line saying what happened, for a log or a UI. */
