@@ -26,6 +26,8 @@ export type ReadGrade =
 
 export interface ReadInput {
   id: string;
+  /** where the image came from, e.g. "winprint/i1.img" - what separates two disks named alike */
+  provenance?: { originalPath?: string | null } | null;
   volumeName?: string | null;
   volumeLabel?: string | null;
   filesystem?: string | null;
@@ -42,6 +44,10 @@ export interface GradedRead {
   id: string;
   /** the image file name, which is what the operator numbered */
   name: string;
+  /** first 12 hex digits of the MD5 - proof that two reads are different files */
+  md5: string | null;
+  /** where the image came from, so two disks named alike can be told apart */
+  source: string | null;
   grade: ReadGrade;
   files: number;
   imageSizeBytes: number | null;
@@ -86,9 +92,18 @@ export function diskOf(e: ReadInput): string {
   const file = (e.storage?.git?.imagePath ?? '').split('/').pop() ?? '';
   const base = file.replace(/\.img\.gz$/i, '').replace(/\.img$/i, '');
   if (!base) return e.id;
-  return base
+  const disk = base
     .replace(/-track\d+(-\d+)?$/i, '')
     .replace(/([0-9]{3,6})[a-z]$/, '$1');
+
+  // The name alone is not enough: winlink/i1.img, winprint/i1.img and
+  // winsmx/i1.img are three different floppies that share a file name, and
+  // grouping them as one disk claimed the archive had imported the same image
+  // three times. Reads of one disk always come from the same folder, so the
+  // folder qualifies the name.
+  const from = e.provenance?.originalPath ?? '';
+  const folder = from.includes('/') ? from.slice(0, from.lastIndexOf('/')) : '';
+  return folder ? folder + '/' + disk : disk;
 }
 
 /** Group every read by the disk it came off, worst disks first. */
@@ -105,6 +120,8 @@ export function groupReads(entries: ReadInput[]): ReadGroup[] {
     const reads: GradedRead[] = members.map(m => ({
       id: m.id,
       name: ((m.storage?.git?.imagePath ?? '').split('/').pop() ?? m.id).replace(/\.img\.gz$/i, ''),
+      md5: m.md5 ? m.md5.slice(0, 12) : null,
+      source: m.provenance?.originalPath ?? null,
       grade: gradeRead(m),
       files: m.ndfs?.files?.length ?? 0,
       imageSizeBytes: m.imageSizeBytes ?? null,

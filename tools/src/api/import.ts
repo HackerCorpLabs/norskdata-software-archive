@@ -22,7 +22,15 @@ import { pageAlign } from '../lib/ndfsalign/index.js';
 import { readDosLabel, readBackupSet, readBackupFiles, readDosFiles } from './filesystem-detect.js';
 
 /** Maximum raw image size for in-git storage (roughly 700 NDFS pages) */
-const FLOPPY_SIZE_LIMIT = 1_400_000;
+/**
+ * Largest image kept in git as a floppy.
+ *
+ * Covers every floppy format this archive sees, up to a 3.5 inch HD disk and
+ * the slightly-over-size reads of one: 1,491,456 bytes for winlink/3.img. The
+ * old ceiling of 1,400,000 sat just under a 1.44 MB floppy, so those were
+ * classified as ia-only and - because nothing wrote them - disappeared.
+ */
+const FLOPPY_SIZE_LIMIT = 2_000_000;
 
 /**
  * Reduce a source path to "<parent folder>/<filename>" for provenance.
@@ -604,6 +612,18 @@ export async function importImage(
 
   // Write YAML file next to the image
   if (gitYamlPath && rootDir) {
+    await saveFloppyYaml(rootDir, entry);
+  } else if (rootDir && !isFloppy) {
+    // Too large for git: the image belongs on Internet Archive, but the entry
+    // still has to exist. Writing nothing lost the floppy silently and told the
+    // caller it had been imported - which is how winlink/3.img vanished.
+    const targetDir = options?.targetDir ?? classifyTargetPath(md5);
+    await mkdir(join(rootDir, targetDir), { recursive: true });
+    const yamlName = basename(filePath).replace(/\.(img|image|ima|dsk)$/i, '') + '.yaml';
+    entry.storage = {
+      ...(entry.storage ?? {}),
+      git: { imagePath: null as any, yamlPath: join(targetDir, yamlName), labelPhotos: [], labelTranscription: null, imagingLogs: [] } as any,
+    } as any;
     await saveFloppyYaml(rootDir, entry);
   }
 

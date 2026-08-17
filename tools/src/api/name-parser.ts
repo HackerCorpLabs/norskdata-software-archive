@@ -57,6 +57,18 @@ const MULTI_PART = /^ND-(\d{5,6})([A-Z])-PART(\d+)$/i;
 const MULTI_PART_BARE = /^(\d{5,6})([A-Z])-PART(\d+)$/i;
 
 /**
+ * The FAT label of an ND-OWS / NORTEXT PC diskette: 30210NO1A00.
+ *
+ * FAT allows 11 characters and no punctuation, so ND packed the part number
+ * into them: five digits of article number, two letters of language (NO, SW,
+ * EN, DA, XX), the disk number in the set, then the version. The label of the
+ * first WinLink diskette is 30210NO1A00 - article 30210, Norwegian, disk 1,
+ * version A00 - which is the same information a floppy volume name carries as
+ * 210523H00-XX-01D, only without room for the separators.
+ */
+const DOS_LABEL_PATTERN = /^(\d{5})([A-Z]{2})(\d)([A-Z]\d{2})$/;
+
+/**
  * Parse a volume name into structured components.
  * Returns null if the name cannot be parsed at all.
  */
@@ -66,6 +78,21 @@ export function parseVolumeName(name: string): ParsedVolumeName | null {
   if (!trimmed) return null;
 
   let m: RegExpMatchArray | null;
+
+  // MS-DOS FAT label: 30210NO1A00 -> ND-30210, Norwegian, disk 1, version A00
+  m = trimmed.match(DOS_LABEL_PATTERN);
+  if (m) {
+    return {
+      productNumber: m[1],
+      productId: `ND-${m[1]}`,
+      version: m[4],
+      language: m[2],
+      diskNumber: parseInt(m[3], 10),
+      density: null,
+      confidence: 1,
+      raw: trimmed,
+    };
+  }
 
   // Full pattern: 210523H00-XX-01D -> confidence 1.0
   m = trimmed.match(FULL_PATTERN);

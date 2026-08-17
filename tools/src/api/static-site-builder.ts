@@ -2681,14 +2681,21 @@ function getAppJS(): string {
         html += '<p class="nd-text-muted" style="margin:0 0 0.5rem;font-size:0.85rem">' +
           'This physical disk was read ' + grp.reads.length + ' times' +
           (grp.bad ? ' and no attempt produced a readable filesystem' : '') + '. ' + esc(describeGroup(grp)) + '.</p>';
-        html += '<div style="overflow-x:auto"><table class="nd-table nd-table-compact"><tbody>';
+        html += '<div style="overflow-x:auto"><table class="nd-table nd-table-compact"><thead><tr>' +
+          '<th>Image</th><th>MD5</th><th>Status</th><th style="text-align:right">Files</th>' +
+          '<th style="text-align:right">Size</th><th></th></tr></thead><tbody>';
         grp.reads.forEach(function(r) {
           var badge = GR[r.grade] || ['nd-badge', r.grade];
           var isThis = r.id === e.id;
           html += '<tr>' +
             '<td><a href="#/disks/' + encodeURIComponent(r.id) + '"><code>' + esc(r.name) + '</code></a>' +
             (isThis ? ' <span class="nd-badge nd-badge-info" style="font-size:0.65rem">this one</span>' : '') +
-            (r.best ? ' <span class="nd-text-muted" style="font-size:0.75rem">best read</span>' : '') + '</td>' +
+            (r.best ? ' <span class="nd-text-muted" style="font-size:0.75rem">best read</span>' : '') +
+            // The file name alone says nothing about whether two rows are the
+            // same bytes imported twice; the checksum and the path it came from
+            // do.
+            (r.source ? '<div class="nd-text-muted" style="font-size:0.75rem">from <code>' + esc(r.source) + '</code></div>' : '') + '</td>' +
+            '<td><code style="font-size:0.75rem">' + esc(r.md5 || '') + '</code></td>' +
             '<td><span class="nd-badge ' + badge[0] + '">' + badge[1] + '</span></td>' +
             '<td style="text-align:right">' + (r.files || '-') + ' files</td>' +
             '<td style="text-align:right" class="nd-text-muted">' + (r.imageSizeBytes ? Math.round(r.imageSizeBytes / 1024) + ' KB' : '-') + '</td>' +
