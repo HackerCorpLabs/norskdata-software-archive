@@ -318,12 +318,23 @@ export async function scanFolderArtifacts(
 
 /**
  * Copy set-level artifacts flat into {targetDir}/. Deduplicates (skips if exists).
+ *
+ * `alreadyPlaced` is how a folder import avoids the mistake this used to make:
+ * a document that belongs to the whole folder - a readme, an install note, a
+ * read log whose disk was never imported - was copied into EVERY image folder of
+ * the batch, so one readme became five files and one batch of read logs became
+ * thousands. Such a document is copied once, for the first image of the import,
+ * and the callers after it are told to leave it alone.
+ *
+ * Photos and the label transcription are not affected: a set photo is
+ * consolidated into collections/ afterwards, and labels.txt belongs to the disk.
  */
 export async function copySetArtifacts(
   rootDir: string,
   sourceDir: string,
   targetDir: string,
-  artifacts: { setPhotos: string[]; transcription: string | null; imagingLogs: string[] }
+  artifacts: { setPhotos: string[]; transcription: string | null; imagingLogs: string[] },
+  alreadyPlaced?: Set<string>,
 ): Promise<{ setPhotos: string[]; labelTranscription: string | null; imagingLogs: string[] }> {
   const absTargetDir = join(rootDir, targetDir);
   await mkdir(absTargetDir, { recursive: true });
@@ -343,10 +354,13 @@ export async function copySetArtifacts(
     labelTranscription = join(targetDir, fname);
   }
 
+  // Documents belonging to the folder rather than to this disk: copy each once.
   const imagingLogs: string[] = [];
   for (const logFile of artifacts.imagingLogs) {
+    if (alreadyPlaced?.has(logFile)) continue;
     const dst = join(absTargetDir, logFile);
     try { await stat(dst); } catch { await copyFile(join(sourceDir, logFile), dst); }
+    alreadyPlaced?.add(logFile);
     imagingLogs.push(join(targetDir, logFile));
   }
 
@@ -450,10 +464,18 @@ export async function importImage(
       gitLabelTranscription = options.setArtifacts.labelTranscription;
       gitImagingLogs = options.setArtifacts.imagingLogs;
     } else {
-      // Standalone import - scan and copy artifacts
+      // Standalone import - scan and copy artifacts.
+      //
+      // Only what belongs to THIS image is taken. A document the scan could not
+      // match to it - a readme for the folder, a read log of a disk that was
+      // never imported, notes about other disks - belongs to the folder, and a
+      // single-file import knows nothing about the rest of that folder. Copying
+      // it here is how one readme ended up in five image folders: every call
+      // scanned the same folder and claimed the same document.
       const sourceDir = options?.sourceDir ?? dirname(filePath);
       const artifacts = await scanFolderArtifacts(sourceDir, [filename], [volumeName]);
-      const setResult = await copySetArtifacts(rootDir, sourceDir, targetDir, artifacts);
+      const setResult = await copySetArtifacts(rootDir, sourceDir, targetDir,
+        { ...artifacts, imagingLogs: [] });
       gitSetPhotos = setResult.setPhotos;
       gitLabelTranscription = setResult.labelTranscription;
       gitImagingLogs = setResult.imagingLogs;

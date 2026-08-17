@@ -66,6 +66,9 @@ export async function importFolder(
 
   console.log(`Found ${imgFiles.length} image file(s) in ${folderPath}`);
 
+  // documents of this folder that have already been copied for an earlier image
+  const placedSetDocuments = new Set<string>();
+
   // ── Pre-scan: compute MD5 for all images, check for duplicates ──
   const shouldSkip = options.skipDuplicates !== false;
   const newImages: Array<{ file: string; md5: string; buffer: Buffer }> = [];
@@ -122,8 +125,10 @@ export async function importFolder(
     await mkdir(join(options.rootDir, targetDir), { recursive: true });
     const myDiskPhotos = artifacts.diskPhotos.get(img.file) ?? [];
 
-    // Copy set artifacts into this image's folder
-    const setResult = await copySetArtifacts(options.rootDir, folderPath, targetDir, artifacts);
+    // Copy set artifacts into this image's folder. Folder-level documents go to
+    // the first image only - see copySetArtifacts - so a readme does not end up
+    // duplicated across every disk of the batch.
+    const setResult = await copySetArtifacts(options.rootDir, folderPath, targetDir, artifacts, placedSetDocuments);
 
     try {
       const importOpts: ImportOptions = {
