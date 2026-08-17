@@ -17,6 +17,7 @@ condition:
     - SLA:INTE
     - MONSC:REAL
     - KOL:INTE
+  recovery: null
 provenance:
   contributor: gandalf
   originalPath: 300/ND-disk-00302.img

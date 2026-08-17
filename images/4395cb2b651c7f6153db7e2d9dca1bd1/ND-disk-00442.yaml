@@ -20,6 +20,7 @@ condition:
     - WINCH:MAC
     - MON-LIB-2442D:MAC
     - QHQ:OH
+  recovery: null
 provenance:
   contributor: gandalf
   originalPath: 400/ND-disk-00442.img

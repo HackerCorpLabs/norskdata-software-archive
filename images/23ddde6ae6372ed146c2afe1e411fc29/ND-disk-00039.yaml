@@ -20,6 +20,7 @@ condition:
     - IPTR:IE
     - P-PFLG:IE
     - PERFORM-LIBRARY:MCRO
+  recovery: null
 provenance:
   contributor: gandalf
   originalPath: 000/ND-disk-00039.img

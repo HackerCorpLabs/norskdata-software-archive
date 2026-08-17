@@ -20,6 +20,92 @@ condition:
     - TPE-RT-MON-DEVNO:SYMB
     - G8N:FJK
     - O8I:DI
+  recovery:
+    status: recovered
+    layout:
+      object: 150
+      user: 152
+      bit: 77
+    filesRecovered: 9
+    namesConfirmedInBytes: 9
+    confirmRatio: 1
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 148
+  files:
+    - name: TPE-MON-100-B00
+      type: BPUN
+      pages: 0
+      bytes: 0
+      userName: FLOPPY-USER
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: CACHE-1X0-A00
+      type: TEST
+      pages: 0
+      bytes: 0
+      userName: FLOPPY-USER
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: CACHE-100-A00
+      type: NEXT
+      pages: 0
+      bytes: 0
+      userName: FLOPPY-USER
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: CACHE-110-A00
+      type: NEXT
+      pages: 0
+      bytes: 0
+      userName: FLOPPY-USER
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: CACHE-120-A00
+      type: NEXT
+      pages: 0
+      bytes: 0
+      userName: FLOPPY-USER
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: INSTRUCTION-C03
+      type: TEST
+      pages: 0
+      bytes: 0
+      userName: FLOPPY-USER
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: NET-ONE-A00
+      type: TEST
+      pages: 0
+      bytes: 0
+      userName: FLOPPY-USER
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: PAGING-C02
+      type: TEST
+      pages: 0
+      bytes: 0
+      userName: FLOPPY-USER
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: UNIVERS-DMA-C01
+      type: TEST
+      pages: 0
+      bytes: 0
+      userName: FLOPPY-USER
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
 provenance:
   contributor: gandalf
   originalPath: 500/ND-disk-00514.img

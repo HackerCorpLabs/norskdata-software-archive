@@ -20,6 +20,7 @@ condition:
     - ACCOUNTS:DATA
     - MAILBOX:DATA
     - PNLE:MQ
+  recovery: null
 provenance:
   contributor: gandalf
   originalPath: 200/ND-disk-00220.img

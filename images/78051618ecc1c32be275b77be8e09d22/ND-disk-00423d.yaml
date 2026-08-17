@@ -20,6 +20,148 @@ condition:
     - REDOVIS:SYMB
     - REDOMOD:SYMB
     - TESTMOD:SYMB
+  recovery:
+    status: recovered
+    layout:
+      object: 150
+      user: 152
+      bit: 77
+    filesRecovered: 16
+    namesConfirmedInBytes: 16
+    confirmRatio: 1
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 61
+  files:
+    - name: START-LO
+      type: SYMB
+      pages: 0
+      bytes: 0
+      userName: FLOPPY-USER
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: TVADIM-LO
+      type: BRF
+      pages: 0
+      bytes: 0
+      userName: FLOPPY-USER
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: TREDIM-LO
+      type: SYMB
+      pages: 0
+      bytes: 0
+      userName: FLOPPY-USER
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: TVARSN-LO
+      type: SYMB
+      pages: 0
+      bytes: 0
+      userName: FLOPPY-USER
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: DEL1-LO
+      type: SYMB
+      pages: 0
+      bytes: 0
+      userName: FLOPPY-USER
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: DEL2-LO
+      type: SYMB
+      pages: 0
+      bytes: 0
+      userName: FLOPPY-USER
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: DEL3-LO
+      type: SYMB
+      pages: 0
+      bytes: 0
+      userName: FLOPPY-USER
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: DEL4-LO
+      type: SYMB
+      pages: 0
+      bytes: 0
+      userName: FLOPPY-USER
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: DEL5-LO
+      type: SYMB
+      pages: 0
+      bytes: 0
+      userName: FLOPPY-USER
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: TVADIM-LO
+      type: SYMB
+      pages: 0
+      bytes: 0
+      userName: FLOPPY-USER
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: SEKTION-LO
+      type: SYMB
+      pages: 0
+      bytes: 0
+      userName: FLOPPY-USER
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: ETAPP1-LO
+      type: SYMB
+      pages: 0
+      bytes: 0
+      userName: FLOPPY-USER
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: ETAPP2-LO
+      type: SYMB
+      pages: 0
+      bytes: 0
+      userName: FLOPPY-USER
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: ETAPP3-LO
+      type: SYMB
+      pages: 0
+      bytes: 0
+      userName: FLOPPY-USER
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: ETAPP4-LO
+      type: SYMB
+      pages: 0
+      bytes: 0
+      userName: FLOPPY-USER
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: ETAPP5-LO
+      type: SYMB
+      pages: 0
+      bytes: 0
+      userName: FLOPPY-USER
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
 provenance:
   contributor: gandalf
   originalPath: 400/ND-disk-00423d.img

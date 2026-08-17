@@ -20,6 +20,7 @@ condition:
     - FILSYS-SYMBOLS:SYMB
     - RTLO-SYMBOLS:SYMB
     - F48-FMAC-1408D:PROG
+  recovery: null
 provenance:
   contributor: gandalf
   originalPath: 400/ND-disk-00443.img

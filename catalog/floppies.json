@@ -4433,7 +4433,36 @@
     "bootFormat": null,
     "cpuTarget": null,
     "osRequirement": null,
-    "ndfs": null,
+    "ndfs": {
+      "users": [
+        {
+          "name": "SYSTEM",
+          "pagesUsed": 148
+        }
+      ],
+      "files": [
+        {
+          "name": "MACM-1718K",
+          "type": "BPUN",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "SYSTEM",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "SINTRAN-I",
+          "type": "DATA",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "SYSTEM",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        }
+      ]
+    },
     "filesystem": "ndfs",
     "volumeLabel": null,
     "backupSet": null,
@@ -4452,7 +4481,18 @@
         "RST:BOOL",
         "PNLE:MQ",
         "PMLE:LQ"
-      ]
+      ],
+      "recovery": {
+        "status": "recovered",
+        "layout": {
+          "object": 149,
+          "user": 151,
+          "bit": 153
+        },
+        "filesRecovered": 2,
+        "namesConfirmedInBytes": 2,
+        "confirmRatio": 1
+      }
     },
     "docs": {
       "piDocId": null,
@@ -4865,7 +4905,8 @@
         "CLS:CD",
         "CAN:CD",
         "EOB:CD"
-      ]
+      ],
+      "recovery": null
     },
     "docs": {
       "piDocId": null,
@@ -4942,7 +4983,8 @@
         "JEC-B00:PROG",
         "EC-B00:PROG",
         "JEC:BPUN"
-      ]
+      ],
+      "recovery": null
     },
     "docs": {
       "piDocId": null,
@@ -6351,7 +6393,8 @@
         "PRINT:PRIN",
         "TRANSFER-FILE-0:TYPE",
         "MIK:DNF"
-      ]
+      ],
+      "recovery": null
     },
     "docs": {
       "piDocId": null,
@@ -13782,7 +13825,8 @@
         "PRINT:PRIN",
         "TRANSFER-FILE-0:TYPE",
         "MIK:DNF"
-      ]
+      ],
+      "recovery": null
     },
     "docs": {
       "piDocId": null,
@@ -13859,7 +13903,8 @@
         "IPTR:IE",
         "P-PFLG:IE",
         "PERFORM-LIBRARY:MCRO"
-      ]
+      ],
+      "recovery": null
     },
     "docs": {
       "piDocId": null,
@@ -15758,7 +15803,8 @@
         "STRANG:STRI",
         "TALL-SHIP-MJ:DATA",
         "KNYCK-REGLER-MJ:DATA"
-      ]
+      ],
+      "recovery": null
     },
     "docs": {
       "piDocId": null,
@@ -18030,7 +18076,86 @@
     "bootFormat": null,
     "cpuTarget": null,
     "osRequirement": null,
-    "ndfs": null,
+    "ndfs": {
+      "users": [
+        {
+          "name": "SYSTEM",
+          "pagesUsed": 112
+        }
+      ],
+      "files": [
+        {
+          "name": "DELFI-EAO",
+          "type": "BPUN",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "SYSTEM",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "ACC-SERV-PR-B",
+          "type": "BPUN",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "SYSTEM",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "FIL-STAT-HELP",
+          "type": "BPUN",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "SYSTEM",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "LOAD-REENTRANT",
+          "type": "MODE",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "SYSTEM",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "PED",
+          "type": "BPUN",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "SYSTEM",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "DUMP-PED",
+          "type": "MODE",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "SYSTEM",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "BASIC-H00",
+          "type": "BPUN",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "SYSTEM",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        }
+      ]
+    },
     "filesystem": "ndfs",
     "volumeLabel": null,
     "backupSet": null,
@@ -18049,7 +18174,18 @@
         "PACK2:AV",
         "PACK2:SL",
         "PACK2:HJ"
-      ]
+      ],
+      "recovery": {
+        "status": "recovered",
+        "layout": {
+          "object": 150,
+          "user": 152,
+          "bit": 77
+        },
+        "filesRecovered": 7,
+        "namesConfirmedInBytes": 7,
+        "confirmRatio": 1
+      }
     },
     "docs": {
       "piDocId": null,
@@ -22124,7 +22260,8 @@
         "WINCH:MAC",
         "MON-LIB-2442D:MAC",
         "QHQ:OH"
-      ]
+      ],
+      "recovery": null
     },
     "docs": {
       "piDocId": null,
@@ -25826,7 +25963,8 @@
         "CXC:AI",
         "KPY:SD",
         "JHLF:GQ"
-      ]
+      ],
+      "recovery": null
     },
     "docs": {
       "piDocId": null,
@@ -27982,7 +28120,8 @@
         "ACCOUNTS:DATA",
         "MAILBOX:DATA",
         "PNLE:MQ"
-      ]
+      ],
+      "recovery": null
     },
     "docs": {
       "piDocId": null,
@@ -28056,7 +28195,8 @@
         "SLA:INTE",
         "MONSC:REAL",
         "KOL:INTE"
-      ]
+      ],
+      "recovery": null
     },
     "docs": {
       "piDocId": null,
@@ -30033,7 +30173,8 @@
         "HENT-MODE:MODE",
         "ND500-HENT:MODE",
         "AD-MODE:MODE"
-      ]
+      ],
+      "recovery": null
     },
     "docs": {
       "piDocId": null,
@@ -30110,7 +30251,8 @@
         "AD-MODE:MODE",
         "EHE:EI",
         "DHD:DI"
-      ]
+      ],
+      "recovery": null
     },
     "docs": {
       "piDocId": null,
@@ -31825,7 +31967,56 @@
     "bootFormat": null,
     "cpuTarget": null,
     "osRequirement": null,
-    "ndfs": null,
+    "ndfs": {
+      "users": [
+        {
+          "name": "SYSTEM",
+          "pagesUsed": 85
+        }
+      ],
+      "files": [
+        {
+          "name": "HAVSBRUS",
+          "type": "SYMB",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "SYSTEM",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "FORTH-SCREENS-MJ",
+          "type": "SYMB",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "SYSTEM",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "SANKA-GE",
+          "type": "SYMB",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "SYSTEM",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "DELFI-EAO",
+          "type": "SYMB",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "SYSTEM",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        }
+      ]
+    },
     "filesystem": "ndfs",
     "volumeLabel": null,
     "backupSet": null,
@@ -31844,7 +32035,18 @@
         "INBYTE:CALL",
         "IFBYTE:INTE",
         "INBYTE:INTE"
-      ]
+      ],
+      "recovery": {
+        "status": "recovered",
+        "layout": {
+          "object": 150,
+          "user": 152,
+          "bit": 77
+        },
+        "filesRecovered": 4,
+        "namesConfirmedInBytes": 4,
+        "confirmRatio": 1
+      }
     },
     "docs": {
       "piDocId": null,
@@ -31902,7 +32104,106 @@
     "bootFormat": null,
     "cpuTarget": null,
     "osRequirement": null,
-    "ndfs": null,
+    "ndfs": {
+      "users": [
+        {
+          "name": "FLOPPY-USER",
+          "pagesUsed": 148
+        }
+      ],
+      "files": [
+        {
+          "name": "TPE-MON-100-B00",
+          "type": "BPUN",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "FLOPPY-USER",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "CACHE-1X0-A00",
+          "type": "TEST",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "FLOPPY-USER",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "CACHE-100-A00",
+          "type": "NEXT",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "FLOPPY-USER",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "CACHE-110-A00",
+          "type": "NEXT",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "FLOPPY-USER",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "CACHE-120-A00",
+          "type": "NEXT",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "FLOPPY-USER",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "INSTRUCTION-C03",
+          "type": "TEST",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "FLOPPY-USER",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "NET-ONE-A00",
+          "type": "TEST",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "FLOPPY-USER",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "PAGING-C02",
+          "type": "TEST",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "FLOPPY-USER",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "UNIVERS-DMA-C01",
+          "type": "TEST",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "FLOPPY-USER",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        }
+      ]
+    },
     "filesystem": "ndfs",
     "volumeLabel": null,
     "backupSet": null,
@@ -31921,7 +32222,18 @@
         "TPE-RT-MON-DEVNO:SYMB",
         "G8N:FJK",
         "O8I:DI"
-      ]
+      ],
+      "recovery": {
+        "status": "recovered",
+        "layout": {
+          "object": 150,
+          "user": 152,
+          "bit": 77
+        },
+        "filesRecovered": 9,
+        "namesConfirmedInBytes": 9,
+        "confirmRatio": 1
+      }
     },
     "docs": {
       "piDocId": null,
@@ -34951,7 +35263,8 @@
         "CLS:CD",
         "CAN:CD",
         "EOB:CD"
-      ]
+      ],
+      "recovery": null
     },
     "docs": {
       "piDocId": null,
@@ -35905,7 +36218,8 @@
         "ACCOUNTS:DATA",
         "MAILBOX:DATA",
         "FDZDFU:DZAI"
-      ]
+      ],
+      "recovery": null
     },
     "docs": {
       "piDocId": null,
@@ -36726,7 +37040,176 @@
     "bootFormat": null,
     "cpuTarget": null,
     "osRequirement": null,
-    "ndfs": null,
+    "ndfs": {
+      "users": [
+        {
+          "name": "FLOPPY-USER",
+          "pagesUsed": 61
+        }
+      ],
+      "files": [
+        {
+          "name": "START-LO",
+          "type": "SYMB",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "FLOPPY-USER",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "TVADIM-LO",
+          "type": "BRF",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "FLOPPY-USER",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "TREDIM-LO",
+          "type": "SYMB",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "FLOPPY-USER",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "TVARSN-LO",
+          "type": "SYMB",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "FLOPPY-USER",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "DEL1-LO",
+          "type": "SYMB",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "FLOPPY-USER",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "DEL2-LO",
+          "type": "SYMB",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "FLOPPY-USER",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "DEL3-LO",
+          "type": "SYMB",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "FLOPPY-USER",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "DEL4-LO",
+          "type": "SYMB",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "FLOPPY-USER",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "DEL5-LO",
+          "type": "SYMB",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "FLOPPY-USER",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "TVADIM-LO",
+          "type": "SYMB",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "FLOPPY-USER",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "SEKTION-LO",
+          "type": "SYMB",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "FLOPPY-USER",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "ETAPP1-LO",
+          "type": "SYMB",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "FLOPPY-USER",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "ETAPP2-LO",
+          "type": "SYMB",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "FLOPPY-USER",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "ETAPP3-LO",
+          "type": "SYMB",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "FLOPPY-USER",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "ETAPP4-LO",
+          "type": "SYMB",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "FLOPPY-USER",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "ETAPP5-LO",
+          "type": "SYMB",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "FLOPPY-USER",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        }
+      ]
+    },
     "filesystem": "ndfs",
     "volumeLabel": null,
     "backupSet": null,
@@ -36745,7 +37228,18 @@
         "REDOVIS:SYMB",
         "REDOMOD:SYMB",
         "TESTMOD:SYMB"
-      ]
+      ],
+      "recovery": {
+        "status": "recovered",
+        "layout": {
+          "object": 150,
+          "user": 152,
+          "bit": 77
+        },
+        "filesRecovered": 16,
+        "namesConfirmedInBytes": 16,
+        "confirmRatio": 1
+      }
     },
     "docs": {
       "piDocId": null,
@@ -36822,7 +37316,8 @@
         "BHB:BH",
         "KHCXA:IH",
         "W2W:WBWJ"
-      ]
+      ],
+      "recovery": null
     },
     "docs": {
       "piDocId": null,
@@ -36880,7 +37375,76 @@
     "bootFormat": null,
     "cpuTarget": null,
     "osRequirement": null,
-    "ndfs": null,
+    "ndfs": {
+      "users": [
+        {
+          "name": "FLOPPY-USER",
+          "pagesUsed": 123
+        }
+      ],
+      "files": [
+        {
+          "name": "FMAC-1408C",
+          "type": "BPUN",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "FLOPPY-USER",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "MAC-1415C",
+          "type": "BPUN",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "FLOPPY-USER",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "QED-1644L",
+          "type": "BPUN",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "FLOPPY-USER",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "F32-MAC-1628C",
+          "type": "BPUN",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "FLOPPY-USER",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "F32-FMAC-1920B",
+          "type": "BPUN",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "FLOPPY-USER",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "NPL-1896D",
+          "type": "BPUN",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "FLOPPY-USER",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        }
+      ]
+    },
     "filesystem": "ndfs",
     "volumeLabel": null,
     "backupSet": null,
@@ -36899,7 +37463,18 @@
         "GXI:EI",
         "LDR-1935E:BPUN",
         "MAC:BPUN"
-      ]
+      ],
+      "recovery": {
+        "status": "recovered",
+        "layout": {
+          "object": 150,
+          "user": 152,
+          "bit": 77
+        },
+        "filesRecovered": 6,
+        "namesConfirmedInBytes": 6,
+        "confirmRatio": 1
+      }
     },
     "docs": {
       "piDocId": null,
@@ -37740,7 +38315,8 @@
         "DPN:JD",
         "DSF:DQD",
         "ND-10532K-PART1:FLOP"
-      ]
+      ],
+      "recovery": null
     },
     "docs": {
       "piDocId": null,
@@ -38196,7 +38772,8 @@
         "HENT-MODE:MODE",
         "ND500-HENT:MODE",
         "AD-MODE:MODE"
-      ]
+      ],
+      "recovery": null
     },
     "docs": {
       "piDocId": null,
@@ -39281,7 +39858,8 @@
         "HPH:HL",
         "PROJNAM:DATA",
         "RTPROJ:DATA"
-      ]
+      ],
+      "recovery": null
     },
     "docs": {
       "piDocId": null,
@@ -42774,7 +43352,8 @@
         "PRINT:PRIN",
         "TRANSFER-FILE-0:TYPE",
         "MIK:DNF"
-      ]
+      ],
+      "recovery": null
     },
     "docs": {
       "piDocId": null,
@@ -43462,7 +44041,8 @@
         "BACKUP-E00:BPUN",
         "NAME:USER",
         "DIRECTORY:REMO"
-      ]
+      ],
+      "recovery": null
     },
     "docs": {
       "piDocId": null,
@@ -44630,7 +45210,266 @@
     "bootFormat": null,
     "cpuTarget": null,
     "osRequirement": null,
-    "ndfs": null,
+    "ndfs": {
+      "users": [
+        {
+          "name": "DNF",
+          "pagesUsed": 123
+        }
+      ],
+      "files": [
+        {
+          "name": "MAD-POINTS-MJ",
+          "type": "DATA",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "DNF",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "TURING-SIM-MJ",
+          "type": "SYMB",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "DNF",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "IDIOTEN-P-MJ",
+          "type": "SYMB",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "DNF",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "LISSAJOU-MJ",
+          "type": "SYMB",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "DNF",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "ARENA-OF-MJ",
+          "type": "SYMB",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "DNF",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "DIAMANT-MJ",
+          "type": "TOUR",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "DNF",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "MAD-OMEGA-MJ",
+          "type": "SYMB",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "DNF",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "MIN-WHO-MJ",
+          "type": "SYMB",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "DNF",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "SPRINGARE-MJ",
+          "type": "SYMB",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "DNF",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "FACIT-SETUP-MJ",
+          "type": "SYMB",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "DNF",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "8-QUEENS-MJ",
+          "type": "SYMB",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "DNF",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "OTHELLO-NPL-MJ",
+          "type": "SYMB",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "DNF",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "NOLLSTELLEN-MJ",
+          "type": "SYMB",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "DNF",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "HOW-MANY-MJ",
+          "type": "SYMB",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "DNF",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "FLOPPY-FORM-MJ",
+          "type": "SYMB",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "DNF",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "PID-REGULATOR-MJ",
+          "type": "SYMB",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "DNF",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "TRAPETS-MJ",
+          "type": "SYMB",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "DNF",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "CUBISM-MJ",
+          "type": "SYMB",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "DNF",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "LETA-FILER-MJ",
+          "type": "SYMB",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "DNF",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "TAYLOR-METOD-MJ",
+          "type": "SYMB",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "DNF",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "ELECTION-MJ",
+          "type": "SYMB",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "DNF",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "BINARY-TREE-MJ",
+          "type": "SYMB",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "DNF",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "MCODE-MJ",
+          "type": "HP41",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "DNF",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "Z80-EXTRA-MJ",
+          "type": "SYMB",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "DNF",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "CODE-XOR-MJ",
+          "type": "SYMB",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "DNF",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        }
+      ]
+    },
     "filesystem": "ndfs",
     "volumeLabel": null,
     "backupSet": null,
@@ -44646,7 +45485,18 @@
         "SLA:INTE",
         "MONSC:REAL",
         "KOL:INTE"
-      ]
+      ],
+      "recovery": {
+        "status": "recovered",
+        "layout": {
+          "object": 150,
+          "user": 152,
+          "bit": 77
+        },
+        "filesRecovered": 25,
+        "namesConfirmedInBytes": 24,
+        "confirmRatio": 0.96
+      }
     },
     "docs": {
       "piDocId": null,
@@ -45896,7 +46746,8 @@
         "JHLF:GQ",
         "PROJNAM:DATA",
         "RTPROJ:DATA"
-      ]
+      ],
+      "recovery": null
     },
     "docs": {
       "piDocId": null,
@@ -48473,7 +49324,8 @@
         "FILSYS-SYMBOLS:SYMB",
         "RTLO-SYMBOLS:SYMB",
         "F48-FMAC-1408D:PROG"
-      ]
+      ],
+      "recovery": null
     },
     "docs": {
       "piDocId": null,
@@ -48550,7 +49402,8 @@
         "STRANG:STRI",
         "TALL-SHIP-MJ:DATA",
         "KNYCK-REGLER-MJ:DATA"
-      ]
+      ],
+      "recovery": null
     },
     "docs": {
       "piDocId": null,
@@ -48866,7 +49719,8 @@
         "CLS:CD",
         "CAN:CD",
         "EOB:CD"
-      ]
+      ],
+      "recovery": null
     },
     "docs": {
       "piDocId": null,
@@ -51390,7 +52244,8 @@
         "CLS:CD",
         "CAN:CD",
         "EOB:CD"
-      ]
+      ],
+      "recovery": null
     },
     "docs": {
       "piDocId": null,
@@ -58266,7 +59121,8 @@
         "PED:UE",
         "XHX:UXWL",
         "UHU:LJL"
-      ]
+      ],
+      "recovery": null
     },
     "docs": {
       "piDocId": null,
@@ -58986,7 +59842,270 @@
     "bootFormat": null,
     "cpuTarget": null,
     "osRequirement": null,
-    "ndfs": null,
+    "ndfs": {
+      "users": [
+        {
+          "name": "DNF",
+          "pagesUsed": 123
+        },
+        {
+          "name": "ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ",
+          "pagesUsed": 4294967295
+        }
+      ],
+      "files": [
+        {
+          "name": "MAD-POINTS-MJ",
+          "type": "DATA",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "DNF",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "TURING-SIM-MJ",
+          "type": "SYMB",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "DNF",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "IDIOTEN-P-MJ",
+          "type": "SYMB",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "DNF",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "LISSAJOU-MJ",
+          "type": "SYMB",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "DNF",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "ARENA-OF-MJ",
+          "type": "SYMB",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "DNF",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "DIAMANT-MJ",
+          "type": "TOUR",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "DNF",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "MAD-OMEGA-MJ",
+          "type": "SYMB",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "DNF",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "MIN-WHO-MJ",
+          "type": "SYMB",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "DNF",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "SPRINGARE-MJ",
+          "type": "SYMB",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "DNF",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "FACIT-SETUP-MJ",
+          "type": "SYMB",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "DNF",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "8-QUEENS-MJ",
+          "type": "SYMB",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "DNF",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "OTHELLO-NPL-MJ",
+          "type": "SYMB",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "DNF",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "NOLLSTELLEN-MJ",
+          "type": "SYMB",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "DNF",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "HOW-MANY-MJ",
+          "type": "SYMB",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "DNF",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "FLOPPY-FORM-MJ",
+          "type": "SYMB",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "DNF",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "PID-REGULATOR-MJ",
+          "type": "SYMB",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "DNF",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "TRAPETS-MJ",
+          "type": "SYMB",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "DNF",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "CUBISM-MJ",
+          "type": "SYMB",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "DNF",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "LETA-FILER-MJ",
+          "type": "SYMB",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "DNF",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "TAYLOR-METOD-MJ",
+          "type": "SYMB",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "DNF",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "ELECTION-MJ",
+          "type": "SYMB",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "DNF",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "BINARY-TREE-MJ",
+          "type": "SYMB",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "DNF",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "MCODE-MJ",
+          "type": "HP41",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "DNF",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "Z80-EXTRA-MJ",
+          "type": "SYMB",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "DNF",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "CODE-XOR-MJ",
+          "type": "SYMB",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "DNF",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        }
+      ]
+    },
     "filesystem": "ndfs",
     "volumeLabel": null,
     "backupSet": null,
@@ -59002,7 +60121,18 @@
         "SLA:INTE",
         "MONSC:REAL",
         "KOL:INTE"
-      ]
+      ],
+      "recovery": {
+        "status": "recovered",
+        "layout": {
+          "object": 150,
+          "user": 152,
+          "bit": 77
+        },
+        "filesRecovered": 25,
+        "namesConfirmedInBytes": 24,
+        "confirmRatio": 0.96
+      }
     },
     "docs": {
       "piDocId": null,
@@ -59889,7 +61019,8 @@
         "SLA:INTE",
         "MONSC:REAL",
         "KOL:INTE"
-      ]
+      ],
+      "recovery": null
     },
     "docs": {
       "piDocId": null,
@@ -61210,7 +62341,8 @@
         "HENT-MODE:MODE",
         "ND500-HENT:MODE",
         "AD-MODE:MODE"
-      ]
+      ],
+      "recovery": null
     },
     "docs": {
       "piDocId": null,
@@ -63229,7 +64361,126 @@
     "bootFormat": null,
     "cpuTarget": null,
     "osRequirement": null,
-    "ndfs": null,
+    "ndfs": {
+      "users": [
+        {
+          "name": "SYSTEM",
+          "pagesUsed": 123
+        }
+      ],
+      "files": [
+        {
+          "name": "MINI-HENT-MODE",
+          "type": "SYMB",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "SYSTEM",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "PED",
+          "type": "PROG",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "SYSTEM",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "TED",
+          "type": "PROG",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "SYSTEM",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "ENA-ESC-LAW",
+          "type": "SYMB",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "SYSTEM",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "LOAD-MODE",
+          "type": "SYMB",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "SYSTEM",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "HENT-MODE",
+          "type": "SYMB",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "SYSTEM",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "EXTRA-PASLIB-PBL",
+          "type": "BRF",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "SYSTEM",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "ACC-SERV-PR-B",
+          "type": "BPUN",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "SYSTEM",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "BAUD-RATE",
+          "type": "PROG",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "SYSTEM",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "LIBRARY-PBL",
+          "type": "BRF",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "SYSTEM",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        },
+        {
+          "name": "BASLIBR-H00",
+          "type": "BRF",
+          "pages": 0,
+          "bytes": 0,
+          "userName": "SYSTEM",
+          "dateCreated": null,
+          "lastDateRead": null,
+          "lastDateWritten": null
+        }
+      ]
+    },
     "filesystem": "ndfs",
     "volumeLabel": null,
     "backupSet": null,
@@ -63248,7 +64499,18 @@
         "AACOUNTS:ISAM",
         "AACCOUNTS:ISAM",
         "PROJNAM:DATA"
-      ]
+      ],
+      "recovery": {
+        "status": "recovered",
+        "layout": {
+          "object": 150,
+          "user": 152,
+          "bit": 77
+        },
+        "filesRecovered": 11,
+        "namesConfirmedInBytes": 11,
+        "confirmRatio": 1
+      }
     },
     "docs": {
       "piDocId": null,

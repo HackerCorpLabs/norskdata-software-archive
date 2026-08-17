@@ -20,6 +20,68 @@ condition:
     - GXI:EI
     - LDR-1935E:BPUN
     - MAC:BPUN
+  recovery:
+    status: recovered
+    layout:
+      object: 150
+      user: 152
+      bit: 77
+    filesRecovered: 6
+    namesConfirmedInBytes: 6
+    confirmRatio: 1
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 123
+  files:
+    - name: FMAC-1408C
+      type: BPUN
+      pages: 0
+      bytes: 0
+      userName: FLOPPY-USER
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: MAC-1415C
+      type: BPUN
+      pages: 0
+      bytes: 0
+      userName: FLOPPY-USER
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: QED-1644L
+      type: BPUN
+      pages: 0
+      bytes: 0
+      userName: FLOPPY-USER
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: F32-MAC-1628C
+      type: BPUN
+      pages: 0
+      bytes: 0
+      userName: FLOPPY-USER
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: F32-FMAC-1920B
+      type: BPUN
+      pages: 0
+      bytes: 0
+      userName: FLOPPY-USER
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: NPL-1896D
+      type: BPUN
+      pages: 0
+      bytes: 0
+      userName: FLOPPY-USER
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
 provenance:
   contributor: gandalf
   originalPath: 400/ND-disk-00463b.img

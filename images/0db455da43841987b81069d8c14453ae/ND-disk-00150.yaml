@@ -20,6 +20,7 @@ condition:
     - JEC-B00:PROG
     - EC-B00:PROG
     - JEC:BPUN
+  recovery: null
 provenance:
   contributor: gandalf
   originalPath: 100/ND-disk-00150.img

@@ -20,6 +20,7 @@ condition:
     - AD-MODE:MODE
     - EHE:EI
     - DHD:DI
+  recovery: null
 provenance:
   contributor: gandalf
   originalPath: 000/ND-disk-00026.img

@@ -20,6 +20,7 @@ condition:
     - BACKUP-E00:BPUN
     - NAME:USER
     - DIRECTORY:REMO
+  recovery: null
 provenance:
   contributor: gandalf
   originalPath: 200/ND-disk-00277.img

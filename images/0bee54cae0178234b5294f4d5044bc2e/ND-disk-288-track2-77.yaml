@@ -20,6 +20,36 @@ condition:
     - RST:BOOL
     - PNLE:MQ
     - PMLE:LQ
+  recovery:
+    status: recovered
+    layout:
+      object: 149
+      user: 151
+      bit: 153
+    filesRecovered: 2
+    namesConfirmedInBytes: 2
+    confirmRatio: 1
+ndfs:
+  users:
+    - name: SYSTEM
+      pagesUsed: 148
+  files:
+    - name: MACM-1718K
+      type: BPUN
+      pages: 0
+      bytes: 0
+      userName: SYSTEM
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: SINTRAN-I
+      type: DATA
+      pages: 0
+      bytes: 0
+      userName: SYSTEM
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
 provenance:
   contributor: gandalf
   originalPath: 200/ND-disk-288-track2-77.img

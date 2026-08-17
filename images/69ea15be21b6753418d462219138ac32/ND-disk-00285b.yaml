@@ -20,6 +20,52 @@ condition:
     - INBYTE:CALL
     - IFBYTE:INTE
     - INBYTE:INTE
+  recovery:
+    status: recovered
+    layout:
+      object: 150
+      user: 152
+      bit: 77
+    filesRecovered: 4
+    namesConfirmedInBytes: 4
+    confirmRatio: 1
+ndfs:
+  users:
+    - name: SYSTEM
+      pagesUsed: 85
+  files:
+    - name: HAVSBRUS
+      type: SYMB
+      pages: 0
+      bytes: 0
+      userName: SYSTEM
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: FORTH-SCREENS-MJ
+      type: SYMB
+      pages: 0
+      bytes: 0
+      userName: SYSTEM
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: SANKA-GE
+      type: SYMB
+      pages: 0
+      bytes: 0
+      userName: SYSTEM
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: DELFI-EAO
+      type: SYMB
+      pages: 0
+      bytes: 0
+      userName: SYSTEM
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
 provenance:
   contributor: gandalf
   originalPath: 200/ND-disk-00285b.img

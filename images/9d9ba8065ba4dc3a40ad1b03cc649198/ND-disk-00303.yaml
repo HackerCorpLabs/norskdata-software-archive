@@ -20,6 +20,7 @@ condition:
     - PRINT:PRIN
     - TRANSFER-FILE-0:TYPE
     - MIK:DNF
+  recovery: null
 provenance:
   contributor: gandalf
   originalPath: 300/ND-disk-00303.img

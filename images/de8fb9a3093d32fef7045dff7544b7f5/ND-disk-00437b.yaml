@@ -20,6 +20,108 @@ condition:
     - AACOUNTS:ISAM
     - AACCOUNTS:ISAM
     - PROJNAM:DATA
+  recovery:
+    status: recovered
+    layout:
+      object: 150
+      user: 152
+      bit: 77
+    filesRecovered: 11
+    namesConfirmedInBytes: 11
+    confirmRatio: 1
+ndfs:
+  users:
+    - name: SYSTEM
+      pagesUsed: 123
+  files:
+    - name: MINI-HENT-MODE
+      type: SYMB
+      pages: 0
+      bytes: 0
+      userName: SYSTEM
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: PED
+      type: PROG
+      pages: 0
+      bytes: 0
+      userName: SYSTEM
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: TED
+      type: PROG
+      pages: 0
+      bytes: 0
+      userName: SYSTEM
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: ENA-ESC-LAW
+      type: SYMB
+      pages: 0
+      bytes: 0
+      userName: SYSTEM
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: LOAD-MODE
+      type: SYMB
+      pages: 0
+      bytes: 0
+      userName: SYSTEM
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: HENT-MODE
+      type: SYMB
+      pages: 0
+      bytes: 0
+      userName: SYSTEM
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: EXTRA-PASLIB-PBL
+      type: BRF
+      pages: 0
+      bytes: 0
+      userName: SYSTEM
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: ACC-SERV-PR-B
+      type: BPUN
+      pages: 0
+      bytes: 0
+      userName: SYSTEM
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: BAUD-RATE
+      type: PROG
+      pages: 0
+      bytes: 0
+      userName: SYSTEM
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: LIBRARY-PBL
+      type: BRF
+      pages: 0
+      bytes: 0
+      userName: SYSTEM
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: BASLIBR-H00
+      type: BRF
+      pages: 0
+      bytes: 0
+      userName: SYSTEM
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
 provenance:
   contributor: gandalf
   originalPath: 400/ND-disk-00437b.img

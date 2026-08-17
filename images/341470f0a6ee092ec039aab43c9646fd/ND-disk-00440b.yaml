@@ -20,6 +20,76 @@ condition:
     - PACK2:AV
     - PACK2:SL
     - PACK2:HJ
+  recovery:
+    status: recovered
+    layout:
+      object: 150
+      user: 152
+      bit: 77
+    filesRecovered: 7
+    namesConfirmedInBytes: 7
+    confirmRatio: 1
+ndfs:
+  users:
+    - name: SYSTEM
+      pagesUsed: 112
+  files:
+    - name: DELFI-EAO
+      type: BPUN
+      pages: 0
+      bytes: 0
+      userName: SYSTEM
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: ACC-SERV-PR-B
+      type: BPUN
+      pages: 0
+      bytes: 0
+      userName: SYSTEM
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: FIL-STAT-HELP
+      type: BPUN
+      pages: 0
+      bytes: 0
+      userName: SYSTEM
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: LOAD-REENTRANT
+      type: MODE
+      pages: 0
+      bytes: 0
+      userName: SYSTEM
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: PED
+      type: BPUN
+      pages: 0
+      bytes: 0
+      userName: SYSTEM
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: DUMP-PED
+      type: MODE
+      pages: 0
+      bytes: 0
+      userName: SYSTEM
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: BASIC-H00
+      type: BPUN
+      pages: 0
+      bytes: 0
+      userName: SYSTEM
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
 provenance:
   contributor: gandalf
   originalPath: 400/ND-disk-00440b.img

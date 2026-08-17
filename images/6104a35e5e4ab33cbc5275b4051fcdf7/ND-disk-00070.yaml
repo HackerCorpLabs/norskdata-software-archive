@@ -20,6 +20,7 @@ condition:
     - HENT-MODE:MODE
     - ND500-HENT:MODE
     - AD-MODE:MODE
+  recovery: null
 provenance:
   contributor: gandalf
   originalPath: 000/ND-disk-00070.img

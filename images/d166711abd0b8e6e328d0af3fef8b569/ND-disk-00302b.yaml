@@ -17,6 +17,222 @@ condition:
     - SLA:INTE
     - MONSC:REAL
     - KOL:INTE
+  recovery:
+    status: recovered
+    layout:
+      object: 150
+      user: 152
+      bit: 77
+    filesRecovered: 25
+    namesConfirmedInBytes: 24
+    confirmRatio: 0.96
+ndfs:
+  users:
+    - name: DNF
+      pagesUsed: 123
+    - name: ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ
+      pagesUsed: 4294967295
+  files:
+    - name: MAD-POINTS-MJ
+      type: DATA
+      pages: 0
+      bytes: 0
+      userName: DNF
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: TURING-SIM-MJ
+      type: SYMB
+      pages: 0
+      bytes: 0
+      userName: DNF
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: IDIOTEN-P-MJ
+      type: SYMB
+      pages: 0
+      bytes: 0
+      userName: DNF
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: LISSAJOU-MJ
+      type: SYMB
+      pages: 0
+      bytes: 0
+      userName: DNF
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: ARENA-OF-MJ
+      type: SYMB
+      pages: 0
+      bytes: 0
+      userName: DNF
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: DIAMANT-MJ
+      type: TOUR
+      pages: 0
+      bytes: 0
+      userName: DNF
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: MAD-OMEGA-MJ
+      type: SYMB
+      pages: 0
+      bytes: 0
+      userName: DNF
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: MIN-WHO-MJ
+      type: SYMB
+      pages: 0
+      bytes: 0
+      userName: DNF
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: SPRINGARE-MJ
+      type: SYMB
+      pages: 0
+      bytes: 0
+      userName: DNF
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: FACIT-SETUP-MJ
+      type: SYMB
+      pages: 0
+      bytes: 0
+      userName: DNF
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: 8-QUEENS-MJ
+      type: SYMB
+      pages: 0
+      bytes: 0
+      userName: DNF
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: OTHELLO-NPL-MJ
+      type: SYMB
+      pages: 0
+      bytes: 0
+      userName: DNF
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: NOLLSTELLEN-MJ
+      type: SYMB
+      pages: 0
+      bytes: 0
+      userName: DNF
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: HOW-MANY-MJ
+      type: SYMB
+      pages: 0
+      bytes: 0
+      userName: DNF
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: FLOPPY-FORM-MJ
+      type: SYMB
+      pages: 0
+      bytes: 0
+      userName: DNF
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: PID-REGULATOR-MJ
+      type: SYMB
+      pages: 0
+      bytes: 0
+      userName: DNF
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: TRAPETS-MJ
+      type: SYMB
+      pages: 0
+      bytes: 0
+      userName: DNF
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: CUBISM-MJ
+      type: SYMB
+      pages: 0
+      bytes: 0
+      userName: DNF
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: LETA-FILER-MJ
+      type: SYMB
+      pages: 0
+      bytes: 0
+      userName: DNF
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: TAYLOR-METOD-MJ
+      type: SYMB
+      pages: 0
+      bytes: 0
+      userName: DNF
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: ELECTION-MJ
+      type: SYMB
+      pages: 0
+      bytes: 0
+      userName: DNF
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: BINARY-TREE-MJ
+      type: SYMB
+      pages: 0
+      bytes: 0
+      userName: DNF
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: MCODE-MJ
+      type: HP41
+      pages: 0
+      bytes: 0
+      userName: DNF
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: Z80-EXTRA-MJ
+      type: SYMB
+      pages: 0
+      bytes: 0
+      userName: DNF
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
+    - name: CODE-XOR-MJ
+      type: SYMB
+      pages: 0
+      bytes: 0
+      userName: DNF
+      dateCreated: null
+      lastDateRead: null
+      lastDateWritten: null
 provenance:
   contributor: gandalf
   originalPath: 300/ND-disk-00302b.img

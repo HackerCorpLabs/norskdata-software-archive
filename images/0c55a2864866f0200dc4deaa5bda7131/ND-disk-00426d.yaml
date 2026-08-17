@@ -20,6 +20,7 @@ condition:
     - CLS:CD
     - CAN:CD
     - EOB:CD
+  recovery: null
 provenance:
   contributor: gandalf
   originalPath: 400/ND-disk-00426d.img
