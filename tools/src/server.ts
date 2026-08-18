@@ -2338,6 +2338,234 @@ app.get('/api/ndbackup/info', async (req, res) => {
   }
 });
 
+/**
+ * One BACKUP-SYSTEM run, read from every volume of it that this archive holds.
+ *
+ * A run is written across several floppies and a file that does not fit is cut
+ * at the end of one volume and continued at the start of the next, under the
+ * same name. Read one image on its own and the listing is a slice of the run
+ * with a cut file at one or both ends. This assembles the run instead: the
+ * volumes in chain order, their files in order, and a file that spans a volume
+ * boundary as ONE file whose parts are named. Nothing is cut unless the volume
+ * that would continue it is genuinely not held here.
+ */
+interface RunPart { entryId: string; index: number; bytes: number; volume: number; }
+interface RunFile {
+  fullName: string; name: string; type: string;
+  created: string | null; system: string; stale: boolean;
+  bytes: number;
+  parts: RunPart[];
+  /** the run ends mid-file and no volume here continues it */
+  truncated: boolean;
+  /**
+   * volumes that carry a HDR1 for this file but no data: BACKUP-SYSTEM writes
+   * the label first, and when the volume then runs out it closes the volume and
+   * writes the whole file again on the next one.
+   */
+  stubVolumes?: number[];
+  /** the same file as found by the other reads of that floppy, when they disagree */
+  otherReads?: { entryId: string; bytes: number }[];
+}
+
+async function buildBackupRun(entryId: string) {
+  const cat = await getCatalog();
+  const entry = cat.entries.find(e => e.id === entryId);
+  if (!entry) return { error: 'Entry not found', status: 404 } as const;
+
+  const { groupBackupSets, setKeyOf } = await import('./lib/backupsets/index.js');
+  const inputs = cat.entries.map(e => ({
+    id: e.id, volumeName: e.volumeName, imageSizeBytes: e.imageSizeBytes,
+    backupFiles: e.backupFiles, backupSet: e.backupSet,
+  }));
+  const key = setKeyOf({ id: entry.id, backupSet: entry.backupSet });
+  const set = key ? groupBackupSets(inputs).get(key) ?? null : null;
+
+  // No set recorded (a lone volume the detector never grouped): the run is
+  // that one image. Otherwise a volume slot brings EVERY read of that floppy,
+  // best read first.
+  const orderedSlots: string[][] = set && set.ordering === 'chained'
+    ? set.slots.map(sl => sl.reads.map(r => r.id)).filter(ids => ids.length > 0)
+    : [[entryId]];
+
+  const { gunzipSync } = await import('zlib');
+  const nb = await import('./lib/ndbackup/index.js');
+
+  const volumes: { id: string; volume: number; volumeId: string; owner: string; fileCount: number; reads: string[] }[] = [];
+  const files: RunFile[] = [];
+  let sectorSize = 0, blockLength = 0, volumeId = '', owner = '';
+
+  const readVolume = async (id: string) => {
+    const e = cat.entries.find(x => x.id === id);
+    const imagePath = e?.storage?.git?.imagePath;
+    if (!imagePath) return null;
+    const abs = resolve(ROOT_DIR, imagePath);
+    if (!abs.startsWith(ROOT_DIR)) return null;
+    const raw = new Uint8Array(gunzipSync(await readFile(abs)));
+    if (!nb.isBackupVolume(raw)) return null;
+    return nb.readBackupVolume(raw);
+  };
+
+  for (let vi = 0; vi < orderedSlots.length; vi++) {
+    const readIds = orderedSlots[vi];
+
+    // Every read of this floppy, because a marginal disk loses a different set
+    // of labels each time it is read. Measured on this archive with stale
+    // labels excluded: the three reads of BACK/AGNETA volume 1 name 52 files
+    // between them and only 28 in all three; the two reads of PANG/BELI-UNIQUE
+    // volume 1 name 14 and share exactly 1. A label is 80 bytes at a sector
+    // boundary and each HDR1/EOF1 pair stands on its own, so a file found by
+    // one read alone is still a file that can be listed and extracted.
+    const reads: { id: string; vol: Awaited<ReturnType<typeof readVolume>> }[] = [];
+    for (const id of readIds) {
+      const vol = await readVolume(id);
+      if (vol) reads.push({ id, vol });
+    }
+    if (!reads.length) continue;
+
+    const lead = reads[0];
+    if (!sectorSize) { sectorSize = lead.vol!.sectorSize; blockLength = lead.vol!.blockLength; volumeId = lead.vol!.volumeId; owner = lead.vol!.owner; }
+
+    // One candidate per file name, taken from the read with the strongest
+    // evidence: a label closed by its own EOF1 beats one that was left open,
+    // content beats a region that is nothing but fill, and a longer readable
+    // region beats a shorter one. Where two reads disagree on the length the
+    // rejected candidates are kept on the file as `otherReads` rather than
+    // being dropped in silence.
+    interface Cand { entryId: string; index: number; f: any; }
+    const score = (f: any) => (f.stale ? 0 : 8) + (f.blocks !== null ? 4 : 0) + (f.dataLength > 0 ? 2 : 0);
+    const byName = new Map<string, Cand[]>();
+    reads.forEach(r => {
+      r.vol!.files.forEach((f, index) => {
+        const list = byName.get(f.fullName) ?? [];
+        list.push({ entryId: r.id, index, f });
+        byName.set(f.fullName, list);
+      });
+    });
+
+    const chosen: Cand[] = [];
+    for (const [, cands] of byName) {
+      const sorted = cands.slice().sort((a, b) =>
+        score(b.f) - score(a.f) || b.f.dataLength - a.f.dataLength ||
+        a.f.sequence - b.f.sequence);
+      chosen.push(sorted[0]);
+      (sorted[0] as any).rejected = sorted.slice(1);
+    }
+    // Volume order: the file number SINTRAN wrote in HDR1, then where the label
+    // sits in the image for the reads where that number was lost.
+    chosen.sort((a, b) => (a.f.sequence || 9999) - (b.f.sequence || 9999) || a.f.dataOffset - b.f.dataOffset);
+
+    volumes.push({
+      id: lead.id, volume: vi + 1, volumeId: lead.vol!.volumeId, owner: lead.vol!.owner,
+      fileCount: chosen.length, reads: reads.map(r => r.id),
+    });
+
+    chosen.forEach((cand, ci) => {
+      const f = cand.f;
+      const idx = cand.index;
+      const id = cand.entryId;
+      const isFirstOfVolume = ci === 0;
+      const prev = files.length ? files[files.length - 1] : null;
+      // The first file of this volume carries on the cut file of the last one
+      // when it has the same name: one file, two parts.
+      const continues = !!prev && isFirstOfVolume && prev.parts[prev.parts.length - 1].volume === vi &&
+                        prev.truncated && prev.fullName === f.fullName;
+      if (continues && prev) {
+        // The file is not split - it is written again, whole, on this volume.
+        // Checked on all three cases in this archive by reading both regions:
+        //   BMUS-GRAFIK-01:SYMB  img-49fe9da76a2b holds 79,448 bytes of 0x00
+        //     and 0xE5 fill under the label; img-6ac9e908face holds the file,
+        //     79,449 bytes of PLANC source from "$implicit off" to its end.
+        //   PREP-65:C  img-e3ee5c881401 holds 2,321 bytes that are not C at
+        //     all (an older backup's bytes); img-ccf89e5797f5 holds the source.
+        //   SERVER:H  img-756191825b90 holds a ruler line and 6,080 zero bytes;
+        //     img-c12ef5689d05 holds the header, ending at "#endif".
+        // In each case the two regions share almost no bytes (5 of 6,572 on
+        // SERVER:H), so the earlier region is not the first half of anything.
+        // The stub is recorded, not silently dropped.
+        prev.stubVolumes = (prev.stubVolumes ?? []).concat(prev.parts.map(pt => pt.volume));
+        prev.parts = [{ entryId: id, index: idx, bytes: f.dataLength, volume: vi + 1 }];
+        prev.bytes = f.dataLength;
+        prev.truncated = f.continued;
+        return;
+      }
+      const rejected = ((cand as any).rejected ?? []) as { entryId: string; index: number; f: any }[];
+      files.push({
+        fullName: f.fullName, name: f.name, type: f.type,
+        created: f.created, system: f.system, stale: f.stale,
+        bytes: f.dataLength,
+        parts: [{ entryId: id, index: idx, bytes: f.dataLength, volume: vi + 1 }],
+        truncated: f.continued,
+        // the other reads of this floppy that also found the file, and what
+        // length each of them made it - shown when they disagree
+        otherReads: rejected.map(r => ({ entryId: r.entryId, bytes: r.f.dataLength })),
+      });
+    });
+  }
+
+  if (!volumes.length) return { error: 'No BACKUP-SYSTEM volume could be read', status: 422 } as const;
+
+  return {
+    kind: 'backup-run' as const,
+    volumeId, owner, sectorSize, blockLength,
+    openedOn: entryId,
+    volumes, files,
+    setKey: key,
+    breaks: set?.breaks ?? [],
+  };
+}
+
+app.get('/api/ndbackup/run', async (req, res) => {
+  try {
+    const run = await buildBackupRun(String(req.query.id ?? ''));
+    if ('error' in run) { res.status(run.status ?? 500).json({ error: run.error }); return; }
+    res.json(run);
+  } catch (err) {
+    res.status(500).json({ error: String(err) });
+  }
+});
+
+// One file of a run, joined across every volume it spans.
+app.get('/api/ndbackup/read-run-file', async (req, res) => {
+  try {
+    const entryId = String(req.query.id ?? '');
+    const index = parseInt(String(req.query.index ?? '-1'), 10);
+    if (!entryId || index < 0) { res.status(400).json({ error: 'Missing id or index' }); return; }
+    const run = await buildBackupRun(entryId);
+    if ('error' in run) { res.status(run.status ?? 500).json({ error: run.error }); return; }
+    const file = run.files[index];
+    if (!file) { res.status(404).json({ error: 'No such file in this run' }); return; }
+
+    const cat = await getCatalog();
+    const { gunzipSync } = await import('zlib');
+    const nb = await import('./lib/ndbackup/index.js');
+    const chunks: Uint8Array[] = [];
+    for (const part of file.parts) {
+      const e = cat.entries.find(x => x.id === part.entryId);
+      const imagePath = e?.storage?.git?.imagePath;
+      if (!imagePath) continue;
+      const abs = resolve(ROOT_DIR, imagePath);
+      if (!abs.startsWith(ROOT_DIR)) continue;
+      const raw = new Uint8Array(gunzipSync(await readFile(abs)));
+      const vol = nb.readBackupVolume(raw);
+      const vf = vol.files[part.index];
+      if (!vf) continue;
+      chunks.push(nb.readBackupFile(raw, vf));
+    }
+    let data = Buffer.concat(chunks.map(c => Buffer.from(c)));
+    if (String(req.query.parity ?? '') === 'strip') {
+      const stripped = Buffer.alloc(data.length);
+      for (let i = 0; i < data.length; i++) stripped[i] = data[i] & 0x7f;
+      data = stripped;
+    }
+    res.setHeader('Content-Type', 'application/octet-stream');
+    const safeName = file.fullName.replace(/:/g, '.').replace(/[^A-Za-z0-9._-]/g, '_');
+    res.setHeader('Content-Disposition', 'inline; filename="' + safeName + '"');
+    res.send(data);
+  } catch (err) {
+    res.status(500).json({ error: String(err) });
+  }
+});
+
 // One file off a BACKUP-SYSTEM volume, by its sequence position in the listing.
 app.get('/api/ndbackup/read-file', async (req, res) => {
   try {

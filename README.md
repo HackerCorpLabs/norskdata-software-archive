@@ -218,6 +218,8 @@ A real collection contains more than ND floppies. Every image records a `filesys
 
 An image can also be recorded as `ndfs` and carry a `condition: damaged` block: ND material is plainly in the bytes (SINTRAN `NAME:TYPE` file names survive the parity bit) but the filesystem structures cannot be read, so no file list can be produced. It is still an ND floppy and is filed as one, marked in the catalog listing and filterable there (**Condition — Any / Readable / Damaged only**). See [docs/media-condition.md](docs/media-condition.md) for how that is decided and what to expect from such a disk.
 
+The 2016 bytes in front of the master block on page 0 are the boot area. Two facts are recorded about it: `bootFormat`, what it **is** (`bpun` for a checksum-valid BPUN block, else `binary` or `none`), and `bootProgram`, which **program** it carries (`flomon`, the ND floppy monitor). BPUN is a file format and FLO-MON is a program shipped in one -- see [docs/boot-formats.md](docs/boot-formats.md) for the field layout, the bootstrap it holds and what is still unknown.
+
 Detection runs during import and can be re-run at any time — per disk or in bulk — from the Matcher, or from the command line on files that were never imported:
 
 ```bash

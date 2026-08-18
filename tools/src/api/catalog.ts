@@ -169,6 +169,7 @@ function entryToYamlDoc(entry: CatalogEntry, rootDir: string): Record<string, un
   if (entry.totalPages !== null) image.totalPages = entry.totalPages;
   if (entry.pageSize !== null) image.pageSize = entry.pageSize;
   if (entry.bootFormat) image.bootFormat = entry.bootFormat;
+  if (entry.bootProgram) image.bootProgram = entry.bootProgram;
   if (Object.keys(image).length > 0) doc.image = image;
 
   // Top-level fields that yamlDocToEntry reads from doc.* directly. Without
@@ -315,6 +316,7 @@ function yamlDocToEntry(doc: Record<string, unknown>, yamlRelPath: string, rootD
     totalPages: image?.totalPages as number | null ?? null,
     pageSize: image?.pageSize as number | null ?? null,
     bootFormat: image?.bootFormat as string | null ?? null,
+    bootProgram: image?.bootProgram as string | null ?? null,
     cpuTarget: doc.cpuTarget as string[] | null ?? null,
     osRequirement: doc.osRequirement as string | null ?? null,
     ndfs: ndfs ?? null,

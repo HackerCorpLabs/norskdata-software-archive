@@ -75,7 +75,12 @@ export interface BackupFile {
   blocks: number | null;
   /** byte offset of the file's data in this image */
   dataOffset: number;
-  /** bytes of data present in this image */
+  /**
+   * bytes of the file present in this image. This is the file's own length,
+   * not the space it took on the media: the blocks are written whole and a
+   * SINTRAN file occupies whole pages, so the tail of the last block - and on
+   * a preallocated file whole blocks after it - is not part of the file.
+   */
   dataLength: number;
   /** true when no EOF1 follows: the file continues on the next volume of the set */
   continued: boolean;
@@ -108,15 +113,85 @@ export function isBackupVolume(b: Uint8Array): boolean {
 }
 
 /**
+ * How many of the bytes written for a file actually belong to it.
+ *
+ * BACKUP-SYSTEM writes whole blocks, and SINTRAN allocates files in whole
+ * pages, so the blocks after the last byte of the file carry whatever was on
+ * the media before - for a preallocated file that is tens of kilobytes. HDR2
+ * records SINTRAN's own byte count for the file at 31..40, and it is the only
+ * thing on the volume that says where the file really stops. Over the 36
+ * backup volumes in this archive, 152 of 458 files hold fewer bytes than their
+ * block count implies.
+ *
+ * The count is one short on some files. Of 248 files where the boundary lands
+ * on a line end, 189 have CR at index count-1 and LF at index count, with the
+ * block fill starting only at count+1, so that LF is part of the file; the
+ * other 59 have LF at count-1 and the fill already at count. Keeping a
+ * trailing LF when one is there covers both.
+ *
+ * The count is not usable everywhere: it is 0 on binary files whose byte
+ * pointer SINTRAN never maintained (a :DUMP of two blocks reads 0), and it can
+ * exceed what this volume holds when the file is continued on the next one.
+ * Both fall back to the whole block region.
+ */
+/**
+ * True when a stretch of the image is unwritten media rather than file content.
+ *
+ * A file closed by no EOF1 label ran to the end of the volume, and BACKUP-SYSTEM
+ * writes the HDR1 label before it writes the data, so a header can be followed
+ * by nothing at all: on img-49fe9da76a2b the last label names
+ * BMUS-GRAFIK-01:SYMB and the 196,096 bytes after it are 0x00 and 0xE5 only,
+ * while the whole file, 79,449 bytes of PLANC source, sits on the next volume
+ * of the run under its own header and EOF1. Formatters leave 0x40, 0xE5, 0x76
+ * or 0x5E behind, and an erased area reads as 0x00; two distinct values allow
+ * for the boundary between an erase pattern and a format pattern. Five files
+ * across the 36 backup volumes in this archive are fill from end to end.
+ */
+function isAllFill(b: Uint8Array, from: number, len: number): boolean {
+  if (len <= 0) return false;
+  const FILL = [0x00, 0x40, 0x5e, 0x76, 0xe5];
+  const seen = new Set<number>();
+  const end = Math.min(from + len, b.length);
+  for (let i = from; i < end; i++) {
+    const v = b[i];
+    if (!FILL.includes(v)) return false;
+    seen.add(v);
+    if (seen.size > 2) return false;
+  }
+  return true;
+}
+
+function fileBytes(b: Uint8Array, dataOffset: number, region: number, byteCount: number | null): number {
+  if (byteCount === null || byteCount <= 0 || byteCount > region) return region;
+  let len = byteCount;
+  if (len < region && (b[dataOffset + len] & 0x7f) === 0x0a) len++;
+  return len;
+}
+
+/**
  * Read a BACKUP-SYSTEM volume.
  *
  * Label group layout, confirmed on ND-disk-00131c:
  *   VOL1 at 0            volume id at 4 (6), owner at 37 (13)
  *   HDR1 at 512 or 1024  name 4..20, type 21..26, sequence 31..34,
  *                        date 41..46, block count 54..59, system 60..72
- *   HDR2 at HDR1+80      record format at 4, block length at 5..9 ("02048")
+ *   HDR2 at HDR1+80      record format at 4, block length at 5..9 ("02048"),
+ *                        SINTRAN byte count at 31..40
  *   UHL1 at HDR1+160     ND-private binary, not needed for a listing
- * File data starts one sector after HDR1 and runs to the next EOF1 label.
+ *
+ * The label group occupies TWO sectors: the labels, then a sector of fill
+ * (0x40 on most volumes, 0xe5, 0x76 or 0x5e on others). File data therefore
+ * starts at HDR1 + 2 * sectorSize, on the 512 byte sector volumes as well as
+ * the 1024 byte ones.
+ *
+ * The data is blockCount * blockLength bytes. A one sector "EOF*" tape mark
+ * follows it and the EOF1 label group sits one sector after that: on every
+ * one of the 192 files on 512 byte sector volumes and 271 of 288 on 1024 byte
+ * ones, "EOF*" is exactly at dataOffset + blocks * blockLength and EOF1
+ * exactly one sector later (the rest are labels left over from an older backup
+ * that pair up wrongly). Measuring the data as "HDR1 to the next EOF1"
+ * instead, which is what this did before, hands out the leading fill sector
+ * and the trailing EOF* sector as if they were file content.
  */
 export function readBackupVolume(b: Uint8Array): BackupVolume {
   if (!isBackupVolume(b)) throw new Error('Not a BACKUP-SYSTEM volume');
@@ -125,17 +200,30 @@ export function readBackupVolume(b: Uint8Array): BackupVolume {
 
   const files: BackupFile[] = [];
   let pending: BackupFile | null = null;
+  // The block length and byte count read from the HDR2 of the pending file.
+  let pendingBlock = blockLength;
+  let pendingBytes: number | null = null;
+
+  const digits = (off: number, len: number): number | null => {
+    const s = ascii7(b, off, len).trim();
+    return /^\d+$/.test(s) ? parseInt(s, 10) : null;
+  };
 
   for (let off = sectorSize; off + 80 <= b.length; off += sectorSize) {
     if (matches(b, off, 'HDR1')) {
       // Close an unterminated previous file: it ran to here.
       if (pending) {
-        pending.dataLength = Math.max(0, off - pending.dataOffset);
+        const region = Math.max(0, off - pending.dataOffset);
+        pending.dataLength = isAllFill(b, pending.dataOffset, region)
+          ? 0
+          : fileBytes(b, pending.dataOffset, region, pendingBytes);
         pending.continued = true;
         files.push(pending);
       }
       const name = ndString(ascii7(b, off + 4, 17));
       const type = ndString(ascii7(b, off + 21, 6));
+      pendingBlock = (matches(b, off + 80, 'HDR2') ? digits(off + 85, 5) : null) ?? blockLength;
+      pendingBytes = matches(b, off + 80, 'HDR2') ? digits(off + 111, 10) : null;
       pending = {
         name, type,
         fullName: type ? `${name}:${type}` : name,
@@ -143,7 +231,7 @@ export function readBackupVolume(b: Uint8Array): BackupVolume {
         created: ansiDate(ascii7(b, off + 41, 6)),
         system: ascii7(b, off + 60, 13).trim(),
         blocks: null,
-        dataOffset: off + sectorSize,
+        dataOffset: off + 2 * sectorSize,
         dataLength: 0,
         continued: false,
         stale: false,
@@ -151,14 +239,41 @@ export function readBackupVolume(b: Uint8Array): BackupVolume {
       continue;
     }
     if (matches(b, off, 'EOF1') && pending) {
-      pending.blocks = parseInt(ascii7(b, off + 54, 6), 10);
-      pending.dataLength = Math.max(0, off - pending.dataOffset);
+      // An EOF1 closes a file only when it names that file. BACKUP-SYSTEM does
+      // not erase the media first, so a label from an older run survives where
+      // the new run did not overwrite it, and pairing a HDR1 with whatever EOF1
+      // comes next then measures the file against a stranger: on
+      // ND-disk-00331b the label for XTEST:PRNT was closed by an EOF1 naming
+      // MOTE-SUPPORT:H, and UNIX:H written on day 90067 by one written on
+      // 90070. A label that names a different file is left where it is and the
+      // scan carries on; the file it belongs to is then measured by the span to
+      // the next label, the same as any file whose own EOF1 was lost.
+      const eofName = ndString(ascii7(b, off + 4, 17));
+      const eofType = ndString(ascii7(b, off + 21, 6));
+      const eofFull = eofType ? `${eofName}:${eofType}` : eofName;
+      if (eofFull !== pending.fullName) continue;
+      const blocks = digits(off + 54, 6);
+      pending.blocks = blocks;
+      // Believe the block count only when the "EOF*" tape mark is where it says
+      // the data ends. Labels left over from an older backup pair a HDR1 with
+      // an EOF1 that belongs to a different file, and its block count then
+      // names either far more or far less than lies between the two labels.
+      // Where it cannot be believed, fall back to the span between the labels
+      // less the one sector the tape mark occupies.
+      const blockEnd = blocks === null ? -1 : pending.dataOffset + blocks * pendingBlock;
+      const region = (blockEnd >= 0 && blockEnd <= off && matches(b, blockEnd, 'EOF*'))
+        ? blocks! * pendingBlock
+        : Math.max(0, off - pending.dataOffset - sectorSize);
+      pending.dataLength = fileBytes(b, pending.dataOffset, region, pendingBytes);
       files.push(pending);
       pending = null;
     }
   }
   if (pending) {
-    pending.dataLength = Math.max(0, b.length - pending.dataOffset);
+    const region = Math.max(0, b.length - pending.dataOffset);
+    pending.dataLength = isAllFill(b, pending.dataOffset, region)
+      ? 0
+      : fileBytes(b, pending.dataOffset, region, pendingBytes);
     pending.continued = true;
     files.push(pending);
   }

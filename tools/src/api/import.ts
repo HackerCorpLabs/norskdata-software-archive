@@ -18,6 +18,7 @@ import { generateId, saveFloppyYaml } from './catalog.js';
 import { checkDuplicate } from './dedup.js';
 import { matchProduct } from './product-matcher.js';
 import { detectFilesystem } from './filesystem-detect.js';
+import { detectBootFormat as detectBootFormatBytes, detectBootProgram } from './boot-format.js';
 import { pageAlign } from '../lib/ndfsalign/index.js';
 import { readDosLabel, readBackupSet, readBackupFiles, readDosFiles } from './filesystem-detect.js';
 
@@ -59,6 +60,7 @@ interface NdfsParseResult {
   volumeName: string | null;
   totalPages: number;
   bootFormat: string | null;
+  bootProgram: string | null;
   users: { name: string; pagesUsed: number }[];
   files: { name: string; type: string; pages: number; bytes: number; userName: string; dateCreated: number | null; lastDateRead: number | null; lastDateWritten: number | null; dateCreatedStr: string | null; lastDateReadStr: string | null; lastDateWrittenStr: string | null; bpunValid: boolean | null }[];
 }
@@ -75,6 +77,20 @@ function formatNdDate(value: number | null | undefined): string | null {
   return `${year}-${String(month).padStart(2, '0')}-${String(day).padStart(2, '0')} ${String(hour).padStart(2, '0')}:${String(minute).padStart(2, '0')}:${String(second).padStart(2, '0')}`;
 }
 
+/**
+ * What the boot area of page 0 holds, read from the bytes alone. Independent of
+ * the filesystem: a damaged floppy still has a readable boot area.
+ */
+function readBootArea(buffer: Buffer): { format: string | null; program: string | null } {
+  try {
+    if (buffer.length < 2048) return { format: null, program: null };
+    const page0 = new Uint8Array(buffer.subarray(0, 2048));
+    return { format: detectBootFormatBytes(page0), program: detectBootProgram(page0) };
+  } catch {
+    return { format: null, program: null };
+  }
+}
+
 async function tryParseNdfs(buffer: Buffer): Promise<NdfsParseResult | null> {
   try {
     const ndfsModule = await import('norskdata-ndfs');
@@ -88,13 +104,16 @@ async function tryParseNdfs(buffer: Buffer): Promise<NdfsParseResult | null> {
     const masterBlock = fs.getMasterBlock?.();
     const totalPages = masterBlock?.imageSize ?? (buffer.length / 2048);
 
+    // Read from the bytes of page 0 by this repo's own test, not the parser's:
+    // the parser reads the words after the "!" packed and so validates nothing,
+    // which is why every "bpun" it reports in this archive is a stray 0x21 in
+    // ordinary data. See api/boot-format.ts and docs/boot-formats.md.
     let bootFormat: string | null = null;
+    let bootProgram: string | null = null;
     try {
-      const bf = fs.detectBootFormat?.();
-      if (bf !== undefined && bf !== null) {
-        bootFormat = String(bf).toLowerCase();
-        if (bootFormat === '0' || bootFormat === 'none') bootFormat = 'none';
-      }
+      const page0 = new Uint8Array(buffer.subarray(0, 2048));
+      bootFormat = detectBootFormatBytes(page0);
+      bootProgram = detectBootProgram(page0);
     } catch { /* ignore */ }
 
     const users: { name: string; pagesUsed: number }[] = [];
@@ -160,7 +179,7 @@ async function tryParseNdfs(buffer: Buffer): Promise<NdfsParseResult | null> {
       }
     } catch { /* ignore */ }
 
-    return { volumeName, totalPages, bootFormat, users, files };
+    return { volumeName, totalPages, bootFormat, bootProgram, users, files };
   } catch {
     return null;
   }
@@ -226,6 +245,13 @@ export interface ScannedArtifacts {
   /** logs that belong to no single disk, copied to every disk of the set */
   imagingLogs: string[];
   unmapped: string[];                 // files not matching any configured extension
+  /**
+   * Photos named after an image file that is present in the source folder but
+   * is not part of this run (already held, skipped, or imported separately).
+   * They belong to that one disk, so they are neither a disk photo here nor a
+   * photo of the set - they are left behind and only reported.
+   */
+  otherDiskPhotos: string[];
 }
 
 /** Configurable extension lists for scanning */
@@ -258,6 +284,7 @@ export async function scanFolderArtifacts(
   const diskLogs = new Map<string, string[]>();
   const imagingLogs: string[] = [];
   const unmapped: string[] = [];
+  const otherDiskPhotos: string[] = [];
 
   const imgBases = imgFilenames.map(f => f.replace(/\.[^.]+$/i, '').toLowerCase());
   const volBases = volumeNames.filter(Boolean).map(v => v!.toLowerCase());
@@ -268,6 +295,18 @@ export async function scanFolderArtifacts(
 
   try {
     const files = await readdir(sourceDir);
+
+    // Every image file lying in the folder, not just the ones being imported
+    // now. A folder that names its photos after its disks (1.img/1.jpg,
+    // 2.img/2.jpg, ...) used to give every photo of a disk outside this run to
+    // the whole set, so one floppy ended up carrying four other floppies'
+    // label photos.
+    const folderImgBases = new Set(
+      files
+        .filter(f => imageExts.has(extname(f).toLowerCase()))
+        .map(f => f.replace(/\.[^.]+$/i, '').toLowerCase())
+    );
+
     for (const f of files) {
       const ext = extname(f).toLowerCase();
 
@@ -294,7 +333,10 @@ export async function scanFolderArtifacts(
           }
         }
         if (!matched) {
-          setPhotos.push(f);
+          // Named after a disk that is in the folder but not in this run -
+          // that disk's photo, never the set's.
+          if (folderImgBases.has(photoBase)) otherDiskPhotos.push(f);
+          else setPhotos.push(f);
         }
       } else if (f.toLowerCase() === 'labels.txt') {
         transcription = f;
@@ -321,7 +363,7 @@ export async function scanFolderArtifacts(
     }
   } catch { /* ignore */ }
 
-  return { diskPhotos, setPhotos, transcription, diskLogs, imagingLogs, unmapped };
+  return { diskPhotos, setPhotos, transcription, diskLogs, imagingLogs, unmapped, otherDiskPhotos };
 }
 
 /**
@@ -430,6 +472,8 @@ export async function importImage(
   }
 
   const ndfsResult = await tryParseNdfs(buffer);
+
+  const bootArea = readBootArea(buffer);
   const volumeName = ndfsResult?.volumeName ?? null;
   const productMatch = matchProduct(volumeName);
   const id = generateId(md5, volumeName);
@@ -568,7 +612,12 @@ export async function importImage(
     controller: 'floppy',
     totalPages: ndfsResult?.totalPages ?? null,
     pageSize: ndfsResult ? 2048 : null,
-    bootFormat: ndfsResult?.bootFormat ?? null,
+    // Read straight from page 0, not from the parse result: the boot area does
+    // not depend on the filesystem, so a floppy whose master block or index
+    // pages are damaged still says what it holds. Taking it from ndfsResult
+    // lost it on every image the parser rejected.
+    bootFormat: bootArea.format,
+    bootProgram: bootArea.program,
     cpuTarget: null,
     osRequirement: null,
     ndfs: ndfsResult ? { users: ndfsResult.users, files: ndfsResult.files } : null,

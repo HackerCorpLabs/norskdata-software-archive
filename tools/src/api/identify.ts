@@ -10,6 +10,7 @@ import { readFile } from 'fs/promises';
 import { gunzipSync } from 'zlib';
 import { extname } from 'path';
 import { detectFilesystem, type FilesystemKind } from './filesystem-detect.js';
+import { detectBootFormat as detectBootFormatBytes, detectBootProgram } from './boot-format.js';
 import { pageAlign } from '../lib/ndfsalign/index.js';
 import { DosVolume } from '../lib/dosfs/index.js';
 import { readBackupVolume, readWinchVolume } from '../lib/ndbackup/index.js';
@@ -56,7 +57,16 @@ async function ndfsSummary(buf: Buffer): Promise<{ name: string | null; files: n
     const users: any[] = fs.getUsers?.() ?? [];
     const objects: any[] = fs.getObjectEntries?.() ?? [];
     if (!name && objects.length === 0 && users.length === 0) return null;
-    const boot = (() => { try { return String(fs.detectBootFormat?.() ?? '').toLowerCase(); } catch { return ''; } })();
+    // this repo's own test, which validates the load block's checksum - see
+    // api/boot-format.ts
+    const boot = (() => {
+      try {
+        const page0 = new Uint8Array(buf.subarray(0, 2048));
+        const fmt = detectBootFormatBytes(page0);
+        const prog = detectBootProgram(page0);
+        return prog ? `${fmt} (${prog})` : fmt;
+      } catch { return ''; }
+    })();
     return {
       name,
       files: objects.length,

@@ -509,6 +509,26 @@ html[data-theme="light"] .nd-logo-img {
   padding: 0.3rem 0.6rem;
 }
 
+/* Heading row above the volumes of one backup set in the catalog listing. */
+.nd-setrow td {
+  background: var(--accent-bg);
+  border-top: 2px solid var(--accent);
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.nd-setname {
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.nd-setfacts {
+  color: var(--text-muted);
+  font-weight: normal;
+  font-size: 0.8rem;
+  margin-left: 0.6rem;
+}
+
 .nd-bar {
   height: 6px;
   background: var(--accent);
@@ -3631,7 +3651,26 @@ tr.ndfs-file-selected,
   // ==============================================================
   // Catalog
   // ==============================================================
-  var catalogState = { q: '', contributor: '', status: '', filesystem: '', offset: 0, limit: 50, total: 0, debounceTimer: null, sortCol: null, sortDir: 'asc', lastEntries: [] };
+  var catalogState = { q: '', contributor: '', status: '', filesystem: '', offset: 0, limit: 50, total: 0, debounceTimer: null, sortCol: null, sortDir: 'asc', lastEntries: [], backupSets: {}, grouped: false };
+
+  // A backup volume on its own says little - what matters is the run it belongs
+  // to. When the listing is filtered to BACKUP-SYSTEM or WINCH-TO-FLOPP volumes
+  // the rows are grouped under their set, and the whole filtered list is asked
+  // for in one request so a set is never cut in half by the pager.
+  function catalogGroupsBySet() {
+    return catalogState.filesystem === 'backup' || catalogState.filesystem === 'winch';
+  }
+
+  // Same key as setKeyOf() in lib/backupsets: a BACKUP-SYSTEM run is told apart
+  // by owner, date and SINTRAN version as well as volume id, because the same
+  // floppies were written again week after week (900311 and 900318 are both
+  // RUNNING-POSTM).
+  function backupSetKeyOf(e) {
+    var s = e.backupSet;
+    if (!s || !s.name) return null;
+    if (s.kind === 'backup') return ['backup', s.name, s.label || '', s.runDate || '', s.system || ''].join(':');
+    return s.kind + ':' + s.name + ':' + (s.label || '');
+  }
 
   function renderCatalog(el, params) {
     catalogState.q = params.q || '';
@@ -3716,11 +3755,27 @@ tr.ndfs-file-selected,
   }
 
   function loadCatalogResults() {
-    var url = '/api/floppies?limit=' + catalogState.limit + '&offset=' + catalogState.offset;
+    var grouped = catalogGroupsBySet();
+    catalogState.grouped = grouped;
+    // Grouped: ask for the lot (36 BACKUP-SYSTEM volumes, 27 WINCH ones today)
+    // so every volume of a set is on the page together.
+    var url = '/api/floppies?limit=' + (grouped ? 500 : catalogState.limit) +
+              '&offset=' + (grouped ? 0 : catalogState.offset);
     if (catalogState.q) url += '&q=' + encodeURIComponent(catalogState.q);
     if (catalogState.contributor) url += '&contributor=' + encodeURIComponent(catalogState.contributor);
     if (catalogState.status) url += '&status=' + encodeURIComponent(catalogState.status);
     if (catalogState.filesystem) url += '&filesystem=' + encodeURIComponent(catalogState.filesystem);
+
+    // The set facts (volume count, files named across the run) are worked out by
+    // lib/backupsets on the server; asking for them beats recomputing here.
+    if (grouped) {
+      fetch('/api/backup-set').then(function(r) { return r.json(); }).then(function(d) {
+        var map = {};
+        (d.sets || []).forEach(function(st) { map[st.key] = st; });
+        catalogState.backupSets = map;
+        if (catalogState.lastEntries.length) renderCatalogTable(null);
+      }).catch(function() { catalogState.backupSets = {}; });
+    }
 
     fetch(url).then(function(r) { return r.json(); }).then(function(data) {
       catalogState.total = data.total;
@@ -3743,6 +3798,59 @@ tr.ndfs-file-selected,
     }).catch(function(err) {
       document.getElementById('cat-results').innerHTML = '<p style="color:var(--warn)">Error: ' + esc(String(err)) + '</p>';
     });
+  }
+
+  /**
+   * The rows of a backup listing, laid out one set at a time with a heading
+   * naming the run: volume id and owner, then the date, the SINTRAN version it
+   * was written by, how many volumes the set has and how many files its labels
+   * name. Volumes whose image records no set at all are listed last.
+   */
+  function catalogSetGroups(data, colCount, rowFn) {
+    var order = [];
+    var byKey = {};
+    data.forEach(function(e) {
+      var k = backupSetKeyOf(e) || '';
+      if (!byKey[k]) { byKey[k] = []; order.push(k); }
+      byKey[k].push(e);
+    });
+
+    order.sort(function(a, b) {
+      if (a === '') return 1;
+      if (b === '') return -1;
+      var sa = byKey[a][0].backupSet, sb = byKey[b][0].backupSet;
+      var na = (sa.name || '').toLowerCase(), nb = (sb.name || '').toLowerCase();
+      if (na !== nb) return na < nb ? -1 : 1;
+      return (sa.runDate || '') < (sb.runDate || '') ? -1 : 1;
+    });
+
+    var out = '';
+    order.forEach(function(k) {
+      var members = byKey[k];
+      var head;
+      if (k === '') {
+        head = '<span class="nd-setname">No set recorded</span>' +
+               '<span class="nd-setfacts">' + members.length + ' image(s)</span>';
+      } else {
+        var s0 = members[0].backupSet;
+        var set = catalogState.backupSets[k];
+        var facts = [];
+        if (s0.runDate) facts.push(esc(s0.runDate));
+        if (s0.system) facts.push(esc(s0.system));
+        var vols = set ? set.totalVolumes : members.length;
+        facts.push(vols + (vols === 1 ? ' volume' : ' volumes'));
+        // more images than volumes means the same floppy was read more than once
+        if (set && set.imageCount > set.totalVolumes) {
+          facts.push((set.imageCount - set.totalVolumes) + ' repeat read(s)');
+        }
+        if (set && set.fileCount) facts.push(set.fileCount + (set.fileCount === 1 ? ' file' : ' files'));
+        head = '<span class="nd-setname">' + esc(s0.name) + (s0.label ? ' / ' + esc(s0.label) : '') + '</span>' +
+               '<span class="nd-setfacts">' + facts.join(' \u00b7 ') + '</span>';
+      }
+      out += '<tr class="nd-setrow"><td colspan="' + colCount + '">' + head + '</td></tr>';
+      members.forEach(function(e) { out += rowFn(e); });
+    });
+    return out;
   }
 
   function renderCatalogTable(entries) {
@@ -3768,14 +3876,14 @@ tr.ndfs-file-selected,
     }
     html += '</tr></thead><tbody>';
 
-    data.forEach(function(e) {
+    function catalogRow(e) {
       var volName = e.volumeName || e.volumeLabel;
       var volText = volName ? esc(volName) : '<span class="nd-text-muted">' + esc(e.id) + '</span>';
       var volDisplay = '<a href="#/disks/' + encodeURIComponent(e.id) + '"><code>' + volText + '</code></a>';
       var prodLabel = e.productId ? esc(e.productId) + (e.productName ? ' <span class="nd-text-muted" style="font-weight:normal">' + esc(e.productName) + '</span>' : '') : '';
       var prodDisplay = e.productId ? '<a href="#/products/' + encodeURIComponent(e.productId) + '">' + prodLabel + '</a>' : '<span class="nd-text-muted">-</span>';
       var bootDisplay = e.bootFormat ? '<span class="nd-badge">' + esc(e.bootFormat) + '</span>' : '-';
-      html += '<tr>' +
+      return '<tr>' +
         '<td>' + volDisplay + '</td>' +
         '<td>' + prodDisplay + '</td>' +
         '<td>' + esc(e.version || '-') + '</td>' +
@@ -3784,7 +3892,13 @@ tr.ndfs-file-selected,
         '<td style="text-align:right">' + (e.fileCount || '-') + '</td>' +
         '<td>' + esc(e.contributor) + '</td>' +
       '</tr>';
-    });
+    }
+
+    if (catalogState.grouped) {
+      html += catalogSetGroups(data, catCols.length, catalogRow);
+    } else {
+      data.forEach(function(e) { html += catalogRow(e); });
+    }
 
     html += '</tbody></table>';
     document.getElementById('cat-results').innerHTML = html;
@@ -3827,7 +3941,11 @@ tr.ndfs-file-selected,
     var page = Math.floor(offset / limit) + 1;
     var totalPages = Math.ceil(total / limit);
 
-    if (totalPages <= 1) { pager.innerHTML = '<span class="nd-text-muted">' + total + ' total</span>'; return; }
+    // Grouped listings are fetched whole, so paging them would hide sets.
+    if (catalogState.grouped || totalPages <= 1) {
+      pager.innerHTML = '<span class="nd-text-muted">' + total + ' total</span>';
+      return;
+    }
 
     var baseHash = '#/catalog?';
     var qp = [];
@@ -5103,18 +5221,23 @@ tr.ndfs-file-selected,
         var liveB = e.backupFiles.filter(function(f) { return !f.stale; });
         var staleB = e.backupFiles.length - liveB.length;
         html += '<div class="nd-card" style="padding:0"><div style="padding:0.6rem 1rem;border-bottom:1px solid var(--border)">' +
-          '<strong>SINTRAN III BACKUP-SYSTEM</strong> <span class="nd-text-muted">' + liveB.length + ' file(s)' +
+          '<strong>SINTRAN III BACKUP-SYSTEM</strong> <span class="nd-text-muted" id="bk-run-head">' + liveB.length + ' file(s)' +
           (staleB ? ', ' + staleB + ' label(s) left from an older backup' : '') +
           (e.backupSet && e.backupSet.runDate ? ' &middot; ' + esc(e.backupSet.runDate) : '') +
           (e.backupSet && e.backupSet.system ? ' &middot; ' + esc(e.backupSet.system) : '') + '</span>' +
           ' <button class="nd-btn nd-btn-ghost nd-btn-sm" style="float:right;font-size:0.75rem" onclick="openBackupViewer(\'' +
           esc(e.id) + '\')">Browse</button></div>' +
-          '<table class="nd-ndfs-table"><thead><tr><th>File</th><th style="text-align:right">Bytes</th><th>Created</th></tr></thead><tbody>';
+          // Listed as the run, not as this one image: a backup written across
+          // several floppies is one list of files, and it reads the same from
+          // whichever volume of the set the page was opened on. The labels
+          // recorded for this image are what is shown until the run arrives.
+          '<table class="nd-ndfs-table"><thead><tr><th>File</th><th style="text-align:right">Bytes</th>' +
+          '<th style="width:5rem">Volume</th><th>Created</th></tr></thead><tbody id="bk-run-rows">';
         e.backupFiles.forEach(function(f) {
           html += '<tr' + (f.stale ? ' class="nd-text-muted"' : '') + '><td><code style="font-size:0.82rem">' + esc(f.name) + '</code>' +
-            (f.continued ? ' <span class="nd-badge nd-badge-warn" style="font-size:0.65rem">continues</span>' : '') +
             (f.stale ? ' <span style="font-size:0.7rem">stale</span>' : '') + '</td>' +
             '<td style="text-align:right">' + (f.bytes || 0).toLocaleString() + '</td>' +
+            '<td class="nd-text-muted">-</td>' +
             '<td class="nd-text-muted">' + esc(f.created || '') + '</td></tr>';
         });
         html += '</tbody></table></div>';
@@ -5231,6 +5354,40 @@ tr.ndfs-file-selected,
       html += '</div>';
 
       el.innerHTML = html;
+
+      // Replace the per-image label list with the run: every volume of the set
+      // in chain order, so a file written again on the next floppy is listed
+      // once, at its real length, from either volume.
+      var runRows = document.getElementById('bk-run-rows');
+      if (runRows && e.filesystem === 'backup') {
+        fetch('/api/ndbackup/run?id=' + encodeURIComponent(e.id))
+          .then(function(r) { return r.ok ? r.json() : null; })
+          .then(function(run) {
+            if (!run || !run.files) return;
+            var rows = '';
+            run.files.forEach(function(f) {
+              var vols = f.parts.map(function(p) { return p.volume; });
+              var where = vols.length > 1 ? vols[0] + '-' + vols[vols.length - 1] : String(vols[0]);
+              rows += '<tr' + (f.stale ? ' class="nd-text-muted"' : '') + '><td><code style="font-size:0.82rem">' + esc(f.fullName) + '</code>' +
+                (f.truncated ? ' <span class="nd-badge nd-badge-warn" style="font-size:0.65rem">cut - no volume here continues it</span>' : '') +
+                (f.stubVolumes && f.stubVolumes.length ? ' <span class="nd-text-muted" style="font-size:0.7rem">label only on volume ' + f.stubVolumes.join(', ') + '</span>' : '') +
+                backupReadNote(f, run) +
+                (f.stale ? ' <span style="font-size:0.7rem">stale</span>' : '') + '</td>' +
+                '<td style="text-align:right">' + f.bytes.toLocaleString() + '</td>' +
+                '<td class="nd-text-muted">' + esc(where) + '</td>' +
+                '<td class="nd-text-muted">' + esc(f.created || '') + '</td></tr>';
+            });
+            runRows.innerHTML = rows;
+            var hd = document.getElementById('bk-run-head');
+            if (hd) {
+              var liveR = run.files.filter(function(f) { return !f.stale; }).length;
+              var readCount = run.volumes.reduce(function(n, v) { return n + (v.reads ? v.reads.length : 1); }, 0);
+              hd.innerHTML = liveR + ' file(s) across ' + run.volumes.length + ' volume(s) of run ' + esc(run.volumeId) +
+                (readCount > run.volumes.length ? ', from ' + readCount + ' reads' : '') +
+                (run.files.length - liveR ? ', ' + (run.files.length - liveR) + ' label(s) left from an older backup' : '');
+            }
+          });
+      }
 
       // MS-DOS directory listing, in place of the NDFS table.
       var dosBox = document.getElementById('dos-listing');
@@ -5786,6 +5943,25 @@ tr.ndfs-file-selected,
       .catch(function(err) { body.innerHTML = '<p class="nd-text-muted">' + esc(String(err)) + '</p>'; });
   };
 
+  // Where a file came from when a volume was read more than once: the read that
+  // supplied it, if it is not the volume's leading read, and the lengths the
+  // other reads made the same file when they disagree. A marginal floppy loses
+  // different labels on every attempt, so the run is the union of its reads.
+  function backupReadNote(f, run) {
+    var out = '';
+    var vol = run.volumes[(f.parts[0].volume || 1) - 1];
+    if (vol && vol.reads && vol.reads.length > 1 && f.parts[0].entryId !== vol.id) {
+      out += ' <span class="nd-text-muted" style="font-size:0.7rem" title="This label was only readable on that attempt">from ' +
+        esc(f.parts[0].entryId) + '</span>';
+    }
+    var dis = (f.otherReads || []).filter(function(o) { return o.bytes !== f.bytes; });
+    if (dis.length) {
+      out += ' <span class="nd-text-muted" style="font-size:0.7rem" title="The other reads of this floppy made the file a different length">other reads: ' +
+        dis.map(function(o) { return o.bytes.toLocaleString(); }).join(', ') + '</span>';
+    }
+    return out;
+  }
+
   // ==============================================================
   // Norsk Data backup volume viewer
   // ==============================================================
@@ -5812,7 +5988,7 @@ tr.ndfs-file-selected,
     var head = document.getElementById('bkhead');
     var body = document.getElementById('bkbody');
     var actions = document.getElementById('bkactions');
-    var files = [], selectedIndex = -1;
+    var files = [], selectedIndex = -1, runMode = false, runData = null;
 
     function setSelected(i) {
       selectedIndex = i;
@@ -5828,23 +6004,42 @@ tr.ndfs-file-selected,
       });
     }
 
+    // The run endpoint joins a file that spans two volumes; the per-volume one
+    // is the fallback for a lone volume that belongs to no set.
     function fileUrl(strip) {
-      return '/api/ndbackup/read-file?id=' + encodeURIComponent(entryId) +
+      var api = runMode ? '/api/ndbackup/read-run-file' : '/api/ndbackup/read-file';
+      return api + '?id=' + encodeURIComponent(entryId) +
         '&index=' + selectedIndex + (strip ? '&parity=strip' : '');
     }
 
     function renderFiles() {
       var html = '<div id="bk-set"></div>' +
         '<table class="nd-table nd-table-compact"><thead><tr>' +
-        '<th>File</th><th style="width:6rem;text-align:right">Bytes</th><th style="width:5rem;text-align:right">Seq</th>' +
+        '<th>File</th><th style="width:6rem;text-align:right">Bytes</th>' +
+        '<th style="width:6rem">' + (runMode ? 'Volume' : 'Seq') + '</th>' +
         '<th style="width:8rem">Created</th><th style="width:10rem">System</th></tr></thead><tbody>';
       files.forEach(function(f, i) {
+        var bytes = runMode ? f.bytes : f.dataLength;
+        // Which volume the file sits on; two numbers when it spans the join.
+        var where;
+        if (runMode) {
+          var vols = f.parts.map(function(p) { return p.volume; });
+          where = vols.length > 1 ? vols[0] + '-' + vols[vols.length - 1] : String(vols[0]);
+        } else {
+          where = String(f.sequence);
+        }
+        // "cut" is only true when the run really ends mid-file: a file split
+        // across two volumes we hold is whole here, joined on extract.
+        var cut = runMode ? f.truncated : f.continued;
         html += '<tr data-idx="' + i + '" style="cursor:pointer"' + (f.stale ? ' title="Label left over from an older backup on this disk"' : '') + '>' +
           '<td><code>' + esc(f.fullName) + '</code>' +
-            (f.continued ? ' <span class="nd-badge nd-badge-warn" style="font-size:0.65rem">continues</span>' : '') +
+            (runMode && f.parts.length > 1 ? ' <span class="nd-badge nd-badge-info" style="font-size:0.65rem">joined from ' + f.parts.length + ' volumes</span>' : '') +
+            (runMode && f.stubVolumes && f.stubVolumes.length ? ' <span class="nd-text-muted" style="font-size:0.7rem" title="A label for this file was written at the end of that volume with no data behind it - the run then wrote the file whole on the next volume">label only on volume ' + f.stubVolumes.join(', ') + '</span>' : '') +
+            (runMode && runData ? backupReadNote(f, runData) : '') +
+            (cut ? ' <span class="nd-badge nd-badge-warn" style="font-size:0.65rem">cut - no volume here continues it</span>' : '') +
             (f.stale ? ' <span class="nd-text-muted" style="font-size:0.7rem">stale</span>' : '') + '</td>' +
-          '<td style="text-align:right">' + f.dataLength.toLocaleString() + '</td>' +
-          '<td style="text-align:right" class="nd-text-muted">' + f.sequence + '</td>' +
+          '<td style="text-align:right">' + bytes.toLocaleString() + '</td>' +
+          '<td class="nd-text-muted">' + esc(where) + '</td>' +
           '<td class="nd-text-muted">' + esc(f.created || '') + '</td>' +
           '<td class="nd-text-muted">' + esc(f.system || '') + '</td></tr>';
       });
@@ -5915,14 +6110,38 @@ tr.ndfs-file-selected,
         if (!res.ok) { body.innerHTML = '<p class="nd-text-muted">' + esc(res.j.error || 'Could not read the volume') + '</p>'; return; }
         var v = res.j;
         if (v.kind === 'backup') {
-          files = v.files || [];
-          var live = files.filter(function(f) { return !f.stale; }).length;
-          head.innerHTML = '<strong>SINTRAN BACKUP-SYSTEM</strong> <span class="nd-text-muted">volume <code>' +
-            esc(v.volumeId) + '</code> &middot; owner <code>' + esc(v.owner) + '</code> &middot; ' +
-            live + ' file(s)' + (files.length - live ? ', ' + (files.length - live) + ' stale label(s)' : '') +
-            ' &middot; ' + v.sectorSize + ' B sectors, ' + v.blockLength + ' B blocks</span>';
-          actions.style.display = '';
-          renderFiles();
+          // A run is written across several floppies, so the listing is of the
+          // run - every volume of it held here, in chain order - not of the one
+          // image the viewer was opened on. Opening from any volume of the set
+          // therefore gives the same list.
+          fetch('/api/ndbackup/run?id=' + encodeURIComponent(entryId))
+            .then(function(r) { return r.ok ? r.json() : null; })
+            .then(function(run) {
+              if (run && run.files) {
+                runMode = true;
+                runData = run;
+                files = run.files;
+                var liveR = files.filter(function(f) { return !f.stale; }).length;
+                var spanned = files.filter(function(f) { return f.parts.length > 1; }).length;
+                var cutR = files.filter(function(f) { return f.truncated; }).length;
+                head.innerHTML = '<strong>SINTRAN BACKUP-SYSTEM</strong> <span class="nd-text-muted">run <code>' +
+                  esc(run.volumeId) + '</code> &middot; owner <code>' + esc(run.owner) + '</code> &middot; ' +
+                  liveR + ' file(s) across ' + run.volumes.length + ' volume(s)' +
+                  (spanned ? ', ' + spanned + ' joined across the volume boundary' : '') +
+                  (cutR ? ', ' + cutR + ' cut with no volume here to continue' : '') +
+                  (files.length - liveR ? ', ' + (files.length - liveR) + ' stale label(s)' : '') +
+                  ' &middot; ' + run.sectorSize + ' B sectors, ' + run.blockLength + ' B blocks</span>';
+              } else {
+                files = v.files || [];
+                var live = files.filter(function(f) { return !f.stale; }).length;
+                head.innerHTML = '<strong>SINTRAN BACKUP-SYSTEM</strong> <span class="nd-text-muted">volume <code>' +
+                  esc(v.volumeId) + '</code> &middot; owner <code>' + esc(v.owner) + '</code> &middot; ' +
+                  live + ' file(s)' + (files.length - live ? ', ' + (files.length - live) + ' stale label(s)' : '') +
+                  ' &middot; ' + v.sectorSize + ' B sectors, ' + v.blockLength + ' B blocks</span>';
+              }
+              actions.style.display = '';
+              renderFiles();
+            });
         } else {
           head.innerHTML = '<strong>WINCH-TO-FLOPP</strong> <span class="nd-text-muted">directory <code>' +
             esc(v.directoryName) + '</code> &middot; volume ' + v.volumeNumber + ' of ' + v.totalVolumes +

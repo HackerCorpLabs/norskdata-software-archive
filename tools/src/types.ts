@@ -138,7 +138,19 @@ export interface CatalogEntry {
   controller: string | null;
   totalPages: number | null;
   pageSize: number | null;
+  /**
+   * What the boot area of page 0 IS: 'bpun' when it holds a checksum-valid
+   * BPUN block, 'binary' when something is there that is not one, 'none' when
+   * it is empty or one repeated fill value.
+   */
   bootFormat: string | null;
+  /**
+   * Which program the boot area carries, when that can be told from the image
+   * itself: 'flomon' for the ND floppy monitor, recognised by its own command
+   * names in page 0. BPUN is the container, FLO-MON is a program shipped in
+   * one, so the two are recorded separately. See docs/boot-formats.md.
+   */
+  bootProgram?: string | null;
   cpuTarget: string[] | null;
   osRequirement: string | null;
   ndfs: { users: NdfsUser[]; files: NdfsFile[] } | null;
