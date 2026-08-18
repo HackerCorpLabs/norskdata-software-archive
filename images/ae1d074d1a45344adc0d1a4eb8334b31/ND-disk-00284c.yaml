@@ -5,6 +5,8 @@ image:
   sizeBytes: 225280
   format: raw
   controller: floppy
+  bootFormat: bpun
+  bootProgram: flomon
 filesystem: ndfs
 condition:
   status: damaged

@@ -1,0 +1,99 @@
+id: nd-211056-a02-d1-fd6710ba
+volumeName: 211056A02-EN-01D
+md5: fd6710baf32609bb6d3eca254326536f
+product:
+  id: ND-211056
+  version: A02
+  diskNumber: 1
+  language: EN
+image:
+  sizeBytes: 1261568
+  format: raw
+  controller: floppy
+  totalPages: 616
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 274
+  files:
+    - name: SSY-PICT-EN-A02:CONF
+      type: CONF
+      pages: 21
+      bytes: 171232
+      userName: FLOPPY-USER
+      dateCreated: 2530920566
+      lastDateRead: 2531346804
+      lastDateWritten: 2531316162
+      dateCreatedStr: 1987-11-13 12:33:54
+      lastDateReadStr: 1987-11-16 20:37:52
+      lastDateWrittenStr: 1987-11-16 13:07:02
+      bpunValid: null
+    - name: SSY-PICT-EN-A02:NDPF
+      type: NDPF
+      pages: 36
+      bytes: 73728
+      userName: FLOPPY-USER
+      dateCreated: 2530920586
+      lastDateRead: 2531346818
+      lastDateWritten: 2531316166
+      dateCreatedStr: 1987-11-13 12:34:10
+      lastDateReadStr: 1987-11-16 20:38:02
+      lastDateWrittenStr: 1987-11-16 13:07:06
+      bpunValid: null
+    - name: SSY-INST-A02:PROG
+      type: PROG
+      pages: 45
+      bytes: 151360
+      userName: FLOPPY-USER
+      dateCreated: 2530920608
+      lastDateRead: 2531346570
+      lastDateWritten: 2531316172
+      dateCreatedStr: 1987-11-13 12:34:32
+      lastDateReadStr: 1987-11-16 20:34:10
+      lastDateWrittenStr: 1987-11-16 13:07:12
+      bpunValid: null
+    - name: SSY-INST-EN-A02:COM
+      type: COM
+      pages: 48
+      bytes: 77143
+      userName: FLOPPY-USER
+      dateCreated: 2530920643
+      lastDateRead: 2531346575
+      lastDateWritten: 2531316183
+      dateCreatedStr: 1987-11-13 12:35:03
+      lastDateReadStr: 1987-11-16 20:34:15
+      lastDateWrittenStr: 1987-11-16 13:07:23
+      bpunValid: null
+    - name: UE-ERMSG-EN-C06:ERR
+      type: ERR
+      pages: 118
+      bytes: 241664
+      userName: FLOPPY-USER
+      dateCreated: 2531315999
+      lastDateRead: null
+      lastDateWritten: 2531316304
+      dateCreatedStr: 1987-11-16 13:04:31
+      lastDateReadStr: null
+      lastDateWrittenStr: 1987-11-16 13:09:16
+      bpunValid: null
+provenance:
+  contributor: cvs
+  originalPath: ND110-emulator-IMAGES/211056A02-EN-01D.img
+  dateImaged: 2026-08-17
+  importedAt: 2026-08-17T23:12:34.818Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-211056-a02-d1-fd6710ba
+  syncStatus: pending

@@ -6,7 +6,7 @@ image:
   format: raw
   controller: floppy
   totalPages: 156
-  bootFormat: bpun
+  bootFormat: binary
 filesystem: ndfs
 ndfs:
   users:

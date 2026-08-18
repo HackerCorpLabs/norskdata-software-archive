@@ -1,0 +1,279 @@
+id: nd-211299-a00-d1-3a3535b2
+volumeName: 211299A00-XX-01D
+md5: 3a3535b2fe87e592619f9d67a82c21b5
+product:
+  id: ND-211299
+  version: A00
+  diskNumber: 1
+  language: XX
+image:
+  sizeBytes: 1261568
+  format: raw
+  controller: floppy
+  totalPages: 616
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 442
+  files:
+    - name: NFS-PASSWD:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 2076
+      userName: FLOPPY-USER
+      dateCreated: 2700380731
+      lastDateRead: 2703544705
+      lastDateWritten: 2700380736
+      dateCreatedStr: 1990-03-26 08:40:59
+      lastDateReadStr: 1990-04-18 13:06:01
+      lastDateWrittenStr: 1990-03-26 08:41:00
+      bpunValid: null
+    - name: NFS-NETGROUPS:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 2486
+      userName: FLOPPY-USER
+      dateCreated: 2700380738
+      lastDateRead: 2703544708
+      lastDateWritten: 2700380739
+      dateCreatedStr: 1990-03-26 08:41:02
+      lastDateReadStr: 1990-04-18 13:06:04
+      lastDateWrittenStr: 1990-03-26 08:41:03
+      bpunValid: null
+    - name: NFS-EXPORTS:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1269
+      userName: FLOPPY-USER
+      dateCreated: 2700380741
+      lastDateRead: 2703544698
+      lastDateWritten: 2700380742
+      dateCreatedStr: 1990-03-26 08:41:05
+      lastDateReadStr: 1990-04-18 13:05:58
+      lastDateWrittenStr: 1990-03-26 08:41:06
+      bpunValid: null
+    - name: NFS-LOAD-A00:MODE
+      type: MODE
+      pages: 1
+      bytes: 884
+      userName: FLOPPY-USER
+      dateCreated: 2700380744
+      lastDateRead: 2706565570
+      lastDateWritten: 2700380745
+      dateCreatedStr: 1990-03-26 08:41:08
+      lastDateReadStr: 1990-05-09 14:39:02
+      lastDateWrittenStr: 1990-03-26 08:41:09
+      bpunValid: null
+    - name: NFS-START-A00:MODE
+      type: MODE
+      pages: 1
+      bytes: 402
+      userName: FLOPPY-USER
+      dateCreated: 2700380746
+      lastDateRead: 2706565669
+      lastDateWritten: 2700380747
+      dateCreatedStr: 1990-03-26 08:41:10
+      lastDateReadStr: 1990-05-09 14:40:37
+      lastDateWrittenStr: 1990-03-26 08:41:11
+      bpunValid: null
+    - name: NFS-FSTAD-A00:PROG
+      type: PROG
+      pages: 23
+      bytes: 274432
+      userName: FLOPPY-USER
+      dateCreated: 2700380749
+      lastDateRead: 2706565573
+      lastDateWritten: 2700380750
+      dateCreatedStr: 1990-03-26 08:41:13
+      lastDateReadStr: 1990-05-09 14:39:05
+      lastDateWrittenStr: 1990-03-26 08:41:14
+      bpunValid: null
+    - name: NFS-PLACE-PM-A00:PROG
+      type: PROG
+      pages: 26
+      bytes: 53248
+      userName: FLOPPY-USER
+      dateCreated: 2700380757
+      lastDateRead: 2706565581
+      lastDateWritten: 2700380758
+      dateCreatedStr: 1990-03-26 08:41:21
+      lastDateReadStr: 1990-05-09 14:39:13
+      lastDateWrittenStr: 1990-03-26 08:41:22
+      bpunValid: null
+    - name: NFS-PLACE-FS-A00:PROG
+      type: PROG
+      pages: 24
+      bytes: 49152
+      userName: FLOPPY-USER
+      dateCreated: 2700380766
+      lastDateRead: 2706565590
+      lastDateWritten: 2700380767
+      dateCreatedStr: 1990-03-26 08:41:30
+      lastDateReadStr: 1990-05-09 14:39:22
+      lastDateWrittenStr: 1990-03-26 08:41:31
+      bpunValid: null
+    - name: NFS-PLACE-PC-A00:PROG
+      type: PROG
+      pages: 26
+      bytes: 53248
+      userName: FLOPPY-USER
+      dateCreated: 2700380774
+      lastDateRead: 2706565598
+      lastDateWritten: 2700380775
+      dateCreatedStr: 1990-03-26 08:41:38
+      lastDateReadStr: 1990-05-09 14:39:30
+      lastDateWrittenStr: 1990-03-26 08:41:39
+      bpunValid: null
+    - name: IN-HUFFMAN-D00:PROG
+      type: PROG
+      pages: 9
+      bytes: 145408
+      userName: FLOPPY-USER
+      dateCreated: 2700380783
+      lastDateRead: 2706565266
+      lastDateWritten: 2700380784
+      dateCreatedStr: 1990-03-26 08:41:47
+      lastDateReadStr: 1990-05-09 14:34:18
+      lastDateWrittenStr: 1990-03-26 08:41:48
+      bpunValid: null
+    - name: NFS-SERVICE-A00:DOM
+      type: DOM
+      pages: 42
+      bytes: 84975
+      userName: FLOPPY-USER
+      dateCreated: 2700380793
+      lastDateRead: 2706565607
+      lastDateWritten: 2700380794
+      dateCreatedStr: 1990-03-26 08:41:57
+      lastDateReadStr: 1990-05-09 14:39:39
+      lastDateWrittenStr: 1990-03-26 08:41:58
+      bpunValid: null
+    - name: NFS-PM-A00:DOM
+      type: DOM
+      pages: 26
+      bytes: 51605
+      userName: FLOPPY-USER
+      dateCreated: 2700380825
+      lastDateRead: 2706565620
+      lastDateWritten: 2700380825
+      dateCreatedStr: 1990-03-26 08:42:25
+      lastDateReadStr: 1990-05-09 14:39:52
+      lastDateWrittenStr: 1990-03-26 08:42:25
+      bpunValid: null
+    - name: NFS-FS-A00:DOM
+      type: DOM
+      pages: 67
+      bytes: 136526
+      userName: FLOPPY-USER
+      dateCreated: 2700380853
+      lastDateRead: 2706565633
+      lastDateWritten: 2700380854
+      dateCreatedStr: 1990-03-26 08:42:53
+      lastDateReadStr: 1990-05-09 14:40:01
+      lastDateWrittenStr: 1990-03-26 08:42:54
+      bpunValid: null
+    - name: NFS-PC-A00:DOM
+      type: DOM
+      pages: 22
+      bytes: 44237
+      userName: FLOPPY-USER
+      dateCreated: 2700380909
+      lastDateRead: 2706565650
+      lastDateWritten: 2700380909
+      dateCreatedStr: 1990-03-26 08:43:45
+      lastDateReadStr: 1990-05-09 14:40:18
+      lastDateWrittenStr: 1990-03-26 08:43:45
+      bpunValid: null
+    - name: NFS-NDLIBS-A00:SEG
+      type: SEG
+      pages: 33
+      bytes: 67213
+      userName: FLOPPY-USER
+      dateCreated: 2700380931
+      lastDateRead: 2706565658
+      lastDateWritten: 2700380932
+      dateCreatedStr: 1990-03-26 08:44:03
+      lastDateReadStr: 1990-05-09 14:40:26
+      lastDateWrittenStr: 1990-03-26 08:44:04
+      bpunValid: null
+    - name: IN-NFS-XX-A00:PROG
+      type: PROG
+      pages: 78
+      bytes: 199266
+      userName: FLOPPY-USER
+      dateCreated: 2700380952
+      lastDateRead: 2706565241
+      lastDateWritten: 2700384646
+      dateCreatedStr: 1990-03-26 08:44:24
+      lastDateReadStr: 1990-05-09 14:33:57
+      lastDateWrittenStr: 1990-03-26 09:38:06
+      bpunValid: null
+    - name: TE-NFS-XX-A00:CXCO
+      type: CXCO
+      pages: 17
+      bytes: 33201
+      userName: FLOPPY-USER
+      dateCreated: 2700380992
+      lastDateRead: 2706565225
+      lastDateWritten: 2700384667
+      dateCreatedStr: 1990-03-26 08:45:00
+      lastDateReadStr: 1990-05-09 14:33:41
+      lastDateWrittenStr: 1990-03-26 09:38:27
+      bpunValid: null
+    - name: DE-NFS-XX-A00:CXCO
+      type: CXCO
+      pages: 5
+      bytes: 8354
+      userName: FLOPPY-USER
+      dateCreated: 2700381001
+      lastDateRead: 2706565231
+      lastDateWritten: 2700384672
+      dateCreatedStr: 1990-03-26 08:45:09
+      lastDateReadStr: 1990-05-09 14:33:47
+      lastDateWrittenStr: 1990-03-26 09:38:32
+      bpunValid: null
+    - name: EN-NFS-XX-A00:CXCO
+      type: CXCO
+      pages: 7
+      bytes: 12590
+      userName: FLOPPY-USER
+      dateCreated: 2700381006
+      lastDateRead: 2706565233
+      lastDateWritten: 2700384675
+      dateCreatedStr: 1990-03-26 08:45:14
+      lastDateReadStr: 1990-05-09 14:33:49
+      lastDateWrittenStr: 1990-03-26 09:38:35
+      bpunValid: null
+    - name: CO-NFS-XX-A00:CXCO
+      type: CXCO
+      pages: 9
+      bytes: 17679
+      userName: FLOPPY-USER
+      dateCreated: 2700381011
+      lastDateRead: 2706565237
+      lastDateWritten: 2700384678
+      dateCreatedStr: 1990-03-26 08:45:19
+      lastDateReadStr: 1990-05-09 14:33:53
+      lastDateWrittenStr: 1990-03-26 09:38:38
+      bpunValid: null
+provenance:
+  contributor: ronny
+  originalPath: kali-ND-FLOPPY/nfs.img
+  dateImaged: 2026-08-18
+  importedAt: 2026-08-18T00:05:53.841Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-211299-a00-d1-3a3535b2
+  syncStatus: pending

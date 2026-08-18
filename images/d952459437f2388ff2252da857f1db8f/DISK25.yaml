@@ -5,6 +5,7 @@ image:
   sizeBytes: 630784
   format: raw
   controller: floppy
+  bootFormat: none
 filesystem: ndfs
 condition:
   status: damaged

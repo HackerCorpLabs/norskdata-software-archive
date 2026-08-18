@@ -5,6 +5,7 @@ image:
   sizeBytes: 1250304
   format: raw
   controller: floppy
+  bootFormat: none
 filesystem: ndfs
 condition:
   status: damaged
@@ -29,11 +30,7 @@ provenance:
 photos:
   disk:
     - 5.jpg
-  set:
-    - 1.jpg
-    - 2.jpg
-    - 3.jpg
-    - 4.jpg
+  set: []
 tags: []
 docs:
   piDocId: null

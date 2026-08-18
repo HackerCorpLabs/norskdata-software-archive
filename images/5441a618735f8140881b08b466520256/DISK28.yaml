@@ -5,6 +5,7 @@ image:
   sizeBytes: 315392
   format: raw
   controller: floppy
+  bootFormat: bpun
 filesystem: none
 provenance:
   contributor: Datormuseum

@@ -1,0 +1,99 @@
+id: nd-210079-n07-d2-189a3326
+volumeName: 210079N07-XX-02D
+md5: 189a3326f21ac82b92a1cb67258a45a5
+product:
+  id: ND-210079
+  version: N07
+  diskNumber: 2
+  language: XX
+image:
+  sizeBytes: 1261568
+  format: raw
+  controller: floppy
+  totalPages: 616
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 163
+  files:
+    - name: NOTIS-NTX-WP:INIT
+      type: INIT
+      pages: 1
+      bytes: 864
+      userName: FLOPPY-USER
+      dateCreated: 2512582563
+      lastDateRead: 2528053216
+      lastDateWritten: 2512582565
+      dateCreatedStr: 1987-07-01 15:30:35
+      lastDateReadStr: 1987-10-23 16:31:32
+      lastDateWrittenStr: 1987-07-01 15:30:37
+      bpunValid: null
+    - name: TF-LIB-COMPRESS:PROG
+      type: PROG
+      pages: 13
+      bytes: 26624
+      userName: FLOPPY-USER
+      dateCreated: 2500009196
+      lastDateRead: 2528053220
+      lastDateWritten: 2512698048
+      dateCreatedStr: 1987-04-01 17:51:44
+      lastDateReadStr: 1987-10-23 16:31:36
+      lastDateWrittenStr: 1987-07-02 11:43:00
+      bpunValid: null
+    - name: WP-OUT-TO-S-N05:PROG
+      type: PROG
+      pages: 69
+      bytes: 212992
+      userName: FLOPPY-USER
+      dateCreated: 2519234747
+      lastDateRead: 2528053252
+      lastDateWritten: 2519234753
+      dateCreatedStr: 1987-08-20 07:34:59
+      lastDateReadStr: 1987-10-23 16:32:04
+      lastDateWrittenStr: 1987-08-20 07:35:01
+      bpunValid: null
+    - name: WP-N-TO-M-N05:PROG
+      type: PROG
+      pages: 40
+      bytes: 165888
+      userName: FLOPPY-USER
+      dateCreated: 2519234802
+      lastDateRead: 2528053278
+      lastDateWritten: 2519234803
+      dateCreatedStr: 1987-08-20 07:35:50
+      lastDateReadStr: 1987-10-23 16:32:30
+      lastDateWrittenStr: 1987-08-20 07:35:51
+      bpunValid: null
+    - name: DDBTABLES-G02:VTM
+      type: VTM
+      pages: 34
+      bytes: 68696
+      userName: FLOPPY-USER
+      dateCreated: 2498949732
+      lastDateRead: 2528053232
+      lastDateWritten: 2505884578
+      dateCreatedStr: 1987-03-25 15:09:36
+      lastDateReadStr: 1987-10-23 16:31:48
+      lastDateWrittenStr: 1987-05-14 12:14:34
+      bpunValid: null
+provenance:
+  contributor: cvs
+  originalPath: ND110-emulator-IMAGES/210079N07-XX-02D.img
+  dateImaged: 2026-08-17
+  importedAt: 2026-08-17T23:12:34.553Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-210079-n07-d2-189a3326
+  syncStatus: pending

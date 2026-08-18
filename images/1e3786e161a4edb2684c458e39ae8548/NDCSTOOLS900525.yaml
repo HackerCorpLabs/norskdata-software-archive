@@ -1,0 +1,46 @@
+id: img-1e3786e161a4
+volumeName: CS-TOOLS
+md5: 1e3786e161a4edb2684c458e39ae8548
+image:
+  sizeBytes: 1260544
+  format: raw
+  controller: floppy
+  totalPages: 616
+  pageSize: 2048
+  bootFormat: binary
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 109
+  files:
+    - name: CHEDIR:PROG
+      type: PROG
+      pages: 107
+      bytes: 251904
+      userName: FLOPPY-USER
+      dateCreated: 2708647034
+      lastDateRead: 2759519424
+      lastDateWritten: 2708647043
+      dateCreatedStr: 1990-05-25 10:49:58
+      lastDateReadStr: 1991-01-29 14:51:00
+      lastDateWrittenStr: 1990-05-25 10:50:03
+      bpunValid: null
+provenance:
+  contributor: cvs
+  originalPath: ND110-emulator-IMAGES/NDCSTOOLS900525.img
+  dateImaged: 2026-08-17
+  importedAt: 2026-08-17T23:12:35.095Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-1e3786e161a4
+  syncStatus: pending

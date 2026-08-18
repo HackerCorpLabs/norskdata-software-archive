@@ -5,6 +5,7 @@ image:
   sizeBytes: 130560
   format: raw
   controller: floppy
+  bootFormat: none
 filesystem: none
 provenance:
   contributor: Datormuseum

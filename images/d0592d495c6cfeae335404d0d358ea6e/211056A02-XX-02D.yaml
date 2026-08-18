@@ -1,0 +1,111 @@
+id: nd-211056-a02-d2-d0592d49
+volumeName: 211056A02-XX-02D
+md5: d0592d495c6cfeae335404d0d358ea6e
+product:
+  id: ND-211056
+  version: A02
+  diskNumber: 2
+  language: XX
+image:
+  sizeBytes: 1261568
+  format: raw
+  controller: floppy
+  totalPages: 616
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 257
+  files:
+    - name: SSYLIB-500-A02:NRF
+      type: NRF
+      pages: 80
+      bytes: 162755
+      userName: FLOPPY-USER
+      dateCreated: 2528953089
+      lastDateRead: 2531347056
+      lastDateWritten: 2528953094
+      dateCreatedStr: 1987-10-30 12:12:01
+      lastDateReadStr: 1987-11-16 20:41:48
+      lastDateWrittenStr: 1987-10-30 12:12:06
+      bpunValid: null
+    - name: SSYLIB-1B-A02:BRF
+      type: BRF
+      pages: 71
+      bytes: 144169
+      userName: FLOPPY-USER
+      dateCreated: 2528953144
+      lastDateRead: 2531347081
+      lastDateWritten: 2528953144
+      dateCreatedStr: 1987-10-30 12:12:56
+      lastDateReadStr: 1987-11-16 20:42:09
+      lastDateWrittenStr: 1987-10-30 12:12:56
+      bpunValid: null
+    - name: SSYLIB-2B-A02:BRF
+      type: BRF
+      pages: 80
+      bytes: 162015
+      userName: FLOPPY-USER
+      dateCreated: 2528953221
+      lastDateRead: 2531347101
+      lastDateWritten: 2528953222
+      dateCreatedStr: 1987-10-30 12:14:05
+      lastDateReadStr: 1987-11-16 20:42:29
+      lastDateWrittenStr: 1987-10-30 12:14:06
+      bpunValid: null
+    - name: SSYLIB-A02:DEFS
+      type: DEFS
+      pages: 2
+      bytes: 3809
+      userName: FLOPPY-USER
+      dateCreated: 2528953354
+      lastDateRead: 2531347123
+      lastDateWritten: 2528953355
+      dateCreatedStr: 1987-10-30 12:16:10
+      lastDateReadStr: 1987-11-16 20:42:51
+      lastDateWrittenStr: 1987-10-30 12:16:11
+      bpunValid: null
+    - name: SSYLIB-A02:IMPT
+      type: IMPT
+      pages: 1
+      bytes: 798
+      userName: FLOPPY-USER
+      dateCreated: 2528953361
+      lastDateRead: 2531347130
+      lastDateWritten: 2528953362
+      dateCreatedStr: 1987-10-30 12:16:17
+      lastDateReadStr: 1987-11-16 20:42:58
+      lastDateWrittenStr: 1987-10-30 12:16:18
+      bpunValid: null
+    - name: DDBTABLES-E07:VTM
+      type: VTM
+      pages: 16
+      bytes: 32448
+      userName: FLOPPY-USER
+      dateCreated: 2505490123
+      lastDateRead: 2506408561
+      lastDateWritten: 2506394059
+      dateCreatedStr: 1987-05-11 11:59:11
+      lastDateReadStr: 1987-05-18 12:09:49
+      lastDateWrittenStr: 1987-05-18 08:39:11
+      bpunValid: null
+provenance:
+  contributor: cvs
+  originalPath: ND110-emulator-IMAGES/211056A02-XX-02D.img
+  dateImaged: 2026-08-17
+  importedAt: 2026-08-17T23:12:34.888Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-211056-a02-d2-d0592d49
+  syncStatus: pending

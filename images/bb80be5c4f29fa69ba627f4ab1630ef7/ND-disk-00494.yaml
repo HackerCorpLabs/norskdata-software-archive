@@ -5,6 +5,8 @@ image:
   sizeBytes: 319488
   format: raw
   controller: floppy
+  bootFormat: bpun
+  bootProgram: flomon
 filesystem: none
 provenance:
   contributor: gandalf

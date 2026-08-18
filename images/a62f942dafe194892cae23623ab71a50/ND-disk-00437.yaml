@@ -8,6 +8,7 @@ image:
   totalPages: 156
   pageSize: 2048
   bootFormat: binary
+  bootProgram: flomon
 filesystem: ndfs
 ndfs:
   users:

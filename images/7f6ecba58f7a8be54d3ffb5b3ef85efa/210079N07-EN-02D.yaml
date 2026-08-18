@@ -1,0 +1,63 @@
+id: nd-210079-n07-d2-7f6ecba5
+volumeName: 210079N07-EN-02D
+md5: 7f6ecba58f7a8be54d3ffb5b3ef85efa
+product:
+  id: ND-210079
+  version: N07
+  diskNumber: 2
+  language: EN
+image:
+  sizeBytes: 1261568
+  format: raw
+  controller: floppy
+  totalPages: 616
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 169
+  files:
+    - name: UE-ERMSG-EN-C06:ERR
+      type: ERR
+      pages: 118
+      bytes: 240896
+      userName: FLOPPY-USER
+      dateCreated: 2521238022
+      lastDateRead: 2533150750
+      lastDateWritten: 2521238026
+      dateCreatedStr: 1987-09-03 16:40:06
+      lastDateReadStr: 1987-11-30 13:00:30
+      lastDateWrittenStr: 1987-09-03 16:40:10
+      bpunValid: null
+    - name: UE-INST-C06:PROG
+      type: PROG
+      pages: 48
+      bytes: 156746
+      userName: FLOPPY-USER
+      dateCreated: 2527529622
+      lastDateRead: 2533150791
+      lastDateWritten: 2527535296
+      dateCreatedStr: 1987-10-19 16:42:22
+      lastDateReadStr: 1987-11-30 13:01:07
+      lastDateWrittenStr: 1987-10-19 18:03:00
+      bpunValid: null
+provenance:
+  contributor: cvs
+  originalPath: ND110-emulator-IMAGES/210079N07-EN-02D.img
+  dateImaged: 2026-08-17
+  importedAt: 2026-08-17T23:12:34.484Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-210079-n07-d2-7f6ecba5
+  syncStatus: pending

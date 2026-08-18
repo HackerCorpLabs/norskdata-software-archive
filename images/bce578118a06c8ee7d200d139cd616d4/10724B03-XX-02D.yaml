@@ -1,0 +1,171 @@
+id: nd-10724-b03-d2-bce57811
+volumeName: 10724B03-XX-02D
+md5: bce578118a06c8ee7d200d139cd616d4
+product:
+  id: ND-10724
+  version: B03
+  diskNumber: 2
+  language: XX
+image:
+  sizeBytes: 1261568
+  format: raw
+  controller: floppy
+  totalPages: 616
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 85
+  files:
+    - name: BG-DRIV01-B03:BRF
+      type: BRF
+      pages: 7
+      bytes: 13458
+      userName: FLOPPY-USER
+      dateCreated: 2423040578
+      lastDateRead: 2526063888
+      lastDateWritten: 2423040583
+      dateCreatedStr: 1986-01-22 10:41:02
+      lastDateReadStr: 1987-10-08 10:52:16
+      lastDateWrittenStr: 1986-01-22 10:41:07
+      bpunValid: null
+    - name: BG-DRIV02-B03:BRF
+      type: BRF
+      pages: 9
+      bytes: 16670
+      userName: FLOPPY-USER
+      dateCreated: 2423040594
+      lastDateRead: 2526063911
+      lastDateWritten: 2423040595
+      dateCreatedStr: 1986-01-22 10:41:18
+      lastDateReadStr: 1987-10-08 10:52:39
+      lastDateWrittenStr: 1986-01-22 10:41:19
+      bpunValid: null
+    - name: BG-DRIV03-B03:BRF
+      type: BRF
+      pages: 8
+      bytes: 16116
+      userName: FLOPPY-USER
+      dateCreated: 2423040608
+      lastDateRead: 2526063940
+      lastDateWritten: 2423040610
+      dateCreatedStr: 1986-01-22 10:41:32
+      lastDateReadStr: 1987-10-08 10:53:04
+      lastDateWrittenStr: 1986-01-22 10:41:34
+      bpunValid: null
+    - name: BG-DRIV04-B03:BRF
+      type: BRF
+      pages: 9
+      bytes: 16653
+      userName: FLOPPY-USER
+      dateCreated: 2423040622
+      lastDateRead: 2526063963
+      lastDateWritten: 2423040624
+      dateCreatedStr: 1986-01-22 10:41:46
+      lastDateReadStr: 1987-10-08 10:53:27
+      lastDateWrittenStr: 1986-01-22 10:41:48
+      bpunValid: null
+    - name: BG-DRIV05-B03:BRF
+      type: BRF
+      pages: 8
+      bytes: 14420
+      userName: FLOPPY-USER
+      dateCreated: 2423040644
+      lastDateRead: 2526063987
+      lastDateWritten: 2423040645
+      dateCreatedStr: 1986-01-22 10:42:04
+      lastDateReadStr: 1987-10-08 10:53:51
+      lastDateWrittenStr: 1986-01-22 10:42:05
+      bpunValid: null
+    - name: BG-DRIV15-B03:BRF
+      type: BRF
+      pages: 8
+      bytes: 14454
+      userName: FLOPPY-USER
+      dateCreated: 2423040661
+      lastDateRead: 2526063861
+      lastDateWritten: 2423040662
+      dateCreatedStr: 1986-01-22 10:42:21
+      lastDateReadStr: 1987-10-08 10:51:53
+      lastDateWrittenStr: 1986-01-22 10:42:22
+      bpunValid: null
+    - name: BG-PART2-B03:PROG
+      type: PROG
+      pages: 11
+      bytes: 21812
+      userName: FLOPPY-USER
+      dateCreated: 2423040675
+      lastDateRead: 2526064015
+      lastDateWritten: 2423040676
+      dateCreatedStr: 1986-01-22 10:42:35
+      lastDateReadStr: 1987-10-08 10:54:15
+      lastDateWrittenStr: 1986-01-22 10:42:36
+      bpunValid: null
+    - name: BG-PRINTERS-B03:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 749
+      userName: FLOPPY-USER
+      dateCreated: 2423040693
+      lastDateRead: 2526063813
+      lastDateWritten: 2424239392
+      dateCreatedStr: 1986-01-22 10:42:53
+      lastDateReadStr: 1987-10-08 10:51:05
+      lastDateWrittenStr: 1986-01-31 15:20:32
+      bpunValid: null
+    - name: BG-TYPER-B03:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 1479
+      userName: FLOPPY-USER
+      dateCreated: 2423040704
+      lastDateRead: 2526063786
+      lastDateWritten: 2423040705
+      dateCreatedStr: 1986-01-22 10:43:00
+      lastDateReadStr: 1987-10-08 10:50:42
+      lastDateWrittenStr: 1986-01-22 10:43:01
+      bpunValid: null
+    - name: DDBTABLES-E02:VTM
+      type: VTM
+      pages: 10
+      bytes: 15034
+      userName: FLOPPY-USER
+      dateCreated: 2423040711
+      lastDateRead: 2526063821
+      lastDateWritten: 2423040712
+      dateCreatedStr: 1986-01-22 10:43:07
+      lastDateReadStr: 1987-10-08 10:51:13
+      lastDateWrittenStr: 1986-01-22 10:43:08
+      bpunValid: null
+    - name: DDB078:VTM
+      type: VTM
+      pages: 1
+      bytes: 625
+      userName: FLOPPY-USER
+      dateCreated: 2423040732
+      lastDateRead: 2526063834
+      lastDateWritten: 2423040733
+      dateCreatedStr: 1986-01-22 10:43:28
+      lastDateReadStr: 1987-10-08 10:51:26
+      lastDateWrittenStr: 1986-01-22 10:43:29
+      bpunValid: null
+provenance:
+  contributor: cvs
+  originalPath: ND110-emulator-IMAGES/10724B03-XX-02D.img
+  dateImaged: 2026-08-17
+  importedAt: 2026-08-17T23:12:34.346Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10724-b03-d2-bce57811
+  syncStatus: pending

@@ -7,7 +7,7 @@ image:
   controller: floppy
   totalPages: 156
   pageSize: 2048
-  bootFormat: bpun
+  bootFormat: binary
 filesystem: ndfs
 ndfs:
   users:

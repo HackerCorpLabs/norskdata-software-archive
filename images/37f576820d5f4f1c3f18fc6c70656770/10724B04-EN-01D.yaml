@@ -1,0 +1,159 @@
+id: nd-10724-b04-d1-37f57682
+volumeName: 10724B04-EN-01D
+md5: 37f576820d5f4f1c3f18fc6c70656770
+product:
+  id: ND-10724
+  version: B04
+  diskNumber: 1
+  language: EN
+image:
+  sizeBytes: 1261568
+  format: raw
+  controller: floppy
+  totalPages: 616
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 147
+  files:
+    - name: BG-PART1-EN-B04:BRF
+      type: BRF
+      pages: 55
+      bytes: 111123
+      userName: FLOPPY-USER
+      dateCreated: 2423039478
+      lastDateRead: 2526063685
+      lastDateWritten: 2453192174
+      dateCreatedStr: 1986-01-22 10:23:54
+      lastDateReadStr: 1987-10-08 10:49:05
+      lastDateWrittenStr: 1986-08-28 11:55:46
+      bpunValid: null
+    - name: INST-BG148-B04:PROG
+      type: PROG
+      pages: 3
+      bytes: 6144
+      userName: FLOPPY-USER
+      dateCreated: 2423039540
+      lastDateRead: 2526062051
+      lastDateWritten: 2423039541
+      dateCreatedStr: 1986-01-22 10:24:52
+      lastDateReadStr: 1987-10-08 10:23:35
+      lastDateWrittenStr: 1986-01-22 10:24:53
+      bpunValid: null
+    - name: BG-EX01-EN-B04:PLOT
+      type: PLOT
+      pages: 1
+      bytes: 415
+      userName: FLOPPY-USER
+      dateCreated: 2423039554
+      lastDateRead: 2526063507
+      lastDateWritten: 2423039555
+      dateCreatedStr: 1986-01-22 10:25:02
+      lastDateReadStr: 1987-10-08 10:46:19
+      lastDateWrittenStr: 1986-01-22 10:25:03
+      bpunValid: null
+    - name: BG-EX02-EN-B04:PLOT
+      type: PLOT
+      pages: 1
+      bytes: 328
+      userName: FLOPPY-USER
+      dateCreated: 2423039563
+      lastDateRead: 2526063534
+      lastDateWritten: 2423039564
+      dateCreatedStr: 1986-01-22 10:25:11
+      lastDateReadStr: 1987-10-08 10:46:46
+      lastDateWrittenStr: 1986-01-22 10:25:12
+      bpunValid: null
+    - name: BG-EX03-EN-B04:PLOT
+      type: PLOT
+      pages: 1
+      bytes: 311
+      userName: FLOPPY-USER
+      dateCreated: 2423039573
+      lastDateRead: 2526063561
+      lastDateWritten: 2423039574
+      dateCreatedStr: 1986-01-22 10:25:21
+      lastDateReadStr: 1987-10-08 10:47:09
+      lastDateWrittenStr: 1986-01-22 10:25:22
+      bpunValid: null
+    - name: BG-EX04-EN-B04:PLOT
+      type: PLOT
+      pages: 1
+      bytes: 425
+      userName: FLOPPY-USER
+      dateCreated: 2423039582
+      lastDateRead: 2526063585
+      lastDateWritten: 2423039583
+      dateCreatedStr: 1986-01-22 10:25:30
+      lastDateReadStr: 1987-10-08 10:47:33
+      lastDateWrittenStr: 1986-01-22 10:25:31
+      bpunValid: null
+    - name: BG-EX05-EN-B04:PLOT
+      type: PLOT
+      pages: 1
+      bytes: 284
+      userName: FLOPPY-USER
+      dateCreated: 2423039592
+      lastDateRead: 2526063610
+      lastDateWritten: 2423039593
+      dateCreatedStr: 1986-01-22 10:25:40
+      lastDateReadStr: 1987-10-08 10:47:58
+      lastDateWrittenStr: 1986-01-22 10:25:41
+      bpunValid: null
+    - name: BG-EX06-EN-B04:PLOT
+      type: PLOT
+      pages: 1
+      bytes: 593
+      userName: FLOPPY-USER
+      dateCreated: 2423039601
+      lastDateRead: 2526063648
+      lastDateWritten: 2423039602
+      dateCreatedStr: 1986-01-22 10:25:49
+      lastDateReadStr: 1987-10-08 10:48:32
+      lastDateWrittenStr: 1986-01-22 10:25:50
+      bpunValid: null
+    - name: INST-BG148-B04:COM
+      type: COM
+      pages: 13
+      bytes: 25839
+      userName: FLOPPY-USER
+      dateCreated: 2423039609
+      lastDateRead: 2526062080
+      lastDateWritten: 2450996620
+      dateCreatedStr: 1986-01-22 10:25:57
+      lastDateReadStr: 1987-10-08 10:24:00
+      lastDateWrittenStr: 1986-08-11 19:54:12
+      bpunValid: null
+    - name: XCOM:PROG
+      type: PROG
+      pages: 59
+      bytes: 182272
+      userName: FLOPPY-USER
+      dateCreated: 2423039634
+      lastDateRead: 2526062054
+      lastDateWritten: 2526058929
+      dateCreatedStr: 1986-01-22 10:26:18
+      lastDateReadStr: 1987-10-08 10:23:38
+      lastDateWrittenStr: 1987-10-08 09:38:49
+      bpunValid: null
+provenance:
+  contributor: cvs
+  originalPath: ND110-emulator-IMAGES/10724B04-EN-01D.img
+  dateImaged: 2026-08-17
+  importedAt: 2026-08-17T23:12:34.389Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10724-b04-d1-37f57682
+  syncStatus: pending

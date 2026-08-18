@@ -1,0 +1,63 @@
+id: nd-211004-a01-d1-215e1892
+volumeName: 211004A01-NO-01D
+md5: 215e1892756481efe87945febe882f5c
+product:
+  id: ND-211004
+  version: A01
+  diskNumber: 1
+  language: NO
+image:
+  sizeBytes: 1261568
+  format: raw
+  controller: floppy
+  totalPages: 616
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 76
+  files:
+    - name: INST-ENCRYPT-A01:PROG
+      type: PROG
+      pages: 42
+      bytes: 148180
+      userName: FLOPPY-USER
+      dateCreated: 2423050601
+      lastDateRead: 2423050914
+      lastDateWritten: 2423050602
+      dateCreatedStr: 1986-01-22 13:05:41
+      lastDateReadStr: 1986-01-22 13:10:34
+      lastDateWrittenStr: 1986-01-22 13:05:42
+      bpunValid: null
+    - name: NOTIS-ENCR-NO-A0:PROG
+      type: PROG
+      pages: 31
+      bytes: 264192
+      userName: FLOPPY-USER
+      dateCreated: 2400625925
+      lastDateRead: 2557946369
+      lastDateWritten: 2400625927
+      dateCreatedStr: 1985-12-11 10:20:05
+      lastDateReadStr: 1988-01-27 18:40:01
+      lastDateWrittenStr: 1985-12-11 10:20:07
+      bpunValid: null
+provenance:
+  contributor: cvs
+  originalPath: ND110-emulator-IMAGES/ND211004A01-01D.img
+  dateImaged: 2026-08-17
+  importedAt: 2026-08-17T23:12:35.049Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-211004-a01-d1-215e1892
+  syncStatus: pending

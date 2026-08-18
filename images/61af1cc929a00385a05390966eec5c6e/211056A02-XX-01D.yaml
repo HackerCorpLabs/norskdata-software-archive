@@ -1,0 +1,123 @@
+id: nd-211056-a02-d1-61af1cc9
+volumeName: 211056A02-XX-01D
+md5: 61af1cc929a00385a05390966eec5c6e
+product:
+  id: ND-211056
+  version: A02
+  diskNumber: 1
+  language: XX
+image:
+  sizeBytes: 1261568
+  format: raw
+  controller: floppy
+  totalPages: 616
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 507
+  files:
+    - name: SSY-MAIN-A02:PROG
+      type: PROG
+      pages: 124
+      bytes: 401408
+      userName: FLOPPY-USER
+      dateCreated: 2529111289
+      lastDateRead: 2531346882
+      lastDateWritten: 2529111297
+      dateCreatedStr: 1987-10-31 18:51:57
+      lastDateReadStr: 1987-11-16 20:39:02
+      lastDateWrittenStr: 1987-10-31 18:52:01
+      bpunValid: null
+    - name: SSY-SECO-A02:PROG
+      type: PROG
+      pages: 60
+      bytes: 401408
+      userName: FLOPPY-USER
+      dateCreated: 2529111383
+      lastDateRead: 2531346910
+      lastDateWritten: 2529111384
+      dateCreatedStr: 1987-10-31 18:53:23
+      lastDateReadStr: 1987-11-16 20:39:30
+      lastDateWrittenStr: 1987-10-31 18:53:24
+      bpunValid: null
+    - name: SSY-SERVER-A02:PROG
+      type: PROG
+      pages: 96
+      bytes: 223232
+      userName: FLOPPY-USER
+      dateCreated: 2529111446
+      lastDateRead: 2531346927
+      lastDateWritten: 2529111446
+      dateCreatedStr: 1987-10-31 18:54:22
+      lastDateReadStr: 1987-11-16 20:39:47
+      lastDateWrittenStr: 1987-10-31 18:54:22
+      bpunValid: null
+    - name: SSY-PSHA-A02:PROG
+      type: PROG
+      pages: 39
+      bytes: 397312
+      userName: FLOPPY-USER
+      dateCreated: 2529111562
+      lastDateRead: 2531346955
+      lastDateWritten: 2529111562
+      dateCreatedStr: 1987-10-31 18:56:10
+      lastDateReadStr: 1987-11-16 20:40:11
+      lastDateWrittenStr: 1987-10-31 18:56:10
+      bpunValid: null
+    - name: VISI-SERVER-A02:PROG
+      type: PROG
+      pages: 66
+      bytes: 294912
+      userName: FLOPPY-USER
+      dateCreated: 2529111622
+      lastDateRead: 2531347003
+      lastDateWritten: 2529111623
+      dateCreatedStr: 1987-10-31 18:57:06
+      lastDateReadStr: 1987-11-16 20:40:59
+      lastDateWrittenStr: 1987-10-31 18:57:07
+      bpunValid: null
+    - name: PRM-SERVER-A02:PFIL
+      type: PFIL
+      pages: 65
+      bytes: 131584
+      userName: FLOPPY-USER
+      dateCreated: 2529111718
+      lastDateRead: 2531346968
+      lastDateWritten: 2529111718
+      dateCreatedStr: 1987-10-31 18:58:38
+      lastDateReadStr: 1987-11-16 20:40:24
+      lastDateWrittenStr: 1987-10-31 18:58:38
+      bpunValid: null
+    - name: PRM-SERVER-A02:DFIL
+      type: DFIL
+      pages: 49
+      bytes: 99328
+      userName: FLOPPY-USER
+      dateCreated: 2529112079
+      lastDateRead: 2531346987
+      lastDateWritten: 2529112080
+      dateCreatedStr: 1987-10-31 19:00:15
+      lastDateReadStr: 1987-11-16 20:40:43
+      lastDateWrittenStr: 1987-10-31 19:00:16
+      bpunValid: null
+provenance:
+  contributor: cvs
+  originalPath: ND110-emulator-IMAGES/211056A02-XX-01D.img
+  dateImaged: 2026-08-17
+  importedAt: 2026-08-17T23:12:34.862Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-211056-a02-d1-61af1cc9
+  syncStatus: pending

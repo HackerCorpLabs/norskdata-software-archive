@@ -12,7 +12,8 @@ image:
   controller: floppy
   totalPages: 640
   pageSize: 2048
-  bootFormat: flomon
+  bootFormat: bpun
+  bootProgram: flomon
 filesystem: ndfs
 ndfs:
   users:

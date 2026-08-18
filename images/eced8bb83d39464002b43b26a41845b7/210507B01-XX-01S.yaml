@@ -1,0 +1,75 @@
+id: nd-210507-b01-d1-eced8bb8
+volumeName: 210507B01-XX-01S
+md5: eced8bb83d39464002b43b26a41845b7
+product:
+  id: ND-210507
+  version: B01
+  diskNumber: 1
+  language: XX
+image:
+  sizeBytes: 315392
+  format: raw
+  controller: floppy
+  totalPages: 154
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: SYSTEM
+      pagesUsed: 108
+  files:
+    - name: INSERT-SOFTK-B01:PROG
+      type: PROG
+      pages: 22
+      bytes: 145408
+      userName: SYSTEM
+      dateCreated: 2438925825
+      lastDateRead: 2836178359
+      lastDateWritten: 2438925825
+      dateCreatedStr: 1986-05-15 16:56:01
+      lastDateReadStr: 1992-04-06 10:22:55
+      lastDateWrittenStr: 1986-05-15 16:56:01
+      bpunValid: null
+    - name: KEYS-B01:DATA
+      type: DATA
+      pages: 66
+      bytes: 135168
+      userName: SYSTEM
+      dateCreated: 2439024713
+      lastDateRead: 2836178369
+      lastDateWritten: 2565772395
+      dateCreatedStr: 1986-05-16 09:01:09
+      lastDateReadStr: 1992-04-06 10:23:01
+      lastDateWrittenStr: 1988-03-23 09:17:43
+      bpunValid: null
+    - name: LIST-LEGALNO-B01:PROG
+      type: PROG
+      pages: 16
+      bytes: 32768
+      userName: SYSTEM
+      dateCreated: 2439022662
+      lastDateRead: 2836178331
+      lastDateWritten: 2439022662
+      dateCreatedStr: 1986-05-16 08:33:06
+      lastDateReadStr: 1992-04-06 10:22:27
+      lastDateWrittenStr: 1986-05-16 08:33:06
+      bpunValid: null
+provenance:
+  contributor: cvs
+  originalPath: ND110-emulator-IMAGES/210507B01-XX-01S.img
+  dateImaged: 2026-08-17
+  importedAt: 2026-08-17T23:12:34.619Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-210507-b01-d1-eced8bb8
+  syncStatus: pending

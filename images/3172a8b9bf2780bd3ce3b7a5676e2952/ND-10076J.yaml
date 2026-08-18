@@ -1,0 +1,85 @@
+id: nd-10076-j-d1-3172a8b9
+volumeName: ND-10076J
+md5: 3172a8b9bf2780bd3ce3b7a5676e2952
+product:
+  id: ND-10076
+  version: J
+image:
+  sizeBytes: 1261568
+  format: raw
+  controller: floppy
+  totalPages: 616
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 112
+  files:
+    - name: PASCAL-COD-J:BRF
+      type: BRF
+      pages: 77
+      bytes: 156350
+      userName: FLOPPY-USER
+      dateCreated: 2265892267
+      lastDateRead: 2494087458
+      lastDateWritten: 2266012879
+      dateCreatedStr: 1983-12-07 12:22:43
+      lastDateReadStr: 1987-02-20 12:04:34
+      lastDateWrittenStr: 1983-12-08 09:51:15
+      bpunValid: null
+    - name: PASCAL-LIB-J:BRF
+      type: BRF
+      pages: 13
+      bytes: 25828
+      userName: FLOPPY-USER
+      dateCreated: 2265892379
+      lastDateRead: 2622661829
+      lastDateWritten: 2265892382
+      dateCreatedStr: 1983-12-07 12:24:27
+      lastDateReadStr: 1989-01-09 10:19:05
+      lastDateWrittenStr: 1983-12-07 12:24:30
+      bpunValid: null
+    - name: PASCAL-2LIB-J:BRF
+      type: BRF
+      pages: 13
+      bytes: 26078
+      userName: FLOPPY-USER
+      dateCreated: 2265892445
+      lastDateRead: 2494087497
+      lastDateWritten: 2265892447
+      dateCreatedStr: 1983-12-07 12:25:29
+      lastDateReadStr: 1987-02-20 12:05:09
+      lastDateWrittenStr: 1983-12-07 12:25:31
+      bpunValid: null
+    - name: PASCAL-ERR-J:SYMB
+      type: SYMB
+      pages: 4
+      bytes: 7393
+      userName: FLOPPY-USER
+      dateCreated: 2265892487
+      lastDateRead: 2494087505
+      lastDateWritten: 2265892488
+      dateCreatedStr: 1983-12-07 12:26:07
+      lastDateReadStr: 1987-02-20 12:05:17
+      lastDateWrittenStr: 1983-12-07 12:26:08
+      bpunValid: null
+provenance:
+  contributor: cvs
+  originalPath: ND110-emulator-IMAGES/ND-10076J.img
+  dateImaged: 2026-08-17
+  importedAt: 2026-08-17T23:12:35.009Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10076-j-d1-3172a8b9
+  syncStatus: pending

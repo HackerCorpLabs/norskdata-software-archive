@@ -5,6 +5,7 @@ image:
   sizeBytes: 1261568
   format: raw
   controller: floppy
+  bootFormat: none
 filesystem: none
 provenance:
   contributor: paal

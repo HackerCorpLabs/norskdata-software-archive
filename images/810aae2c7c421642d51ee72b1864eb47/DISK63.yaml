@@ -21,97 +21,97 @@ backupSet:
   imageBytes: 315392
 backupFiles:
   - name: FILE-A1:SYMB
-    bytes: 5120
+    bytes: 4096
     created: 1985-02-18
     system: null
     continued: false
     stale: false
   - name: FILE-A2:SYMB
-    bytes: 3072
+    bytes: 1540
     created: 1985-02-18
     system: null
     continued: false
     stale: false
   - name: FILE-A3:SYMB
-    bytes: 5120
+    bytes: 2100
     created: 1985-02-18
     system: null
     continued: false
     stale: false
   - name: NEW-PANGBAS:SYMB
-    bytes: 5120
+    bytes: 3009
     created: 1985-02-18
     system: null
     continued: false
     stale: false
   - name: FIL-VIS-3:SYMB
-    bytes: 7168
+    bytes: 4982
     created: 1985-02-18
     system: null
     continued: false
     stale: false
   - name: FIL-VIS-3:PROG
-    bytes: 111616
+    bytes: 110591
     created: 1985-02-18
     system: null
     continued: false
     stale: false
   - name: FIL-VIS-3:BRF
-    bytes: 7168
+    bytes: 4149
     created: 1985-02-18
     system: null
     continued: false
     stale: false
   - name: RESULTAT:UNIQ
-    bytes: 5120
+    bytes: 2711
     created: 1985-02-18
     system: null
     continued: false
     stale: false
   - name: NEW-ANMELAN:UNIQ
-    bytes: 5120
+    bytes: 1884
     created: 1985-02-18
     system: null
     continued: false
     stale: false
   - name: UNIQUE-ISAM-C:MENU
-    bytes: 3072
+    bytes: 614
     created: 1985-02-18
     system: null
     continued: false
     stale: false
   - name: SOEK:UNIQ
-    bytes: 3072
+    bytes: 1711
     created: 1985-02-18
     system: null
     continued: false
     stale: false
   - name: ROHE-LIB:BRF
-    bytes: 11264
+    bytes: 8687
     created: 1985-02-18
     system: null
     continued: false
     stale: false
   - name: MON-CALLS:TEXT
-    bytes: 33792
+    bytes: 9302
     created: 1985-02-18
     system: null
     continued: false
     stale: false
   - name: FIL-VIS-3:BRF
-    bytes: 7168
+    bytes: 4149
     created: 1985-02-18
     system: null
     continued: false
     stale: false
   - name: FIL-VIS:BRF
-    bytes: 5120
+    bytes: 3783
     created: 1985-02-18
     system: null
     continued: false
     stale: false
   - name: FIL-VIS-3:PROG
-    bytes: 73216
+    bytes: 0
     created: 1985-02-18
     system: null
     continued: true

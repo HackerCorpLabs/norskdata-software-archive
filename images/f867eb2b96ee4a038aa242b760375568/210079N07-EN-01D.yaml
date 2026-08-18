@@ -1,0 +1,171 @@
+id: nd-210079-n07-d1-f867eb2b
+volumeName: 210079N07-EN-01D
+md5: f867eb2b96ee4a038aa242b760375568
+product:
+  id: ND-210079
+  version: N07
+  diskNumber: 1
+  language: EN
+image:
+  sizeBytes: 1261568
+  format: raw
+  controller: floppy
+  totalPages: 616
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 365
+  files:
+    - name: WP-EX-1-EN-N04:TEXT
+      type: TEXT
+      pages: 4
+      bytes: 7030
+      userName: FLOPPY-USER
+      dateCreated: 2522268803
+      lastDateRead: 2560677730
+      lastDateWritten: 2522268807
+      dateCreatedStr: 1987-09-11 12:18:03
+      lastDateReadStr: 1988-02-16 13:29:34
+      lastDateWrittenStr: 1987-09-11 12:18:07
+      bpunValid: null
+    - name: WP-EX-2-EN-N04:TEXT
+      type: TEXT
+      pages: 2
+      bytes: 2999
+      userName: FLOPPY-USER
+      dateCreated: 2522268812
+      lastDateRead: 2560677735
+      lastDateWritten: 2522268813
+      dateCreatedStr: 1987-09-11 12:18:12
+      lastDateReadStr: 1988-02-16 13:29:39
+      lastDateWrittenStr: 1987-09-11 12:18:13
+      bpunValid: null
+    - name: WP-EX-3-EN-N04:TEXT
+      type: TEXT
+      pages: 2
+      bytes: 3132
+      userName: FLOPPY-USER
+      dateCreated: 2522268817
+      lastDateRead: 2560677740
+      lastDateWritten: 2522268818
+      dateCreatedStr: 1987-09-11 12:18:17
+      lastDateReadStr: 1988-02-16 13:29:44
+      lastDateWrittenStr: 1987-09-11 12:18:18
+      bpunValid: null
+    - name: WP-EX-S-EN-N04:STXT
+      type: STXT
+      pages: 12
+      bytes: 25600
+      userName: FLOPPY-USER
+      dateCreated: 2522268822
+      lastDateRead: 2560677745
+      lastDateWritten: 2522268823
+      dateCreatedStr: 1987-09-11 12:18:22
+      lastDateReadStr: 1988-02-16 13:29:49
+      lastDateWrittenStr: 1987-09-11 12:18:23
+      bpunValid: null
+    - name: WP-EX-U-EN-N05:UDK
+      type: UDK
+      pages: 27
+      bytes: 54272
+      userName: FLOPPY-USER
+      dateCreated: 2522268831
+      lastDateRead: 2560677751
+      lastDateWritten: 2522268833
+      dateCreatedStr: 1987-09-11 12:18:31
+      lastDateReadStr: 1988-02-16 13:29:55
+      lastDateWrittenStr: 1987-09-11 12:18:33
+      bpunValid: null
+    - name: FILESIZE-100-N06:XCOM
+      type: XCOM
+      pages: 1
+      bytes: 2046
+      userName: FLOPPY-USER
+      dateCreated: 2522268849
+      lastDateRead: 2560677571
+      lastDateWritten: 2522268851
+      dateCreatedStr: 1987-09-11 12:18:49
+      lastDateReadStr: 1988-02-16 13:27:03
+      lastDateWrittenStr: 1987-09-11 12:18:51
+      bpunValid: null
+    - name: WP-INST-100-N07:PROG
+      type: PROG
+      pages: 76
+      bytes: 212796
+      userName: FLOPPY-USER
+      dateCreated: 2526582925
+      lastDateRead: 2560677591
+      lastDateWritten: 2527509257
+      dateCreatedStr: 1987-10-12 09:34:13
+      lastDateReadStr: 1988-02-16 13:27:23
+      lastDateWrittenStr: 1987-10-19 11:44:09
+      bpunValid: null
+    - name: NOTIS-TF-EN-N04:LIB
+      type: LIB
+      pages: 44
+      bytes: 88546
+      userName: FLOPPY-USER
+      dateCreated: 2522268912
+      lastDateRead: 2560677809
+      lastDateWritten: 2522268913
+      dateCreatedStr: 1987-09-11 12:19:48
+      lastDateReadStr: 1988-02-16 13:30:49
+      lastDateWrittenStr: 1987-09-11 12:19:49
+      bpunValid: null
+    - name: NOTIS-WP-EN-N04:HELP
+      type: HELP
+      pages: 166
+      bytes: 338944
+      userName: FLOPPY-USER
+      dateCreated: 2522268953
+      lastDateRead: 2560677764
+      lastDateWritten: 2522268954
+      dateCreatedStr: 1987-09-11 12:20:25
+      lastDateReadStr: 1988-02-16 13:30:04
+      lastDateWrittenStr: 1987-09-11 12:20:26
+      bpunValid: null
+    - name: TAB-HY-EN-K00:HBRF
+      type: HBRF
+      pages: 16
+      bytes: 32654
+      userName: FLOPPY-USER
+      dateCreated: 2522269138
+      lastDateRead: 2560677800
+      lastDateWritten: 2522269139
+      dateCreatedStr: 1987-09-11 12:23:18
+      lastDateReadStr: 1988-02-16 13:30:40
+      lastDateWrittenStr: 1987-09-11 12:23:19
+      bpunValid: null
+    - name: WP-LANGUAGES-N05:XCOM
+      type: XCOM
+      pages: 3
+      bytes: 4627
+      userName: FLOPPY-USER
+      dateCreated: 2522269163
+      lastDateRead: 2560677574
+      lastDateWritten: 2522269164
+      dateCreatedStr: 1987-09-11 12:23:43
+      lastDateReadStr: 1988-02-16 13:27:06
+      lastDateWrittenStr: 1987-09-11 12:23:44
+      bpunValid: null
+provenance:
+  contributor: cvs
+  originalPath: ND110-emulator-IMAGES/210079N07-EN-01D.img
+  dateImaged: 2026-08-17
+  importedAt: 2026-08-17T23:12:34.449Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-210079-n07-d1-f867eb2b
+  syncStatus: pending

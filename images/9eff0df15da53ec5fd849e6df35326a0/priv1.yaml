@@ -1,0 +1,58 @@
+id: img-9eff0df15da5
+volumeName: OLDUSER
+md5: 9eff0df15da53ec5fd849e6df35326a0
+image:
+  sizeBytes: 1261568
+  format: raw
+  controller: floppy
+  totalPages: 616
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 38
+  files:
+    - name: NOTIS-WP-EN-M:INIT
+      type: INIT
+      pages: 1
+      bytes: 310
+      userName: FLOPPY-USER
+      dateCreated: 2430125421
+      lastDateRead: 2505610540
+      lastDateWritten: 2430910703
+      dateCreatedStr: 1986-03-12 12:21:45
+      lastDateReadStr: 1987-05-12 09:20:44
+      lastDateWrittenStr: 1986-03-18 12:03:47
+      bpunValid: null
+    - name: OS-252:SYMB
+      type: SYMB
+      pages: 35
+      bytes: 70979
+      userName: FLOPPY-USER
+      dateCreated: 2433801666
+      lastDateRead: 2505610549
+      lastDateWritten: 2433807746
+      dateCreatedStr: 1986-04-08 13:55:02
+      lastDateReadStr: 1987-05-12 09:20:53
+      lastDateWrittenStr: 1986-04-08 15:22:02
+      bpunValid: null
+provenance:
+  contributor: ronny
+  originalPath: kali-ND-FLOPPY/priv1.img
+  dateImaged: 2026-08-18
+  importedAt: 2026-08-18T00:05:53.866Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-9eff0df15da5
+  syncStatus: pending
