@@ -3746,6 +3746,7 @@ tr.ndfs-file-selected,
     if (catalogState.q) qp.push('q=' + encodeURIComponent(catalogState.q));
     if (catalogState.contributor) qp.push('contributor=' + encodeURIComponent(catalogState.contributor));
     if (catalogState.status) qp.push('status=' + encodeURIComponent(catalogState.status));
+    if (catalogState.filesystem) qp.push('filesystem=' + encodeURIComponent(catalogState.filesystem));
     if (catalogState.offset > 0) qp.push('offset=' + catalogState.offset);
     if (qp.length) parts.push(qp.join('&'));
     // Don't re-render the whole page, just reload results
@@ -3952,6 +3953,7 @@ tr.ndfs-file-selected,
     if (catalogState.q) qp.push('q=' + encodeURIComponent(catalogState.q));
     if (catalogState.contributor) qp.push('contributor=' + encodeURIComponent(catalogState.contributor));
     if (catalogState.status) qp.push('status=' + encodeURIComponent(catalogState.status));
+    if (catalogState.filesystem) qp.push('filesystem=' + encodeURIComponent(catalogState.filesystem));
     var base = qp.length ? qp.join('&') + '&' : '';
 
     var html = '<span class="nd-text-muted">' + total + ' total · Page ' + page + '/' + totalPages + '</span> ';

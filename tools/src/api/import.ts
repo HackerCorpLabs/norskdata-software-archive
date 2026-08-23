@@ -252,6 +252,12 @@ export interface ScannedArtifacts {
    * photo of the set - they are left behind and only reported.
    */
   otherDiskPhotos: string[];
+  /**
+   * The same case for read logs: a log named after an image that lies in the
+   * source folder but is not part of this run. It is that one disk's log, so
+   * it is not the folder's either - left behind and only reported.
+   */
+  otherDiskLogs: string[];
 }
 
 /** Configurable extension lists for scanning */
@@ -285,6 +291,7 @@ export async function scanFolderArtifacts(
   const imagingLogs: string[] = [];
   const unmapped: string[] = [];
   const otherDiskPhotos: string[] = [];
+  const otherDiskLogs: string[] = [];
 
   const imgBases = imgFilenames.map(f => f.replace(/\.[^.]+$/i, '').toLowerCase());
   const volBases = volumeNames.filter(Boolean).map(v => v!.toLowerCase());
@@ -355,7 +362,13 @@ export async function scanFolderArtifacts(
             break;
           }
         }
-        if (!matchedLog) imagingLogs.push(f);
+        if (!matchedLog) {
+          // Named after a disk lying in the folder but outside this run - that
+          // disk's log. Without this it counted as a log of the whole folder
+          // and was copied onto an image it has nothing to do with.
+          if (folderImgBases.has(logBase)) otherDiskLogs.push(f);
+          else imagingLogs.push(f);
+        }
       } else {
         // Not matched by any configured extension
         unmapped.push(f);
@@ -363,7 +376,7 @@ export async function scanFolderArtifacts(
     }
   } catch { /* ignore */ }
 
-  return { diskPhotos, setPhotos, transcription, diskLogs, imagingLogs, unmapped, otherDiskPhotos };
+  return { diskPhotos, setPhotos, transcription, diskLogs, imagingLogs, unmapped, otherDiskPhotos, otherDiskLogs };
 }
 
 /**
