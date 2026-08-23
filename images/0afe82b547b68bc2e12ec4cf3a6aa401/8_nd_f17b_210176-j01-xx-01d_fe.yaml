@@ -1,5 +1,5 @@
 id: img-0afe82b547b6
-volumeName: null
+volumeName: 210176J01-XX-01D
 md5: 0afe82b547b68bc2e12ec4cf3a6aa401
 image:
   sizeBytes: 1253376
@@ -10,7 +10,7 @@ filesystem: ndfs
 condition:
   status: damaged
   parser: ndfs
-  parserError: Block 134154311 out of range
+  parserError: "object file unreadable: 14 entries parsed, 0 with a legible ND name"
   ndNamesFound: 27
   ndNameSamples:
     - V00A-FOR:SCRA
