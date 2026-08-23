@@ -1,5 +1,5 @@
 id: img-5abb5522f230
-volumeName: null
+volumeName: N-10-102-I
 md5: 5abb5522f2307a0e61bf5e98d5838ae9
 image:
   sizeBytes: 315392
@@ -8,21 +8,27 @@ image:
   bootFormat: bpun
   bootProgram: flomon
 filesystem: ndfs
-condition:
-  status: damaged
-  parser: ndfs
-  parserError: Block 268453449 out of range
-  ndNamesFound: 26
-  ndNameSamples:
-    - PACK-ONE:IBM
-    - PACK-ONE:KAY
-    - PACK-ONE:GUES
-    - UXK:KHKW
-    - PNLE:MQ
-    - PMLE:LQ
-    - PLLE:KQ
-    - CJC:CJC
-  recovery: null
+ndfs:
+  users: []
+  files:
+    - name: MACM-1718K:BPUN
+      type: BPUN
+      pages: 20
+      bytes: 31916
+      userName: ""
+      dateCreated: 2388351012
+      lastDateRead: 2388351018
+      lastDateWritten: 2388351018
+      bpunValid: null
+    - name: SINTRAN-I:DATA
+      type: DATA
+      pages: 127
+      bytes: 192817
+      userName: ""
+      dateCreated: 2388351016
+      lastDateRead: 2388351023
+      lastDateWritten: 2388351023
+      bpunValid: null
 provenance:
   contributor: Datormuseum
   originalPath: broken/DISK1.img
