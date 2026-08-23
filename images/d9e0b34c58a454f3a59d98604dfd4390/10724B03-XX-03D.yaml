@@ -1,0 +1,87 @@
+id: nd-10724-b03-d3-d9e0b34c
+volumeName: 10724B03-XX-03D
+md5: d9e0b34c58a454f3a59d98604dfd4390
+product:
+  id: ND-10724
+  version: B03
+  diskNumber: 3
+  language: XX
+image:
+  sizeBytes: 1261568
+  format: raw
+  controller: floppy
+  totalPages: 616
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 123
+  files:
+    - name: BG-PART3-B03:BRF
+      type: BRF
+      pages: 55
+      bytes: 112180
+      userName: FLOPPY-USER
+      dateCreated: 2434185570
+      lastDateRead: 2526064872
+      lastDateWritten: 2434185575
+      dateCreatedStr: 1986-04-11 11:37:34
+      lastDateReadStr: 1987-10-08 11:03:40
+      lastDateWrittenStr: 1986-04-11 11:37:39
+      bpunValid: null
+    - name: BG-PART4-B03:BRF
+      type: BRF
+      pages: 24
+      bytes: 47432
+      userName: FLOPPY-USER
+      dateCreated: 2434185632
+      lastDateRead: 2526064225
+      lastDateWritten: 2434185634
+      dateCreatedStr: 1986-04-11 11:38:32
+      lastDateReadStr: 1987-10-08 10:57:33
+      lastDateWrittenStr: 1986-04-11 11:38:34
+      bpunValid: null
+    - name: BG-PART5-B03:BRF
+      type: BRF
+      pages: 21
+      bytes: 41602
+      userName: FLOPPY-USER
+      dateCreated: 2434185670
+      lastDateRead: 2526064240
+      lastDateWritten: 2434185671
+      dateCreatedStr: 1986-04-11 11:39:06
+      lastDateReadStr: 1987-10-08 10:57:48
+      lastDateWrittenStr: 1986-04-11 11:39:07
+      bpunValid: null
+    - name: BG-PART6-B03:BRF
+      type: BRF
+      pages: 18
+      bytes: 35569
+      userName: FLOPPY-USER
+      dateCreated: 2434185704
+      lastDateRead: 2526064261
+      lastDateWritten: 2434185705
+      dateCreatedStr: 1986-04-11 11:39:40
+      lastDateReadStr: 1987-10-08 10:58:05
+      lastDateWrittenStr: 1986-04-11 11:39:41
+      bpunValid: null
+provenance:
+  contributor: cvs
+  originalPath: ND110-emulator-IMAGES/10724B03-XX-03D.img
+  dateImaged: 2026-08-17
+  importedAt: 2026-08-17T23:12:34.370Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10724-b03-d3-d9e0b34c
+  syncStatus: pending

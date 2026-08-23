@@ -1,0 +1,579 @@
+id: nd-211005-c04-d1-b28dde0a
+volumeName: 211005C04-EN-01D
+md5: b28dde0a425175b48c87cf207cb5c295
+product:
+  id: ND-211005
+  version: C04
+  diskNumber: 1
+  language: EN
+image:
+  sizeBytes: 1261568
+  format: raw
+  controller: floppy
+  totalPages: 616
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 322
+  files:
+    - name: TEXT-SYS-IN:PROG
+      type: PROG
+      pages: 51
+      bytes: 166578
+      userName: FLOPPY-USER
+      dateCreated: 2493041876
+      lastDateRead: 2565770151
+      lastDateWritten: 2535236872
+      dateCreatedStr: 1987-02-12 12:51:20
+      lastDateReadStr: 1988-03-23 08:46:39
+      lastDateWrittenStr: 1987-12-14 10:20:08
+      bpunValid: null
+    - name: UE-ERMSG-EN-C03:ERR
+      type: ERR
+      pages: 103
+      bytes: 209152
+      userName: FLOPPY-USER
+      dateCreated: 2526895866
+      lastDateRead: 2555825168
+      lastDateWritten: 2526895867
+      dateCreatedStr: 1987-10-14 21:59:58
+      lastDateReadStr: 1988-01-11 12:48:16
+      lastDateWrittenStr: 1987-10-14 21:59:59
+      bpunValid: null
+    - name: DDBTABLES-E07:VTM
+      type: VTM
+      pages: 16
+      bytes: 32448
+      userName: FLOPPY-USER
+      dateCreated: 2507447980
+      lastDateRead: 2555825417
+      lastDateWritten: 2507447981
+      dateCreatedStr: 1987-05-26 09:58:44
+      lastDateReadStr: 1988-01-11 12:52:09
+      lastDateWrittenStr: 1987-05-26 09:58:45
+      bpunValid: null
+    - name: SW-CONFIG-EN:SYMB
+      type: SYMB
+      pages: 1
+      bytes: 519
+      userName: FLOPPY-USER
+      dateCreated: 2502742055
+      lastDateRead: 2565770233
+      lastDateWritten: 2503379819
+      dateCreatedStr: 1987-04-22 13:00:39
+      lastDateReadStr: 1988-03-23 08:47:57
+      lastDateWrittenStr: 1987-04-27 08:45:43
+      bpunValid: null
+    - name: DOC-TEXT-EN-C:TEXT
+      type: TEXT
+      pages: 1
+      bytes: 20
+      userName: FLOPPY-USER
+      dateCreated: 2503379600
+      lastDateRead: 2565770194
+      lastDateWritten: 2511124022
+      dateCreatedStr: 1987-04-27 08:42:16
+      lastDateReadStr: 1988-03-23 08:47:18
+      lastDateWrittenStr: 1987-06-22 11:24:54
+      bpunValid: null
+    - name: XTRA-EN-C00:UTXT
+      type: UTXT
+      pages: 15
+      bytes: 30720
+      userName: FLOPPY-USER
+      dateCreated: 2511112602
+      lastDateRead: 2565770201
+      lastDateWritten: 2528035865
+      dateCreatedStr: 1987-06-22 08:38:26
+      lastDateReadStr: 1988-03-23 08:47:25
+      lastDateWrittenStr: 1987-10-23 12:16:25
+      bpunValid: null
+    - name: QUICK-EN-C03:UTXT
+      type: UTXT
+      pages: 15
+      bytes: 24576
+      userName: FLOPPY-USER
+      dateCreated: 2511123882
+      lastDateRead: 2565770217
+      lastDateWritten: 2528697646
+      dateCreatedStr: 1987-06-22 11:22:42
+      lastDateReadStr: 1988-03-23 08:47:41
+      lastDateWrittenStr: 1987-10-28 13:52:46
+      bpunValid: null
+    - name: UNIQUE-EN-C00:HELP
+      type: HELP
+      pages: 3
+      bytes: 5933
+      userName: FLOPPY-USER
+      dateCreated: 2504720692
+      lastDateRead: 2565770209
+      lastDateWritten: 2511385208
+      dateCreatedStr: 1987-05-05 16:04:52
+      lastDateReadStr: 1988-03-23 08:47:33
+      lastDateWrittenStr: 1987-06-24 11:09:56
+      bpunValid: null
+    - name: CONCEPTMENU-EN-C:UNIQ
+      type: UNIQ
+      pages: 2
+      bytes: 2268
+      userName: FLOPPY-USER
+      dateCreated: 2506681990
+      lastDateRead: 2555825552
+      lastDateWritten: 2512172058
+      dateCreatedStr: 1987-05-20 14:58:06
+      lastDateReadStr: 1988-01-11 12:54:16
+      lastDateWrittenStr: 1987-06-30 11:16:26
+      bpunValid: null
+    - name: CUSTOMERS-EN-C:UNIQ
+      type: UNIQ
+      pages: 1
+      bytes: 1849
+      userName: FLOPPY-USER
+      dateCreated: 2506672697
+      lastDateRead: 2555825563
+      lastDateWritten: 2512835686
+      dateCreatedStr: 1987-05-20 12:40:57
+      lastDateReadStr: 1988-01-11 12:54:27
+      lastDateWrittenStr: 1987-07-03 13:17:38
+      bpunValid: null
+    - name: DEF-USERS-EN-C:UNIQ
+      type: UNIQ
+      pages: 1
+      bytes: 1830
+      userName: FLOPPY-USER
+      dateCreated: 2424732859
+      lastDateRead: 2555825571
+      lastDateWritten: 2512816389
+      dateCreatedStr: 1986-02-03 07:50:59
+      lastDateReadStr: 1988-01-11 12:54:35
+      lastDateWrittenStr: 1987-07-03 08:36:05
+      bpunValid: null
+    - name: DEP-SALEMEN-EN-C:UNIQ
+      type: UNIQ
+      pages: 2
+      bytes: 2179
+      userName: FLOPPY-USER
+      dateCreated: 2506676944
+      lastDateRead: 2555825580
+      lastDateWritten: 2512816458
+      dateCreatedStr: 1987-05-20 13:43:16
+      lastDateReadStr: 1988-01-11 12:54:44
+      lastDateWrittenStr: 1987-07-03 08:37:10
+      bpunValid: null
+    - name: DEPARTMENT-EN-C:UNIQ
+      type: UNIQ
+      pages: 1
+      bytes: 1271
+      userName: FLOPPY-USER
+      dateCreated: 2506673137
+      lastDateRead: 2555825591
+      lastDateWritten: 2512835926
+      dateCreatedStr: 1987-05-20 12:47:49
+      lastDateReadStr: 1988-01-11 12:54:55
+      lastDateWrittenStr: 1987-07-03 13:21:22
+      bpunValid: null
+    - name: PAYTABLE-EN-C:UNIQ
+      type: UNIQ
+      pages: 1
+      bytes: 1325
+      userName: FLOPPY-USER
+      dateCreated: 2506673198
+      lastDateRead: 2555825603
+      lastDateWritten: 2512816660
+      dateCreatedStr: 1987-05-20 12:48:46
+      lastDateReadStr: 1988-01-11 12:55:03
+      lastDateWrittenStr: 1987-07-03 08:40:20
+      bpunValid: null
+    - name: PRODUCTS-EN-C:UNIQ
+      type: UNIQ
+      pages: 1
+      bytes: 1651
+      userName: FLOPPY-USER
+      dateCreated: 2506673263
+      lastDateRead: 2555825612
+      lastDateWritten: 2512816692
+      dateCreatedStr: 1987-05-20 12:49:47
+      lastDateReadStr: 1988-01-11 12:55:12
+      lastDateWrittenStr: 1987-07-03 08:40:52
+      bpunValid: null
+    - name: SALES-CUS-EN-C:UNIQ
+      type: UNIQ
+      pages: 2
+      bytes: 2177
+      userName: FLOPPY-USER
+      dateCreated: 2506677193
+      lastDateRead: 2555825622
+      lastDateWritten: 2512816880
+      dateCreatedStr: 1987-05-20 13:47:09
+      lastDateReadStr: 1988-01-11 12:55:22
+      lastDateWrittenStr: 1987-07-03 08:43:48
+      bpunValid: null
+    - name: SALESMEN-EN-C:UNIQ
+      type: UNIQ
+      pages: 2
+      bytes: 1733
+      userName: FLOPPY-USER
+      dateCreated: 2506673689
+      lastDateRead: 2555825635
+      lastDateWritten: 2513483950
+      dateCreatedStr: 1987-05-20 12:56:25
+      lastDateReadStr: 1988-01-11 12:55:35
+      lastDateWrittenStr: 1987-07-08 11:34:46
+      bpunValid: null
+    - name: SALES-EN-C:UNIQ
+      type: UNIQ
+      pages: 2
+      bytes: 3709
+      userName: FLOPPY-USER
+      dateCreated: 2506675882
+      lastDateRead: 2555825647
+      lastDateWritten: 2513235429
+      dateCreatedStr: 1987-05-20 13:26:42
+      lastDateReadStr: 1988-01-11 12:55:47
+      lastDateWrittenStr: 1987-07-06 14:55:37
+      bpunValid: null
+    - name: SEQUENCE-EN-C:UNIQ
+      type: UNIQ
+      pages: 1
+      bytes: 1416
+      userName: FLOPPY-USER
+      dateCreated: 2507601043
+      lastDateRead: 2555825659
+      lastDateWritten: 2512817209
+      dateCreatedStr: 1987-05-27 15:18:19
+      lastDateReadStr: 1988-01-11 12:55:59
+      lastDateWrittenStr: 1987-07-03 08:48:57
+      bpunValid: null
+    - name: UNIQUE-II-S-C-EN:UNIQ
+      type: UNIQ
+      pages: 2
+      bytes: 2420
+      userName: FLOPPY-USER
+      dateCreated: 2506683503
+      lastDateRead: 2555825671
+      lastDateWritten: 2513493178
+      dateCreatedStr: 1987-05-20 15:17:47
+      lastDateReadStr: 1988-01-11 12:56:07
+      lastDateWrittenStr: 1987-07-08 13:50:58
+      bpunValid: null
+    - name: ZOOM-CUST-EN-C:UNIQ
+      type: UNIQ
+      pages: 1
+      bytes: 928
+      userName: FLOPPY-USER
+      dateCreated: 2506676500
+      lastDateRead: 2555825682
+      lastDateWritten: 2506676500
+      dateCreatedStr: 1987-05-20 13:36:20
+      lastDateReadStr: 1988-01-11 12:56:18
+      lastDateWrittenStr: 1987-05-20 13:36:20
+      bpunValid: null
+    - name: ZOOM-DEPT-EN-C:UNIQ
+      type: UNIQ
+      pages: 1
+      bytes: 1150
+      userName: FLOPPY-USER
+      dateCreated: 2506674555
+      lastDateRead: 2555825691
+      lastDateWritten: 2512166480
+      dateCreatedStr: 1987-05-20 13:05:59
+      lastDateReadStr: 1988-01-11 12:56:27
+      lastDateWrittenStr: 1987-06-30 09:57:16
+      bpunValid: null
+    - name: ZOOM-PAY-EN-C:UNIQ
+      type: UNIQ
+      pages: 1
+      bytes: 1143
+      userName: FLOPPY-USER
+      dateCreated: 2506674600
+      lastDateRead: 2555825700
+      lastDateWritten: 2506675435
+      dateCreatedStr: 1987-05-20 13:06:40
+      lastDateReadStr: 1988-01-11 12:56:36
+      lastDateWrittenStr: 1987-05-20 13:19:43
+      bpunValid: null
+    - name: ZOOM-PROD-EN-C:UNIQ
+      type: UNIQ
+      pages: 1
+      bytes: 1153
+      userName: FLOPPY-USER
+      dateCreated: 2506675381
+      lastDateRead: 2555825708
+      lastDateWritten: 2512167026
+      dateCreatedStr: 1987-05-20 13:18:53
+      lastDateReadStr: 1988-01-11 12:56:44
+      lastDateWrittenStr: 1987-06-30 10:01:50
+      bpunValid: null
+    - name: DIA-DRL-F-EN-C:SYMB
+      type: SYMB
+      pages: 7
+      bytes: 13865
+      userName: FLOPPY-USER
+      dateCreated: 2506541544
+      lastDateRead: 2555825717
+      lastDateWritten: 2513607172
+      dateCreatedStr: 1987-05-19 12:39:40
+      lastDateReadStr: 1988-01-11 12:56:53
+      lastDateWrittenStr: 1987-07-09 09:40:04
+      bpunValid: null
+    - name: DIA-DRL-R-EN-C:SYMB
+      type: SYMB
+      pages: 7
+      bytes: 14334
+      userName: FLOPPY-USER
+      dateCreated: 2332489236
+      lastDateRead: 2555825744
+      lastDateWritten: 2513607179
+      dateCreatedStr: 1984-12-03 15:24:20
+      lastDateReadStr: 1988-01-11 12:57:16
+      lastDateWrittenStr: 1987-07-09 09:40:11
+      bpunValid: null
+    - name: DIALOGUE-DDC-C:SYMB
+      type: SYMB
+      pages: 2
+      bytes: 3102
+      userName: FLOPPY-USER
+      dateCreated: 2312698316
+      lastDateRead: 2555825769
+      lastDateWritten: 2513498962
+      dateCreatedStr: 1984-07-12 15:39:12
+      lastDateReadStr: 1988-01-11 12:57:41
+      lastDateWrittenStr: 1987-07-08 15:13:18
+      bpunValid: null
+    - name: CONCEPTMENU-EN-C:UCOM
+      type: UCOM
+      pages: 0
+      bytes: 4294967296
+      userName: FLOPPY-USER
+      dateCreated: 2511124712
+      lastDateRead: null
+      lastDateWritten: null
+      dateCreatedStr: 1987-06-22 11:35:40
+      lastDateReadStr: null
+      lastDateWrittenStr: null
+      bpunValid: null
+    - name: CUSTOMERS-EN-C:UCOM
+      type: UCOM
+      pages: 0
+      bytes: 4294967296
+      userName: FLOPPY-USER
+      dateCreated: 2511124713
+      lastDateRead: null
+      lastDateWritten: null
+      dateCreatedStr: 1987-06-22 11:35:41
+      lastDateReadStr: null
+      lastDateWrittenStr: null
+      bpunValid: null
+    - name: DEF-USERS-EN-C:UCOM
+      type: UCOM
+      pages: 0
+      bytes: 4294967296
+      userName: FLOPPY-USER
+      dateCreated: 2511124714
+      lastDateRead: null
+      lastDateWritten: null
+      dateCreatedStr: 1987-06-22 11:35:42
+      lastDateReadStr: null
+      lastDateWrittenStr: null
+      bpunValid: null
+    - name: DEP-SALEMEN-EN-C:UCOM
+      type: UCOM
+      pages: 0
+      bytes: 4294967296
+      userName: FLOPPY-USER
+      dateCreated: 2511124714
+      lastDateRead: null
+      lastDateWritten: null
+      dateCreatedStr: 1987-06-22 11:35:42
+      lastDateReadStr: null
+      lastDateWrittenStr: null
+      bpunValid: null
+    - name: DEPARTMENT-EN-C:UCOM
+      type: UCOM
+      pages: 0
+      bytes: 4294967296
+      userName: FLOPPY-USER
+      dateCreated: 2511124714
+      lastDateRead: null
+      lastDateWritten: null
+      dateCreatedStr: 1987-06-22 11:35:42
+      lastDateReadStr: null
+      lastDateWrittenStr: null
+      bpunValid: null
+    - name: PAYTABLE-EN-C:UCOM
+      type: UCOM
+      pages: 0
+      bytes: 4294967296
+      userName: FLOPPY-USER
+      dateCreated: 2511124716
+      lastDateRead: null
+      lastDateWritten: null
+      dateCreatedStr: 1987-06-22 11:35:44
+      lastDateReadStr: null
+      lastDateWrittenStr: null
+      bpunValid: null
+    - name: PRODUCTS-EN-C:UCOM
+      type: UCOM
+      pages: 0
+      bytes: 4294967296
+      userName: FLOPPY-USER
+      dateCreated: 2511124717
+      lastDateRead: null
+      lastDateWritten: null
+      dateCreatedStr: 1987-06-22 11:35:45
+      lastDateReadStr: null
+      lastDateWrittenStr: null
+      bpunValid: null
+    - name: SALES-CUS-EN-C:UCOM
+      type: UCOM
+      pages: 0
+      bytes: 4294967296
+      userName: FLOPPY-USER
+      dateCreated: 2511124717
+      lastDateRead: null
+      lastDateWritten: null
+      dateCreatedStr: 1987-06-22 11:35:45
+      lastDateReadStr: null
+      lastDateWrittenStr: null
+      bpunValid: null
+    - name: SALESMEN-EN-C:UCOM
+      type: UCOM
+      pages: 0
+      bytes: 4294967296
+      userName: FLOPPY-USER
+      dateCreated: 2511124717
+      lastDateRead: null
+      lastDateWritten: null
+      dateCreatedStr: 1987-06-22 11:35:45
+      lastDateReadStr: null
+      lastDateWrittenStr: null
+      bpunValid: null
+    - name: SALES-EN-C:UCOM
+      type: UCOM
+      pages: 0
+      bytes: 4294967296
+      userName: FLOPPY-USER
+      dateCreated: 2511124718
+      lastDateRead: null
+      lastDateWritten: null
+      dateCreatedStr: 1987-06-22 11:35:46
+      lastDateReadStr: null
+      lastDateWrittenStr: null
+      bpunValid: null
+    - name: SEQUENCE-EN-C:UCOM
+      type: UCOM
+      pages: 0
+      bytes: 4294967296
+      userName: FLOPPY-USER
+      dateCreated: 2511124718
+      lastDateRead: null
+      lastDateWritten: null
+      dateCreatedStr: 1987-06-22 11:35:46
+      lastDateReadStr: null
+      lastDateWrittenStr: null
+      bpunValid: null
+    - name: UNIQUE-II-S-C-EN:UCOM
+      type: UCOM
+      pages: 0
+      bytes: 4294967296
+      userName: FLOPPY-USER
+      dateCreated: 2511124718
+      lastDateRead: null
+      lastDateWritten: null
+      dateCreatedStr: 1987-06-22 11:35:46
+      lastDateReadStr: null
+      lastDateWrittenStr: null
+      bpunValid: null
+    - name: ZOOM-CUST-EN-C:UCOM
+      type: UCOM
+      pages: 0
+      bytes: 4294967296
+      userName: FLOPPY-USER
+      dateCreated: 2511124719
+      lastDateRead: null
+      lastDateWritten: null
+      dateCreatedStr: 1987-06-22 11:35:47
+      lastDateReadStr: null
+      lastDateWrittenStr: null
+      bpunValid: null
+    - name: ZOOM-DEPT-EN-C:UCOM
+      type: UCOM
+      pages: 0
+      bytes: 4294967296
+      userName: FLOPPY-USER
+      dateCreated: 2511124719
+      lastDateRead: null
+      lastDateWritten: null
+      dateCreatedStr: 1987-06-22 11:35:47
+      lastDateReadStr: null
+      lastDateWrittenStr: null
+      bpunValid: null
+    - name: ZOOM-PAY-EN-C:UCOM
+      type: UCOM
+      pages: 0
+      bytes: 4294967296
+      userName: FLOPPY-USER
+      dateCreated: 2511124719
+      lastDateRead: null
+      lastDateWritten: null
+      dateCreatedStr: 1987-06-22 11:35:47
+      lastDateReadStr: null
+      lastDateWrittenStr: null
+      bpunValid: null
+    - name: ZOOM-PROD-EN-C:UCOM
+      type: UCOM
+      pages: 0
+      bytes: 4294967296
+      userName: FLOPPY-USER
+      dateCreated: 2511124720
+      lastDateRead: null
+      lastDateWritten: null
+      dateCreatedStr: 1987-06-22 11:35:48
+      lastDateReadStr: null
+      lastDateWrittenStr: null
+      bpunValid: null
+    - name: COMP-ZOOM-EN-C:MODE
+      type: MODE
+      pages: 1
+      bytes: 108
+      userName: FLOPPY-USER
+      dateCreated: 2513745779
+      lastDateRead: 2555825814
+      lastDateWritten: 2513745779
+      dateCreatedStr: 1987-07-10 11:29:51
+      lastDateReadStr: 1988-01-11 12:58:22
+      lastDateWrittenStr: 1987-07-10 11:29:51
+      bpunValid: null
+    - name: UNIQUE-EN-C04:UTXT
+      type: UTXT
+      pages: 50
+      bytes: 93368
+      userName: FLOPPY-USER
+      dateCreated: 2535240463
+      lastDateRead: 2565770176
+      lastDateWritten: 2555049622
+      dateCreatedStr: 1987-12-14 11:12:15
+      lastDateReadStr: 1988-03-23 08:47:00
+      lastDateWrittenStr: 1988-01-05 15:26:22
+      bpunValid: null
+provenance:
+  contributor: cvs
+  originalPath: ND110-emulator-IMAGES/211005C04-EN-01D.img
+  dateImaged: 2026-08-17
+  importedAt: 2026-08-17T23:12:34.770Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-211005-c04-d1-b28dde0a
+  syncStatus: pending

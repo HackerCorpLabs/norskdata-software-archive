@@ -1,0 +1,231 @@
+id: nd-210518-c02-d1-c339bde8
+volumeName: 210518C02-EN-01D
+md5: c339bde88a55217fd71d5cf62e744eb5
+product:
+  id: ND-210518
+  version: C02
+  diskNumber: 1
+  language: EN
+image:
+  sizeBytes: 1261568
+  format: raw
+  controller: floppy
+  totalPages: 616
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 365
+  files:
+    - name: UE-ACTIV-EN-C02:RPRT
+      type: RPRT
+      pages: 10
+      bytes: 20480
+      userName: FLOPPY-USER
+      dateCreated: 2511409993
+      lastDateRead: 2508897585
+      lastDateWritten: 2511409995
+      dateCreatedStr: 1987-06-24 17:13:09
+      lastDateReadStr: 1987-06-05 11:52:49
+      lastDateWrittenStr: 1987-06-24 17:13:11
+      bpunValid: null
+    - name: UE-HIERAR-EN-C02:MENU
+      type: MENU
+      pages: 19
+      bytes: 37443
+      userName: FLOPPY-USER
+      dateCreated: 2458192707
+      lastDateRead: 2511512982
+      lastDateWritten: 2511510044
+      dateCreatedStr: 1986-10-02 16:45:03
+      lastDateReadStr: 1987-06-25 10:22:22
+      lastDateWrittenStr: 1987-06-25 09:40:28
+      bpunValid: null
+    - name: UE-STDHIE-EN-C02:NDPF
+      type: NDPF
+      pages: 10
+      bytes: 20480
+      userName: FLOPPY-USER
+      dateCreated: 2511509871
+      lastDateRead: 2511512968
+      lastDateWritten: 2511509874
+      dateCreatedStr: 1987-06-25 09:37:47
+      lastDateReadStr: 1987-06-25 10:22:08
+      lastDateWrittenStr: 1987-06-25 09:37:50
+      bpunValid: null
+    - name: UE-STDHIE-EN-C02:CONF
+      type: CONF
+      pages: 8
+      bytes: 144410
+      userName: FLOPPY-USER
+      dateCreated: 2511509871
+      lastDateRead: 2511512962
+      lastDateWritten: 2511509874
+      dateCreatedStr: 1987-06-25 09:37:47
+      lastDateReadStr: 1987-06-25 10:22:02
+      lastDateWrittenStr: 1987-06-25 09:37:50
+      bpunValid: null
+    - name: UE-PMAN-EN-C02:CONF
+      type: CONF
+      pages: 29
+      bytes: 186778
+      userName: FLOPPY-USER
+      dateCreated: 2511410031
+      lastDateRead: 2508897505
+      lastDateWritten: 2511410032
+      dateCreatedStr: 1987-06-24 17:13:47
+      lastDateReadStr: 1987-06-05 11:51:33
+      lastDateWrittenStr: 1987-06-24 17:13:48
+      bpunValid: null
+    - name: UE-ME-EN-C02:CONF
+      type: CONF
+      pages: 15
+      bytes: 158328
+      userName: FLOPPY-USER
+      dateCreated: 2511410054
+      lastDateRead: 2508897546
+      lastDateWritten: 2511410055
+      dateCreatedStr: 1987-06-24 17:14:06
+      lastDateReadStr: 1987-06-05 11:52:10
+      lastDateWrittenStr: 1987-06-24 17:14:07
+      bpunValid: null
+    - name: UE-ME-EN-C02:NDPF
+      type: NDPF
+      pages: 32
+      bytes: 65536
+      userName: FLOPPY-USER
+      dateCreated: 2511410067
+      lastDateRead: 2508897530
+      lastDateWritten: 2511410068
+      dateCreatedStr: 1987-06-24 17:14:19
+      lastDateReadStr: 1987-06-05 11:51:58
+      lastDateWrittenStr: 1987-06-24 17:14:20
+      bpunValid: null
+    - name: UE-FUNC-EN-C02:CONF
+      type: CONF
+      pages: 15
+      bytes: 159520
+      userName: FLOPPY-USER
+      dateCreated: 2511410091
+      lastDateRead: 2508897522
+      lastDateWritten: 2511410092
+      dateCreatedStr: 1987-06-24 17:14:43
+      lastDateReadStr: 1987-06-05 11:51:50
+      lastDateWrittenStr: 1987-06-24 17:14:44
+      bpunValid: null
+    - name: UE-LOGIN-EN-C02:CONF
+      type: CONF
+      pages: 7
+      bytes: 143252
+      userName: FLOPPY-USER
+      dateCreated: 2511410105
+      lastDateRead: 2508897515
+      lastDateWritten: 2511410106
+      dateCreatedStr: 1987-06-24 17:14:57
+      lastDateReadStr: 1987-06-05 11:51:43
+      lastDateWrittenStr: 1987-06-24 17:14:58
+      bpunValid: null
+    - name: UE-INSTALL-C01:PROG
+      type: PROG
+      pages: 45
+      bytes: 151062
+      userName: FLOPPY-USER
+      dateCreated: 2511410117
+      lastDateRead: 2508897436
+      lastDateWritten: 2511410118
+      dateCreatedStr: 1987-06-24 17:15:05
+      lastDateReadStr: 1987-06-05 11:50:28
+      lastDateWrittenStr: 1987-06-24 17:15:06
+      bpunValid: null
+    - name: UE-INSTAL-EN-C02:COM
+      type: COM
+      pages: 43
+      bytes: 86491
+      userName: FLOPPY-USER
+      dateCreated: 2511410158
+      lastDateRead: 2508897441
+      lastDateWritten: 2511410160
+      dateCreatedStr: 1987-06-24 17:15:46
+      lastDateReadStr: 1987-06-05 11:50:33
+      lastDateWrittenStr: 1987-06-24 17:15:48
+      bpunValid: null
+    - name: UE-RSTAT-EN-C02:TEXT
+      type: TEXT
+      pages: 6
+      bytes: 10361
+      userName: FLOPPY-USER
+      dateCreated: 2511410205
+      lastDateRead: 2508897554
+      lastDateWritten: 2511410206
+      dateCreatedStr: 1987-06-24 17:16:29
+      lastDateReadStr: 1987-06-05 11:52:18
+      lastDateWrittenStr: 1987-06-24 17:16:30
+      bpunValid: null
+    - name: UE-ERMSG-EN-C00:ERR
+      type: ERR
+      pages: 72
+      bytes: 145664
+      userName: FLOPPY-USER
+      dateCreated: 2511410215
+      lastDateRead: null
+      lastDateWritten: 2511410216
+      dateCreatedStr: 1987-06-24 17:16:39
+      lastDateReadStr: null
+      lastDateWrittenStr: 1987-06-24 17:16:40
+      bpunValid: null
+    - name: UE-CH-LAMU-C00:PROG
+      type: PROG
+      pages: 4
+      bytes: 8192
+      userName: FLOPPY-USER
+      dateCreated: 2511410299
+      lastDateRead: null
+      lastDateWritten: 2511410304
+      dateCreatedStr: 1987-06-24 17:17:59
+      lastDateReadStr: null
+      lastDateWrittenStr: 1987-06-24 17:18:00
+      bpunValid: null
+    - name: UE-RENAME-A01:PROG
+      type: PROG
+      pages: 19
+      bytes: 38912
+      userName: FLOPPY-USER
+      dateCreated: 2511410312
+      lastDateRead: null
+      lastDateWritten: 2511410313
+      dateCreatedStr: 1987-06-24 17:18:08
+      lastDateReadStr: null
+      lastDateWrittenStr: 1987-06-24 17:18:09
+      bpunValid: null
+    - name: UE-IDCARD-EN-C02:SYMB
+      type: SYMB
+      pages: 14
+      bytes: 26596
+      userName: FLOPPY-USER
+      dateCreated: 2516258070
+      lastDateRead: 2516264577
+      lastDateWritten: 2516264577
+      dateCreatedStr: 1987-07-29 16:52:22
+      lastDateReadStr: 1987-07-29 18:26:01
+      lastDateWrittenStr: 1987-07-29 18:26:01
+      bpunValid: null
+provenance:
+  contributor: cvs
+  originalPath: ND110-emulator-IMAGES/210518C02-EN-01D.img
+  dateImaged: 2026-08-17
+  importedAt: 2026-08-17T23:12:34.678Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-210518-c02-d1-c339bde8
+  syncStatus: pending

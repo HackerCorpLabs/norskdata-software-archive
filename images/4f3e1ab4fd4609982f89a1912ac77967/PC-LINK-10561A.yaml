@@ -1,0 +1,97 @@
+id: nd-10561-a-d1-4f3e1ab4
+volumeName: ND-10561A
+md5: 4f3e1ab4fd4609982f89a1912ac77967
+product:
+  id: ND-10561
+  version: A
+image:
+  sizeBytes: 1261568
+  format: raw
+  controller: floppy
+  totalPages: 616
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 102
+  files:
+    - name: PC-LINK:PROG
+      type: PROG
+      pages: 11
+      bytes: 22528
+      userName: FLOPPY-USER
+      dateCreated: 2291221022
+      lastDateRead: 2422289518
+      lastDateWritten: 2291221026
+      dateCreatedStr: 1984-02-08 20:08:30
+      lastDateReadStr: 1986-01-16 19:17:46
+      lastDateWrittenStr: 1984-02-08 20:08:34
+      bpunValid: null
+    - name: VTM-COMPOUND-A-C:PROG
+      type: PROG
+      pages: 38
+      bytes: 76288
+      userName: FLOPPY-USER
+      dateCreated: 2291221085
+      lastDateRead: 2422289528
+      lastDateWritten: 2291221087
+      dateCreatedStr: 1984-02-08 20:09:29
+      lastDateReadStr: 1986-01-16 19:17:56
+      lastDateWrittenStr: 1984-02-08 20:09:31
+      bpunValid: null
+    - name: VTM-COMPOUND-D-C:PROG
+      type: PROG
+      pages: 44
+      bytes: 90112
+      userName: FLOPPY-USER
+      dateCreated: 2291221161
+      lastDateRead: 2422289549
+      lastDateWritten: 2291221162
+      dateCreatedStr: 1984-02-08 20:10:41
+      lastDateReadStr: 1986-01-16 19:18:13
+      lastDateWrittenStr: 1984-02-08 20:10:42
+      bpunValid: null
+    - name: VTM-ALL-TYPES:VTM
+      type: VTM
+      pages: 2
+      bytes: 1611
+      userName: FLOPPY-USER
+      dateCreated: 2291221267
+      lastDateRead: 2422289568
+      lastDateWritten: 2291221268
+      dateCreatedStr: 1984-02-08 20:12:19
+      lastDateReadStr: 1986-01-16 19:18:32
+      lastDateWrittenStr: 1984-02-08 20:12:20
+      bpunValid: null
+    - name: DDB079-A-A:VTM
+      type: VTM
+      pages: 1
+      bytes: 1092
+      userName: FLOPPY-USER
+      dateCreated: 2291221324
+      lastDateRead: 2422289575
+      lastDateWritten: 2291221326
+      dateCreatedStr: 1984-02-08 20:13:12
+      lastDateReadStr: 1986-01-16 19:18:39
+      lastDateWrittenStr: 1984-02-08 20:13:14
+      bpunValid: null
+provenance:
+  contributor: cvs
+  originalPath: ND110-emulator-IMAGES/PC-LINK-10561A.img
+  dateImaged: 2026-08-17
+  importedAt: 2026-08-17T23:12:35.113Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-10561-a-d1-4f3e1ab4
+  syncStatus: pending

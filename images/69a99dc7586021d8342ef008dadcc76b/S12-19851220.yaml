@@ -1,0 +1,166 @@
+id: img-69a99dc75860
+volumeName: S12
+md5: 69a99dc7586021d8342ef008dadcc76b
+image:
+  sizeBytes: 1261568
+  format: raw
+  controller: floppy
+  totalPages: 616
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: SYSTEM
+      pagesUsed: 401
+  files:
+    - name: PERFORM-G00:PROG
+      type: PROG
+      pages: 34
+      bytes: 270336
+      userName: SYSTEM
+      dateCreated: 2401795245
+      lastDateRead: 2515063330
+      lastDateWritten: 2401795245
+      dateCreatedStr: 1985-12-20 07:50:45
+      lastDateReadStr: 1987-07-20 13:08:34
+      lastDateWrittenStr: 1985-12-20 07:50:45
+      bpunValid: null
+    - name: PERFORM-LIB-G00:MCRO
+      type: MCRO
+      pages: 3
+      bytes: 2987
+      userName: SYSTEM
+      dateCreated: 2401795249
+      lastDateRead: 2515063382
+      lastDateWritten: 2401795249
+      dateCreatedStr: 1985-12-20 07:50:49
+      lastDateReadStr: 1987-07-20 13:09:22
+      lastDateWrittenStr: 1985-12-20 07:50:49
+      bpunValid: null
+    - name: PERF-500-LIB-G00:MCRO
+      type: MCRO
+      pages: 2
+      bytes: 1932
+      userName: SYSTEM
+      dateCreated: 2401795250
+      lastDateRead: 2515063391
+      lastDateWritten: 2401795250
+      dateCreatedStr: 1985-12-20 07:50:50
+      lastDateReadStr: 1987-07-20 13:09:31
+      lastDateWrittenStr: 1985-12-20 07:50:50
+      bpunValid: null
+    - name: UE-ERMSG-EN-B02:OLD
+      type: OLD
+      pages: 47
+      bytes: 95232
+      userName: SYSTEM
+      dateCreated: 2463537879
+      lastDateRead: 2515063398
+      lastDateWritten: 2463537879
+      dateCreatedStr: 1986-11-11 09:43:23
+      lastDateReadStr: 1987-07-20 13:09:38
+      lastDateWrittenStr: 1986-11-11 09:43:23
+      bpunValid: null
+    - name: UE-ERMSG-ENG-A03:ERR
+      type: ERR
+      pages: 42
+      bytes: 84480
+      userName: SYSTEM
+      dateCreated: 2401795513
+      lastDateRead: 2515063465
+      lastDateWritten: 2401795513
+      dateCreatedStr: 1985-12-20 07:54:57
+      lastDateReadStr: 1987-07-20 13:10:41
+      lastDateWrittenStr: 1985-12-20 07:54:57
+      bpunValid: null
+    - name: UE-ERMSG-NOR-A00:ERR
+      type: ERR
+      pages: 25
+      bytes: 49664
+      userName: SYSTEM
+      dateCreated: 2401795521
+      lastDateRead: 2515063532
+      lastDateWritten: 2401795521
+      dateCreatedStr: 1985-12-20 07:55:01
+      lastDateReadStr: 1987-07-20 13:11:44
+      lastDateWrittenStr: 1985-12-20 07:55:01
+      bpunValid: null
+    - name: UE-ERMSG-EN-B03:ERR
+      type: ERR
+      pages: 52
+      bytes: 106240
+      userName: SYSTEM
+      dateCreated: 2401795524
+      lastDateRead: 2515063578
+      lastDateWritten: 2401795525
+      dateCreatedStr: 1985-12-20 07:55:04
+      lastDateReadStr: 1987-07-20 13:12:26
+      lastDateWrittenStr: 1985-12-20 07:55:05
+      bpunValid: null
+    - name: UE-ERMSG-NO-B02:ERR
+      type: ERR
+      pages: 47
+      bytes: 96256
+      userName: SYSTEM
+      dateCreated: 2401795530
+      lastDateRead: 2515063668
+      lastDateWritten: 2401795530
+      dateCreatedStr: 1985-12-20 07:55:10
+      lastDateReadStr: 1987-07-20 13:13:52
+      lastDateWrittenStr: 1985-12-20 07:55:10
+      bpunValid: null
+    - name: FILE-MAN-PRI-B00:PROG
+      type: PROG
+      pages: 21
+      bytes: 137216
+      userName: SYSTEM
+      dateCreated: 2401795430
+      lastDateRead: 2515063761
+      lastDateWritten: 2401795430
+      dateCreatedStr: 1985-12-20 07:53:38
+      lastDateReadStr: 1987-07-20 13:15:17
+      lastDateWrittenStr: 1985-12-20 07:53:38
+      bpunValid: null
+    - name: FILE-MAN-NO-B00:PROG
+      type: PROG
+      pages: 115
+      bytes: 251904
+      userName: SYSTEM
+      dateCreated: 2401795484
+      lastDateRead: 2515063810
+      lastDateWritten: 2401795485
+      dateCreatedStr: 1985-12-20 07:54:28
+      lastDateReadStr: 1987-07-20 13:16:02
+      lastDateWrittenStr: 1985-12-20 07:54:29
+      bpunValid: null
+    - name: UE-LOAD-NO:MODE
+      type: MODE
+      pages: 1
+      bytes: 1527
+      userName: SYSTEM
+      dateCreated: 2401795498
+      lastDateRead: 2515064050
+      lastDateWritten: 2401795498
+      dateCreatedStr: 1985-12-20 07:54:42
+      lastDateReadStr: 1987-07-20 13:19:50
+      lastDateWrittenStr: 1985-12-20 07:54:42
+      bpunValid: null
+provenance:
+  contributor: cvs
+  originalPath: ND110-emulator-IMAGES/S12-19851220.img
+  dateImaged: 2026-08-17
+  importedAt: 2026-08-17T23:12:35.179Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-img-69a99dc75860
+  syncStatus: pending

@@ -16,36 +16,36 @@ backupSet:
   staleCount: 5
   firstFile: BA-LO01:DATA
   lastFile: STRIMYNDIGHET:UNIQ
-  endsMidFile: false
+  endsMidFile: true
   fileListHash: 46acd8a7
   imageBytes: 1261568
 backupFiles:
   - name: BA-LO01:DATA
-    bytes: 92160
+    bytes: 10
     created: 1989-06-30
     system: SINTRAN III L
     continued: false
     stale: false
   - name: SIBR-DBM-OUT:DUMP
-    bytes: 0
+    bytes: 124928
     created: 1989-06-30
     system: SINTRAN III L
     continued: false
     stale: false
   - name: FYLL-INL:UNIQ
-    bytes: 4096
+    bytes: 1887
     created: 1989-06-30
     system: SINTRAN III L
     continued: false
     stale: false
   - name: LIN0101M:UNIQ
-    bytes: 6144
+    bytes: 3234
     created: 1989-06-30
     system: SINTRAN III L
     continued: false
     stale: false
   - name: LIN0105M:UNIQ
-    bytes: 8192
+    bytes: 3173
     created: 1989-06-30
     system: SINTRAN III L
     continued: true
@@ -57,43 +57,43 @@ backupFiles:
     continued: true
     stale: false
   - name: INL:ISAM
-    bytes: 7168
+    bytes: 8192
     created: 1988-07-15
     system: SINTRAN III K
-    continued: false
+    continued: true
     stale: true
   - name: FYLLLOL:UCOM
-    bytes: 6144
+    bytes: 3611
     created: 1989-06-30
     system: SINTRAN III L
     continued: false
     stale: false
   - name: LIN0103M:UNIQ
-    bytes: 0
+    bytes: 3210
     created: 1989-06-30
     system: SINTRAN III L
     continued: false
     stale: false
   - name: LIN0103M:UCOM
-    bytes: 8192
+    bytes: 3889
     created: 1989-06-30
     system: SINTRAN III L
     continued: false
     stale: false
   - name: REDEF-LT:MODE
-    bytes: 4096
+    bytes: 62
     created: 1989-06-30
     system: SINTRAN III L
     continued: false
     stale: false
   - name: LISTA:SYMB
-    bytes: 8192
+    bytes: 1230
     created: 1989-06-30
     system: SINTRAN III L
     continued: false
     stale: false
   - name: LIN0102M:UNIQ
-    bytes: 6144
+    bytes: 3807
     created: 1989-06-30
     system: SINTRAN III L
     continued: false
@@ -105,187 +105,187 @@ backupFiles:
     continued: true
     stale: false
   - name: BILD-STANDARD:STXT
-    bytes: 3072
+    bytes: 4096
     created: 1988-07-15
     system: SINTRAN III K
-    continued: false
+    continued: true
     stale: true
   - name: KLADD:UNIQ
-    bytes: 10240
+    bytes: 8149
     created: 1989-06-30
     system: SINTRAN III L
     continued: false
     stale: false
   - name: DBM-RUL:DATA
-    bytes: 6144
+    bytes: 240
     created: 1989-06-30
     system: SINTRAN III L
     continued: false
     stale: false
   - name: DBM-MYL:DATA
-    bytes: 6144
+    bytes: 440
     created: 1989-06-30
     system: SINTRAN III L
     continued: false
     stale: false
   - name: DBM-LSL:DATA
-    bytes: 6144
+    bytes: 4000
     created: 1989-06-30
     system: SINTRAN III L
     continued: false
     stale: false
   - name: SCRATCH:DATA
-    bytes: 6144
+    bytes: 4095
     created: 1989-06-30
     system: SINTRAN III L
     continued: false
     stale: false
   - name: DBM-STL:DATA
-    bytes: 6144
+    bytes: 1590
     created: 1989-06-30
     system: SINTRAN III L
     continued: false
     stale: false
   - name: LIN0109U:UNIQ
-    bytes: 6144
+    bytes: 2742
     created: 1989-06-30
     system: SINTRAN III L
     continued: false
     stale: false
   - name: FYLLRUL:UNIQ
-    bytes: 4096
+    bytes: 1346
     created: 1989-06-30
     system: SINTRAN III L
     continued: false
     stale: false
   - name: FYLLRUL:UCOM
-    bytes: 8192
+    bytes: 5950
     created: 1989-06-30
     system: SINTRAN III L
     continued: false
     stale: false
   - name: UNIQUE-0052:TEMP
-    bytes: 14336
+    bytes: 11770
     created: 1989-06-30
     system: SINTRAN III L
     continued: false
     stale: false
   - name: KLADD:UCOM
-    bytes: 10240
+    bytes: 6441
     created: 1989-06-30
     system: SINTRAN III L
     continued: false
     stale: false
   - name: BILD-STANDARD:STXT
-    bytes: 8192
+    bytes: 9216
     created: 1989-06-30
     system: SINTRAN III L
-    continued: false
+    continued: true
     stale: false
   - name: LOKAL-RAP:TEXT
-    bytes: 11264
+    bytes: 862
     created: 1989-06-30
     system: SINTRAN III L
     continued: true
     stale: false
   - name: LIN0112F:UCOM
-    bytes: 9216
+    bytes: 6336
     created: 1989-06-30
     system: SINTRAN III L
     continued: false
     stale: false
   - name: BREV-CTH:TEXT
-    bytes: 15360
+    bytes: 1441
     created: 1989-06-30
     system: SINTRAN III L
     continued: true
     stale: false
   - name: BREV-OSTRA:TEXT
-    bytes: 4096
+    bytes: 1823
     created: 1989-06-30
     system: SINTRAN III L
     continued: false
     stale: false
   - name: LIN0112F:MENU
-    bytes: 2048
+    bytes: 0
     created: 1989-06-30
     system: SINTRAN III L
     continued: false
     stale: false
   - name: LT-SCHEMA:SYMB
-    bytes: 26624
+    bytes: 23527
     created: 1989-06-30
     system: SINTRAN III L
     continued: false
     stale: false
   - name: LIN0106U:UCOM
-    bytes: 169984
+    bytes: 171008
     created: 1989-06-30
     system: SINTRAN III L
-    continued: false
+    continued: true
     stale: false
   - name: LO01:DATA
-    bytes: 92160
+    bytes: 10
     created: 1989-06-30
     system: SINTRAN III L
     continued: false
     stale: false
   - name: SCRATCH:SYMB
-    bytes: 4096
+    bytes: 767
     created: 1989-06-30
     system: SINTRAN III L
     continued: false
     stale: false
   - name: INVENTARIER:ULIB
-    bytes: 51200
+    bytes: 49152
     created: 1989-06-30
     system: SINTRAN III L
     continued: false
     stale: false
   - name: UNIQUE:ULIB
-    bytes: 103424
+    bytes: 98303
     created: 1989-06-30
     system: SINTRAN III L
     continued: true
     stale: false
   - name: UNIQUE-00!K:*"&(
-    bytes: 14336
+    bytes: 15360
     created: null
     system: )$'*) ' $$$ &
-    continued: false
+    continued: true
     stale: true
   - name: LIN0115F:UNIQ
-    bytes: 8192
+    bytes: 171
     created: 1989-06-30
     system: SINTRAN III L
     continued: true
     stale: false
   - name: LIN0115F:UCOM
-    bytes: 19456
+    bytes: 50176
     created: 1989-06-30
     system: SINTRAN III L
-    continued: false
+    continued: true
     stale: false
   - name: J   ,&:,*)
-    bytes: 16384
+    bytes: 15360
     created: null
     system: )$'*) ' $$$ &
     continued: true
     stale: true
   - name: STRITEST:UCOM
-    bytes: 8192
+    bytes: 2101
     created: 1989-06-30
     system: SINTRAN III L
     continued: true
     stale: false
   - name: STRIMYNDIGHET:UNIQ
-    bytes: 35840
+    bytes: 21
     created: 1989-06-30
     system: SINTRAN III L
-    continued: false
+    continued: true
     stale: false
   - name: XTRA-0048-01:DATA
-    bytes: 24576
+    bytes: 23552
     created: null
     system: "$!  <! $$$ #"
     continued: true

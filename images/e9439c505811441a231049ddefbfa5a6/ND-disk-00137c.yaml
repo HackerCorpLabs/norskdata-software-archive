@@ -21,43 +21,43 @@ backupSet:
   imageBytes: 1261568
 backupFiles:
   - name: LO01:DATA
-    bytes: 190464
+    bytes: 10
     created: 1989-12-15
     system: SINTRAN III L
     continued: false
     stale: false
   - name: UNIQUE:ULIB
-    bytes: 0
+    bytes: 96256
     created: 1989-12-15
     system: SINTRAN III L
     continued: false
     stale: false
   - name: LIN0115F:UNIQ
-    bytes: 6144
+    bytes: 1762
     created: 1989-12-15
     system: SINTRAN III L
     continued: false
     stale: false
   - name: LIN0104U:UNIQ
-    bytes: 14336
+    bytes: 11147
     created: 1989-12-15
     system: SINTRAN III L
     continued: false
     stale: false
   - name: LIN0204U:UNIQ
-    bytes: 10240
+    bytes: 7446
     created: 1989-12-15
     system: SINTRAN III L
     continued: false
     stale: false
   - name: LIN0205U:UNIQ
-    bytes: 20480
+    bytes: 15759
     created: 1989-12-15
     system: SINTRAN III L
     continued: true
     stale: false
   - name: LIN0207U:UNIQ
-    bytes: 18432
+    bytes: 16104
     created: 1989-12-15
     system: SINTRAN III L
     continued: false

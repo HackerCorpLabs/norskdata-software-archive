@@ -1,0 +1,147 @@
+id: nd-210079-n07-d1-64c99e29
+volumeName: 210079N07-XX-01D
+md5: 64c99e2979af5aa074cfae82dfa74927
+product:
+  id: ND-210079
+  version: N07
+  diskNumber: 1
+  language: XX
+image:
+  sizeBytes: 1261568
+  format: raw
+  controller: floppy
+  totalPages: 616
+  pageSize: 2048
+  bootFormat: none
+filesystem: ndfs
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 509
+  files:
+    - name: WP-EDITOR-N05:PROG
+      type: PROG
+      pages: 57
+      bytes: 116736
+      userName: FLOPPY-USER
+      dateCreated: 2519009365
+      lastDateRead: 2528052906
+      lastDateWritten: 2519009367
+      dateCreatedStr: 1987-08-18 16:33:21
+      lastDateReadStr: 1987-10-23 16:26:42
+      lastDateWrittenStr: 1987-08-18 16:33:23
+      bpunValid: null
+    - name: WP-CMD-N05:PROG
+      type: PROG
+      pages: 63
+      bytes: 129024
+      userName: FLOPPY-USER
+      dateCreated: 2519009409
+      lastDateRead: 2528052956
+      lastDateWritten: 2519009410
+      dateCreatedStr: 1987-08-18 16:34:01
+      lastDateReadStr: 1987-10-23 16:27:28
+      lastDateWrittenStr: 1987-08-18 16:34:02
+      bpunValid: null
+    - name: WP-RES-N05:PROG
+      type: PROG
+      pages: 50
+      bytes: 102400
+      userName: FLOPPY-USER
+      dateCreated: 2519009457
+      lastDateRead: 2528052935
+      lastDateWritten: 2519009458
+      dateCreatedStr: 1987-08-18 16:34:49
+      lastDateReadStr: 1987-10-23 16:27:07
+      lastDateWrittenStr: 1987-08-18 16:34:50
+      bpunValid: null
+    - name: WP-SPOL-N05:PROG
+      type: PROG
+      pages: 47
+      bytes: 96256
+      userName: FLOPPY-USER
+      dateCreated: 2519009550
+      lastDateRead: 2528053120
+      lastDateWritten: 2519009552
+      dateCreatedStr: 1987-08-18 16:36:14
+      lastDateReadStr: 1987-10-23 16:30:00
+      lastDateWrittenStr: 1987-08-18 16:36:16
+      bpunValid: null
+    - name: WP-PRINT-N05:PROG
+      type: PROG
+      pages: 3
+      bytes: 133120
+      userName: FLOPPY-USER
+      dateCreated: 2519009736
+      lastDateRead: 2528053016
+      lastDateWritten: 2519009738
+      dateCreatedStr: 1987-08-18 16:39:08
+      lastDateReadStr: 1987-10-23 16:28:24
+      lastDateWrittenStr: 1987-08-18 16:39:10
+      bpunValid: null
+    - name: WP-MAIN-N05:PROG
+      type: PROG
+      pages: 103
+      bytes: 210944
+      userName: FLOPPY-USER
+      dateCreated: 2526581066
+      lastDateRead: 2528053026
+      lastDateWritten: 2527503837
+      dateCreatedStr: 1987-10-12 09:05:10
+      lastDateReadStr: 1987-10-23 16:28:34
+      lastDateWrittenStr: 1987-10-19 10:23:29
+      bpunValid: null
+    - name: WP-IO-N05:PROG
+      type: PROG
+      pages: 61
+      bytes: 124928
+      userName: FLOPPY-USER
+      dateCreated: 2519009498
+      lastDateRead: 2528052987
+      lastDateWritten: 2519009500
+      dateCreatedStr: 1987-08-18 16:35:26
+      lastDateReadStr: 1987-10-23 16:27:59
+      lastDateWrittenStr: 1987-08-18 16:35:28
+      bpunValid: null
+    - name: TF-MAIN-N05:PROG
+      type: PROG
+      pages: 94
+      bytes: 200704
+      userName: FLOPPY-USER
+      dateCreated: 2526580122
+      lastDateRead: 2528053082
+      lastDateWritten: 2527503931
+      dateCreatedStr: 1987-10-12 08:54:26
+      lastDateReadStr: 1987-10-23 16:29:26
+      lastDateWrittenStr: 1987-10-19 10:24:59
+      bpunValid: null
+    - name: TF-UTIL-N05:PROG
+      type: PROG
+      pages: 21
+      bytes: 43008
+      userName: FLOPPY-USER
+      dateCreated: 2519009905
+      lastDateRead: 2528053067
+      lastDateWritten: 2519009907
+      dateCreatedStr: 1987-08-18 16:41:49
+      lastDateReadStr: 1987-10-23 16:29:11
+      lastDateWrittenStr: 1987-08-18 16:41:51
+      bpunValid: null
+provenance:
+  contributor: cvs
+  originalPath: ND110-emulator-IMAGES/210079N07-XX-01D.img
+  dateImaged: 2026-08-17
+  importedAt: 2026-08-17T23:12:34.532Z
+photos:
+  disk: []
+  set: []
+tags: []
+docs:
+  piDocId: null
+  pdDocId: null
+  relatedDocIds: []
+  externalUrls: []
+storageClass: floppy-in-git
+internetArchive:
+  itemId: norskdata-floppy-nd-210079-n07-d1-64c99e29
+  syncStatus: pending

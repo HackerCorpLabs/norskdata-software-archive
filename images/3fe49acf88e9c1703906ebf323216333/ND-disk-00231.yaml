@@ -5,6 +5,7 @@ image:
   sizeBytes: 1310720
   format: raw
   controller: floppy
+  bootFormat: none
 filesystem: none
 provenance:
   contributor: gandalf
