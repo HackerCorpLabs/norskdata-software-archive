@@ -1,5 +1,5 @@
 id: img-23c1098f24be
-volumeName: null
+volumeName: MIKAEL-5
 md5: 23c1098f24be7cdd49e57e2696c2207c
 image:
   sizeBytes: 319488
@@ -10,7 +10,7 @@ filesystem: ndfs
 condition:
   status: damaged
   parser: ndfs
-  parserError: Block 2097151 out of range
+  parserError: "unreadable: 2 object-file page(s); the listing is what the pages that do read name"
   ndNamesFound: 14
   ndNameSamples:
     - FNI:SPAR
@@ -22,6 +22,119 @@ condition:
     - TRANSFER-FILE-0:TYPE
     - MIK:DNF
   recovery: null
+ndfs:
+  users:
+    - name: DNF
+      pagesUsed: 146
+  files:
+    - name: USERS-GUIDE-MJ:TEXT
+      type: TEXT
+      pages: 10
+      bytes: 18578
+      userName: DNF
+      dateCreated: 2231557206
+      lastDateRead: 2647330824
+      lastDateWritten: 2231557230
+      bpunValid: null
+    - name: STAR-TREKK-ND:SYMB
+      type: SYMB
+      pages: 24
+      bytes: 48077
+      userName: DNF
+      dateCreated: 2191347373
+      lastDateRead: 2397760516
+      lastDateWritten: 2393590765
+      bpunValid: null
+    - name: REAKTOR-CC:SYMB
+      type: SYMB
+      pages: 9
+      bytes: 17458
+      userName: DNF
+      dateCreated: 2173868119
+      lastDateRead: 2647330866
+      lastDateWritten: 2252295015
+      bpunValid: null
+    - name: LOST-DUTCHMAN-CC:SYMB
+      type: SYMB
+      pages: 10
+      bytes: 19025
+      userName: DNF
+      dateCreated: 2173868191
+      lastDateRead: 2393591226
+      lastDateWritten: 2173868196
+      bpunValid: null
+    - name: DUKEDOM-CC:SYMB
+      type: SYMB
+      pages: 6
+      bytes: 11536
+      userName: DNF
+      dateCreated: 2173868253
+      lastDateRead: 2391102060
+      lastDateWritten: 2296714449
+      bpunValid: null
+    - name: DUKEDOM-CC:DATA
+      type: DATA
+      pages: 7
+      bytes: 13636
+      userName: DNF
+      dateCreated: 2173868313
+      lastDateRead: 2397391829
+      lastDateWritten: 2173868324
+      bpunValid: null
+    - name: NODAL-ND:PROG
+      type: PROG
+      pages: 12
+      bytes: 23254
+      userName: DNF
+      dateCreated: 2173876410
+      lastDateRead: 2532248055
+      lastDateWritten: 2173876417
+      bpunValid: null
+    - name: STREETS-OF-CC:SYMB
+      type: SYMB
+      pages: 15
+      bytes: 30085
+      userName: DNF
+      dateCreated: 2173867987
+      lastDateRead: 2389384102
+      lastDateWritten: 2173867999
+      bpunValid: null
+    - name: STAR-LANES-CC:SYMB
+      type: SYMB
+      pages: 4
+      bytes: 6947
+      userName: DNF
+      dateCreated: 2231557051
+      lastDateRead: 2532248592
+      lastDateWritten: 2325148301
+      bpunValid: null
+    - name: DELFI-3-EAO:SYMB
+      type: SYMB
+      pages: 35
+      bytes: 71223
+      userName: DNF
+      dateCreated: 2231557215
+      lastDateRead: 2647330525
+      lastDateWritten: 2263410608
+      bpunValid: null
+    - name: TANK-BATTLE-ERIC:SYMB
+      type: SYMB
+      pages: 6
+      bytes: 10482
+      userName: DNF
+      dateCreated: 2173876662
+      lastDateRead: 2663985163
+      lastDateWritten: 2227766227
+      bpunValid: null
+    - name: CUBE-MD:SYMB
+      type: SYMB
+      pages: 3
+      bytes: 5973
+      userName: DNF
+      dateCreated: 2173883333
+      lastDateRead: 2647330551
+      lastDateWritten: 2173883339
+      bpunValid: null
 provenance:
   contributor: gandalf
   originalPath: 300/ND-disk-00303c.img

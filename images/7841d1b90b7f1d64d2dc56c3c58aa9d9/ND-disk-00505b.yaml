@@ -1,5 +1,5 @@
 id: img-7841d1b90b7f
-volumeName: null
+volumeName: ND-10523C-PART1
 md5: 7841d1b90b7f1d64d2dc56c3c58aa9d9
 image:
   sizeBytes: 315392
@@ -11,7 +11,7 @@ filesystem: ndfs
 condition:
   status: damaged
   parser: ndfs
-  parserError: Block 134217727 out of range
+  parserError: "unreadable: 1 object-file page(s); the listing is what the pages that do read name"
   ndNamesFound: 15
   ndNameSamples:
     - REMOTE-USER-NAME:REMO
@@ -23,6 +23,65 @@ condition:
     - KHCXA:IH
     - W2W:WBWJ
   recovery: null
+ndfs:
+  users:
+    - name: FLOPPY-USER
+      pagesUsed: 95
+  files:
+    - name: 100-ERRCOR-2339B:BPUN
+      type: BPUN
+      pages: 10
+      bytes: 18574
+      userName: FLOPPY-USER
+      dateCreated: 2174156218
+      lastDateRead: 2305108059
+      lastDateWritten: 2224860252
+      bpunValid: null
+    - name: FLOPPY-STREAM-A:BPUN
+      type: BPUN
+      pages: 22
+      bytes: 43104
+      userName: FLOPPY-USER
+      dateCreated: 2304736466
+      lastDateRead: 2305108214
+      lastDateWritten: 2304736494
+      bpunValid: null
+    - name: INSTRUCTION-B:BPUN
+      type: BPUN
+      pages: 23
+      bytes: 46566
+      userName: FLOPPY-USER
+      dateCreated: 2260920404
+      lastDateRead: 2305108260
+      lastDateWritten: 2290017580
+      bpunValid: null
+    - name: STC-RUNNER-2410B:BPUN
+      type: BPUN
+      pages: 13
+      bytes: 24794
+      userName: FLOPPY-USER
+      dateCreated: 2174151976
+      lastDateRead: 2305108439
+      lastDateWritten: 2224483235
+      bpunValid: null
+    - name: STC-TEST-2411E:BPUN
+      type: BPUN
+      pages: 15
+      bytes: 30356
+      userName: FLOPPY-USER
+      dateCreated: 2174152078
+      lastDateRead: 2305108461
+      lastDateWritten: 2224483372
+      bpunValid: null
+    - name: WINCH-RAND-A:BPUN
+      type: BPUN
+      pages: 5
+      bytes: 8910
+      userName: FLOPPY-USER
+      dateCreated: 2261071570
+      lastDateRead: 2304989066
+      lastDateWritten: 2261447341
+      bpunValid: null
 provenance:
   contributor: gandalf
   originalPath: 500/ND-disk-00505b.img
