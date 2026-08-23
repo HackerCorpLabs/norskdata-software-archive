@@ -90,6 +90,8 @@ export interface RecoveryResult {
   tried: number;
   /** the ratio a candidate had to reach to be accepted */
   minConfirm: number;
+  /** the number of confirmed names a candidate had to reach to be accepted */
+  minConfirmedNames: number;
 }
 
 // ── reading and writing pointers ─────────────────────────────
@@ -225,11 +227,24 @@ export function rawNameSet(image: Uint8Array): Set<string> {
   return new Set(text.match(/[A-Z][A-Z0-9-]{1,15}/g) ?? []);
 }
 
-/** How much of a candidate's file list is backed by the image's own bytes. */
+/**
+ * How much of a candidate's file list is backed by the image's own bytes.
+ *
+ * Only an entry that carries a FILE TYPE counts. A layout that points the
+ * object pointer at a USER page parses as one entry named SYSTEM or
+ * FLOPPY-USER with an empty type, 0 pages and 0 bytes; that name is in the
+ * image's bytes because the user file is in the image, so it would otherwise
+ * confirm itself. Measured over this archive, every entry of every genuine
+ * recovery carries a type, and every one of the five one-name fakes a wide
+ * sweep produced carried none.
+ *
+ * The denominator stays the whole file list, so a candidate padded with
+ * untyped entries fails the ratio as well as the count.
+ */
 export function confirmAgainstBytes(files: ProbeResult['files'], names: Set<string>): { confirmed: number; ratio: number } {
   if (!files.length) return { confirmed: 0, ratio: 0 };
   let confirmed = 0;
-  for (const f of files) if (names.has(f.name)) confirmed++;
+  for (const f of files) if (f.type && names.has(f.name)) confirmed++;
   return { confirmed, ratio: confirmed / files.length };
 }
 
@@ -346,6 +361,17 @@ export interface RecoverOptions {
   layouts?: LayoutTable;
   /** how much of the file list must be confirmed by the bytes, 0..1 (default 0.8) */
   minConfirm?: number;
+  /**
+   * How many names must be confirmed before a candidate can be accepted at all
+   * (default 2).
+   *
+   * A share on its own is not evidence: one name that happens to be in the
+   * bytes scores 100%. Two is the lowest count this archive can use, because
+   * the smallest genuine recovery in it - N-10-102-I, MACM-1718K:BPUN and
+   * SINTRAN-I:DATA - has exactly two. See confirmAgainstBytes for the type
+   * rule that does the rest of the work.
+   */
+  minConfirmedNames?: number;
   /** how many layouts to try at most (default 8) */
   maxCandidates?: number;
   /**
@@ -386,6 +412,7 @@ export interface RecoverOptions {
  */
 export function recoverNdfs(image: Uint8Array, opts: RecoverOptions): RecoveryResult {
   const minConfirm = opts.minConfirm ?? 0.8;
+  const minConfirmedNames = opts.minConfirmedNames ?? 2;
   const maxCandidates = opts.maxCandidates ?? (opts.sweep ? 20000 : opts.deep ? 64 : 8);
   const table = opts.layouts ?? DEFAULT_LAYOUTS;
   const pages = Math.floor(image.length / NDFS_PAGE_SIZE);
@@ -447,7 +474,7 @@ export function recoverNdfs(image: Uint8Array, opts: RecoverOptions): RecoveryRe
     if (!parsed || !parsed.files.length) continue;
     const { confirmed, ratio } = confirmAgainstBytes(parsed.files, names);
     let corroborated = 0;
-    for (const f of parsed.files) if (sibling.has(f.name)) corroborated++;
+    for (const f of parsed.files) if (f.type && sibling.has(f.name)) corroborated++;
     const corroborateRatio = parsed.files.length ? corroborated / parsed.files.length : 0;
     candidates.push({
       layout, files: parsed.files, users: parsed.users,
@@ -462,13 +489,17 @@ export function recoverNdfs(image: Uint8Array, opts: RecoverOptions): RecoveryRe
   candidates.sort((a, b) => b.confirmed - a.confirmed || b.ratio - a.ratio || b.files.length - a.files.length);
 
   for (const c of candidates) {
-    if (c.ratio >= minConfirm) c.acceptedBy = 'own-bytes';
-    else if (sibling.size && c.corroborateRatio >= minCorroborate) c.acceptedBy = 'sibling-listing';
+    // Both tests are share AND count: see minConfirmedNames for what a
+    // share-only test accepts.
+    if (c.ratio >= minConfirm && c.confirmed >= minConfirmedNames) c.acceptedBy = 'own-bytes';
+    else if (sibling.size && c.corroborateRatio >= minCorroborate && c.corroborated >= minConfirmedNames) {
+      c.acceptedBy = 'sibling-listing';
+    }
   }
   const best = candidates.find(c => c.acceptedBy) ?? null;
   const status: RecoveryResult['status'] =
     best ? 'recovered' : candidates.length ? 'unconfirmed' : 'failed';
-  return { status, best, candidates, tried, minConfirm };
+  return { status, best, candidates, tried, minConfirm, minConfirmedNames };
 }
 
 /** One line saying what happened, for a log or a UI. */
@@ -485,5 +516,6 @@ export function describeRecovery(result: RecoveryResult): string {
   return result.status === 'recovered'
     ? 'Recovered with ' + where + ': ' + c.files.length + ' file(s), ' + backing + via + '.'
     : 'A layout parsed (' + where + ') but only ' + backing + ', below the ' +
-      Math.round(result.minConfirm * 100) + '% needed to accept it - treat it as a lead, not a listing.';
+      Math.round(result.minConfirm * 100) + '% and ' + result.minConfirmedNames +
+      ' names needed to accept it - treat it as a lead, not a listing.';
 }
